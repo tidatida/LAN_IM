@@ -1,4 +1,7 @@
+#include <unistd.h>
+
 #include "IMVideoCtrl.h"
+
 
 IMVideoCtrl::IMVideoCtrl(const QString & devName, QObject *parent) :
     QObject(parent)

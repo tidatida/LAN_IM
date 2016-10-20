@@ -9,12 +9,13 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    // 以下部分解决中文乱码
+#if 0
+    /* the below lines try to use chinese char */
     QTextCodec::setCodecForTr(QTextCodec::codecForName("utf-8"));
     QTextCodec::setCodecForLocale(QTextCodec::codecForName("utf-8"));
     QTextCodec::setCodecForCStrings(QTextCodec::codecForName("utf-8"));
-    // 以上部分解决中文乱码
-
+    /* the end of use chinese char */
+#endif
     IMLoginWidget w;
     w.show();
     if (true == w.getIsAutoLogin())

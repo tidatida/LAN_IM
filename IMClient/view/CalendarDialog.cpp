@@ -2,22 +2,22 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QKeyEvent>
-#include <QtWidgets/QTextCharFormat>
-#include <QtWidgets/QComboBox>
-#include <QtWidgets/QPushButton>
-#include <QtWidgets/QToolButton>
-#include <QtWidgets/QLineEdit>
-#include <QtWidgets/QTextLine>
-#include <QtWidgets/QValidator>
+#include <QKeyEvent>
+#include <QTextCharFormat>
+#include <QComboBox>
+#include <QPushButton>
+#include <QToolButton>
+#include <QLineEdit>
+#include <QTextLine>
+#include <QValidator>
 #include <QDebug>
-#include <QtWidgets/QHeaderView>
-#include <QtWidgets/QTableView>
-#include <QtWidgets/QLabel>
-#include <QtWidgets/QColor>
-#include <QtWidgets/QPainter>
+#include <QHeaderView>
+#include <QTableView>
+#include <QLabel>
+#include <QColor>
+#include <QPainter>
 #include <QRegExp>
-
+#include <QObject>
 
 #define HEIGHT_OF_DATE 40      //height of data
 #define HEIFHT_OF_WEEKNUMBER 30 //height of weeknumber
@@ -261,8 +261,9 @@ void CalendarDialog::initDialog()
     m_customCalendar = new CustomCalendar(this);
     m_customCalendar->setFixedSize(7 * WIDTH_OF_DATE,
                                    6 * HEIGHT_OF_DATE + HEIFHT_OF_WEEKNUMBER);
-
-    QTableView *table = qFindChild<QTableView *>(m_customCalendar);
+#if 0
+	/* fixme 2016.10.20 */
+    // QTableView *table = m_customCalender->findChildren<QTableView *>(m_customCalendar);
     QHeaderView *verticalHeader = table->verticalHeader();
     QHeaderView *horizontalHeader = table->horizontalHeader();
 
@@ -278,6 +279,7 @@ void CalendarDialog::initDialog()
         horizontalHeader->resizeSection(index,WIDTH_OF_DATE);
     }
 
+#endif
     //end calendar
 
     setDialogLayout();

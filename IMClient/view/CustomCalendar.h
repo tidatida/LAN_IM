@@ -2,7 +2,7 @@
 #define CUSTOMCALENDAR_H
 
 #include <QtWidgets/QCalendarWidget>
-#include <QtWidgets/QTextCharFormat>
+#include <QTextCharFormat>
 
 /*************************************************
 Class Name： CustomCalendar
