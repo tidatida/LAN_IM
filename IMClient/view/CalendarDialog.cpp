@@ -1,21 +1,21 @@
 #include "CalendarDialog.h"
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QVBoxLayout>
-#include <QtGui/QPushButton>
-#include <QtGui/QKeyEvent>
-#include <QtGui/QTextCharFormat>
-#include <QtGui/QComboBox>
-#include <QtGui/QPushButton>
-#include <QtGui/QToolButton>
-#include <QtGui/QLineEdit>
-#include <QtGui/QTextLine>
-#include <QtGui/QValidator>
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QKeyEvent>
+#include <QtWidgets/QTextCharFormat>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QToolButton>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QTextLine>
+#include <QtWidgets/QValidator>
 #include <QDebug>
-#include <QtGui/QHeaderView>
-#include <QtGui/QTableView>
-#include <QtGui/QLabel>
-#include <QtGui/QColor>
-#include <QtGui/QPainter>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QTableView>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QColor>
+#include <QtWidgets/QPainter>
 #include <QRegExp>
 
 

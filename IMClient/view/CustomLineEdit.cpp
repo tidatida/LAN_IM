@@ -1,7 +1,7 @@
 #include "CustomLineEdit.h"
 #include "CalendarDialog.h"
 #include <QDate>
-#include <QtGui/QCalendarWidget>
+#include <QtWidgets/QCalendarWidget>
 #include <QDebug>
 
 //mark public:

@@ -1,5 +1,5 @@
 #include "view/IMServerWindow.h"
-#include <QtGui/QApplication>
+#include <QtWidgets/QApplication>
 #include <QtCore/QTextCodec>
 #include <QSystemSemaphore>
 #include <QSharedMemory>

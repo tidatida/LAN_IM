@@ -1,5 +1,5 @@
 #include "CustomComboBox.h"
-#include <QtGui/QKeyEvent>
+#include <QtWidgets/QKeyEvent>
 
 
 /*************************************************

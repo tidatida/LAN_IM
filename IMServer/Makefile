@@ -13,10 +13,10 @@ CXX           = g++
 DEFINES       = -DQT_WEBKIT -DQT_NO_DEBUG -DQT_SQL_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB -DQT_SHARED
 CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)
 CXXFLAGS      = -pipe -O2 -Wall -W -D_REENTRANT $(DEFINES)
-INCPATH       = -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtGui -I/usr/include/qt4/QtSql -I/usr/include/qt4 -I.
+INCPATH       = -I/usr/share/qt4/mkspecs/linux-g++ -I. -I/usr/include/qt4/QtCore -I/usr/include/qt4/QtNetwork -I/usr/include/qt4/QtWidgets -I/usr/include/qt4/QtSql -I/usr/include/qt4 -I.
 LINK          = g++
 LFLAGS        = -Wl,-O1
-LIBS          = $(SUBLIBS)  -L/usr/lib/i386-linux-gnu -lQtSql -lQtGui -lQtNetwork -lQtCore -lpthread 
+LIBS          = $(SUBLIBS)  -L/usr/lib/i386-linux-gnu -lQtSql -lQtWidgets -lQtNetwork -lQtCore -lpthread 
 AR            = ar cqs
 RANLIB        = 
 QMAKE         = /usr/bin/qmake
@@ -153,7 +153,7 @@ Makefile: IMServer.pro  /usr/share/qt4/mkspecs/linux-g++/qmake.conf /usr/share/q
 		/usr/share/qt4/mkspecs/features/lex.prf \
 		/usr/share/qt4/mkspecs/features/include_source_dir.prf \
 		/usr/lib/i386-linux-gnu/libQtSql.prl \
-		/usr/lib/i386-linux-gnu/libQtGui.prl \
+		/usr/lib/i386-linux-gnu/libQtWidgets.prl \
 		/usr/lib/i386-linux-gnu/libQtNetwork.prl \
 		/usr/lib/i386-linux-gnu/libQtCore.prl
 	$(QMAKE) -o Makefile IMServer.pro
@@ -182,7 +182,7 @@ Makefile: IMServer.pro  /usr/share/qt4/mkspecs/linux-g++/qmake.conf /usr/share/q
 /usr/share/qt4/mkspecs/features/lex.prf:
 /usr/share/qt4/mkspecs/features/include_source_dir.prf:
 /usr/lib/i386-linux-gnu/libQtSql.prl:
-/usr/lib/i386-linux-gnu/libQtGui.prl:
+/usr/lib/i386-linux-gnu/libQtWidgets.prl:
 /usr/lib/i386-linux-gnu/libQtNetwork.prl:
 /usr/lib/i386-linux-gnu/libQtCore.prl:
 qmake:  FORCE

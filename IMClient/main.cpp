@@ -1,4 +1,4 @@
-#include <QtGui/QApplication>
+#include <QtWidgets/QApplication>
 #include "view/IMLoginWidget.h"
 #include <QTextCodec>
 #include <QDebug>

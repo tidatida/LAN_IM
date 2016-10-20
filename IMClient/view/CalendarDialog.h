@@ -2,7 +2,7 @@
 #define CALENDARDIALOG_H
 
 
-#include <QtGui/QDialog>
+#include <QtWidgets/QDialog>
 #include "CustomLineEdit.h"
 #include "CustomCalendar.h"
 #include "CustomComboBox.h"

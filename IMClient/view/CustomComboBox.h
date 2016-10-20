@@ -1,8 +1,8 @@
 #ifndef CUSTOMCOMBOBOX_H
 #define CUSTOMCOMBOBOX_H
 
-#include <QtGui/QComboBox>
-#include <QtGui/QLineEdit>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QLineEdit>
 
 
 /*************************************************

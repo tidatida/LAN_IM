@@ -1,9 +1,9 @@
 #ifndef CUSTOMLINEEDIT_H
 #define CUSTOMLINEEDIT_H
 
-#include <QtGui/QLineEdit>
-#include <QtGui/QMouseEvent>
-#include <QtGui/QCalendarWidget>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QMouseEvent>
+#include <QtWidgets/QCalendarWidget>
 
 class CalendarDialog;
 
