@@ -2,7 +2,7 @@
 File Name： IMThread.cpp
 Author： jet.F.R
 Date： 2014.3.10
-Description： 服务器用于处理socket通信的线程类
+Description：
 Changes：
 ********************************************/
 
@@ -42,7 +42,7 @@ IMThread::~IMThread()
 // mark: private------------------------------------------
 /*************************************************
 Function Name： run()
-Description: 线程运行时，会调用此函数
+Description: 
 Input： NULL
 Output：NULL
 Changes： NULL

@@ -2,7 +2,7 @@
 File Name： IMTcpServer.cpp
 Author： jet.F.R
 Date： 2014.3.10
-Description： 服务器类
+Description： server class
 Changes：
 ********************************************/
 
@@ -12,7 +12,7 @@ Changes：
 IMTcpServer::IMTcpServer(QObject *parent) :
     QTcpServer(parent)
 {
-    // 初始化一下数据库
+    /* todo: init database */
 }
 
 IMTcpServer::~IMTcpServer()
@@ -22,11 +22,10 @@ IMTcpServer::~IMTcpServer()
 // mark: public slots:------------------------------------------
 /*************************************************
 Function Name： clientDisconnected()
-Description: 客户端断开连接
+Description: 
 *************************************************/
 void IMTcpServer::clientDisconnected(const QString &id)
 {
-    //某个客户端断开连接时，就更新该用户的状态
     if (id.contains(MAIL_ADDRESS_FORMAT))
     {
         m_userMailMap.remove(id);
@@ -57,25 +56,25 @@ void IMTcpServer::clientDisconnected(const QString &id)
 
 /*************************************************
 Function Name： sendMessage()
-Description: 处理请求，要求clientSocket发送信息
+Description: 
 *************************************************/
 void IMTcpServer::sendMessage(const SaveTmpInformation &save)
 {
     m_save.m_requestKind = save.m_requestKind;
-    //根据save.kind来处理各种信息
     switch (m_save.m_requestKind)
     {
     case LOGIN:
     {
         m_save.m_loginInf = save.m_loginInf;
         m_save.m_clientSocket = save.m_clientSocket; 
-        // 判断是否已经登录
+
+        /* logined or not ? */
         m_save.m_myID = save.m_myID;
         if (m_userMap.contains(m_save.m_myID))
             m_save.m_replyKind = HAVE_LOGINED;
         else
         {
-            // 访问数据库 登录
+            /* db access */
             m_save.m_replyKind = m_database.searchUserInUserInformation(
                         m_save.m_loginInf, m_save.m_userInf);//, m_save.friendsVec);
 //            if(LOGIN_SUCCESS == m_save.m_replyKind)
@@ -83,7 +82,7 @@ void IMTcpServer::sendMessage(const SaveTmpInformation &save)
 //                m_userMap.insert(m_save.m_myID, m_save.m_clientSocket);
         }
         save.m_clientSocket->sendMessage(m_save);
-        // mark改变登录状态
+        /* change login status */
         //changeStatu(m_save.m_loginInf.m_userID, m_save.m_loginInf.m_status);
         break;
     }
@@ -107,7 +106,7 @@ void IMTcpServer::sendMessage(const SaveTmpInformation &save)
             m_save.m_userInf.m_userID = id;
 //            qDebug() << "regDate:" << m_save.m_userInf.m_regDateTime ;
             m_save.m_userInf.m_regDateTime = QDateTime::currentDateTime();
-            // 访问数据库 注册
+            /* register */
             m_save.m_replyKind = m_database.addUserInUserInformation(m_save.m_userInf);
         }
         save.m_clientSocket->sendMessage(m_save);
@@ -129,7 +128,7 @@ void IMTcpServer::sendMessage(const SaveTmpInformation &save)
         m_save.m_myID = save.m_myID;
         m_save.m_status = save.m_status;
         m_save.m_clientSocket = save.m_clientSocket;
-        // 访问数据库 查询所有好友信息
+        
 //        m_save.m_replyKind = m_database.searchUserInUserInformation(
 //                    m_save.m_loginInf, m_save.m_userInf);//, m_save.friendsVec);
 //        QMultiMap<QString, FriendsInfo> *userMap= new QMultiMap<QString, FriendsInfo>;
@@ -151,14 +150,15 @@ void IMTcpServer::sendMessage(const SaveTmpInformation &save)
     case GET_ALL_FLOCKS:
     {
         m_save.m_myID = save.m_myID;
-        // 获取 群信息
+
+        /* get group info */ 
         m_save.m_replyKind = m_database.searchFlocksInformation(
                     m_save.m_myID, m_save.m_flocksVec);
         save.m_clientSocket->sendMessage(m_save);
 //        if (GET_ALL_FLOCKS_SUCCESS != m_save.m_replyKind)
 //            break;
-//// 遍历群
-//        // 获取 群成员信息
+
+
 //        m_save.m_replyKind = m_database.searchFlocksMembers(
 //                    m_save.m_myID,m_save.m_flocksMembersVec);
 //        save.m_clientSocket->sendMessage(m_save);
@@ -167,14 +167,14 @@ void IMTcpServer::sendMessage(const SaveTmpInformation &save)
     case GET_ALL_DISCUSSIONS:
     {
         m_save.m_myID = save.m_myID;
-        // 获取 讨论组信息
+
         m_save.m_replyKind = m_database.searchDiscussionsInformation(
                     m_save.m_myID, m_save.m_discussionsVec);
         save.m_clientSocket->sendMessage(m_save);
+
 //        if (GET_ALL_DISCUSSIONS_SUCCESS != m_save.m_replyKind)
 //            break;
-//// 遍历组
-//        // 获取 讨论组成员信息
+
 //        m_save.m_replyKind = m_database.searchDiscussionsMembers(
 //                    m_save.m_myID,m_save.m_discussionsMembersVec);
 //        save.m_clientSocket->sendMessage(m_save);
@@ -183,7 +183,7 @@ void IMTcpServer::sendMessage(const SaveTmpInformation &save)
     case GET_FLOCK_MEMBERS:
     {
         m_save.m_flockID = save.m_flockID;
-        // 获取群成员
+
         m_save.m_replyKind = m_database.searchFlockMembers(
                     m_save.m_flockID, m_save.m_flockMembersVec);
         save.m_clientSocket->sendMessage(m_save);
@@ -192,7 +192,7 @@ void IMTcpServer::sendMessage(const SaveTmpInformation &save)
     case GET_DISCUSSIONS_MEMBERS:
     {
         m_save.m_discussionID = save.m_discussionID;
-        // 获取群成员
+
         m_save.m_replyKind = m_database.searchDiscussionMembers(
                     m_save.m_discussionID, m_save.m_discussionMembersVec);
         save.m_clientSocket->sendMessage(m_save);
@@ -244,7 +244,7 @@ void IMTcpServer::sendMessage(const SaveTmpInformation &save)
                                                      m_save.m_groupNameF);
         save.m_clientSocket->sendMessage(m_save);
 
-        // 如果好友在线，就发送被删除信息， 如果不在线，就先存储
+        /* if friend online, send msg, else store msg */
         QMap<QString, IMClientSocketCtrl*>::iterator iter;
         iter = m_userMap.find(m_save.m_peerID);
         if(m_userMap.end() == iter)
@@ -254,7 +254,8 @@ void IMTcpServer::sendMessage(const SaveTmpInformation &save)
             mes.m_senderID = save.m_myID;
             mes.m_receiverID = save.m_peerID;
             mes.m_text = save.m_groupNameF;
-            // 存储离线消息
+
+            /* store offline msg */
             //m_database.messageRequest(save.message);
         }
         else
@@ -318,15 +319,13 @@ void IMTcpServer::sendMessage(const SaveTmpInformation &save)
         m_save.m_replyKind =
                 m_database.deleteFlockMember(m_save.m_flockID, m_save.m_myID);
 
-        // 如果删除成功，通知群主，群成员退出群
         if ( LEAVE_FLOCK_SUCCESS == m_save.m_replyKind)
         {
-            // 通过群号flockID 获取到 群主号peerID
             if (m_database.searchFlockHost(m_save.m_flockID, m_save.m_peerID))
             {
 //                save.m_clientSocket->sendMessage(m_save);
 
-                // 如果群主在线，就发送群成员退出群信息， 如果不在线，就先存储
+                /* if owner only ,broadcast msg, else store msg */
                 QMap<QString, IMClientSocketCtrl*>::iterator iter;
                 iter = m_userMap.find(m_save.m_peerID);
                 if(m_userMap.end() == iter)
@@ -335,8 +334,7 @@ void IMTcpServer::sendMessage(const SaveTmpInformation &save)
                     mes.m_type = LEAVE_FLOCK_SUCCESS;
                     mes.m_senderID = save.m_myID;
                     mes.m_receiverID = save.m_peerID;
-//                    mes.m_text = save.m_groupNameF;
-                    // 存储离线消息
+                    // mes.m_text = save.m_groupNameF;
                     //m_database.messageRequest(save.message);
                 }
                 else
@@ -348,7 +346,6 @@ void IMTcpServer::sendMessage(const SaveTmpInformation &save)
                     iter.value()->sendMessage(m_save);
                 }
 
-                // 如果群成员在线，就发送群成员退出群信息， 如果不在线，就先存储
 //                QMap<QString, IMClientSocketCtrl*>::iterator iter;
                 iter = m_userMap.find(m_save.m_myID);
                 if(m_userMap.end() == iter)
@@ -358,7 +355,6 @@ void IMTcpServer::sendMessage(const SaveTmpInformation &save)
                     mes.m_senderID = save.m_myID;
                     mes.m_receiverID = save.m_peerID;
 //                    mes.m_text = save.m_groupNameF;
-                    // 存储离线消息
                     //m_database.messageRequest(save.message);
                 }
                 else
@@ -442,18 +438,13 @@ void IMTcpServer::sendMessage(const SaveTmpInformation &save)
         m_save.m_replyKind  =  m_database.deleteDiscussionMember(m_save.m_discussionID,
                                                            m_save.m_myID);
 
-        // 如果删除成功
         if ( LEAVE_DISCUSSION_SUCCESS == m_save.m_replyKind)
         {
 
             {
             #if 0
-//            // 通过组号flockID 获取到 组长号peerID
-//            if (m_database.searchFlockHost(m_save.m_discussionID, m_save.m_peerID))
-//            {
 ////                save.m_clientSocket->sendMessage(m_save);
 
-//                // 如果组长在线，就发送成员退出信息， 如果不在线，就先存储
 //                QMap<QString, IMClientSocketCtrl*>::iterator iter;
 //                iter = m_userMap.find(m_save.m_peerID);
 //                if(m_userMap.end() == iter)
@@ -463,7 +454,6 @@ void IMTcpServer::sendMessage(const SaveTmpInformation &save)
 //                    mes.m_senderID = save.m_myID;
 //                    mes.m_receiverID = save.m_peerID;
 ////                    mes.m_text = save.m_groupNameF;
-//                    // 存储离线消息
 //                    //m_database.messageRequest(save.message);
 //                }
 //                else
@@ -475,7 +465,6 @@ void IMTcpServer::sendMessage(const SaveTmpInformation &save)
 //                    iter.value()->sendMessage(m_save);
 //                }
 
-//                // 如果成员在线，就发送成员退出群信息， 如果不在线，就先存储
 ////                QMap<QString, IMClientSocketCtrl*>::iterator iter;
 ////                iter = m_userMap.find(m_save.m_myID);
 ////                if(m_userMap.end() == iter)
@@ -485,7 +474,6 @@ void IMTcpServer::sendMessage(const SaveTmpInformation &save)
 ////                    mes.m_senderID = save.m_myID;
 ////                    mes.m_receiverID = save.m_peerID;
 //////                    mes.m_text = save.m_groupNameF;
-////                    // 存储离线消息
 ////                    //m_database.messageRequest(save.message);
 ////                }
 ////                else
@@ -501,12 +489,10 @@ void IMTcpServer::sendMessage(const SaveTmpInformation &save)
             }
             m_save.m_replyKind = LEAVE_DISCUSSION_MEMBER;
 
-//            // 发送成员退出讨论组信息
 //            QMap<QString, IMClientSocketCtrl*>::iterator iter;
 //            iter = m_userMap.find(m_save.m_myID);
 //            if(m_userMap.end() != iter)
 //                iter.value()->sendMessage(m_save);
-            // 通知讨论组成员， 有成员退出
             tellDiscussionMemberHaveLeavedMember(m_save.m_discussionID);
 
         }
@@ -681,8 +667,8 @@ void IMTcpServer::sendMessage(const SaveTmpInformation &save)
 // mark: private---------------------------------------------------
 /*************************************************
 Function Name： incomingConnection()
-Description: 当有新的连接时，会调用此函数。用于创建新的线程去控制socket通信
-Input： int socketDescriptor：socket标识，用于创建socket
+Description: 
+Input： int socketDescriptor：socket
 Output：NULL
 Changes： NULL
 *************************************************/
@@ -694,13 +680,13 @@ void IMTcpServer::incomingConnection(int socketDescriptor)
 //    qDebug("new");
 //    IMThread *thread = new IMThread(this, socketDescriptor);
 //    connect(thread, SIGNAL(finished()), thread, SLOT(deleteLater()));
-//    //当线程结束时，将socket从map中删除
+
 //    //connect(thread, SIGNAL(finished()), this, SLOT(deleteSocketFormMap()));
 //    //connect(thread, SIGNAL())
 //    thread->start();
 
     qDebug() << "asdfas";
-    //建立新连接，并连接相应的信号/糟
+
     IMClientSocketCtrl *clientSocket = new IMClientSocketCtrl(this);
     clientSocket->setSocketDescriptor(socketDescriptor);
     connect(clientSocket, SIGNAL(deleteSignal(const QString &)),
@@ -727,7 +713,7 @@ void IMTcpServer::incomingConnection(int socketDescriptor)
 
 /*************************************************
 Function Name： friendRequest()
-Description:  处理好友请求
+Description:
 *************************************************/
 void IMTcpServer::friendRequest(const SaveTmpInformation &save)
 {
@@ -788,7 +774,6 @@ void IMTcpServer::friendRequest(const SaveTmpInformation &save)
     iter = m_userMap.find(m_save.m_message.m_receiverID);
     if(m_userMap.end() == iter)
     {
-        // 存储离线消息
         //m_database.messageRequest(save.message);
     }
     else
@@ -798,7 +783,7 @@ void IMTcpServer::friendRequest(const SaveTmpInformation &save)
 
 /*************************************************
 Function Name： flockRequest()
-Description:  处理群请求
+Description: 
 *************************************************/
 void IMTcpServer::flockRequest(const SaveTmpInformation & save)
 {
@@ -808,7 +793,6 @@ void IMTcpServer::flockRequest(const SaveTmpInformation & save)
     {
     case REQUEST_FLOCK:
     {
-        // 查询到群主的ID
         if (!m_database.searchFlockHost(m_save.m_message.m_receiverID,
                                         m_save.m_peerID))
         {
@@ -835,10 +819,9 @@ void IMTcpServer::flockRequest(const SaveTmpInformation & save)
             break;
         }
 //-----------------------------------------
-        m_save.m_message.m_senderID = save.m_message.m_receiverID; // 新成员
-        m_save.m_message.m_receiverID = save.m_message.m_senderID; // 群号
+        m_save.m_message.m_senderID = save.m_message.m_receiverID;
+        m_save.m_message.m_receiverID = save.m_message.m_senderID;
 
-        // 获取新成员信息，发送给群主
         if (!m_database.searchFlockMember(m_save.m_message.m_receiverID,
                                           m_save.m_message.m_senderID,
                                           m_save.m_flockMember))
@@ -846,7 +829,6 @@ void IMTcpServer::flockRequest(const SaveTmpInformation & save)
             return;
         }
 
-        // 获取群信息，发送给请求入群者 以及 群主
         if (!m_database.searchFlockInformation(
                     m_save.m_message.m_receiverID, m_save.m_flockInf))
         {
@@ -861,8 +843,8 @@ void IMTcpServer::flockRequest(const SaveTmpInformation & save)
 
 //-----------------------------------------
         m_save.m_message.m_type = FLOCK_AGREE;
-        m_save.m_message.m_senderID = save.m_message.m_senderID;     // 群号
-        m_save.m_message.m_receiverID = save.m_message.m_receiverID; // 新成员
+        m_save.m_message.m_senderID = save.m_message.m_senderID;
+        m_save.m_message.m_receiverID = save.m_message.m_receiverID;
         m_save.m_peerID = m_save.m_message.m_receiverID;
         qDebug() << "agree user add flock";
 
@@ -870,14 +852,12 @@ void IMTcpServer::flockRequest(const SaveTmpInformation & save)
     }
     case AGREE_FLOCK:
     {
-        // 通过群ID(receiverID)查询到群主的ID(peerID)
         if (!m_database.searchFlockHost(m_save.m_message.m_receiverID,
                                         m_save.m_peerID))
         {
             return;
         }
 
-        // 在数据库中添加群成员信息
         if (!m_database.addFlockMember(m_save.m_message.m_receiverID,
                                        m_save.m_message.m_senderID))
         {
@@ -885,14 +865,13 @@ void IMTcpServer::flockRequest(const SaveTmpInformation & save)
             return;
         }
 
-        // 获取新成员信息，发送给群主
         if (!m_database.searchFlockMember(m_save.m_message.m_receiverID,
                                           m_save.m_message.m_senderID,
                                           m_save.m_flockMember))
         {
             return;
         }
-        // 获取群信息，发送给入群者 以及 群主
+
         if (!m_database.searchFlockInformation(
                     m_save.m_message.m_receiverID, m_save.m_flockInf))
         {
@@ -901,15 +880,15 @@ void IMTcpServer::flockRequest(const SaveTmpInformation & save)
         }
 
         m_save.m_message.m_type = FLOCK_AGREE;
-        m_save.m_message.m_senderID = save.m_message.m_receiverID;     // 群号
-        m_save.m_message.m_receiverID = save.m_message.m_senderID; // 新成员
+        m_save.m_message.m_senderID = save.m_message.m_receiverID;
+        m_save.m_message.m_receiverID = save.m_message.m_senderID;
         save.m_clientSocket->sendMessage(m_save);
 
         tellFlockMemberHaveNewMember(m_save.m_flockInf.m_flockID);
 
         m_save.m_message.m_type = AGREE_FLOCK;
-        m_save.m_message.m_senderID = save.m_message.m_senderID;     // 新成员
-        m_save.m_message.m_receiverID = save.m_message.m_receiverID; // 群号
+        m_save.m_message.m_senderID = save.m_message.m_senderID;     
+        m_save.m_message.m_receiverID = save.m_message.m_receiverID; 
 
         break;
     }
@@ -925,7 +904,6 @@ void IMTcpServer::flockRequest(const SaveTmpInformation & save)
     iter = m_userMap.find(m_save.m_peerID);
     if(m_userMap.end() == iter)
     {
-        // 存储离线消息
         //m_database.messageRequest(save.message);
     }
     else
@@ -935,7 +913,7 @@ void IMTcpServer::flockRequest(const SaveTmpInformation & save)
 
 /*************************************************
 Function Name： flockRequest()
-Description:  处理讨论组请求
+Description: 
 *************************************************/
 void IMTcpServer::discussionRequest(const SaveTmpInformation & save)
 {
@@ -945,7 +923,6 @@ void IMTcpServer::discussionRequest(const SaveTmpInformation & save)
     if (ADD_DISCUSSION != m_save.m_message.m_type)
         return;
 
-    // 在数据库中添加讨论组成员信息
     if (!m_database.addDiscussionMember(m_save.m_message.m_senderID,
                                    m_save.m_message.m_receiverID))
     {
@@ -954,7 +931,6 @@ void IMTcpServer::discussionRequest(const SaveTmpInformation & save)
         return;
     }
 
-    // 获取讨论组信息，发送给新加入的成员
     if (m_database.searchDiscussionInformation(
                 m_save.m_message.m_senderID, m_save.m_discussionInf))
     {
@@ -966,7 +942,6 @@ void IMTcpServer::discussionRequest(const SaveTmpInformation & save)
     }
 
 
-    // 获取新成员信息， 发送给之前的成员
     if (m_database.searchDiscussionMember(m_save.m_message.m_senderID,
                                       m_save.m_message.m_receiverID,
                                       m_save.m_discussionMember))
@@ -996,7 +971,7 @@ void IMTcpServer::discussionRequest(const SaveTmpInformation & save)
 
 /*************************************************
 Function Name： talkRequest()
-Description:  处理对话请求
+Description:
 *************************************************/
 void IMTcpServer::talkRequest(const SaveTmpInformation & save)
 {
@@ -1009,12 +984,10 @@ void IMTcpServer::talkRequest(const SaveTmpInformation & save)
         QMap<QString, IMClientSocketCtrl*>::iterator iter;
         iter = m_userMap.find(m_save.m_message.m_receiverID);
 
-        // 聊天记录存储到数据库
         m_database.addHistoryMessage(m_save.m_message);
 
         if(m_userMap.end() == iter)
         {
-            // 存储离线消息到数据库
             //m_database.messageRequest(m_save.message);
             m_database.addOfflineMessage(m_save.m_message);
         }
@@ -1051,7 +1024,6 @@ void IMTcpServer::talkRequest(const SaveTmpInformation & save)
                 iter = m_userMap.find(m_save.m_flockMembersVec[i].m_userID);
                 if(m_userMap.end() == iter)
                 {
-                    // 存储离线消息
                     //m_database.messageRequest(save.message);
                 }
                 else
@@ -1074,7 +1046,6 @@ void IMTcpServer::talkRequest(const SaveTmpInformation & save)
                 iter = m_userMap.find(m_save.m_discussionMembersVec[i].m_userID);
                 if(m_userMap.end() == iter)
                 {
-                    // 存储离线消息
                     //m_database.messageRequest(save.message);
                 }
                 else
@@ -1091,7 +1062,7 @@ void IMTcpServer::talkRequest(const SaveTmpInformation & save)
 
 /*************************************************
 Function Name： changeStatu()
-Description:  通知好友，改变用户状态
+Description:
 *************************************************/
 void IMTcpServer::tellFriendsStatusChanged(const QString &id, int status)
 {
@@ -1113,7 +1084,7 @@ void IMTcpServer::tellFriendsStatusChanged(const QString &id, int status)
 
 /*************************************************
 Function Name： tellFriendsInformationChanged()
-Description:  通知好友，改变用户信息
+Description:
 *************************************************/
 void IMTcpServer::tellFriendsInformationChanged(const QString & id)
 //                                                const FriendInformation &fri)
@@ -1143,7 +1114,7 @@ void IMTcpServer::tellFriendsInformationChanged(const QString & id)
 
 /*************************************************
 Function Name： tellMembersFlockDroped()
-Description:  通知群成员，群被解散
+Description:
 *************************************************/
 void IMTcpServer::tellMembersFlockDroped(const QString & flockID)
 {
@@ -1163,7 +1134,6 @@ void IMTcpServer::tellMembersFlockDroped(const QString & flockID)
 //                }
             if(m_userMap.end() == iter)
             {
-                // 存储离线消息
                 //m_database.messageRequest(save.message);
             }
             else
@@ -1178,7 +1148,7 @@ void IMTcpServer::tellMembersFlockDroped(const QString & flockID)
 
 /*************************************************
 Function Name： tellMembersDiscussionDroped()
-Description:  通知讨论组成员， 讨论组被解散了
+Description:
 *************************************************/
 void IMTcpServer::tellMembersDiscussionDroped(const QString & discussionID)
 {
@@ -1198,7 +1168,6 @@ void IMTcpServer::tellMembersDiscussionDroped(const QString & discussionID)
 //                }
             if(m_userMap.end() == iter)
             {
-                // 存储离线消息
                 //m_database.messageRequest(save.message);
             }
             else
@@ -1209,7 +1178,7 @@ void IMTcpServer::tellMembersDiscussionDroped(const QString & discussionID)
 
 /*************************************************
 Function Name： tellMembersFlockChanged()
-Description:  通知群成员，群信息被改变
+Description:
 *************************************************/
 void IMTcpServer::tellMembersFlockChanged(const FlockInformation & flock)
 {
@@ -1233,7 +1202,7 @@ void IMTcpServer::tellMembersFlockChanged(const FlockInformation & flock)
 
 /*************************************************
 Function Name： tellMembersDiscussionChanged()
-Description:  通知讨论组成员，讨论组信息被修改了
+Description:  
 *************************************************/
 void IMTcpServer::tellMembersDiscussionChanged(const DiscussionInformation & discussion)
 {
@@ -1256,7 +1225,7 @@ void IMTcpServer::tellMembersDiscussionChanged(const DiscussionInformation & dis
 
 /*************************************************
 Function Name： tellFlockMemberHaveNewMember()
-Description:  通知群成员， 有新的成员
+Description:  
 *************************************************/
 void IMTcpServer::tellFlockMemberHaveNewMember(const QString & flockID)
 {
@@ -1279,7 +1248,6 @@ void IMTcpServer::tellFlockMemberHaveNewMember(const QString & flockID)
             iter = m_userMap.find(m_save.m_flockMembersVec[i].m_userID);
             if(m_userMap.end() == iter)
             {
-                // 存储离线消息
                 //m_database.messageRequest(save.message);
             }
             else
@@ -1292,7 +1260,7 @@ void IMTcpServer::tellFlockMemberHaveNewMember(const QString & flockID)
 
 /*************************************************
 Function Name： tellFlockMemberHaveLeavedMember()
-Description:  通知群成员， 有成员离开
+Description:  
 *************************************************/
 void IMTcpServer::tellFlockMemberHaveLeavedMember(const QString & flockID)
 {
@@ -1321,7 +1289,7 @@ void IMTcpServer::tellFlockMemberHaveLeavedMember(const QString & flockID)
 
 /*************************************************
 Function Name： tellDiscussionMemberHaveNewMember()
-Description:  通知群成员， 有新的成员
+Description:  
 *************************************************/
 void IMTcpServer::tellDiscussionMemberHaveNewMember(const QString & discussionID)
 {
@@ -1330,7 +1298,7 @@ void IMTcpServer::tellDiscussionMemberHaveNewMember(const QString & discussionID
 
 /*************************************************
 Function Name： tellDiscussionMemberHaveLeavedMember()
-Description:  通知讨论组成员， 有成员退出
+Description:  
 *************************************************/
 void IMTcpServer::tellDiscussionMemberHaveLeavedMember(const QString & discussionID)
 {

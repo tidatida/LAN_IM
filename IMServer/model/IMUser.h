@@ -2,7 +2,7 @@
 File Name： IMUser.h
 Author： jet.F.R
 Date： 2014.3.17
-Description： 用户类
+Description：
 Changes：
 ********************************************/
 #ifndef IMUSER_H

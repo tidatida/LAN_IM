@@ -2,7 +2,7 @@
 File Name： IMEncryption.h
 Author： jet.F.R
 Date： 2014.3.17
-Description： 加密解密
+Description： encrypt, decrypt
 Changes：
 ********************************************/
 
@@ -19,48 +19,42 @@ Changes：
 class IMEncryption
 {
 public:
-    // 用户获取实例，返回实例的引用
     static IMEncryption& getInstace(void);
 
-    // 使用异或运算加密
     QString getXorEncryptDecrypt(const QString &, const char &);
-    // QByteArray 转 QString
     QString byteToQString(const QByteArray &byte);
-    // QString 转 QByteArray
     QByteArray qstringToByte(const QString &strInfo);
 
 private:
-    IMEncryption(){}//禁止构造函数。
-    IMEncryption(const  IMEncryption &);//禁止拷贝构造函数。
-    IMEncryption & operator =(const  IMEncryption &);//禁止赋值拷贝函数。
+    IMEncryption(){};
+    IMEncryption(const  IMEncryption &);
+    IMEncryption & operator =(const  IMEncryption &);
 
-    QReadWriteLock m_internalMutex;//函数使用的读写锁。
-    static  QMutex s_mutex;//实例互斥锁。
-    static  QAtomicPointer<IMEncryption> s_instance; //使用原子指针,默认初始化为0
+    QReadWriteLock m_internalMutex;
+    static  QMutex s_mutex;
+    static  QAtomicPointer<IMEncryption> s_instance;
 };
 
-QMutex IMEncryption::s_mutex;//实例互斥锁。
-QAtomicPointer<IMEncryption> IMEncryption::s_instance = 0; //使用原子指针,默认初始化为0
+QMutex IMEncryption::s_mutex;
+QAtomicPointer<IMEncryption> IMEncryption::s_instance = 0; /*  init */
 
 IMEncryption& IMEncryption::getInstace(void)
 {
 #if 0
 /* FIXME, i DON'T KNOW HOW TO DEAL WITH  SUCH AN ERRROR.  */
     #ifndef Q_ATOMIC_POINTER_TEST_AND_SET_IS_ALWAYS_NATIVE
-    // 运行时检测
+    /* running check */
     if (!QAtomicPointer::isTestAndSetNative())
     {
         qDebug() << "Error: TestAndSetNative not supported!";
     }
     #endif
 #endif
-    //使用双重检测。
-    //testAndSetOrders操作保证在原子操作前和后的的内存访问不会被重新排序。
 
-    if (s_instance.testAndSetOrdered(0, 0))//第一次检测
+    if (s_instance.testAndSetOrdered(0, 0))/* first check */
     {
-        QMutexLocker locker(&s_mutex);//加互斥锁。
-        s_instance.testAndSetOrdered(0, new  IMEncryption);//第二次检测。
+        QMutexLocker locker(&s_mutex);/* lock*/
+        s_instance.testAndSetOrdered(0, new  IMEncryption);/* second check */
     }
     return  *s_instance;
 }

@@ -8,20 +8,14 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-#if 0
-    // 以下部分解决中文乱码
-    QTextCodec::setCodecForTr(QTextCodec::codecForName("utf-8"));
-    QTextCodec::setCodecForLocale(QTextCodec::codecForName("utf-8"));
-    QTextCodec::setCodecForCStrings(QTextCodec::codecForName("utf-8"));
-    // 以上部分解决中文乱码
-
-//    //确保只运行一次
+    /* I am not clear why the author disable the below lines, just translate chinese comments to english */
+//    /* make sure only one process is running */
 //    QSystemSemaphore sema("IMServerKey",1,QSystemSemaphore::Open);
-//    //在临界区操作共享内存
+//    /* use shared-mem in strict protected area */
 //    sema.acquire();
 //    QSharedMemory mem("IMServerObject");
 
-//    // 如果全局对象以存在则退出
+//    /* if global mem exists, exit. */
 //    if (!mem.create(1))
 //    {
 //        QMessageBox::warning(NULL, "error",
@@ -30,7 +24,7 @@ int main(int argc, char *argv[])
 //        return 0;
 //    }
 //    sema.release();
-#endif
+
 
     IMServerWindow w;
     w.show();
