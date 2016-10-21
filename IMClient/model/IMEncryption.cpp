@@ -1,13 +1,12 @@
 #include "IMEncryption.h"
 
-QMutex IMEncryption::s_mutex;//实例互斥锁。
-QAtomicPointer<IMEncryption> IMEncryption::s_instance = 0; //使用原子指针,默认初始化为0
+QMutex IMEncryption::s_mutex;
+QAtomicPointer<IMEncryption> IMEncryption::s_instance = 0; 
 
 IMEncryption& IMEncryption::getInstace(void)
 {
 #if 0
     #ifndef Q_ATOMIC_POINTER_TEST_AND_SET_IS_ALWAYS_NATIVE
-    // 运行时检测
     if (!QAtomicPointer::isTestAndSetNative())
     {
         qDebug() << "Error: TestAndSetNative not supported!";
@@ -15,13 +14,11 @@ IMEncryption& IMEncryption::getInstace(void)
     #endif
 #endif
 
-    //使用双重检测。
-    //testAndSetOrders操作保证在原子操作前和后的的内存访问不会被重新排序。
 
-    if (s_instance.testAndSetOrdered(0, 0))//第一次检测
+    if (s_instance.testAndSetOrdered(0, 0))
     {
-        QMutexLocker locker(&s_mutex);//加互斥锁。
-        s_instance.testAndSetOrdered(0, new  IMEncryption);//第二次检测。
+        QMutexLocker locker(&s_mutex);
+        s_instance.testAndSetOrdered(0, new  IMEncryption);
     }
     return  *s_instance;
 }

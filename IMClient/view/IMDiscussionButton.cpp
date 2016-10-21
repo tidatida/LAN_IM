@@ -52,7 +52,7 @@ IMDiscussionButton::~IMDiscussionButton()
 
 /*************************************************
 Function Name： openChatRoom()
-Description: 打开聊天窗口
+Description: 
 *************************************************/
 void IMDiscussionButton::openChatRoom()
 {
@@ -91,7 +91,7 @@ void IMDiscussionButton::openChatRoom()
 
 /*************************************************
 Function Name： showChatRoom()
-Description: 显示聊天窗口
+Description: 
 *************************************************/
 void IMDiscussionButton::showChatRoom()
 {
@@ -103,7 +103,7 @@ void IMDiscussionButton::showChatRoom()
 
 /*************************************************
 Function Name： closeChatRoom()
-Description: 关闭聊天窗口
+Description: 
 *************************************************/
 void IMDiscussionButton::closeChatRoom()
 {
@@ -117,7 +117,7 @@ void IMDiscussionButton::closeChatRoom()
 
 /*************************************************
 Function Name： setButtonStatus()
-Description: 设置button显示信息
+Description: 
 *************************************************/
 void IMDiscussionButton::setButtonStatus()
 {
@@ -139,7 +139,7 @@ void IMDiscussionButton::setButtonStatus()
 
 /*************************************************
 Function Name： deleteDiscussionMember()
-Description: 删除成员
+Description: 
 *************************************************/
 void IMDiscussionButton::deleteDiscussionMember(const QString & memberID)
 {
@@ -154,7 +154,7 @@ void IMDiscussionButton::deleteDiscussionMember(const QString & memberID)
 
 /*************************************************
 Function Name： addDiscussionMember()
-Description: 添加成员
+Description: 
 *************************************************/
 void IMDiscussionButton::addDiscussionMember(const QString & memberID)
 {
@@ -168,7 +168,7 @@ void IMDiscussionButton::addDiscussionMember(const QString & memberID)
 
 /*************************************************
 Function Name： onDoubleClickDiscussionButton()
-Description: 左键 双击
+Description: 
 *************************************************/
 void IMDiscussionButton::onDoubleClickDiscussionButton()
 {
@@ -179,13 +179,12 @@ void IMDiscussionButton::onDoubleClickDiscussionButton()
 
 /*************************************************
 Function Name： onClickRightButton()
-Description: 右键点击按键
+Description: 
 *************************************************/
 void IMDiscussionButton::onClickRightButton()
 {
     if (m_menu == NULL)
     {
-        //创建右键菜单
         creatMenu();
     }
     m_menu->exec(QCursor::pos());
@@ -193,7 +192,7 @@ void IMDiscussionButton::onClickRightButton()
 
 /*************************************************
 Function Name： onClickSendMessage()
-Description: 发送群消息
+Description: 
 *************************************************/
 void IMDiscussionButton::onClickSendMessage()
 {
@@ -202,7 +201,7 @@ void IMDiscussionButton::onClickSendMessage()
 
 /*************************************************
 Function Name： onClickShowRecord()
-Description: 查看消息记录
+Description: 
 *************************************************/
 void IMDiscussionButton::onClickShowRecord()
 {
@@ -210,14 +209,14 @@ void IMDiscussionButton::onClickShowRecord()
 
 /*************************************************
 Function Name： onClickDropDiscussion()
-Description: 解散讨论组
+Description: 
 *************************************************/
 void IMDiscussionButton::onClickDropDiscussion()
 {
     QMessageBox::StandardButton returnBtn;
 
-    returnBtn = QMessageBox::question(NULL, tr("解散讨论组"),
-        QString(tr("你确定要解散讨论组(%1)吗？")).arg(m_discussionInfo.m_discussionName),
+    returnBtn = QMessageBox::question(NULL, tr("drop discussion group"),
+        QString(tr("r u sure to drop discussion group(%1)？")).arg(m_discussionInfo.m_discussionName),
         QMessageBox::Yes | QMessageBox::No,  QMessageBox::No);
 
     if(QMessageBox::No == returnBtn)
@@ -229,14 +228,14 @@ void IMDiscussionButton::onClickDropDiscussion()
 
 /*************************************************
 Function Name： onClickLeaveDiscussion()
-Description: 退出讨论组
+Description: 
 *************************************************/
 void IMDiscussionButton::onClickLeaveDiscussion()
 {
     QMessageBox::StandardButton returnBtn;
 
-    returnBtn = QMessageBox::question(NULL, tr("讨论组"),
-        QString(tr("你确定要退出讨论组(%1)吗？")).arg(m_discussionInfo.m_discussionName),
+    returnBtn = QMessageBox::question(NULL, tr("discussion group"),
+        QString(tr("Are you sure exit discussion group(%1)？")).arg(m_discussionInfo.m_discussionName),
         QMessageBox::Yes | QMessageBox::No,  QMessageBox::No);
 
     if(QMessageBox::Yes == returnBtn)
@@ -250,13 +249,13 @@ void IMDiscussionButton::onClickLeaveDiscussion()
 
 /*************************************************
 Function Name： onClickAddMemberDiscussion()
-Description: 添加成员
+Description: 
 *************************************************/
 void IMDiscussionButton::onClickAddMember()
 {
     bool isOk = false;
-    QString memberID = QInputDialog::getText(NULL, "添加讨论组成员",
-                                           "请输入对方帐号",
+    QString memberID = QInputDialog::getText(NULL, "add discuss member",
+                                           "please input the ID to be added",
                                            QLineEdit::Normal,
                                            "",
                                            &isOk);
@@ -264,18 +263,17 @@ void IMDiscussionButton::onClickAddMember()
         return;
 
     // mark
-    // 检验 是否全是 数字 或者 一开始就限制 或者 重写一个messagebox
 
     if (0 == memberID.compare(m_mainWidget->getLocalMyInformation().m_userID))
     {
-        QMessageBox::critical(NULL, tr("添加失败"), tr("不能添加自己"));
+        QMessageBox::critical(NULL, tr("add failed"), tr("can't add yourself"));
         return;
     }
     for (int i =0; i<m_discussionMembersVec.size(); ++i)
     {
         if (0 == memberID.compare(m_discussionMembersVec[i].m_userID))
         {
-            QMessageBox::critical(NULL, tr("添加失败"), tr("该用户已经是该讨论组的成员"));
+            QMessageBox::critical(NULL, tr("add failed"), tr("this user is already in discussion group"));
             return;
         }
     }
@@ -286,8 +284,8 @@ void IMDiscussionButton::onClickAddMember()
 //    temp.m_three = checkMes;
 
     TalkMessage mes;
-    mes.m_senderID = m_discussionInfo.m_discussionID; // 群ID
-    mes.m_receiverID = memberID;  // 成员ID
+    mes.m_senderID = m_discussionInfo.m_discussionID; // discussion group ID
+    mes.m_receiverID = memberID;  // memeber ID
 //    mes.m_text = checkMes;
     mes.m_type = ADD_DISCUSSION;
 
@@ -297,7 +295,7 @@ void IMDiscussionButton::onClickAddMember()
 
 /*************************************************
 Function Name： onClickShowInformation()
-Description: 显示详细信息
+Description: 
 *************************************************/
 void IMDiscussionButton::onClickShowInformation()
 {
@@ -308,7 +306,7 @@ void IMDiscussionButton::onClickShowInformation()
 
 /*************************************************
 Function Name： chatRoomQuit()
-Description: 聊天窗口关闭了
+Description: 
 *************************************************/
 void IMDiscussionButton::chatRoomQuit()
 {
@@ -320,15 +318,14 @@ void IMDiscussionButton::chatRoomQuit()
 
 /*************************************************
 Function Name： setDiscussionMemberList()
-Description: 设置成员列表
+Description: 
 *************************************************/
 void IMDiscussionButton::setDiscussionMemberList(const QVector<DiscussionMember> & memberList)
 {
     int len = memberList.size();
     if (len <= 0) return;
 
-    // 别的discussion请求服务器获取群成员的时候，
-    // 会影响到别的discussion， 可以 判断一下 m_discussionID.
+
     if (0 != memberList[0].m_discussionID.compare(m_discussionInfo.m_discussionID))
         return;
 
@@ -348,7 +345,7 @@ void IMDiscussionButton::setDiscussionMemberList(const QVector<DiscussionMember>
 
 /*************************************************
 Function Name： mousePressEvent
-Description: 鼠标单击事件
+Description: 
 *************************************************/
 void IMDiscussionButton::mousePressEvent(QMouseEvent *event)
 {
@@ -362,7 +359,7 @@ void IMDiscussionButton::mousePressEvent(QMouseEvent *event)
 
 /*************************************************
 Function Name： mouseDoubleClickEvent
-Description: 鼠标双击事件
+Description: 
 *************************************************/
 void IMDiscussionButton::mouseDoubleClickEvent(QMouseEvent *event)
 {
@@ -379,15 +376,15 @@ void IMDiscussionButton::mouseDoubleClickEvent(QMouseEvent *event)
 //remark:private:----------------------------------------
 /*************************************************
 Function Name： getStatusFromInt()
-Description: 创建右键菜单
+Description: 
 *************************************************/
 void IMDiscussionButton::creatMenu(/*const QList<QString> *groutList*/)
 {
     m_menu = new QMenu(this);
-    QAction *sendMessage = new QAction(tr("发送讨论组消息"), m_menu);
-    QAction *showRecord = new QAction(tr("查看消息记录"), m_menu);
-    QAction *showInformation = new QAction(tr("查看资料"), m_menu);
-    QAction *addMember = new QAction(tr("添加讨论组成员"), m_menu);
+    QAction *sendMessage = new QAction(tr("send discuss group msg"), m_menu);
+    QAction *showRecord = new QAction(tr("look msg"), m_menu);
+    QAction *showInformation = new QAction(tr("look info"), m_menu);
+    QAction *addMember = new QAction(tr("add member"), m_menu);
 
     connect(sendMessage, SIGNAL(triggered()),
         this, SLOT(onClickSendMessage()));
@@ -405,14 +402,14 @@ void IMDiscussionButton::creatMenu(/*const QList<QString> *groutList*/)
 
     if (m_mainWidget->getLocalMyInformation().m_userID == m_discussionInfo.m_creatorID)
     {
-        QAction *dropDiscussion = new QAction(tr("解散该讨论组"), m_menu);
+        QAction *dropDiscussion = new QAction(tr("drop the discussion"), m_menu);
         connect(dropDiscussion, SIGNAL(triggered()),
                 this, SLOT(onClickDropDiscussion()));
         m_menu->addAction(dropDiscussion);
     }
     else
     {
-        QAction *leaveDiscussion = new QAction(tr("退出该讨论组"), m_menu);
+        QAction *leaveDiscussion = new QAction(tr("quit from the disscussion"), m_menu);
         connect(leaveDiscussion, SIGNAL(triggered()),
             this, SLOT(onClickLeaveDiscussion()));
         m_menu->addAction(leaveDiscussion);

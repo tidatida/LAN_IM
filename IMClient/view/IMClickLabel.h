@@ -2,7 +2,7 @@
 File Name： IMClickLabel.h
 Author： jet.F.R
 Date： 2014.3.10
-Description： 具有单击相应的标签类
+Description： 
 Changes：
 ********************************************/
 
@@ -14,7 +14,7 @@ Changes：
 
 /*************************************************
 Class Name： IMClickLabel
-Description: 具有单击相应的标签类
+Description: 
 *************************************************/
 class IMClickLabel : public QLabel
 {
@@ -23,11 +23,9 @@ public:
     explicit IMClickLabel(QWidget *parent = 0);
     IMClickLabel(const QString &text, QWidget *parent=0);
 signals:
-    // 鼠标单击信号
     void clicked();//IMClickLabel* label);
 
 protected:
-    // 鼠标单击事件
     void mouseReleaseEvent(QMouseEvent *);
     void enterEvent(QEvent *);
     void leaveEvent(QEvent *);

@@ -2,7 +2,7 @@
 File Name： IMUser.cpp
 Author： jet.F.R
 Date： 2014.3.17
-Description： 用户类
+Description： 
 Changes：
 ********************************************/
 
@@ -38,7 +38,7 @@ IMUser::IMUser(QString id, const QString &nick, const QString &pwd, const QStrin
 
 /*************************************************
 Function Name： getXX()
-Description: 获取用户信息
+Description: 
 Input： NULL
 Output：**(QString / int / QDateTime)
 Changes： NULL

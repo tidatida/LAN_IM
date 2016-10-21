@@ -2,7 +2,7 @@
 File Name： IMChatWidget.h
 Author： jet.F.R
 Date： 2014.3.26
-Description： 用于控制聊天界面的类
+Description： 
 Changes：
 ********************************************/
 
@@ -43,7 +43,7 @@ IMChatWidget::IMChatWidget(const ChatInformation &chatInf, QWidget *parent) :
     initIMChatWidget();
     setLabelStatus();
     linkSignalWithSlot();
-    setWindowTitle(tr("IM好友聊天窗口"));
+    setWindowTitle(tr("IM friends window"));
 }
 
 //IMChatWidget::IMChatWidget(const QString &id, QWidget *parent) :
@@ -67,7 +67,7 @@ IMChatWidget::~IMChatWidget()
 
 /*************************************************
 Function Name： appendMessageShow()
-Description:  添加好友发来的信息
+Description:  
 *************************************************/
 void IMChatWidget::appendMessageShow(const TalkMessage &mes)
 {
@@ -77,7 +77,6 @@ void IMChatWidget::appendMessageShow(const TalkMessage &mes)
     else
         name = m_chatInfor.m_friendRemark;
 
-    //将（收到的）信息显示在输出栏
 //    QString dateTime = IMTcpSocket::getCurrentDateTime();
     QString temp = QString("<font size=\"FONT_SIEZE\" color=blue>%1    %2: </font>%3")
         .arg(name).arg(mes.m_dateTime.toString("yyyy-MM-dd hh:mm:ss")).arg(mes.m_text);
@@ -87,19 +86,19 @@ void IMChatWidget::appendMessageShow(const TalkMessage &mes)
 
 /*************************************************
 Function Name： pendingFile()
-Description:  有接收文件请求需要处理
+Description:  
 *************************************************/
 void IMChatWidget::pendingFile(const TalkMessage &mes)
 {
-    int btn = QMessageBox::information(this,tr("接受文件"),
-                                       tr("来自%1(%2)的文件:\n%3\n是否接收？").
+    int btn = QMessageBox::information(this,tr("receive file"),
+                                       tr("file from %1(%2):\n%3\n should you receive it？").
                                        arg(mes.m_senderID).
                                        arg(mes.m_senderIP).
                                        arg(mes.m_text),
                                        QMessageBox::Yes,QMessageBox::No);
     if(btn == QMessageBox::Yes)
     {
-        QString name = QFileDialog::getSaveFileName(0,tr("保存文件"),mes.m_text);
+        QString name = QFileDialog::getSaveFileName(0,tr("save file"),mes.m_text);
         if(!name.isEmpty())
         {
                 IMFileReceiverWidget *receiver = new IMFileReceiverWidget();
@@ -122,7 +121,7 @@ void IMChatWidget::pendingFile(const TalkMessage &mes)
 
 /*************************************************
 Function Name： refusedSendFile()
-Description:  拒绝文件
+Description:  
 *************************************************/
 void IMChatWidget::refusedSendFile()
 {
@@ -132,7 +131,7 @@ void IMChatWidget::refusedSendFile()
 
 /*************************************************
 Function Name： pendingVideo()
-Description:  有接收视频请求需要处理
+Description:  
 *************************************************/
 void IMChatWidget::pendingVideo(const TalkMessage &mes)
 {
@@ -143,8 +142,8 @@ void IMChatWidget::pendingVideo(const TalkMessage &mes)
 //        return;
 //    }
 
-    int btn = QMessageBox::information(this,tr("视频请求"),
-                                       tr("来自%1(%2)的视频请求，是否接受？")
+    int btn = QMessageBox::information(this,tr("request video"),
+                                       tr("video request from%1(%2)，accept？")
                                        .arg(m_chatInfor.m_friendNickname)
                                        .arg(mes.m_senderID),
                                        QMessageBox::Yes,QMessageBox::No);
@@ -156,11 +155,11 @@ void IMChatWidget::pendingVideo(const TalkMessage &mes)
         m_mes.m_receiverIP = mes.m_senderIP;
         m_mes.m_text = "port";
 
-        qDebug() << "创建视频窗口";
+        qDebug() << "create video window";
         showCamera(mes);
 
-        // 发送视频 接收视频
-//            QString name = QFileDialog::getSaveFileName(0,tr("保存文件"),fileName);
+        // 
+//            QString name = QFileDialog::getSaveFileName(0,tr("save file"),fileName);
 //            if(!name.isEmpty())
 //            {
 //                fileReceiver *receiver = new fileReceiver(this);
@@ -183,7 +182,7 @@ void IMChatWidget::pendingVideo(const TalkMessage &mes)
 
 /*************************************************
 Function Name： initIMMainWidget()
-Description:  显示视频窗口
+Description:  
 *************************************************/
 void IMChatWidget::showVideoWidget(const TalkMessage &mes)
 {
@@ -193,7 +192,7 @@ void IMChatWidget::showVideoWidget(const TalkMessage &mes)
 
 /*************************************************
 Function Name： showCamera()
-Description:  显示采集视频窗口
+Description:  
 *************************************************/
 void IMChatWidget::showCamera(const TalkMessage &mes)
 {
@@ -209,7 +208,7 @@ void IMChatWidget::showCamera(const TalkMessage &mes)
 
 /*************************************************
 Function Name： closeVideoWidget()
-Description:  关闭视频窗口
+Description:  
 *************************************************/
 void IMChatWidget::closeVideoWidget()
 {
@@ -217,7 +216,7 @@ void IMChatWidget::closeVideoWidget()
 
 /*************************************************
 Function Name： setChatWidgetStatus()
-Description:  设置聊天窗口显示信息
+Description:  
 *************************************************/
 void IMChatWidget::setLabelStatus()
 {
@@ -241,7 +240,7 @@ void IMChatWidget::setLabelStatus()
 
 /*************************************************
 Function Name： setChatInformation()
-Description:  设置对方信息
+Description:  
 *************************************************/
 void IMChatWidget::setChatInformation(const ChatInformation & chatInfo)
 {
@@ -257,18 +256,18 @@ void IMChatWidget::setChatInformation(const ChatInformation & chatInfo)
 
 /*************************************************
 Function Name： setFriendIP()
-Description:  设置对方ip
+Description:  
 *************************************************/
 void IMChatWidget::setFriendIP(const QString & ip)
 {
     m_chatInfor.m_friendIP = ip;
-    m_labelFriendIP->setText(QString(tr("好友IP: %1")).arg(ip));
+    m_labelFriendIP->setText(QString(tr("friend IP: %1")).arg(ip));
 
 }
 
 /*************************************************
 Function Name： closeEvent()
-Description:  重载关闭事件
+Description:  
 *************************************************/
 void IMChatWidget::closeEvent(QCloseEvent *event)
 {
@@ -276,9 +275,9 @@ void IMChatWidget::closeEvent(QCloseEvent *event)
     {
         if (!m_fileSender->isStopped())
         {
-            QString temp = tr("文件还在发送中，您确定想要关闭聊天窗口？");
+            QString temp = tr("file is transfering, are you sure to close window");
             QMessageBox::StandardButton rb;
-            rb = QMessageBox::question(this, tr("关闭聊天"), temp,
+            rb = QMessageBox::question(this, tr("close chat"), temp,
                 QMessageBox::Yes | QMessageBox::No, QMessageBox::No);
             if(rb == QMessageBox::No)
             {
@@ -288,7 +287,6 @@ void IMChatWidget::closeEvent(QCloseEvent *event)
         }
     }
 
-    //向主界面发送退出信号
     emit roomQuitSignal();
     saveHistoryMessage();
 
@@ -300,13 +298,13 @@ void IMChatWidget::closeEvent(QCloseEvent *event)
 
 /*************************************************
 Function Name： initIMChatWidget()
-Description:  初始化主界面
+Description:  
 *************************************************/
 void IMChatWidget::initIMChatWidget()
 {
     setWidgetToolBtn();
 
-    /*********好友信息以及交互工具栏**************/
+    /*********friend msg interface**************/
     QHBoxLayout *hLayoutFriend = new QHBoxLayout;
     QVBoxLayout *vLayoutFriend = new QVBoxLayout;
     QVBoxLayout *vLayoutFriendInfo = new QVBoxLayout;
@@ -338,7 +336,7 @@ void IMChatWidget::initIMChatWidget()
     vLayoutFriend->addLayout(hLayoutFriendInter);
 //    vLayoutFriend->addStretch();
 
-    /*********输入编辑框工具栏**************/
+    /*********input widget**************/
     QHBoxLayout *hLayoutInputTool = new QHBoxLayout;
 
 //    hLayoutInputTool->addWidget(m_toolBtnFont);
@@ -354,11 +352,11 @@ void IMChatWidget::initIMChatWidget()
     hLayoutInputTool->addWidget(m_toolBtnHistory);
 
 
-    /*********底部ip显示以及按钮**************/
+    /*********bottom ip and status **************/
     QHBoxLayout *hLayoutBtm = new QHBoxLayout;
     m_labelFriendIP = new QLabel(tr("ip"));
-    m_btnClose = new QPushButton(tr("关闭"));
-    m_btnSend = new QPushButton(tr("发送"));
+    m_btnClose = new QPushButton(tr("close"));
+    m_btnSend = new QPushButton(tr("send"));
     m_btnSend->setDefault(true);
 //    m_btnSend->setFocus();
     hLayoutBtm->addWidget(m_labelFriendIP);
@@ -366,7 +364,7 @@ void IMChatWidget::initIMChatWidget()
     hLayoutBtm->addWidget(m_btnClose);
     hLayoutBtm->addWidget(m_btnSend);
 
-    /******************左侧布局**********************/
+    /******************left layout**********************/
     m_tbMessageShow = new QTextBrowser;
     m_tbMessageShow->setMinimumSize(400, 280);
     m_textInput = new IMInputTextEdit;
@@ -379,7 +377,7 @@ void IMChatWidget::initIMChatWidget()
     vLayoutLeft->addWidget(m_textInput);
     vLayoutLeft->addLayout(hLayoutBtm);
 
-    /******************中间整体布局**********************/
+    /******************middle layout**********************/
     QHBoxLayout *hLayoutMid = new QHBoxLayout;
 
 
@@ -388,7 +386,7 @@ void IMChatWidget::initIMChatWidget()
     m_dockHistoty->hide();//setHidden(true);
     m_dockHistoty->setFixedWidth(250);
     m_tbHistoryShow = new QTextBrowser(m_dockHistoty);
-    QLabel *lableHistory = new QLabel(tr("消息记录"));
+    QLabel *lableHistory = new QLabel(tr("msg record"));
     QVBoxLayout *vLayoutHistory = new QVBoxLayout;
     vLayoutHistory->addWidget(lableHistory);
     vLayoutHistory->addWidget(m_tbHistoryShow);
@@ -401,7 +399,7 @@ void IMChatWidget::initIMChatWidget()
 //    m_dockHistoty->setAllowedAreas(Qt::RightDockWidgetArea);
 //    m_dockHistoty->setWidget(m_tbHistoryShow);
 //    this->addDockWidget(Qt::LeftDockWidgetArea,dock);
-    //去除标题栏
+    // remove tile bar
 //    QWidget* lTitleBar = m_dockHistoty->titleBarWidget();
 //    QWidget* lEmptyWidget = new QWidget();
 //    m_dockHistoty->setTitleBarWidget(lEmptyWidget);
@@ -421,7 +419,7 @@ void IMChatWidget::initIMChatWidget()
     hLayoutMid->addLayout(vLayoutLeft);
     hLayoutMid->addWidget(m_dockHistoty);
 
-    /***********************整体布局**************************/
+    /***********************the entire layout**************************/
 
 
     QVBoxLayout *vLayoutMain = new QVBoxLayout(this);
@@ -441,7 +439,7 @@ void IMChatWidget::initIMChatWidget()
 
 /*************************************************
 Function Name： linkSignalWithSlot()
-Description:  连接信号与槽
+Description:  connect signal with slot
 *************************************************/
 void IMChatWidget::linkSignalWithSlot()
 {
@@ -490,7 +488,7 @@ void IMChatWidget::linkSignalWithSlot()
 
 /*************************************************
 Function Name： setWidgetToolBtn()
-Description:  设置面板图标
+Description:  set panel picture
 *************************************************/
 void IMChatWidget::setWidgetToolBtn()
 {
@@ -499,8 +497,8 @@ void IMChatWidget::setWidgetToolBtn()
 //    m_toolBtnVideo->setStyleSheet("QToolButton { image:url(:/images/camera.png); border: none; width: CHAT_WIDGET_TOOL_SIZEpx; height: CHAT_WIDGET_TOOL_SIZEpx;}");
     m_toolBtnVideo->setIcon(QIcon(":/images/camera.png"));
     m_toolBtnVideo->setAutoRaise(true);
-    m_toolBtnVideo->setToolTip(tr("视频"));
-    m_toolBtnVideo->setStatusTip(tr("打开视频"));
+    m_toolBtnVideo->setToolTip(tr("video"));
+    m_toolBtnVideo->setStatusTip(tr("open video"));
 //    m_toolBtnVideo->setAutoFillBackground(true);
 
 //    m_toolBtnVideo->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -510,8 +508,8 @@ void IMChatWidget::setWidgetToolBtn()
     m_toolBtnVoice = new QToolButton;
     m_toolBtnVoice->setIcon(QIcon(":/images/microphone.png"));
     m_toolBtnVoice->setAutoRaise(true);
-    m_toolBtnVoice->setToolTip(tr("语音"));
-    m_toolBtnVoice->setStatusTip(tr("打开语音"));
+    m_toolBtnVoice->setToolTip(tr("vadio"));
+    m_toolBtnVoice->setStatusTip(tr("open vadio"));
     m_toolBtnVoice->setIconSize(QSize(CHAT_WIDGET_TOOL_SIZE,CHAT_WIDGET_TOOL_SIZE));
 //    connect(m_toolBtnVoice, SIGNAL(clicked()),
 //            this, SLOT(onClickBtnVoice()));
@@ -519,15 +517,15 @@ void IMChatWidget::setWidgetToolBtn()
     m_toolBtnFile = new QToolButton;
     m_toolBtnFile->setIcon(QIcon(":/images/send_file.png"));
     m_toolBtnFile->setAutoRaise(true);
-    m_toolBtnFile->setToolTip(tr("发送文件"));
-    m_toolBtnFile->setStatusTip(tr("发送文件"));
+    m_toolBtnFile->setToolTip(tr("send file"));
+    m_toolBtnFile->setStatusTip(tr("send file"));
     m_toolBtnFile->setIconSize(QSize(CHAT_WIDGET_TOOL_SIZE,CHAT_WIDGET_TOOL_SIZE));
 
     m_toolBtnSpace = new QToolButton;
     m_toolBtnSpace->setIcon(QIcon(":/images/space.png"));
     m_toolBtnSpace->setAutoRaise(true);
-    m_toolBtnSpace->setToolTip(tr("空间"));
-    m_toolBtnSpace->setStatusTip(tr("打开空间"));
+    m_toolBtnSpace->setToolTip(tr("space"));
+    m_toolBtnSpace->setStatusTip(tr("open space"));
     m_toolBtnSpace->setIconSize(QSize(CHAT_WIDGET_TOOL_SIZE,CHAT_WIDGET_TOOL_SIZE));
 //---------------------------------------------------------------------------
 //    m_toolBtnFont = new QToolButton;
@@ -536,11 +534,11 @@ void IMChatWidget::setWidgetToolBtn()
 //    m_toolBtnFont->setIconSize(QSize(CHAT_WIDGET_TOOL_SMALL_SIZE,CHAT_WIDGET_TOOL_SMALL_SIZE));
 
     m_cbFont = new QFontComboBox;
-    m_cbFont->setToolTip(tr("字体"));
-    m_cbFont->setStatusTip(tr("设置字体"));
+    m_cbFont->setToolTip(tr("font"));
+    m_cbFont->setStatusTip(tr("set font"));
     m_cbSize = new QComboBox;
-    m_cbSize->setToolTip(tr("大小"));
-    m_cbSize->setStatusTip(tr("设置字体大小"));
+    m_cbSize->setToolTip(tr("size"));
+    m_cbSize->setStatusTip(tr("set font size"));
     for (int i=9;  i<=22; ++i)
     {
         m_cbSize->addItem(QString::number(i));
@@ -555,46 +553,46 @@ void IMChatWidget::setWidgetToolBtn()
     m_toolBtnBold->setIcon(QIcon(":/images/font_bold.png"));
     m_toolBtnBold->setAutoRaise(true);
     m_toolBtnBold->setIconSize(QSize(CHAT_WIDGET_TOOL_SMALL_SIZE,CHAT_WIDGET_TOOL_SMALL_SIZE));
-    m_toolBtnBold->setToolTip(tr("加粗"));
-    m_toolBtnBold->setStatusTip(tr("是否加粗"));
+    m_toolBtnBold->setToolTip(tr("bold"));
+    m_toolBtnBold->setStatusTip(tr("make bold"));
 
     m_toolBtnItalic = new QToolButton;
     m_toolBtnItalic->setCheckable(true);
     m_toolBtnItalic->setIcon(QIcon(":/images/font_italic.png"));
     m_toolBtnItalic->setAutoRaise(true);
     m_toolBtnItalic->setIconSize(QSize(CHAT_WIDGET_TOOL_SMALL_SIZE,CHAT_WIDGET_TOOL_SMALL_SIZE));
-    m_toolBtnItalic->setToolTip(tr("倾斜"));
-    m_toolBtnItalic->setStatusTip(tr("是否倾斜"));
+    m_toolBtnItalic->setToolTip(tr("italic"));
+    m_toolBtnItalic->setStatusTip(tr("make intalic"));
 
     m_toolBtnUnderline = new QToolButton;
     m_toolBtnUnderline->setCheckable(true);
     m_toolBtnUnderline->setIcon(QIcon(":/images/font_underline.png"));
     m_toolBtnUnderline->setAutoRaise(true);
     m_toolBtnUnderline->setIconSize(QSize(CHAT_WIDGET_TOOL_SMALL_SIZE,CHAT_WIDGET_TOOL_SMALL_SIZE));
-    m_toolBtnUnderline->setToolTip(tr("下划线"));
-    m_toolBtnUnderline->setStatusTip(tr("是否添加下划线"));
+    m_toolBtnUnderline->setToolTip(tr("undeline"));
+    m_toolBtnUnderline->setStatusTip(tr("make underlined"));
 
     m_toolBtnColor = new QToolButton;
     m_toolBtnColor->setIcon(QIcon(":/images/colour.png"));
     m_toolBtnColor->setAutoRaise(true);
     m_toolBtnColor->setIconSize(QSize(CHAT_WIDGET_TOOL_SMALL_SIZE,CHAT_WIDGET_TOOL_SMALL_SIZE));
-    m_toolBtnColor->setToolTip(tr("颜色"));
-    m_toolBtnColor->setStatusTip(tr("设置颜色"));
+    m_toolBtnColor->setToolTip(tr("color"));
+    m_toolBtnColor->setStatusTip(tr("set color"));
 
     m_toolBtnClear = new QToolButton;
     m_toolBtnClear->setIcon(QIcon(":/images/clear.png"));
     m_toolBtnClear->setAutoRaise(true);
     m_toolBtnClear->setIconSize(QSize(CHAT_WIDGET_TOOL_SMALL_SIZE,CHAT_WIDGET_TOOL_SMALL_SIZE));
-    m_toolBtnClear->setToolTip(tr("清空"));
-    m_toolBtnClear->setStatusTip(tr("清空消息显示"));
+    m_toolBtnClear->setToolTip(tr("clear"));
+    m_toolBtnClear->setStatusTip(tr("clean msg"));
 
     m_toolBtnHistory = new QToolButton;
     m_toolBtnHistory->setIcon(QIcon(":/images/message.png"));
     m_toolBtnHistory->setAutoRaise(true);
     m_toolBtnHistory->setCheckable(true);
     m_toolBtnHistory->setIconSize(QSize(CHAT_WIDGET_TOOL_SMALL_SIZE,CHAT_WIDGET_TOOL_SMALL_SIZE));
-    m_toolBtnHistory->setToolTip(tr("消息记录"));
-    m_toolBtnHistory->setStatusTip(tr("打开消息记录"));
+    m_toolBtnHistory->setToolTip(tr("msg record"));
+    m_toolBtnHistory->setStatusTip(tr("open msg record"));
 }
 
 /*************************************************
@@ -613,7 +611,7 @@ void IMChatWidget::saveHistoryMessage()
 
 /*************************************************
 Function Name： readHistoryMessage()
-Description:  读取历史记录
+Description:  
 *************************************************/
 void IMChatWidget::readHistoryMessage()
 {
@@ -631,7 +629,7 @@ void IMChatWidget::readHistoryMessage()
 // private slots:-----------------------------------------------------
 /*************************************************
 Function Name： onClickBtnVideo()
-Description:  点击“视频”按钮
+Description:  
 *************************************************/
 void IMChatWidget::onClickBtnVideo()
 {
@@ -645,8 +643,7 @@ void IMChatWidget::onClickBtnVideo()
 //    qDebug() << "";
 //    // show wait
 //    m_videoShow = new ShowVideoWidget(2222);
-//    // 聊天窗口关闭的时候 视频聊天也要关掉
-//    // 最好先弹出提示，让用户选择.
+
 //    connect(this, SIGNAL(destroyed()),
 //            m_videoShow, SLOT(deleteLater()));
 //    m_videoShow->show();
@@ -658,7 +655,7 @@ void IMChatWidget::onClickBtnVideo()
 
 /*************************************************
 Function Name： onClickBtnVoice()
-Description:  语音
+Description:  voice
 *************************************************/
 void IMChatWidget::onClickBtnVoice()
 {
@@ -667,7 +664,7 @@ void IMChatWidget::onClickBtnVoice()
 
 /*************************************************
 Function Name： onClickBtnFile()
-Description:  发送文件
+Description:  send file
 *************************************************/
 void IMChatWidget::onClickBtnFile()
 {
@@ -677,14 +674,14 @@ void IMChatWidget::onClickBtnFile()
     }
     if (OFFLINE == m_chatInfor.m_friendStatus)
     {
-        QMessageBox::critical(NULL, tr("发送文件"), tr("好友不在线，暂时无法发送"));
+        QMessageBox::critical(NULL, tr("send file"), tr("friend is offline, can't send file now"));
         return;
     }
 
     QString fileName = QFileDialog::getOpenFileName(this);
     if(fileName.isEmpty())
     {
-        QMessageBox::information(this,tr("警告"),tr("请选择文件"));
+        QMessageBox::information(this,tr("warning"),tr("please select file"));
         return;
     }
     m_fileSender->initSender();
@@ -704,7 +701,7 @@ void IMChatWidget::onClickBtnFile()
 
 /*************************************************
 Function Name： onClickBtnSpace()
-Description:  空间
+Description:   
 *************************************************/
 void IMChatWidget::onClickBtnSpace()
 {
@@ -713,7 +710,7 @@ void IMChatWidget::onClickBtnSpace()
 
 /*************************************************
 Function Name： setInputTextFont()
-Description:  字体样式
+Description:   
 *************************************************/
 void IMChatWidget::setInputTextFont(const QFont &font)
 {
@@ -723,7 +720,7 @@ void IMChatWidget::setInputTextFont(const QFont &font)
 
 /*************************************************
 Function Name： setInputTextSize()
-Description:  字体大小
+Description:   
 *************************************************/
 void IMChatWidget::setInputTextSize(const QString &size)
 {
@@ -734,7 +731,7 @@ void IMChatWidget::setInputTextSize(const QString &size)
 
 /*************************************************
 Function Name： onClickBtnBold()
-Description:  加粗
+Description:   
 *************************************************/
 void IMChatWidget::onClickBtnBold(bool checked)
 {
@@ -747,7 +744,7 @@ void IMChatWidget::onClickBtnBold(bool checked)
 
 /*************************************************
 Function Name： onClickBtnItalic()
-Description:  斜体
+Description:    
 *************************************************/
 void IMChatWidget::onClickBtnItalic(bool checked)
 {
@@ -758,7 +755,7 @@ void IMChatWidget::onClickBtnItalic(bool checked)
 
 /*************************************************
 Function Name： onClickBtnUnderline()
-Description:  下划线
+Description:   
 *************************************************/
 void IMChatWidget::onClickBtnUnderline(bool checked)
 {
@@ -768,7 +765,7 @@ void IMChatWidget::onClickBtnUnderline(bool checked)
 
 /*************************************************
 Function Name： onClickBtnColor()
-Description:  颜色
+Description:   
 *************************************************/
 void IMChatWidget::onClickBtnColor()
 {
@@ -778,7 +775,6 @@ void IMChatWidget::onClickBtnColor()
         m_textInput->setTextColor(color);
         m_textInput->setFocus();
 
-        //    //设置字体的颜色，并将其写入文件
         //		saveFile.color = colorDialog->currentColor();
         //		saveFontColor();
     }
@@ -787,7 +783,7 @@ void IMChatWidget::onClickBtnColor()
 
 /*************************************************
 Function Name： onClickBtnClear()
-Description:  清空
+Description:  
 *************************************************/
 void IMChatWidget::onClickBtnClear()
 {
@@ -798,7 +794,7 @@ void IMChatWidget::onClickBtnClear()
 
 /*************************************************
 Function Name： onClickBtnHistory()
-Description:  聊天历史记录
+Description:  
 *************************************************/
 void IMChatWidget::onClickBtnHistory(bool checked)
 {
@@ -811,14 +807,14 @@ void IMChatWidget::onClickBtnHistory(bool checked)
 
 /*************************************************
 Function Name： currentFormatChanged()
-Description:  部件状态
+Description:  
 *************************************************/
 void IMChatWidget::currentFormatChanged(const QTextCharFormat &format)
-{//当编辑器的字体格式改变时，我们让部件状态也随之改变
+{
     m_cbFont->setCurrentFont(format.font());
 
-    if(format.fontPointSize()<9)  //如果字体大小出错，因为我们最小的字体为9
-        m_cbSize->setCurrentIndex(3); //即显示12
+    if(format.fontPointSize()<9)  
+        m_cbSize->setCurrentIndex(3); 
     else m_cbSize->setCurrentIndex(
             m_cbSize->findText(QString::number(format.fontPointSize())));
 
@@ -830,7 +826,7 @@ void IMChatWidget::currentFormatChanged(const QTextCharFormat &format)
 
 /*************************************************
 Function Name： onClickBtnClocse()
-Description:  点击“关闭”按钮
+Description:  
 *************************************************/
 void IMChatWidget::onClickBtnClose()
 {
@@ -840,19 +836,18 @@ void IMChatWidget::onClickBtnClose()
 
 /*************************************************
 Function Name： onClickBtnSend()
-Description:  点击“发送”按钮
+Description:  
 *************************************************/
 void IMChatWidget::onClickBtnSend()
 {
     if (m_textInput->toPlainText().isEmpty())
         return;
-    // 获取信息输入框的信息，并且更新信息输入框
     QString sendString = m_textInput->toHtml();
     m_textInput->clear();
 //    QString dateTime = IMTcpSocket::getCurrentDateTime();
     QDateTime dateTime = QDateTime::currentDateTime();
     QString temp = QString("<font size=\"FONT_SIEZE\" color=green>%1    %2: </font>%3")
-        .arg("我").arg(dateTime.toString("yyyy-MM-dd hh:mm:ss")).arg(sendString);
+        .arg(" I ").arg(dateTime.toString("yyyy-MM-dd hh:mm:ss")).arg(sendString);
     m_tbMessageShow->append(temp);
 
     m_mes.m_text = sendString;

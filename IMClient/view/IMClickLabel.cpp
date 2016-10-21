@@ -2,7 +2,7 @@
 File Name： IMClickLabel.cpp
 Author： jet.F.R
 Date： 2014.3.10
-Description： 具有单击相应的标签类
+Description： 
 Changes：
 ********************************************/
 

@@ -35,7 +35,7 @@ IMDiscussionChatWidget::IMDiscussionChatWidget(const DiscussionInformation & dis
     initIMDiscussionChatWidget();
     setLabelStatus();
     linkSignalWithSlot();
-    setWindowTitle(tr("IM组聊窗口"));
+    setWindowTitle(tr("IM group chat window"));
 }
 
 IMDiscussionChatWidget::~IMDiscussionChatWidget()
@@ -48,7 +48,7 @@ IMDiscussionChatWidget::~IMDiscussionChatWidget()
 
 /*************************************************
 Function Name： appendMessageShow()
-Description:  添加讨论组成员发来的信息
+Description:  
 *************************************************/
 void IMDiscussionChatWidget::appendMessageShow(const TalkMessage &mes)
 {
@@ -70,7 +70,6 @@ void IMDiscussionChatWidget::appendMessageShow(const TalkMessage &mes)
 //    else
 //        name = member.m_remark;
 
-    //将（收到的）信息显示在输出栏
     QString dateTime = IMTcpSocket::getCurrentDateTime();
     QString temp = QString("<font size=\"FONT_SIEZE\" color=blue>%1    %2: </font>%3")
         .arg(name).arg(dateTime).arg(mes.m_text);
@@ -79,7 +78,7 @@ void IMDiscussionChatWidget::appendMessageShow(const TalkMessage &mes)
 
 /*************************************************
 Function Name： setLabelStatus()
-Description:  设置聊天窗口显示信息
+Description:  
 *************************************************/
 void IMDiscussionChatWidget::setLabelStatus()
 {
@@ -96,7 +95,7 @@ void IMDiscussionChatWidget::setLabelStatus()
 
 /*************************************************
 Function Name： setChatInformation()
-Description:  设置讨论组信息
+Description:  
 *************************************************/
 void IMDiscussionChatWidget::setChatInformation(const DiscussionInformation & discussion)
 {
@@ -107,7 +106,7 @@ void IMDiscussionChatWidget::setChatInformation(const DiscussionInformation & di
 
 /*************************************************
 Function Name： addDiscussionMemberButton()
-Description:  添加成员按钮
+Description:  
 *************************************************/
 bool IMDiscussionChatWidget::addDiscussionMemberButton(const DiscussionMember & memInfo)
 {
@@ -128,7 +127,7 @@ bool IMDiscussionChatWidget::addDiscussionMemberButton(const DiscussionMember & 
 
 /*************************************************
 Function Name： removeDiscussionMemberButton()
-Description:  删除成员按钮
+Description:  
 *************************************************/
 bool IMDiscussionChatWidget::removeDiscussionMemberButton(const QString & memberID)
 {
@@ -145,7 +144,7 @@ bool IMDiscussionChatWidget::removeDiscussionMemberButton(const QString & member
 
 /*************************************************
 Function Name： setDiscussionMemberList()
-Description:  设置成员列表
+Description:  
 *************************************************/
 void IMDiscussionChatWidget::setDiscussionMemberList(
         const QVector<DiscussionMember> & memberList)
@@ -174,13 +173,12 @@ void IMDiscussionChatWidget::setDiscussionMemberList(
 
 /*************************************************
 Function Name： closeEvent()
-Description:  重载关闭事件
+Description:  
 *************************************************/
 void IMDiscussionChatWidget::closeEvent(QCloseEvent *event)
 {
     qDebug() << "discussion close:" << m_discussionInfo.m_discussionID;
 
-    //向主界面发送退出信号
     emit roomQuitSignal();
 
     saveHistoryMessage();
@@ -194,7 +192,7 @@ void IMDiscussionChatWidget::closeEvent(QCloseEvent *event)
 // private slots:-----------------------------------------------------
 /*************************************************
 Function Name： setInputTextFont()
-Description:  字体样式
+Description:  
 *************************************************/
 void IMDiscussionChatWidget::setInputTextFont(const QFont &font)
 {
@@ -204,7 +202,7 @@ void IMDiscussionChatWidget::setInputTextFont(const QFont &font)
 
 /*************************************************
 Function Name： setInputTextSize()
-Description:  字体大小
+Description:  
 *************************************************/
 void IMDiscussionChatWidget::setInputTextSize(const QString &size)
 {
@@ -215,7 +213,7 @@ void IMDiscussionChatWidget::setInputTextSize(const QString &size)
 
 /*************************************************
 Function Name： onClickBtnBold()
-Description:  加粗
+Description:  
 *************************************************/
 void IMDiscussionChatWidget::onClickBtnBold(bool checked)
 {
@@ -228,7 +226,7 @@ void IMDiscussionChatWidget::onClickBtnBold(bool checked)
 
 /*************************************************
 Function Name： onClickBtnItalic()
-Description:  斜体
+Description:  
 *************************************************/
 void IMDiscussionChatWidget::onClickBtnItalic(bool checked)
 {
@@ -239,7 +237,7 @@ void IMDiscussionChatWidget::onClickBtnItalic(bool checked)
 
 /*************************************************
 Function Name： onClickBtnUnderline()
-Description:  下划线
+Description:  
 *************************************************/
 void IMDiscussionChatWidget::onClickBtnUnderline(bool checked)
 {
@@ -249,7 +247,7 @@ void IMDiscussionChatWidget::onClickBtnUnderline(bool checked)
 
 /*************************************************
 Function Name： onClickBtnColor()
-Description:  颜色
+Description:  
 *************************************************/
 void IMDiscussionChatWidget::onClickBtnColor()
 {
@@ -259,7 +257,6 @@ void IMDiscussionChatWidget::onClickBtnColor()
         m_textInput->setTextColor(color);
         m_textInput->setFocus();
 
-        //    //设置字体的颜色，并将其写入文件
         //		saveFile.color = colorDialog->currentColor();
         //		saveFontColor();
     }
@@ -268,7 +265,7 @@ void IMDiscussionChatWidget::onClickBtnColor()
 
 /*************************************************
 Function Name： onClickBtnClear()
-Description:  清空
+Description:  
 *************************************************/
 void IMDiscussionChatWidget::onClickBtnClear()
 {
@@ -279,31 +276,31 @@ void IMDiscussionChatWidget::onClickBtnClear()
 
 /*************************************************
 Function Name： onClickBtnHistory()
-Description:  聊天历史记录
+Description:  
 *************************************************/
 void IMDiscussionChatWidget::onClickBtnHistory(bool checked)
 {
     if (checked)
     {
-        m_labelDockWidget->setText(tr("消息记录"));
+        m_labelDockWidget->setText(tr("msg record"));
         readHistoryMessage();
     }
     else
-        m_labelDockWidget->setText(tr("讨论组成员列表"));
+        m_labelDockWidget->setText(tr("discuss group memeber"));
     m_memberListWidget->setHidden(checked);
     m_tbHistoryShow->setHidden(!checked);
 }
 
 /*************************************************
 Function Name： currentFormatChanged()
-Description:  部件状态
+Description:   
 *************************************************/
 void IMDiscussionChatWidget::currentFormatChanged(const QTextCharFormat &format)
-{//当编辑器的字体格式改变时，我们让部件状态也随之改变
+{
     m_cbFont->setCurrentFont(format.font());
 
-    if(format.fontPointSize()<9)  //如果字体大小出错，因为我们最小的字体为9
-        m_cbSize->setCurrentIndex(3); //即显示12
+    if(format.fontPointSize()<9)  
+        m_cbSize->setCurrentIndex(3); 
     else m_cbSize->setCurrentIndex(
             m_cbSize->findText(QString::number(format.fontPointSize())));
 
@@ -315,7 +312,7 @@ void IMDiscussionChatWidget::currentFormatChanged(const QTextCharFormat &format)
 
 /*************************************************
 Function Name： onClickBtnClocse()
-Description:  点击“关闭”按钮
+Description:  
 *************************************************/
 void IMDiscussionChatWidget::onClickBtnClose()
 {
@@ -325,13 +322,12 @@ void IMDiscussionChatWidget::onClickBtnClose()
 
 /*************************************************
 Function Name： onClickBtnSend()
-Description:  点击“发送”按钮
+Description:  
 *************************************************/
 void IMDiscussionChatWidget::onClickBtnSend()
 {
     if (m_textInput->toPlainText().isEmpty())
         return;
-    // 获取信息输入框的信息，并且更新信息输入框
     QString sendString = m_textInput->toHtml();
     m_textInput->clear();
     QString dateTime = IMTcpSocket::getCurrentDateTime();
@@ -354,13 +350,13 @@ void IMDiscussionChatWidget::onClickBtnSend()
 
 /*************************************************
 Function Name： initIMDiscussionChatWidget()
-Description:  初始化主界面
+Description:  
 *************************************************/
 void IMDiscussionChatWidget::initIMDiscussionChatWidget()
 {
     setWidgetToolBtn();
 
-    /*********好友信息以及交互工具栏**************/
+    /**********************/
     QHBoxLayout *hLayoutInformation = new QHBoxLayout;
 
     m_labelHead = new IMClickLabel;
@@ -370,7 +366,7 @@ void IMDiscussionChatWidget::initIMDiscussionChatWidget()
     hLayoutInformation->addWidget(m_labelInformation);
     hLayoutInformation->addStretch();
 
-    /*********输入编辑框工具栏**************/
+    /**********************/
     QHBoxLayout *hLayoutInputTool = new QHBoxLayout;
 
     hLayoutInputTool->addWidget(m_cbFont);
@@ -385,16 +381,16 @@ void IMDiscussionChatWidget::initIMDiscussionChatWidget()
     hLayoutInputTool->addWidget(m_toolBtnHistory);
 
 
-    /*********底部按钮**************/
+    /******************/
     QHBoxLayout *hLayoutBtm = new QHBoxLayout;
-    m_btnClose = new QPushButton(tr("关闭"));
-    m_btnSend = new QPushButton(tr("发送"));
+    m_btnClose = new QPushButton(tr("close"));
+    m_btnSend = new QPushButton(tr("send"));
     m_btnSend->setDefault(true);
     hLayoutBtm->addStretch();
     hLayoutBtm->addWidget(m_btnClose);
     hLayoutBtm->addWidget(m_btnSend);
 
-    /******************左侧布局**********************/
+    /******************left layout**********************/
     m_tbMessageShow = new QTextBrowser;
     m_tbMessageShow->setMinimumSize(400, 280);
     m_textInput = new IMInputTextEdit;
@@ -406,7 +402,7 @@ void IMDiscussionChatWidget::initIMDiscussionChatWidget()
     vLayoutLeft->addWidget(m_textInput);
     vLayoutLeft->addLayout(hLayoutBtm);
 
-    /******************中间整体布局**********************/
+    /******************middle layout**********************/
     QHBoxLayout *hLayoutMid = new QHBoxLayout;
 
     m_dockWidget = new QWidget(this);
@@ -414,7 +410,7 @@ void IMDiscussionChatWidget::initIMDiscussionChatWidget()
 
     m_tbHistoryShow = new QTextBrowser(m_dockWidget);
     m_labelDockWidget = new QLabel(m_dockWidget);
-    m_labelDockWidget->setText(tr("群成员列表"));
+    m_labelDockWidget->setText(tr("group member list"));
     m_memberListWidget = new IMDiscussionMemberListWidget(m_dockWidget);
     QVBoxLayout *vLayoutHistory = new QVBoxLayout;
     vLayoutHistory->addWidget(m_labelDockWidget);
@@ -427,7 +423,7 @@ void IMDiscussionChatWidget::initIMDiscussionChatWidget()
     hLayoutMid->addLayout(vLayoutLeft);
     hLayoutMid->addWidget(m_dockWidget);
 
-    /***********************整体布局**************************/
+    /***********************entire layout**************************/
 
 
     QVBoxLayout *vLayoutMain = new QVBoxLayout(this);
