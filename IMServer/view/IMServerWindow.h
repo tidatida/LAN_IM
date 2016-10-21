@@ -9,7 +9,7 @@ Changes：
 #ifndef IMSERVERWINDOW_H
 #define IMSERVERWINDOW_H
 
-#include <QWidget>
+#include <QtWidgets>
 
 class IMServerMessageCtrl;
 

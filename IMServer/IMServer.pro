@@ -4,14 +4,14 @@
 #
 #-------------------------------------------------
 
-QT       += core gui network sql
+QT       += core widgets network sql
 
 TARGET = IMServer
 TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        view/IMServerWindow.cpp \
+    view/IMServerWindow.cpp \
     control/IMServerMessageCtrl.cpp \
     model/IMTcpServer.cpp \
     model/IMThread.cpp \

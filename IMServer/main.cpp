@@ -8,6 +8,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
+#if 0
     // 以下部分解决中文乱码
     QTextCodec::setCodecForTr(QTextCodec::codecForName("utf-8"));
     QTextCodec::setCodecForLocale(QTextCodec::codecForName("utf-8"));
@@ -29,6 +30,7 @@ int main(int argc, char *argv[])
 //        return 0;
 //    }
 //    sema.release();
+#endif
 
     IMServerWindow w;
     w.show();

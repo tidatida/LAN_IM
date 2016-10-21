@@ -44,6 +44,8 @@ QAtomicPointer<IMEncryption> IMEncryption::s_instance = 0; //使用原子指针,
 
 IMEncryption& IMEncryption::getInstace(void)
 {
+#if 0
+/* FIXME, i DON'T KNOW HOW TO DEAL WITH  SUCH AN ERRROR.  */
     #ifndef Q_ATOMIC_POINTER_TEST_AND_SET_IS_ALWAYS_NATIVE
     // 运行时检测
     if (!QAtomicPointer::isTestAndSetNative())
@@ -51,7 +53,7 @@ IMEncryption& IMEncryption::getInstace(void)
         qDebug() << "Error: TestAndSetNative not supported!";
     }
     #endif
-
+#endif
     //使用双重检测。
     //testAndSetOrders操作保证在原子操作前和后的的内存访问不会被重新排序。
 
