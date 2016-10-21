@@ -20,7 +20,7 @@ void IMMainCtrl::closeConnect()
 
 /*************************************************
 Function Name： getFriendsInformation
-Description: 获取所有好友信息
+Description: 
 *************************************************/
 void IMMainCtrl::getFriendsInformation(const QString &id, const int status)
 {
@@ -42,7 +42,7 @@ void IMMainCtrl::getFriendsInformation(const QString &id, const int status)
 
 /*************************************************
 Function Name： getFlocksInformation
-Description: 获取群信息列表
+Description: 
 *************************************************/
 void IMMainCtrl::getFlocksInformation(const QString & id)
 {
@@ -54,7 +54,7 @@ void IMMainCtrl::getFlocksInformation(const QString & id)
 
 /*************************************************
 Function Name： getDiscussionsInformation
-Description: 获取讨论组信息列表
+Description: 
 *************************************************/
 void IMMainCtrl::getDiscussionsInformation(const QString & id)
 {
@@ -66,16 +66,15 @@ void IMMainCtrl::getDiscussionsInformation(const QString & id)
 
 /*************************************************
 Function Name： getLatestMessage
-Description: 获取本地最近消息
+Description: 
 *************************************************/
 void IMMainCtrl::getLatestMessage(const QString & id)
 {
-    //访问本地数据库
 }
 
 /*************************************************
 Function Name： getFlockMembers
-Description: 获取群所有成员
+Description: 
 *************************************************/
 void IMMainCtrl::getFlockMembers(const QString & id)
 {
@@ -87,7 +86,7 @@ void IMMainCtrl::getFlockMembers(const QString & id)
 
 /*************************************************
 Function Name： getDiscussionMembers
-Description: 获取讨论组所有成员
+Description: 
 *************************************************/
 void IMMainCtrl::getDiscussionMembers(const QString & id)
 {
@@ -99,7 +98,7 @@ void IMMainCtrl::getDiscussionMembers(const QString & id)
 
 /*************************************************
 Function Name： sendTalkMessage
-Description: 发送聊天信息
+Description: 
 *************************************************/
 void IMMainCtrl::sendTalkMessage(TalkMessage &mes)
 {
@@ -121,7 +120,7 @@ void IMMainCtrl::sendTalkMessage(TalkMessage &mes)
 }
 
 
-//// 发送群聊天信息
+//// 
 //void IMMainCtrl::sendFlockTalkMessage(TalkMessage & mes)
 //{
 //    if (NULL == m_tcpSocket)
@@ -132,7 +131,7 @@ void IMMainCtrl::sendTalkMessage(TalkMessage &mes)
 //    }
 //}
 
-//// 发送讨论组聊天信息
+//// 
 //void IMMainCtrl::sendDiscussionTalkMessage(TalkMessage & mes)
 //{
 //    if (NULL == m_tcpSocket)
@@ -145,7 +144,7 @@ void IMMainCtrl::sendTalkMessage(TalkMessage &mes)
 
 /*************************************************
 Function Name： getFriendInformation
-Description: 获取好友详细信息
+Description: 
 *************************************************/
 void IMMainCtrl::getFriendInformation(const QString &id)
 {
@@ -166,7 +165,7 @@ void IMMainCtrl::getFriendInformation(const QString &id)
 
 /*************************************************
 Function Name： getMynformation
-Description: 获取自己详细信息
+Description: 
 *************************************************/
 void IMMainCtrl::getMynformation(const QString &id)
 {
@@ -186,7 +185,7 @@ void IMMainCtrl::getMynformation(const QString &id)
 
 /*************************************************
 Function Name： changeMyInformation
-Description: 修改自己的信息
+Description: 
 *************************************************/
 void IMMainCtrl::changeMyInformation(const UserInformation &me)
 {
@@ -206,7 +205,7 @@ void IMMainCtrl::changeMyInformation(const UserInformation &me)
 
 /*************************************************
 Function Name： changeMyStatus
-Description: 修改自己的状态
+Description: 
 *************************************************/
 void IMMainCtrl::changeMyStatus(const QString id, const int status)
 {
@@ -218,7 +217,7 @@ void IMMainCtrl::changeMyStatus(const QString id, const int status)
 
 /*************************************************
 Function Name： changeFriendRemark
-Description: 修改好友备注
+Description: 
 *************************************************/
 void IMMainCtrl::changeFriendRemark(const QString & myID,
                                     const QString & friendID,
@@ -232,7 +231,7 @@ void IMMainCtrl::changeFriendRemark(const QString & myID,
 
 /*************************************************
 Function Name： deleteFriend
-Description: 删除好友
+Description: 
 *************************************************/
 void IMMainCtrl::deleteFriend(const QString & myID, const QString & friendID)
 {
@@ -244,7 +243,7 @@ void IMMainCtrl::deleteFriend(const QString & myID, const QString & friendID)
 
 /*************************************************
 Function Name： addFriend
-Description: 添加好友
+Description: 
 *************************************************/
 void IMMainCtrl::addFriend(const TalkMessage & mes)//const TempStrings & temp)
 {
@@ -256,7 +255,7 @@ void IMMainCtrl::addFriend(const TalkMessage & mes)//const TempStrings & temp)
 
 /*************************************************
 Function Name： addFlock
-Description: 加入群
+Description: 
 *************************************************/
 void IMMainCtrl::addFlock(const TalkMessage & mes)//const TempStrings & temp)
 {
@@ -269,7 +268,7 @@ void IMMainCtrl::addFlock(const TalkMessage & mes)//const TempStrings & temp)
 
 /*************************************************
 Function Name： addDiscussion
-Description: 加入讨论组
+Description: 
 *************************************************/
 void IMMainCtrl::addDiscussion(const TalkMessage & mes)
 {
@@ -282,7 +281,7 @@ void IMMainCtrl::addDiscussion(const TalkMessage & mes)
 
 /*************************************************
 Function Name： dropFlock
-Description: 解散群
+Description: 
 *************************************************/
 void IMMainCtrl::dropFlock(const QString & userID, const QString & flockID)
 {
@@ -294,7 +293,7 @@ void IMMainCtrl::dropFlock(const QString & userID, const QString & flockID)
 
 /*************************************************
 Function Name： dropFlock
-Description: 解散讨论组
+Description: 
 *************************************************/
 void IMMainCtrl::dropDiscussion(const QString & userID, const QString & discussionID)
 {
@@ -306,7 +305,7 @@ void IMMainCtrl::dropDiscussion(const QString & userID, const QString & discussi
 
 /*************************************************
 Function Name： leaveFlock
-Description: 退出群
+Description: 
 *************************************************/
 void IMMainCtrl::leaveFlock(const QString & userID, const QString & flockID)
 {
@@ -318,7 +317,7 @@ void IMMainCtrl::leaveFlock(const QString & userID, const QString & flockID)
 
 /*************************************************
 Function Name： leaveDiscussion
-Description: 退出讨论组
+Description: 
 *************************************************/
 void IMMainCtrl::leaveDiscussion(const QString & userID, const QString & discussionID)
 {
@@ -330,7 +329,7 @@ void IMMainCtrl::leaveDiscussion(const QString & userID, const QString & discuss
 
 /*************************************************
 Function Name： createFlock
-Description: 创建群
+Description: 
 *************************************************/
 void IMMainCtrl::createFlock(const TempStrings & tmpStr)
 {
@@ -343,7 +342,7 @@ void IMMainCtrl::createFlock(const TempStrings & tmpStr)
 
 /*************************************************
 Function Name： createDiscussion
-Description: 创建讨论组
+Description: 
 *************************************************/
 void IMMainCtrl::createDiscussion(const TempStrings & tmpStr)
 {
@@ -355,7 +354,7 @@ void IMMainCtrl::createDiscussion(const TempStrings & tmpStr)
 
 /*************************************************
 Function Name： changeFlockInformation
-Description: 修改群信息
+Description: 
 *************************************************/
 void IMMainCtrl::changeFlockInformation(const FlockInformation & flock)
 {
@@ -367,7 +366,7 @@ void IMMainCtrl::changeFlockInformation(const FlockInformation & flock)
 
 /*************************************************
 Function Name： changeFlockMemberRemark
-Description: 修改群成员名片
+Description: 
 *************************************************/
 void IMMainCtrl::changeFlockMemberRemark(const TempStrings & tmpStr)
 {
@@ -381,7 +380,7 @@ void IMMainCtrl::changeFlockMemberRemark(const TempStrings & tmpStr)
 
 /*************************************************
 Function Name： changeDiscussionInformation
-Description: 修改讨论组信息
+Description: 
 *************************************************/
 void IMMainCtrl::changeDiscussionInformation(const DiscussionInformation & discussion)
 {
@@ -394,7 +393,7 @@ void IMMainCtrl::changeDiscussionInformation(const DiscussionInformation & discu
 
 /*************************************************
 Function Name： resultOfFriendRequest
-Description: 好友请求结果
+Description: 
 *************************************************/
 void IMMainCtrl::resultOfFriendRequest(const TalkMessage & mes)
 {
@@ -407,7 +406,7 @@ void IMMainCtrl::resultOfFriendRequest(const TalkMessage & mes)
 
 /*************************************************
 Function Name： resultOfFlockRequest
-Description: 群请求结结果
+Description: 
 *************************************************/
 void IMMainCtrl::resultOfFlockRequest(const TalkMessage & mes)
 {
@@ -420,7 +419,7 @@ void IMMainCtrl::resultOfFlockRequest(const TalkMessage & mes)
 
 /*************************************************
 Function Name： removeBox
-Description: 删除分组
+Description: 
 *************************************************/
 void IMMainCtrl::removeBox(const QString & title)
 {
@@ -433,7 +432,7 @@ void IMMainCtrl::removeBox(const QString & title)
 
 /*************************************************
 Function Name： renameBox
-Description: 重命名分组
+Description: 
 *************************************************/
 void IMMainCtrl::renameBox(const QString & oldTitle, const QString & newTitle)
 {
@@ -445,7 +444,7 @@ void IMMainCtrl::renameBox(const QString & oldTitle, const QString & newTitle)
 
 /*************************************************
 Function Name： moveFriendToBox
-Description:  移动好友至其他分组
+Description:  
 *************************************************/
 void IMMainCtrl::moveFriendToBox(const QString &friendID, const QString &oldTitle,
                                  const QString & newTitle)
@@ -461,7 +460,7 @@ void IMMainCtrl::moveFriendToBox(const QString &friendID, const QString &oldTitl
 // mark: public slots:---------------------------------------------------
 /*************************************************
 Function Name： requestGetFriendsInformation()
-Description: 发送获取所有好友信息的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestGetFriendsInformation()
 {
@@ -481,7 +480,7 @@ void IMMainCtrl::requestGetFriendsInformation()
 
 /*************************************************
 Function Name： requestGetFlocksInformation()
-Description: 发送获取所有群信息的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestGetFlocksInformation(const QString & id)
 {
@@ -500,7 +499,7 @@ void IMMainCtrl::requestGetFlocksInformation(const QString & id)
 
 /*************************************************
 Function Name： requestGetDiscussionsInformation()
-Description: 发送获取所有讨论组信息的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestGetDiscussionsInformation(const QString & id)
 {
@@ -520,7 +519,7 @@ void IMMainCtrl::requestGetDiscussionsInformation(const QString & id)
 
 /*************************************************
 Function Name： requestGetFlockMembers()
-Description: 发送获取群所有成员的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestGetFlockMembers(const QString & id)
 {
@@ -540,7 +539,7 @@ void IMMainCtrl::requestGetFlockMembers(const QString & id)
 
 /*************************************************
 Function Name： requestGetDiscussionMembers()
-Description: 发送获取讨论组所有成员的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestGetDiscussionMembers(const QString & id)
 {
@@ -559,7 +558,7 @@ void IMMainCtrl::requestGetDiscussionMembers(const QString & id)
 
 /*************************************************
 Function Name： requestGetFriendInformation()
-Description: 发送获取好友详细信息的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestGetFriendInformation(const QString &id)
 {
@@ -577,7 +576,7 @@ void IMMainCtrl::requestGetFriendInformation(const QString &id)
 
 /*************************************************
 Function Name： requestGetMyInformation()
-Description: 发送获取自己详细信息的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestGetMyInformation()
 {
@@ -595,7 +594,7 @@ void IMMainCtrl::requestGetMyInformation()
 
 /*************************************************
 Function Name： requestChangeMyInformation()
-Description: 发送修改自己信息的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestChangeMyInformation(const UserInformation &me)
 {
@@ -614,7 +613,7 @@ void IMMainCtrl::requestChangeMyInformation(const UserInformation &me)
 
 /*************************************************
 Function Name： requestChangeMyStatus()
-Description: 发送修改自己状态的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestChangeMyStatus(const QString id, const int status)
 {
@@ -633,7 +632,7 @@ void IMMainCtrl::requestChangeMyStatus(const QString id, const int status)
 
 /*************************************************
 Function Name： requestChangeFriendRemark()
-Description: 发送修改好友备注的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestChangeFriendRemark(const QString & myID,
                                            const QString & friendID,
@@ -660,7 +659,7 @@ void IMMainCtrl::requestChangeFriendRemark(const QString & myID,
 
 /*************************************************
 Function Name： requestDeleteFriend()
-Description: 发送删除好友的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestDeleteFriend(const QString & myID,
                                      const QString & friendID)
@@ -679,7 +678,7 @@ void IMMainCtrl::requestDeleteFriend(const QString & myID,
 
 /*************************************************
 Function Name： requestAddFriend()
-Description: 发送添加好友的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestAddFriend(const TalkMessage & mes)
 {
@@ -697,7 +696,7 @@ void IMMainCtrl::requestAddFriend(const TalkMessage & mes)
 
 /*************************************************
 Function Name： requestAddFlock()
-Description: 发送加入群的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestAddFlock(const TalkMessage & mes)
 {
@@ -716,7 +715,7 @@ void IMMainCtrl::requestAddFlock(const TalkMessage & mes)
 
 /*************************************************
 Function Name： requestAddDiscussion()
-Description: 请求加入讨论组的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestAddDiscussion(const TalkMessage & mes)
 {
@@ -734,7 +733,7 @@ void IMMainCtrl::requestAddDiscussion(const TalkMessage & mes)
 
 /*************************************************
 Function Name： requestDropFlock()
-Description: 发送解散群的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestDropFlock(const QString & userID, const QString & flockID)
 {
@@ -753,7 +752,7 @@ void IMMainCtrl::requestDropFlock(const QString & userID, const QString & flockI
 
 /*************************************************
 Function Name： requestDropDiscussion()
-Description: 发送解散讨论组的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestDropDiscussion(const QString & userID, const QString & discussionID)
 {
@@ -771,7 +770,7 @@ void IMMainCtrl::requestDropDiscussion(const QString & userID, const QString & d
 
 /*************************************************
 Function Name： requestLeaveFlock()
-Description: 发送退出群的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestLeaveFlock(const QString & userID, const QString & flockID)
 {
@@ -790,7 +789,7 @@ void IMMainCtrl::requestLeaveFlock(const QString & userID, const QString & flock
 
 /*************************************************
 Function Name： requestLeaveDiscussion()
-Description: 发送退出讨论组的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestLeaveDiscussion(const QString & userID,
                                         const QString & discussionID)
@@ -809,7 +808,7 @@ void IMMainCtrl::requestLeaveDiscussion(const QString & userID,
 
 /*************************************************
 Function Name： requestCreateFlock()
-Description: 发送创建群的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestCreateFlock(const TempStrings & tmpStr)
 {
@@ -828,7 +827,7 @@ void IMMainCtrl::requestCreateFlock(const TempStrings & tmpStr)
 
 /*************************************************
 Function Name： requestCreateDiscussion()
-Description: 发送创建群的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestCreateDiscussion(const TempStrings & tmpStr)
 {
@@ -847,7 +846,7 @@ void IMMainCtrl::requestCreateDiscussion(const TempStrings & tmpStr)
 
 /*************************************************
 Function Name： requestSendResultOfFriendRequest
-Description: 发送处理好友请求结果的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestSendResultOfFriendRequest(const TalkMessage & mes)
 {
@@ -866,7 +865,7 @@ void IMMainCtrl::requestSendResultOfFriendRequest(const TalkMessage & mes)
 
 /*************************************************
 Function Name： requestSendResultOfFriendRequest
-Description: 发送处理群请求结果的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestSendResultOfFlockRequest(const TalkMessage & mes)
 {
@@ -886,7 +885,7 @@ void IMMainCtrl::requestSendResultOfFlockRequest(const TalkMessage & mes)
 
 /*************************************************
 Function Name： requestChangeFlockInformation
-Description: 发送修改群信息的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestChangeFlockInformation(const FlockInformation &flock)
 {
@@ -905,7 +904,7 @@ void IMMainCtrl::requestChangeFlockInformation(const FlockInformation &flock)
 
 /*************************************************
 Function Name： requestChangeFlockMemberRemark
-Description: 发送修改群成员名片的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestChangeFlockMemberRemark(const TempStrings & tmpStr)
 {
@@ -925,7 +924,7 @@ void IMMainCtrl::requestChangeFlockMemberRemark(const TempStrings & tmpStr)
 
 /*************************************************
 Function Name： requestChangeDiscussionInformation
-Description: 发送修改讨论组信息的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestChangeDiscussionInformation(
         const DiscussionInformation & discussion)
@@ -944,7 +943,7 @@ void IMMainCtrl::requestChangeDiscussionInformation(
 
 /*************************************************
 Function Name： requestSendTalkMessage
-Description: 发送对话信息请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestSendTalkMessage()
 {
@@ -970,7 +969,7 @@ void IMMainCtrl::requestSendTalkMessage()
 
 /*************************************************
 Function Name： requestRemoveBox
-Description: 发送删除分组的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestRemoveBox(const QString & title)
 {
@@ -988,7 +987,7 @@ void IMMainCtrl::requestRemoveBox(const QString & title)
 
 /*************************************************
 Function Name： requestRenameBox
-Description: 发送重命名分组的请求
+Description: 
 *************************************************/
 void IMMainCtrl::requestRenameBox(const QString & oldTitle, const QString & newTitle)
 {
@@ -1007,7 +1006,7 @@ void IMMainCtrl::requestRenameBox(const QString & oldTitle, const QString & newT
 
 /*************************************************
 Function Name： requestMoveFriendToBox
-Description:  请求移动好友至其他分组
+Description:  
 *************************************************/
 void IMMainCtrl::requestMoveFriendToBox(const QString & friendID,
                                         const QString & oldTitle,
@@ -1028,7 +1027,7 @@ void IMMainCtrl::requestMoveFriendToBox(const QString & friendID,
 
 /*************************************************
 Function Name： requestGetNetWorkHistoryMessageOneFriendOneDate
-Description:  获取某日某好友在服务器的消息
+Description:  
 *************************************************/
 void IMMainCtrl::requestGetNetWorkHistoryMessageOneFriendOneDate(
         const QString & friendID, const QDate & date)
@@ -1048,7 +1047,7 @@ void IMMainCtrl::requestGetNetWorkHistoryMessageOneFriendOneDate(
 
 /*************************************************
 Function Name： requestChangePwd
-Description:  发送修改密码的请求
+Description:  
 *************************************************/
 void IMMainCtrl::requestChangePwd(const QString & oldPwd, const QString & newPwd)
 {
@@ -1072,7 +1071,7 @@ void IMMainCtrl::requestChangePwd(const QString & oldPwd, const QString & newPwd
 
 /*************************************************
 Function Name： readMessage
-Description: 读取信息
+Description: 
 *************************************************/
 void IMMainCtrl::readMessage()
 {
@@ -1206,14 +1205,14 @@ void IMMainCtrl::readMessage()
     }
     case CHANGE_INFORMATION_FAIL:
     {
-        QMessageBox::critical(NULL, tr("修改个人信息"), tr("修改个人信息失败"));
+        QMessageBox::critical(NULL, tr("change self info "), tr("change self info  failed"));
         break;
     }
     case CHANGE_INFORMATION_SUCCESS:
     {
         in >> m_myInf;
         emit changeMyInformationSuccess(m_myInf);
-        QMessageBox::information(NULL, tr("修改个人信息"), tr("修改个人信息成功"));
+        QMessageBox::information(NULL, tr("change self info "), tr("change self info  successfully"));
         break;
     }
     case TALK:
@@ -1391,7 +1390,7 @@ void IMMainCtrl::readMessage()
     }
     case CHANGE_PWD_FAIL:
     {
-        QMessageBox::information(NULL, tr("修改密码"), tr("修改密码失败！"));
+        QMessageBox::information(NULL, tr("change password"), tr("change password failed！"));
         break;
     }
     case CHANGE_PWD_SUCCESS:
@@ -1403,7 +1402,7 @@ void IMMainCtrl::readMessage()
 //            m_tcpSocket->deleteLater();
 //        }
 
-        QMessageBox::information(NULL, tr("修改密码"), tr("修改成功！请重新登录"));
+        QMessageBox::information(NULL, tr("change password"), tr("changed successfully.！please relogin"));
         emit closeWindowSignal();
         IMLoginWidget *loginWidget = new IMLoginWidget;
         loginWidget->show();
@@ -1433,8 +1432,8 @@ void IMMainCtrl::closeWindow()
     if (m_tcpSocket->flag() == 0)
     {
 
-        QMessageBox::information(NULL, tr("系统提示"),
-                              tr("您的客户端已经与服务器断开连接，请重新登录。"));
+        QMessageBox::information(NULL, tr("system notify"),
+                              tr("please relogin."));
         emit closeWindowSignal();
         IMLoginWidget *loginWidget = new IMLoginWidget;
         loginWidget->show();

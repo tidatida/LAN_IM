@@ -2,7 +2,7 @@
 File Name： IMConstant.h
 Author： jet.F.R
 Date： 2014.3.10
-Description： 定义了一个常用的结构体与常量
+Description：define a structure and constant parameter.
 Changes：
 ********************************************/
 
@@ -22,36 +22,36 @@ static const QString GROUP_NAME_DEFAULT = QString(QObject::tr("New Friends"));
 
 struct ServerNode
 {
-    QString ipAddress;			//服务器地址
-    int port;					//服务器窗口
+    QString ipAddress;			/* server ip address */
+    int port;					/* server port */
     ServerNode()
     {	port = 0;	}
 };
 
-// 登录状态
+/* login status */
 enum LoginStatus
 {
-    ONLINE = 0,    // 在线
-    INVISIBLE = 1, // 隐身
-    BUSY = 2,      // 忙碌
-    LEAVE = 3,     // 离开
-    NOTDISTURB = 4,// 请勿打扰
-    OFFLINE = 5
+    ONLINE = 0,    /* online */
+    INVISIBLE = 1, /* hided */ 
+    BUSY = 2,      /* busying */
+    LEAVE = 3,     /* leaved away */
+    NOTDISTURB = 4,/* no disturb */
+    OFFLINE = 5    /* offline */
 };
 
-//群成员身份
+/* group identity */
 enum FlockStatus
 {
-    FLOCK_HOST = 0,    // 群主
-    FLOCK_ADMAIN = 1,  // 群管理员
-    FLOCK_MEMBER = 2   // 群成员
+    FLOCK_HOST = 0,    /* group owner */
+    FLOCK_ADMAIN = 1,  /* group admin */
+    FLOCK_MEMBER = 2   /* group memeber */
 };
 
-//讨论组成员身份
+/* discuss group identity */
 enum DiscussionStatus
 {
-    DISCUSSION_HOST = 0,    // 组长
-    DISCUSSION_MEMBER = 1   // 组员
+    DISCUSSION_HOST = 0,    /* chargeman */
+    DISCUSSION_MEMBER = 1   /* discuss memeber */
 };
 
 enum MailStatus
@@ -61,178 +61,178 @@ enum MailStatus
 };
 
 
-// 信息类型
+/* msg type */
 enum MessageType
 {
     /***********************client to server************************/
-    CHECK_CONNECTION,           // 检查是否能与服务器连接
-    LOGIN,                      // 登录
-    REGISTER,                   // 注册
-    GET_QUESTION_ANSWER,    // 获取密保问题以及答案
+    CHECK_CONNECTION,           /* wether connected with server */
+    LOGIN,                      /* login */
+    REGISTER,                   /* register */
+    GET_QUESTION_ANSWER,    /* get question and answer foe recover passwd */
     GET_QUESTION_ANSWER_SUCCESS,
     GET_QUESTION_ANSWER_FAIL,
 
-    CHECK_MESSAGE,              // 检查有无给自己的信息（登录时检查）
+    CHECK_MESSAGE,              /* check if there is msg for me */ 
 
-    GET_ALL_FRIENDS,            // 获取所有好友信息
-    GET_ALL_FLOCKS,             // 获取所有群信息
-    GET_ALL_DISCUSSIONS,        // 获取所有讨论组信息
-    GET_FLOCK_MEMBERS,          // 获取群成员
-    GET_DISCUSSIONS_MEMBERS,    // 获取讨论组成员
+    GET_ALL_FRIENDS,            /* get friends info */
+    GET_ALL_FLOCKS,             /* get all groups info */
+    GET_ALL_DISCUSSIONS,        /* get all discuss group info */
+    GET_FLOCK_MEMBERS,          /* get all memebers of a group */
+    GET_DISCUSSIONS_MEMBERS,    /* get all memebers of a discuss group */
 
-    TALK,				// 发送对话
-    ADD_FRIEND,                 // 添加好友
+    TALK,				/* start a talk session */
+    ADD_FRIEND,                 /* add a friend */
 
 
 
-    ADD_FLOCK,                   // 用户加群
-    ADD_DISCUSSION,
+    ADD_FLOCK,                   /* add to a group */
+    ADD_DISCUSSION,              /* add to a discuss session */
 
-    FLOCK_ADD_MEMBER,            // 群加用户
+    FLOCK_ADD_MEMBER,            /* add group memeber */
 
-    GET_FRIEND_INFORMATION,		// 获取好友信息
-    DELETE_FRIEND,				// 删除好友
-    GET_MYSELF_INFORMATION,		// 获取自己信息
-    CHANGE_INFORMATION,			// 改变自己的信息
-    CHANGE_REMARK,				// 改变（好友）备注
-    CHANGE_PASSWORD,			    // 修改密码
-    CHANGE_STATUE,				// 改变自身状态
-    // 还有分组好友管理
-    QUIT,						// 退出
+    GET_FRIEND_INFORMATION,		/* get a friend info */
+    DELETE_FRIEND,				/* delete a friend */
+    GET_MYSELF_INFORMATION,		/* get myself info */
+    CHANGE_INFORMATION,			/* chang myself info */
+    CHANGE_REMARK,				/* change mem of a friend */
+    CHANGE_PASSWORD,			/* change my passwd  */
+    CHANGE_STATUE,				/* change my status */
+    /* there is also seperate friend into group */
+    QUIT,						/* quit */
 
     /***********************server to client************************/
 
-    LOGIN_SUCCESS ,				// 登录成功
-    LOGIN_FAIL,			        // 登录失败
-    HAVE_LOGINED,				// 已经登录
-    REGISTER_SUCCESS,	        // 注册成功
-    REGISTER_FAIL,			    // 注册失败
+    LOGIN_SUCCESS ,
+    LOGIN_FAIL,
+    HAVE_LOGINED,
+    REGISTER_SUCCESS,
+    REGISTER_FAIL,
 
-    REMOVE_BOX,               // 删除分组
+    REMOVE_BOX,
     REMOVE_BOX_SUCCESS,
     REMOVE_BOX_FAIL,
-    RENAME_BOX,               // 重命名分组
+    RENAME_BOX,
     RENAME_BOX_SUCCESS,
     RENAME_BOX_FAIL,
-    CREATE_BOX,               // 创建分组
+    CREATE_BOX,
     CREATE_BOX_SUCEESS,
     CREATE_BOX_FAIL,
-    MOVE_FRIEND_BOX,          // 移动好友至其他分组  36
+    MOVE_FRIEND_BOX,
     MOVE_FRIEND_BOX_SUCCESS,
     MOVE_FRIEND_BOX_FAIL,
 
 
-    GET_ALL_FRIENDS_SUCCESS,    // 获取所有好友信息成功
-    GET_ALL_FRIENDS_FAIL,       // 获取所有好友信息失败
-    NO_FRIEND,                  // 没有好友
-    GET_ALL_FLOCKS_SUCCESS,     // 获取所有群信息成功
-    GET_ALL_FLOCKS_FAIL,        // 获取所有群信息失败
+    GET_ALL_FRIENDS_SUCCESS,
+    GET_ALL_FRIENDS_FAIL,
+    NO_FRIEND,
+    GET_ALL_FLOCKS_SUCCESS,
+    GET_ALL_FLOCKS_FAIL,
     NO_FLOCK,
-    GET_ALL_DISCUSSIONS_SUCCESS,// 获取所有讨论组信息成功
-    GET_ALL_DISCUSSIONS_FAIL,   // 获取所有讨论组信息失败
+    GET_ALL_DISCUSSIONS_SUCCESS,
+    GET_ALL_DISCUSSIONS_FAIL,
     NO_DISCUSSION,
 
-    GET_FLOCK_MEMBERS_FAIL,           // 获取群成员失败
-    GET_FLOCK_MEMBERS_SUCCESS,        // 获取群成员成功
-    NO_FLOCK_MEMBER,                // 没有群成员
-    GET_DISCUSSION_MEMBERS_FAIL,     // 获取讨论组成员失败
-    GET_DISCUSSION_MEMBERS_SUCCESS,  // 获取讨论组成员成功
-    NO_DISCUSSION_MEMBER,          // 没有讨论组成员
+    GET_FLOCK_MEMBERS_FAIL,
+    GET_FLOCK_MEMBERS_SUCCESS,
+    NO_FLOCK_MEMBER,
+    GET_DISCUSSION_MEMBERS_FAIL,
+    GET_DISCUSSION_MEMBERS_SUCCESS,
+    NO_DISCUSSION_MEMBER,
 
-    NO_MESSAGE,				    // 没有信息
-    HAVE_MESSAGE,				// 有信息
-    HAVE_TALK_MESSAGE,          // 有聊天信息
-    //？？？？？？？？？？？？？？？？
-    FRIEND_REQUESTED,			// 好友请求
-    FRIEDN_NO_ACCOUNT,			// 没有这个用户名
-    ALREAD_FRIENDS,			    // 回应好友请求
+    NO_MESSAGE,
+    HAVE_MESSAGE,
+    HAVE_TALK_MESSAGE,
+
+    FRIEND_REQUESTED,
+    FRIEDN_NO_ACCOUNT,
+    ALREAD_FRIENDS,			    /* reply friend */
 
     GET_FRIEND_FAIL,
-    GET_FRIEND_SUCCESS,			// 获得好友资料成功
+    GET_FRIEND_SUCCESS,
     DELETE_FRIEND_FAIL,
-    DELETE_FRIEND_SUCCESS,		// 删除好友成功
+    DELETE_FRIEND_SUCCESS,
     GET_MYSELF_FAIL,
-    GET_MYSELF_SUCCESS,		    // 获得自己详细资料成功
+    GET_MYSELF_SUCCESS,
     CHANGE_INFORMATION_FAIL,
-    CHANGE_INFORMATION_SUCCESS,	// 改变自身资料成功
+    CHANGE_INFORMATION_SUCCESS,
 
-    CHANGE_REMARK_FAIL,             // 修改备注失败
-    CHANGE_REMARK_SUCCESS,		// 修改备注成功
+    CHANGE_REMARK_FAIL,
+    CHANGE_REMARK_SUCCESS,
 
-    OLD_PWD_IS_WRONG,			// 旧密码是错的
-    CHANGE_PWD_FAIL,              // 修改密码失败
-    CHANGE_PWD_SUCCESS,			// 修改密码成功
+    OLD_PWD_IS_WRONG,
+    CHANGE_PWD_FAIL,
+    CHANGE_PWD_SUCCESS,
 
     /***********************client to client************************/
 
-    REQUEST_FRIEND,	     // 请求添加好友
-    AGREE_FRIEND,	     // 同意好友请求
-    REFUSE_FRIEND,		 // 不同意好友请求
-    ADD_FRIEND_FAIL,      // 添加好友失败
-    ADD_FRIEND_SUCCESS,   // 添加好友成功
-    END_ADD_FRIEND,	     // 好友添加结束
-    BE_DELETED,		     // 自己被好友删除了
+    REQUEST_FRIEND,
+    AGREE_FRIEND,
+    REFUSE_FRIEND,
+    ADD_FRIEND_FAIL,
+    ADD_FRIEND_SUCCESS,
+    END_ADD_FRIEND,
+    BE_DELETED,		     /* deleted by others */
 
-    MESSAGE,				 // 普通信息
-    TALK_MESSAGE,         // 聊天信息
+    MESSAGE,
+    TALK_MESSAGE,
 
-    REQUEST_FLOCK,   // 用户请求加入群
-    FLOCK_AGREE,    // 群主同意用户加入
-    FLOCK_REFUSE,   // 群主拒绝用户加入
-    ADD_FLOCK_FAIL,             // 加入群失败
-    ADD_FLOCK_SUCCESS,          // 加入群成功
-    NEW_FLOCK_MEMBER,           // 新成员入群
+    REQUEST_FLOCK,
+    FLOCK_AGREE,
+    FLOCK_REFUSE,
+    ADD_FLOCK_FAIL,
+    ADD_FLOCK_SUCCESS,
+    NEW_FLOCK_MEMBER,
     LEAVE_FLOCK_MEMBER,
 
 
-    FLOCK_REQUEST,  // 群主请求用户加入群
-    AGREE_FLOCK,    // 用户同意加入群
-    REFUSE_FLOCK,   // 用户拒绝加入群
+    FLOCK_REQUEST,
+    AGREE_FLOCK,
+    REFUSE_FLOCK,
 
 
-    CREATE_FLOCK,               // 创建群
+    CREATE_FLOCK,
     CREATE_FLOCK_FAIL,
     CREATE_FLOCK_SUCCESS,
 
-    CREATE_DISCUSSION,               // 创建讨论组
+    CREATE_DISCUSSION,
     CREATE_DISCUSSION_FAIL,
     CREATE_DISCUSSION_SUCCESS,
 
-    DROP_FLOCK,                 // 解散群
-    DROP_FLOCK_FAIL,            // 解散群失败
-    DROP_FLOCK_SUCCESS,         // 解散群成功
+    DROP_FLOCK,
+    DROP_FLOCK_FAIL,
+    DROP_FLOCK_SUCCESS,
 
-    DROP_DISCUSSION,                 // 解散讨论组
-    DROP_DISCUSSION_FAIL,            // 解散讨论组失败
-    DROP_DISCUSSION_SUCCESS,         // 解散讨论组成功
+    DROP_DISCUSSION,
+    DROP_DISCUSSION_FAIL,
+    DROP_DISCUSSION_SUCCESS,
 
-    LEAVE_FLOCK,              // 退出群
-    LEAVE_FLOCK_SUCCESS,      // 退出群成功
-    LEAVE_FLCCK_FAIL,         // 退出群失败
-    LEAVE_DISCUSSION,           // 退出讨论组
-    LEAVE_DISCUSSION_FAIL,       // 退出讨论组失败
-    LEAVE_DISCUSSION_SUCCESS,   // 退出讨论组成功
+    LEAVE_FLOCK,
+    LEAVE_FLOCK_SUCCESS,
+    LEAVE_FLCCK_FAIL,
+    LEAVE_DISCUSSION,
+    LEAVE_DISCUSSION_FAIL,
+    LEAVE_DISCUSSION_SUCCESS,
 
 
     ADD_DISCUSSION_FAIL,
     ADD_DISCUSSION_SUCCESS,
-    NEW_DISCUSSION_MEMBER,      // 新成员入讨论组
+    NEW_DISCUSSION_MEMBER,
     LEAVE_DISCUSSION_MEMBER,
 
-    CHANGE_FLOCK,               // 修改群信息
+    CHANGE_FLOCK,
     CHANGE_FLOCK_SUCCESS,
     CHANGE_FLOCK_FAIL,
 
-    CHANGE_FLOCK_REMARK,             // 修改群成员备注
+    CHANGE_FLOCK_REMARK,
     CHANGE_FLOCK_REMARK_FAIL,
     CHANGE_FLOCK_REMARK_SUCCESS,
 
-    CHANGE_DISCUSSION,               // 修改讨论组信息
+    CHANGE_DISCUSSION,
     CHANGE_DISCUSSION_SUCCESS,
     CHANGE_DISCUSSION_FAIL,
 
-    TALK_FLOCK,               // 群对话
-    TALK_DISCUSSION,          // 讨论组对话
+    TALK_FLOCK,               /* large-group talk  */ 
+    TALK_DISCUSSION,          /* group talk */
 
     REQUEST_VIDEO,
     REFUSE_VIDEO,
@@ -246,7 +246,7 @@ enum MessageType
     REFUSE_FILE,
     END_FILE,
 
-    /****** 邮件模块 ******/
+    /* mail modules */
     GET_IN_MAILS,
     GET_IN_MAILS_SUCCESS,
     GET_IN_MAILS_FAIL,
@@ -278,7 +278,7 @@ enum MessageType
 };
 
 
-// 存储聊天的字体和颜色
+/* store font-type and font-color */
 struct SaveFile
 {
     QFont m_font;
@@ -310,7 +310,7 @@ struct MailInformation
         m_status = MAIL_UNREAD;
     }
 
-    // 重载输入输出操作符
+    /* redefine ip operator */
     friend QDataStream &operator<<(QDataStream &out, const MailInformation &mail)
     {
         out << mail.m_mailID << mail.m_senderAddress << mail.m_receiverAddress
@@ -326,7 +326,7 @@ struct MailInformation
     }
 };
 
-// 用户详细信息
+/* user info */
 struct UserInformation
 {
     //    QString m_picture;
@@ -350,7 +350,7 @@ struct UserInformation
        m_status = OFFLINE;
        m_headPortrait = 1;
     }
-    // 重载输入输出操作符
+    /* redefine ip operator */
     friend QDataStream &operator<<(QDataStream &out, const UserInformation &user)
     {
        out << user.m_headPortrait << user.m_userID << user.m_nickname
@@ -372,7 +372,7 @@ struct UserInformation
     }
 };
 
-// 好友信息
+/* freind info */
 struct FriendInformation
 {
 //    QString m_picture;
@@ -406,7 +406,7 @@ struct FriendInformation
     }
 };
 
-// 储存在各种小窗口中填写的信息
+/* msg stroed in vary little windows */
 struct TempStrings
 {
     QString m_one;
@@ -424,27 +424,27 @@ struct TempStrings
     }
 };
 
-// 聊天框信息
+/* chat window info */
 struct ChatInformation
 {
      QString m_myID;
 //     QString m_myNickname;
     int m_headPortrait;
-    QString m_friendID;          // 好友id
-    QString m_friendNickname;    // 好友昵称
-    QString m_friendRemark;      // 好友备注
-    QString m_friendMark;        // 好友签名
-    QString m_friendIP;          // 好友ip地址
+    QString m_friendID;
+    QString m_friendNickname;
+    QString m_friendRemark;
+    QString m_friendMark;
+    QString m_friendIP;
     int m_friendStatus;
 
     ChatInformation()
     {
        m_friendStatus = OFFLINE;
        m_headPortrait= 1;
-       m_friendMark = QString(QObject::tr("好友签名"));
+       m_friendMark = QString(QObject::tr("friend signature"));
     }
 
-//    //重载输入输出操作符
+//    /* redifne operator */
 //    friend QDataStream & operator<< (QDataStream &out, const ChatInformation &chat)
 //    {
 //       out << chat.m_headPortrait << chat.m_friendID << chat.m_friendNickname
@@ -459,15 +459,15 @@ struct ChatInformation
 //    }
 };
 
-// 对话信息
+/* talk msg */
 struct TalkMessage
 {
-    int m_type;               // 消息类型
-    QString m_senderID;       // 发送者ID
-    QString m_senderIP;       // 发送者IP
-    QString m_receiverID;     // 接收者ID
-    QString m_receiverIP;     // 接收者IP
-    QString m_text;           // 消息内容
+    int m_type;               /* msg type */
+    QString m_senderID;       /* sender id */
+    QString m_senderIP;       /* sender ip */
+    QString m_receiverID;     /* receiver id */
+    QString m_receiverIP;     /* receiver ip */
+    QString m_text;           /* msg content */
     QDateTime m_dateTime;
 
     TalkMessage() {	m_type = 0; }
@@ -487,7 +487,7 @@ struct TalkMessage
     }
 };
 
-// 用户登录信息
+/* user login info */
 struct LoginInformation
 {
     QString m_userID;
@@ -508,17 +508,17 @@ struct LoginInformation
     }
 };
 
-// 群成员信息
+/* discussion-group memeber */
 struct FlockMember
 {
-    QString m_flockID;     // 群ID
-    QString m_userID;      // 用户ID
-    int m_headPortrait;    // 用户头像编号
-    QString m_nickname;    // 用户昵称
-    int m_loginStatus;     // 用户登录状态
-    QString m_remark;      // 用户群名片
-    int m_flockStatus;     // 用户身份
-    QDateTime m_joinDate;  // 加入时间
+    QString m_flockID;     /* group id  */
+    QString m_userID;      /* user id */
+    int m_headPortrait;    /* avatar id */
+    QString m_nickname;    /* user nick name*/
+    int m_loginStatus;     /* login status */
+    QString m_remark;      /* name in this disscussion-group */
+    int m_flockStatus;     /* user id */
+    QDateTime m_joinDate;  /* join timestamp */
 
     friend QDataStream & operator<< (QDataStream &out, const FlockMember &flockMember)
     {
@@ -538,16 +538,16 @@ struct FlockMember
     }
 };
 
-// 讨论组成员信息
+/* discussion memeber */
 struct DiscussionMember
 {
-    QString m_discussionID;// 讨论组ID
-    QString m_userID;      // 用户ID
-    int m_headPortrait;    // 用户头像编号
-    QString m_nickname;    // 用户昵称
-    int m_loginStatus;     // 用户登录状态
-    int m_discussionStatus;// 用户身份
-    QDateTime m_joinDate;  // 加入时间
+    QString m_discussionID;/* discussion id */
+    QString m_userID;      /* user id */
+    int m_headPortrait;    /* avatar id */
+    QString m_nickname;    /* user nick name */
+    int m_loginStatus;     /* login status */
+    int m_discussionStatus;/* user id */
+    QDateTime m_joinDate;  /* join timestamp */
 
     friend QDataStream & operator<< (QDataStream &out, const DiscussionMember &disMember)
     {
@@ -567,7 +567,7 @@ struct DiscussionMember
     }
 };
 
-// 群信息
+/* group info */
 struct FlockInformation
 {
     QString m_flockID;
@@ -590,7 +590,7 @@ struct FlockInformation
    }
 };
 
-// 讨论组信息
+/* discussion info */
 struct DiscussionInformation
 {
     QString m_discussionID;
@@ -613,7 +613,7 @@ struct DiscussionInformation
     }
 };
 
-// 存储临时信息的结构体，用于信号/糟
+/* strcture to store tmp msg, used by signal/slot */
 struct SaveTmpInformation
 {
     int m_requestKind;
@@ -660,12 +660,12 @@ struct SaveTmpInformation
 };
 
 
-//头像尺寸.
+/* avatar size */
 const int HEAD_BIG_SIZE = 40;
 const int HEAD_SMALL_SIZE = 35;
 const int HEAD_MINI_SIZE = 20;
 
-//聊天室 工具栏尺寸
+/* chat room size */
 const int CHAT_WIDGET_TOOL_SIZE = 20;
 const int CHAT_WIDGET_TOOL_SMALL_SIZE = 15;
 

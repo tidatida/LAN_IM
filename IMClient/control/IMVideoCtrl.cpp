@@ -50,7 +50,7 @@ int IMVideoCtrl::initDevice()
     v4l2_crop crop;
     v4l2_format fmt;
 
-    // 查询当前视频支持标准
+    /* check supported voice/video type */
     if(-1 == ioctl(m_fd, VIDIOC_QUERYCAP, &cap))
     {
         if(EINVAL == errno)

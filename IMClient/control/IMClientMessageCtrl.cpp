@@ -2,7 +2,7 @@
 //File Name： IMClientMessageCtrl.cpp
 //Author： jet.F.R
 //Date： 2014.3.10
-//Description： 用于控制通信的类
+//Description： 
 //Changes：
 //********************************************/
 
@@ -39,8 +39,8 @@
 
 ///*************************************************
 //Function Name： sendMessage()
-//Description: 发送信息
-//Input： MessageType type：信息类型, QString mes1：信息1, QString mes2：信息2
+//Description:
+//Input： MessageType type：, QString mes1：, QString mes2：
 //Output： NULL
 //Changes： NULL
 //*************************************************/
@@ -73,20 +73,20 @@
 //// mark: private slots---------------------------------------------------------
 ///*************************************************
 //Function Name： connectionClosedByServer()
-//Description: 连接被客户端关闭
+//Description: 
 //Input： NULL
 //Output： NULL
 //Changes： NULL
 //*************************************************/
 //void IMClientMessageCtrl::connectionClosed()
 //{
-//    qDebug("连接断开");
+//    qDebug("connection closed");
 //    m_isConnected = false;
 //}
 
 ///*************************************************
 //Function Name： readMessage()
-//Description: 读取信息
+//Description: 
 //Input： NULL
 //Output： NULL
 //Changes： NULL
@@ -124,7 +124,7 @@
 //        }
 //        else
 //        {
-//            emit showLoginStatus(tr("登录失败.帐号或者密码错误."));
+//            emit showLoginStatus(tr("login failed."));
 //        }
 //        break;
 //    }
@@ -132,8 +132,8 @@
 
 ///*************************************************
 //Function Name： dispalyError()
-//Description: 显示错误
-//Input： QAbstractSocket::SocketError socketError：错误信息
+//Description: 
+//Input： QAbstractSocket::SocketError socketError：
 //Output： NULL
 //Changes： NULL
 //*************************************************/
@@ -142,25 +142,25 @@
 //    switch (socketError)
 //    {
 //    case QAbstractSocket::RemoteHostClosedError:
-//        emit showLoginStatus(tr("登录失败.可能是因为服务器关闭."));
+//        emit showLoginStatus(tr("login failed, server is closed."));
 //        break;
 //    case QAbstractSocket::HostNotFoundError:
-//        emit showLoginStatus(tr("登录失败.可能是因为找不到服务器"));
-//        QMessageBox::information(NULL, tr("登录失败"),
+//        emit showLoginStatus(tr("login failed, server not founed."));
+//        QMessageBox::information(NULL, tr("login failed"),
 //                                 tr("This host was not found.Please check the"
 //                                    "host name and port settings."));
 //        break;
 //    case QAbstractSocket::ConnectionRefusedError:
-//        emit showLoginStatus(tr("登录失败.可能是因为连接被拒绝"));
-//        QMessageBox::information(NULL, tr("登录失败"),
+//        emit showLoginStatus(tr("login failed.connect refused"));
+//        QMessageBox::information(NULL, tr("login failed"),
 //                                 tr("The connection was refused by the peer."
 //                                    "Make sure the IM server is running,"
 //                                    "and check that the host name and port"
 //                                    "settings are correct."));
 //        break;
 //    default:
-//        emit showLoginStatus(tr("登录失败: %1.").arg(m_tcpSocket->errorString()));
-//        QMessageBox::information(NULL, tr("登录失败"),
+//        emit showLoginStatus(tr("login failed: %1.").arg(m_tcpSocket->errorString()));
+//        QMessageBox::information(NULL, tr("login failed"),
 //                                 tr("The following errot occurred: %1.")
 //                                 .arg(m_tcpSocket->errorString()));
 //    }
@@ -168,7 +168,7 @@
 
 ///*************************************************
 //Function Name： requestLogin()
-//Description: 请求登录
+//Description: 
 //Input： NULL
 //Output： NULL
 //Changes： NULL
@@ -188,7 +188,7 @@
 
 ///*************************************************
 //Function Name： requestLogin()
-//Description: 请求注册
+//Description: 
 //Input： NULL
 //Output： NULL
 //Changes： NULL
@@ -201,7 +201,7 @@
 //// mark: private-------------------------------------------------------------
 ///*************************************************
 //Function Name： initIMClientMessageCtrl()
-//Description: 初始化
+//Description: 
 //Input： NULL
 //Output： NULL
 //Changes： NULL
@@ -217,7 +217,7 @@
 
 ///*************************************************
 //Function Name： linkSignalWithSlot()
-//Description: 链接信号与槽
+//Description: 
 //Input： NULL
 //Output： NULL
 //Changes： NULL
@@ -233,8 +233,8 @@
 
 ///*************************************************
 //Function Name： requestConnect()
-//Description: 请求连接
-//Input： const QString &id： 用户帐号, const QString &pwd：用户密码
+//Description: 
+//Input： const QString &id：, const QString &pwd：
 //Output： NULL
 //Changes： NULL
 //*************************************************/
@@ -247,7 +247,7 @@
 
 ///*************************************************
 //Function Name： getIP()
-//Description: 获取ip地址
+//Description: 
 //Input： NULL
 //Output： QString
 //Changes： NULL

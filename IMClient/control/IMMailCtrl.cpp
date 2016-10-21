@@ -30,7 +30,7 @@ IMMailCtrl::~IMMailCtrl()
 // private slots:------------------------------------------------------------
 /*************************************************
 Function Name： requestSendMail
-Description: 请求发送邮件
+Description: 
 *************************************************/
 void IMMailCtrl::requestSendMail(const MailInformation &mail)
 {
@@ -51,7 +51,7 @@ void IMMailCtrl::requestSendMail(const MailInformation &mail)
 
 /*************************************************
 Function Name： requestGetInMails
-Description: 请求获取收件箱邮件
+Description: 
 *************************************************/
 void IMMailCtrl::requestGetInMails()
 {
@@ -70,7 +70,7 @@ void IMMailCtrl::requestGetInMails()
 
 /*************************************************
 Function Name： requestGetOutMails
-Description: 请求获取发件箱邮件
+Description: 
 *************************************************/
 void IMMailCtrl::requestGetOutMails()
 {
@@ -90,7 +90,7 @@ void IMMailCtrl::requestGetOutMails()
 
 /*************************************************
 Function Name： requestDeleteMail
-Description: 请求删除邮件
+Description: 
 *************************************************/
 void IMMailCtrl::requestDeleteMail(const MailInformation & mail)
 {
@@ -120,7 +120,7 @@ void IMMailCtrl::requestDeleteMail(const MailInformation & mail)
 
 /*************************************************
 Function Name： requestSetMailRead
-Description: 请求修改邮件为已读
+Description: 
 *************************************************/
 void IMMailCtrl::requestSetMailRead(const MailInformation & mail)
 {
@@ -142,7 +142,7 @@ void IMMailCtrl::requestSetMailRead(const MailInformation & mail)
 
 /*************************************************
 Function Name： readMessage
-Description: 读取信息
+Description: 
 *************************************************/
 void IMMailCtrl::readMessage()
 {
@@ -204,12 +204,12 @@ void IMMailCtrl::readMessage()
         in >> m_mail;
         if (m_mail.m_senderAddress == m_myID)
             emit getOutMail(m_mail);
-        QMessageBox::information(NULL, tr("写信"), tr("发送成功！"));
+        QMessageBox::information(NULL, tr("write mail"), tr("send success！"));
         break;
     }
     case SEND_MAIL_FAIL:
     {
-        QMessageBox::information(NULL, tr("写信"), tr("发送失败！"));
+        QMessageBox::information(NULL, tr("write mail"), tr("send failed！"));
         break;
     }
     case RECEIVE_MAIL:

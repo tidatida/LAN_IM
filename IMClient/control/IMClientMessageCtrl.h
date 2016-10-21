@@ -2,7 +2,7 @@
 //File Name： IMClientMessageCtrl.h
 //Author： jet.F.R
 //Date： 2014.3.10
-//Description： 用于控制通信的类
+//Description： 
 //Changes：
 //********************************************/
 
@@ -18,23 +18,23 @@
 
 //enum MessageType
 //{
-//    CONNECT = 0,   // 连接
-//    LOGIN   = 1,   // 登录
-//    REGISTER = 2   // 注册
+//    CONNECT = 0,
+//    LOGIN   = 1,
+//    REGISTER = 2
 //};
 
 //enum LoginStatus
 //{
-//    ONLINE = 0,    // 在线
-//    INVISIBLE = 1, // 隐身
-//    BUSY = 2,      // 忙碌
-//    LEAVE = 3,     // 离开
-//    NOTDISTURB = 4 // 请勿打扰
+//    ONLINE = 0,
+//    INVISIBLE = 1,
+//    BUSY = 2,
+//    LEAVE = 3,
+//    NOTDISTURB = 4
 //};
 
 ///*************************************************
 //Class Name： IMClientMessageCtrl
-//Description: 用于控制通信的类
+//Description: 
 //*************************************************/
 //class IMClientMessageCtrl : public QObject
 //{
@@ -42,7 +42,6 @@
 //public:
 //    explicit IMClientMessageCtrl(QObject *parent = 0);
 //    ~IMClientMessageCtrl();
-//    // 发送信息
 //    void sendMessage(MessageType, const QString &mes1,
 //                     const QString &mes2 = "", LoginStatus status = ONLINE,
 //                     const IMUser * user = NULL);
@@ -56,25 +55,16 @@
 //public slots:
 
 //private slots:
-//    // 连接被客户端关闭
 //    //void connectionClosed();
-//    // 读取信息
 //    void readMessage();
-//    // 显示错误
 //    //void dispalyError(QAbstractSocket::SocketError);
-//    // 发送登录请求
 //    void requestLogin();
-//    // 发送注册请求
 //    void requsetRegister(const IMUser *);
 
 //private:
-//    // 初始化
 //    void initIMClientMessageCtrl();
-//    // 链接信号与槽
 //    //void linkSignalWithSlot();
-//    // 请求连接
 //    void requestConnect();
-//    // 获取ip
 //    //QString getIP();
 
 //private:

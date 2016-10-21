@@ -2,7 +2,7 @@
 File Name： IMRegisterCtrl.cpp
 Author： jet.F.R
 Date： 2014.3.17
-Description： 用于控制注册的类
+Description： 
 Changes：
 ********************************************/
 #include "IMRegisterCtrl.h"
@@ -32,8 +32,8 @@ IMRegisterCtrl::~IMRegisterCtrl()
 
 /*************************************************
 Function Name： registerAccount()
-Description: 注册
-Input： IMUser 用户信息
+Description: 
+Input： IMUser 
 Output： NULL
 Changes： NULL
 *************************************************/
@@ -53,7 +53,7 @@ void IMRegisterCtrl::registerAccount(const UserInformation &user)
 
 /*************************************************
 Function Name： requestRegister()
-Description: 请求注册
+Description: 
 Input： NULL
 Output： NULL
 Changes： NULL
@@ -74,7 +74,7 @@ void IMRegisterCtrl::requestRegister()
 
 /*************************************************
 Function Name： readMessage()
-Description: 读取信息
+Description: 
 Input： NULL
 Output： NULL
 Changes： NULL
@@ -100,16 +100,16 @@ void IMRegisterCtrl::readMessage()
     {
     case REGISTER_SUCCESS:
         in >> m_user.m_userID >> m_user.m_regDateTime;
-        QMessageBox::about(NULL, tr("注册结果"),
-                           tr("%1, 你好！ 恭喜,注册成功. "
-                              "您的ID是%2, 请牢牢记住. \n注册时间：%3")
+        QMessageBox::about(NULL, tr("register result"),
+                           tr("%1, hello！ congritulation, register successfully.. "
+                              "your ID is %2, please rememeber. \n register time：%3")
                            .arg(m_user.m_nickname,
                                 m_user.m_userID,
                                 m_user.m_regDateTime.
                                 toString("yyyy-MM-dd hh:mm:ss")));
         break;
     case REGISTER_FAIL:
-        QMessageBox::about(NULL, tr("注册结果"), tr("注册失败"));
+        QMessageBox::about(NULL, tr("register result"), tr("register failed"));
     }
 
     emit signalResetBtnRegister(true);
@@ -120,7 +120,7 @@ void IMRegisterCtrl::readMessage()
 
 /*************************************************
 Function Name： resetBtnRegister()
-Description: 重置按钮
+Description: 
 Input： NULL
 Output： NULL
 Changes： NULL

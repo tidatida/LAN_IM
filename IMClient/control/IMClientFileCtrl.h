@@ -2,7 +2,7 @@
 File Name： IMClientFileCtrl.h
 Author： jet.F.R
 Date： 2014.3.23
-Description： xml文件读写
+Description：
 Changes：
 ********************************************/
 #ifndef IMCLIENTFILECTRL_H
@@ -18,14 +18,14 @@ class IMClientFileCtrl : public QObject
     Q_OBJECT
 public:
     explicit IMClientFileCtrl(QObject *parent = 0);
-    // 写自动登录的文件
+    // write autologin's file
     static bool writeAutoLogin(const QString &fileName, const QString &id,
                         const QString &pwd, const bool isAuto = false);
-    // 读自动登录的文件
+    // read autologin's file
     static bool readAutoLogin(const QString &fileName,QString &id,
                          QString &pwd, bool &isAuto);
 
-    // 删除文件
+    // remove file
     static bool remove(const QString &filename);
 
     static QString simplifyRichText(QString richText);

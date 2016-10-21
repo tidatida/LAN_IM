@@ -67,7 +67,7 @@ IMDatabaseCtrl::~IMDatabaseCtrl()
 
 /*************************************************
 Function Name： createConnection()
-Description: 创建连接
+Description: 
 *************************************************/
 bool IMDatabaseCtrl::createConnection()
 {
@@ -77,13 +77,13 @@ bool IMDatabaseCtrl::createConnection()
     {
         return true;
     }
-    // 如果已经打开
+
     if (QSqlDatabase::contains("clientIMDB"))
     {
         *m_db = QSqlDatabase::database("clientIMDB");
     }
     else
-    {// 如果没有，就添加
+    {
         *m_db = QSqlDatabase::addDatabase("QMYSQL", "clientIMDB");
         m_db->setDatabaseName("clientIMDB");
     }
@@ -101,7 +101,7 @@ bool IMDatabaseCtrl::createConnection()
 
 /*************************************************
 Function Name： close()
-Description: 关闭数据库
+Description: 
 *************************************************/
 void IMDatabaseCtrl::close()
 {
@@ -112,7 +112,7 @@ void IMDatabaseCtrl::close()
 
 /*************************************************
 Function Name： isOpen()
-Description: 是否连接着
+Description:
 *************************************************/
 bool IMDatabaseCtrl::isOpen()
 {
@@ -122,7 +122,7 @@ bool IMDatabaseCtrl::isOpen()
 
 /*************************************************
 Function Name： addHistoryMessage()
-Description: 存储历史记录
+Description:
 *************************************************/
 bool IMDatabaseCtrl::addHistoryMessage(const TalkMessage & mes)
 {
@@ -130,7 +130,7 @@ bool IMDatabaseCtrl::addHistoryMessage(const TalkMessage & mes)
     {
         return false;
     }
-    //sql 事务
+
     QSqlDatabase::database().transaction();
 
     QString queryStr = INSERT_MESSAGE_IN_HISTORYMESSAGE;
@@ -172,7 +172,7 @@ bool IMDatabaseCtrl::addHistoryMessage(const TalkMessage & mes)
 
 /*************************************************
 Function Name： searchHistoryMessage()
-Description: 获取某日的消息记录
+Description: 
 *************************************************/
 bool IMDatabaseCtrl::searchHistoryMessage(const QString & myID, const QString & friendID,
                                           const QDate & date, QVector<TalkMessage> & mesVec)
@@ -181,7 +181,7 @@ bool IMDatabaseCtrl::searchHistoryMessage(const QString & myID, const QString & 
     {
         return false;
     }
-    //sql 事务
+
     QSqlDatabase::database().transaction();
 
     QString queryStr = SEARCH_MESSAGE_IN_HISTORYMESSAGE;
@@ -226,7 +226,7 @@ bool IMDatabaseCtrl::searchHistoryMessage(const QString & myID, const QString & 
 
 /*************************************************
 Function Name： searchHistoryMessage()
-Description: 导出好友消息记录
+Description: 
 *************************************************/
 int IMDatabaseCtrl::exportHistoryMessageOneFriend(const QString &myID ,
                                                   const QString &friendID,
@@ -236,7 +236,6 @@ int IMDatabaseCtrl::exportHistoryMessageOneFriend(const QString &myID ,
     {
         return -1;
     }
-    //sql 事务
 //    QSqlDatabase::database().transaction();
 
     QString queryStr = EXPORT_ONE_MESSAGE_IN_HISTORY;
@@ -285,7 +284,7 @@ int IMDatabaseCtrl::exportHistoryMessageOneFriend(const QString &myID ,
 
 /*************************************************
 Function Name： exportHistoryMessageAll()
-Description: 导出所有消息记录
+Description: 
 *************************************************/
 int IMDatabaseCtrl::exportHistoryMessageAll(const QString &myID,
                                             const QString &fileName)
@@ -329,7 +328,7 @@ int IMDatabaseCtrl::exportHistoryMessageAll(const QString &myID,
 
 /*************************************************
 Function Name： deleteHistoryMessageOneFriend()
-Description: 删除单个好友消息记录
+Description: 
 *************************************************/
 int IMDatabaseCtrl::deleteHistoryMessageOneFriend(const QString myID,
                                                   const QString friendID)
@@ -377,7 +376,7 @@ int IMDatabaseCtrl::deleteHistoryMessageOneFriend(const QString myID,
 
 /*************************************************
 Function Name： deleteHistoryMessageAll()
-Description: 删除所有好友消息记录
+Description: 
 *************************************************/
 int IMDatabaseCtrl::deleteHistoryMessageAll(const QString myID)
 {
@@ -423,11 +422,10 @@ int IMDatabaseCtrl::deleteHistoryMessageAll(const QString myID)
 
 /*************************************************
 Function Name： errorSQLOrder()
-Description: 检查SQL语句的正确性
+Description: 
 *************************************************/
 void IMDatabaseCtrl::errorSQLOrder(QSqlQuery query, QString mark)
 {
-    //如果SQL语句错误，就弹出警告信息
     if(!query.isActive())
     {
         QString str = query.lastError().text() + "\n" + mark;
@@ -439,7 +437,7 @@ void IMDatabaseCtrl::errorSQLOrder(QSqlQuery query, QString mark)
 
 /*************************************************
 Function Name： createTable()
-Description: 创建数据库表格
+Description: 
 *************************************************/
 void IMDatabaseCtrl::createTable()
 {

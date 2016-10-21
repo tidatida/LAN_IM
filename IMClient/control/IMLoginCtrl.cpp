@@ -2,7 +2,7 @@
 File Name： IMLoginCtrl.cpp
 Author： jet.F.R
 Date： 2014.3.10
-Description： 用于控制登录的类
+Description：
 Changes：
 ********************************************/
 
@@ -44,8 +44,8 @@ IMLoginCtrl::~IMLoginCtrl()
 
 /*************************************************
 Function Name： login()
-Description: 发送登录信息
-Input： const QString &id： 用户帐号, const QString &pwd：用户密码
+Description: 
+Input： const QString &id： , const QString &pwd：
 *************************************************/
 void IMLoginCtrl::login(const QString &id, const QString &pwd, const int status)
 {
@@ -67,7 +67,7 @@ void IMLoginCtrl::login(const QString &id, const QString &pwd, const int status)
 
 /*************************************************
 Function Name： getQuestionAndAnswer()
-Description: 获取密保信息
+Description: 
 *************************************************/
 void IMLoginCtrl::getQuestionAndAnswer(const QString & id)
 {
@@ -87,8 +87,8 @@ void IMLoginCtrl::getQuestionAndAnswer(const QString & id)
 // mark: public slots:--------------------------------------------------------
 /*************************************************
 Function Name： changeLoginMessage()
-Description: 改变登录信息
-Input： const QString &mes： 信息, bool isLogin：状态
+Description: 
+Input： const QString &mes： , bool isLogin：
 Output： NULL
 Changes： NULL
 *************************************************/
@@ -101,7 +101,7 @@ void IMLoginCtrl::changeLoginMessage(const QString &mes, bool isLogin)
 
 /*************************************************
 Function Name： requestLogin()
-Description: 请求登录
+Description: 
 Input： NULL
 Output： NULL
 Changes： NULL
@@ -124,7 +124,7 @@ void IMLoginCtrl::requestLogin()
 
 /*************************************************
 Function Name： sendRequest()
-Description: 发送请求
+Description: 
 *************************************************/
 void IMLoginCtrl::sendRequest()
 {
@@ -149,7 +149,7 @@ void IMLoginCtrl::sendRequest()
 
 /*************************************************
 Function Name： requestGetQuestionAndAnswer()
-Description: 发送获取密保问题以及答案的请求
+Description: 
 *************************************************/
 void IMLoginCtrl::requestGetQuestionAndAnswer()
 {
@@ -167,7 +167,7 @@ void IMLoginCtrl::requestGetQuestionAndAnswer()
 
 /*************************************************
 Function Name： readMessage()
-Description: 读取信息
+Description: 
 Input： NULL
 Output： NULL
 Changes： NULL
@@ -196,17 +196,17 @@ void IMLoginCtrl::readMessage()
     {
     case LOGIN_SUCCESS:
         in >> m_myself;
-        emit getLoginMessgae(tr("登录成功"), true, &m_myself);
+        emit getLoginMessgae(tr("login successfully"), true, &m_myself);
         break;
     case LOGIN_FAIL:
-        emit getLoginMessgae(tr("登录失败.帐号或者密码错误."),false);
+        emit getLoginMessgae(tr("login failed.account or passwd error."),false);
         break;
     case HAVE_LOGINED:
-        emit getLoginMessgae(tr("登录失败.该用户已经登录."),false);
+        emit getLoginMessgae(tr("login failed.account already exists.."),false);
         break;
     case GET_QUESTION_ANSWER_FAIL:
     {
-        QMessageBox::critical(NULL, tr("找回密码"), tr("失败，帐号不存在！"));
+        QMessageBox::critical(NULL, tr("reset passwd"), tr("failed, passwd doesn't exists.！"));
         break;
     }
     case GET_QUESTION_ANSWER_SUCCESS:
@@ -217,9 +217,9 @@ void IMLoginCtrl::readMessage()
         while (1)
         {
             bool isOkMes = false;
-            QString str = QString(tr("密保问题:%1\n请输入问题答案:"))
+            QString str = QString(tr("reset passwd:%1\nplease intput answer:"))
                     .arg(m_tempStr.m_two);
-            QString answer = QInputDialog::getText(NULL, "找回密码",
+            QString answer = QInputDialog::getText(NULL, "reset passwd",
                                                    str,
                                                    QLineEdit::Normal,
                                                    NULL,
@@ -228,17 +228,17 @@ void IMLoginCtrl::readMessage()
                 break;
             if (answer != m_tempStr.m_three)
             {
-                str = QString(tr("回答错误!"));
-                QMessageBox::critical(NULL, tr("找回密码"), str);
+                str = QString(tr("bad answer!"));
+                QMessageBox::critical(NULL, tr("reset passwd"), str);
                 continue;
             }
             else
             {
-                str = QString(tr("回答正确!\n您的帐号是:%1\n您的密码是:%2"))
+                str = QString(tr("good answer!\nyour accout is:%1\nyour passwd is:%2"))
                         .arg(m_id)
                         .arg(IMEncryption::getInstace()
                              .getXorEncryptDecrypt(m_tempStr.m_one, 10));
-                QMessageBox::information(NULL, tr("找回密码"), str);
+                QMessageBox::information(NULL, tr("reset passwd"), str);
             }
             break;
         }

@@ -2,7 +2,7 @@
 File Name： IMClientFileCtrl.cpp
 Author： jet.F.R
 Date： 2014.3.23
-Description： xml文件读写
+Description： 
 Changes：
 ********************************************/
 
@@ -25,8 +25,8 @@ IMClientFileCtrl::IMClientFileCtrl(QObject *parent) :
 
 /*************************************************
 Function Name： writeAutoLogin()
-Description: 写自动登录的文件
-Input： 文件路径,帐号,密码,是否自动登录
+Description: 
+Input：filepath, account,passwd,autologin or not
 *************************************************/
 bool IMClientFileCtrl::writeAutoLogin(const QString &fileName, const QString &id,
                     const QString &pwd, const bool isAuto)
@@ -47,8 +47,8 @@ bool IMClientFileCtrl::writeAutoLogin(const QString &fileName, const QString &id
 
 /*************************************************
 Function Name： readAutoLogin()
-Description: 读自动登录的xml文件
-Input： 文件路径,帐号,密码
+Description:
+Input： filepath , account, passwd
 Output： bool
 Changes： NULL
 *************************************************/
@@ -71,8 +71,8 @@ bool IMClientFileCtrl::readAutoLogin(const QString &fileName,QString &id,
 
 /*************************************************
 Function Name： remove()
-Description: 删除文件
-Input： 文件路径
+Description: 
+Input： file path
 Output： bool
 Changes： NULL
 *************************************************/
@@ -91,7 +91,7 @@ bool IMClientFileCtrl::remove(const QString &filename)
 
 /*************************************************
 Function Name： simplifyRichText()
-Description: 将html格式的qstring转换
+Description:  html-format to qstring
 *************************************************/
 QString IMClientFileCtrl::simplifyRichText( QString richText )
 {
@@ -160,7 +160,7 @@ QString IMClientFileCtrl::simplifyRichText( QString richText )
 
 /*************************************************
 Function Name： saveTalkHistory()
-Description: 保存历史记录
+Description: 
 *************************************************/
 void IMClientFileCtrl::saveTalkHistory(const QString filePath,
                                        const QString fileName,
@@ -181,7 +181,6 @@ void IMClientFileCtrl::saveTalkHistory(const QString filePath,
     QDataStream out(&file);
     out.setVersion(QDataStream::Qt_4_8);
 
-    //如果聊天记录是空的，就不用保存了
     if(messagaShow->toPlainText().isEmpty())
         return;
 
@@ -192,7 +191,7 @@ void IMClientFileCtrl::saveTalkHistory(const QString filePath,
 
 /*************************************************
 Function Name： readTalkHistory()
-Description: 读取历史记录
+Description: 
 *************************************************/
 void IMClientFileCtrl::readTalkHistory(const QString filePath,
                                        const QString fileName,
@@ -215,7 +214,6 @@ void IMClientFileCtrl::readTalkHistory(const QString filePath,
     in.setVersion(QDataStream::Qt_4_8);
 
     QString tempString;
-    //从文件中读取全部的字符串
     while( !file.atEnd() )
     {
         in >> tempString;
