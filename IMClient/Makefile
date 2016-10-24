@@ -33,7 +33,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = IMClient1.0.0
-DISTDIR = /home/liusz/im_src/LAN_IM/IMClient/.tmp/IMClient1.0.0
+DISTDIR = /home/LAN_IM/IMClient/.tmp/IMClient1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1 -Wl,-rpath,/opt/Qt5.7.0/5.7/gcc_64/lib
 LIBS          = $(SUBLIBS) -L/opt/Qt5.7.0/5.7/gcc_64/lib -lQt5Widgets -L/usr/lib64 -lQt5Gui -lQt5Network -lQt5Sql -lQt5Core -lGL -lpthread 
@@ -414,7 +414,6 @@ DIST          = /opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/qt_config.prf \
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/default_pre.prf \
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/resolve_config.prf \
@@ -694,7 +693,6 @@ Makefile: IMClient.pro /opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++/qmake.conf /opt
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/qt_config.prf \
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/default_pre.prf \
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/resolve_config.prf \
@@ -854,7 +852,6 @@ Makefile: IMClient.pro /opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++/qmake.conf /opt
 /opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/qt_config.prf:
 /opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++/qmake.conf:
 /opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/spec_post.prf:
-.qmake.stash:
 /opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/exclusive_builds.prf:
 /opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/default_pre.prf:
 /opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/resolve_config.prf:
@@ -1029,7 +1026,7 @@ moc_IMClientFileCtrl.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qobject_impl.h \
 		control/IMClientFileCtrl.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include control/IMClientFileCtrl.h -o moc_IMClientFileCtrl.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include control/IMClientFileCtrl.h -o moc_IMClientFileCtrl.cpp
 
 moc_IMDatabaseCtrl.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qobject.h \
@@ -1103,7 +1100,7 @@ moc_IMDatabaseCtrl.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QString \
 		control/IMDatabaseCtrl.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include control/IMDatabaseCtrl.h -o moc_IMDatabaseCtrl.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include control/IMDatabaseCtrl.h -o moc_IMDatabaseCtrl.cpp
 
 moc_IMLoginCtrl.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qobject.h \
@@ -1188,7 +1185,7 @@ moc_IMLoginCtrl.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QString \
 		control/IMLoginCtrl.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include control/IMLoginCtrl.h -o moc_IMLoginCtrl.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include control/IMLoginCtrl.h -o moc_IMLoginCtrl.cpp
 
 moc_IMMailCtrl.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qobject.h \
@@ -1262,7 +1259,7 @@ moc_IMMailCtrl.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QString \
 		control/IMMailCtrl.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include control/IMMailCtrl.h -o moc_IMMailCtrl.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include control/IMMailCtrl.h -o moc_IMMailCtrl.cpp
 
 moc_IMMainCtrl.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qobject.h \
@@ -1344,7 +1341,7 @@ moc_IMMainCtrl.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QString \
 		control/IMMainCtrl.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include control/IMMainCtrl.h -o moc_IMMainCtrl.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include control/IMMainCtrl.h -o moc_IMMainCtrl.cpp
 
 moc_IMRegisterCtrl.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qobject.h \
@@ -1418,7 +1415,7 @@ moc_IMRegisterCtrl.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QString \
 		control/IMRegisterCtrl.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include control/IMRegisterCtrl.h -o moc_IMRegisterCtrl.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include control/IMRegisterCtrl.h -o moc_IMRegisterCtrl.cpp
 
 moc_IMVideoCtrl.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QString \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qstring.h \
@@ -1471,7 +1468,7 @@ moc_IMVideoCtrl.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QString \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qobject_impl.h \
 		control/IMVideoCtrl.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include control/IMVideoCtrl.h -o moc_IMVideoCtrl.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include control/IMVideoCtrl.h -o moc_IMVideoCtrl.cpp
 
 moc_IMTcpSocket.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork/qtcpsocket.h \
@@ -1555,7 +1552,7 @@ moc_IMTcpSocket.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		model/IMTcpSocket.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include model/IMTcpSocket.h -o moc_IMTcpSocket.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include model/IMTcpSocket.h -o moc_IMTcpSocket.cpp
 
 moc_IMUser.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qobject.h \
@@ -1629,7 +1626,7 @@ moc_IMUser.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QString \
 		model/IMUser.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include model/IMUser.h -o moc_IMUser.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include model/IMUser.h -o moc_IMUser.cpp
 
 moc_CalendarDialog.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QDialog \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qdialog.h \
@@ -1737,10 +1734,12 @@ moc_CalendarDialog.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QDialog \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QMouseEvent \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QCalendarWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcalendarwidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qdatetime.h \
 		view/CustomCalendar.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QTextCharFormat \
 		view/CustomComboBox.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QComboBox \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcombobox.h \
@@ -1759,7 +1758,7 @@ moc_CalendarDialog.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QDialog \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qabstractitemmodel.h \
 		view/CalendarDialog.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/CalendarDialog.h -o moc_CalendarDialog.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/CalendarDialog.h -o moc_CalendarDialog.cpp
 
 moc_CustomCalendar.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QCalendarWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcalendarwidget.h \
@@ -1860,9 +1859,13 @@ moc_CustomCalendar.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QCalendarWidge
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qvector2d.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qdatetime.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QTextCharFormat \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
 		view/CustomCalendar.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/CustomCalendar.h -o moc_CustomCalendar.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/CustomCalendar.h -o moc_CustomCalendar.cpp
 
 moc_CustomComboBox.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QComboBox \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcombobox.h \
@@ -1984,7 +1987,7 @@ moc_CustomComboBox.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QComboBox \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
 		view/CustomComboBox.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/CustomComboBox.h -o moc_CustomComboBox.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/CustomComboBox.h -o moc_CustomComboBox.cpp
 
 moc_CustomLineEdit.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QLineEdit \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qlineedit.h \
@@ -2089,12 +2092,13 @@ moc_CustomLineEdit.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QLineEdit \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QMouseEvent \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QCalendarWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcalendarwidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qdatetime.h \
 		view/CustomLineEdit.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/CustomLineEdit.h -o moc_CustomLineEdit.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/CustomLineEdit.h -o moc_CustomLineEdit.cpp
 
 moc_IMChatWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -2204,7 +2208,7 @@ moc_IMChatWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		view/IMChatWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMChatWidget.h -o moc_IMChatWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMChatWidget.h -o moc_IMChatWidget.cpp
 
 moc_IMClickLabel.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QLabel \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qlabel.h \
@@ -2307,7 +2311,7 @@ moc_IMClickLabel.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QLabel \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		view/IMClickLabel.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMClickLabel.h -o moc_IMClickLabel.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMClickLabel.h -o moc_IMClickLabel.cpp
 
 moc_IMDiscussionButton.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButton \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
@@ -2420,7 +2424,7 @@ moc_IMDiscussionButton.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButto
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		view/IMDiscussionButton.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMDiscussionButton.h -o moc_IMDiscussionButton.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMDiscussionButton.h -o moc_IMDiscussionButton.cpp
 
 moc_IMDiscussionChatWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -2531,7 +2535,7 @@ moc_IMDiscussionChatWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidge
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QMap \
 		view/IMDiscussionChatWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMDiscussionChatWidget.h -o moc_IMDiscussionChatWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMDiscussionChatWidget.h -o moc_IMDiscussionChatWidget.cpp
 
 moc_IMDiscussionInformationWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -2641,7 +2645,7 @@ moc_IMDiscussionInformationWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		view/IMDiscussionInformationWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMDiscussionInformationWidget.h -o moc_IMDiscussionInformationWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMDiscussionInformationWidget.h -o moc_IMDiscussionInformationWidget.cpp
 
 moc_IMDiscussionListWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -2742,7 +2746,7 @@ moc_IMDiscussionListWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidge
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		view/IMDiscussionListWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMDiscussionListWidget.h -o moc_IMDiscussionListWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMDiscussionListWidget.h -o moc_IMDiscussionListWidget.cpp
 
 moc_IMDiscussionMemberButton.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButton \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
@@ -2855,7 +2859,7 @@ moc_IMDiscussionMemberButton.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPus
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		view/IMDiscussionMemberButton.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMDiscussionMemberButton.h -o moc_IMDiscussionMemberButton.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMDiscussionMemberButton.h -o moc_IMDiscussionMemberButton.cpp
 
 moc_IMDiscussionMemberListWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -2956,7 +2960,7 @@ moc_IMDiscussionMemberListWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		view/IMDiscussionMemberListWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMDiscussionMemberListWidget.h -o moc_IMDiscussionMemberListWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMDiscussionMemberListWidget.h -o moc_IMDiscussionMemberListWidget.cpp
 
 moc_IMFileReceiverWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -3062,7 +3066,7 @@ moc_IMFileReceiverWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget 
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qdatetime.h \
 		view/IMFileReceiverWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMFileReceiverWidget.h -o moc_IMFileReceiverWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMFileReceiverWidget.h -o moc_IMFileReceiverWidget.cpp
 
 moc_IMFileSenderWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -3165,7 +3169,7 @@ moc_IMFileSenderWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qdatetime.h \
 		view/IMFileSenderWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMFileSenderWidget.h -o moc_IMFileSenderWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMFileSenderWidget.h -o moc_IMFileSenderWidget.cpp
 
 moc_IMFlockButton.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButton \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
@@ -3278,7 +3282,7 @@ moc_IMFlockButton.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButton \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		view/IMFlockButton.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMFlockButton.h -o moc_IMFlockButton.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMFlockButton.h -o moc_IMFlockButton.cpp
 
 moc_IMFlockChatWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -3389,7 +3393,7 @@ moc_IMFlockChatWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QMap \
 		view/IMFlockChatWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMFlockChatWidget.h -o moc_IMFlockChatWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMFlockChatWidget.h -o moc_IMFlockChatWidget.cpp
 
 moc_IMFlockInformationWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -3499,7 +3503,7 @@ moc_IMFlockInformationWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWid
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		view/IMFlockInformationWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMFlockInformationWidget.h -o moc_IMFlockInformationWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMFlockInformationWidget.h -o moc_IMFlockInformationWidget.cpp
 
 moc_IMFlockListWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -3600,7 +3604,7 @@ moc_IMFlockListWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		view/IMFlockListWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMFlockListWidget.h -o moc_IMFlockListWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMFlockListWidget.h -o moc_IMFlockListWidget.cpp
 
 moc_IMFlockMemberButton.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButton \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
@@ -3713,7 +3717,7 @@ moc_IMFlockMemberButton.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButt
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		view/IMFlockMemberButton.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMFlockMemberButton.h -o moc_IMFlockMemberButton.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMFlockMemberButton.h -o moc_IMFlockMemberButton.cpp
 
 moc_IMFlockMemberListWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -3814,7 +3818,7 @@ moc_IMFlockMemberListWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidg
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		view/IMFlockMemberListWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMFlockMemberListWidget.h -o moc_IMFlockMemberListWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMFlockMemberListWidget.h -o moc_IMFlockMemberListWidget.cpp
 
 moc_IMForgotPwdWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -3915,7 +3919,7 @@ moc_IMForgotPwdWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		view/IMForgotPwdWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMForgotPwdWidget.h -o moc_IMForgotPwdWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMForgotPwdWidget.h -o moc_IMForgotPwdWidget.cpp
 
 moc_IMFriendButton.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButton \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
@@ -4028,7 +4032,7 @@ moc_IMFriendButton.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButton \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		view/IMFriendButton.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMFriendButton.h -o moc_IMFriendButton.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMFriendButton.h -o moc_IMFriendButton.cpp
 
 moc_IMFriendListWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -4129,7 +4133,7 @@ moc_IMFriendListWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		view/IMFriendListWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMFriendListWidget.h -o moc_IMFriendListWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMFriendListWidget.h -o moc_IMFriendListWidget.cpp
 
 moc_IMInformationWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -4239,7 +4243,7 @@ moc_IMInformationWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		view/IMInformationWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMInformationWidget.h -o moc_IMInformationWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMInformationWidget.h -o moc_IMInformationWidget.cpp
 
 moc_IMInputTextEdit.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QTextEdit \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qtextedit.h \
@@ -4348,7 +4352,7 @@ moc_IMInputTextEdit.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QTextEdit \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		view/IMInputTextEdit.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMInputTextEdit.h -o moc_IMInputTextEdit.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMInputTextEdit.h -o moc_IMInputTextEdit.cpp
 
 moc_IMLatestMessageListWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -4449,7 +4453,7 @@ moc_IMLatestMessageListWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWi
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		view/IMLatestMessageListWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMLatestMessageListWidget.h -o moc_IMLatestMessageListWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMLatestMessageListWidget.h -o moc_IMLatestMessageListWidget.cpp
 
 moc_IMLinkButton.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButton \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
@@ -4562,7 +4566,7 @@ moc_IMLinkButton.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButton \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		view/IMLinkButton.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMLinkButton.h -o moc_IMLinkButton.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMLinkButton.h -o moc_IMLinkButton.cpp
 
 moc_IMLinkDiscussionButton.cpp: view/IMLinkButton.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButton \
@@ -4676,7 +4680,7 @@ moc_IMLinkDiscussionButton.cpp: view/IMLinkButton.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		view/IMLinkDiscussionButton.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMLinkDiscussionButton.h -o moc_IMLinkDiscussionButton.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMLinkDiscussionButton.h -o moc_IMLinkDiscussionButton.cpp
 
 moc_IMLinkFlockButton.cpp: view/IMLinkButton.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButton \
@@ -4790,7 +4794,7 @@ moc_IMLinkFlockButton.cpp: view/IMLinkButton.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		view/IMLinkFlockButton.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMLinkFlockButton.h -o moc_IMLinkFlockButton.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMLinkFlockButton.h -o moc_IMLinkFlockButton.cpp
 
 moc_IMLinkFriendButton.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButton \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
@@ -4904,7 +4908,7 @@ moc_IMLinkFriendButton.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButto
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		view/IMLinkFriendButton.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMLinkFriendButton.h -o moc_IMLinkFriendButton.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMLinkFriendButton.h -o moc_IMLinkFriendButton.cpp
 
 moc_IMLittleWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -5005,7 +5009,7 @@ moc_IMLittleWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		view/IMLittleWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMLittleWidget.h -o moc_IMLittleWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMLittleWidget.h -o moc_IMLittleWidget.cpp
 
 moc_IMLocalMessageWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -5116,7 +5120,7 @@ moc_IMLocalMessageWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget 
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		view/IMLocalMessageWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMLocalMessageWidget.h -o moc_IMLocalMessageWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMLocalMessageWidget.h -o moc_IMLocalMessageWidget.cpp
 
 moc_IMLoginWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -5217,7 +5221,7 @@ moc_IMLoginWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		view/IMLoginWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMLoginWidget.h -o moc_IMLoginWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMLoginWidget.h -o moc_IMLoginWidget.cpp
 
 moc_IMMailButton.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButton \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
@@ -5330,7 +5334,7 @@ moc_IMMailButton.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButton \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		view/IMMailButton.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMMailButton.h -o moc_IMMailButton.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMMailButton.h -o moc_IMMailButton.cpp
 
 moc_IMMailInformationWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -5440,7 +5444,7 @@ moc_IMMailInformationWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidg
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		view/IMMailInformationWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMMailInformationWidget.h -o moc_IMMailInformationWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMMailInformationWidget.h -o moc_IMMailInformationWidget.cpp
 
 moc_IMMailInWidget.cpp: view/IMMailListWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
@@ -5542,7 +5546,7 @@ moc_IMMailInWidget.cpp: view/IMMailListWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		view/IMMailInWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMMailInWidget.h -o moc_IMMailInWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMMailInWidget.h -o moc_IMMailInWidget.cpp
 
 moc_IMMailListWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -5643,7 +5647,7 @@ moc_IMMailListWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		view/IMMailListWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMMailListWidget.h -o moc_IMMailListWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMMailListWidget.h -o moc_IMMailListWidget.cpp
 
 moc_IMMailOutWidget.cpp: view/IMMailListWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
@@ -5745,7 +5749,7 @@ moc_IMMailOutWidget.cpp: view/IMMailListWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		view/IMMailOutWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMMailOutWidget.h -o moc_IMMailOutWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMMailOutWidget.h -o moc_IMMailOutWidget.cpp
 
 moc_IMMailWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -5856,7 +5860,7 @@ moc_IMMailWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		view/IMMailWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMMailWidget.h -o moc_IMMailWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMMailWidget.h -o moc_IMMailWidget.cpp
 
 moc_IMMailWriteWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -5966,7 +5970,7 @@ moc_IMMailWriteWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		view/IMMailWriteWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMMailWriteWidget.h -o moc_IMMailWriteWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMMailWriteWidget.h -o moc_IMMailWriteWidget.cpp
 
 moc_IMMainWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -6078,7 +6082,7 @@ moc_IMMainWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		control/IMDatabaseCtrl.h \
 		view/IMMainWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMMainWidget.h -o moc_IMMainWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMMainWidget.h -o moc_IMMainWidget.cpp
 
 moc_IMMessageManageWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -6188,7 +6192,7 @@ moc_IMMessageManageWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		view/IMMessageManageWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMMessageManageWidget.h -o moc_IMMessageManageWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMMessageManageWidget.h -o moc_IMMessageManageWidget.cpp
 
 moc_IMMessageWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -6298,7 +6302,7 @@ moc_IMMessageWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		view/IMMessageWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMMessageWidget.h -o moc_IMMessageWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMMessageWidget.h -o moc_IMMessageWidget.cpp
 
 moc_IMNetWorkMessageWidget.cpp: view/IMMessageWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
@@ -6409,7 +6413,7 @@ moc_IMNetWorkMessageWidget.cpp: view/IMMessageWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		view/IMNetWorkMessageWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMNetWorkMessageWidget.h -o moc_IMNetWorkMessageWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMNetWorkMessageWidget.h -o moc_IMNetWorkMessageWidget.cpp
 
 moc_IMRegisterWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -6519,7 +6523,7 @@ moc_IMRegisterWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		view/IMRegisterWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMRegisterWidget.h -o moc_IMRegisterWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMRegisterWidget.h -o moc_IMRegisterWidget.cpp
 
 moc_IMSearchListWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -6620,7 +6624,7 @@ moc_IMSearchListWidget.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		view/IMSearchListWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMSearchListWidget.h -o moc_IMSearchListWidget.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMSearchListWidget.h -o moc_IMSearchListWidget.cpp
 
 moc_IMToolBox.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qwidget.h \
@@ -6721,7 +6725,7 @@ moc_IMToolBox.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		view/IMToolBox.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMToolBox.h -o moc_IMToolBox.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient -I/home/LAN_IM/IMClient/view -I/home/LAN_IM/IMClient/model -I/home/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMToolBox.h -o moc_IMToolBox.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -8302,10 +8306,12 @@ CalendarDialog.o: view/CalendarDialog.cpp view/CalendarDialog.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QMouseEvent \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QCalendarWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcalendarwidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qdatetime.h \
 		view/CustomCalendar.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QTextCharFormat \
 		view/CustomComboBox.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QComboBox \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcombobox.h \
@@ -8331,8 +8337,15 @@ CalendarDialog.o: view/CalendarDialog.cpp view/CalendarDialog.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButton \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QKeyEvent \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QToolButton \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qtoolbutton.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QTextLine \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextlayout.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qglyphrun.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qrawfont.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qfontdatabase.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QValidator \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QDebug \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QHeaderView \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qheaderview.h \
@@ -8343,7 +8356,11 @@ CalendarDialog.o: view/CalendarDialog.cpp view/CalendarDialog.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qtableview.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QLabel \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qlabel.h \
-		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QRegExp
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QColor \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QPainter \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpainter.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QRegExp \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o CalendarDialog.o view/CalendarDialog.cpp
 
 CustomCalendar.o: view/CustomCalendar.cpp view/CustomCalendar.h \
@@ -8446,6 +8463,13 @@ CustomCalendar.o: view/CustomCalendar.cpp view/CustomCalendar.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qvector2d.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qdatetime.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QTextCharFormat \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QKeyEvent \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QPainter \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QHeaderView \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qheaderview.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qabstractitemview.h \
@@ -8587,7 +8611,8 @@ CustomComboBox.o: view/CustomComboBox.cpp view/CustomComboBox.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextcursor.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
-		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QKeyEvent
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o CustomComboBox.o view/CustomComboBox.cpp
 
 CustomLineEdit.o: view/CustomLineEdit.cpp view/CustomLineEdit.h \
@@ -8694,6 +8719,7 @@ CustomLineEdit.o: view/CustomLineEdit.cpp view/CustomLineEdit.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QMouseEvent \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QCalendarWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcalendarwidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qdatetime.h \
@@ -8701,6 +8727,7 @@ CustomLineEdit.o: view/CustomLineEdit.cpp view/CustomLineEdit.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QDialog \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qdialog.h \
 		view/CustomCalendar.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QTextCharFormat \
 		view/CustomComboBox.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QComboBox \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcombobox.h \
@@ -11411,6 +11438,7 @@ IMInformationWidget.o: view/IMInformationWidget.cpp view/IMInformationWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QMouseEvent \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QCalendarWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcalendarwidget.h \
 		view/IMMainWidget.h \
@@ -12423,6 +12451,7 @@ IMLocalMessageWidget.o: view/IMLocalMessageWidget.cpp view/IMLocalMessageWidget.
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QMouseEvent \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QCalendarWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcalendarwidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QListView \
@@ -13956,6 +13985,7 @@ IMMessageWidget.o: view/IMMessageWidget.cpp view/IMMessageWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QMouseEvent \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QCalendarWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcalendarwidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QMessageBox \
@@ -14143,6 +14173,7 @@ IMNetWorkMessageWidget.o: view/IMNetWorkMessageWidget.cpp view/IMNetWorkMessageW
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QMouseEvent \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QCalendarWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcalendarwidget.h \
 		view/IMMainWidget.h \
@@ -14275,6 +14306,7 @@ IMRegisterWidget.o: view/IMRegisterWidget.cpp view/IMRegisterWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QMouseEvent \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QCalendarWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcalendarwidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButton \

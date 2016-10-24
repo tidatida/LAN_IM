@@ -33,7 +33,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = IMServer1.0.0
-DISTDIR = /home/liusz/im_src/LAN_IM/IMServer/.tmp/IMServer1.0.0
+DISTDIR = /home/LAN_IM/IMServer/.tmp/IMServer1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1 -Wl,-rpath,/opt/Qt5.7.0/5.7/gcc_64/lib
 LIBS          = $(SUBLIBS) -L/opt/Qt5.7.0/5.7/gcc_64/lib -lQt5Widgets -L/usr/lib64 -lQt5Gui -lQt5Network -lQt5Sql -lQt5Core -lGL -lpthread 
@@ -212,7 +212,6 @@ DIST          = /opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/qt_config.prf \
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/default_pre.prf \
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/resolve_config.prf \
@@ -391,7 +390,6 @@ Makefile: IMServer.pro /opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++/qmake.conf /opt
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/qt_config.prf \
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/default_pre.prf \
 		/opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/resolve_config.prf \
@@ -550,7 +548,6 @@ Makefile: IMServer.pro /opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++/qmake.conf /opt
 /opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/qt_config.prf:
 /opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++/qmake.conf:
 /opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/spec_post.prf:
-.qmake.stash:
 /opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/exclusive_builds.prf:
 /opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/default_pre.prf:
 /opt/Qt5.7.0/5.7/gcc_64/mkspecs/features/resolve_config.prf:
@@ -1058,7 +1055,7 @@ moc_IMServerWindow.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QtWidgets \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qtwidgetsversion.h \
 		view/IMServerWindow.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMServer -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMServerWindow.h -o moc_IMServerWindow.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMServer -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/IMServerWindow.h -o moc_IMServerWindow.cpp
 
 moc_IMServerMessageCtrl.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qobject.h \
@@ -1141,7 +1138,7 @@ moc_IMServerMessageCtrl.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QString \
 		control/IMServerMessageCtrl.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMServer -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include control/IMServerMessageCtrl.h -o moc_IMServerMessageCtrl.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMServer -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include control/IMServerMessageCtrl.h -o moc_IMServerMessageCtrl.cpp
 
 moc_IMTcpServer.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork/QTcpServer \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork/qtcpserver.h \
@@ -1231,7 +1228,7 @@ moc_IMTcpServer.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork/QTcpServer \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QString \
 		model/IMTcpServer.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMServer -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include model/IMTcpServer.h -o moc_IMTcpServer.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMServer -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include model/IMTcpServer.h -o moc_IMTcpServer.cpp
 
 moc_IMThread.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QThread \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qthread.h \
@@ -1307,7 +1304,7 @@ moc_IMThread.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QThread \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		model/IMThread.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMServer -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include model/IMThread.h -o moc_IMThread.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMServer -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include model/IMThread.h -o moc_IMThread.cpp
 
 moc_IMDatabaseCtrl.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qobject.h \
@@ -1389,7 +1386,7 @@ moc_IMDatabaseCtrl.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QString \
 		control/IMDatabaseCtrl.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMServer -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include control/IMDatabaseCtrl.h -o moc_IMDatabaseCtrl.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMServer -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include control/IMDatabaseCtrl.h -o moc_IMDatabaseCtrl.cpp
 
 moc_IMUser.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qobject.h \
@@ -1463,7 +1460,7 @@ moc_IMUser.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QString \
 		model/IMUser.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMServer -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include model/IMUser.h -o moc_IMUser.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMServer -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include model/IMUser.h -o moc_IMUser.cpp
 
 moc_IMClientSocketCtrl.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork/QTcpSocket \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork/qtcpsocket.h \
@@ -1549,7 +1546,7 @@ moc_IMClientSocketCtrl.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork/QTcpSocket
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QString \
 		control/IMClientSocketCtrl.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
-	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMServer -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include control/IMClientSocketCtrl.h -o moc_IMClientSocketCtrl.cpp
+	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/LAN_IM/IMServer -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include control/IMClientSocketCtrl.h -o moc_IMClientSocketCtrl.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
