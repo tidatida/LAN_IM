@@ -11,7 +11,7 @@ Changes：
 #include <QtNetwork>
 
 
-QHostAddress IMTcpSocket::s_hostAddress = QHostAddress::Any;
+QHostAddress IMTcpSocket::s_hostAddress = QHostAddress::AnyIPv4;
 int IMTcpSocket::s_hostPort = 0;
 
 // mark public:--------------------------------------------------------------
