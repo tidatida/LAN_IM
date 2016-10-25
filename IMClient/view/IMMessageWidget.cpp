@@ -147,7 +147,7 @@ void IMMessageWidget::friendItemClicked(const QModelIndex & index)
 
 /*************************************************
 Function Name： initIMMessageWidget()
-Description: 初始化
+Description: init 
 *************************************************/
 void IMMessageWidget::initIMMessageWidget()
 {
@@ -187,20 +187,20 @@ void IMMessageWidget::initIMMessageWidget()
 //    m_toolBtnDeleteDate= new QToolButton(this);
 //    m_toolBtnDeleteDate->setIcon(QIcon(":/images/deleteDate.png"));
 //    m_toolBtnDeleteDate->setAutoRaise(true);
-//    m_toolBtnDeleteDate->setToolTip(tr("删除当前显示的消息记录"));
-//    m_toolBtnDeleteDate->setStatusTip(tr("删除当先显示的消息记录"));
+//    m_toolBtnDeleteDate->setToolTip(tr("delete  当前显示的消息记录"));
+//    m_toolBtnDeleteDate->setStatusTip(tr("delete  当先显示的消息记录"));
 
     m_toolBtnDeleteOne = new QToolButton(this);
     m_toolBtnDeleteOne->setIcon(QIcon(":/images/deleteOne.png"));
     m_toolBtnDeleteOne->setAutoRaise(true);
-    m_toolBtnDeleteOne->setToolTip(tr("删除当前好友消息记录"));
-    m_toolBtnDeleteOne->setStatusTip(tr("删除与当前好友的消息记录"));
+    m_toolBtnDeleteOne->setToolTip(tr("delete  当前好友消息记录"));
+    m_toolBtnDeleteOne->setStatusTip(tr("delete  与当前好友的消息记录"));
 
     m_toolBtnDeleteAll = new QToolButton(this);
     m_toolBtnDeleteAll->setIcon(QIcon(":/images/deleteAll.png"));
     m_toolBtnDeleteAll->setAutoRaise(true);
-    m_toolBtnDeleteAll->setToolTip(tr("删除所有消息记录"));
-    m_toolBtnDeleteAll->setStatusTip(tr("删除所有的消息记录"));
+    m_toolBtnDeleteAll->setToolTip(tr("delete  所有消息记录"));
+    m_toolBtnDeleteAll->setStatusTip(tr("delete  所有的消息记录"));
 
 
     QHBoxLayout *topLayout = new QHBoxLayout;
@@ -255,7 +255,7 @@ void IMMessageWidget::initIMMessageWidget()
 
 /*************************************************
 Function Name： linkSignalWithSlot
-Description:  连接信号与槽
+Description:  connection 信号与槽
 *************************************************/
 void IMMessageWidget::linkSignalWithSlot()
 {

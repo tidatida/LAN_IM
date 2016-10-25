@@ -41,11 +41,11 @@ public:
         m_info.m_nickname = fri.m_nickname;
 //        m_info.m_status = fri.m_status;
     }
-    // 创建聊天窗口
+    // create 聊天窗口
     void openChatRoom();
     // 显示聊天窗口
     void showChatRoom();
-    // 关闭聊天窗口
+    // close 聊天窗口
     void closeChatRoom();
 
     // 设置button显示信息
@@ -71,19 +71,19 @@ public slots:
     void onClickSendMail();
     // 显示好友详细信息
     void onClickShowInformation();
-    // 点击修改好友备注
+    // 点击modify好友备注
     void onClickChangeRemark();
     // 移动好友至其他分组
     void onClickMove();
-    // 删除好友
+    // delete  好友
     void onClickRemoveFriend();
     // 进入空间
     void onClickEnterSpace();
 
-    //聊天窗口关闭了
+    //聊天窗口close 了
     void chatRoomQuit();
 
-//    //修改好友状态
+//    //modify好友状态
 //    void changeRemark(const QString &newRemark);
 //    void changeStatus(int status);
 
@@ -96,7 +96,7 @@ protected:
 private:
     // 将好友状态从数字形式转换为字符串形式
     QString getStatusFromInt(const int n) const;
-    // 创建右键菜单
+    // create 右键菜单
     void creatMenu(/*const QList<QString> *groutList*/);
 
 
@@ -104,7 +104,7 @@ private:
     FriendInformation m_info;
     //以字符串形式储存好友状态信息
     QString m_strStatus;
-    // 聊天窗口是否打开了
+    // 聊天窗口是否open 了
     bool m_isOpen;
     // 聊天窗口是否显示
     bool m_isShow;

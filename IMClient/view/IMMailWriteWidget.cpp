@@ -148,7 +148,7 @@ void IMMailWriteWidget::onClickBtnSend()
 // private:-------------------------------------------------
 /*************************************************
 Function Name： initIMMailWriteWidget()
-Description:  初始化
+Description:  init 
 *************************************************/
 void IMMailWriteWidget::initIMMailWriteWidget()
 {
@@ -224,7 +224,7 @@ void IMMailWriteWidget::initIMMailWriteWidget()
 
 /*************************************************
 Function Name： linkSignalWithSlot()
-Description:  连接信号与槽
+Description:  connection 信号与槽
 *************************************************/
 void IMMailWriteWidget::linkSignalWithSlot()
 {
@@ -288,7 +288,7 @@ void IMMailWriteWidget::setWidgetToolBtn()
     m_toolBtnUnderline->setAutoRaise(true);
     m_toolBtnUnderline->setIconSize(QSize(CHAT_WIDGET_TOOL_SMALL_SIZE,CHAT_WIDGET_TOOL_SMALL_SIZE));
     m_toolBtnUnderline->setToolTip(tr("下划线"));
-    m_toolBtnUnderline->setStatusTip(tr("是否添加下划线"));
+    m_toolBtnUnderline->setStatusTip(tr("是否add 下划线"));
 
     m_toolBtnColor = new QToolButton;
     m_toolBtnColor->setIcon(QIcon(":/images/colour.png"));

@@ -16,7 +16,7 @@ public:
     void addItem(QWidget *item);
     void removeItem(QWidget *item);
     int size();
-    //创建右键菜单
+    //create 右键菜单
     void creatMenu();
 
 signals:

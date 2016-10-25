@@ -40,11 +40,11 @@ public:
 signals:
     void currentIndexClicked(int);
 public slots:
-    // 删除某日的信息记录
+    // delete  某日的信息记录
     virtual void onClickDeleteDate() = 0;
-    // 删除某好友信息记录
+    // delete  某好友信息记录
     virtual void onClickDeleteOne() = 0;
-    // 删除全部消息记录
+    // delete  全部消息记录
     virtual void onClickDeleteAll() = 0;
     // 导人消息记录
     virtual void onClickImport(){}
@@ -71,7 +71,7 @@ protected:
     QTextBrowser *m_tbMessageShow;
 
 private:
-    // 初始化
+    // init 
     void initIMMessageWidget();
     // 链接信号与槽
     void linkSignalWithSlot();

@@ -56,9 +56,9 @@ public:
     //        setButtonStatus();
     //    }
 
-    // 打开聊天窗口
+    // open 聊天窗口
     void openChatRoom();
-    // 关闭聊天窗口
+    // close 聊天窗口
     void closeChatRoom();
     // 设置button显示信息
     void setButtonStatus();
@@ -76,7 +76,7 @@ public slots:
     void onClickSendMail();
     // 显示成员详细信息
     void onClickShowInformation();
-    // 修改名片
+    // modify名片
     //void onClickChangeRemark();
     // 进入空间
     void onClickEnterSpace();
@@ -87,7 +87,7 @@ public slots:
 
     // 左键 双击
     void onDoubleClickMemberButton();
-    //聊天窗口关闭了
+    //聊天窗口close 了
     void chatRoomQuit();
 
 protected:
@@ -101,7 +101,7 @@ private:
 
     // 将好友在线状态从数字形式转换为字符串形式
     QString getLoginStatusFromInt(const int n) const;
-    // 创建右键菜单
+    // create 右键菜单
     void creatMenu(/*const QList<QString> *groutList*/);
 
 
@@ -109,7 +109,7 @@ private:
     DiscussionMember m_info;
     QString m_strDiscussionStatus; // 身份
     QString m_strLoginStatus; // 在线状态
-    // 聊天窗口是否打开了
+    // 聊天窗口是否open 了
     bool m_isOpen;
 
     // 右键菜单

@@ -32,7 +32,7 @@ IMFlockListWidget::IMFlockListWidget(IMMainWidget *mainWidget, QWidget *parent) 
 
     setStyleSheet("QWidget{border: 0;}");
 
-    //创建右键菜单
+    //create 右键菜单
     creatMenu();
 
 //    connect(this, SIGNAL(customContextMenuRequested()),
@@ -42,7 +42,7 @@ IMFlockListWidget::IMFlockListWidget(IMMainWidget *mainWidget, QWidget *parent) 
 
 /*************************************************
 Function Name： addItem()
-Description:  添加
+Description:  add 
 *************************************************/
 void IMFlockListWidget::addItem(QWidget *item)
 {
@@ -68,7 +68,7 @@ void IMFlockListWidget::addItem(QWidget *item)
 
 /*************************************************
 Function Name： removeItem()
-Description:  删除
+Description:  delete  
 *************************************************/
 void IMFlockListWidget::removeItem(QWidget *item)
 {
@@ -82,13 +82,13 @@ void IMFlockListWidget::removeItem(QWidget *item)
 
 /*************************************************
 Function Name： creatMenu()
-Description:  创建右键菜单
+Description:  create 右键菜单
 *************************************************/
 void IMFlockListWidget::creatMenu()
 {
     m_menu = new QMenu(this);
     QAction *actCreateFlock = new QAction(tr("新建群"), this);
-    QAction *actAddFlock = new QAction(tr("添加群"), this);
+    QAction *actAddFlock = new QAction(tr("add 群"), this);
     QAction *actRefresh = new QAction(tr("刷新群列表"), this);
 
     connect(actCreateFlock, SIGNAL(triggered()),
@@ -112,7 +112,7 @@ void IMFlockListWidget::showMenu()
  {
     if (m_menu == NULL)
     {
-        //创建右键菜单
+        //create 右键菜单
         creatMenu();
     }
     m_menu->exec(QCursor::pos());

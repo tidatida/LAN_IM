@@ -81,7 +81,7 @@ void IMMailButton::mouseDoubleClickEvent(QMouseEvent *event)
 // private slots:----------------------------------------------------------
 /*************************************************
 Function Name： onClickDeleteMail()
-Description: 删除邮件
+Description: delete  邮件
 *************************************************/
 void IMMailButton::onClickDeleteMail()
 {
@@ -111,7 +111,7 @@ void IMMailButton::onClickRightButton()
 {
     if (m_menu == NULL)
     {
-        //创建右键菜单
+        //create 右键菜单
         creatMenu();
     }
     m_menu->exec(QCursor::pos());
@@ -147,12 +147,12 @@ void IMMailButton::setButtonStatus()
 
 /*************************************************
 Function Name： getStatusFromInt()
-Description: 创建右键菜单
+Description: create 右键菜单
 *************************************************/
 void IMMailButton::creatMenu()
 {
     m_menu = new QMenu(this);
-    QAction *deleteMail = new QAction(tr("删除邮件"), m_menu);
+    QAction *deleteMail = new QAction(tr("delete  邮件"), m_menu);
 
     connect(deleteMail, SIGNAL(triggered()),
             this, SLOT(onClickDeleteMail()));

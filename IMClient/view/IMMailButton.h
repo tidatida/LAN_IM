@@ -24,7 +24,7 @@ signals:
 public slots:
 
 private slots:
-    // 点击删除邮件
+    // 点击delete  邮件
     void onClickDeleteMail();
     // 左键 双击
     void onDoubleClickDiscussionButton();
@@ -34,7 +34,7 @@ private slots:
 private:
     // 设置button显示信息
     void setButtonStatus();
-    // 创建右键菜单
+    // create 右键菜单
     void creatMenu();
 
 private:

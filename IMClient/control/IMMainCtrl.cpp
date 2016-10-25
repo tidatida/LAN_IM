@@ -1253,7 +1253,7 @@ void IMMainCtrl::readMessage()
     {
         in >> m_id >> m_peerID >> m_groupName;
 
-        QString temp = QString(tr("你被好友(%1)删除了")).arg(m_peerID);
+        QString temp = QString(tr("你被好友(%1)delete  了")).arg(m_peerID);
         QMessageBox::information(NULL, tr("消息"), temp);
         emit deleteFriendSuccess(m_id, m_peerID, m_groupName);
         break;
@@ -1425,7 +1425,7 @@ void IMMainCtrl::readMessage()
 
 /*************************************************
 Function Name： closeWindow
-Description: 关闭主程序
+Description: close 主程序
 *************************************************/
 void IMMainCtrl::closeWindow()
 {

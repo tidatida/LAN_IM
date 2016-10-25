@@ -2,7 +2,7 @@
 File Name： IMTcpSocket.h
 Author： jet.F.R
 Date： 2014.3.10
-Description： 客户端tcpsocket类
+Description： clienttcpsocket class
 Changes：
 ********************************************/
 
@@ -26,7 +26,7 @@ IMTcpSocket::IMTcpSocket(QObject *parent):
 
 /*************************************************
 Function Name： requestConnect()
-Description: 请求连接
+Description: request connection 
 Input： NULL
 Output： NULL
 Changes： NULL
@@ -47,7 +47,7 @@ void IMTcpSocket::requestConnect()
 
 /*************************************************
 Function Name： isConnected()
-Description: 是否连接
+Description: 是否connection 
 Input： NULL
 Output： NULL
 Changes： NULL
@@ -111,7 +111,7 @@ QString IMTcpSocket::getCurrentDateTime()
 // mark: private slots---------------------------------------------------------
 /*************************************************
 Function Name： connectionClosedByServer()
-Description: 连接被客户端关闭
+Description: connection 被clientclose 
 Input： NULL
 Output： NULL
 Changes： NULL
@@ -119,21 +119,21 @@ Changes： NULL
 void IMTcpSocket::connectionClosed()
 {
     m_isConnected = false;
-    qDebug("连接断开");
+    qDebug("connection 断开");
     deleteLater();
 
     if (m_flag == 0)
     {
-//        //程序如果和服务器断开连接的话，弹出警告，直接退出
+//        //程序如果和server 断开connection 的话，弹出警告，直接退出
 //        QMessageBox::critical(NULL, tr("系统错误"),
-//                              tr("您的客户端已经与服务器断开连接，请重新登录。"));
+//                              tr("您的client已经与server 断开connection ，请重新登录。"));
 //        qApp->quit();
     }
 }
 
 /*************************************************
 Function Name： connectionCreate()
-Description: 连接创建
+Description: connection create 
 Input： NULL
 Output： NULL
 Changes： NULL
@@ -156,16 +156,16 @@ void IMTcpSocket::dispalyError(QAbstractSocket::SocketError socketError)
     switch (socketError)
     {
     case QAbstractSocket::RemoteHostClosedError:
-        emit showConnectionStatus(tr("链接失败.可能是因为服务器关闭."));
+        emit showConnectionStatus(tr("链接失败.可能是因为server close ."));
         break;
     case QAbstractSocket::HostNotFoundError:
-        emit showConnectionStatus(tr("链接失败.可能是因为找不到服务器"));
+        emit showConnectionStatus(tr("链接失败.可能是因为找不到server "));
         QMessageBox::information(NULL, tr("IM Client"),
                                  tr("This host was not found.Please check the"
                                     "host name and port settings."));
         break;
     case QAbstractSocket::ConnectionRefusedError:
-        emit showConnectionStatus(tr("链接失败.可能是因为连接被拒绝"));
+        emit showConnectionStatus(tr("链接失败.可能是因为connection 被拒绝"));
         QMessageBox::information(NULL, tr("IM Client"),
                                  tr("The connection was refused by the peer."
                                     "Make sure the IM server is running,"

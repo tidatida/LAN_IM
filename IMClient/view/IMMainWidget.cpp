@@ -2,7 +2,7 @@
 File Name： IMMainWidget.cpp
 Author： jet.F.R
 Date： 2014.3.10
-Description： 客户端主界面
+Description： clientmainframe
 Changes：
 ********************************************/
 
@@ -103,7 +103,7 @@ IMMainWidget::IMMainWidget(const UserInformation me, QWidget *parent) :
 
 IMMainWidget::~IMMainWidget()
 {
-    // 关闭定时器
+    // close 定时器
     if (m_timerId != 0)
     {
         killTimer(m_timerId);
@@ -238,7 +238,7 @@ void IMMainWidget::insertDiscussionRoomMap(const QString & id,
 
 /*************************************************
 Function Name： getFriendInformation
-Description: 获取好友信息（发送至服务器）
+Description: 获取好友信息（发送至server ）
 *************************************************/
 void IMMainWidget::getFriendInformation(const QString &id)
 {
@@ -248,7 +248,7 @@ void IMMainWidget::getFriendInformation(const QString &id)
 
 /*************************************************
 Function Name： changeMyInformation
-Description: 改变自己信息（发送至服务器）
+Description: 改变自己信息（发送至server ）
 *************************************************/
 void IMMainWidget::changeMyInformation(const UserInformation &me)
 {
@@ -259,7 +259,7 @@ void IMMainWidget::changeMyInformation(const UserInformation &me)
 
 /*************************************************
 Function Name： changeFriendRemark
-Description: 改变好友备注（发送至服务器）
+Description: 改变好友备注（发送至server ）
 *************************************************/
 void IMMainWidget::changeFriendRemark(const QString & friendID,
                                       const QString & remark)
@@ -270,7 +270,7 @@ void IMMainWidget::changeFriendRemark(const QString & friendID,
 
 /*************************************************
 Function Name： deleteFriend
-Description: 删除好友（发送至服务器
+Description: delete  好友（发送至server 
 *************************************************/
 void IMMainWidget::deleteFriend(const QString & friendID)
 {
@@ -280,7 +280,7 @@ void IMMainWidget::deleteFriend(const QString & friendID)
 
 /*************************************************
 Function Name： removeInformationWidget
-Description: 删除存储于m_informationMap中的信息窗口
+Description: delete  存储于m_informationMap中的信息窗口
 *************************************************/
 void IMMainWidget::removeInformationWidget(const QString & userID)
 {
@@ -291,7 +291,7 @@ void IMMainWidget::removeInformationWidget(const QString & userID)
 
 /*************************************************
 Function Name： removeFlockInformationWidget
-Description: 删除存储与m_flockInformationMap中的信息窗口
+Description: delete  存储与m_flockInformationMap中的信息窗口
 *************************************************/
 void IMMainWidget::removeFlockInformationWidget(const QString & flockID)
 {
@@ -302,7 +302,7 @@ void IMMainWidget::removeFlockInformationWidget(const QString & flockID)
 
 /*************************************************
 Function Name： removeDiscussionInformationWidget
-Description: 删除存储与m_discussionInformationMap中的信息窗口
+Description: delete  存储与m_discussionInformationMap中的信息窗口
 *************************************************/
 void IMMainWidget::removeDiscussionInformationWidget(const QString & discussionID)
 {
@@ -313,7 +313,7 @@ void IMMainWidget::removeDiscussionInformationWidget(const QString & discussionI
 
 /*************************************************
 Function Name： changeFlockInformation
-Description: 修改群信息（发送至服务器）
+Description: modify群信息（发送至server ）
 *************************************************/
 void IMMainWidget::changeFlockInformation(const FlockInformation & flock)
 {
@@ -324,7 +324,7 @@ void IMMainWidget::changeFlockInformation(const FlockInformation & flock)
 
 /*************************************************
 Function Name： changeDiscussionInformation
-Description: 修改讨论组信息 （发送至服务器
+Description: modify讨论组信息 （发送至server 
 *************************************************/
 void IMMainWidget::changeDiscussionInformation(const DiscussionInformation & discussion)
 {
@@ -334,7 +334,7 @@ void IMMainWidget::changeDiscussionInformation(const DiscussionInformation & dis
 
 /*************************************************
 Function Name： removeChatWidget
-Description: 删除存储于m_chatRoomMap中的聊天窗口
+Description: delete  存储于m_chatRoomMap中的聊天窗口
 *************************************************/
 void IMMainWidget::removeChatWidget(const QString &friendID)
 {
@@ -345,7 +345,7 @@ void IMMainWidget::removeChatWidget(const QString &friendID)
 
 /*************************************************
 Function Name： removeFlockChatWidget
-Description: 删除存储于m_flockRoomMap中的群聊窗口
+Description: delete  存储于m_flockRoomMap中的群聊窗口
 *************************************************/
 void IMMainWidget::removeFlockChatWidget(const QString & flockID)
 {
@@ -357,7 +357,7 @@ void IMMainWidget::removeFlockChatWidget(const QString & flockID)
 }
 /*************************************************
 Function Name： removeDiscussionChatWidget
-Description: 删除存储于m_discussionRoomMap中的讨论组窗口
+Description: delete  存储于m_discussionRoomMap中的讨论组窗口
 *************************************************/
 void IMMainWidget::removeDiscussionChatWidget(const QString & discussionID)
 {
@@ -368,7 +368,7 @@ void IMMainWidget::removeDiscussionChatWidget(const QString & discussionID)
 
 /*************************************************
 Function Name： dropFlock
-Description: 解散群(发送至服务器)
+Description: 解散群(发送至server )
 *************************************************/
 void IMMainWidget::dropFlock(const QString & flockID)
 {
@@ -378,7 +378,7 @@ void IMMainWidget::dropFlock(const QString & flockID)
 
 /*************************************************
 Function Name： dropDiscussion
-Description: 解散讨论组（发送至服务器）
+Description: 解散讨论组（发送至server ）
 *************************************************/
 void IMMainWidget::dropDiscussion(const QString & discussionID)
 {
@@ -388,7 +388,7 @@ void IMMainWidget::dropDiscussion(const QString & discussionID)
 
 /*************************************************
 Function Name： leaveFlock
-Description: 退出群（发送至服务器）
+Description: 退出群（发送至server ）
 *************************************************/
 void IMMainWidget::leaveFlock(const QString &memberID, const QString & flockID)
 {
@@ -398,7 +398,7 @@ void IMMainWidget::leaveFlock(const QString &memberID, const QString & flockID)
 
 /*************************************************
 Function Name： leaveFlock
-Description: 退出讨论组（发送至服务器）
+Description: 退出讨论组（发送至server ）
 *************************************************/
 void IMMainWidget::leaveDiscussion(const QString & memberID, const QString & discussionID)
 {
@@ -407,23 +407,23 @@ void IMMainWidget::leaveDiscussion(const QString & memberID, const QString & dis
 }
 /*************************************************
 Function Name： leaveFlock
-Description: 添加好友（发送至服务器）
+Description: add 好友（发送至server ）
 *************************************************/
 void IMMainWidget::addFriend(const QString friendID)
 {
     if (0 == friendID.compare(m_myself.m_userID))
     {
-        QMessageBox::critical(NULL, tr("添加失败"), tr("不能添加自己"));
+        QMessageBox::critical(NULL, tr("add 失败"), tr("不能add 自己"));
         return;
     }
     if (m_friendMap.contains(friendID))
     {
-        QMessageBox::critical(NULL, tr("添加失败"), tr("该用户已经是您的好友"));
+        QMessageBox::critical(NULL, tr("add 失败"), tr("该user 已经是您的好友"));
         return;
     }
 
     bool isOkMes = false;
-    QString checkMes = QInputDialog::getText(NULL, "添加好友",
+    QString checkMes = QInputDialog::getText(NULL, "add 好友",
                                            "请输入验证信息",
                                            QLineEdit::Normal,
                                            QString(tr("你好,我是: %1")).
@@ -450,7 +450,7 @@ void IMMainWidget::addFriend(const QString friendID)
 
 /*************************************************
 Function Name： changeFlockMemberRemark
-Description: 修改群成员名片（发送至服务器）
+Description: modify群成员名片（发送至server ）
 *************************************************/
 void IMMainWidget::changeFlockMemberRemark(const TempStrings & tmpStr)
 {
@@ -698,7 +698,7 @@ void IMMainWidget::exportLocalMessageAll()
 
 /*************************************************
 Function Name： deleteLocalMessage()
-Description: 删除单个好友消息记录
+Description: delete  单个好友消息记录
 *************************************************/
 void IMMainWidget::deleteLocalMessage(const int index)
 {
@@ -707,7 +707,7 @@ void IMMainWidget::deleteLocalMessage(const int index)
     QString temp;
     if (type < 0)
     {
-        temp = QString(tr("删除聊天记录失败！"));
+        temp = QString(tr("delete  聊天记录失败！"));
     }
     else if (type == 0)
     {
@@ -715,16 +715,16 @@ void IMMainWidget::deleteLocalMessage(const int index)
     }
     else
     {
-        temp = QString(tr("删除聊天记录成功！"));
+        temp = QString(tr("delete  聊天记录成功！"));
     }
-    QMessageBox::information(NULL, tr("删除聊天记录"), temp);
+    QMessageBox::information(NULL, tr("delete  聊天记录"), temp);
     m_messageManWidget->raise();
     return;
 }
 
 /*************************************************
 Function Name： deleteLocalMessageAll()
-Description: 删除所有消息记录
+Description: delete  所有消息记录
 *************************************************/
 void IMMainWidget::deleteLocalMessageAll()
 {
@@ -733,7 +733,7 @@ void IMMainWidget::deleteLocalMessageAll()
     QString temp;
     if (type < 0)
     {
-        temp = QString(tr("删除聊天记录失败！"));
+        temp = QString(tr("delete  聊天记录失败！"));
     }
     else if (type == 0)
     {
@@ -741,9 +741,9 @@ void IMMainWidget::deleteLocalMessageAll()
     }
     else
     {
-        temp = QString(tr("删除聊天记录成功！"));
+        temp = QString(tr("delete  聊天记录成功！"));
     }
-    QMessageBox::information(NULL, tr("删除聊天记录"), temp);
+    QMessageBox::information(NULL, tr("delete  聊天记录"), temp);
     m_messageManWidget->raise();
     return;
 }
@@ -841,7 +841,7 @@ void IMMainWidget::getNetWorkHistoryMessage(const int index, const QDate &date)
 
 /*************************************************
 Function Name： getFriendsInformation()
-Description: 获取好友信息列表（发送至服务器）
+Description: 获取好友信息列表（发送至server ）
 *************************************************/
 void IMMainWidget::getFriendsInformation()
 {
@@ -851,7 +851,7 @@ void IMMainWidget::getFriendsInformation()
 
 /*************************************************
 Function Name： getFlocksInformation()
-Description: 获取群信息列表（发送至服务器）
+Description: 获取群信息列表（发送至server ）
 *************************************************/
 void IMMainWidget::getFlocksInformation()
 {
@@ -861,7 +861,7 @@ void IMMainWidget::getFlocksInformation()
 
 /*************************************************
 Function Name： getDiscussionsInformation()
-Description: 获取讨论组信息列表（发送至服务器）
+Description: 获取讨论组信息列表（发送至server ）
 *************************************************/
 void IMMainWidget::getDiscussionsInformation()
 {
@@ -871,7 +871,7 @@ void IMMainWidget::getDiscussionsInformation()
 
 /*************************************************
 Function Name： getLatestMessage()
-Description: 获取本地最近消息（访问本地数据库）
+Description: 获取本地最近消息（访问本地database ）
 *************************************************/
 void IMMainWidget::getLatestMessage()
 {
@@ -971,7 +971,7 @@ void IMMainWidget::setDiscussionListWidget(const QVector<DiscussionInformation> 
 
 /*************************************************
 Function Name： addFriendButton
-Description: 添加好友按钮
+Description: add 好友按钮
 *************************************************/
 bool IMMainWidget::addFriendButton(const FriendInformation & friInfo)
 {
@@ -1012,7 +1012,7 @@ bool IMMainWidget::addFriendButton(const FriendInformation & friInfo)
 
 /*************************************************
 Function Name： addFlockButton
-Description: 添加群按钮
+Description: add 群按钮
 *************************************************/
 bool IMMainWidget::addFlockButton(const FlockInformation & flcokInfo)
 {
@@ -1030,7 +1030,7 @@ bool IMMainWidget::addFlockButton(const FlockInformation & flcokInfo)
 
 /*************************************************
 Function Name： addDiscussionButton
-Description: 添加讨论组按钮
+Description: add 讨论组按钮
 *************************************************/
 
 bool IMMainWidget::addDiscussionButton(const DiscussionInformation & disInfo)
@@ -1081,7 +1081,7 @@ void IMMainWidget::receiveFriendTalkMessage(const TalkMessage &mes)
 
         if (!m_flockMap[mes.m_receiverID]->isRoomShow())
         {
-            // 创建 IMLinkFlcokButton
+            // create  IMLinkFlcokButton
             if (!m_linkMap.contains(mes.m_receiverID))
             {
                 IMLinkFlockButton * btn = new IMLinkFlockButton(
@@ -1123,7 +1123,7 @@ void IMMainWidget::receiveFriendTalkMessage(const TalkMessage &mes)
 
         if (!m_discussionMap[mes.m_receiverID]->isRoomShow())
         {
-            // 创建 IMLinkDiscussionButton
+            // create  IMLinkDiscussionButton
             if (!m_linkMap.contains(mes.m_receiverID))
             {
                 IMLinkDiscussionButton * btn = new IMLinkDiscussionButton(
@@ -1181,11 +1181,11 @@ void IMMainWidget::receiveFriendTalkMessage(const TalkMessage &mes)
     {
     case TALK_MESSAGE:
         chatRoom->appendMessageShow(mes);
-        // 存储消息记录 至 数据库
+        // 存储消息记录 至 database 
         m_database.addHistoryMessage(mes);
         if (!m_friendMap[mes.m_senderID]->isRoomShow())
         {
-            // 创建 IMLinkFriendButton
+            // create  IMLinkFriendButton
             if (!m_linkMap.contains(mes.m_senderID))
             {
                 IMLinkFriendButton * btn = new IMLinkFriendButton(
@@ -1205,7 +1205,7 @@ void IMMainWidget::receiveFriendTalkMessage(const TalkMessage &mes)
         chatRoom->pendingVideo(mes);
     case AGREE_VOICE:
 //        chatRoom->showCamera(mes);
-        // 创建视频窗口
+        // create 视频窗口
         // 发送 接收
     case REFUSE_VOICE:
         chatRoom->closeVideoWidget();
@@ -1227,7 +1227,7 @@ void IMMainWidget::receiveFriendTalkMessage(const TalkMessage &mes)
     }
     }
 
-//	//打开聊天窗口，并显示对方发来的信息
+//	//open 聊天窗口，并显示对方发来的信息
 //	iter.value()->openChatRoom();
 //	iter.value()->getRoomPoint()->setOutputLine(mes);
 
@@ -1456,7 +1456,7 @@ void IMMainWidget::setFriendRemark(const TempStrings& tempStr)
 
 /*************************************************
 Function Name： deleteFriend
-Description: 已删除好友
+Description: 已delete  好友
 *************************************************/
 void IMMainWidget::deletedFriend(const QString & myID, const QString & friendID,
                                  const QString & groupName)
@@ -1498,7 +1498,7 @@ void IMMainWidget::deletedFriend(const QString & myID, const QString & friendID,
 
 /*************************************************
 Function Name： dropedFlock
-Description: 已删除群
+Description: 已delete  群
 *************************************************/
 void IMMainWidget::dropedFlock(const QString & flockID)
 {
@@ -1530,7 +1530,7 @@ void IMMainWidget::dropedFlock(const QString & flockID)
 
 /*************************************************
 Function Name： dropedDiscussion
-Description: 已删除讨论组
+Description: 已delete  讨论组
 *************************************************/
 void IMMainWidget::dropedDiscussion(const QString & discussionID)
 
@@ -1571,11 +1571,11 @@ void IMMainWidget::leavedFlock(const QString & memberID,
     if (creatorID == m_myself.m_userID)
     {
         QMessageBox::information(NULL, tr("群消息"),
-                                 QString(tr("用户%1已经退出群%2")).
+                                 QString(tr("user %1已经退出群%2")).
                                  arg(memberID, flockID));
 
-        // 如果群是打开的，最好及时刷新，将成员在群中删除
-        // 不然要等到下次打开群的时候，才能看到成员已被删除
+        // 如果群是open 的，最好及时刷新，将成员在群中delete  
+        // 不然要等到下次open 群的时候，才能看到成员已被delete  
         // 关系也不大
         if (m_flockRoomMap.contains(flockID))
         {
@@ -1656,11 +1656,11 @@ void IMMainWidget::leavedDiscussion(const QString & memberID,
     else
     {
 //             QMessageBox::information(NULL, tr("群消息"),
-//                                      QString(tr("用户%1已经退出讨论组%2")).
+//                                      QString(tr("user %1已经退出讨论组%2")).
 //                                      arg(memberID, discussionID));
 
-//             // 如果讨论组是打开的，最好及时刷新，将成员在讨论组中删除
-//             // 不然要等到下次打开群的时候，才能看到成员已被删除
+//             // 如果讨论组是open 的，最好及时刷新，将成员在讨论组中delete  
+//             // 不然要等到下次open 群的时候，才能看到成员已被delete  
 //             // 关系也不大
              if (m_discussionRoomMap.contains(discussionID))
              {
@@ -1678,7 +1678,7 @@ void IMMainWidget::leavedDiscussion(const QString & memberID,
 
 /*************************************************
 Function Name： createFlockSuccess
-Description: 创建群成功
+Description: create 群成功
 *************************************************/
 void IMMainWidget::createFlockSuccess(const FlockInformation & flock)
 {
@@ -1689,7 +1689,7 @@ void IMMainWidget::createFlockSuccess(const FlockInformation & flock)
         return;
     if (!addFlockButton(flock))
         return;
-    QString temp =  QString(tr("您好,%1(%2).\n您已经成功创建群%3(%4).\n创建日期: %5.")).
+    QString temp =  QString(tr("您好,%1(%2).\n您已经成功create 群%3(%4).\ncreate 日期: %5.")).
                     arg(m_myself.m_userID, m_myself.m_nickname,
                         flock.m_flockID, flock.m_flockName,
                         flock.m_createDate.toString("yyyy-MM-dd"));
@@ -1700,7 +1700,7 @@ void IMMainWidget::createFlockSuccess(const FlockInformation & flock)
 
 /*************************************************
 Function Name： createDiscussionSuccess
-Description: 创建讨论组成功
+Description: create 讨论组成功
 *************************************************/
 void IMMainWidget::createDiscussionSuccess(const DiscussionInformation & discussion)
 {
@@ -1712,7 +1712,7 @@ void IMMainWidget::createDiscussionSuccess(const DiscussionInformation & discuss
         return;
     if (!addDiscussionButton(discussion))
         return;
-    QString temp =  QString(tr("您好,%1(%2).\n您已经成功创建讨论组%3(%4).\n创建日期: %5.")).
+    QString temp =  QString(tr("您好,%1(%2).\n您已经成功create 讨论组%3(%4).\ncreate 日期: %5.")).
                     arg(m_myself.m_userID, m_myself.m_nickname,
                         discussion.m_discussionID, discussion.m_discussionName,
                         discussion.m_createDate.toString("yyyy-MM-dd"));
@@ -1779,12 +1779,12 @@ void IMMainWidget::onClickSearchFriend()
 
 /*************************************************
 Function Name： onClickAddFriend
-Description: 添加好友
+Description: add 好友
 *************************************************/
 void IMMainWidget::onClickAddFriend()
 {
     bool isOk = false;
-    QString friendID = QInputDialog::getText(NULL, "添加好友",
+    QString friendID = QInputDialog::getText(NULL, "add 好友",
                                            "请输入对方帐号",
                                            QLineEdit::Normal,
                                            "",
@@ -1800,12 +1800,12 @@ void IMMainWidget::onClickAddFriend()
 
 /*************************************************
 Function Name： addFlock
-Description: 添加群
+Description: add 群
 *************************************************/
 void IMMainWidget::onClickAddFlock()
 {
     bool isOk = false;
-    QString flockID = QInputDialog::getText(NULL, "添加群",
+    QString flockID = QInputDialog::getText(NULL, "add 群",
                                            "请输入群帐号",
                                            QLineEdit::Normal,
                                            "",
@@ -1818,12 +1818,12 @@ void IMMainWidget::onClickAddFlock()
 
     if (m_flockMap.contains(flockID))
     {
-        QMessageBox::critical(NULL, tr("添加失败"), tr("你已经加入该群"));
+        QMessageBox::critical(NULL, tr("add 失败"), tr("你已经加入该群"));
         return;
     }
 
     bool isOkMes = false;
-    QString checkMes = QInputDialog::getText(NULL, "添加群",
+    QString checkMes = QInputDialog::getText(NULL, "add 群",
                                            "请输入验证信息",
                                            QLineEdit::Normal,
                                            QString(tr("你好,我是: %1")).
@@ -1851,13 +1851,13 @@ void IMMainWidget::onClickAddFlock()
 
 /*************************************************
 Function Name： onClickChangePwd
-Description: 修改密码
+Description: modify passwd
 *************************************************/
 void IMMainWidget::onClickChangePwd()
 {
     bool isOkMes = false;
-    QString oldPwd = QInputDialog::getText(NULL, "修改密码",
-                                           "请输入原密码:",
+    QString oldPwd = QInputDialog::getText(NULL, "modify passwd",
+                                           "请输入原 passwd:",
                                            QLineEdit::Password,
                                            NULL,
                                            &isOkMes);
@@ -1866,8 +1866,8 @@ void IMMainWidget::onClickChangePwd()
 
     while(1)
     {
-        QString newPwdOne = QInputDialog::getText(NULL, "修改密码",
-                                               "请输入新密码:",
+        QString newPwdOne = QInputDialog::getText(NULL, "modify passwd",
+                                               "请输入新 passwd:",
                                                QLineEdit::Password,
                                                NULL,
                                                &isOkMes);
@@ -1875,19 +1875,19 @@ void IMMainWidget::onClickChangePwd()
             return;
         if (newPwdOne.length() < 6)
         {
-            QMessageBox::critical(NULL, tr("修改密码"),
-                                  tr("新密码长度不能少于6个字符！"));
+            QMessageBox::critical(NULL, tr("modify passwd"),
+                                  tr("新 passwd长度不能少于6个字符！"));
             continue;
         }
         if (newPwdOne.length() > 14)
         {
-            QMessageBox::critical(NULL, tr("修改密码"),
-                                  tr("新密码长度不能超过14个字符！"));
+            QMessageBox::critical(NULL, tr("modify passwd"),
+                                  tr("新 passwd长度不能超过14个字符！"));
             continue;
         }
 
-        QString newPwdTwo = QInputDialog::getText(NULL, "修改密码",
-                                               "请再次输入新密码:",
+        QString newPwdTwo = QInputDialog::getText(NULL, "modify passwd",
+                                               "请再次输入新 passwd:",
                                                QLineEdit::Password,
                                                NULL,
                                                &isOkMes);
@@ -1895,7 +1895,7 @@ void IMMainWidget::onClickChangePwd()
             return;
         if (newPwdTwo != newPwdOne)
         {
-            QMessageBox::critical(NULL, tr("修改密码"), tr("两次新密码不一致！"));
+            QMessageBox::critical(NULL, tr("modify passwd"), tr("两次新 passwd不一致！"));
             continue;
         }
         else
@@ -1916,12 +1916,12 @@ void IMMainWidget::onClickChangePwd()
 
 /*************************************************
 Function Name： createFlock
-Description: 创建群
+Description: create 群
 *************************************************/
 void IMMainWidget::createFlock()
 {
     bool isOk = false;
-    QString flockName = QInputDialog::getText(NULL, "创建群",
+    QString flockName = QInputDialog::getText(NULL, "create 群",
                                            "请输入群名",
                                            QLineEdit::Normal,
                                            QString("%1的IM群").
@@ -1931,7 +1931,7 @@ void IMMainWidget::createFlock()
         return;
 
     isOk = false;
-    QString flockTheme = QInputDialog::getText(NULL, "创建群",
+    QString flockTheme = QInputDialog::getText(NULL, "create 群",
                                            "请输入群主题",
                                            QLineEdit::Normal,
                                            tr("没有主题"),
@@ -1951,12 +1951,12 @@ void IMMainWidget::createFlock()
 
 /*************************************************
 Function Name： createDiscussion
-Description: 创建讨论组
+Description: create 讨论组
 *************************************************/
 void IMMainWidget::createDiscussion()
 {
     bool isOk = false;
-    QString name = QInputDialog::getText(NULL, "创建讨论组",
+    QString name = QInputDialog::getText(NULL, "create 讨论组",
                                            "请输入组名",
                                            QLineEdit::Normal,
                                            QString("%1的IM讨论组").
@@ -1966,7 +1966,7 @@ void IMMainWidget::createDiscussion()
         return;
 
     isOk = false;
-    QString theme = QInputDialog::getText(NULL, "创建讨论组",
+    QString theme = QInputDialog::getText(NULL, "create 讨论组",
                                            "请输入主题",
                                            QLineEdit::Normal,
                                            tr("没有主题"),
@@ -2073,7 +2073,7 @@ Description: 重命名分组成功
 *************************************************/
 void IMMainWidget::renameBoxSuccess(const QString & title, const QString & newTitle)
 {
-    // 先修改： 组名 与 下标 映射表
+    // 先modify： 组名 与 下标 映射表
     int index = m_indexFriendsGroupMap.value(title);
 //    if (index == 0)
 //    {
@@ -2083,7 +2083,7 @@ void IMMainWidget::renameBoxSuccess(const QString & title, const QString & newTi
     m_indexFriendsGroupMap.remove(title);
     m_indexFriendsGroupMap.insert(newTitle, index);
 
-    // 通过 存储每个分组的向量 获取分组 item ，再修改组名
+    // 通过 存储每个分组的向量 获取分组 item ，再modify组名
     m_toolItemsFriendsVec[index]->setTile(newTitle);
 
     m_friendsGroupList[m_friendsGroupList.indexOf(title)] = newTitle;
@@ -2119,7 +2119,7 @@ void IMMainWidget::onClickRightButton()
 {
     if (m_menu == NULL)
     {
-        //创建右键菜单
+        //create 右键菜单
         creatMenu();
     }
     m_menu->exec(QCursor::pos() - QPoint(105, 125));
@@ -2142,7 +2142,7 @@ void IMMainWidget::createBox()
     {
         if (m_indexFriendsGroupMap.contains(groupName))
         {
-            QMessageBox::information(NULL, tr("新建组"), tr("无法创建，因为存在同名的组！"));
+            QMessageBox::information(NULL, tr("新建组"), tr("无法create ，因为存在同名的组！"));
             return;
         }
 
@@ -2174,7 +2174,7 @@ void IMMainWidget::createBox()
 
 /*************************************************
 Function Name： removeLinkButton
-Description: 删除新消息连接按钮
+Description: delete  新消息connection 按钮
 *************************************************/
 void IMMainWidget::removeLinkButton(const QString & id)
 {
@@ -2194,7 +2194,7 @@ void IMMainWidget::removeLinkButton(const QString & id)
 
 /*************************************************
 Function Name： deleteAllLinkButton
-Description: 删除所有消息连接按钮
+Description: delete  所有消息connection 按钮
 *************************************************/
 void IMMainWidget::removeAllLinkButton()
 {
@@ -2227,13 +2227,13 @@ void IMMainWidget::showAllChatRoom()
 // mark protected:------------------------------------------------------
 /*************************************************
 Function Name： closeEvent
-Description: 关闭事件
+Description: close 事件
 *************************************************/
 void IMMainWidget::closeEvent(QCloseEvent *event)
 {
     if(continueToClose())
     {
-        //关闭主窗口之前，先关闭所有聊天窗口
+        //close 主窗口之前，先close 所有聊天窗口
         closeAllWindows();
         event->accept();
     }
@@ -2276,7 +2276,7 @@ void IMMainWidget::timerEvent(QTimerEvent *event)
 
 /*************************************************
 Function Name： closeWindow
-Description: 关闭主窗口
+Description: close 主窗口
 *************************************************/
 void IMMainWidget::closeWindow()
 {
@@ -2288,7 +2288,7 @@ void IMMainWidget::closeWindow()
 
 /*************************************************
 Function Name： closeAllWindows
-Description: 关闭所有别的窗口
+Description: close 所有别的窗口
 *************************************************/
 void IMMainWidget::closeAllWindows()
 {
@@ -2369,7 +2369,7 @@ void IMMainWidget::closeAllWindows()
 
 /*************************************************
 Function Name： createChatRoom
-Description: 创建聊天室
+Description: create 聊天室
 *************************************************/
 void IMMainWidget::getMyInformation()
 {
@@ -2429,7 +2429,7 @@ Description: 获取讨论组发出的消息
 
 /*************************************************
 Function Name： changeStatus
-Description: 改变个人状态（发送至服务器）
+Description: 改变个人状态（发送至server ）
 *************************************************/
 void IMMainWidget::changeMyStatus(const int index)
 {
@@ -2464,7 +2464,7 @@ void IMMainWidget::changeMyStatus(const int index)
 
 /*************************************************
 Function Name： receiveFriendRequest
-Description: 接收并且处理好友的请求
+Description: 接收并且process   好友的request 
 *************************************************/
 void IMMainWidget::receiveFriendRequest(const TalkMessage & mes,
                                         const UserInformation & friendInf)
@@ -2478,8 +2478,8 @@ void IMMainWidget::receiveFriendRequest(const TalkMessage & mes,
     case REQUEST_FRIEND:
     {
         QMessageBox::StandardButton rb = QMessageBox::question(
-                    NULL, tr("好友请求"),
-                    QString(tr("是否同意用户%1(%2)添加你为好友?\n验证消息:\n%3")).
+                    NULL, tr("好友request "),
+                    QString(tr("是否同意user %1(%2)add 你为好友?\n验证消息:\n%3")).
                     arg(mes.m_senderID, friendInf.m_nickname, mes.m_text),
                     QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
         if(rb == QMessageBox::Yes)
@@ -2506,14 +2506,14 @@ void IMMainWidget::receiveFriendRequest(const TalkMessage & mes,
         fri.m_status = friendInf.m_status;
         if (!addFriendButton(fri))
             return;
-        QString temp = QString(tr("成功添加好友%1(%2).")).
+        QString temp = QString(tr("成功add 好友%1(%2).")).
                 arg(friendInf.m_userID, friendInf.m_nickname);
         QMessageBox::information(NULL, tr("消息"), temp);
         break;
     }
     case REFUSE_FRIEND:
     {
-        QString temp = QString(tr("用户%1(%2)\n拒绝您的好友添加请求.")).
+        QString temp = QString(tr("user %1(%2)\n拒绝您的好友add request .")).
                 arg(friendInf.m_userID, friendInf.m_nickname);
         QMessageBox::information(NULL, tr("消息"), temp);
         break;
@@ -2527,7 +2527,7 @@ void IMMainWidget::receiveFriendRequest(const TalkMessage & mes,
 
 /*************************************************
 Function Name： receiveFlockRequest
-Description: 接收并且处理群的请求
+Description: 接收并且process   群的request 
 *************************************************/
 void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
                                        const FlockMember & member,
@@ -2539,8 +2539,8 @@ void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
     case REQUEST_FLOCK:
     {
         QMessageBox::StandardButton rb = QMessageBox::question(
-                    NULL, tr("用户请求"),
-                    QString(tr("是否同意用户%1加入群%2?\n验证消息:\n%3")).
+                    NULL, tr("user request "),
+                    QString(tr("是否同意user %1加入群%2?\n验证消息:\n%3")).
                     arg(mes.m_senderID, mes.m_receiverID, mes.m_text),
                     QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
 
@@ -2553,7 +2553,7 @@ void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
             returnMes.m_type = FLOCK_REFUSE;
         }
         returnMes.m_senderID = mes.m_receiverID; // 群
-        returnMes.m_receiverID = mes.m_senderID; // 用户
+        returnMes.m_receiverID = mes.m_senderID; // user 
         if (NULL != m_mainCtrl)
             m_mainCtrl->resultOfFlockRequest(returnMes);
         break;
@@ -2570,7 +2570,7 @@ void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
 
         m_flockMap[mes.m_receiverID]->addFlockMember(member.m_userID);
 
-        QString temp = QString(tr("用户%1,成功加入群%2(%3).")).
+        QString temp = QString(tr("user %1,成功加入群%2(%3).")).
                 arg(mes.m_senderID, flock.m_flockID, flock.m_flockName);
         QMessageBox::information(NULL, tr("群消息"), temp);
 //        out << temp.m_message << m_save.m_flockMember;
@@ -2578,7 +2578,7 @@ void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
     }
     case REFUSE_FLOCK:
     {
-        QString temp = QString(tr("您好,%1,用户%2,拒绝加入群%3\n的群.")).
+        QString temp = QString(tr("您好,%1,user %2,拒绝加入群%3\n的群.")).
                 arg(m_myself.m_userID, mes.m_senderID, mes.m_receiverID);
         QMessageBox::information(NULL, tr("群消息"), temp);
         break;
@@ -2597,7 +2597,7 @@ void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
     }
     case FLOCK_REFUSE:
     {
-        QString temp = QString(tr("您好,%1,群%2\n的群主拒绝您的加入请求.")).
+        QString temp = QString(tr("您好,%1,群%2\n的群主拒绝您的加入request .")).
                 arg(m_myself.m_userID, mes.m_senderID);
         QMessageBox::information(NULL, tr("群消息"), temp);
         break;
@@ -2605,7 +2605,7 @@ void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
     case FLOCK_REQUEST:
     {
         QMessageBox::StandardButton rb = QMessageBox::question(
-                    NULL, tr("群请求"),
+                    NULL, tr("群request "),
                     QString(tr("是否同意加入群%1?\n验证消息:\n%2")).
                     arg(mes.m_senderID, mes.m_text),
                     QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
@@ -2618,7 +2618,7 @@ void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
         {
             returnMes.m_type = REFUSE_FLOCK;
         }
-        returnMes.m_senderID = mes.m_receiverID; // 用户
+        returnMes.m_senderID = mes.m_receiverID; // user 
         returnMes.m_receiverID = mes.m_senderID; // 群
         if (NULL != m_mainCtrl)
             m_mainCtrl->resultOfFlockRequest(returnMes);
@@ -2644,7 +2644,7 @@ void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
 
 /*************************************************
 Function Name： receiveDiscussionRequest
-Description: 接收并处理讨论组请求
+Description: 接收并process   讨论组request 
 *************************************************/
 void IMMainWidget::receiveDiscussionRequest(const TalkMessage & mes,
                                             const DiscussionMember & member,
@@ -2654,7 +2654,7 @@ void IMMainWidget::receiveDiscussionRequest(const TalkMessage & mes,
     {
     case ADD_DISCUSSION_FAIL:
     {
-        QString temp = QString(tr("您好,%1,用户%2加入讨论组%3失败.")).
+        QString temp = QString(tr("您好,%1,user %2加入讨论组%3失败.")).
                 arg(m_myself.m_userID, mes.m_receiverID, mes.m_senderID);
         QMessageBox::information(NULL, tr("讨论组消息"), temp);
         break;
@@ -2687,17 +2687,17 @@ void IMMainWidget::receiveDiscussionRequest(const TalkMessage & mes,
 }
 
 
-// 删除组
+// delete  组
 /*************************************************
 Function Name： removeBox
-Description: 删除组
+Description: delete  组
 *************************************************/
 void IMMainWidget::removeBox(const QString & title)
 {
     QMessageBox::StandardButton returnBtn;
 
-    returnBtn = QMessageBox::question(NULL, tr("删除分组"),
-        QString(tr("你确定要删除分组(%1)吗？")).arg(title),
+    returnBtn = QMessageBox::question(NULL, tr("delete  分组"),
+        QString(tr("你确定要delete  分组(%1)吗？")).arg(title),
         QMessageBox::Yes | QMessageBox::No,  QMessageBox::No);
 
     if(QMessageBox::No == returnBtn)
@@ -2707,14 +2707,14 @@ void IMMainWidget::removeBox(const QString & title)
 
     if (m_toolItemsFriendsVec[index]->getSize() > 0)
     {
-        QMessageBox::information(NULL, tr("删除组"), tr("无法删除，因为该组里还有组员！"));
+        QMessageBox::information(NULL, tr("delete  组"), tr("无法delete  ，因为该组里还有组员！"));
         return;
     }
 
     m_toolItemsFriendsVec[index]->deleteLater();
     m_toolItemsFriendsVec[index] = NULL;
     m_friendsGroupList.removeAt(m_friendsGroupList.indexOf(title));
-    // 删除映射
+    // delete  映射
     m_indexFriendsGroupMap.remove(title);
     if (m_messageManWidget != NULL)
         m_messageManWidget->setListModelGroup();
@@ -2765,7 +2765,7 @@ void IMMainWidget::renameBox(const QString & title)
 // mark: private:--------------------------------------------------
 /*************************************************
 Function Name： initIMMainWidget
-Description: 初始化
+Description: init 
 *************************************************/
 void IMMainWidget::initIMMainWidget()
 {
@@ -2815,20 +2815,20 @@ border: 2px solid green;
     m_toolBtnSpace->setIcon(QIcon(":/images/space.png"));
     m_toolBtnSpace->setAutoRaise(true);
     m_toolBtnSpace->setToolTip(tr("空间"));
-    m_toolBtnSpace->setStatusTip(tr("打开空间"));
+    m_toolBtnSpace->setStatusTip(tr("open 空间"));
 
 //    m_toolBtnSpace->setAutoFillBackground(true);
     m_toolBtnMail = new QToolButton(this);   // 邮件
     m_toolBtnMail->setIcon(QIcon(":/images/mail.png"));
     m_toolBtnMail->setAutoRaise(true);
     m_toolBtnMail->setToolTip(tr("邮箱"));
-    m_toolBtnMail->setStatusTip(tr("打开邮箱"));
+    m_toolBtnMail->setStatusTip(tr("open 邮箱"));
 
     m_toolBtnMesBox = new QToolButton(this); // 消息盒子
     m_toolBtnMesBox->setIcon(QIcon(":/images/messageBox.png"));
     m_toolBtnMesBox->setAutoRaise(true);
     m_toolBtnMesBox->setToolTip(tr("消息管理"));
-    m_toolBtnMesBox->setStatusTip(tr("打开消息管理器"));
+    m_toolBtnMesBox->setStatusTip(tr("open 消息管理器"));
 
     m_toolBtnNewMes = new QToolButton(this);
     m_toolBtnNewMes->setIcon(QIcon(""));//:/images/noMessage.png"));
@@ -2901,7 +2901,7 @@ border: 2px solid green;
     m_toolBtnAddFlock->setIcon(QIcon(":/images/addFlock.png"));
     m_toolBtnAddFlock->setAutoRaise(true);
     m_toolBtnAddFlock->setToolTip(tr("加群"));
-    m_toolBtnAddFlock->setStatusTip(tr("添加群"));
+    m_toolBtnAddFlock->setStatusTip(tr("add 群"));
 
 //    m_toolBtnAddDiscussion = new QToolButton;
 //    m_toolBtnAddDiscussion->setIcon(QIcon(":/images/addDiscussion.png"));
@@ -2919,13 +2919,13 @@ border: 2px solid green;
     m_toolBtnConfig->setIcon(QIcon(":/images/config.png"));
     m_toolBtnConfig->setAutoRaise(true);
     m_toolBtnConfig->setToolTip(tr("系统管理"));
-    m_toolBtnConfig->setStatusTip(tr("打开系统管理"));
+    m_toolBtnConfig->setStatusTip(tr("open 系统管理"));
 
     m_toolBtnAddFriend = new QToolButton;
     m_toolBtnAddFriend->setIcon(QIcon(":/images/addFriend.png"));
     m_toolBtnAddFriend->setAutoRaise(true);
     m_toolBtnAddFriend->setToolTip(tr("加好友"));
-    m_toolBtnAddFriend->setStatusTip(tr("添加好友"));
+    m_toolBtnAddFriend->setStatusTip(tr("add 好友"));
 
     /****************头部*********/
     QVBoxLayout *layoutTopRight = new QVBoxLayout;
@@ -2981,7 +2981,7 @@ border: 2px solid green;
 
 /*************************************************
 Function Name： linkSignalWithSlot
-Description:  连接信号与槽
+Description:  connection 信号与槽
 *************************************************/
 void IMMainWidget::linkSignalWithSlot()
 {
@@ -3117,14 +3117,14 @@ void IMMainWidget::clearContainers()
 
 /*************************************************
 Function Name： creatMenu
-Description: 创建右键菜单
+Description: create 右键菜单
 *************************************************/
 void IMMainWidget:: creatMenu()
 {
     m_menu = new QMenu(this);
-    QAction *addFriend = new QAction(tr("添加好友"), m_menu);
-    QAction *addFlock = new QAction(tr("添加群"), m_menu);
-    QAction *changePwd = new QAction(tr("修改密码"), m_menu);
+    QAction *addFriend = new QAction(tr("add 好友"), m_menu);
+    QAction *addFlock = new QAction(tr("add 群"), m_menu);
+    QAction *changePwd = new QAction(tr("modify passwd"), m_menu);
     QAction *information = new QAction(tr("个人信息"), m_menu);
     QAction *manMes = new QAction(tr("消息管理"), m_menu);
     QAction *mail = new QAction(tr("邮件管理"), m_menu);
@@ -3176,12 +3176,12 @@ bool IMMainWidget::continueToClose()
     {
         return true;
     }
-    //如果还有聊天窗口没有关闭，就弹出信息窗口
+    //如果还有聊天窗口没有close ，就弹出信息窗口
     if (m_chatRoomMap.size() != 0
             || m_flockRoomMap.size() != 0
             || m_discussionRoomMap.size() != 0)
     {
-        QString temp = tr("还有聊天窗口没有关闭，您确定想要退出程序？");
+        QString temp = tr("还有聊天窗口没有close ，您确定想要退出程序？");
         QMessageBox::StandardButton rb;
         rb = QMessageBox::question(this, tr("退出程序"), temp,
             QMessageBox::Yes | QMessageBox::No, QMessageBox::No);

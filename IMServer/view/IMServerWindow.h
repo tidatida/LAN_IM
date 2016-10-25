@@ -2,7 +2,7 @@
 File Name： IMServerWindow.h
 Author： jet.F.R
 Date： 2014.3.10
-Description： 服务器主界面类
+Description： server mainframe class
 Changes：
 ********************************************/
 
@@ -15,7 +15,7 @@ class IMServerMessageCtrl;
 
 /*************************************************
 Class Name： IMServerWindow
-Description: 服务器主界面类
+Description: server mainframe class
 *************************************************/
 class IMServerWindow : public QWidget
 {

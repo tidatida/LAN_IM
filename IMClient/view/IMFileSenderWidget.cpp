@@ -27,7 +27,7 @@ IMFileSenderWidget::~IMFileSenderWidget()
 
 /*************************************************
 Function Name： initSender()
-Description: 初始化
+Description: init 
 *************************************************/
 void IMFileSenderWidget::initSender()
 {
@@ -54,7 +54,7 @@ void IMFileSenderWidget::showRefused()
 
 /*************************************************
 Function Name： startSending()
-Description: 初始化文件服务器，监听对方
+Description: init 文件server ，监听对方
 *************************************************/
 bool IMFileSenderWidget::startSending(const QString & file)
 {
@@ -92,7 +92,7 @@ bool IMFileSenderWidget::isStopped()
 
 /*************************************************
 Function Name： initIMFileSenderWidget()
-Description: 初始化文件发送界面
+Description: init 文件发送界面
 *************************************************/
 void IMFileSenderWidget::initIMFileSenderWidget()
 {
@@ -101,7 +101,7 @@ void IMFileSenderWidget::initIMFileSenderWidget()
     m_labelFileStatus->setFixedHeight(80);
     m_barFile = new QProgressBar(this);
     m_btnCancel = new QPushButton(tr("取消"), this);
-    m_btnClose = new QPushButton(tr("关闭"), this);
+    m_btnClose = new QPushButton(tr("close "), this);
     QHBoxLayout *hlayout = new QHBoxLayout();
     hlayout->addWidget(m_btnCancel);
     hlayout->addWidget(m_btnClose);
@@ -159,7 +159,7 @@ void IMFileSenderWidget::onClickBtnClose()
 
 /*************************************************
 Function Name： sendMessage()
-Description: 当有新连接时触发 发送文件
+Description: 当有新connection 时触发 发送文件
 *************************************************/
 void IMFileSenderWidget::sendMessage()
 {
@@ -175,7 +175,7 @@ void IMFileSenderWidget::sendMessage()
     m_localFile = new QFile(m_filePath);
 
     if(!m_localFile->open((QFile::ReadOnly)))
-    {//以只读方式打开
+    {//以只读方式open 
         QMessageBox::warning(this,tr("应用程序"),tr("无法读取文件:\n%2").arg(m_filePath).arg(m_localFile->errorString()));
         return;
     }

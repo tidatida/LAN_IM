@@ -29,7 +29,7 @@ IMMailListWidget::IMMailListWidget(QWidget *parent) :
 
 /*************************************************
 Function Name： addItem()
-Description:  添加
+Description:  add 
 *************************************************/
 void IMMailListWidget::addItem(QWidget *item)
 {
@@ -47,7 +47,7 @@ void IMMailListWidget::addItem(QWidget *item)
 
 /*************************************************
 Function Name： removeItem()
-Description:  删除
+Description:  delete  
 *************************************************/
 void IMMailListWidget::removeItem(QWidget *item)
 {

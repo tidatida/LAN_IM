@@ -30,7 +30,7 @@ IMFlockMemberListWidget::IMFlockMemberListWidget(QWidget *parent) :
 
 /*************************************************
 Function Name： addItem()
-Description:  添加
+Description:  add 
 *************************************************/
 void IMFlockMemberListWidget::addItem(QWidget *item)
 {

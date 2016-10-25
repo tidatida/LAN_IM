@@ -19,11 +19,11 @@ public:
     void setLabelsText(const QString & first = "",
                       const QString & second = "",
                       const QString & third = "");
-    // 获取用户输入的信息
+    // 获取user 输入的信息
     TempStrings getInputInformation() const;
-    // 将用户输入的信息设置为密码风格
+    // 将user 输入的信息set to  passwd风格
     void setPasswordStyle();
-    // 将所有输入框设置可用属性
+    // set all 输入框设置可用属性
     void setAllEnabled(bool enable);
 signals:
     

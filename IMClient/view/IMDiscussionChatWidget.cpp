@@ -438,7 +438,7 @@ void IMDiscussionChatWidget::initIMDiscussionChatWidget()
 
 /*************************************************
 Function Name： linkSignalWithSlot()
-Description:  连接信号与槽
+Description:  connection 信号与槽
 *************************************************/
 void IMDiscussionChatWidget::linkSignalWithSlot()
 {
@@ -520,7 +520,7 @@ void IMDiscussionChatWidget::setWidgetToolBtn()
     m_toolBtnUnderline->setAutoRaise(true);
     m_toolBtnUnderline->setIconSize(QSize(CHAT_WIDGET_TOOL_SMALL_SIZE,CHAT_WIDGET_TOOL_SMALL_SIZE));
     m_toolBtnUnderline->setToolTip(tr("下划线"));
-    m_toolBtnUnderline->setStatusTip(tr("是否添加下划线"));
+    m_toolBtnUnderline->setStatusTip(tr("是否add 下划线"));
 
     m_toolBtnColor = new QToolButton;
     m_toolBtnColor->setIcon(QIcon(":/images/colour.png"));
@@ -542,7 +542,7 @@ void IMDiscussionChatWidget::setWidgetToolBtn()
     m_toolBtnHistory->setCheckable(true);
     m_toolBtnHistory->setIconSize(QSize(CHAT_WIDGET_TOOL_SMALL_SIZE,CHAT_WIDGET_TOOL_SMALL_SIZE));
     m_toolBtnHistory->setToolTip(tr("消息记录"));
-    m_toolBtnHistory->setStatusTip(tr("打开消息记录"));
+    m_toolBtnHistory->setStatusTip(tr("open 消息记录"));
 }
 
 /*************************************************

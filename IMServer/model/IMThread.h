@@ -2,7 +2,7 @@
 File Name： IMThread.h
 Author： jet.F.R
 Date： 2014.3.10
-Description： 服务器用于处理socket通信的线程类
+Description： server used to   process   socketIO thread class
 Changes：
 ********************************************/
 #ifndef IMTHREAD_H
@@ -16,7 +16,7 @@ class IMClientSocketCtrl;
 
 /*************************************************
 Class Name： IMThread
-Description: 处理socket通信的线程类
+Description: process   socketIO thread class
 *************************************************/
 class IMThread : public QThread
 {
@@ -32,7 +32,7 @@ public slots:
 //    void sendTalkMessage(TalkMessage mes);
 
 private:
-    void run(); // 线程运行时，会调用此函数
+    void run(); // threadrunning ，will call this func
 
 private:
     int m_socketDescriptor;

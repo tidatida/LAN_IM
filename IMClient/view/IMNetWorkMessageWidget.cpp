@@ -27,7 +27,7 @@ IMNetWorkMessageWidget::~IMNetWorkMessageWidget()
 
 /*************************************************
 Function Name： onClickDeleteDate()
-Description:  删除某日的信息记录
+Description:  delete  某日的信息记录
 *************************************************/
 void IMNetWorkMessageWidget::onClickDeleteDate()
 {
@@ -36,7 +36,7 @@ void IMNetWorkMessageWidget::onClickDeleteDate()
 
 /*************************************************
 Function Name： onClickDeleteDate()
-Description:  删除某好友信息记录
+Description:  delete  某好友信息记录
 *************************************************/
 void IMNetWorkMessageWidget::onClickDeleteOne()
 {
@@ -44,7 +44,7 @@ void IMNetWorkMessageWidget::onClickDeleteOne()
 
 /*************************************************
 Function Name： onClickDeleteAll()
-Description:  删除全部消息记录
+Description:  delete  全部消息记录
 *************************************************/
 void IMNetWorkMessageWidget::onClickDeleteAll()
 {

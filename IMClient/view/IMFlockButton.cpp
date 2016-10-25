@@ -49,7 +49,7 @@ IMFlockButton:: ~IMFlockButton()
 
 /*************************************************
 Function Name： openChatRoom()
-Description: 打开聊天窗口
+Description: open 聊天窗口
 *************************************************/
 void IMFlockButton::openChatRoom()
 {
@@ -106,7 +106,7 @@ void IMFlockButton::showChatRoom()
 
 /*************************************************
 Function Name： closeChatRoom()
-Description: 关闭聊天窗口
+Description: close 聊天窗口
 *************************************************/
 void IMFlockButton::closeChatRoom()
 {
@@ -142,7 +142,7 @@ void IMFlockButton::setButtonStatus()
 
 /*************************************************
 Function Name： deleteFlockMember()
-Description: 删除群成员
+Description: delete  群成员
 *************************************************/
 void IMFlockButton::deleteFlockMember(const QString & memberID)
 {
@@ -157,7 +157,7 @@ void IMFlockButton::deleteFlockMember(const QString & memberID)
 
 /*************************************************
 Function Name： addFlockMember()
-Description: 添加群成员
+Description: add 群成员
 *************************************************/
 void IMFlockButton::addFlockMember(const QString & memberID)
 {
@@ -189,7 +189,7 @@ void IMFlockButton::onClickRightButton()
 {
     if (m_menu == NULL)
     {
-        //创建右键菜单
+        //create 右键菜单
         creatMenu();
     }
     m_menu->exec(QCursor::pos());
@@ -266,12 +266,12 @@ void IMFlockButton::onClickLeaveFlock()
 
 /*************************************************
 Function Name： onClickAddMemberFlock()
-Description: 添加群成员
+Description: add 群成员
 *************************************************/
 void IMFlockButton::onClickAddMemberFlock()
 {
     bool isOk = false;
-    QString memberID = QInputDialog::getText(NULL, "添加群成员",
+    QString memberID = QInputDialog::getText(NULL, "add 群成员",
                                            "请输入对方帐号",
                                            QLineEdit::Normal,
                                            "",
@@ -284,23 +284,23 @@ void IMFlockButton::onClickAddMemberFlock()
 
     if (0 == memberID.compare(m_mainWidget->getLocalMyInformation().m_userID))
     {
-        QMessageBox::critical(NULL, tr("添加失败"), tr("不能添加自己"));
+        QMessageBox::critical(NULL, tr("add 失败"), tr("不能add 自己"));
         return;
     }
     for (int i =0; i<m_flockMembersVec.size(); ++i)
     {
         if (0 == memberID.compare(m_flockMembersVec[i].m_userID))
         {
-            QMessageBox::critical(NULL, tr("添加失败"), tr("该用户已经是该群成员"));
+            QMessageBox::critical(NULL, tr("add 失败"), tr("该user 已经是该群成员"));
             return;
         }
     }
 
     bool isOkMes = false;
-    QString checkMes = QInputDialog::getText(NULL, "添加群成员",
+    QString checkMes = QInputDialog::getText(NULL, "add 群成员",
                        "请输入验证信息",
                        QLineEdit::Normal,
-                       QString(tr("您好,我是群%1(%2)的群主，请求您加入我们的群")).
+                       QString(tr("您好,我是群%1(%2)的群主，request 您加入我们的群")).
                                              arg(m_flockInfo.m_flockID,
                                                  m_flockInfo.m_flockName),
                        &isOkMes);
@@ -332,7 +332,7 @@ void IMFlockButton::onClickEnterSpace()
 
 /*************************************************
 Function Name： chatRoomQuit()
-Description: 聊天窗口关闭了
+Description: 聊天窗口close 了
 *************************************************/
 void IMFlockButton::chatRoomQuit()
 {
@@ -352,7 +352,7 @@ void IMFlockButton::setFlockMemberList(const QVector<FlockMember> & memberList)
     if (len <= 0) return;
 
 
-    // 别的flock请求服务器获取群成员的时候，
+    // 别的flockrequest server 获取群成员的时候，
     // 会影响到别的flock， 可以 判断一下flockID.
     if (0 != memberList[0].m_flockID.compare(m_flockInfo.m_flockID))
         return;
@@ -403,7 +403,7 @@ void IMFlockButton::mouseDoubleClickEvent(QMouseEvent *event)
 //remark:private:----------------------------------------
 /*************************************************
 Function Name： getStatusFromInt()
-Description: 创建右键菜单
+Description: create 右键菜单
 *************************************************/
 void IMFlockButton::creatMenu(/*const QList<QString> *groutList*/)
 {
@@ -413,9 +413,9 @@ void IMFlockButton::creatMenu(/*const QList<QString> *groutList*/)
     QAction *showInfo = new QAction(tr("查看资料"), m_menu);
     QAction *enterSpace = new QAction(tr("进入群空间"), m_menu);
     // mark
-    // 添加 群成员
-    // 修改 群资料 放在查看资料里面
-    // 删除 群成员
+    // add  群成员
+    // modify 群资料 放在查看资料里面
+    // delete   群成员
 
     connect(sendMessage, SIGNAL(triggered()),
         this, SLOT(onDoubleClickFlockButton()));
@@ -442,7 +442,7 @@ void IMFlockButton::creatMenu(/*const QList<QString> *groutList*/)
                 this, SLOT(onClickDropFlock()));
         m_menu->addAction(dropFlock);
 
-        QAction *addMember = new QAction(tr("添加群成员"), m_menu);
+        QAction *addMember = new QAction(tr("add 群成员"), m_menu);
         connect(addMember, SIGNAL(triggered()),
                 this, SLOT(onClickAddMemberFlock()));
         m_menu->addAction(addMember);

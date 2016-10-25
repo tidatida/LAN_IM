@@ -1737,10 +1737,12 @@ moc_CalendarDialog.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QDialog \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QMouseEvent \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QCalendarWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcalendarwidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qdatetime.h \
 		view/CustomCalendar.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QTextCharFormat \
 		view/CustomComboBox.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QComboBox \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcombobox.h \
@@ -1860,6 +1862,10 @@ moc_CustomCalendar.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QCalendarWidge
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qvector2d.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qdatetime.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QTextCharFormat \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
 		view/CustomCalendar.h \
 		/opt/Qt5.7.0/5.7/gcc_64/bin/moc
 	/opt/Qt5.7.0/5.7/gcc_64/bin/moc $(DEFINES) -I/opt/Qt5.7.0/5.7/gcc_64/mkspecs/linux-g++ -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient -I/home/liusz/im_src/LAN_IM/IMClient/view -I/home/liusz/im_src/LAN_IM/IMClient/model -I/home/liusz/im_src/LAN_IM/IMClient/control -I/opt/Qt5.7.0/5.7/gcc_64/include -I/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets -I/opt/Qt5.7.0/5.7/gcc_64/include/QtGui -I/opt/Qt5.7.0/5.7/gcc_64/include/QtNetwork -I/opt/Qt5.7.0/5.7/gcc_64/include/QtSql -I/opt/Qt5.7.0/5.7/gcc_64/include/QtCore -I/usr/include/c++/4.8.5 -I/usr/include/c++/4.8.5/x86_64-redhat-linux -I/usr/include/c++/4.8.5/backward -I/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include -I/usr/local/include -I/usr/include view/CustomCalendar.h -o moc_CustomCalendar.cpp
@@ -2089,6 +2095,7 @@ moc_CustomLineEdit.cpp: /opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QLineEdit \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QMouseEvent \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QCalendarWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcalendarwidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qdatetime.h \
@@ -8302,10 +8309,12 @@ CalendarDialog.o: view/CalendarDialog.cpp view/CalendarDialog.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QMouseEvent \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QCalendarWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcalendarwidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qdatetime.h \
 		view/CustomCalendar.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QTextCharFormat \
 		view/CustomComboBox.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QComboBox \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcombobox.h \
@@ -8331,8 +8340,15 @@ CalendarDialog.o: view/CalendarDialog.cpp view/CalendarDialog.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButton \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qabstractbutton.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QKeyEvent \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QToolButton \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qtoolbutton.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QTextLine \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextlayout.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qglyphrun.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qrawfont.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qfontdatabase.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QValidator \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QDebug \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QHeaderView \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qheaderview.h \
@@ -8343,7 +8359,11 @@ CalendarDialog.o: view/CalendarDialog.cpp view/CalendarDialog.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qtableview.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QLabel \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qlabel.h \
-		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QRegExp
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QColor \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QPainter \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpainter.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QRegExp \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/QObject
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o CalendarDialog.o view/CalendarDialog.cpp
 
 CustomCalendar.o: view/CustomCalendar.cpp view/CustomCalendar.h \
@@ -8446,6 +8466,13 @@ CustomCalendar.o: view/CustomCalendar.cpp view/CustomCalendar.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qvector2d.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qdatetime.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QTextCharFormat \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QKeyEvent \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QPainter \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpainter.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QHeaderView \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qheaderview.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qabstractitemview.h \
@@ -8587,7 +8614,8 @@ CustomComboBox.o: view/CustomComboBox.cpp view/CustomComboBox.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextcursor.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
-		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QKeyEvent
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o CustomComboBox.o view/CustomComboBox.cpp
 
 CustomLineEdit.o: view/CustomLineEdit.cpp view/CustomLineEdit.h \
@@ -8694,6 +8722,7 @@ CustomLineEdit.o: view/CustomLineEdit.cpp view/CustomLineEdit.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QMouseEvent \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QCalendarWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcalendarwidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtCore/qdatetime.h \
@@ -8701,6 +8730,7 @@ CustomLineEdit.o: view/CustomLineEdit.cpp view/CustomLineEdit.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QDialog \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qdialog.h \
 		view/CustomCalendar.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QTextCharFormat \
 		view/CustomComboBox.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QComboBox \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcombobox.h \
@@ -11411,6 +11441,7 @@ IMInformationWidget.o: view/IMInformationWidget.cpp view/IMInformationWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QMouseEvent \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QCalendarWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcalendarwidget.h \
 		view/IMMainWidget.h \
@@ -12423,6 +12454,7 @@ IMLocalMessageWidget.o: view/IMLocalMessageWidget.cpp view/IMLocalMessageWidget.
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QMouseEvent \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QCalendarWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcalendarwidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QListView \
@@ -13956,6 +13988,7 @@ IMMessageWidget.o: view/IMMessageWidget.cpp view/IMMessageWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QMouseEvent \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QCalendarWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcalendarwidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QMessageBox \
@@ -14143,6 +14176,7 @@ IMNetWorkMessageWidget.o: view/IMNetWorkMessageWidget.cpp view/IMNetWorkMessageW
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QMouseEvent \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QCalendarWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcalendarwidget.h \
 		view/IMMainWidget.h \
@@ -14275,6 +14309,7 @@ IMRegisterWidget.o: view/IMRegisterWidget.cpp view/IMRegisterWidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextformat.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qpen.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/qtextoption.h \
+		/opt/Qt5.7.0/5.7/gcc_64/include/QtGui/QMouseEvent \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QCalendarWidget \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/qcalendarwidget.h \
 		/opt/Qt5.7.0/5.7/gcc_64/include/QtWidgets/QPushButton \

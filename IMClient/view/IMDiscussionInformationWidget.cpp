@@ -46,7 +46,7 @@ void IMDiscussionInformationWidget::setReadOnly(bool isReadOnly, bool isEdit)
     {
         if (isReadOnly)
         {
-            m_btnCancel->setText(tr("关闭"));
+            m_btnCancel->setText(tr("close "));
             m_btnOk->setText(tr("编辑"));
         }
         else
@@ -57,7 +57,7 @@ void IMDiscussionInformationWidget::setReadOnly(bool isReadOnly, bool isEdit)
     }
     else
     {
-        m_btnCancel->setText(tr("关闭"));
+        m_btnCancel->setText(tr("close "));
     }
 }
 
@@ -129,8 +129,8 @@ void IMDiscussionInformationWidget::initIMLoginWidget()
     m_labelDiscussionName = new QLabel(tr("讨论组名称:"), this);
     m_labelDiscussionID = new QLabel(tr("讨论组帐号:"), this);
     m_labelTheme = new QLabel(tr("讨论组主题:"), this);
-    m_labelCreatorID = new QLabel(tr("创建者帐号:"), this);
-    m_labelCreateDate = new QLabel(tr("创建时间:"), this);
+    m_labelCreatorID = new QLabel(tr("create 者帐号:"), this);
+    m_labelCreateDate = new QLabel(tr("create 时间:"), this);
 
     m_leDiscussionName = new QLineEdit(this);
     m_leDiscussionID = new QLineEdit(this);
@@ -141,7 +141,7 @@ void IMDiscussionInformationWidget::initIMLoginWidget()
     m_btnOk = new QPushButton(tr("确定"), this);
     m_btnOk->setFixedWidth(100);
     m_btnOk->setVisible(false);
-    m_btnCancel = new QPushButton(tr("关闭"), this);
+    m_btnCancel = new QPushButton(tr("close "), this);
     m_btnCancel->setFixedWidth(100);
 
     QGridLayout *gridLayout = new QGridLayout(this);

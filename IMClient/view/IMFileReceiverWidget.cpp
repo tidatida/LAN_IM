@@ -37,7 +37,7 @@ void IMFileReceiverWidget::setFileName(const QString & fileName)
 
 /*************************************************
 Function Name： connectToHost()
-Description: 设置服务器地址并连接服务器
+Description: 设置server 地址并connection server 
 *************************************************/
 void IMFileReceiverWidget::connectToHost(const QHostAddress & address)
 {
@@ -52,7 +52,7 @@ void IMFileReceiverWidget::connectToHost(const QHostAddress & address)
 
 /*************************************************
 Function Name： initIMFileReceiverWidget()
-Description: 初始化
+Description: init 
 *************************************************/
 void IMFileReceiverWidget::initIMFileReceiverWidget()
 {
@@ -61,7 +61,7 @@ void IMFileReceiverWidget::initIMFileReceiverWidget()
     m_labelFileStatus->setFixedHeight(80);
     m_barFile = new QProgressBar(this);
     m_btnCancel = new QPushButton(tr("取消"), this);
-    m_btnClose = new QPushButton(tr("关闭"), this);
+    m_btnClose = new QPushButton(tr("close "), this);
     QHBoxLayout *hlayout = new QHBoxLayout();
     hlayout->addWidget(m_btnCancel);
     hlayout->addWidget(m_btnClose);
@@ -98,7 +98,7 @@ void IMFileReceiverWidget::initIMFileReceiverWidget()
 
 /*************************************************
 Function Name： onClickBtnClose()
-Description: 点击“关闭”按钮
+Description: 点击“close ”按钮
 *************************************************/
 void IMFileReceiverWidget::onClickBtnClose()
 {
@@ -171,13 +171,13 @@ void IMFileReceiverWidget::readMessage()
     {
         m_fileReceiver->close();
         m_labelFileStatus->setText(tr("文件接收完毕"));
-        m_localFile->close();   //接收完文件后，一定要关闭，不然可能出问题
+        m_localFile->close();   //接收完文件后，一定要close ，不然可能出问题
     }
 }
 
 /*************************************************
 Function Name： displayError()
-Description:  错误处理
+Description:  错误process   
 *************************************************/
 void IMFileReceiverWidget::displayError(QAbstractSocket::SocketError socketError)
 {

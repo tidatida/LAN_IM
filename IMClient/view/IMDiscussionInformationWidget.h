@@ -42,7 +42,7 @@ private:
      QLineEdit *m_leTheme;
      QLineEdit *m_leCreateDate;
 
-     QPushButton *m_btnOk;// "注册" 按钮
+     QPushButton *m_btnOk;// "Register " 按钮
      QPushButton *m_btnCancel;  // "取消" 按钮
 
      bool m_isReadOnly;

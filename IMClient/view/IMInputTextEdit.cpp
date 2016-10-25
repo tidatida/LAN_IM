@@ -23,7 +23,7 @@ IMInputTextEdit::~IMInputTextEdit()
 
 void IMInputTextEdit::keyPressEvent(QKeyEvent *event)
 {
-    //如果按下Ctrl+Enter，就发送信息，否则就按默认的方式来处理
+    //如果按下Ctrl+Enter，就发送信息，否则就按默认的方式来process   
     bool isSend = (Qt::Key_Return==event->key() || Qt::Key_Enter==event->key())
         && (event->modifiers() & Qt::ControlModifier);
 

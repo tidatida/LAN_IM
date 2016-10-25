@@ -47,7 +47,7 @@ void IMFlockInformationWidget::setReadOnly(bool isReadOnly, bool isEdit)
     {
         if (isReadOnly)
         {
-            m_btnCancel->setText(tr("关闭"));
+            m_btnCancel->setText(tr("close "));
             m_btnOk->setText(tr("编辑"));
         }
         else
@@ -58,7 +58,7 @@ void IMFlockInformationWidget::setReadOnly(bool isReadOnly, bool isEdit)
     }
     else
     {
-        m_btnCancel->setText(tr("关闭"));
+        m_btnCancel->setText(tr("close "));
     }
 }
 
@@ -130,8 +130,8 @@ void IMFlockInformationWidget::initIMLoginWidget()
     m_labelFlockName = new QLabel(tr("群名称:"), this);
     m_labelFlockID = new QLabel(tr("群帐号:"), this);
     m_labelTheme = new QLabel(tr("群主题:"), this);
-    m_labelCreatorID = new QLabel(tr("创建者帐号:"), this);
-    m_labelCreateDate = new QLabel(tr("创建时间:"), this);
+    m_labelCreatorID = new QLabel(tr("create 者帐号:"), this);
+    m_labelCreateDate = new QLabel(tr("create 时间:"), this);
 
     m_leFlockName = new QLineEdit(this);
     m_leFlockID = new QLineEdit(this);
@@ -142,7 +142,7 @@ void IMFlockInformationWidget::initIMLoginWidget()
     m_btnOk = new QPushButton(tr("确定"), this);
     m_btnOk->setFixedWidth(100);
     m_btnOk->setVisible(false);
-    m_btnCancel = new QPushButton(tr("关闭"), this);
+    m_btnCancel = new QPushButton(tr("close "), this);
     m_btnCancel->setFixedWidth(100);
 
     QGridLayout *gridLayout = new QGridLayout(this);

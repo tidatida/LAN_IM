@@ -52,7 +52,7 @@ void IMInformationWidget::setReadOnly(bool isReadOnly, bool isEdit)
     {
         if (isReadOnly)
         {
-            m_btnCancel->setText(tr("关闭"));
+            m_btnCancel->setText(tr("close "));
             m_btnOk->setText(tr("编辑"));
         }
         else
@@ -63,7 +63,7 @@ void IMInformationWidget::setReadOnly(bool isReadOnly, bool isEdit)
     }
     else
     {
-        m_btnCancel->setText(tr("关闭"));
+        m_btnCancel->setText(tr("close "));
     }
 }
 
@@ -113,8 +113,8 @@ UserInformation IMInformationWidget::getInformation()
 
 // protected:----------------------------------------
 
-//聊天窗口关闭槽函数  发送信号 让主窗体删除 map 表项
-void IMInformationWidget::closeEvent(QCloseEvent *)//离开时触发的  应该检查窗口是否都关闭了！！
+//聊天窗口close 槽函数  发送信号 让主窗体delete   map 表项
+void IMInformationWidget::closeEvent(QCloseEvent *)//离开时触发的  应该检查窗口是否都close 了！！
 {
 //    emit closeChat(secretAddress);
     if (NULL != m_mainWidget)
@@ -211,7 +211,7 @@ void IMInformationWidget::initIMLoginWidget()
     vLayoutEditMid->addWidget(m_leBirthday);
     vLayoutEditMid->addWidget(m_leName);
 
-    // 右边 按钮 以及 头像
+    // 右边 按钮 and  头像
     m_btnNext = new QPushButton(tr("下一张"));
     m_btnPre = new QPushButton(tr("上一张"));
     QHBoxLayout *hLayoutBtnEdit = new QHBoxLayout;

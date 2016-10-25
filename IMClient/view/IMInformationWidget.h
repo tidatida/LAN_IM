@@ -40,10 +40,10 @@ private:
     void initIMLoginWidget();
 
 protected:
-    QLabel *m_labelUserID;    // 用户帐号
+    QLabel *m_labelUserID;    // user 帐号
     QLineEdit *m_leUserID;
 //     QLabel *m_labelDesUserID;
-    QLabel *m_labelNickname;   // 用户昵称
+    QLabel *m_labelNickname;   // user 昵称
     QLineEdit *m_leNickname;
 
     QFrame *m_frameHead;
@@ -52,10 +52,10 @@ protected:
     QPushButton *m_btnNext;
     QPushButton *m_btnPre;
 //        QLabel *m_labelDesNickname;// 昵称描述
-//        QLabel *m_labelPwd;        // 用户密码
+//        QLabel *m_labelPwd;        // user  passwd
 //        QLineEdit *m_lePwd;
 //        QLabel *m_labelDesPwd;
-        QLabel *m_labelConfirmPwd;  // 确认密码
+        QLabel *m_labelConfirmPwd;  // 确认 passwd
         QLineEdit *m_leConfirmPwd;
 //        QLabel *m_labelDesConfirmPwd;
         QLabel *m_labelSex;        // 性别
@@ -64,10 +64,10 @@ protected:
         QLabel *m_labelBirthday;   // 生日
         CustomLineEdit *m_leBirthday;
 //        QLabel *m_labelDesBirthday;
-//        QLabel *m_labelQuestion;   // 密保问题
+//        QLabel *m_labelQuestion;   // passwd-protect question
 //        QLineEdit *m_leQuestion;
 //        QLabel *m_labelDesQuestion;
-//        QLabel *m_labelAnswer;     // 问题答案
+//        QLabel *m_labelAnswer;     // 问题answer 
 //        QLineEdit *m_leAnswer;
 //        QLabel *m_labelDesAnswer;
         QLabel *m_labelName;       // 真实姓名
@@ -80,7 +80,7 @@ protected:
         QLineEdit *m_leAddress;
 //        QLabel *m_labelDesAddress;
 
-        QPushButton *m_btnOk;// "注册" 按钮
+        QPushButton *m_btnOk;// "Register " 按钮
         QPushButton *m_btnCancel;  // "取消" 按钮
 
         int m_headNum;

@@ -2,7 +2,7 @@
 File Name： IMServerMessageCtrl.cpp
 Author： jet.F.R
 Date： 2014.3.10
-Description： 控制服务器类
+Description： control  server  class
 Changes：
 ********************************************/
 
@@ -65,7 +65,7 @@ IMServerMessageCtrl::~IMServerMessageCtrl()
 
 /*************************************************
 Function Name： runServer()
-Description: 用于启动服务器
+Description: used to   启动server 
 Input： NULL
 Output：NULL
 Changes： NULL
@@ -213,7 +213,7 @@ void IMServerMessageCtrl::insertIDData(const QString & id)
 
 /*************************************************
 Function Name： deleteIDData()
-Description: 删除数据
+Description: delete  数据
 *************************************************/
 void IMServerMessageCtrl::deleteIDData(const QString &id)
 {
@@ -245,7 +245,7 @@ void IMServerMessageCtrl::insertAddressData(const QString &address)
 
 /*************************************************
 Function Name： deleteIDData()
-Description: 删除数据
+Description: delete  数据
 *************************************************/
 void IMServerMessageCtrl::deleteAddressData(const QString & address)
 {

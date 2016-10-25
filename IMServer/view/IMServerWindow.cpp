@@ -2,7 +2,7 @@
 File Name： IMServerWindow.cpp
 Author： jet.F.R
 Date： 2014.3.10
-Description： 服务器主界面类
+Description： server mainframe class
 Changes：
 ********************************************/
 
@@ -23,7 +23,7 @@ IMServerWindow::IMServerWindow(QWidget *parent)
     viewLayout->addWidget(m_serverCtrl->getAddressListView());
 
     QVBoxLayout *layout = new QVBoxLayout;
-    QLabel *labelTitle = new QLabel(tr("连接服务器用户帐号列表:"));
+    QLabel *labelTitle = new QLabel(tr("connection server user 帐号列表:"));
     layout->addWidget(labelTitle);
     layout->addLayout(viewLayout);
 

@@ -23,7 +23,7 @@ IMToolItem::IMToolItem(const QString &title, QWidget *parent) :
 
 /*************************************************
 Function Name： addItem()
-Description:  添加
+Description:  add 
 *************************************************/
 void IMToolItem::addItem(QWidget *item)
 {
@@ -40,7 +40,7 @@ void IMToolItem::addItem(QWidget *item)
 
 /*************************************************
 Function Name： removeItem()
-Description:  删除
+Description:  delete  
 *************************************************/
 void IMToolItem::removeItem(QWidget *item)
 {
@@ -106,7 +106,7 @@ void IMToolItem::renameBox()
 
 /*************************************************
 Function Name： removeBox()
-Description:  删除整个
+Description:  delete  整个
 *************************************************/
 void IMToolItem::removeBox()
 {
@@ -123,7 +123,7 @@ void IMToolItem::onClickRightButton()
 {
     if (m_menu == NULL)
     {
-        //创建右键菜单
+        //create 右键菜单
         creatMenu();
     }
     m_menu->exec(QCursor::pos());
@@ -131,13 +131,13 @@ void IMToolItem::onClickRightButton()
 
 /*************************************************
 Function Name： creatMenu
-Description: 创建右键菜单
+Description: create 右键菜单
 *************************************************/
 void IMToolItem:: creatMenu()
 {
     m_menu = new QMenu(this);
     QAction *rename = new QAction(tr("重命名"), m_menu);
-    QAction *remove = new QAction(tr("删除"), m_menu);
+    QAction *remove = new QAction(tr("delete  "), m_menu);
 
     connect(rename, SIGNAL(triggered()),
             this, SLOT(renameBox()));
@@ -159,7 +159,7 @@ IMToolBox::IMToolBox(QWidget *parent) :
 
 /*************************************************
 Function Name： addItem()
-Description:  添加
+Description:  add 
 *************************************************/
 void IMToolBox::addItem(IMToolItem *item)
 {

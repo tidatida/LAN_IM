@@ -30,14 +30,14 @@ IMDiscussionListWidget::IMDiscussionListWidget(IMMainWidget *mainWidget, QWidget
 
     setStyleSheet("QWidget{border: 0;}");
 
-    //创建右键菜单
+    //create 右键菜单
     creatMenu();
 }
 
 
 /*************************************************
 Function Name： addItem()
-Description:  添加
+Description:  add 
 *************************************************/
 void IMDiscussionListWidget::addItem(QWidget *item)
 {
@@ -57,7 +57,7 @@ void IMDiscussionListWidget::addItem(QWidget *item)
 
 /*************************************************
 Function Name： removeItem()
-Description:  删除
+Description:  delete  
 *************************************************/
 void IMDiscussionListWidget::removeItem(QWidget *item)
 {
@@ -72,13 +72,13 @@ void IMDiscussionListWidget::removeItem(QWidget *item)
 
 /*************************************************
 Function Name： creatMenu()
-Description:  创建右键菜单
+Description:  create 右键菜单
 *************************************************/
 void IMDiscussionListWidget::creatMenu()
 {
     m_menu = new QMenu(this);
     QAction *actCreateDiscussion = new QAction(tr("新建讨论组"), this);
-//    QAction *actAddFlock = new QAction(tr("添加讨论组"), this);
+//    QAction *actAddFlock = new QAction(tr("add 讨论组"), this);
     QAction *actRefresh = new QAction(tr("刷新讨论组列表"), this);
 
     connect(actCreateDiscussion, SIGNAL(triggered()),
@@ -102,7 +102,7 @@ void IMDiscussionListWidget::showMenu()
  {
     if (m_menu == NULL)
     {
-        //创建右键菜单
+        //create 右键菜单
         creatMenu();
     }
     m_menu->exec(QCursor::pos());

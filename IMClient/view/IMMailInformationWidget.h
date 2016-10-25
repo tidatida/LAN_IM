@@ -25,9 +25,9 @@ public:
 signals:
     
 private slots:
-    // 删除
+    // delete  
     void onClickBtnDelete();
-    // 关闭
+    // close 
     void onClickBtnClose();
 private:
     void initIMMailInformationWidget();

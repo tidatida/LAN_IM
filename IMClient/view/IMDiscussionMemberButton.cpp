@@ -50,7 +50,7 @@ IMDiscussionMemberButton::~IMDiscussionMemberButton()
 
 /*************************************************
 Function Name： openChatRoom()
-Description: 打开聊天窗口
+Description: open 聊天窗口
 *************************************************/
 void IMDiscussionMemberButton::openChatRoom()
 {
@@ -83,7 +83,7 @@ void IMDiscussionMemberButton::openChatRoom()
 
 /*************************************************
 Function Name： closeChatRoom()
-Description: 关闭聊天窗口
+Description: close 聊天窗口
 *************************************************/
 void IMDiscussionMemberButton::closeChatRoom()
 {
@@ -150,7 +150,7 @@ void IMDiscussionMemberButton::onClickRightButton(/*const QPoint &*/)
 {
     if (m_menu == NULL)
     {
-        //创建右键菜单
+        //create 右键菜单
         creatMenu();
     }
     m_menu->exec(QCursor::pos());
@@ -184,12 +184,12 @@ void IMDiscussionMemberButton::onClickShowInformation()
 
 /*************************************************
 Function Name： onClickChangeRemark()
-Description: 修改群名片
+Description: modify群名片
 *************************************************/
 //void IMDiscussionMemberButton::onClickChangeRemark()
 //{
 //    bool isOk = false;
-//    QString remark = QInputDialog::getText(NULL, "修改名片",
+//    QString remark = QInputDialog::getText(NULL, "modify名片",
 //                                           "请输入新的名片",
 //                                           QLineEdit::Normal,
 //                                           m_info.m_remark,
@@ -257,7 +257,7 @@ void IMDiscussionMemberButton::onDoubleClickMemberButton()
 
 /*************************************************
 Function Name： chatRoomQuit
-Description: 聊天窗口关闭了
+Description: 聊天窗口close 了
 *************************************************/
 void IMDiscussionMemberButton::chatRoomQuit()
 {
@@ -356,7 +356,7 @@ QString IMDiscussionMemberButton::getLoginStatusFromInt(const int n) const
 
 /*************************************************
 Function Name： getStatusFromInt()
-Description: 创建右键菜单
+Description: create 右键菜单
 *************************************************/
 void IMDiscussionMemberButton::creatMenu(/*const QList<QString> *groutList*/)
 {
@@ -366,7 +366,7 @@ void IMDiscussionMemberButton::creatMenu(/*const QList<QString> *groutList*/)
     QAction *showInfo = new QAction(tr("查看资料"), m_menu);
     QAction *enterSpace = new QAction(tr("进入空间"), m_menu);
     QAction *removeMember= new QAction(tr("移除该成员"), m_menu);
-//    QAction *changeRemark = new QAction(tr("修改群名片"), m_menu);
+//    QAction *changeRemark = new QAction(tr("modify群名片"), m_menu);
     QAction *addRriend= new QAction(tr("加为好友"), m_menu);
 
     connect(sendMessage, SIGNAL(triggered()),

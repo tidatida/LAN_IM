@@ -41,7 +41,7 @@ IMFriendListWidget::IMFriendListWidget(IMMainWidget *mainWidget, QWidget *parent
 
 /*************************************************
 Function Name： addItem()
-Description:  添加
+Description:  add 
 *************************************************/
 void IMFriendListWidget::addItem(QWidget *item)
 {
@@ -59,14 +59,14 @@ void IMFriendListWidget::addItem(QWidget *item)
 
 /*************************************************
 Function Name： creatMenu
-Description: 创建右键菜单
+Description: create 右键菜单
 *************************************************/
 void IMFriendListWidget:: creatMenu()
 {
     m_menu = new QMenu(this);
     QAction *create = new QAction(tr("新建分组"), m_menu);
     QAction *refresh = new QAction(tr("刷新好友列表"), m_menu);
-    QAction *addFriend = new QAction(tr("添加好友"), m_menu);
+    QAction *addFriend = new QAction(tr("add 好友"), m_menu);
 
     connect(create, SIGNAL(triggered()),
             m_mainWidget, SLOT(createBox()));
@@ -89,7 +89,7 @@ void IMFriendListWidget::showMenu()
  {
     if (m_menu == NULL)
     {
-        //创建右键菜单
+        //create 右键菜单
         creatMenu();
     }
     m_menu->exec(QCursor::pos());

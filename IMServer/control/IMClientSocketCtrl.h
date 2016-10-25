@@ -2,7 +2,7 @@
 File Name： IMClientSocketCtrl.h
 Author： jet.F.R
 Date： 2014.3.10
-Description： 用于控制客户端socket的类
+Description： used to   control  clientsocket的 class
 Changes：
 ********************************************/
 
@@ -19,7 +19,7 @@ class IMUser;
 
 /*************************************************
 Class Name： IMClientSocketCtrl
-Description: 来自客户端socket，用于处理各种请求
+Description: from clientsocket，used to   process   requests 
 *************************************************/
 class IMClientSocketCtrl : public QTcpSocket
 {
@@ -30,11 +30,11 @@ public:
 
 signals:
 //    void havaNewClientSocket(IMClientSocket *);
-    // 请求server处理
+    // request serverprocess   
     void sendSignal(const SaveTmpInformation &temp);
-    // 用户登录
+    // user 登录
     void userLoginSignal(const UserInformation &user);
-    //用户断开连接了
+    //user 断开connection 了
     void deleteSignal(const QString &acc);
 
 public slots:
@@ -42,7 +42,7 @@ public slots:
     void receiveMessage();
     // 发送信息
     void sendMessage(const SaveTmpInformation &temp);
-    // 删除socket
+    // delete  socket
     void deleteScoket();
 
 private:
@@ -51,7 +51,7 @@ private:
 
     /****************************************/
 //public slots:
-//    // 发送用户的信息至另一个用户
+//    // 发送user 的信息至另一个user 
 //    void sendTalkMessage(TalkMessage);
 
 //private slots:
@@ -63,7 +63,7 @@ private:
 //    bool checkUser(const QString & id,const QString & pwd,
 //                   const QDateTime &);
 
-//    // 添加用户
+//    // add user 
 //    bool addUser(IMUser &);
 
 //    // 获取所有好友
@@ -79,7 +79,7 @@ private:
 //    void sendCheckResult(bool isSuccess, const QString &id = "",
 //                         const QString &nick = "");
 
-//    // 发送注册结果
+//    // 发送Register 结果
 //    void sendRegisterResult(bool isSuccess, const IMUser * user = NULL);
 
 //    // 发送所有好友信息

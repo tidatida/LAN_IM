@@ -48,7 +48,7 @@ void IMLinkButton::onClickRightButton(/*const QPoint &*/)
 {
     if (m_menu == NULL)
     {
-        //创建右键菜单
+        //create 右键菜单
         creatMenu();
     }
     m_menu->exec(QCursor::pos());
@@ -92,7 +92,7 @@ void IMLinkButton::mouseDoubleClickEvent(QMouseEvent *event)
 
 /*************************************************
 Function Name： getStatusFromInt()
-Description: 创建右键菜单
+Description: create 右键菜单
 *************************************************/
 void IMLinkButton::creatMenu(/*const QList<QString> *groutList*/)
 {

@@ -2,7 +2,7 @@
 File Name： IMServerMessageCtrl.h
 Author： jet.F.R
 Date： 2014.3.10
-Description： 控制服务器类
+Description： control  server  class
 Changes：
 ********************************************/
 
@@ -20,7 +20,7 @@ class QListView;
 
 /*************************************************
 Class Name： IMServerMessageCtrl
-Description: 控制服务器
+Description: control  server 
 *************************************************/
 class IMServerMessageCtrl : public QObject
 {
@@ -28,7 +28,7 @@ class IMServerMessageCtrl : public QObject
 public:
     IMServerMessageCtrl(QObject *parent = 0);
     ~IMServerMessageCtrl();
-    void runServer(); // 用于启动服务器
+    void runServer(); // used to   启动server 
     QListView *getIDListView();
     QListView *getAddressListView();
 
@@ -37,8 +37,8 @@ signals:
 public slots:
 
 private slots:
-    void showConnectedMedssage();  //暂时没用，本来是用于显示链接信息 mark： Not used
-    void readMessage(IMClientSocketCtrl *); //暂时没用，本来是用于读取信息 mark： Not used
+    void showConnectedMedssage();  //暂时没用，本来是used to   显示链接信息 mark： Not used
+    void readMessage(IMClientSocketCtrl *); //暂时没用，本来是used to   读取信息 mark： Not used
 
     void insertIDData(const QString &id);
     void deleteIDData(const QString &id);

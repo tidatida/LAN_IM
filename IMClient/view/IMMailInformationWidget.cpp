@@ -49,7 +49,7 @@ void IMMailInformationWidget::setMailInformation(const MailInformation & mail)
 // private slots:-----------------------------------------------------
 /*************************************************
 Function Name： onClickBtnDelete()
-Description:  删除
+Description:  delete  
 *************************************************/
 void IMMailInformationWidget::onClickBtnDelete()
 {
@@ -59,7 +59,7 @@ void IMMailInformationWidget::onClickBtnDelete()
 
 /*************************************************
 Function Name： onClickBtnClose()
-Description:  关闭
+Description:  close 
 *************************************************/
 void IMMailInformationWidget::onClickBtnClose()
 {
@@ -69,7 +69,7 @@ void IMMailInformationWidget::onClickBtnClose()
 // private:-------------------------------------------------
 /*************************************************
 Function Name： initIMMailInformationWidget()
-Description:  初始化
+Description:  init 
 *************************************************/
 void IMMailInformationWidget::initIMMailInformationWidget()
 {
@@ -106,8 +106,8 @@ void IMMailInformationWidget::initIMMailInformationWidget()
 //    topLayout->setContentsMargins(0,0,0,0);
 
     // 底部按钮部分
-    m_btnDelete = new QPushButton(tr("删除"), this);
-    m_btnClose = new QPushButton(tr("关闭"), this);
+    m_btnDelete = new QPushButton(tr("delete  "), this);
+    m_btnClose = new QPushButton(tr("close "), this);
     m_btnClose->setDefault(true);
     QHBoxLayout *btmLayout = new QHBoxLayout;
     btmLayout->addStretch();
@@ -132,7 +132,7 @@ void IMMailInformationWidget::initIMMailInformationWidget()
 
 /*************************************************
 Function Name： linkSignalWithSlot()
-Description:  连接信号与槽
+Description:  connection 信号与槽
 *************************************************/
 void IMMailInformationWidget::linkSignalWithSlot()
 {

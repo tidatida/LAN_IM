@@ -42,7 +42,7 @@ protected:
     QMenu *m_menu;
 
 private:
-    // 创建右键菜单
+    // create 右键菜单
     void creatMenu(/*const QList<QString> *groutList*/);
 };
 

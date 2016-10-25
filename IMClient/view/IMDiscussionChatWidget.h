@@ -31,7 +31,7 @@ public:
                            QWidget *parent = 0);
     ~IMDiscussionChatWidget();
 
-    // 添加讨论组成员发来的信息
+    // add 讨论组成员发来的信息
     void appendMessageShow(const TalkMessage &mes);
     // 设置聊天窗口显示信息
     void setLabelStatus();
@@ -47,10 +47,10 @@ public:
         return m_discussionInfo;
     }
 
-    // 添加成员按钮
+    // add 成员按钮
     bool addDiscussionMemberButton(const DiscussionMember & memInfo);
 
-    // 删除成员按钮
+    // delete  成员按钮
     bool removeDiscussionMemberButton(const QString & memberID);
 
 signals:
@@ -64,7 +64,7 @@ public slots:
     void setDiscussionMemberList(const QVector<DiscussionMember> & memberList);
 
 protected:
-    //重载关闭事件
+    //重载close 事件
     void closeEvent(QCloseEvent *event);
 
 private slots:
@@ -86,7 +86,7 @@ private slots:
     void onClickBtnHistory(bool checked);
     // 当编辑器的字体格式改变时，我们让部件状态也随之改变
     void currentFormatChanged(const QTextCharFormat &format);
-    // 关闭
+    // close 
     void onClickBtnClose();
     // 发送聊天信息
     void onClickBtnSend();
@@ -115,7 +115,7 @@ private:
     QToolButton *m_toolBtnClear;     // 清空
     QToolButton *m_toolBtnHistory;   // 历史记录
     IMInputTextEdit *m_textInput;          // 信息输入框
-    QPushButton *m_btnClose;            // 关闭按钮
+    QPushButton *m_btnClose;            // close 按钮
     QPushButton *m_btnSend;             // 发送
 
     QWidget *m_dockWidget;

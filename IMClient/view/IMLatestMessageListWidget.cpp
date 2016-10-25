@@ -34,13 +34,13 @@ IMLatestMessageListWidget::IMLatestMessageListWidget(
 
     setStyleSheet("QWidget{border: 0;}");
 
-    //创建右键菜单
+    //create 右键菜单
     creatMenu();
 }
 
 /*************************************************
 Function Name： addItem()
-Description:  添加
+Description:  add 
 *************************************************/
 void IMLatestMessageListWidget::addItem(QWidget *item)
 {
@@ -68,7 +68,7 @@ void IMLatestMessageListWidget::addItem(QWidget *item)
 
 /*************************************************
 Function Name： removeItem()
-Description:  删除
+Description:  delete  
 *************************************************/
 void IMLatestMessageListWidget::removeItem(QWidget *item)
 {
@@ -96,7 +96,7 @@ int IMLatestMessageListWidget::size()
 
 /*************************************************
 Function Name： creatMenu()
-Description:  创建右键菜单
+Description:  create 右键菜单
 *************************************************/
 void IMLatestMessageListWidget::creatMenu()
 {
@@ -122,7 +122,7 @@ void IMLatestMessageListWidget::showMenu()
  {
     if (m_menu == NULL)
     {
-        //创建右键菜单
+        //create 右键菜单
         creatMenu();
     }
     m_menu->exec(QCursor::pos());

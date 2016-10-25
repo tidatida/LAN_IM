@@ -2,7 +2,7 @@
 File Name： IMRegisterWidget.h
 Author： jet.F.R
 Date： 2014.3.14
-Description： 客户端注册界面
+Description： clientRegister 界面
 Changes：
 ********************************************/
 #ifndef IMREGISTERWIDGET_H
@@ -20,7 +20,7 @@ class CustomLineEdit;
 
 /*************************************************
 Class Name： IMRegisterWidget
-Description: 客户端注册帐号界面类
+Description: clientRegister 帐号界面 class
 *************************************************/
 class IMRegisterWidget : public QWidget
 {
@@ -32,35 +32,35 @@ public:
 signals:
     
 public slots:
-    void resetBtnRegister(bool );    // 重置注册按钮
+    void resetBtnRegister(bool );    // 重置Register 按钮
 
 protected:
     void moveEvent(QMoveEvent *);    // 窗口移动事件
 
 private slots:
-    void onClickBtnRegister();  // 单击“注册”按钮
+    void onClickBtnRegister();  // 单击“Register ”按钮
     void conClickBtnCancel();   // 单击“取消”按钮
 
 private:
-    // 初始化注册界面
+    // init Register 界面
     void initIMRegisterWidget();
-    // 连接信号与槽
+    // connection 信号与槽
     void linkSignalWithSlot();
 
 
 private:
     QLabel *m_labelHead;
 
-//    QLabel *m_labelUserID;    // 用户帐号
+//    QLabel *m_labelUserID;    // user 帐号
 //    QLineEdit *m_leUserID;
 //    QLabel *m_labelDesUserID;
-    QLabel *m_labelNickname;   // 用户昵称
+    QLabel *m_labelNickname;   // user 昵称
     QLineEdit *m_leNickname;
     QLabel *m_labelDesNickname;// 昵称描述
-    QLabel *m_labelPwd;        // 用户密码
+    QLabel *m_labelPwd;        // user  passwd
     QLineEdit *m_lePwd;
     QLabel *m_labelDesPwd;
-    QLabel *m_labelConfirmPwd;  // 确认密码
+    QLabel *m_labelConfirmPwd;  // 确认 passwd
     QLineEdit *m_leConfirmPwd;
     QLabel *m_labelDesConfirmPwd;
     QLabel *m_labelSex;        // 性别
@@ -69,10 +69,10 @@ private:
     QLabel *m_labelBirthday;   // 生日
     CustomLineEdit *m_leBirthday;
     QLabel *m_labelDesBirthday;
-    QLabel *m_labelQuestion;   // 密保问题
+    QLabel *m_labelQuestion;   // passwd-protect question
     QLineEdit *m_leQuestion;
     QLabel *m_labelDesQuestion;
-    QLabel *m_labelAnswer;     // 问题答案
+    QLabel *m_labelAnswer;     // 问题answer 
     QLineEdit *m_leAnswer;
     QLabel *m_labelDesAnswer;
     QLabel *m_labelName;       // 真实姓名
@@ -85,7 +85,7 @@ private:
     QLineEdit *m_leAddress;
     QLabel *m_labelDesAddress;
 
-    QPushButton *m_btnRegister;// "注册" 按钮
+    QPushButton *m_btnRegister;// "Register " 按钮
     QPushButton *m_btnCancel;  // "取消" 按钮
 
     IMRegisterCtrl * m_regCtrl;

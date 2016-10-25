@@ -2,7 +2,7 @@
 File Name： IMClientSocketCtrl.cpp
 Author： jet.F.R
 Date： 2014.3.10
-Description： 用于控制客户端socket的类
+Description： used to   control  clientsocket的 class
 Changes：
 ********************************************/
 
@@ -31,7 +31,7 @@ IMClientSocketCtrl::~IMClientSocketCtrl()
 
 /*************************************************
 Function Name： receiveMessage()
-Description: 接收用户发送的信息
+Description: 接收user 发送的信息
 *************************************************/
 void IMClientSocketCtrl::receiveMessage()
 
@@ -527,7 +527,7 @@ void IMClientSocketCtrl::sendMessage(const SaveTmpInformation &temp)
 
 /*************************************************
 Function Name： deleteScoket()
-Description: 删除socket
+Description: delete  socket
 *************************************************/
 void IMClientSocketCtrl::deleteScoket()
 {
@@ -542,7 +542,7 @@ void IMClientSocketCtrl::deleteScoket()
 
 /*************************************************
 Function Name： readMessage()
-Description: 发送用户的信息至另一个用户
+Description: 发送user 的信息至另一个user 
 *************************************************/
 //void IMClientSocketCtrl::sendTalkMessage(TalkMessage mes)
 //{
@@ -560,7 +560,7 @@ Description: 发送用户的信息至另一个用户
 // mark: private slots--------------------------------------------------
 /*************************************************
 Function Name： readMessage()
-Description: 读取用户发送的信息
+Description: 读取user 发送的信息
 Input： NULL
 Output：NULL
 Changes： NULL
@@ -624,8 +624,8 @@ Changes： NULL
 // mark: private-------------------------------------------------------------
 /*************************************************
 Function Name： checkLogin()
-Description: 检测用户登录信息
-Input： QString id：用户帐号id ，QString pwd：用户密码
+Description: 检测user 登录信息
+Input： QString id：user 帐号id ，QString pwd：user  passwd
 Output： bool : 检测信息
 Changes： NULL
 *************************************************/
@@ -654,7 +654,7 @@ Changes： NULL
 
 /*************************************************
 Function Name： addUser()
-Description: 添加用户
+Description: add user 
 Input： IMUser
 Output： bool
 Changes： NULL
@@ -729,7 +729,7 @@ Description: 获取所有
 /*************************************************
 Function Name： sendMessage()
 Description: 发送信息
-Input： MessageTyep type:信息类型, bool is: bool信息,
+Input： MessageTyep type:信息 class型, bool is: bool信息,
        int mes1: 信息1, QString mes2：信息2
 Output：NULL
 Changes： NULL
@@ -778,8 +778,8 @@ Changes： NULL
 
 /*************************************************
 Function Name： sendRegisterResult()
-Description: 发送注册结果
-Input： bool isSuccess: 是否成功,  const IMUser *： 用户信息
+Description: 发送Register 结果
+Input： bool isSuccess: 是否成功,  const IMUser *： user 信息
 Output：NULL
 Changes： NULL
 *************************************************/

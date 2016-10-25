@@ -47,7 +47,7 @@ IMFlockMemberButton::~IMFlockMemberButton()
 
 /*************************************************
 Function Name： openChatRoom()
-Description: 打开聊天窗口
+Description: open 聊天窗口
 *************************************************/
 void IMFlockMemberButton::openChatRoom()
 {
@@ -79,7 +79,7 @@ void IMFlockMemberButton::openChatRoom()
 
 /*************************************************
 Function Name： closeChatRoom()
-Description: 关闭聊天窗口
+Description: close 聊天窗口
 *************************************************/
 void IMFlockMemberButton::closeChatRoom()
 {
@@ -146,7 +146,7 @@ void IMFlockMemberButton::onClickRightButton(/*const QPoint &*/)
 {
     if (m_menu == NULL)
     {
-        //创建右键菜单
+        //create 右键菜单
         creatMenu();
     }
     m_menu->exec(QCursor::pos());
@@ -180,12 +180,12 @@ void IMFlockMemberButton::onClickShowInformation()
 
 /*************************************************
 Function Name： onClickChangeRemark()
-Description: 修改群名片
+Description: modify群名片
 *************************************************/
 void IMFlockMemberButton::onClickChangeRemark()
 {
     bool isOk = false;
-    QString remark = QInputDialog::getText(NULL, "修改群名片",
+    QString remark = QInputDialog::getText(NULL, "modify群名片",
                                            "请输入新的群名片",
                                            QLineEdit::Normal,
                                            m_info.m_remark,
@@ -253,7 +253,7 @@ void IMFlockMemberButton::onDoubleClickMemberButton()
 
 /*************************************************
 Function Name： chatRoomQuit
-Description: 聊天窗口关闭了
+Description: 聊天窗口close 了
 *************************************************/
 void IMFlockMemberButton::chatRoomQuit()
 {
@@ -360,7 +360,7 @@ QString IMFlockMemberButton::getLoginStatusFromInt(const int n) const
 
 /*************************************************
 Function Name： getStatusFromInt()
-Description: 创建右键菜单
+Description: create 右键菜单
 *************************************************/
 void IMFlockMemberButton::creatMenu(/*const QList<QString> *groutList*/)
 {
@@ -370,7 +370,7 @@ void IMFlockMemberButton::creatMenu(/*const QList<QString> *groutList*/)
     QAction *showInfo = new QAction(tr("查看资料"), m_menu);
     QAction *enterSpace = new QAction(tr("进入空间"), m_menu);
     QAction *removeMember= new QAction(tr("移除该成员"), m_menu);
-    QAction *changeRemark = new QAction(tr("修改群名片"), m_menu);
+    QAction *changeRemark = new QAction(tr("modify群名片"), m_menu);
     QAction *addRriend= new QAction(tr("加为好友"), m_menu);
 
     connect(sendMessage, SIGNAL(triggered()),

@@ -15,7 +15,7 @@ public:
     IMFriendListWidget(IMMainWidget *mainWidget, QWidget *parent = 0);
     void addItem(QWidget *item);
 
-    //创建右键菜单
+    //create 右键菜单
     void creatMenu();
 
 signals:

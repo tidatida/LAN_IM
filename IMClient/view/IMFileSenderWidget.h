@@ -18,11 +18,11 @@ public:
     IMFileSenderWidget(QWidget *parent = 0);
     ~IMFileSenderWidget();
 
-    // 初始化
+    // init 
     void initSender();
     // 被拒绝时触发  聊天窗体调用
     void showRefused();
-    // 初始化文件服务器，监听对方
+    // init 文件server ，监听对方
     bool startSending(const QString &);
     bool isStopped();
     
@@ -33,20 +33,20 @@ public slots:
     
 
 private:
-    // 初始化发送窗口
+    // init 发送窗口
     void initIMFileSenderWidget();
 
 private slots:
     //点击“取消”按钮  取消发送
     void onClickBtnCancel();
-    // 点击“关闭”按钮
+    // 点击“close ”按钮
     void onClickBtnClose();
-    // 当有新连接时触发 发送文件
+    // 当有新connection 时触发 发送文件
     void sendMessage();
     // 根据发送情况实时更新进度条
     void updateClientProgress(qint64 numBytes);
 
-    // 连接断开
+    // connection 断开
     void showClosedConnect();
 
 private:

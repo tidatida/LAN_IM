@@ -24,7 +24,7 @@ public:
 
     // 设置文件名
     void setFileName(const QString & fileName);
-    // 设置服务器地址并连接服务器
+    // 设置server 地址并connection server 
     void connectToHost(const QHostAddress & address);
     
 signals:
@@ -32,19 +32,19 @@ signals:
 
     
 private:
-    // 初始化
+    // init 
     void initIMFileReceiverWidget();
 
 public slots:
-    // 点击“关闭”按钮
+    // 点击“close ”按钮
     void onClickBtnClose();
     // 点击“取消”按钮 中途取消的操作
     void onClickBtnCancel();
     // 读取收到的文件
     void readMessage();
-    // 错误处理
+    // 错误process   
     void displayError(QAbstractSocket::SocketError);
-    // 连接断开
+    // connection 断开
     void showClosedConnect();
 
 private:

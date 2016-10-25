@@ -27,7 +27,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
 
  /*************************************************
  Function Name： onClickDeleteDate()
- Description:  删除某日的信息记录
+ Description:  delete  某日的信息记录
  *************************************************/
  void IMLocalMessageWidget::onClickDeleteDate()
  {
@@ -35,7 +35,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
 
  /*************************************************
  Function Name： onClickDeleteOne()
- Description:  删除某好友信息记录
+ Description:  delete  某好友信息记录
  *************************************************/
  void IMLocalMessageWidget::onClickDeleteOne()
  {
@@ -43,7 +43,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
      if (row < 0)
      {
          QString temp = QString(tr("请先选择好友！"));
-         QMessageBox::information(NULL, tr("删除聊天记录"), temp);
+         QMessageBox::information(NULL, tr("delete  聊天记录"), temp);
          return;
      }
      if (NULL == m_mainWidget)
@@ -53,7 +53,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
 
  /*************************************************
  Function Name： onClickDeleteAll()
- Description:  删除全部消息记录
+ Description:  delete  全部消息记录
  *************************************************/
  void IMLocalMessageWidget::onClickDeleteAll()
  {

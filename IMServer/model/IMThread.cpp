@@ -52,6 +52,6 @@ void IMThread::run()
     m_clientSocket = new IMClientSocketCtrl;
     m_clientSocket->setSocketDescriptor(m_socketDescriptor);
 
-    connect(m_clientSocket, SIGNAL(destroyed()),this, SLOT(quit()));//断开连接时线程退出
+    connect(m_clientSocket, SIGNAL(destroyed()),this, SLOT(quit()));//断开connection 时thread退出
     exec();
 }

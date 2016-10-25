@@ -50,7 +50,7 @@ IMFlockChatWidget::~IMFlockChatWidget()
 
 /*************************************************
 Function Name： appendMessageShow()
-Description:  添加群成员发来的信息
+Description:  add 群成员发来的信息
 *************************************************/
 void IMFlockChatWidget::appendMessageShow(const TalkMessage &mes)
 
@@ -126,7 +126,7 @@ void IMFlockChatWidget::setFlockMemberRemark(const TempStrings & tmpStr)
 
 /*************************************************
 Function Name： addFlockMemberButton()
-Description:  添加群成员按钮
+Description:  add 群成员按钮
 *************************************************/
 bool IMFlockChatWidget::addFlockMemberButton(const FlockMember & memInfo)
 {
@@ -148,7 +148,7 @@ bool IMFlockChatWidget::addFlockMemberButton(const FlockMember & memInfo)
 
 /*************************************************
 Function Name： removeFlockMemberButton()
-Description:  删除成员按钮
+Description:  delete  成员按钮
 *************************************************/
 bool IMFlockChatWidget::removeFlockMemberButton(const QString & memberID)
 {
@@ -191,13 +191,13 @@ void IMFlockChatWidget::setFlockMemberList(const QVector<FlockMember> & memberLi
 
 /*************************************************
 Function Name： closeEvent()
-Description:  重载关闭事件
+Description:  重载close 事件
 *************************************************/
 void IMFlockChatWidget::closeEvent(QCloseEvent *event)
 {
     qDebug() << "flock close:" << m_flockInfor.m_flockID;
 
-    //向主界面发送退出信号
+    //向mainframe发送退出信号
     emit roomQuitSignal();
 
     saveHistoryMessage();
@@ -331,7 +331,7 @@ void IMFlockChatWidget::currentFormatChanged(const QTextCharFormat &format)
 
 /*************************************************
 Function Name： onClickBtnClocse()
-Description:  点击“关闭”按钮
+Description:  点击“close ”按钮
 *************************************************/
 void IMFlockChatWidget::onClickBtnClose()
 {
@@ -370,13 +370,13 @@ void IMFlockChatWidget::onClickBtnSend()
 
 /*************************************************
 Function Name： initIMFlockChatWidget()
-Description:  初始化主界面
+Description:  init mainframe
 *************************************************/
 void IMFlockChatWidget::initIMFlockChatWidget()
 {
     setWidgetToolBtn();
 
-    /*********好友信息以及交互工具栏**************/
+    /*********好友信息and 交互工具栏**************/
     QHBoxLayout *hLayoutInformation = new QHBoxLayout;
 
     m_labelHead = new IMClickLabel;
@@ -403,7 +403,7 @@ void IMFlockChatWidget::initIMFlockChatWidget()
 
     /*********底部按钮**************/
     QHBoxLayout *hLayoutBtm = new QHBoxLayout;
-    m_btnClose = new QPushButton(tr("关闭"));
+    m_btnClose = new QPushButton(tr("close "));
     m_btnSend = new QPushButton(tr("发送"));
     m_btnSend->setDefault(true);
     hLayoutBtm->addStretch();
@@ -458,7 +458,7 @@ void IMFlockChatWidget::initIMFlockChatWidget()
 
 /*************************************************
 Function Name： linkSignalWithSlot()
-Description:  连接信号与槽
+Description:  connection 信号与槽
 *************************************************/
 void IMFlockChatWidget::linkSignalWithSlot()
 {
@@ -540,7 +540,7 @@ void IMFlockChatWidget::setWidgetToolBtn()
     m_toolBtnUnderline->setAutoRaise(true);
     m_toolBtnUnderline->setIconSize(QSize(CHAT_WIDGET_TOOL_SMALL_SIZE,CHAT_WIDGET_TOOL_SMALL_SIZE));
     m_toolBtnUnderline->setToolTip(tr("下划线"));
-    m_toolBtnUnderline->setStatusTip(tr("是否添加下划线"));
+    m_toolBtnUnderline->setStatusTip(tr("是否add 下划线"));
 
     m_toolBtnColor = new QToolButton;
     m_toolBtnColor->setIcon(QIcon(":/images/colour.png"));
@@ -562,7 +562,7 @@ void IMFlockChatWidget::setWidgetToolBtn()
     m_toolBtnHistory->setCheckable(true);
     m_toolBtnHistory->setIconSize(QSize(CHAT_WIDGET_TOOL_SMALL_SIZE,CHAT_WIDGET_TOOL_SMALL_SIZE));
     m_toolBtnHistory->setToolTip(tr("消息记录"));
-    m_toolBtnHistory->setStatusTip(tr("打开消息记录"));
+    m_toolBtnHistory->setStatusTip(tr("open 消息记录"));
 }
 
 /*************************************************

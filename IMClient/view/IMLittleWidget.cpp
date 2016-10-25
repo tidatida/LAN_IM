@@ -13,7 +13,7 @@ IMLittleWidget::IMLittleWidget(int num, QWidget *parent) :
         | Qt::WindowMinimizeButtonHint;
     setWindowFlags(flag);
 
-    // 主界面 布局
+    // mainframe 布局
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
     m_labelFirst = new QLabel(this);
@@ -56,7 +56,7 @@ IMLittleWidget::IMLittleWidget(int num, QWidget *parent) :
 // public slots:-------------------------------------
 /*************************************************
 Function Name： onClickedBtnClose()
-Description: 点击 关闭/取消 按钮
+Description: 点击 close /取消 按钮
 *************************************************/
 void IMLittleWidget::onClickedBtnClose()
 {
@@ -65,7 +65,7 @@ void IMLittleWidget::onClickedBtnClose()
 
 /*************************************************
 Function Name： onClickedBtnClose()
-Description: 点击 关闭/取消 按钮
+Description: 点击 close /取消 按钮
 *************************************************/
 // 设置各编辑框的标题栏
 void IMLittleWidget::setLabelsText(const QString & first,
@@ -84,7 +84,7 @@ void IMLittleWidget::setLabelsText(const QString & first,
 
 /*************************************************
 Function Name： getInputInformation()
-Description: 获取用户输入的信息
+Description: 获取user 输入的信息
 *************************************************/
 TempStrings IMLittleWidget::getInputInformation() const
 {
@@ -101,7 +101,7 @@ TempStrings IMLittleWidget::getInputInformation() const
 
 /*************************************************
 Function Name： setPasswordStyle()
-Description: 将用户输入的信息设置为密码风格
+Description: 将user 输入的信息set to  passwd风格
 *************************************************/
 void IMLittleWidget::setPasswordStyle()
 {
@@ -115,7 +115,7 @@ void IMLittleWidget::setPasswordStyle()
 
 /*************************************************
 Function Name： setAllEnabled()
-Description: 将所有输入框设置可用属性
+Description: set all 输入框设置可用属性
 *************************************************/
 void IMLittleWidget::setAllEnabled(bool enable)
 {

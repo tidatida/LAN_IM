@@ -56,7 +56,7 @@ IMFriendButton::~IMFriendButton()
 
 /*************************************************
 Function Name： openChatRoom()
-Description: 打开聊天窗口
+Description: open 聊天窗口
 *************************************************/
 void IMFriendButton::openChatRoom()
 {
@@ -114,7 +114,7 @@ void IMFriendButton::showChatRoom()
 
 /*************************************************
 Function Name： closeChatRoom()
-Description: 关闭聊天窗口
+Description: close 聊天窗口
 *************************************************/
 void IMFriendButton::closeChatRoom()
 {
@@ -215,7 +215,7 @@ void IMFriendButton::onClickRightButton(/*const QPoint &*/)
 {
     if (m_menu == NULL)
     {
-        //创建右键菜单
+        //create 右键菜单
         creatMenu();
     }
     m_menu->exec(QCursor::pos());
@@ -259,12 +259,12 @@ void IMFriendButton::onClickShowInformation()
 
 /*************************************************
 Function Name： onClickChangeRemark()
-Description: 修改好友备注
+Description: modify好友备注
 *************************************************/
 void IMFriendButton::onClickChangeRemark()
 {
     bool isOk = false;
-    QString remark = QInputDialog::getText(NULL, "修改好友备注",
+    QString remark = QInputDialog::getText(NULL, "modify好友备注",
                                            "请输入新的备注名称",
                                            QLineEdit::Normal,
                                            m_info.m_remarkName,
@@ -291,14 +291,14 @@ void IMFriendButton::onClickMove()
 
 /*************************************************
 Function Name： onClickRemoveFriend()
-Description: 删除好友
+Description: delete  好友
 *************************************************/
 void IMFriendButton::onClickRemoveFriend()
 {
     QMessageBox::StandardButton returnBtn;
 
-    returnBtn = QMessageBox::question(NULL, tr("删除好友"),
-        QString(tr("你确定要删除好友(%1)吗？")).arg(m_info.m_userID),
+    returnBtn = QMessageBox::question(NULL, tr("delete  好友"),
+        QString(tr("你确定要delete  好友(%1)吗？")).arg(m_info.m_userID),
         QMessageBox::Yes | QMessageBox::No,  QMessageBox::No);
 
     if(QMessageBox::Yes == returnBtn)
@@ -315,7 +315,7 @@ void IMFriendButton::onClickEnterSpace()
 
 /*************************************************
 Function Name： chatRoomQuit()
-Description: 聊天室被关闭
+Description: 聊天室被close 
 *************************************************/
 void IMFriendButton::chatRoomQuit()
 {
@@ -398,7 +398,7 @@ QString IMFriendButton::getStatusFromInt(const int n) const
 
 /*************************************************
 Function Name： getStatusFromInt()
-Description: 创建右键菜单
+Description: create 右键菜单
 *************************************************/
 void IMFriendButton::creatMenu(/*const QList<QString> *groutList*/)
 {
@@ -408,8 +408,8 @@ void IMFriendButton::creatMenu(/*const QList<QString> *groutList*/)
     QAction *sendMail = new QAction(tr("发送电子邮件"), m_menu);
 
     QAction *showInfo = new QAction(tr("查看资料"), m_menu);
-    QAction *changeRemar = new QAction(tr("修改备注名称"), m_menu);
-    QAction *removeFriend = new QAction(tr("删除好友"), m_menu);
+    QAction *changeRemar = new QAction(tr("modify备注名称"), m_menu);
+    QAction *removeFriend = new QAction(tr("delete  好友"), m_menu);
     QAction *enterSpace = new QAction(tr("进入好友空间"), m_menu);
 
     m_moveFriendMenu= new QMenu(tr("移动好友至"), m_menu);

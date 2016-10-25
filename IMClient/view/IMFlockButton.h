@@ -45,19 +45,19 @@ public:
         m_flockInfo.m_theme = flock.m_theme;
         setButtonStatus();
     }
-    // 打开聊天窗口
+    // open 聊天窗口
     void openChatRoom();
     // 显示聊天窗口
     void showChatRoom();
-    // 关闭聊天窗口
+    // close 聊天窗口
     void closeChatRoom();
 
     // 设置button显示信息
     void setButtonStatus();
 
-    // 删除群成员
+    // delete  群成员
     void deleteFlockMember(const QString & memberID);
-    // 添加群成员
+    // add 群成员
     void addFlockMember(const QString & memberID);
 
 signals:
@@ -78,11 +78,11 @@ public slots:
     void onClickDropFlock();
     // 退出群
     void onClickLeaveFlock();
-    // 添加群成员
+    // add 群成员
     void onClickAddMemberFlock();
     // 进入空间
     void onClickEnterSpace();
-    //聊天窗口关闭了
+    //聊天窗口close 了
     void chatRoomQuit();
 
     // 设置成员列表
@@ -93,13 +93,13 @@ protected:
     void mouseDoubleClickEvent(QMouseEvent *);
 
 private:
-    // 创建右键菜单
+    // create 右键菜单
     void creatMenu(/*const QList<QString> *groutList*/);
 
 private:
     FlockInformation m_flockInfo;
 
-    // 聊天窗口是否打开了
+    // 聊天窗口是否open 了
     bool m_isOpen;
     // 聊天窗口是否显示
     bool m_isShow;

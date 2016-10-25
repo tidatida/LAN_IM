@@ -2,7 +2,7 @@
 File Name： IMMainWidget.h
 Author： jet.F.R
 Date： 2014.3.14
-Description： 客户端主界面
+Description： clientmainframe
 Changes：
 ********************************************/
 
@@ -53,7 +53,7 @@ class IMSearchListWidget;
 
 /*************************************************
 Class Name： IMMainWidget
-Description: 客户端主界面
+Description: clientmainframe
 *************************************************/
 class IMMainWidget : public QWidget
 {
@@ -81,46 +81,46 @@ public:
     void insertFlockRoomMap(const QString &, IMFlockChatWidget *);
     // 插入组聊
     void insertDiscussionRoomMap(const QString &, IMDiscussionChatWidget*);
-    // 获取好友信息（发送至服务器）
+    // 获取好友信息（发送至server ）
     void getFriendInformation(const QString &id);
-    // 改变自己信息（发送至服务器）
+    // 改变自己信息（发送至server ）
     void changeMyInformation(const UserInformation &);
-    // 改变好友备注（发送至服务器）
+    // 改变好友备注（发送至server ）
     void changeFriendRemark(const QString &, const QString &);
-    // 删除好友（发送至服务器）
+    // delete  好友（发送至server ）
     void deleteFriend(const QString &);
-    // 删除存储于m_informationMap中的信息窗口
+    // delete  存储于m_informationMap中的信息窗口
     void removeInformationWidget(const QString &);
-    // 删除存储与m_flockInformationMap中的信息窗口
+    // delete  存储与m_flockInformationMap中的信息窗口
     void removeFlockInformationWidget(const QString &);
-    // 删除存储与m_discussionInformationMap中的信息窗口
+    // delete  存储与m_discussionInformationMap中的信息窗口
     void removeDiscussionInformationWidget(const QString &);
 
-    // 修改群信息（发送至服务器）
+    // modify群信息（发送至server ）
     void changeFlockInformation(const FlockInformation &);
-    // 修改讨论组信息 （发送至服务器）
+    // modify讨论组信息 （发送至server ）
     void changeDiscussionInformation(const DiscussionInformation &);
 
-    // 删除存储于m_chatRoomMap中的聊天窗口
+    // delete  存储于m_chatRoomMap中的聊天窗口
     void removeChatWidget(const QString &);
-    // 删除存储于m_flockRoomMap中的群聊窗口
+    // delete  存储于m_flockRoomMap中的群聊窗口
     void removeFlockChatWidget(const QString &);
-    // 删除存储于m_discussionChatWidget中的讨论组窗口
+    // delete  存储于m_discussionChatWidget中的讨论组窗口
     void removeDiscussionChatWidget(const QString &);
-    // 解散群 (发送至服务器)
+    // 解散群 (发送至server )
     void dropFlock(const QString &);
-    // 解散讨论组（发送至服务器）
+    // 解散讨论组（发送至server ）
     void dropDiscussion(const QString &);
 
-    // 退出群（发送至服务器）
+    // 退出群（发送至server ）
     void leaveFlock(const QString & memberID, const QString &flockID);
 
-    // 退出讨论组 （发送至服务器）
+    // 退出讨论组 （发送至server ）
     void leaveDiscussion(const QString & memberID, const QString &discussionID);
 
-    // 添加好友（发送至服务器）
+    // add 好友（发送至server ）
     void addFriend(const QString friendID);
-    // 修改群成员名片（发送至服务器）
+    // modify群成员名片（发送至server ）
     void changeFlockMemberRemark(const TempStrings & tmpStr);
 
     // 移动好友至其他分组
@@ -147,9 +147,9 @@ public:
     void exportLocalMessage(const int index);
     // 导出所有消息记录
     void exportLocalMessageAll();
-    // 删除单个好友消息记录
+    // delete  单个好友消息记录
     void deleteLocalMessage(const int index);
-    // 删除所有消息记录
+    // delete  所有消息记录
     void deleteLocalMessageAll();
 
     /*********************network database *******************/
@@ -160,9 +160,9 @@ public:
 //    void exportNetWorkMessage(const int index);
 //    // 导出所有消息记录
 //    void exportNetWorkMessageAll();
-//    // 删除单个好友消息记录
+//    // delete  单个好友消息记录
 //    void deleteNetWorkMessage(const int index);
-//    // 删除所有消息记录
+//    // delete  所有消息记录
 //    void deleteNetWorkMessageAll();
 
 signals:
@@ -171,13 +171,13 @@ signals:
     void exportHistoryMessageAllSuccess(const QString &, const QString &);
 public slots:
 
-    // 获取好友信息列表（发送至服务器）
+    // 获取好友信息列表（发送至server ）
     void getFriendsInformation();
-    // 获取群信息列表（发送至服务器）
+    // 获取群信息列表（发送至server ）
     void getFlocksInformation();
-    // 获取讨论组信息列表（发送至.服务器）
+    // 获取讨论组信息列表（发送至.server ）
     void getDiscussionsInformation();
-    // 获取本地最近消息（访问本地数据库）
+    // 获取本地最近消息（访问本地database ）
     void getLatestMessage();
 
     // 设置消息界面
@@ -191,11 +191,11 @@ public slots:
     // 设置讨论组列表
     void setDiscussionListWidget(const QVector<DiscussionInformation> &);
 
-    // 添加好友按钮
+    // add 好友按钮
     bool addFriendButton(const FriendInformation &);
-    // 添加群按钮
+    // add 群按钮
     bool addFlockButton(const FlockInformation & flcokInfo);
-    // 添加讨论组按钮
+    // add 讨论组按钮
     bool addDiscussionButton(const DiscussionInformation & disInfo);
 
     // 获取好友发来的消息
@@ -226,12 +226,12 @@ public slots:
 
     // 设置好友备注
     void setFriendRemark(const TempStrings&);
-    // 已删除好友
+    // 已delete  好友
     void deletedFriend(const QString &, const QString &, const QString &);
 
-    // 已删除群
+    // 已delete  群
     void dropedFlock(const QString &);
-    // 已删除讨论组
+    // 已delete  讨论组
     void dropedDiscussion(const QString & discussionID);
 
     // 已退出群
@@ -239,9 +239,9 @@ public slots:
     // 已退出讨论组
     void leavedDiscussion(const QString &, const QString &);
 
-    // 创建群成功
+    // create 群成功
     void createFlockSuccess(const FlockInformation &);
-    // 创建讨论组成功
+    // create 讨论组成功
     void createDiscussionSuccess(const DiscussionInformation &);
 
     // 搜索友好
@@ -249,17 +249,17 @@ public slots:
     //  点击“搜索”按钮
     void onClickSearchFriend();
 
-    // 点击“添加好友”按钮
+    // 点击“add 好友”按钮
     void onClickAddFriend();
-    // 添加群
+    // add 群
     void onClickAddFlock();
-    // 修改密码
+    // modify passwd
     void onClickChangePwd();
-    // 创建群
+    // create 群
     void createFlock();
-    // 创建讨论组
+    // create 讨论组
     void createDiscussion();
-    // 添加讨论组
+    // add 讨论组
 //    void addDiscussion();
 
     // 显示消息管理窗口
@@ -279,13 +279,13 @@ public slots:
     void moveFriendToBoxSuccess(const QString &, const QString &, const QString &);
 
     void onClickRightButton();
-    // 创建组
+    // create 组
     void createBox();
 
     /*****************link button*****************************/
-    // 删除新消息连接按钮
+    // delete  新消息connection 按钮
     void removeLinkButton(const QString & id);
-    // 删除所有消息连接按钮
+    // delete  所有消息connection 按钮
     void removeAllLinkButton();
     // 显示所有聊天窗口
     void showAllChatRoom();
@@ -297,12 +297,12 @@ protected:
 
 private slots:
 
-    // 关闭主窗口
+    // close 主窗口
     void closeWindow();
-    // 关闭所有别的窗口
+    // close 所有别的窗口
     void closeAllWindows();
 
-    // 获取自己信息（发送至服务器）
+    // 获取自己信息（发送至server ）
     void getMyInformation();
 
     //void createChatRoom(QListWidgetItem *);
@@ -315,22 +315,22 @@ private slots:
     // void receiveMessagesFromDiscussionChat(TalkMessage &);
 
 
-    // 改变个人状态（发送至服务器）
+    // 改变个人状态（发送至server ）
     void changeMyStatus(const int index);
 
-    // 接收并且处理好友的请求
+    // 接收并且process   好友的request 
     void receiveFriendRequest(const TalkMessage &, const UserInformation &);
 
-    // 接收并且处理群的请求
+    // 接收并且process   群的request 
     void receiveFlockRequest(const TalkMessage &,
                              const FlockMember &,
                              const FlockInformation &);
-    // 接收并处理讨论组请求
+    // 接收并process   讨论组request 
     void receiveDiscussionRequest(const TalkMessage & mes,
                                   const DiscussionMember & member,
                                   const DiscussionInformation & discussion);
 
-    // 删除组
+    // delete  组
     void removeBox(const QString &);
     // 重命名组
     void renameBox(const QString &);
@@ -342,7 +342,7 @@ private:
     void clearContainers();
     void creatMenu();
     void refreshFriendButtonMenu();
-    //询问用户是否真的要退出
+    //询问user 是否真的要退出
     bool continueToClose();
 private:
     IMMainCtrl *m_mainCtrl;
@@ -414,7 +414,7 @@ private:
 
     int m_flag;
 
-    // 操作数据库
+    // access database
     IMDatabaseCtrl m_database;
     QVector<TalkMessage> m_localHistoryMessageVec;
     QVector<TalkMessage> m_networkHistoryMessageVec;

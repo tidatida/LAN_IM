@@ -16,11 +16,11 @@ public:
 signals:
     
 public slots:
-    // 删除某日的信息记录
+    // delete  某日的信息记录
     void onClickDeleteDate();
-    // 删除某好友信息记录
+    // delete  某好友信息记录
     void onClickDeleteOne();
-    // 删除全部消息记录
+    // delete  全部消息记录
     void onClickDeleteAll();
     // 导人消息记录
     void onClickImport();
