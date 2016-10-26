@@ -37,7 +37,7 @@ void IMFileReceiverWidget::setFileName(const QString & fileName)
 
 /*************************************************
 Function Name: connectToHost()
-Description:  set server 地址并connection server 
+Description:  set server  address 并connection server 
 *************************************************/
 void IMFileReceiverWidget::connectToHost(const QHostAddress & address)
 {

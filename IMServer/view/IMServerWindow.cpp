@@ -23,7 +23,7 @@ IMServerWindow::IMServerWindow(QWidget *parent)
     viewLayout->addWidget(m_serverCtrl->getAddressListView());
 
     QVBoxLayout *layout = new QVBoxLayout;
-    QLabel *labelTitle = new QLabel(tr("connection server user  account  列 table :"));
+    QLabel *labelTitle = new QLabel(tr("connection server user  account   table  :"));
     layout->addWidget(labelTitle);
     layout->addLayout(viewLayout);
 

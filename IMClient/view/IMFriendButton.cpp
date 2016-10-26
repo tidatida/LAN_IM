@@ -369,8 +369,8 @@ QString IMFriendButton::getStatusFromInt(const int n) const
 //    ONLINE = 0,    //  online 
 //    INVISIBLE = 1, //  Invisible 
 //    BUSY = 2,      //  busy 
-//    LEAVE = 3,     // 离开
-//    NOTDISTURB = 4 //  please 勿打扰
+//    LEAVE = 3,     //  away 
+//    NOTDISTURB = 4 //  please  dont disturb 
     switch (n)
     {
     case ONLINE:
@@ -384,10 +384,10 @@ QString IMFriendButton::getStatusFromInt(const int n) const
         return tr(" busy ");
         break;
     case LEAVE:
-        return tr("离开");
+        return tr(" away ");
         break;
     case NOTDISTURB:
-        return tr(" please 勿打扰");
+        return tr(" please  dont disturb ");
         break;
     default:
         break;

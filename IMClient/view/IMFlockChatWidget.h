@@ -58,7 +58,7 @@ signals:
     
 public slots:
 
-    //  set 群成员列 table 
+    //  set 群成员 table  
     void setFlockMemberList(const QVector<FlockMember> &);
 
 protected:

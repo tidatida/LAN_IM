@@ -78,14 +78,14 @@ int IMTcpSocket::flag()
 
 /*************************************************
 Function Name: getIP()
-Description:  get ip地址
+Description:  get ip address 
 *************************************************/
 QString IMTcpSocket::getIP()
 {
     QList<QHostAddress> list = QNetworkInterface::allAddresses();
     foreach (QHostAddress address, list)
     {
-       if(address.protocol() == QAbstractSocket::IPv4Protocol) //我们使用IPv4地址
+       if(address.protocol() == QAbstractSocket::IPv4Protocol) //我们使用IPv4 address 
         {
            if(address.toString()!="127.0.0.1")
                 return address.toString();
@@ -125,7 +125,7 @@ void IMTcpSocket::connectionClosed()
     if (m_flag == 0)
     {
 //        //程序如果和server 断开connection ,s 话，弹出警告，直接 quit from  
-//        QMessageBox::critical(NULL, tr("系统错误"),
+//        QMessageBox::critical(NULL, tr(" System 错误"),
 //                              tr(" your ,s client already 经 and server 断开connection ， please 重 new  Login 。"));
 //        qApp->quit();
     }

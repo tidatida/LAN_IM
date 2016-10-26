@@ -139,7 +139,7 @@ void IMNetWorkMessageWidget::onClickGetMessage()
 
 ///*************************************************
 //Function Name: friendItemClicked()
-//Description:  单击好友列 table 项
+//Description:  单击好友 table  项
 //*************************************************/
 //void IMNetWorkMessageWidget::friendItemClicked(const QModelIndex & index)
 //{

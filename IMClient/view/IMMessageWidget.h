@@ -55,9 +55,9 @@ public slots:
     //  get 消息记录
     virtual void onClickGetMessage() = 0;
 
-    // 单击  box 列 table 
+    // 单击  box  table  
     void groupItemClicked(const QModelIndex &);
-    // 单击 好友列 table 
+    // 单击 好友 table  
     void friendItemClicked(const QModelIndex &);
 //    virtual void friendItemClicked(const QModelIndex &) = 0;
 

@@ -89,7 +89,7 @@ void IMFlockListWidget::creatMenu()
     m_menu = new QMenu(this);
     QAction *actCreateFlock = new QAction(tr(" create 群"), this);
     QAction *actAddFlock = new QAction(tr("add 群"), this);
-    QAction *actRefresh = new QAction(tr("刷 new 群列 table "), this);
+    QAction *actRefresh = new QAction(tr("刷 new 群 table  "), this);
 
     connect(actCreateFlock, SIGNAL(triggered()),
         m_mainWidget, SLOT(createFlock()));

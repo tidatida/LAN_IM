@@ -65,7 +65,7 @@ void IMFriendListWidget:: creatMenu()
 {
     m_menu = new QMenu(this);
     QAction *create = new QAction(tr(" create  box "), m_menu);
-    QAction *refresh = new QAction(tr("刷 new 好友列 table "), m_menu);
+    QAction *refresh = new QAction(tr("刷 new 好友 table  "), m_menu);
     QAction *addFriend = new QAction(tr("add 好友"), m_menu);
 
     connect(create, SIGNAL(triggered()),

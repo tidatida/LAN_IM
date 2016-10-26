@@ -257,7 +257,7 @@
 //    QList<QHostAddress> list = QNetworkInterface::allAddresses();
 //    foreach (QHostAddress address, list)
 //    {
-//       if(address.protocol() == QAbstractSocket::IPv4Protocol) //我们使用IPv4地址
+//       if(address.protocol() == QAbstractSocket::IPv4Protocol) //我们使用IPv4 address 
 //        {
 //           if(address.toString()!="127.0.0.1")
 //                return address.toString();

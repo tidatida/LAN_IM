@@ -344,7 +344,7 @@ void IMFlockButton::chatRoomQuit()
 
 /*************************************************
 Function Name: setFlockMemeberList()
-Description:  set 群成员列 table 
+Description:  set 群成员 table  
 *************************************************/
 void IMFlockButton::setFlockMemberList(const QVector<FlockMember> & memberList)
 {

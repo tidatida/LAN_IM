@@ -232,7 +232,7 @@ void IMMailWidget::initIMMailWidget()
     m_tabWidget->addTab(m_outWidget, tr("发件箱"));
     m_tabWidget->addTab(m_writeWidget, tr("写信"));
 //    m_tabWidget->setTabPosition(QTabWidget::West);
-    m_labelInformation = new QLabel(QString(tr("%1, 你好！")).arg(m_myID), this);
+    m_labelInformation = new QLabel(QString(tr("%1,  Hello ！")).arg(m_myID), this);
 
     QVBoxLayout *mainLayout = new QVBoxLayout;
     mainLayout->addWidget(m_labelInformation);

@@ -85,7 +85,7 @@ public slots:
     //聊天窗口close 了
     void chatRoomQuit();
 
-    //  set 成员列 table 
+    //  set 成员 table  
     void setFlockMemberList(const QVector<FlockMember> &);
 
 protected:

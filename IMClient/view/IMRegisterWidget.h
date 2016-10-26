@@ -81,7 +81,7 @@ private:
     QLabel *m_labelPhone;      // 电话
     QLineEdit *m_lePhone;
     QLabel *m_labelDesPhone;
-    QLabel *m_labelAddress;    // 地址
+    QLabel *m_labelAddress;    //  address 
     QLineEdit *m_leAddress;
     QLabel *m_labelDesAddress;
 

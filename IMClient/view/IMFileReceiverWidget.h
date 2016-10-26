@@ -24,7 +24,7 @@ public:
 
     //  set 文件 name 
     void setFileName(const QString & fileName);
-    //  set server 地址并connection server 
+    //  set server  address 并connection server 
     void connectToHost(const QHostAddress & address);
     
 signals:

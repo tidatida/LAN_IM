@@ -30,7 +30,7 @@ public slots:
     void onClickExportAll();
     //  get 消息记录
     void onClickGetMessage();
-//    // 单击好友列 table 项
+//    // 单击好友 table  项
 //    void friendItemClicked(const QModelIndex &);
     
 private:

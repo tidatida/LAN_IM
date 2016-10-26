@@ -342,10 +342,10 @@ QString IMDiscussionMemberButton::getLoginStatusFromInt(const int n) const
         return tr(" busy ");
         break;
     case LEAVE:
-        return tr("离开");
+        return tr(" away ");
         break;
     case NOTDISTURB:
-        return tr(" please 勿打扰");
+        return tr(" please  dont disturb ");
         break;
     default:
         break;

@@ -163,7 +163,7 @@ bool IMFlockChatWidget::removeFlockMemberButton(const QString & memberID)
 
 /*************************************************
 Function Name: setFlockMemberList()
-Description:   set 群成员列 table 
+Description:   set 群成员 table  
 *************************************************/
 void IMFlockChatWidget::setFlockMemberList(const QVector<FlockMember> & memberList)
 {
@@ -305,7 +305,7 @@ void IMFlockChatWidget::onClickBtnHistory(bool checked)
         readHistoryMessage();
     }
     else
-        m_labelDockWidget->setText(tr("群成员列 table "));
+        m_labelDockWidget->setText(tr("群成员 table  "));
     m_memberListWidget->setHidden(checked);
     m_tbHistoryShow->setHidden(!checked);
 }
@@ -430,7 +430,7 @@ void IMFlockChatWidget::initIMFlockChatWidget()
 
     m_tbHistoryShow = new QTextBrowser(m_dockWidget);
     m_labelDockWidget = new QLabel(m_dockWidget);
-    m_labelDockWidget->setText(tr("群成员列 table "));
+    m_labelDockWidget->setText(tr("群成员 table  "));
     m_memberListWidget = new IMFlockMemberListWidget(m_dockWidget);
     QVBoxLayout *vLayoutHistory = new QVBoxLayout;
     vLayoutHistory->addWidget(m_labelDockWidget);

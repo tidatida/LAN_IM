@@ -207,7 +207,7 @@ void IMLoginWidget::onClickBtnLogin()
     {
         m_isLogin = true;
         m_btnLogin->setText(tr(" Login "));
-        m_labelStatus->setText(tr("你好, please  Login 系统."));
+        m_labelStatus->setText(tr(" Hello , please  Login  System ."));
 
         if (m_loginCtrl != NULL)
         {
@@ -342,7 +342,7 @@ void IMLoginWidget::initIMLoginWidget()
     QHBoxLayout *hLayoutBtm  = new QHBoxLayout;
     QVBoxLayout *vLayoutMain = new QVBoxLayout;
 
-    QLabel *labelHeadLine = new QLabel(tr(" Login  Instant  msg 系统"));
+    QLabel *labelHeadLine = new QLabel(tr(" Login  Instant  msg  System "));
     labelHeadLine->setAlignment(Qt::AlignCenter);
     QPalette pa;
     pa.setColor(QPalette::WindowText, Qt::black);
@@ -392,8 +392,8 @@ void IMLoginWidget::initIMLoginWidget()
     m_cbxStatus->addItem(tr(" online "));
     m_cbxStatus->addItem(tr(" Invisible "));
     m_cbxStatus->addItem(tr(" busy "));
-    m_cbxStatus->addItem(tr("离开"));
-    m_cbxStatus->addItem(" please 勿打扰");
+    m_cbxStatus->addItem(tr(" away "));
+    m_cbxStatus->addItem(" please  dont disturb ");
     m_btnLogin = new QPushButton(tr(" Login "));
     m_btnLogin->setDefault(true);
 
@@ -404,10 +404,10 @@ void IMLoginWidget::initIMLoginWidget()
 
     //hide
     m_hostAddress = new QLineEdit;;
-    m_hostAddress->setPlaceholderText(tr("server IP地址"));
+    m_hostAddress->setPlaceholderText(tr("server IP address "));
     m_hostPort = new QLineEdit;
     m_hostPort->setFixedWidth(60);
-    m_hostPort->setPlaceholderText(tr("端口 number "));
+    m_hostPort->setPlaceholderText(tr(" port  number "));
     m_extendedWidget = new QWidget;
     QHBoxLayout *hLayoutExtended = new QHBoxLayout;
     hLayoutExtended->setMargin(0);
@@ -417,7 +417,7 @@ void IMLoginWidget::initIMLoginWidget()
     //end hide
 
     m_labelStatus = new QLabel;
-    m_labelStatus->setText(tr("你好, please  Login 系统."));
+    m_labelStatus->setText(tr(" Hello , please  Login  System ."));
     QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
     m_labelStatus->setSizePolicy(sizePolicy);
 
@@ -492,7 +492,7 @@ void IMLoginWidget::closeTimer()
 /*************************************************
 Function Name: setServer()
 Description:  set server 
-Input:  ip地址，端口 number 
+Input:  ip address ， port  number 
 Output: NULL
 Changes: NULL
 *************************************************/
@@ -527,7 +527,7 @@ void IMLoginWidget::setServer(const QString & ip, const int port)
 /*************************************************
 Function Name: 读取 auto  Login 配置文件()
 Description:  set server 
-Input:  ip地址，端口 number 
+Input:  ip address ， port  number 
 Output: NULL
 Changes: NULL
 *************************************************/

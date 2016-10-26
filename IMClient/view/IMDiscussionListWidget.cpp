@@ -79,7 +79,7 @@ void IMDiscussionListWidget::creatMenu()
     m_menu = new QMenu(this);
     QAction *actCreateDiscussion = new QAction(tr(" create 讨论 box "), this);
 //    QAction *actAddFlock = new QAction(tr("add 讨论 box "), this);
-    QAction *actRefresh = new QAction(tr("刷 new 讨论 box 列 table "), this);
+    QAction *actRefresh = new QAction(tr("刷 new 讨论 box  table  "), this);
 
     connect(actCreateDiscussion, SIGNAL(triggered()),
         m_mainWidget, SLOT(createDiscussion()));

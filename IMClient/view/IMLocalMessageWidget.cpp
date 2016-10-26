@@ -122,7 +122,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
 
 // /*************************************************
 // Function Name: friendItemClicked()
-// Description:  单击好友列 table 项
+// Description:  单击好友 table  项
 // *************************************************/
 // void IMLocalMessageWidget::friendItemClicked(const QModelIndex & index)
 // {

@@ -179,7 +179,7 @@ void IMMailWriteWidget::initIMMailWriteWidget()
     QLabel *senderAddress = new QLabel(QString(tr("%1%2"))
                                        .arg(m_myID, MAIL_ADDRESS_FORMAT), this);
     m_leReceiverAddress = new QLineEdit(this);
-    m_leReceiverAddress->setPlaceholderText(tr(" please  input 对方地址"));
+    m_leReceiverAddress->setPlaceholderText(tr(" please  input 对方 address "));
     QLabel *labelAddressFormat = new QLabel(MAIL_ADDRESS_FORMAT);
 //    m_leReceiverAddress->setText(MAIL_ADDRSS_FORMAT);
     QHBoxLayout *layoutReceiver = new QHBoxLayout;

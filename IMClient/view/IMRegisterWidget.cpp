@@ -212,7 +212,7 @@ void IMRegisterWidget::initIMRegisterWidget()
     m_labelAnswer = new QLabel(tr("问题answer "));
     m_labelName = new QLabel(tr("真实姓 name "));
     m_labelPhone = new QLabel(tr("电话"));
-    m_labelAddress = new QLabel(tr("地址"));
+    m_labelAddress = new QLabel(tr(" address "));
 
     // 中间区域 中间 信息编辑
     m_leNickname = new QLineEdit;
@@ -246,7 +246,7 @@ void IMRegisterWidget::initIMRegisterWidget()
     m_labelDesAnswer = new QLabel(tr("* 一定 remember ！！"));
     m_labelDesName = new QLabel(tr("   your ,s 真实姓 name "));
     m_labelDesPhone = new QLabel(tr("   your ,s 手机 number 码"));
-    m_labelDesAddress = new QLabel(tr("   your ,s 地址"));
+    m_labelDesAddress = new QLabel(tr("   your ,s  address "));
 
     // 整体区域 下面  button 
     m_btnRegister = new QPushButton(tr("Register "));

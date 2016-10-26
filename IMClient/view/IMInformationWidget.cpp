@@ -114,7 +114,7 @@ UserInformation IMInformationWidget::getInformation()
 // protected:----------------------------------------
 
 //聊天窗口close 槽函数  发送信 number  让 main 窗体delete   map  table 项
-void IMInformationWidget::closeEvent(QCloseEvent *)//离开时触发,s   应该检查窗口是否都close 了！！
+void IMInformationWidget::closeEvent(QCloseEvent *)// away 时触发,s   应该检查窗口是否都close 了！！
 {
 //    emit closeChat(secretAddress);
     if (NULL != m_mainWidget)
@@ -186,7 +186,7 @@ void IMInformationWidget::initIMLoginWidget()
     m_labelBirthday = new QLabel(tr("生日:"));
     m_labelName = new QLabel(tr("姓 name :"));
     m_labelPhone = new QLabel(tr("电话"));
-    m_labelAddress = new QLabel(tr("地址"));
+    m_labelAddress = new QLabel(tr(" address "));
     QVBoxLayout *vLayoutLabelLeft= new QVBoxLayout;
     vLayoutLabelLeft->addWidget(m_labelUserID);
     vLayoutLabelLeft->addWidget(m_labelNickname);

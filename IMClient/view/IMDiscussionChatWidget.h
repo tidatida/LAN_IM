@@ -60,7 +60,7 @@ signals:
 
 public slots:
 
-    //  set 群成员列 table 
+    //  set 群成员 table  
     void setDiscussionMemberList(const QVector<DiscussionMember> & memberList);
 
 protected:

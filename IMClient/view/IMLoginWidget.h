@@ -78,8 +78,8 @@ private:
 
     QPushButton *m_moreButton;// 拓展 button 
     QWidget *m_extendedWidget;// 拓展界面
-    QLineEdit *m_hostAddress; // server ip地址
-    QLineEdit *m_hostPort;    // server 端口
+    QLineEdit *m_hostAddress; // server ip address 
+    QLineEdit *m_hostPort;    // server  port 
 
     QLabel *m_labelStatus;    // 状态标签
     bool m_isLogin;           // 是否能 Login 

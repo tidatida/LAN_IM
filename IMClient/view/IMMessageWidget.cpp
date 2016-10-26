@@ -122,7 +122,7 @@ void IMMessageWidget::setMessageShow(const QVector<TalkMessage> & mesVec)
 
 /*************************************************
 Function Name: setShowMode()
-Description:  box 列 table 
+Description:  box  table  
 *************************************************/
 void IMMessageWidget::groupItemClicked(const QModelIndex & index)
 {
@@ -132,7 +132,7 @@ void IMMessageWidget::groupItemClicked(const QModelIndex & index)
 
 /*************************************************
 Function Name: friendItemClicked()
-Description:  单击好友列 table 项
+Description:  单击好友 table  项
 *************************************************/
 void IMMessageWidget::friendItemClicked(const QModelIndex & index)
 {
@@ -223,7 +223,7 @@ void IMMessageWidget::initIMMessageWidget()
     // 不可编辑
     m_listViewGroup->setEditTriggers(QAbstractItemView::NoEditTriggers);
     m_listViewGroup->setModel(m_modelGroup);
-    m_listViewGroup->setToolTip(tr(" box 列 table "));
+    m_listViewGroup->setToolTip(tr(" box  table  "));
     m_listViewGroup->setStatusTip(tr(" please 选择 box "));
 
     m_modelFriend = new QStringListModel(this);
@@ -233,7 +233,7 @@ void IMMessageWidget::initIMMessageWidget()
     // 不可编辑
     m_listViewFriend->setEditTriggers(QAbstractItemView::NoEditTriggers);
     m_listViewFriend->setModel(m_modelFriend);
-    m_listViewFriend->setToolTip(tr("好友列 table "));
+    m_listViewFriend->setToolTip(tr("好友 table  "));
     m_listViewFriend->setStatusTip(tr(" please 选择好友"));
 
     m_tbMessageShow = new QTextBrowser(this);

@@ -171,11 +171,11 @@ signals:
     void exportHistoryMessageAllSuccess(const QString &, const QString &);
 public slots:
 
-    //  get 好友信息列 table （发送至server ）
+    //  get 好友信息 table  （发送至server ）
     void getFriendsInformation();
-    //  get 群信息列 table （发送至server ）
+    //  get 群信息 table  （发送至server ）
     void getFlocksInformation();
-    //  get 讨论 box 信息列 table （发送至.server ）
+    //  get 讨论 box 信息 table  （发送至.server ）
     void getDiscussionsInformation();
     //  get 本地最近消息（访问本地database ）
     void getLatestMessage();
@@ -184,11 +184,11 @@ public slots:
     void setNetworkMessageWidget(const QString & friendID, const QDate & date,
                                  const QVector<TalkMessage> & mesVec);
 
-    //  set 好友列 table 
+    //  set 好友 table  
     void setFriendListWidget(const QVector<FriendInformation> &);
-    //  set 群列 table 
+    //  set 群 table  
     void setFlockListWidget(const QVector<FlockInformation> &);
-    //  set 讨论 box 列 table 
+    //  set 讨论 box  table  
     void setDiscussionListWidget(const QVector<DiscussionInformation> &);
 
     // add 好友 button 
@@ -361,9 +361,9 @@ private:
     QMap<QString, IMFlockInformationWidget *> m_flockInformationMap;
     QMap<QString, IMDiscussionInformationWidget *> m_discussionInformationMap;
 
-    QStringList m_friendsGroupList;  //  box  name  列 table 
-    QStringList m_friendsMarkList; // 某 box 中好友 备注 name  列 table 
-    QStringList m_friendsIDList; // 某 box 中好友 ID  列 table 
+    QStringList m_friendsGroupList;  //  box  name   table  
+    QStringList m_friendsMarkList; // 某 box 中好友 备注 name   table  
+    QStringList m_friendsIDList; // 某 box 中好友 ID   table  
 
     QVector<IMToolItem *> m_toolItemsFriendsVec;  // 存储 each  box ,s  array 
 
