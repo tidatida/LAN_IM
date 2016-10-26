@@ -56,7 +56,7 @@ IMLittleWidget::IMLittleWidget(int num, QWidget *parent) :
 // public slots:-------------------------------------
 /*************************************************
 Function Name: onClickedBtnClose()
-Description: 点击 close /取消 按钮
+Description:  click  close /取消  button 
 *************************************************/
 void IMLittleWidget::onClickedBtnClose()
 {
@@ -65,9 +65,9 @@ void IMLittleWidget::onClickedBtnClose()
 
 /*************************************************
 Function Name: onClickedBtnClose()
-Description: 点击 close /取消 按钮
+Description:  click  close /取消  button 
 *************************************************/
-// 设置各编辑框的标题栏
+// 设置各编辑框,s 标题栏
 void IMLittleWidget::setLabelsText(const QString & first,
                   const QString & second,
                   const QString & third)
@@ -84,7 +84,7 @@ void IMLittleWidget::setLabelsText(const QString & first,
 
 /*************************************************
 Function Name: getInputInformation()
-Description: 获取user 输入的信息
+Description:  get user  input ,s 信息
 *************************************************/
 TempStrings IMLittleWidget::getInputInformation() const
 {
@@ -101,7 +101,7 @@ TempStrings IMLittleWidget::getInputInformation() const
 
 /*************************************************
 Function Name: setPasswordStyle()
-Description: 将user 输入的信息set to  passwd风格
+Description: 将user  input ,s 信息set to  passwd风格
 *************************************************/
 void IMLittleWidget::setPasswordStyle()
 {
@@ -115,7 +115,7 @@ void IMLittleWidget::setPasswordStyle()
 
 /*************************************************
 Function Name: setAllEnabled()
-Description: set all 输入框设置可用属性
+Description: set all  input 框设置可用属性
 *************************************************/
 void IMLittleWidget::setAllEnabled(bool enable)
 {

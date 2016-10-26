@@ -22,7 +22,7 @@ public:
     IMFileReceiverWidget(QWidget *parent = 0);
     ~IMFileReceiverWidget();
 
-    // 设置文件名
+    // 设置文件 name 
     void setFileName(const QString & fileName);
     // 设置server 地址并connection server 
     void connectToHost(const QHostAddress & address);
@@ -36,11 +36,11 @@ private:
     void initIMFileReceiverWidget();
 
 public slots:
-    // 点击“close ”按钮
+    //  click “close ” button 
     void onClickBtnClose();
-    // 点击“取消”按钮 中途取消的操作
+    //  click “取消” button  中途取消,s 操作
     void onClickBtnCancel();
-    // 读取收到的文件
+    // 读取收到,s 文件
     void readMessage();
     // 错误process   
     void displayError(QAbstractSocket::SocketError);

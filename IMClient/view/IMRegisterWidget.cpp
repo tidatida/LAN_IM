@@ -26,7 +26,7 @@ IMRegisterWidget::IMRegisterWidget(QWidget *parent) :
 {
     initIMRegisterWidget();
     linkSignalWithSlot();
-    setWindowTitle(tr("Register IM帐号"));
+    setWindowTitle(tr("Register IM帐 number "));
 }
 
 IMRegisterWidget::~IMRegisterWidget()
@@ -41,7 +41,7 @@ IMRegisterWidget::~IMRegisterWidget()
 // mark: public slots:--------------------------------------------------
 /*************************************************
 Function Name: resetBtnRegister()
-Description: 重置Register 按钮
+Description: 重置Register  button 
 Input: NULL
 Output: NULL
 Changes: NULL
@@ -61,7 +61,7 @@ void IMRegisterWidget::moveEvent(QMoveEvent *)
 // mark: private slots:---------------------------------------------------
 /*************************************************
 Function Name: onClickBtnRegister()
-Description: 单击“Register ”按钮
+Description: 单击“Register ” button 
 Input: NULL
 Output: NULL
 Changes: NULL
@@ -89,7 +89,7 @@ void IMRegisterWidget::onClickBtnRegister()
     // 判断确认 passwd是否为空
     if (m_leConfirmPwd->text().isEmpty())
     {
-        QMessageBox::about(NULL, tr("提示"), tr("请确认 passwd"));
+        QMessageBox::about(NULL, tr("提示"), tr(" please 确认 passwd"));
         return;
     }
     // 判断 passwd是否一致
@@ -98,10 +98,10 @@ void IMRegisterWidget::onClickBtnRegister()
         QMessageBox::about(NULL, tr("提示"), tr(" passwd不一致"));
         return;
     }
-    // 判断性别是否为空
+    // 判断性 other 是否为空
     if (m_cbxSex->currentText().isEmpty())
     {
-        QMessageBox::about(NULL, tr("提示"), tr("性别不能为空"));
+        QMessageBox::about(NULL, tr("提示"), tr("性 other 不能为空"));
         return;
     }
     // 判断生日是否为空
@@ -170,7 +170,7 @@ void IMRegisterWidget::onClickBtnRegister()
 
 /*************************************************
 Function Name: conClickBtnCancel()
-Description: 单击“取消”按钮
+Description: 单击“取消” button 
 Input: NULL
 Output: NULL
 Changes: NULL
@@ -206,11 +206,11 @@ void IMRegisterWidget::initIMRegisterWidget()
     m_labelNickname = new QLabel(tr("昵称"));
     m_labelPwd = new QLabel(tr(" passwd"));
     m_labelConfirmPwd = new QLabel(tr("确认 passwd"));
-    m_labelSex = new QLabel(tr("性别"));
+    m_labelSex = new QLabel(tr("性 other "));
     m_labelBirthday = new QLabel(tr("生日"));
     m_labelQuestion = new QLabel(tr("passwd-protect question"));
     m_labelAnswer = new QLabel(tr("问题answer "));
-    m_labelName = new QLabel(tr("真实姓名"));
+    m_labelName = new QLabel(tr("真实姓 name "));
     m_labelPhone = new QLabel(tr("电话"));
     m_labelAddress = new QLabel(tr("地址"));
 
@@ -227,7 +227,7 @@ void IMRegisterWidget::initIMRegisterWidget()
     m_cbxSex->addItem(tr("女"));
     m_leBirthday = new CustomLineEdit;
     m_leQuestion = new QLineEdit;
-    m_leQuestion->setPlaceholderText(tr("比如:我初中老师的姓名"));
+    m_leQuestion->setPlaceholderText(tr("比如:我初中老师,s 姓 name "));
     m_leAnswer = new QLineEdit;
     m_leAnswer->setPlaceholderText(tr("比如:张三"));
     m_leName = new QLineEdit;
@@ -237,18 +237,18 @@ void IMRegisterWidget::initIMRegisterWidget()
     m_btnCancel = new QPushButton;
 
     // 中间区域 右边 信息描述
-    m_labelDesNickname = new QLabel(tr("* 您独一无二的称谓"));
+    m_labelDesNickname = new QLabel(tr("* 您独一无二,s 称谓"));
     m_labelDesPwd = new QLabel(tr("* 6～14个字符，不能包含空格"));
-    m_labelDesConfirmPwd = new QLabel(tr("* 请再次输入 passwd"));
-    m_labelDesSex = new QLabel(tr("* 您的性别"));
-    m_labelDesBirthday = new QLabel(tr("* 您的出生日"));
+    m_labelDesConfirmPwd = new QLabel(tr("*  please  then 次 input  passwd"));
+    m_labelDesSex = new QLabel(tr("* 您,s 性 other "));
+    m_labelDesBirthday = new QLabel(tr("* 您,s 出生日"));
     m_labelDesQuestion = new QLabel(tr("* used to   找回 passwd"));
     m_labelDesAnswer = new QLabel(tr("* 一定记住！！"));
-    m_labelDesName = new QLabel(tr("  您的真实姓名"));
-    m_labelDesPhone = new QLabel(tr("  您的手机号码"));
-    m_labelDesAddress = new QLabel(tr("  您的地址"));
+    m_labelDesName = new QLabel(tr("  您,s 真实姓 name "));
+    m_labelDesPhone = new QLabel(tr("  您,s 手机 number 码"));
+    m_labelDesAddress = new QLabel(tr("  您,s 地址"));
 
-    // 整体区域 下面 按钮
+    // 整体区域 下面  button 
     m_btnRegister = new QPushButton(tr("Register "));
     m_btnCancel = new QPushButton(tr("取消"));
 
@@ -305,7 +305,7 @@ void IMRegisterWidget::initIMRegisterWidget()
     hLayoutBtm->addWidget(m_btnCancel);
     hLayoutBtm->addStretch();
 
-    // 星号信息 标签
+    // 星 number 信息 标签
     QLabel *labelAsterisk = new QLabel(tr("* 为必填"), this);
     QPalette pal;
     pal.setColor(QPalette::WindowText, Qt::red);
@@ -326,7 +326,7 @@ void IMRegisterWidget::initIMRegisterWidget()
 
 /*************************************************
 Function Name: linkSignalWithSlot()
-Description: connection 信号与槽
+Description: connection 信 number  and 槽
 Input: NULL
 Output: NULL
 Changes: NULL

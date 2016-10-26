@@ -24,7 +24,7 @@ signals:
 public slots:
     // 左键 双击
     virtual void onDoubleClickButton() = 0;
-    // 右键点击按键
+    //  right button  click  button 
     virtual void onClickRightButton(/*const QPoint &*/);
     // 忽略消息
     virtual void ignoreMessage() = 0;
@@ -38,11 +38,11 @@ protected:
     QLabel *m_labelInfo;
     QLabel *m_labelMes;
 
-    // 右键菜单
+    //  right button  menu 
     QMenu *m_menu;
 
 private:
-    // create 右键菜单
+    // create  right button  menu 
     void creatMenu(/*const QList<QString> *groutList*/);
 };
 

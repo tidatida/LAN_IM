@@ -1425,7 +1425,7 @@ void IMMainCtrl::readMessage()
 
 /*************************************************
 Function Name: closeWindow
-Description: close 主程序
+Description: close  main 程序
 *************************************************/
 void IMMainCtrl::closeWindow()
 {

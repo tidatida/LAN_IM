@@ -78,7 +78,7 @@ void IMMailInformationWidget::initIMMailInformationWidget()
     // 左侧标签部分
     QLabel *labelSender = new QLabel(tr("发件人:"), this);
     QLabel *labelReceiver = new QLabel(tr("收件人:"), this);
-    QLabel *labelTheme = new QLabel(tr("主    题:"), this);
+    QLabel *labelTheme = new QLabel(tr(" main     题:"), this);
     QLabel *labelTime = new QLabel(tr("时    间:"), this);
     QVBoxLayout *leftLayout = new QVBoxLayout;
     leftLayout->setAlignment(Qt::AlignRight);
@@ -105,7 +105,7 @@ void IMMailInformationWidget::initIMMailInformationWidget()
     topLayout->addStretch();
 //    topLayout->setContentsMargins(0,0,0,0);
 
-    // 底部按钮部分
+    // 底部 button 部分
     m_btnDelete = new QPushButton(tr("delete  "), this);
     m_btnClose = new QPushButton(tr("close "), this);
     m_btnClose->setDefault(true);
@@ -132,7 +132,7 @@ void IMMailInformationWidget::initIMMailInformationWidget()
 
 /*************************************************
 Function Name: linkSignalWithSlot()
-Description:  connection 信号与槽
+Description:  connection 信 number  and 槽
 *************************************************/
 void IMMailInformationWidget::linkSignalWithSlot()
 {

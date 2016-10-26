@@ -59,13 +59,13 @@ void IMFriendListWidget::addItem(QWidget *item)
 
 /*************************************************
 Function Name: creatMenu
-Description: create 右键菜单
+Description: create  right button  menu 
 *************************************************/
 void IMFriendListWidget:: creatMenu()
 {
     m_menu = new QMenu(this);
-    QAction *create = new QAction(tr("新建分组"), m_menu);
-    QAction *refresh = new QAction(tr("刷新好友列表"), m_menu);
+    QAction *create = new QAction(tr(" create  box "), m_menu);
+    QAction *refresh = new QAction(tr("刷 new 好友列 table "), m_menu);
     QAction *addFriend = new QAction(tr("add 好友"), m_menu);
 
     connect(create, SIGNAL(triggered()),
@@ -83,13 +83,13 @@ void IMFriendListWidget:: creatMenu()
 
 /*************************************************
 Function Name: showMenu()
-Description:  显示右键菜单
+Description:  显示 right button  menu 
 *************************************************/
 void IMFriendListWidget::showMenu()
  {
     if (m_menu == NULL)
     {
-        //create 右键菜单
+        //create  right button  menu 
         creatMenu();
     }
     m_menu->exec(QCursor::pos());
@@ -99,7 +99,7 @@ void IMFriendListWidget::showMenu()
 // mark protected:------------------------------------------------------
 /*************************************************
 Function Name: mousePressEvent
-Description: 鼠标点击事件
+Description:  mouse  click  event 
 *************************************************/
 void IMFriendListWidget:: mousePressEvent(QMouseEvent *event)
 {

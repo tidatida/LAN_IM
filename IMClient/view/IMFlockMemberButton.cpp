@@ -141,12 +141,12 @@ void IMFlockMemberButton::setButtonStatus()
 
 //remark:public slots:-----------------------------------------------
 
-// 右键点击按键
+//  right button  click  button 
 void IMFlockMemberButton::onClickRightButton(/*const QPoint &*/)
 {
     if (m_menu == NULL)
     {
-        //create 右键菜单
+        //create  right button  menu 
         creatMenu();
     }
     m_menu->exec(QCursor::pos());
@@ -180,13 +180,13 @@ void IMFlockMemberButton::onClickShowInformation()
 
 /*************************************************
 Function Name: onClickChangeRemark()
-Description: modify群名片
+Description: modify群 name 片
 *************************************************/
 void IMFlockMemberButton::onClickChangeRemark()
 {
     bool isOk = false;
-    QString remark = QInputDialog::getText(NULL, "modify群名片",
-                                           "请输入新的群名片",
+    QString remark = QInputDialog::getText(NULL, "modify群 name 片",
+                                           " please  input  new ,s 群 name 片",
                                            QLineEdit::Normal,
                                            m_info.m_remark,
                                            &isOk);
@@ -267,7 +267,7 @@ void IMFlockMemberButton::chatRoomQuit()
 
 /*************************************************
 Function Name: mousePressEvent
-Description: 鼠标单击事件
+Description:  mouse 单击 event 
 *************************************************/
 void IMFlockMemberButton::mousePressEvent(QMouseEvent *event)
 {
@@ -281,7 +281,7 @@ void IMFlockMemberButton::mousePressEvent(QMouseEvent *event)
 
 /*************************************************
 Function Name: mouseDoubleClickEvent
-Description: 鼠标双击事件
+Description:  mouse 双击 event 
 *************************************************/
 void IMFlockMemberButton::mouseDoubleClickEvent(QMouseEvent *event)
 {
@@ -307,7 +307,7 @@ QString IMFlockMemberButton::getFlockStatusFromInt(const int n) const
     switch (n)
     {
     case FLOCK_HOST:
-        return tr("群主");
+        return tr("群 main ");
         break;
     case FLOCK_ADMAIN:
 //        return tr("管理员");
@@ -332,7 +332,7 @@ QString IMFlockMemberButton::getLoginStatusFromInt(const int n) const
 //    INVISIBLE = 1, // 隐身
 //    BUSY = 2,      // 忙碌
 //    LEAVE = 3,     // 离开
-//    NOTDISTURB = 4 // 请勿打扰
+//    NOTDISTURB = 4 //  please 勿打扰
     switch (n)
     {
     case ONLINE:
@@ -349,7 +349,7 @@ QString IMFlockMemberButton::getLoginStatusFromInt(const int n) const
         return tr("离开");
         break;
     case NOTDISTURB:
-        return tr("请勿打扰");
+        return tr(" please 勿打扰");
         break;
     default:
         break;
@@ -360,7 +360,7 @@ QString IMFlockMemberButton::getLoginStatusFromInt(const int n) const
 
 /*************************************************
 Function Name: getStatusFromInt()
-Description: create 右键菜单
+Description: create  right button  menu 
 *************************************************/
 void IMFlockMemberButton::creatMenu(/*const QList<QString> *groutList*/)
 {
@@ -370,7 +370,7 @@ void IMFlockMemberButton::creatMenu(/*const QList<QString> *groutList*/)
     QAction *showInfo = new QAction(tr("查看资料"), m_menu);
     QAction *enterSpace = new QAction(tr("进入空间"), m_menu);
     QAction *removeMember= new QAction(tr("移除该成员"), m_menu);
-    QAction *changeRemark = new QAction(tr("modify群名片"), m_menu);
+    QAction *changeRemark = new QAction(tr("modify群 name 片"), m_menu);
     QAction *addRriend= new QAction(tr("加为好友"), m_menu);
 
     connect(sendMessage, SIGNAL(triggered()),
@@ -398,7 +398,7 @@ void IMFlockMemberButton::creatMenu(/*const QList<QString> *groutList*/)
 
     }
 
-    // 不是自己 - 是群主
+    // 不是自己 - 是群 main 
     else if (m_mainWidget->getLocalMyInformation().m_userID ==
              m_flockWidget->getFlockInformation().m_creatorID)
     {
@@ -417,7 +417,7 @@ void IMFlockMemberButton::creatMenu(/*const QList<QString> *groutList*/)
             m_menu->addAction(addRriend);
         }
     }
-    // 不是自己 - 不是群主
+    // 不是自己 - 不是群 main 
     else
     {
         m_menu->addAction(sendMessage);

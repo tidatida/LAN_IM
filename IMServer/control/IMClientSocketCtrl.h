@@ -2,7 +2,7 @@
 File Name: IMClientSocketCtrl.h
 Author: jet.F.R
 Date: 2014.3.10
-Description: used to   control  clientsocket的 class
+Description: used to   control  clientsocket,s  class
 Changes:
 ********************************************/
 
@@ -51,7 +51,7 @@ private:
 
     /****************************************/
 //public slots:
-//    // 发送user 的信息至另一个user 
+//    // 发送user ,s 信息至另一个user 
 //    void sendTalkMessage(TalkMessage);
 
 //private slots:
@@ -66,7 +66,7 @@ private:
 //    // add user 
 //    bool addUser(IMUser &);
 
-//    // 获取所有好友
+//    //  get  all 好友
 //    bool getFriends(const QString &);
 
 //    // 发送信息
@@ -82,7 +82,7 @@ private:
 //    // 发送Register 结果
 //    void sendRegisterResult(bool isSuccess, const IMUser * user = NULL);
 
-//    // 发送所有好友信息
+//    // 发送 all 好友信息
 //    void sendFriends(bool isSuccess,
 //                     const QMultiMap<QString, FriendInformation> * map = NULL);
 

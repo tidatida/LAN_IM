@@ -127,10 +127,10 @@ void IMFlockInformationWidget::initIMLoginWidget()
     m_labelFlockHead->setPixmap(pixmap);
 
 //    m_labelFlockHead->setPixmap(QPixmap(":/images/flock.png"));
-    m_labelFlockName = new QLabel(tr("群名称:"), this);
-    m_labelFlockID = new QLabel(tr("群帐号:"), this);
-    m_labelTheme = new QLabel(tr("群主题:"), this);
-    m_labelCreatorID = new QLabel(tr("create 者帐号:"), this);
+    m_labelFlockName = new QLabel(tr("群 name 称:"), this);
+    m_labelFlockID = new QLabel(tr("群帐 number :"), this);
+    m_labelTheme = new QLabel(tr("群  theme :"), this);
+    m_labelCreatorID = new QLabel(tr("create 者帐 number :"), this);
     m_labelCreateDate = new QLabel(tr("create 时间:"), this);
 
     m_leFlockName = new QLineEdit(this);

@@ -438,7 +438,7 @@ void IMDiscussionChatWidget::initIMDiscussionChatWidget()
 
 /*************************************************
 Function Name: linkSignalWithSlot()
-Description:  connection 信号与槽
+Description:  connection 信 number  and 槽
 *************************************************/
 void IMDiscussionChatWidget::linkSignalWithSlot()
 {

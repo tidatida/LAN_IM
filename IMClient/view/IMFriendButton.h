@@ -50,7 +50,7 @@ public:
 
     // 设置button显示信息
     void setButtonStatus();
-    // 刷新菜单中分组信息
+    // 刷 new  menu 中 box 信息
     void refreshMoveMenu();
 
 signals:
@@ -60,7 +60,7 @@ signals:
 public slots:
     // 左键 双击
     void onDoubleClickFriendButton();
-    // 右键点击按键
+    //  right button  click  button 
     void onClickRightButton(/*const QPoint &*/);
 
     // 发送即时消息
@@ -71,9 +71,9 @@ public slots:
     void onClickSendMail();
     // 显示好友详细信息
     void onClickShowInformation();
-    // 点击modify好友备注
+    //  click modify好友备注
     void onClickChangeRemark();
-    // 移动好友至其他分组
+    //  move 好友至 other  box 
     void onClickMove();
     // delete  好友
     void onClickRemoveFriend();
@@ -96,7 +96,7 @@ protected:
 private:
     // 将好友状态从数字形式转换为字符串形式
     QString getStatusFromInt(const int n) const;
-    // create 右键菜单
+    // create  right button  menu 
     void creatMenu(/*const QList<QString> *groutList*/);
 
 
@@ -108,7 +108,7 @@ private:
     bool m_isOpen;
     // 聊天窗口是否显示
     bool m_isShow;
-    // 右键菜单
+    //  right button  menu 
     QMenu *m_menu;
     QMenu *m_moveFriendMenu;
     IMChatWidget *m_chatRoom;

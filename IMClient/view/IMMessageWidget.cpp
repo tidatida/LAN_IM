@@ -33,7 +33,7 @@ IMMessageWidget::~IMMessageWidget()
 
 /*************************************************
 Function Name: setListModelGroup()
-Description: 设置 分组 的model
+Description: 设置  box  ,s model
 *************************************************/
 void IMMessageWidget::setListModelGroup(const QStringList & groupList)
 {
@@ -43,7 +43,7 @@ void IMMessageWidget::setListModelGroup(const QStringList & groupList)
 
 /*************************************************
 Function Name: setListModelGroup()
-Description: 设置 分组 的model
+Description: 设置  box  ,s model
 *************************************************/
 void IMMessageWidget::setListModelGroup()
 {
@@ -53,7 +53,7 @@ void IMMessageWidget::setListModelGroup()
 
 /*************************************************
 Function Name: setListModelFriend()
-Description: 设置 好友 的model
+Description: 设置 好友 ,s model
 *************************************************/
 void IMMessageWidget::setListModelFriend(const QStringList & friendList)
 {
@@ -62,7 +62,7 @@ void IMMessageWidget::setListModelFriend(const QStringList & friendList)
 
 /*************************************************
 Function Name: setListModelFriend()
-Description: 设置 好友 的model
+Description: 设置 好友 ,s model
 *************************************************/
 void IMMessageWidget::setListModelFriend(const QString & groupName)
 {
@@ -73,7 +73,7 @@ void IMMessageWidget::setListModelFriend(const QString & groupName)
 
 /*************************************************
 Function Name: setShowMode()
-Description: 设置显示的模式
+Description: 设置显示,s 模式
 *************************************************/
 void IMMessageWidget::setShowMode(Mode mode)
 {
@@ -89,8 +89,8 @@ void IMMessageWidget::setShowMode(Mode mode)
         m_toolBtnExportAll->setVisible(false);
         m_toolBtnExportAll->setVisible(false);
         m_toolBtnDeleteOne->setVisible(false);
-        m_toolBtnExportOne->setToolTip(tr("导出当前显示的消息"));
-        m_toolBtnExportOne->setStatusTip(tr("导出当前显示的消息记录"));
+        m_toolBtnExportOne->setToolTip(tr("导出当前显示,s 消息"));
+        m_toolBtnExportOne->setStatusTip(tr("导出当前显示,s 消息记录"));
 
         m_toolBtnDeleteAll->setVisible(false);
     }
@@ -98,7 +98,7 @@ void IMMessageWidget::setShowMode(Mode mode)
 
 /*************************************************
 Function Name: setMessageShow()
-Description: 设置显示的消息
+Description: 设置显示,s 消息
 *************************************************/
 void IMMessageWidget::setMessageShow(const QVector<TalkMessage> & mesVec)
 {
@@ -122,7 +122,7 @@ void IMMessageWidget::setMessageShow(const QVector<TalkMessage> & mesVec)
 
 /*************************************************
 Function Name: setShowMode()
-Description: 组列表
+Description:  box 列 table 
 *************************************************/
 void IMMessageWidget::groupItemClicked(const QModelIndex & index)
 {
@@ -132,7 +132,7 @@ void IMMessageWidget::groupItemClicked(const QModelIndex & index)
 
 /*************************************************
 Function Name: friendItemClicked()
-Description:  单击好友列表项
+Description:  单击好友列 table 项
 *************************************************/
 void IMMessageWidget::friendItemClicked(const QModelIndex & index)
 {
@@ -158,13 +158,13 @@ void IMMessageWidget::initIMMessageWidget()
     m_toolBtnGetMessage->setIcon(QIcon(":/images/download_message.png"));
     m_toolBtnGetMessage->setAutoRaise(true);
     m_toolBtnGetMessage->setFocus();
-    m_toolBtnGetMessage->setToolTip(tr("获取消息"));
-    m_toolBtnGetMessage->setStatusTip(tr("获取与当前好友当前日期的消息记录"));
+    m_toolBtnGetMessage->setToolTip(tr(" get 消息"));
+    m_toolBtnGetMessage->setStatusTip(tr(" get  and 当前好友当前日期,s 消息记录"));
 
     m_leBirthday = new CustomLineEdit(this);
     m_leBirthday->setFixedWidth(100);
     m_leBirthday->setToolTip(tr("选择查看日期"));
-    m_leBirthday->setStatusTip(tr("选择需要查看的日期"));
+    m_leBirthday->setStatusTip(tr("选择需要查看,s 日期"));
 
     m_tooBtnImport = new QToolButton(this);
     m_tooBtnImport->setIcon(QIcon(":/images/importAll.png"));
@@ -176,31 +176,31 @@ void IMMessageWidget::initIMMessageWidget()
     m_toolBtnExportOne->setIcon(QIcon(":/images/exportOne.png"));
     m_toolBtnExportOne->setAutoRaise(true);
     m_toolBtnExportOne->setToolTip(tr("导出当前好友消息"));
-    m_toolBtnExportOne->setStatusTip(tr("导出当前与好友的消息记录"));
+    m_toolBtnExportOne->setStatusTip(tr("导出当前 and 好友,s 消息记录"));
 
     m_toolBtnExportAll = new QToolButton(this);
     m_toolBtnExportAll->setIcon(QIcon(":/images/exportAll.png"));
     m_toolBtnExportAll->setAutoRaise(true);
-    m_toolBtnExportAll->setToolTip(tr("导出所有消息"));
-    m_toolBtnExportAll->setStatusTip(tr("导出所有消息记录"));
+    m_toolBtnExportAll->setToolTip(tr("导出 all 消息"));
+    m_toolBtnExportAll->setStatusTip(tr("导出 all 消息记录"));
 
 //    m_toolBtnDeleteDate= new QToolButton(this);
 //    m_toolBtnDeleteDate->setIcon(QIcon(":/images/deleteDate.png"));
 //    m_toolBtnDeleteDate->setAutoRaise(true);
-//    m_toolBtnDeleteDate->setToolTip(tr("delete  当前显示的消息记录"));
-//    m_toolBtnDeleteDate->setStatusTip(tr("delete  当先显示的消息记录"));
+//    m_toolBtnDeleteDate->setToolTip(tr("delete  当前显示,s 消息记录"));
+//    m_toolBtnDeleteDate->setStatusTip(tr("delete  当 first 显示,s 消息记录"));
 
     m_toolBtnDeleteOne = new QToolButton(this);
     m_toolBtnDeleteOne->setIcon(QIcon(":/images/deleteOne.png"));
     m_toolBtnDeleteOne->setAutoRaise(true);
     m_toolBtnDeleteOne->setToolTip(tr("delete  当前好友消息记录"));
-    m_toolBtnDeleteOne->setStatusTip(tr("delete  与当前好友的消息记录"));
+    m_toolBtnDeleteOne->setStatusTip(tr("delete   and 当前好友,s 消息记录"));
 
     m_toolBtnDeleteAll = new QToolButton(this);
     m_toolBtnDeleteAll->setIcon(QIcon(":/images/deleteAll.png"));
     m_toolBtnDeleteAll->setAutoRaise(true);
-    m_toolBtnDeleteAll->setToolTip(tr("delete  所有消息记录"));
-    m_toolBtnDeleteAll->setStatusTip(tr("delete  所有的消息记录"));
+    m_toolBtnDeleteAll->setToolTip(tr("delete   all 消息记录"));
+    m_toolBtnDeleteAll->setStatusTip(tr("delete   all ,s 消息记录"));
 
 
     QHBoxLayout *topLayout = new QHBoxLayout;
@@ -223,8 +223,8 @@ void IMMessageWidget::initIMMessageWidget()
     // 不可编辑
     m_listViewGroup->setEditTriggers(QAbstractItemView::NoEditTriggers);
     m_listViewGroup->setModel(m_modelGroup);
-    m_listViewGroup->setToolTip(tr("分组列表"));
-    m_listViewGroup->setStatusTip(tr("请选择分组"));
+    m_listViewGroup->setToolTip(tr(" box 列 table "));
+    m_listViewGroup->setStatusTip(tr(" please 选择 box "));
 
     m_modelFriend = new QStringListModel(this);
 //    m_modelFriend->setStringList();
@@ -233,8 +233,8 @@ void IMMessageWidget::initIMMessageWidget()
     // 不可编辑
     m_listViewFriend->setEditTriggers(QAbstractItemView::NoEditTriggers);
     m_listViewFriend->setModel(m_modelFriend);
-    m_listViewFriend->setToolTip(tr("好友列表"));
-    m_listViewFriend->setStatusTip(tr("请选择好友"));
+    m_listViewFriend->setToolTip(tr("好友列 table "));
+    m_listViewFriend->setStatusTip(tr(" please 选择好友"));
 
     m_tbMessageShow = new QTextBrowser(this);
 
@@ -255,7 +255,7 @@ void IMMessageWidget::initIMMessageWidget()
 
 /*************************************************
 Function Name: linkSignalWithSlot
-Description:  connection 信号与槽
+Description:  connection 信 number  and 槽
 *************************************************/
 void IMMessageWidget::linkSignalWithSlot()
 {

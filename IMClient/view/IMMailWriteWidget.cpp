@@ -102,7 +102,7 @@ void IMMailWriteWidget::onClickBtnColor()
         m_textInput->setTextColor(color);
         m_textInput->setFocus();
 
-        //    //设置字体的颜色，并将其写入文件
+        //    //设置字体,s 颜色，并将其写入文件
         //		saveFile.color = colorDialog->currentColor();
         //		saveFontColor();
     }
@@ -111,7 +111,7 @@ void IMMailWriteWidget::onClickBtnColor()
 
 /*************************************************
 Function Name: onClickBtnSend()
-Description:  点击“发送”按钮
+Description:   click “发送” button 
 *************************************************/
 void IMMailWriteWidget::onClickBtnSend()
 {
@@ -127,7 +127,7 @@ void IMMailWriteWidget::onClickBtnSend()
     }
     if (m_leTheme->text().isEmpty())
     {
-        QMessageBox::about(NULL, tr("提示"), tr("信件主题不能为空"));
+        QMessageBox::about(NULL, tr("提示"), tr("信件  theme 不能为空"));
 
         return;
     }
@@ -137,7 +137,7 @@ void IMMailWriteWidget::onClickBtnSend()
         return;
     }
 
-    // 获取信息输入框的信息
+    //  get 信息 input 框,s 信息
     getMailInformation();
 
     m_mailCtrl->requestSendMail(m_mail);
@@ -153,7 +153,7 @@ Description:  init
 void IMMailWriteWidget::initIMMailWriteWidget()
 {
     setWidgetToolBtn();
-    // 输入编辑框工具栏
+    //  input 编辑框工具栏
     QHBoxLayout *hLayoutInputTool = new QHBoxLayout;
     hLayoutInputTool->addWidget(m_cbFont);
     hLayoutInputTool->addWidget(m_cbSize);
@@ -168,7 +168,7 @@ void IMMailWriteWidget::initIMMailWriteWidget()
     // 左侧标签部分
     QLabel *labelSender = new QLabel(tr("发件人:"), this);
     QLabel *labelReceiver = new QLabel(tr("收件人:"), this);
-    QLabel *labelTheme = new QLabel(tr("主    题:"), this);
+    QLabel *labelTheme = new QLabel(tr(" main     题:"), this);
     QVBoxLayout *leftLayout = new QVBoxLayout;
     leftLayout->setAlignment(Qt::AlignRight);
     leftLayout->addWidget(labelSender);
@@ -179,7 +179,7 @@ void IMMailWriteWidget::initIMMailWriteWidget()
     QLabel *senderAddress = new QLabel(QString(tr("%1%2"))
                                        .arg(m_myID, MAIL_ADDRESS_FORMAT), this);
     m_leReceiverAddress = new QLineEdit(this);
-    m_leReceiverAddress->setPlaceholderText(tr("请输入对方地址"));
+    m_leReceiverAddress->setPlaceholderText(tr(" please  input 对方地址"));
     QLabel *labelAddressFormat = new QLabel(MAIL_ADDRESS_FORMAT);
 //    m_leReceiverAddress->setText(MAIL_ADDRSS_FORMAT);
     QHBoxLayout *layoutReceiver = new QHBoxLayout;
@@ -187,7 +187,7 @@ void IMMailWriteWidget::initIMMailWriteWidget()
     layoutReceiver->addWidget(labelAddressFormat);
 
     m_leTheme = new QLineEdit(this);
-    m_leTheme->setPlaceholderText(tr("请输入主题"));
+    m_leTheme->setPlaceholderText(tr(" please  input   theme "));
     QVBoxLayout *rightLayout = new QVBoxLayout;
     rightLayout->addWidget(senderAddress);
     rightLayout->addLayout(layoutReceiver);
@@ -199,7 +199,7 @@ void IMMailWriteWidget::initIMMailWriteWidget()
     topLayout->addLayout(rightLayout);
 //    topLayout->setContentsMargins(0,0,0,0);
 
-    // 底部按钮部分
+    // 底部 button 部分
     m_btnSend = new QPushButton(tr("发送"), this);
     m_btnSend->setDefault(true);
     QHBoxLayout *btmLayout = new QHBoxLayout;
@@ -224,7 +224,7 @@ void IMMailWriteWidget::initIMMailWriteWidget()
 
 /*************************************************
 Function Name: linkSignalWithSlot()
-Description:  connection 信号与槽
+Description:  connection 信 number  and 槽
 *************************************************/
 void IMMailWriteWidget::linkSignalWithSlot()
 {
@@ -298,7 +298,7 @@ void IMMailWriteWidget::setWidgetToolBtn()
     m_toolBtnColor->setStatusTip(tr("设置颜色"));
 }
 
-// 获取信息输入框的信息
+//  get 信息 input 框,s 信息
 /*************************************************
 Function Name: setWidgetToolBtn()
 Description:  设置面板图标

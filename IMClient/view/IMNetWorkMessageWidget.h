@@ -15,7 +15,7 @@ public:
 signals:
     
 public slots:
-    // delete  某日的信息记录
+    // delete  某日,s 信息记录
     void onClickDeleteDate();
     // delete  某好友信息记录
     void onClickDeleteOne();
@@ -23,11 +23,11 @@ public slots:
     void onClickDeleteAll();
     // 导出某好友消息记录
     void onClickExportOne();
-    // 导出所有消息记录
+    // 导出 all 消息记录
     void onClickExportAll();
-    // 获取消息记录
+    //  get 消息记录
     void onClickGetMessage();
-//    // 单击好友列表项
+//    // 单击好友列 table 项
 //    void friendItemClicked(const QModelIndex & index);
 private:
     IMMainWidget * m_mainWidget;

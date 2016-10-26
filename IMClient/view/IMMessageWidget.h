@@ -23,11 +23,11 @@ public:
 
     virtual ~IMMessageWidget();
 
-    // 设置 分组 的model
+    // 设置  box  ,s model
     void setListModelGroup(const QStringList & groupList);
     void setListModelGroup();
 
-    // 设置 好友 的model
+    // 设置 好友 ,s model
     void setListModelFriend(const QStringList & friendList);
     void setListModelFriend(const QString & groupName);
 
@@ -40,7 +40,7 @@ public:
 signals:
     void currentIndexClicked(int);
 public slots:
-    // delete  某日的信息记录
+    // delete  某日,s 信息记录
     virtual void onClickDeleteDate() = 0;
     // delete  某好友信息记录
     virtual void onClickDeleteOne() = 0;
@@ -50,14 +50,14 @@ public slots:
     virtual void onClickImport(){}
     // 导出某好友消息记录
     virtual void onClickExportOne() = 0;
-    // 导出所有消息记录
+    // 导出 all 消息记录
     virtual void onClickExportAll() = 0;
-    // 获取消息记录
+    //  get 消息记录
     virtual void onClickGetMessage() = 0;
 
-    // 单击 组列表
+    // 单击  box 列 table 
     void groupItemClicked(const QModelIndex &);
-    // 单击 好友列表
+    // 单击 好友列 table 
     void friendItemClicked(const QModelIndex &);
 //    virtual void friendItemClicked(const QModelIndex &) = 0;
 
@@ -73,7 +73,7 @@ protected:
 private:
     // init 
     void initIMMessageWidget();
-    // 链接信号与槽
+    // 链接信 number  and 槽
     void linkSignalWithSlot();
 
 private:

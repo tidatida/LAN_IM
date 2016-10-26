@@ -28,7 +28,7 @@ IMMailWidget::~IMMailWidget()
 }
 /*************************************************
 Function Name: getMailCtrl
-Description: 获取mailcontrol  对象
+Description:  get mailcontrol  对象
 *************************************************/
 IMMailCtrl* IMMailWidget::getMailCtrl()
 {
@@ -37,7 +37,7 @@ IMMailCtrl* IMMailWidget::getMailCtrl()
 
 /*************************************************
 Function Name: getMyID
-Description: 获取user 自己的ID
+Description:  get user 自己,s ID
 *************************************************/
 QString IMMailWidget::getMyID()
 {
@@ -46,7 +46,7 @@ QString IMMailWidget::getMyID()
 
 /*************************************************
 Function Name: getMailCtrl
-Description: 获取mailcontrol  对象
+Description:  get mailcontrol  对象
 *************************************************/
 void IMMailWidget::showMailInformationWidget(const MailInformation & mail)
 {
@@ -116,7 +116,7 @@ void IMMailWidget::setOutMailsWidget(const QVector<MailInformation> & outMailVec
 
 /*************************************************
 Function Name: addInMailButton
-Description: add 收件箱按钮
+Description: add 收件箱 button 
 *************************************************/
 bool IMMailWidget::addInMailButton(const MailInformation & mail)
 {
@@ -134,7 +134,7 @@ bool IMMailWidget::addInMailButton(const MailInformation & mail)
 
 /*************************************************
 Function Name: addOutMailButton
-Description: add 发件箱按钮
+Description: add 发件箱 button 
 *************************************************/
 bool IMMailWidget::addOutMailButton(const MailInformation & mail)
 {
@@ -152,7 +152,7 @@ bool IMMailWidget::addOutMailButton(const MailInformation & mail)
 
 /*************************************************
 Function Name: deleteMail
-Description: delete  邮件按钮
+Description: delete  邮件 button 
 *************************************************/
 void IMMailWidget::deleteMail(const int & mailID)
 {
@@ -182,7 +182,7 @@ void IMMailWidget::deleteMail(const int & mailID)
 
 /*************************************************
 Function Name: deleteMail
-Description: add 新邮件到发件箱
+Description: add  new 邮件到发件箱
 *************************************************/
 bool IMMailWidget::addNewOutMailButton(const MailInformation & mail)
 {
@@ -199,7 +199,7 @@ bool IMMailWidget::addNewOutMailButton(const MailInformation & mail)
 
 /*************************************************
 Function Name: deleteMail
-Description: add 新邮件到收件箱
+Description: add  new 邮件到收件箱
 *************************************************/
 bool IMMailWidget::addNewInMailButton(const MailInformation & mail)
 {
@@ -243,7 +243,7 @@ void IMMailWidget::initIMMailWidget()
 
 /*************************************************
 Function Name: linkSignalWithSlot
-Description:  connection 信号与槽
+Description:  connection 信 number  and 槽
 *************************************************/
 void IMMailWidget::linkSignalWithSlot()
 {

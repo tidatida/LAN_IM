@@ -77,7 +77,7 @@ void IMSearchListWidget::removeItem(QWidget *item)
 
 /*************************************************
 Function Name: clearAll()
-Description:  delete  所有
+Description:  delete   all 
 *************************************************/
 void IMSearchListWidget::clearAll()
 {

@@ -15,15 +15,15 @@ public:
     IMLittleWidget(int num, QWidget *parent = 0);
     virtual ~IMLittleWidget() = 0;
 
-    // 设置各编辑框的标题栏
+    // 设置各编辑框,s 标题栏
     void setLabelsText(const QString & first = "",
                       const QString & second = "",
                       const QString & third = "");
-    // 获取user 输入的信息
+    //  get user  input ,s 信息
     TempStrings getInputInformation() const;
-    // 将user 输入的信息set to  passwd风格
+    // 将user  input ,s 信息set to  passwd风格
     void setPasswordStyle();
-    // set all 输入框设置可用属性
+    // set all  input 框设置可用属性
     void setAllEnabled(bool enable);
 signals:
     
@@ -31,7 +31,7 @@ public slots:
     virtual void onClickedBtnOk() = 0;
     void onClickedBtnClose();
 private:
-    int m_numOfLineEdit; // 输入栏的个数
+    int m_numOfLineEdit; //  input 栏,s 个数
     QLabel *m_labelFirst;
     QLabel *m_labelSecond;
     QLabel *m_labelThird;

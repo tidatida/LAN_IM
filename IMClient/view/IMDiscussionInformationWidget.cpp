@@ -12,7 +12,7 @@ IMDiscussionInformationWidget::IMDiscussionInformationWidget(IMMainWidget *mainW
 {
     m_mainWidget = mainWidget;
     initIMLoginWidget();
-    setWindowTitle(tr("讨论组信息"));
+    setWindowTitle(tr("讨论 box 信息"));
 
     setReadOnly(true, false);
 
@@ -126,10 +126,10 @@ void IMDiscussionInformationWidget::initIMLoginWidget()
     m_labelDiscussionHead->setPixmap(pixmap);
 
 //    m_labelDiscussionHead->setPixmap(QPixmap(":/images/discussion.png"));
-    m_labelDiscussionName = new QLabel(tr("讨论组名称:"), this);
-    m_labelDiscussionID = new QLabel(tr("讨论组帐号:"), this);
-    m_labelTheme = new QLabel(tr("讨论组主题:"), this);
-    m_labelCreatorID = new QLabel(tr("create 者帐号:"), this);
+    m_labelDiscussionName = new QLabel(tr("讨论 box  name 称:"), this);
+    m_labelDiscussionID = new QLabel(tr("讨论 box 帐 number :"), this);
+    m_labelTheme = new QLabel(tr("讨论 box   theme :"), this);
+    m_labelCreatorID = new QLabel(tr("create 者帐 number :"), this);
     m_labelCreateDate = new QLabel(tr("create 时间:"), this);
 
     m_leDiscussionName = new QLineEdit(this);

@@ -113,8 +113,8 @@ UserInformation IMInformationWidget::getInformation()
 
 // protected:----------------------------------------
 
-//聊天窗口close 槽函数  发送信号 让主窗体delete   map 表项
-void IMInformationWidget::closeEvent(QCloseEvent *)//离开时触发的  应该检查窗口是否都close 了！！
+//聊天窗口close 槽函数  发送信 number  让 main 窗体delete   map  table 项
+void IMInformationWidget::closeEvent(QCloseEvent *)//离开时触发,s   应该检查窗口是否都close 了！！
 {
 //    emit closeChat(secretAddress);
     if (NULL != m_mainWidget)
@@ -180,11 +180,11 @@ void IMInformationWidget::initIMLoginWidget()
     m_isEdit = false;
 
     // 左边标签
-    m_labelUserID = new QLabel(tr("帐号:"));
+    m_labelUserID = new QLabel(tr("帐 number :"));
     m_labelNickname = new QLabel(tr("昵称:"));
-    m_labelSex = new QLabel(tr("性别:"));
+    m_labelSex = new QLabel(tr("性 other :"));
     m_labelBirthday = new QLabel(tr("生日:"));
-    m_labelName = new QLabel(tr("姓名:"));
+    m_labelName = new QLabel(tr("姓 name :"));
     m_labelPhone = new QLabel(tr("电话"));
     m_labelAddress = new QLabel(tr("地址"));
     QVBoxLayout *vLayoutLabelLeft= new QVBoxLayout;
@@ -211,7 +211,7 @@ void IMInformationWidget::initIMLoginWidget()
     vLayoutEditMid->addWidget(m_leBirthday);
     vLayoutEditMid->addWidget(m_leName);
 
-    // 右边 按钮 and  头像
+    // 右边  button  and  头像
     m_btnNext = new QPushButton(tr("下一张"));
     m_btnPre = new QPushButton(tr("上一张"));
     QHBoxLayout *hLayoutBtnEdit = new QHBoxLayout;

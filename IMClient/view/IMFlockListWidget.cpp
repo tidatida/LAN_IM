@@ -32,7 +32,7 @@ IMFlockListWidget::IMFlockListWidget(IMMainWidget *mainWidget, QWidget *parent) 
 
     setStyleSheet("QWidget{border: 0;}");
 
-    //create 右键菜单
+    //create  right button  menu 
     creatMenu();
 
 //    connect(this, SIGNAL(customContextMenuRequested()),
@@ -82,14 +82,14 @@ void IMFlockListWidget::removeItem(QWidget *item)
 
 /*************************************************
 Function Name: creatMenu()
-Description:  create 右键菜单
+Description:  create  right button  menu 
 *************************************************/
 void IMFlockListWidget::creatMenu()
 {
     m_menu = new QMenu(this);
-    QAction *actCreateFlock = new QAction(tr("新建群"), this);
+    QAction *actCreateFlock = new QAction(tr(" create 群"), this);
     QAction *actAddFlock = new QAction(tr("add 群"), this);
-    QAction *actRefresh = new QAction(tr("刷新群列表"), this);
+    QAction *actRefresh = new QAction(tr("刷 new 群列 table "), this);
 
     connect(actCreateFlock, SIGNAL(triggered()),
         m_mainWidget, SLOT(createFlock()));
@@ -106,13 +106,13 @@ void IMFlockListWidget::creatMenu()
 
 /*************************************************
 Function Name: showMenu()
-Description:  显示右键菜单
+Description:  显示 right button  menu 
 *************************************************/
 void IMFlockListWidget::showMenu()
  {
     if (m_menu == NULL)
     {
-        //create 右键菜单
+        //create  right button  menu 
         creatMenu();
     }
     m_menu->exec(QCursor::pos());
@@ -121,7 +121,7 @@ void IMFlockListWidget::showMenu()
 
 /*************************************************
 Function Name: mousePressEvent
-Description: 鼠标单击事件
+Description:  mouse 单击 event 
 *************************************************/
 void IMFlockListWidget::mousePressEvent(QMouseEvent *event)
 {

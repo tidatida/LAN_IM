@@ -2,7 +2,7 @@
 File Name: IMClientSocketCtrl.cpp
 Author: jet.F.R
 Date: 2014.3.10
-Description: used to   control  clientsocket的 class
+Description: used to   control  clientsocket,s  class
 Changes:
 ********************************************/
 
@@ -31,7 +31,7 @@ IMClientSocketCtrl::~IMClientSocketCtrl()
 
 /*************************************************
 Function Name: receiveMessage()
-Description: 接收user 发送的信息
+Description: 接收user 发送,s 信息
 *************************************************/
 void IMClientSocketCtrl::receiveMessage()
 
@@ -542,7 +542,7 @@ void IMClientSocketCtrl::deleteScoket()
 
 /*************************************************
 Function Name: readMessage()
-Description: 发送user 的信息至另一个user 
+Description: 发送user ,s 信息至另一个user 
 *************************************************/
 //void IMClientSocketCtrl::sendTalkMessage(TalkMessage mes)
 //{
@@ -560,7 +560,7 @@ Description: 发送user 的信息至另一个user
 // mark: private slots--------------------------------------------------
 /*************************************************
 Function Name: readMessage()
-Description: 读取user 发送的信息
+Description: 读取user 发送,s 信息
 Input: NULL
 Output:NULL
 Changes: NULL
@@ -625,7 +625,7 @@ Changes: NULL
 /*************************************************
 Function Name: checkLogin()
 Description: 检测user 登录信息
-Input: QString id:user 帐号id ，QString pwd:user  passwd
+Input: QString id:user 帐 number id ，QString pwd:user  passwd
 Output: bool : 检测信息
 Changes: NULL
 *************************************************/
@@ -695,7 +695,7 @@ Changes: NULL
 
 /*************************************************
 Function Name: getFriends()
-Description: 获取所有
+Description:  get  all 
 *************************************************/
 //bool IMClientSocketCtrl::getFriends(const QString &id)
 //{
@@ -804,7 +804,7 @@ Changes: NULL
 
 /*************************************************
 Function Name: sendFriends()
-Description: 发送所有好友信息
+Description: 发送 all 好友信息
 Input: bool isSuccess: 是否成功,  map 好友信息
 Output:NULL
 Changes: NULL

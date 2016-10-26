@@ -810,7 +810,7 @@ void IMMainWidget::deleteLocalMessageAll()
 ////        file.copy("/tmp/nimei.xls");
 ////        file.close();
 ////    }
-//    QString temp = QString(tr("  chat record export success:%1。\n请选择  save路径。")).arg(newPath);
+//    QString temp = QString(tr("  chat record export success:%1。\n please 选择  save路径。")).arg(newPath);
 //    QMessageBox::information(NULL, tr("  chat record"), temp);
 
 //    emit exportHistoryMessageOneFriendSuccess(m_myself.m_userID, id, newPath);
@@ -908,17 +908,17 @@ void IMMainWidget::setFriendListWidget(const QVector<FriendInformation> &friends
 
     //    if (!m_friendsGroupList.contains(GROUP_NAME_DEFAULT))
     //    {
-    //        // store  新的分组号
+    //        // store   new ,s  box  number 
     //        m_friendsGroupList.append(GROUP_NAME_DEFAULT);
 
-    //        // 新建and store 分组
+    //        //  create and store  box 
     //        IMToolBox *toolBox = new IMToolBox;
     //        IMToolItem *toolItem = new IMToolItem(GROUP_NAME_DEFAULT);
     //        m_toolItemsFriendsVec.push_back(toolItem);
     //        toolBox->addItem(toolItem);
     //        m_friendListWidget->addItem(toolBox);
 
-    //        // store 映射关系
+    //        // store  map  relation 
     //        m_indexFriendsGroupMap.insert(GROUP_NAME_DEFAULT, m_toolItemsFriendsVec.size()-1);
     //    }
 
@@ -1422,7 +1422,7 @@ void IMMainWidget::setDiscussionInformation(const DiscussionInformation & discus
 
 /*************************************************
 Function Name:setFlockMemberRemark
-Description: set Group成员名片
+Description: set Group成员 name 片
 *************************************************/
 void IMMainWidget::setFlockMemberRemark(const TempStrings & tmpStr)
 {
@@ -1443,7 +1443,7 @@ void IMMainWidget::setFriendRemark(const TempStrings& tempStr)
         return;
     QMap<QString, IMFriendButton*>::iterator iter;
     iter = m_friendMap.find(tempStr.m_two);
-    //如果friend列表中不存在这self ，就直接返回
+    //如果friend列 table 中不存在这self ，就直接返回
     if(m_friendMap.end() == iter)
         return;
 
@@ -1454,7 +1454,7 @@ void IMMainWidget::setFriendRemark(const TempStrings& tempStr)
 
 /*************************************************
 Function Name:deleteFriend
-Description: 已deletefriend
+Description:  already deletefriend
 *************************************************/
 void IMMainWidget::deletedFriend(const QString & myID, const QString & friendID,
                                  const QString & groupName)
@@ -1485,7 +1485,7 @@ void IMMainWidget::deletedFriend(const QString & myID, const QString & friendID,
 
     //    QMap<QString, IMFriendButton*>::iterator iter;
     //    iter = m_indexFriendsGroupMap.find(friendID);
-    //    //如果friend列表中不存在这self ，就直接返回
+    //    //如果friend列 table 中不存在这self ，就直接返回
     //    if(m_indexFriendsGroupMap.end() == iter)
     //        return;
     //    iter.value()
@@ -1495,8 +1495,7 @@ void IMMainWidget::deletedFriend(const QString & myID, const QString & friendID,
 
 
 /*************************************************
-Function Name:dropedFlock
-Description: 已deleteGroup
+Function NameQInputDialogption:  already deleteGroup
 *************************************************/
 void IMMainWidget::dropedFlock(const QString & flockID)
 {
@@ -1504,7 +1503,7 @@ void IMMainWidget::dropedFlock(const QString & flockID)
         return;
 
     QMessageBox::information(NULL, tr("Groupmsg "),
-                             QString(tr("Group%1已经被Group主解散")).arg(flockID));
+                             QString(tr("Group%1 already 经被Group main 解散")).arg(flockID));
 
     if (m_flockRoomMap.contains(flockID))
     {
@@ -1528,7 +1527,7 @@ void IMMainWidget::dropedFlock(const QString & flockID)
 
 /*************************************************
 Function Name:dropedDiscussion
-Description: 已deletediscuss group
+Description:  already deletediscuss group
 *************************************************/
 void IMMainWidget::dropedDiscussion(const QString & discussionID)
 
@@ -1537,7 +1536,7 @@ void IMMainWidget::dropedDiscussion(const QString & discussionID)
         return;
 
     QMessageBox::information(NULL, tr("discuss groupmsg "),
-                             QString(tr("discuss group%1已经被组长解散")).arg(discussionID));
+                             QString(tr("discuss group%1 already 经被 box 长解散")).arg(discussionID));
 
     if (m_discussionRoomMap.contains(discussionID))
     {
@@ -1560,7 +1559,7 @@ void IMMainWidget::dropedDiscussion(const QString & discussionID)
 
 /*************************************************
 Function Name:leavedFlock
-Description: 已退出Group
+Description:  already 退出Group
 *************************************************/
 void IMMainWidget::leavedFlock(const QString & memberID,
                                const QString & flockID,
@@ -1569,12 +1568,12 @@ void IMMainWidget::leavedFlock(const QString & memberID,
     if (creatorID == m_myself.m_userID)
     {
         QMessageBox::information(NULL, tr("Groupmsg "),
-                                 QString(tr("用户%1已经退出Group%2")).
+                                 QString(tr("user%1 already 经退出Group%2")).
                                  arg(memberID, flockID));
 
-        // 如果Group是open的，好及时刷新，将成员在Group中delete
-        // 不然要等到下次openGroup的时候，才能看到成员已被delete
-        // 关系也不大
+        // 如果Group是open,s ，好及时刷 new ，将成员在Group中delete
+        // 不然要等到下次openGroup,s 时候，才能看到成员 already 被delete
+        //  relation 也不大
         if (m_flockRoomMap.contains(flockID))
         {
             m_flockRoomMap[flockID]->removeFlockMemberButton(memberID);
@@ -1587,7 +1586,7 @@ void IMMainWidget::leavedFlock(const QString & memberID,
     else if (memberID == m_myself.m_userID)
     {
         QMessageBox::information(NULL, tr("Groupmsg "),
-                                 QString(tr("您好,%1,您已经退出Group%2")).
+                                 QString(tr("hello,%1,您 already 经退出Group%2")).
                                  arg(memberID, flockID));
 
         if (m_flockRoomMap.contains(flockID))
@@ -1623,7 +1622,7 @@ void IMMainWidget::leavedFlock(const QString & memberID,
 
 /*************************************************
 Function Name:leavedDiscussion
-Description: 已退出discuss group
+Description:  already 退出discuss group
 *************************************************/
 void IMMainWidget::leavedDiscussion(const QString & memberID,
                                     const QString & discussionID)
@@ -1631,7 +1630,7 @@ void IMMainWidget::leavedDiscussion(const QString & memberID,
     if (memberID == m_myself.m_userID)
     {
         //        QMessageBox::information(NULL, tr("discuss groupmsg "),
-        //                                 QString(tr("您好,%1,您已经退出discuss group%2")).
+        //                                 QString(tr("hello,%1,您 already 经退出discuss group%2")).
         //                                 arg(memberID, discussionID));
 
         if (m_discussionRoomMap.contains(discussionID))
@@ -1654,12 +1653,12 @@ void IMMainWidget::leavedDiscussion(const QString & memberID,
     else
     {
         //             QMessageBox::information(NULL, tr("Groupmsg "),
-        //                                      QString(tr("用户%1已经退出discuss group%2")).
+        //                                      QString(tr("user%1 already 经退出discuss group%2")).
         //                                      arg(memberID, discussionID));
 
-        //             // 如果discuss group是open的，好及时刷新，将成员在discuss group中delete
-        //             // 不然要等到下次openGroup的时候，才能看到成员已被delete
-        //             // 关系也不大
+        //             // 如果discuss group是open,s ，好及时刷 new ，将成员在discuss group中delete
+        //             // 不然要等到下次openGroup,s 时候，才能看到成员 already 被delete
+        //             //  relation 也不大
         if (m_discussionRoomMap.contains(discussionID))
         {
             m_discussionRoomMap[discussionID]->removeDiscussionMemberButton(memberID);
@@ -1687,7 +1686,7 @@ void IMMainWidget::createFlockSuccess(const FlockInformation & flock)
         return;
     if (!addFlockButton(flock))
         return;
-    QString temp =  QString(tr("您好,%1(%2).\n您已经successcreateGroup%3(%4).\ncreate日期: %5.")).
+    QString temp =  QString(tr("hello,%1(%2).\n您 already 经successcreateGroup%3(%4).\ncreate日期: %5.")).
             arg(m_myself.m_userID, m_myself.m_nickname,
                 flock.m_flockID, flock.m_flockName,
                 flock.m_createDate.toString("yyyy-MM-dd"));
@@ -1710,7 +1709,7 @@ void IMMainWidget::createDiscussionSuccess(const DiscussionInformation & discuss
         return;
     if (!addDiscussionButton(discussion))
         return;
-    QString temp =  QString(tr("您好,%1(%2).\n您已经successcreatediscuss group%3(%4).\ncreate日期: %5.")).
+    QString temp =  QString(tr("hello,%1(%2).\n您 already 经successcreatediscuss group%3(%4).\ncreate日期: %5.")).
             arg(m_myself.m_userID, m_myself.m_nickname,
                 discussion.m_discussionID, discussion.m_discussionName,
                 discussion.m_createDate.toString("yyyy-MM-dd"));
@@ -1737,7 +1736,7 @@ void IMMainWidget::searchFriend(const QString & text)
     m_toolBtnSearch->setEnabled(true);
 
     m_searchListWidget->clearAll();
-    //search 匹配的friend
+    //search 匹配,s friend
     QMapIterator<QString, IMFriendButton *> i(m_friendMap);
     while (i.hasNext()) {
         i.next();
@@ -1763,7 +1762,7 @@ void IMMainWidget::searchFriend(const QString & text)
 
 /*************************************************
 Function Name:onClickSearchFriend
-Description: 点击“search ”按钮
+Description:  click “search ” button 
 *************************************************/
 void IMMainWidget::onClickSearchFriend()
 {
@@ -1783,7 +1782,7 @@ void IMMainWidget::onClickAddFriend()
 {
     bool isOk = false;
     QString friendID = QInputDialog::getText(NULL, "Add friend",
-                                             "请输入对方帐号",
+                                             " please  input 对方帐 number ",
                                              QLineEdit::Normal,
                                              "",
                                              &isOk);
@@ -1804,7 +1803,7 @@ void IMMainWidget::onClickAddFlock()
 {
     bool isOk = false;
     QString flockID = QInputDialog::getText(NULL, "Add Group",
-                                            "请输入Group帐号",
+                                            " please  input Group帐 number ",
                                             QLineEdit::Normal,
                                             "",
                                             &isOk);
@@ -1816,13 +1815,13 @@ void IMMainWidget::onClickAddFlock()
 
     if (m_flockMap.contains(flockID))
     {
-        QMessageBox::critical(NULL, tr("   add failed"), tr("你已经Add 入该Group"));
+        QMessageBox::critical(NULL, tr("   add failed"), tr("你 already 经add 该Group"));
         return;
     }
 
     bool isOkMes = false;
     QString checkMes = QInputDialog::getText(NULL, "Add Group",
-                                             "请输入验证msg",
+                                             " please  input verify msg",
                                              QLineEdit::Normal,
                                              QString(tr("你好,我是: %1")).
                                              arg(m_myself.m_nickname),
@@ -1855,7 +1854,7 @@ void IMMainWidget::onClickChangePwd()
 {
     bool isOkMes = false;
     QString oldPwd = QInputDialog::getText(NULL, "modify password",
-                                           "请输入原password:",
+                                           " please  input 原password:",
                                            QLineEdit::Password,
                                            NULL,
                                            &isOkMes);
@@ -1865,7 +1864,7 @@ void IMMainWidget::onClickChangePwd()
     while(1)
     {
         QString newPwdOne = QInputDialog::getText(NULL, "modify password",
-                                                  "请输入新password:",
+                                                  " please  input  new password:",
                                                   QLineEdit::Password,
                                                   NULL,
                                                   &isOkMes);
@@ -1874,18 +1873,18 @@ void IMMainWidget::onClickChangePwd()
         if (newPwdOne.length() < 6)
         {
             QMessageBox::critical(NULL, tr("modify password"),
-                                  tr("新password长度不能少于6个字符！"));
+                                  tr(" new password长度不能少于6个字符！"));
             continue;
         }
         if (newPwdOne.length() > 14)
         {
             QMessageBox::critical(NULL, tr("modify password"),
-                                  tr("新password长度不能超过14个字符！"));
+                                  tr(" new password长度不能超过14个字符！"));
             continue;
         }
 
         QString newPwdTwo = QInputDialog::getText(NULL, "modify password",
-                                                  "请再次输入新password:",
+                                                  " please  new password:",
                                                   QLineEdit::Password,
                                                   NULL,
                                                   &isOkMes);
@@ -1893,7 +1892,7 @@ void IMMainWidget::onClickChangePwd()
             return;
         if (newPwdTwo != newPwdOne)
         {
-            QMessageBox::critical(NULL, tr("modify password"), tr("两次新password不一致！"));
+            QMessageBox::critical(NULL, tr("modify password"), tr("两次 new password不一致！"));
             continue;
         }
         else
@@ -1920,9 +1919,9 @@ void IMMainWidget::createFlock()
 {
     bool isOk = false;
     QString flockName = QInputDialog::getText(NULL, "createGroup",
-                                              "请输入Group名",
+                                              " please  input Group name ",
                                               QLineEdit::Normal,
-                                              QString("%1的IMGroup").
+                                              QString("%1,s IMGroup").
                                               arg(m_myself.m_nickname),
                                               &isOk);
     if (!isOk)
@@ -1930,9 +1929,9 @@ void IMMainWidget::createFlock()
 
     isOk = false;
     QString flockTheme = QInputDialog::getText(NULL, "createGroup",
-                                               "请输入Group主题",
+                                               " please  input Group  theme ",
                                                QLineEdit::Normal,
-                                               tr("没有主题"),
+                                               tr(" no    theme "),
                                                &isOk);
     if (!isOk)
         return;
@@ -1955,9 +1954,9 @@ void IMMainWidget::createDiscussion()
 {
     bool isOk = false;
     QString name = QInputDialog::getText(NULL, "creatediscuss group",
-                                         "请输入组名",
+                                         " please  input  box  name ",
                                          QLineEdit::Normal,
-                                         QString("%1的IMdiscuss group").
+                                         QString("%1,s IMdiscuss group").
                                          arg(m_myself.m_nickname),
                                          &isOk);
     if (!isOk)
@@ -1965,9 +1964,9 @@ void IMMainWidget::createDiscussion()
 
     isOk = false;
     QString theme = QInputDialog::getText(NULL, "creatediscuss group",
-                                          "请输入主题",
+                                          " please  input   theme ",
                                           QLineEdit::Normal,
-                                          tr("没有主题"),
+                                          tr(" no    theme "),
                                           &isOk);
     if (!isOk)
         return;
@@ -2015,7 +2014,7 @@ void IMMainWidget::showMailWidget()
 
 /*************************************************
 Function Name:showMailWriteWidget
-Description: show mailbox 中写信Window
+Description: show mailbox  write mail Window
 *************************************************/
 void IMMainWidget::showMailWriteWidget(const QString & address)
 {
@@ -2038,7 +2037,7 @@ void IMMainWidget::showLatestMessageWidget()
 
 /*************************************************
 Function Name:setTimerStatus
-Description: set show 有new msg的定时
+Description: set show  Got new msg,s  timer 
 *************************************************/
 void IMMainWidget::setTimerStatus(bool isOpen)
 {
@@ -2048,8 +2047,8 @@ void IMMainWidget::setTimerStatus(bool isOpen)
         {
             m_toolBtnNewMes->setHidden(false);
             m_timerId=startTimer(400);//400ms
-            m_toolBtnNewMes->setStatusTip(tr("查阅new msg"));
-            m_toolBtnNewMes->setToolTip(QString(tr("有new msg")));
+            m_toolBtnNewMes->setStatusTip(tr(" read new msg"));
+            m_toolBtnNewMes->setToolTip(QString(tr(" Got new msg")));
             //                                        .arg(m_messageListWidget->size()));
         }
     }
@@ -2067,11 +2066,11 @@ void IMMainWidget::setTimerStatus(bool isOpen)
 
 /*************************************************
 Function Name:renameBoxSuccess
-Description: 重命名分组success
+Description: rename groupsuccess
 *************************************************/
 void IMMainWidget::renameBoxSuccess(const QString & title, const QString & newTitle)
 {
-    // 先modify :组名 与 下标 映射表
+    //  first modify : box  name   and   subscribe index   map  table 
     int index = m_indexFriendsGroupMap.value(title);
     //    if (index == 0)
     //    {
@@ -2081,7 +2080,7 @@ void IMMainWidget::renameBoxSuccess(const QString & title, const QString & newTi
     m_indexFriendsGroupMap.remove(title);
     m_indexFriendsGroupMap.insert(newTitle, index);
 
-    // 通过 store 每个分组的向量 获取分组 item ，再modify 组名
+    //  through  store  each  box ,s  array   get  box  item ， then modify  box  name 
     m_toolItemsFriendsVec[index]->setTile(newTitle);
 
     m_friendsGroupList[m_friendsGroupList.indexOf(title)] = newTitle;
@@ -2094,7 +2093,7 @@ void IMMainWidget::renameBoxSuccess(const QString & title, const QString & newTi
 
 /*************************************************
 Function Name:moveFriendToBoxSuccess
-Description: 移动friendto其他分组
+Description:  move friendto other  box 
 *************************************************/
 void IMMainWidget::moveFriendToBoxSuccess(const QString & friendID, const QString & title,
                                           const QString & newTitle)
@@ -2111,13 +2110,13 @@ void IMMainWidget::moveFriendToBoxSuccess(const QString & friendID, const QStrin
 
 /*************************************************
 Function Name:onClickRightButton()
-Description: 右键点击按键
+Description:  right button  click  button 
 *************************************************/
 void IMMainWidget::onClickRightButton()
 {
     if (m_menu == NULL)
     {
-        //create右键菜单
+        //create right button  menu 
         creatMenu();
     }
     m_menu->exec(QCursor::pos() - QPoint(105, 125));
@@ -2125,13 +2124,13 @@ void IMMainWidget::onClickRightButton()
 
 /*************************************************
 Function Name:createBox
-Description: 新建组
+Description:  create  box 
 *************************************************/
 void IMMainWidget::createBox()
 {
     bool isOk = false;
-    QString groupName = QInputDialog::getText(NULL, "新建组",
-                                              "请输入分组名",
+    QString groupName = QInputDialog::getText(NULL, " create  box ",
+                                              " please  input  box  name ",
                                               QLineEdit::Normal,
                                               tr("new group"),
                                               &isOk);
@@ -2140,14 +2139,14 @@ void IMMainWidget::createBox()
     {
         if (m_indexFriendsGroupMap.contains(groupName))
         {
-            QMessageBox::information(NULL, tr("新建组"), tr("no 法create，因为存在同名的组！"));
+            QMessageBox::information(NULL, tr(" create  box "), tr("no create，this name already exists!"));
             return;
         }
 
-        // store  新的分组号
+        // store   new ,s  box  number 
         m_friendsGroupList.append(groupName);
 
-        // 新建and store 分组
+        //  create and store  box 
         //        IMToolBox *toolBox = new IMToolBox;
         IMToolItem *toolItem = new IMToolItem(groupName);
 
@@ -2159,7 +2158,7 @@ void IMMainWidget::createBox()
         m_toolItemsFriendsVec.push_back(toolItem);
         m_friendListWidget->addItem(toolItem);
 
-        // store 映射关系
+        // store  map  relation 
         m_indexFriendsGroupMap.insert(groupName, m_toolItemsFriendsVec.size()-1);
 
         if (m_messageManWidget != NULL)
@@ -2172,7 +2171,7 @@ void IMMainWidget::createBox()
 
 /*************************************************
 Function Name:removeLinkButton
-Description: deletenew msg连接按钮
+Description: deletenew msg connect  button 
 *************************************************/
 void IMMainWidget::removeLinkButton(const QString & id)
 {
@@ -2192,7 +2191,7 @@ void IMMainWidget::removeLinkButton(const QString & id)
 
 /*************************************************
 Function Name:deleteAllLinkButton
-Description: delete所有msg 连接按钮
+Description: delete all msg  connect  button 
 *************************************************/
 void IMMainWidget::removeAllLinkButton()
 {
@@ -2209,7 +2208,7 @@ void IMMainWidget::removeAllLinkButton()
 
 /*************************************************
 Function Name:showAllChatRoom
-Description: show 所有 Chat Window
+Description: show  all  Chat Window
 *************************************************/
 void IMMainWidget::showAllChatRoom()
 {
@@ -2225,13 +2224,13 @@ void IMMainWidget::showAllChatRoom()
 // mark protected:------------------------------------------------------
 /*************************************************
 Function Name:closeEvent
-Description: close 事件
+Description: close  event 
 *************************************************/
 void IMMainWidget::closeEvent(QCloseEvent *event)
 {
     if(continueToClose())
     {
-        //关闭主Window  之前，先关闭所有 Chat Window
+        // close  main Window   before ， first  close  all  Chat Window
         closeAllWindows();
         event->accept();
     }
@@ -2241,7 +2240,7 @@ void IMMainWidget::closeEvent(QCloseEvent *event)
 
 /*************************************************
 Function Name:mousePressEvent
-Description: 鼠标点击事件
+Description:  mouse  click  event 
 *************************************************/
 void IMMainWidget::mousePressEvent(QMouseEvent *event)
 {
@@ -2255,7 +2254,7 @@ void IMMainWidget::mousePressEvent(QMouseEvent *event)
 
 /*************************************************
 Function Name:timerEvent
-Description: 定时事件
+Description:  timer  event 
 *************************************************/
 void IMMainWidget::timerEvent(QTimerEvent *event)
 {
@@ -2274,7 +2273,7 @@ void IMMainWidget::timerEvent(QTimerEvent *event)
 
 /*************************************************
 Function Name:closeWindow
-Description: 关闭主Window
+Description:  close  main Window
 *************************************************/
 void IMMainWidget::closeWindow()
 {
@@ -2286,7 +2285,7 @@ void IMMainWidget::closeWindow()
 
 /*************************************************
 Function Name:closeAllWindows
-Description: 关闭所有别的Window
+Description:  close  all  other ,s Window
 *************************************************/
 void IMMainWidget::closeAllWindows()
 {
@@ -2367,7 +2366,7 @@ void IMMainWidget::closeAllWindows()
 
 /*************************************************
 Function Name:createChatRoom
-Description: create Chat 室
+Description: create Chat  room 
 *************************************************/
 void IMMainWidget::getMyInformation()
 {
@@ -2393,7 +2392,7 @@ void IMMainWidget::getMyInformation()
 
 /*************************************************
 Function Name:receiveMessagesFromChat
-Description: 获取friend Chat 室发出的msg
+Description:  get friend Chat  room  send ,s msg
 *************************************************/
 void IMMainWidget::receiveMessagesFromChat(TalkMessage &mes)
 {
@@ -2476,8 +2475,8 @@ void IMMainWidget::receiveFriendRequest(const TalkMessage & mes,
     case REQUEST_FRIEND:
     {
         QMessageBox::StandardButton rb = QMessageBox::question(
-                    NULL, tr("friend请求"),
-                    QString(tr("是否同意用户%1(%2)Add 你为friend?\n验证msg :\n%3")).
+                    NULL, tr("friendrequest"),
+                    QString(tr("Agree user%1(%2)Add 你为friend?\nverify msg :\n%3")).
                     arg(mes.m_senderID, friendInf.m_nickname, mes.m_text),
                     QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
         if(rb == QMessageBox::Yes)
@@ -2511,7 +2510,7 @@ void IMMainWidget::receiveFriendRequest(const TalkMessage & mes,
     }
     case REFUSE_FRIEND:
     {
-        QString temp = QString(tr("用户%1(%2)\n拒绝您的friendAdd 请求.")).
+        QString temp = QString(tr("user%1(%2)\nrefuse  您,s friendAdd request.")).
                 arg(friendInf.m_userID, friendInf.m_nickname);
         QMessageBox::information(NULL, tr("msg "), temp);
         break;
@@ -2525,7 +2524,7 @@ void IMMainWidget::receiveFriendRequest(const TalkMessage & mes,
 
 /*************************************************
 Function Name:receiveFlockRequest
-Description: Receive and 且处理Group的请求
+Description: Receive and and  processGroup,s request
 *************************************************/
 void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
                                        const FlockMember & member,
@@ -2537,8 +2536,8 @@ void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
     case REQUEST_FLOCK:
     {
         QMessageBox::StandardButton rb = QMessageBox::question(
-                    NULL, tr("用户请求"),
-                    QString(tr("是否同意用户%1Add 入Group%2?\n验证msg :\n%3")).
+                    NULL, tr("userrequest"),
+                    QString(tr("Agree user%1add Group%2?\nverify msg :\n%3")).
                     arg(mes.m_senderID, mes.m_receiverID, mes.m_text),
                     QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
 
@@ -2551,7 +2550,7 @@ void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
             returnMes.m_type = FLOCK_REFUSE;
         }
         returnMes.m_senderID = mes.m_receiverID; // Group
-        returnMes.m_receiverID = mes.m_senderID; // 用户
+        returnMes.m_receiverID = mes.m_senderID; // user
         if (NULL != m_mainCtrl)
             m_mainCtrl->resultOfFlockRequest(returnMes);
         break;
@@ -2568,7 +2567,7 @@ void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
 
         m_flockMap[mes.m_receiverID]->addFlockMember(member.m_userID);
 
-        QString temp = QString(tr("用户%1,successAdd 入Group%2(%3).")).
+        QString temp = QString(tr("user%1,successadd Group%2(%3).")).
                 arg(mes.m_senderID, flock.m_flockID, flock.m_flockName);
         QMessageBox::information(NULL, tr("Groupmsg "), temp);
         //        out << temp.m_message << m_save.m_flockMember;
@@ -2576,7 +2575,7 @@ void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
     }
     case REFUSE_FLOCK:
     {
-        QString temp = QString(tr("您好,%1,用户%2,拒绝Add 入Group%3\n的Group.")).
+        QString temp = QString(tr("hello,%1,user%2,refuse  add Group%3\n,s Group.")).
                 arg(m_myself.m_userID, mes.m_senderID, mes.m_receiverID);
         QMessageBox::information(NULL, tr("Groupmsg "), temp);
         break;
@@ -2587,7 +2586,7 @@ void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
             return;
         if (!addFlockButton(flock))
             return;
-        QString temp = QString(tr("successAdd 入Group%1(%2).")).
+        QString temp = QString(tr("successadd Group%1(%2).")).
                 arg(flock.m_flockID, flock.m_flockName);
         QMessageBox::information(NULL, tr("Groupmsg "), temp);
 
@@ -2595,7 +2594,7 @@ void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
     }
     case FLOCK_REFUSE:
     {
-        QString temp = QString(tr("您好,%1,Group%2\n的Group主拒绝您的Add 入请求.")).
+        QString temp = QString(tr("hello,%1,Group%2\n,s Group main refuse  您,s add request.")).
                 arg(m_myself.m_userID, mes.m_senderID);
         QMessageBox::information(NULL, tr("Groupmsg "), temp);
         break;
@@ -2603,8 +2602,8 @@ void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
     case FLOCK_REQUEST:
     {
         QMessageBox::StandardButton rb = QMessageBox::question(
-                    NULL, tr("Group请求"),
-                    QString(tr("是否同意Add 入Group%1?\n验证msg :\n%2")).
+                    NULL, tr("Grouprequest"),
+                    QString(tr("Agree add Group%1?\nverify msg :\n%2")).
                     arg(mes.m_senderID, mes.m_text),
                     QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
 
@@ -2616,7 +2615,7 @@ void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
         {
             returnMes.m_type = REFUSE_FLOCK;
         }
-        returnMes.m_senderID = mes.m_receiverID; // 用户
+        returnMes.m_senderID = mes.m_receiverID; // user
         returnMes.m_receiverID = mes.m_senderID; // Group
         
 	if (NULL != m_mainCtrl)
@@ -2643,7 +2642,7 @@ void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
 
 /*************************************************
 Function Name:receiveDiscussionRequest
-Description: Receive and 处理discuss group请求
+Description: Receive and processdiscuss grouprequest
 *************************************************/
 void IMMainWidget::receiveDiscussionRequest(const TalkMessage & mes,
                                             const DiscussionMember & member,
@@ -2653,7 +2652,7 @@ void IMMainWidget::receiveDiscussionRequest(const TalkMessage & mes,
     {
     case ADD_DISCUSSION_FAIL:
     {
-        QString temp = QString(tr("您好,%1,用户%2Add 入discuss group%3failed..")).
+        QString temp = QString(tr("hello,%1,user %2 add discuss group %3 failed..")).
                 arg(m_myself.m_userID, mes.m_receiverID, mes.m_senderID);
         QMessageBox::information(NULL, tr("discuss groupmsg "), temp);
         break;
@@ -2686,17 +2685,17 @@ void IMMainWidget::receiveDiscussionRequest(const TalkMessage & mes,
 }
 
 
-// delete组
+// delete folder
 /*************************************************
 Function Name:removeBox
-Description: delete组
+Description: folder
 *************************************************/
 void IMMainWidget::removeBox(const QString & title)
 {
     QMessageBox::StandardButton returnBtn;
 
-    returnBtn = QMessageBox::question(NULL, tr("delete分组"),
-                                      QString(tr("你确定要delete分组(%1)吗？")).arg(title),
+    returnBtn = QMessageBox::question(NULL, tr("delete folder"),
+                                      QString(tr(" Are you sure to delete folder(%1)？")).arg(title),
                                       QMessageBox::Yes | QMessageBox::No,  QMessageBox::No);
 
     if(QMessageBox::No == returnBtn)
@@ -2706,7 +2705,7 @@ void IMMainWidget::removeBox(const QString & title)
 
     if (m_toolItemsFriendsVec[index]->getSize() > 0)
     {
-        QMessageBox::information(NULL, tr("delete组"), tr("no 法delete，因为该组里还有组员！"));
+        QMessageBox::information(NULL, tr("delete folder"), tr("can't delete，because there is some memebers in it."));
         return;
     }
 
@@ -2725,22 +2724,24 @@ void IMMainWidget::removeBox(const QString & title)
 
 /*************************************************
 Function Name:renameBox
-Description: 重命名组
+Description: rename group
 *************************************************/
 void IMMainWidget::renameBox(const QString & title)
 {
     bool isOk = false;
-    QString newTitle = QInputDialog::getText(NULL, "重命名分组",
-                                             "请输入新的分组名",
+    QString newTitle = QInputDialog::getText(NULL, "rename group",
+                                             "please input new name!",
                                              QLineEdit::Normal,
                                              title,
                                              &isOk);
+
+
     if (!isOk)
         return;
 
     if (m_indexFriendsGroupMap.contains(newTitle))
     {
-        QMessageBox::information(NULL, tr("重命名分组"), tr("failed.，因为存在同名的组！"));
+        QMessageBox::information(NULL, tr("rename group"), tr("failed，this name already exists!"));
         return;
     }
 

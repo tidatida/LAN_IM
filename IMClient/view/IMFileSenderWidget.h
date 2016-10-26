@@ -20,7 +20,7 @@ public:
 
     // init 
     void initSender();
-    // 被拒绝时触发  聊天窗体调用
+    // 被refuse  时触发  聊天窗体调用
     void showRefused();
     // init 文件server ，监听对方
     bool startSending(const QString &);
@@ -37,13 +37,13 @@ private:
     void initIMFileSenderWidget();
 
 private slots:
-    //点击“取消”按钮  取消发送
+    // click “取消” button   取消发送
     void onClickBtnCancel();
-    // 点击“close ”按钮
+    //  click “close ” button 
     void onClickBtnClose();
-    // 当有新connection 时触发 发送文件
+    // 当 Got  new connection 时触发 发送文件
     void sendMessage();
-    // 根据发送情况实时更新进度条
+    // 根据发送情况实时更 new 进度条
     void updateClientProgress(qint64 numBytes);
 
     // connection 断开
@@ -68,7 +68,7 @@ private:
     qint64 m_bytesWritten;
     qint64 m_bytesToWrite;
     qint64 m_loadSize;
-    QByteArray m_outBlock;   // 缓存一次发送的数据
+    QByteArray m_outBlock;   // 缓存一次发送,s 数据
     QTime m_time;            // 计时器
 
 

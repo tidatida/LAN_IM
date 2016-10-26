@@ -17,7 +17,7 @@ public:
     void addItem(QWidget *item);
     void removeItem(QWidget *item);
 
-    //create 右键菜单
+    //create  right button  menu 
     void creatMenu();
 
 signals:
@@ -33,7 +33,7 @@ private:
     QWidget *m_contentsWidget;
     QScrollArea *m_flocksScrollArea;
 
-    //右键菜单
+    // right button  menu 
     QMenu *m_menu;
 
     IMMainWidget *m_mainWidget;

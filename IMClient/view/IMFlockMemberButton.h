@@ -64,7 +64,7 @@ signals:
     void deleteMemberSignal(const QString &);
 public slots:
 
-    // 右键点击按键
+    //  right button  click  button 
     void onClickRightButton(/*const QPoint &*/);
 
     // 发送即时消息
@@ -73,7 +73,7 @@ public slots:
     void onClickSendMail();
     // 显示成员详细信息
     void onClickShowInformation();
-    // modify群名片
+    // modify群 name 片
     void onClickChangeRemark();
     // 进入空间
     void onClickEnterSpace();
@@ -98,7 +98,7 @@ private:
 
     // 将好友在线状态从数字形式转换为字符串形式
     QString getLoginStatusFromInt(const int n) const;
-    // create 右键菜单
+    // create  right button  menu 
     void creatMenu(/*const QList<QString> *groutList*/);
 
 
@@ -109,7 +109,7 @@ private:
     // 聊天窗口是否open 了
     bool m_isOpen;
 
-    // 右键菜单
+    //  right button  menu 
     QMenu *m_menu;
 //    IMChatWidget *m_chatRoom;
     IMFlockChatWidget *m_flockWidget;

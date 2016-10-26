@@ -39,16 +39,16 @@ public slots:
     // 设置状态标签
     void setLabelStatus(const QString &mes, bool isLogin,
                         const UserInformation *me = 0);
-    // 获取m_isAutoLogin
+    //  get m_isAutoLogin
     bool getIsAutoLogin();
-    // 单击“登录”按钮
+    // 单击“登录” button 
     void onClickBtnLogin();
 
 protected:
-    // process   定时器事件
+    // process    timer 器 event 
     void timerEvent(QTimerEvent * event);
 private slots:
-    // 单击"Register 帐号"标签
+    // 单击"Register 帐 number "标签
     void onClickLabelRegister();
     // 单击“Forget passwd?"标签
     void onClickLabelForgotPwd();
@@ -57,9 +57,9 @@ private slots:
 private:
     // init 登录界面
     void initIMLoginWidget();
-    // connection 信号与槽
+    // connection 信 number  and 槽
     void linkSignalWithSlot();
-    // close 定时器
+    // close  timer 器
     void closeTimer();
     // 设置server 信息
     void setServer(const QString &ip = "127.0.0.1", const int port = 1234);
@@ -69,14 +69,14 @@ private:
 private:
     QLineEdit *m_leUserID;    // id
     QLineEdit *m_leUserPwd;   //  passwd
-    IMClickLabel *m_labelRegister;  // Register 帐号
+    IMClickLabel *m_labelRegister;  // Register 帐 number 
     IMClickLabel *m_labelForgotPwd; // Forget passwd?
     QCheckBox *m_cbKeepPwd;   // 记住 passwd
     QCheckBox *m_cbAutoLogin; // 自动登录
     QComboBox *m_cbxStatus;   // 登录状态
-    QPushButton *m_btnLogin;  // 登录按钮
+    QPushButton *m_btnLogin;  // 登录 button 
 
-    QPushButton *m_moreButton;// 拓展按钮
+    QPushButton *m_moreButton;// 拓展 button 
     QWidget *m_extendedWidget;// 拓展界面
     QLineEdit *m_hostAddress; // server ip地址
     QLineEdit *m_hostPort;    // server 端口
@@ -85,8 +85,8 @@ private:
     bool m_isLogin;           // 是否能登录
     IMLoginCtrl *m_loginCtrl; // used to   control  登录
 
-    int m_timerID;            // 定时器ID
-    bool m_closeTimer;        // 定时器是否close 
+    int m_timerID;            //  timer 器ID
+    bool m_closeTimer;        //  timer 器是否close 
     int m_counter;            // 计数器
     bool m_isAutoLogin;         // 是否自动登录
 

@@ -239,7 +239,7 @@ static const QString CREATE_TABLE_USERFRIENDS_SQL = "";
 static const QString CREATE_TABLE_TMPMESSAGE_SQL = "";
 
 
-//将html格式的qstring转换
+//将html格式,s qstring转换
 QString simplifyRichText( QString richText )
 {
     QTextDocument doc;
@@ -293,7 +293,7 @@ IMDatabaseCtrl::~IMDatabaseCtrl()
 Function Name: createConnection()
 Description: create connection 
 Input: NULL
-Output:bool 表示create 结果
+Output:bool  table 示create 结果
 Changes: NULL
 *************************************************/
 bool IMDatabaseCtrl::createConnection()
@@ -304,13 +304,13 @@ bool IMDatabaseCtrl::createConnection()
     {
         return true;
     }
-    // 如果已经open 
+    // 如果 already 经open 
     if (QSqlDatabase::contains("serverIMDB"))
     {
         *m_db = QSqlDatabase::database("serverIMDB");
     }
     else
-    {// 如果没有，就add 
+    {// 如果 no  ，就add 
         *m_db = QSqlDatabase::addDatabase("QMYSQL", "serverIMDB");
         m_db->setDatabaseName("serverIMDB");
     }
@@ -523,7 +523,7 @@ int IMDatabaseCtrl::searchUserInUserInformation(const LoginInformation &logInf,
 
 /*************************************************
 Function Name: searchFriendSimpleInformationByID()
-Description: 通过idquery 好友简易信息
+Description:  through idquery 好友简易信息
 *************************************************/
 int IMDatabaseCtrl::searchFriendSimpleInformationByID(const QString &id,
                                                         FriendInformation &friInf)
@@ -532,7 +532,7 @@ int IMDatabaseCtrl::searchFriendSimpleInformationByID(const QString &id,
 
 /*************************************************
 Function Name: searchFriendInformationByID()
-Description: 通过idquery 好友信息
+Description:  through idquery 好友信息
 *************************************************/
 int IMDatabaseCtrl::searchFriendInformationByID(const QString &id,
                                             UserInformation &userInf)
@@ -582,7 +582,7 @@ int IMDatabaseCtrl::searchFriendInformationByID(const QString &id,
 
 /*************************************************
 Function Name: searchMyselfInformationByID()
-Description: 通过idquery 自己信息
+Description:  through idquery 自己信息
 *************************************************/
 int IMDatabaseCtrl::searchMyselfInformationByID(const QString &id,
                                             UserInformation &userInf)
@@ -716,7 +716,7 @@ int IMDatabaseCtrl::addUserInUserInformation(const UserInformation &userInf)
 
 /*************************************************
 Function Name: countRegisteredInPeriod()
-Description: 获取一段时间Register 数量
+Description:  get 一段时间Register 数量
 Input: IMUser
 Output: int
 Changes: NULL
@@ -761,7 +761,7 @@ int IMDatabaseCtrl::countRegisteredInPeriod(const QDateTime &datePre,
 
 /*************************************************
 Function Name: countFlockInPeriod()
-Description: 获取一段时间群add 数量
+Description:  get 一段时间群add 数量
 *************************************************/
 int IMDatabaseCtrl::countFlockInPeriod(const QDateTime &datePre,
                                  const QDateTime &dateLater)
@@ -802,7 +802,7 @@ int IMDatabaseCtrl::countFlockInPeriod(const QDateTime &datePre,
 
 /*************************************************
 Function Name: searchFriendsInformation()
-Description: 获取所有好友信息
+Description:  get  all 好友信息
 *************************************************/
 int IMDatabaseCtrl::searchFriendsInformation(const QString &id,
                                               QVector<FriendInformation> &friendsVec)
@@ -851,7 +851,7 @@ int IMDatabaseCtrl::searchFriendsInformation(const QString &id,
 
 /*************************************************
 Function Name: searchFriendsID()
-Description: 获取所有好友ID
+Description:  get  all 好友ID
 *************************************************/
 bool IMDatabaseCtrl::searchFriendsID(const QString &id,
                      QVector<QString> &friVec)
@@ -890,7 +890,7 @@ bool IMDatabaseCtrl::searchFriendsID(const QString &id,
 
 /*************************************************
 Function Name: errorSQLOrder()
-Description: 检查SQL语句的正确性
+Description: 检查SQL语句,s 正确性
 *************************************************/
 void IMDatabaseCtrl::errorSQLOrder(QSqlQuery query, QString mark)
 {
@@ -906,7 +906,7 @@ void IMDatabaseCtrl::errorSQLOrder(QSqlQuery query, QString mark)
 
 /*************************************************
 Function Name: createTable()
-Description: create database 表格
+Description: create database  table 格
 *************************************************/
 void IMDatabaseCtrl::createTable()
 {
@@ -914,7 +914,7 @@ void IMDatabaseCtrl::createTable()
 
 /*************************************************
 Function Name: updateStatus()
-Description: 更新好友状态
+Description: 更 new 好友状态
 *************************************************/
 bool IMDatabaseCtrl::updateStatus(int status, const QString &id)
 {
@@ -947,7 +947,7 @@ bool IMDatabaseCtrl::updateStatus(int status, const QString &id)
 
 /*************************************************
 Function Name: updateRemark()
-Description: 更新好友备注
+Description: 更 new 好友备注
 *************************************************/
 int IMDatabaseCtrl::updateRemark(const TempStrings & tempStr)
 {
@@ -1103,7 +1103,7 @@ bool IMDatabaseCtrl::addFriend(const TalkMessage & mes)
 
 /*************************************************
 Function Name: searchFlocksInformation()
-Description: 获取某user 加入的所有群
+Description:  get 某user 加入,s  all 群
 *************************************************/
 int IMDatabaseCtrl::searchFlocksInformation(
         const QString & id, QVector<FlockInformation> & flocksVec)
@@ -1151,7 +1151,7 @@ int IMDatabaseCtrl::searchFlocksInformation(
 
 /*************************************************
 Function Name: searchFlockInformation()
-Description: 获取某个群信息
+Description:  get 某个群信息
 *************************************************/
 bool IMDatabaseCtrl::searchFlockInformation(const QString & flockID,
                                             FlockInformation & flock)
@@ -1193,7 +1193,7 @@ bool IMDatabaseCtrl::searchFlockInformation(const QString & flockID,
 
 /*************************************************
 Function Name: searchFlockMembers()
-Description: 获取某群中所有的成员
+Description:  get 某群中 all ,s 成员
 *************************************************/
 int IMDatabaseCtrl::searchFlockMembers(
         const QString & id, QVector<FlockMember> &flockMembersVec)
@@ -1244,7 +1244,7 @@ int IMDatabaseCtrl::searchFlockMembers(
 
 /*************************************************
 Function Name: searchFlockMember()
-Description: 获取某群的某个成员
+Description:  get 某群,s 某个成员
 *************************************************/
 bool IMDatabaseCtrl::searchFlockMember(const QString & flockID,
                                        const QString & userID,
@@ -1292,7 +1292,7 @@ bool IMDatabaseCtrl::searchFlockMember(const QString & flockID,
 
 /*************************************************
 Function Name: searchDiscussionsInformation()
-Description: 获取所有user 加入的讨论组
+Description:  get  all user 加入,s 讨论 box 
 *************************************************/
 int IMDatabaseCtrl::searchDiscussionsInformation(
         const QString & id, QVector<DiscussionInformation> & discussionsVec)
@@ -1340,7 +1340,7 @@ int IMDatabaseCtrl::searchDiscussionsInformation(
 
 /*************************************************
 Function Name: searchDiscussionInformation()
-Description: 获取某个讨论组信息
+Description:  get 某个讨论 box 信息
 *************************************************/
 bool IMDatabaseCtrl::searchDiscussionInformation(const QString & discussionID,
                                                  DiscussionInformation & discussion)
@@ -1382,7 +1382,7 @@ bool IMDatabaseCtrl::searchDiscussionInformation(const QString & discussionID,
 
 /*************************************************
 Function Name: searchDiscussionMembers()
-Description: 获取某讨论组中所有的成员
+Description:  get 某讨论 box 中 all ,s 成员
 *************************************************/
 int IMDatabaseCtrl::searchDiscussionMembers(
         const QString & id, QVector<DiscussionMember> & discussionMembersVec)
@@ -1433,7 +1433,7 @@ int IMDatabaseCtrl::searchDiscussionMembers(
 
 /*************************************************
 Function Name: searchDiscussionMember()
-Description: 获取某讨论组中的某个成员
+Description:  get 某讨论 box 中,s 某个成员
 *************************************************/
 bool IMDatabaseCtrl::searchDiscussionMember(const QString & discussionID,
                                            const QString & userID,
@@ -1479,7 +1479,7 @@ bool IMDatabaseCtrl::searchDiscussionMember(const QString & discussionID,
 
 /*************************************************
 Function Name: searchFlockHost()
-Description: 获取群主帐号
+Description:  get 群 main 帐 number 
 *************************************************/
 bool IMDatabaseCtrl::searchFlockHost(const QString & flockID, QString & hostID)
 {
@@ -1521,7 +1521,7 @@ bool IMDatabaseCtrl::searchFlockHost(const QString & flockID, QString & hostID)
 
 /*************************************************
 Function Name: searchDiscussionHost()
-Description: 获取组长帐号
+Description:  get  box 长帐 number 
 *************************************************/
 bool IMDatabaseCtrl::searchDiscussionHost(const QString & discussionID,
                                           QString & hostID)
@@ -1622,7 +1622,7 @@ bool IMDatabaseCtrl::addFlockMember(const QString & flockID,
 
 /*************************************************
 Function Name: addDiscussionMember()
-Description: add 讨论组成员
+Description: add 讨论 box 成员
 *************************************************/
 bool IMDatabaseCtrl::addDiscussionMember(const QString & discussionID,
                                         const QString & memberID,
@@ -1737,7 +1737,7 @@ int IMDatabaseCtrl::addFlock(const TempStrings & tmpStr, QString & flockID)
 
 /*************************************************
 Function Name: addDiscussion()
-Description: add 讨论组
+Description: add 讨论 box 
 *************************************************/
 int IMDatabaseCtrl::addDiscussion(const TempStrings & tmpStr, QString & discussionID)
 {
@@ -1834,7 +1834,7 @@ int IMDatabaseCtrl::deleteFlock(const QString userID, const QString & flockID)
 
 /*************************************************
 Function Name: deleteDiscussion()
-Description: delete  讨论组
+Description: delete  讨论 box 
 *************************************************/
 int IMDatabaseCtrl::deleteDiscussion(const QString userID, const QString & discussionID)
 {
@@ -1911,7 +1911,7 @@ int IMDatabaseCtrl::deleteFlockMember(const QString & flockID,
 
 /*************************************************
 Function Name: deleteDiscussionMember()
-Description: delete  讨论组成员
+Description: delete  讨论 box 成员
 *************************************************/
 int IMDatabaseCtrl::deleteDiscussionMember(const QString & discussionID, const QString & memberID)
 {
@@ -1950,7 +1950,7 @@ int IMDatabaseCtrl::deleteDiscussionMember(const QString & discussionID, const Q
 
 /*************************************************
 Function Name: updateFlockInformation()
-Description: 更新群信息
+Description: 更 new 群信息
 *************************************************/
 int IMDatabaseCtrl::updateFlockInformation(const FlockInformation & flock)
 {
@@ -1992,7 +1992,7 @@ int IMDatabaseCtrl::updateFlockInformation(const FlockInformation & flock)
 
 /*************************************************
 Function Name: updateDiscussionInformation()
-Description: 更新讨论组信息
+Description: 更 new 讨论 box 信息
 *************************************************/
 int IMDatabaseCtrl::updateDiscussionInformation(const DiscussionInformation & discussion)
 {
@@ -2034,7 +2034,7 @@ int IMDatabaseCtrl::updateDiscussionInformation(const DiscussionInformation & di
 
 /*************************************************
 Function Name: updateFlockMemberRemark()
-Description: 更新群成员名片
+Description: 更 new 群成员 name 片
 *************************************************/
 int IMDatabaseCtrl::updateFlockMemberRemark(const TempStrings & tmpStr)
 {
@@ -2076,7 +2076,7 @@ int IMDatabaseCtrl::updateFlockMemberRemark(const TempStrings & tmpStr)
 
 /*************************************************
 Function Name: insertValuesInDateCounter()
-Description: 插入DateCounterb表某日的数据项
+Description: 插入DateCounterb table 某日,s 数据项
 *************************************************/
 bool IMDatabaseCtrl::insertValuesInDateCounter(const QDate & date)
 {
@@ -2138,7 +2138,7 @@ bool IMDatabaseCtrl::insertValuesInDateCounter(const QDate & date)
 
 /*************************************************
 Function Name: updateFlockMemberRemark()
-Description: 获取某日user Register 数量+1
+Description:  get 某日user Register 数量+1
 *************************************************/
 int IMDatabaseCtrl::getUserTimes(const QDate & date)
 {
@@ -2182,7 +2182,7 @@ int IMDatabaseCtrl::getUserTimes(const QDate & date)
 
 /*************************************************
 Function Name: getFlockTimes()
-Description: 获取某日新建群数量+1
+Description:  get 某日 create 群数量+1
 *************************************************/
 int IMDatabaseCtrl::getFlockTimes(const QDate & date)
 {
@@ -2226,7 +2226,7 @@ int IMDatabaseCtrl::getFlockTimes(const QDate & date)
 
 /*************************************************
 Function Name: getDiscussionTimes()
-Description: 获取某日新建讨论组数量+1
+Description:  get 某日 create 讨论 box 数量+1
 *************************************************/
 int IMDatabaseCtrl::getDiscussionTimes(const QDate & date)
 {
@@ -2305,7 +2305,7 @@ bool IMDatabaseCtrl::increaseUserTimes(const QDate & date)
 
 /*************************************************
 Function Name: increaseFlockTimes()
-Description: 增加某日新建群数量
+Description: 增加某日 create 群数量
 *************************************************/
 bool IMDatabaseCtrl::increaseFlockTimes(const QDate & date)
 {
@@ -2339,7 +2339,7 @@ bool IMDatabaseCtrl::increaseFlockTimes(const QDate & date)
 
 /*************************************************
 Function Name: increaseDiscussionTimes()
-Description: 增加某日新建讨论组数量
+Description: 增加某日 create 讨论 box 数量
 *************************************************/
 bool IMDatabaseCtrl::increaseDiscussionTimes(const QDate & date)
 {
@@ -2374,7 +2374,7 @@ bool IMDatabaseCtrl::increaseDiscussionTimes(const QDate & date)
 
 /*************************************************
 Function Name: searchInMails()
-Description: 获取收件箱
+Description:  get 收件箱
 *************************************************/
 int IMDatabaseCtrl::searchInMails(const QString & id,
                                   QVector<MailInformation> & mailsVec)
@@ -2424,7 +2424,7 @@ int IMDatabaseCtrl::searchInMails(const QString & id,
 
 /*************************************************
 Function Name: searchOutMails()
-Description: 获取发件箱
+Description:  get 发件箱
 *************************************************/
 int IMDatabaseCtrl::searchOutMails(const QString & id,
                                    QVector<MailInformation> & mailsVec)
@@ -2590,7 +2590,7 @@ int IMDatabaseCtrl::deleteOutMail(const QString & senderID, const int mailID)
 
 /*************************************************
 Function Name: insertMail()
-Description: 插入新邮件
+Description: 插入 new 邮件
 *************************************************/
 int IMDatabaseCtrl::insertMail(MailInformation & mail)
 {
@@ -2639,7 +2639,7 @@ int IMDatabaseCtrl::insertMail(MailInformation & mail)
 
 /*************************************************
 Function Name: setMailRead()
-Description: 更新邮件，set to 已读
+Description: 更 new 邮件，set to  already 读
 *************************************************/
 bool IMDatabaseCtrl:: setMailRead(const QString & receiverID, const int mailID)
 {
@@ -2676,12 +2676,12 @@ bool IMDatabaseCtrl:: setMailRead(const QString & receiverID, const int mailID)
 }
 
 
-/*************好友分组********************/
+/*************好友 box ********************/
 
 
 /*************************************************
 Function Name: moveFriendToGroup()
-Description: 移动好友至其他分组
+Description:  move 好友至 other  box 
 *************************************************/
 int IMDatabaseCtrl::moveFriendToGroup(const QString & myID, const QString & friendID,
                       const QString & title, const QString & newTitle)
@@ -2723,7 +2723,7 @@ int IMDatabaseCtrl::moveFriendToGroup(const QString & myID, const QString & frie
 
 /*************************************************
 Function Name: renameGroup()
-Description: 重命名分组
+Description: rename group
 *************************************************/
 int IMDatabaseCtrl::renameGroup(const QString & id, const QString & title,
                 const QString & newTitle)
@@ -2846,7 +2846,7 @@ bool IMDatabaseCtrl::addOfflineMessage(const TalkMessage & mes)
 
 /*************************************************
 Function Name: searchHistoryMessageOneFriendOneDate()
-Description: 获取user 的某日与某位好友的聊天记录
+Description:  get user ,s 某日 and 某位好友,s 聊天记录
 *************************************************/
 int IMDatabaseCtrl::searchHistoryMessageOneFriendOneDate(
         const QString & myID, const QString &friendID,

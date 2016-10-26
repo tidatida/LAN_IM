@@ -111,7 +111,7 @@ void IMServerMessageCtrl::runServer()
 
 /*************************************************
 Function Name: getIDListView()
-Description: 获取listiew
+Description:  get listiew
 *************************************************/
 QListView * IMServerMessageCtrl::getIDListView()
 {
@@ -120,7 +120,7 @@ QListView * IMServerMessageCtrl::getIDListView()
 
 /*************************************************
 Function Name: getAddressListView()
-Description: 获取listiew
+Description:  get listiew
 *************************************************/
 QListView * IMServerMessageCtrl::getAddressListView()
 {

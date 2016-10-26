@@ -69,7 +69,7 @@ void IMTcpSocket::setFlag(int flag)
 
 /*************************************************
 Function Name: flag()
-Description: 获取标识
+Description:  get 标识
 *************************************************/
 int IMTcpSocket::flag()
 {
@@ -78,7 +78,7 @@ int IMTcpSocket::flag()
 
 /*************************************************
 Function Name: getIP()
-Description: 获取ip地址
+Description:  get ip地址
 *************************************************/
 QString IMTcpSocket::getIP()
 {
@@ -96,7 +96,7 @@ QString IMTcpSocket::getIP()
 
 /*************************************************
 Function Name: getCurrentDateTime()
-Description: 获取当前的日期和时间
+Description:  get 当前,s 日期和时间
 *************************************************/
 QString IMTcpSocket::getCurrentDateTime()
 {
@@ -124,9 +124,9 @@ void IMTcpSocket::connectionClosed()
 
     if (m_flag == 0)
     {
-//        //程序如果和server 断开connection 的话，弹出警告，直接退出
+//        //程序如果和server 断开connection ,s 话，弹出警告，直接退出
 //        QMessageBox::critical(NULL, tr("系统错误"),
-//                              tr("您的client已经与server 断开connection ，请重新登录。"));
+//                              tr("您,s client already 经 and server 断开connection ， please 重 new 登录。"));
 //        qApp->quit();
     }
 }
@@ -165,7 +165,7 @@ void IMTcpSocket::dispalyError(QAbstractSocket::SocketError socketError)
                                     "host name and port settings."));
         break;
     case QAbstractSocket::ConnectionRefusedError:
-        emit showConnectionStatus(tr("链接失败.可能是因为connection 被拒绝"));
+        emit showConnectionStatus(tr("链接失败.可能是因为connection 被refuse  "));
         QMessageBox::information(NULL, tr("IM Client"),
                                  tr("The connection was refused by the peer."
                                     "Make sure the IM server is running,"
@@ -185,7 +185,7 @@ void IMTcpSocket::dispalyError(QAbstractSocket::SocketError socketError)
 
 /*************************************************
 Function Name: linkSignalWithSlot()
-Description: 链接信号与槽
+Description: 链接信 number  and 槽
 Input: NULL
 Output: NULL
 Changes: NULL

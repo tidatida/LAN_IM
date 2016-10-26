@@ -42,13 +42,13 @@ void IMFileSenderWidget::initSender()
 
 /*************************************************
 Function Name: showRefused()
-Description: 被拒绝时触发  聊天窗体调用
+Description: 被refuse  时触发  聊天窗体调用
 *************************************************/
 void IMFileSenderWidget::showRefused()
 {
     m_isStopped = true;
     m_fileSender->close();
-    m_labelFileStatus->setText(tr("对方拒绝接收！"));
+    m_labelFileStatus->setText(tr("对方refuse  接收！"));
 }
 
 
@@ -61,7 +61,7 @@ bool IMFileSenderWidget::startSending(const QString & file)
     m_isStopped = false;
     m_filePath = file;
     m_fileName = m_filePath.right(m_filePath.size() - m_filePath.lastIndexOf('/')-1);
-    m_labelFileName->setText(QString(tr("文件名: %1")).arg(m_fileName));
+    m_labelFileName->setText(QString(tr("文件 name : %1")).arg(m_fileName));
     // 开始监听
     if (!m_fileSender->listen(QHostAddress::Any, m_tcpPort))
     {
@@ -96,7 +96,7 @@ Description: init 文件发送界面
 *************************************************/
 void IMFileSenderWidget::initIMFileSenderWidget()
 {
-    m_labelFileName = new QLabel(tr("文件名:"), this);
+    m_labelFileName = new QLabel(tr("文件 name :"), this);
     m_labelFileStatus = new QLabel(tr("等待对方接受"), this);
     m_labelFileStatus->setFixedHeight(80);
     m_barFile = new QProgressBar(this);
@@ -148,7 +148,7 @@ void IMFileSenderWidget::onClickBtnCancel()
 
 /*************************************************
 Function Name: onClickBtnClose()
-Description: 点击退出
+Description:  click 退出
 *************************************************/
 void IMFileSenderWidget::onClickBtnClose()
 {
@@ -159,7 +159,7 @@ void IMFileSenderWidget::onClickBtnClose()
 
 /*************************************************
 Function Name: sendMessage()
-Description: 当有新connection 时触发 发送文件
+Description: 当 Got  new connection 时触发 发送文件
 *************************************************/
 void IMFileSenderWidget::sendMessage()
 {
@@ -196,7 +196,7 @@ void IMFileSenderWidget::sendMessage()
 
 /*************************************************
 Function Name: updateClientProgress()
-Description: 根据发送情况实时更新进度条
+Description: 根据发送情况实时更 new 进度条
 *************************************************/
 void IMFileSenderWidget::updateClientProgress(qint64 numBytes)
 {
@@ -214,8 +214,8 @@ void IMFileSenderWidget::updateClientProgress(qint64 numBytes)
 
    float useTime = m_time.elapsed();
    double speed = m_bytesWritten / useTime;
-   m_labelFileStatus->setText(tr("已发送 %1MB (%2MB/s) \n共%3MB 已用时:%4秒\n估计剩余时间:%5秒")
-                                  .arg(m_bytesWritten / (1024*1024))      // 已发送
+   m_labelFileStatus->setText(tr(" already 发送 %1MB (%2MB/s) \n共%3MB  already 用时:%4秒\n估计剩余时间:%5秒")
+                                  .arg(m_bytesWritten / (1024*1024))      //  already 发送
                                   .arg(speed*1000/(1024*1024),0,'f',2)  // 速度
                                   .arg(m_totalBytes / (1024 * 1024))      // 总大小
                                   .arg(useTime/1000,0,'f',0)            // 用时

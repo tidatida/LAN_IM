@@ -30,7 +30,7 @@ IMDiscussionListWidget::IMDiscussionListWidget(IMMainWidget *mainWidget, QWidget
 
     setStyleSheet("QWidget{border: 0;}");
 
-    //create 右键菜单
+    //create  right button  menu 
     creatMenu();
 }
 
@@ -72,14 +72,14 @@ void IMDiscussionListWidget::removeItem(QWidget *item)
 
 /*************************************************
 Function Name: creatMenu()
-Description:  create 右键菜单
+Description:  create  right button  menu 
 *************************************************/
 void IMDiscussionListWidget::creatMenu()
 {
     m_menu = new QMenu(this);
-    QAction *actCreateDiscussion = new QAction(tr("新建讨论组"), this);
-//    QAction *actAddFlock = new QAction(tr("add 讨论组"), this);
-    QAction *actRefresh = new QAction(tr("刷新讨论组列表"), this);
+    QAction *actCreateDiscussion = new QAction(tr(" create 讨论 box "), this);
+//    QAction *actAddFlock = new QAction(tr("add 讨论 box "), this);
+    QAction *actRefresh = new QAction(tr("刷 new 讨论 box 列 table "), this);
 
     connect(actCreateDiscussion, SIGNAL(triggered()),
         m_mainWidget, SLOT(createDiscussion()));
@@ -96,13 +96,13 @@ void IMDiscussionListWidget::creatMenu()
 
 /*************************************************
 Function Name: showMenu()
-Description:  显示右键菜单
+Description:  显示 right button  menu 
 *************************************************/
 void IMDiscussionListWidget::showMenu()
  {
     if (m_menu == NULL)
     {
-        //create 右键菜单
+        //create  right button  menu 
         creatMenu();
     }
     m_menu->exec(QCursor::pos());
@@ -111,7 +111,7 @@ void IMDiscussionListWidget::showMenu()
 
 /*************************************************
 Function Name: mousePressEvent
-Description: 鼠标单击事件
+Description:  mouse 单击 event 
 *************************************************/
 void IMDiscussionListWidget::mousePressEvent(QMouseEvent *event)
 {

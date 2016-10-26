@@ -34,7 +34,7 @@ IMLatestMessageListWidget::IMLatestMessageListWidget(
 
     setStyleSheet("QWidget{border: 0;}");
 
-    //create 右键菜单
+    //create  right button  menu 
     creatMenu();
 }
 
@@ -96,13 +96,13 @@ int IMLatestMessageListWidget::size()
 
 /*************************************************
 Function Name: creatMenu()
-Description:  create 右键菜单
+Description:  create  right button  menu 
 *************************************************/
 void IMLatestMessageListWidget::creatMenu()
 {
     m_menu = new QMenu(this);
-    QAction *showAll = new QAction(tr("查看所有消息"), this);
-    QAction *ignoreAll = new QAction(tr("忽略所有消息"), this);
+    QAction *showAll = new QAction(tr("查看 all 消息"), this);
+    QAction *ignoreAll = new QAction(tr("忽略 all 消息"), this);
 
     connect(showAll, SIGNAL(triggered()),
         m_mainWidget, SLOT(showAllChatRoom()));
@@ -116,13 +116,13 @@ void IMLatestMessageListWidget::creatMenu()
 
 /*************************************************
 Function Name: showMenu()
-Description:  显示右键菜单
+Description:  显示 right button  menu 
 *************************************************/
 void IMLatestMessageListWidget::showMenu()
  {
     if (m_menu == NULL)
     {
-        //create 右键菜单
+        //create  right button  menu 
         creatMenu();
     }
     m_menu->exec(QCursor::pos());
@@ -131,7 +131,7 @@ void IMLatestMessageListWidget::showMenu()
 
 /*************************************************
 Function Name: mousePressEvent
-Description: 鼠标单击事件
+Description:  mouse 单击 event 
 *************************************************/
 void IMLatestMessageListWidget::mousePressEvent(QMouseEvent *event)
 {

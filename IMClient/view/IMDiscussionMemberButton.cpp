@@ -145,12 +145,12 @@ void IMDiscussionMemberButton::setButtonStatus()
 
 //remark:public slots:-----------------------------------------------
 
-// 右键点击按键
+//  right button  click  button 
 void IMDiscussionMemberButton::onClickRightButton(/*const QPoint &*/)
 {
     if (m_menu == NULL)
     {
-        //create 右键菜单
+        //create  right button  menu 
         creatMenu();
     }
     m_menu->exec(QCursor::pos());
@@ -184,13 +184,13 @@ void IMDiscussionMemberButton::onClickShowInformation()
 
 /*************************************************
 Function Name: onClickChangeRemark()
-Description: modify群名片
+Description: modify群 name 片
 *************************************************/
 //void IMDiscussionMemberButton::onClickChangeRemark()
 //{
 //    bool isOk = false;
-//    QString remark = QInputDialog::getText(NULL, "modify名片",
-//                                           "请输入新的名片",
+//    QString remark = QInputDialog::getText(NULL, "modify name 片",
+//                                           " please  input  new ,s  name 片",
 //                                           QLineEdit::Normal,
 //                                           m_info.m_remark,
 //                                           &isOk);
@@ -223,8 +223,8 @@ void IMDiscussionMemberButton::onClickRemoveMember()
 {
     QMessageBox::StandardButton returnBtn;
 
-    returnBtn = QMessageBox::question(NULL, tr("移除讨论组成员"),
-        QString(tr("你确定要将成员%1,从讨论组%2中移除吗？")).
+    returnBtn = QMessageBox::question(NULL, tr("移除讨论 box 成员"),
+        QString(tr("你确定要将成员%1,从讨论 box %2中移除吗？")).
             arg(m_info.m_userID,m_discussionWidget->getDiscussionInformation().m_discussionID),
         QMessageBox::Yes | QMessageBox::No,  QMessageBox::No);
 
@@ -271,7 +271,7 @@ void IMDiscussionMemberButton::chatRoomQuit()
 
 /*************************************************
 Function Name: mousePressEvent
-Description: 鼠标单击事件
+Description:  mouse 单击 event 
 *************************************************/
 void IMDiscussionMemberButton::mousePressEvent(QMouseEvent *event)
 {
@@ -285,7 +285,7 @@ void IMDiscussionMemberButton::mousePressEvent(QMouseEvent *event)
 
 /*************************************************
 Function Name: mouseDoubleClickEvent
-Description: 鼠标双击事件
+Description:  mouse 双击 event 
 *************************************************/
 void IMDiscussionMemberButton::mouseDoubleClickEvent(QMouseEvent *event)
 {
@@ -311,7 +311,7 @@ QString IMDiscussionMemberButton::getDiscussionStatusFromInt(const int n) const
     switch (n)
     {
     case DISCUSSION_HOST:
-        return tr("组长");
+        return tr(" box 长");
         break;
     case DISCUSSION_MEMBER:
         return tr("成员");
@@ -345,7 +345,7 @@ QString IMDiscussionMemberButton::getLoginStatusFromInt(const int n) const
         return tr("离开");
         break;
     case NOTDISTURB:
-        return tr("请勿打扰");
+        return tr(" please 勿打扰");
         break;
     default:
         break;
@@ -356,7 +356,7 @@ QString IMDiscussionMemberButton::getLoginStatusFromInt(const int n) const
 
 /*************************************************
 Function Name: getStatusFromInt()
-Description: create 右键菜单
+Description: create  right button  menu 
 *************************************************/
 void IMDiscussionMemberButton::creatMenu(/*const QList<QString> *groutList*/)
 {
@@ -366,7 +366,7 @@ void IMDiscussionMemberButton::creatMenu(/*const QList<QString> *groutList*/)
     QAction *showInfo = new QAction(tr("查看资料"), m_menu);
     QAction *enterSpace = new QAction(tr("进入空间"), m_menu);
     QAction *removeMember= new QAction(tr("移除该成员"), m_menu);
-//    QAction *changeRemark = new QAction(tr("modify群名片"), m_menu);
+//    QAction *changeRemark = new QAction(tr("modify群 name 片"), m_menu);
     QAction *addRriend= new QAction(tr("加为好友"), m_menu);
 
     connect(sendMessage, SIGNAL(triggered()),
@@ -394,7 +394,7 @@ void IMDiscussionMemberButton::creatMenu(/*const QList<QString> *groutList*/)
 
     }
 
-    // 不是自己 - 是群主
+    // 不是自己 - 是群 main 
     else if (m_mainWidget->getLocalMyInformation().m_userID ==
              m_discussionWidget->getDiscussionInformation().m_creatorID)
     {
@@ -413,7 +413,7 @@ void IMDiscussionMemberButton::creatMenu(/*const QList<QString> *groutList*/)
             m_menu->addAction(addRriend);
         }
     }
-    // 不是自己 - 不是群主
+    // 不是自己 - 不是群 main 
     else
     {
         m_menu->addAction(sendMessage);

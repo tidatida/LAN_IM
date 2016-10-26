@@ -66,7 +66,7 @@ signals:
 public slots:
     // 左键 双击
     void onDoubleClickFlockButton();
-    // 右键点击按键
+    //  right button  click  button 
     void onClickRightButton();
     // 发送群消息
     void onClickSendMessage();
@@ -85,7 +85,7 @@ public slots:
     //聊天窗口close 了
     void chatRoomQuit();
 
-    // 设置成员列表
+    // 设置成员列 table 
     void setFlockMemberList(const QVector<FlockMember> &);
 
 protected:
@@ -93,7 +93,7 @@ protected:
     void mouseDoubleClickEvent(QMouseEvent *);
 
 private:
-    // create 右键菜单
+    // create  right button  menu 
     void creatMenu(/*const QList<QString> *groutList*/);
 
 private:
@@ -103,7 +103,7 @@ private:
     bool m_isOpen;
     // 聊天窗口是否显示
     bool m_isShow;
-    // 右键菜单
+    //  right button  menu 
     QMenu *m_menu;
 //    IMFlockChatWidget *m_chatRoom;
     IMMainWidget *m_mainWidget;

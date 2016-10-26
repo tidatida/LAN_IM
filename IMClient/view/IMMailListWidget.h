@@ -15,7 +15,7 @@ public:
     void removeItem(QWidget *item);
     void insertItem(int index, QWidget * widget);
     
-    //create 右键菜单
+    //create  right button  menu 
 //    void creatMenu();
 signals:
     

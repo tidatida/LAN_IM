@@ -24,17 +24,17 @@ signals:
 public slots:
 
 private slots:
-    // 点击delete  邮件
+    //  click delete  邮件
     void onClickDeleteMail();
     // 左键 双击
     void onDoubleClickDiscussionButton();
-    // 右键点击按键
+    //  right button  click  button 
     void onClickRightButton();
 
 private:
     // 设置button显示信息
     void setButtonStatus();
-    // create 右键菜单
+    // create  right button  menu 
     void creatMenu();
 
 private:

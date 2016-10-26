@@ -25,7 +25,7 @@ IMFileReceiverWidget::~IMFileReceiverWidget()
 
 /*************************************************
 Function Name: setFileName()
-Description: 设置文件名
+Description: 设置文件 name 
 *************************************************/
 void IMFileReceiverWidget::setFileName(const QString & fileName)
 {
@@ -56,7 +56,7 @@ Description: init
 *************************************************/
 void IMFileReceiverWidget::initIMFileReceiverWidget()
 {
-    m_labelFileName = new QLabel(tr("文件名:"), this);
+    m_labelFileName = new QLabel(tr("文件 name :"), this);
     m_labelFileStatus = new QLabel(tr("等待对方接受"), this);
     m_labelFileStatus->setFixedHeight(80);
     m_barFile = new QProgressBar(this);
@@ -98,7 +98,7 @@ void IMFileReceiverWidget::initIMFileReceiverWidget()
 
 /*************************************************
 Function Name: onClickBtnClose()
-Description: 点击“close ”按钮
+Description:  click “close ” button 
 *************************************************/
 void IMFileReceiverWidget::onClickBtnClose()
 {
@@ -108,7 +108,7 @@ void IMFileReceiverWidget::onClickBtnClose()
 
 /*************************************************
 Function Name: onClickBtnCancel()
-Description: 点击“取消”按钮 中途取消的操作
+Description:  click “取消” button  中途取消,s 操作
 *************************************************/
 void IMFileReceiverWidget::onClickBtnCancel()
 {
@@ -117,7 +117,7 @@ void IMFileReceiverWidget::onClickBtnCancel()
 
 /*************************************************
 Function Name: readMessage()
-Description: 槽 读取收到的文件
+Description: 槽 读取收到,s 文件
 *************************************************/
 void IMFileReceiverWidget::readMessage()
 {
@@ -160,8 +160,8 @@ void IMFileReceiverWidget::readMessage()
     qDebug() << m_bytesReceived << "received:" << m_totalBytes;
 
     double speed = m_bytesReceived / useTime;
-    m_labelFileStatus->setText(tr("已接收 %1MB (%2MB/s) \n共%3MB 已用时:%4秒\n估计剩余时间:%5秒")
-                                         .arg(m_bytesReceived / (1024*1024))   // 已接收
+    m_labelFileStatus->setText(tr(" already 接收 %1MB (%2MB/s) \n共%3MB  already 用时:%4秒\n估计剩余时间:%5秒")
+                                         .arg(m_bytesReceived / (1024*1024))   //  already 接收
                                          .arg(speed*1000/(1024*1024),0,'f',2)  // 速度
                                          .arg(m_totalBytes / (1024 * 1024))    // 总大小
                                          .arg(useTime/1000,0,'f',0)            // 用时

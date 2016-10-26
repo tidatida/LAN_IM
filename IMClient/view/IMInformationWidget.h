@@ -40,7 +40,7 @@ private:
     void initIMLoginWidget();
 
 protected:
-    QLabel *m_labelUserID;    // user 帐号
+    QLabel *m_labelUserID;    // user 帐 number 
     QLineEdit *m_leUserID;
 //     QLabel *m_labelDesUserID;
     QLabel *m_labelNickname;   // user 昵称
@@ -58,7 +58,7 @@ protected:
         QLabel *m_labelConfirmPwd;  // 确认 passwd
         QLineEdit *m_leConfirmPwd;
 //        QLabel *m_labelDesConfirmPwd;
-        QLabel *m_labelSex;        // 性别
+        QLabel *m_labelSex;        // 性 other 
         QComboBox *m_cbxSex;
 //        QLabel *m_labelDesSex;
         QLabel *m_labelBirthday;   // 生日
@@ -70,7 +70,7 @@ protected:
 //        QLabel *m_labelAnswer;     // 问题answer 
 //        QLineEdit *m_leAnswer;
 //        QLabel *m_labelDesAnswer;
-        QLabel *m_labelName;       // 真实姓名
+        QLabel *m_labelName;       // 真实姓 name 
         QLineEdit *m_leName;
 //        QLabel *m_labelDesName;
         QLabel *m_labelPhone;      // 电话
@@ -80,8 +80,8 @@ protected:
         QLineEdit *m_leAddress;
 //        QLabel *m_labelDesAddress;
 
-        QPushButton *m_btnOk;// "Register " 按钮
-        QPushButton *m_btnCancel;  // "取消" 按钮
+        QPushButton *m_btnOk;// "Register "  button 
+        QPushButton *m_btnCancel;  // "取消"  button 
 
         int m_headNum;
         bool m_isReadOnly;

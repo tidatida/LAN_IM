@@ -48,7 +48,7 @@ IMMailButton::IMMailButton(const MailInformation & mail,
 
 /*************************************************
 Function Name: mousePressEvent
-Description: 鼠标单击事件
+Description:  mouse 单击 event 
 *************************************************/
 void IMMailButton::mousePressEvent(QMouseEvent *event)
 {
@@ -62,7 +62,7 @@ void IMMailButton::mousePressEvent(QMouseEvent *event)
 
 /*************************************************
 Function Name: mouseDoubleClickEvent
-Description: 鼠标双击事件
+Description:  mouse 双击 event 
 *************************************************/
 void IMMailButton::mouseDoubleClickEvent(QMouseEvent *event)
 {
@@ -105,13 +105,13 @@ void IMMailButton::onDoubleClickDiscussionButton()
 
 /*************************************************
 Function Name: onClickRightButton()
-Description: 右键点击按键
+Description:  right button  click  button 
 *************************************************/
 void IMMailButton::onClickRightButton()
 {
     if (m_menu == NULL)
     {
-        //create 右键菜单
+        //create  right button  menu 
         creatMenu();
     }
     m_menu->exec(QCursor::pos());
@@ -147,7 +147,7 @@ void IMMailButton::setButtonStatus()
 
 /*************************************************
 Function Name: getStatusFromInt()
-Description: create 右键菜单
+Description: create  right button  menu 
 *************************************************/
 void IMMailButton::creatMenu()
 {

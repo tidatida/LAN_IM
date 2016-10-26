@@ -165,7 +165,7 @@ void IMFriendButton::setButtonStatus()
 
 /*************************************************
 Function Name: refreshMoveMenu()
-Description: 刷新菜单中分组信息
+Description: 刷 new  menu 中 box 信息
 *************************************************/
 void IMFriendButton::refreshMoveMenu()
 {
@@ -183,7 +183,7 @@ void IMFriendButton::refreshMoveMenu()
         {
             QAction * action = new QAction(groupName, m_moveFriendMenu);
 
-            //remakr: todo : 重载action triggered 的时候 发送自定义信号
+            //remakr: todo : 重载action triggered ,s 时候 发送自定义信 number 
             m_moveFriendMenu->addAction(action);
             connect(action, SIGNAL(triggered()),
                         this, SLOT(onClickMove()));
@@ -209,13 +209,13 @@ void IMFriendButton::onDoubleClickFriendButton()
 
 /*************************************************
 Function Name: onClickRightButton()
-Description: 右键 单击
+Description:  right button  单击
 *************************************************/
 void IMFriendButton::onClickRightButton(/*const QPoint &*/)
 {
     if (m_menu == NULL)
     {
-        //create 右键菜单
+        //create  right button  menu 
         creatMenu();
     }
     m_menu->exec(QCursor::pos());
@@ -265,7 +265,7 @@ void IMFriendButton::onClickChangeRemark()
 {
     bool isOk = false;
     QString remark = QInputDialog::getText(NULL, "modify好友备注",
-                                           "请输入新的备注名称",
+                                           " please  input  new ,s 备注 name 称",
                                            QLineEdit::Normal,
                                            m_info.m_remarkName,
                                            &isOk);
@@ -280,7 +280,7 @@ void IMFriendButton::onClickChangeRemark()
 
 /*************************************************
 Function Name: onClickMove()
-Description: 移动好友至其他分组
+Description:  move 好友至 other  box 
 *************************************************/
 void IMFriendButton::onClickMove()
 {
@@ -315,7 +315,7 @@ void IMFriendButton::onClickEnterSpace()
 
 /*************************************************
 Function Name: chatRoomQuit()
-Description: 聊天室被close 
+Description: 聊天 room 被close 
 *************************************************/
 void IMFriendButton::chatRoomQuit()
 {
@@ -329,7 +329,7 @@ void IMFriendButton::chatRoomQuit()
 
 /*************************************************
 Function Name: mousePressEvent
-Description: 鼠标单击事件
+Description:  mouse 单击 event 
 *************************************************/
 void IMFriendButton::mousePressEvent(QMouseEvent *event)
 {
@@ -343,7 +343,7 @@ void IMFriendButton::mousePressEvent(QMouseEvent *event)
 
 /*************************************************
 Function Name: mouseDoubleClickEvent
-Description: 鼠标双击事件
+Description:  mouse 双击 event 
 *************************************************/
 void IMFriendButton::mouseDoubleClickEvent(QMouseEvent *event)
 {
@@ -370,7 +370,7 @@ QString IMFriendButton::getStatusFromInt(const int n) const
 //    INVISIBLE = 1, // 隐身
 //    BUSY = 2,      // 忙碌
 //    LEAVE = 3,     // 离开
-//    NOTDISTURB = 4 // 请勿打扰
+//    NOTDISTURB = 4 //  please 勿打扰
     switch (n)
     {
     case ONLINE:
@@ -387,7 +387,7 @@ QString IMFriendButton::getStatusFromInt(const int n) const
         return tr("离开");
         break;
     case NOTDISTURB:
-        return tr("请勿打扰");
+        return tr(" please 勿打扰");
         break;
     default:
         break;
@@ -398,7 +398,7 @@ QString IMFriendButton::getStatusFromInt(const int n) const
 
 /*************************************************
 Function Name: getStatusFromInt()
-Description: create 右键菜单
+Description: create  right button  menu 
 *************************************************/
 void IMFriendButton::creatMenu(/*const QList<QString> *groutList*/)
 {
@@ -408,11 +408,11 @@ void IMFriendButton::creatMenu(/*const QList<QString> *groutList*/)
     QAction *sendMail = new QAction(tr("发送电子邮件"), m_menu);
 
     QAction *showInfo = new QAction(tr("查看资料"), m_menu);
-    QAction *changeRemar = new QAction(tr("modify备注名称"), m_menu);
+    QAction *changeRemar = new QAction(tr("modify备注 name 称"), m_menu);
     QAction *removeFriend = new QAction(tr("delete  好友"), m_menu);
     QAction *enterSpace = new QAction(tr("进入好友空间"), m_menu);
 
-    m_moveFriendMenu= new QMenu(tr("移动好友至"), m_menu);
+    m_moveFriendMenu= new QMenu(tr(" move 好友至"), m_menu);
     refreshMoveMenu();
 
     connect(sendMessage, SIGNAL(triggered()),

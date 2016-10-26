@@ -27,7 +27,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
 
  /*************************************************
  Function Name: onClickDeleteDate()
- Description:  delete  某日的信息记录
+ Description:  delete  某日,s 信息记录
  *************************************************/
  void IMLocalMessageWidget::onClickDeleteDate()
  {
@@ -42,7 +42,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
      int row = m_listViewFriend->currentIndex().row();
      if (row < 0)
      {
-         QString temp = QString(tr("请先选择好友！"));
+         QString temp = QString(tr(" please  first 选择好友！"));
          QMessageBox::information(NULL, tr("delete  聊天记录"), temp);
          return;
      }
@@ -79,7 +79,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
      int row = m_listViewFriend->currentIndex().row();
      if (row < 0)
      {
-         QString temp = QString(tr("请先选择好友！"));
+         QString temp = QString(tr(" please  first 选择好友！"));
          QMessageBox::information(NULL, tr("导出聊天记录"), temp);
          return;
      }
@@ -90,7 +90,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
 
  /*************************************************
  Function Name: onClickExportAll()
- Description:  导出所有消息记录
+ Description:  导出 all 消息记录
  *************************************************/
  void IMLocalMessageWidget::onClickExportAll()
  {
@@ -102,7 +102,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
 
  /*************************************************
  Function Name: onClickGetMessage()
- Description:  获取消息记录
+ Description:   get 消息记录
  *************************************************/
  void IMLocalMessageWidget::onClickGetMessage()
  {
@@ -110,7 +110,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
      int row = m_listViewFriend->currentIndex().row();
      if (row < 0)
      {
-         QString temp = QString(tr("请先选择好友！"));
+         QString temp = QString(tr(" please  first 选择好友！"));
          QMessageBox::information(NULL, tr("显示聊天记录"), temp);
          return;
      }
@@ -122,7 +122,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
 
 // /*************************************************
 // Function Name: friendItemClicked()
-// Description:  单击好友列表项
+// Description:  单击好友列 table 项
 // *************************************************/
 // void IMLocalMessageWidget::friendItemClicked(const QModelIndex & index)
 // {

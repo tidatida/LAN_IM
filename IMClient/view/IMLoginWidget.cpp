@@ -132,8 +132,8 @@ void IMLoginWidget::setLabelStatus(const QString &mes, bool isLogin,
 
 /*************************************************
 Function Name: getIsAutoLogin()
-Description: 获取m_isAutoLogin
-Input: QTimerEvent *event:定时器事件
+Description:  get m_isAutoLogin
+Input: QTimerEvent *event: timer 器 event 
 Output: bool
 Changes: NULL
 *************************************************/
@@ -145,7 +145,7 @@ bool IMLoginWidget::getIsAutoLogin()
 
 /*************************************************
 Function Name: onClickbtnLogin()
-Description: 单击“登录”按钮
+Description: 单击“登录” button 
 Input: NULL
 Output: NULL
 Changes: NULL
@@ -207,7 +207,7 @@ void IMLoginWidget::onClickBtnLogin()
     {
         m_isLogin = true;
         m_btnLogin->setText(tr("登录"));
-        m_labelStatus->setText(tr("你好,请登录系统."));
+        m_labelStatus->setText(tr("你好, please 登录系统."));
 
         if (m_loginCtrl != NULL)
         {
@@ -226,8 +226,8 @@ void IMLoginWidget::onClickBtnLogin()
 // mark: protected:---------------------------------------------------------
 /*************************************************
 Function Name: timerEvent()
-Description: process   定时器事件
-Input: QTimerEvent *event:定时器事件
+Description: process    timer 器 event 
+Input: QTimerEvent *event: timer 器 event 
 Output: NULL
 Changes: NULL
 *************************************************/
@@ -259,7 +259,7 @@ void IMLoginWidget::timerEvent(QTimerEvent *event)
 
 /*************************************************
 Function Name: onClickLabelRegister()
-Description: 单击"Register 帐号"标签
+Description: 单击"Register 帐 number "标签
 Input: NULL
 Output: NULL
 Changes: NULL
@@ -287,7 +287,7 @@ void IMLoginWidget::onClickLabelForgotPwd()
     //delete this;
     bool isOkMes = false;
     QString userID = QInputDialog::getText(NULL, "找回 passwd",
-                                           "请输入帐号ID",
+                                           " please  input 帐 number ID",
                                            QLineEdit::Normal,
                                            NULL,
                                            &isOkMes);
@@ -357,7 +357,7 @@ void IMLoginWidget::initIMLoginWidget()
 //    vLayoutLeftTop->addWidget(labelPwd);
 
     m_leUserID = new QLineEdit;
-    m_leUserID->setPlaceholderText(tr("帐号"));
+    m_leUserID->setPlaceholderText(tr("帐 number "));
     m_leUserPwd = new QLineEdit;
     m_leUserPwd->setPlaceholderText(tr(" passwd"));
     m_leUserPwd->setEchoMode(QLineEdit::Password);
@@ -365,7 +365,7 @@ void IMLoginWidget::initIMLoginWidget()
     vLayoutMidTop->addWidget(m_leUserPwd);
 
     m_labelRegister = new IMClickLabel;
-    m_labelRegister->setText(tr("Register 帐号"));
+    m_labelRegister->setText(tr("Register 帐 number "));
     m_labelForgotPwd = new IMClickLabel;
     m_labelForgotPwd->setText(tr("Forget passwd?"));
     vLayoutRightTop->addWidget(m_labelRegister);
@@ -393,7 +393,7 @@ void IMLoginWidget::initIMLoginWidget()
     m_cbxStatus->addItem(tr("隐身"));
     m_cbxStatus->addItem(tr("忙碌"));
     m_cbxStatus->addItem(tr("离开"));
-    m_cbxStatus->addItem("请勿打扰");
+    m_cbxStatus->addItem(" please 勿打扰");
     m_btnLogin = new QPushButton(tr("登录"));
     m_btnLogin->setDefault(true);
 
@@ -407,7 +407,7 @@ void IMLoginWidget::initIMLoginWidget()
     m_hostAddress->setPlaceholderText(tr("server IP地址"));
     m_hostPort = new QLineEdit;
     m_hostPort->setFixedWidth(60);
-    m_hostPort->setPlaceholderText(tr("端口号"));
+    m_hostPort->setPlaceholderText(tr("端口 number "));
     m_extendedWidget = new QWidget;
     QHBoxLayout *hLayoutExtended = new QHBoxLayout;
     hLayoutExtended->setMargin(0);
@@ -417,7 +417,7 @@ void IMLoginWidget::initIMLoginWidget()
     //end hide
 
     m_labelStatus = new QLabel;
-    m_labelStatus->setText(tr("你好,请登录系统."));
+    m_labelStatus->setText(tr("你好, please 登录系统."));
     QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
     m_labelStatus->setSizePolicy(sizePolicy);
 
@@ -442,7 +442,7 @@ void IMLoginWidget::initIMLoginWidget()
 
 /*************************************************
 Function Name: linkSignalWithSlot()
-Description: connection 信号与槽
+Description: connection 信 number  and 槽
 Input: NULL
 Output: NULL
 Changes: NULL
@@ -472,7 +472,7 @@ void IMLoginWidget::linkSignalWithSlot()
 
 /*************************************************
 Function Name: closeTimer()
-Description: close 定时器
+Description: close  timer 器
 Input: NULL
 Output: NULL
 Changes: NULL
@@ -492,7 +492,7 @@ void IMLoginWidget::closeTimer()
 /*************************************************
 Function Name: setServer()
 Description: 设置server 
-Input:  ip地址，端口号
+Input:  ip地址，端口 number 
 Output: NULL
 Changes: NULL
 *************************************************/
@@ -527,7 +527,7 @@ void IMLoginWidget::setServer(const QString & ip, const int port)
 /*************************************************
 Function Name: 读取自动登录配置文件()
 Description: 设置server 
-Input:  ip地址，端口号
+Input:  ip地址，端口 number 
 Output: NULL
 Changes: NULL
 *************************************************/

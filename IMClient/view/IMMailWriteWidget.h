@@ -46,7 +46,7 @@ private:
     void initIMMailWriteWidget();
     void linkSignalWithSlot();
     void setWidgetToolBtn();
-    // 获取信息输入框的信息
+    //  get 信息 input 框,s 信息
     void getMailInformation();
 
 private:

@@ -390,7 +390,7 @@ struct FriendInformation
        m_groupName = GROUP_NAME_DEFAULT;
     }
 
-    //重载输入输出操作符
+    //重载 input 输出操作符
     friend QDataStream & operator<< (QDataStream &out,
                                     const FriendInformation &fri)
     {

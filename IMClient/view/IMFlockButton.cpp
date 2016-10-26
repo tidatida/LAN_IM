@@ -183,13 +183,13 @@ void IMFlockButton::onDoubleClickFlockButton()
 
 /*************************************************
 Function Name: onClickRightButton()
-Description: 右键点击按键
+Description:  right button  click  button 
 *************************************************/
 void IMFlockButton::onClickRightButton()
 {
     if (m_menu == NULL)
     {
-        //create 右键菜单
+        //create  right button  menu 
         creatMenu();
     }
     m_menu->exec(QCursor::pos());
@@ -272,7 +272,7 @@ void IMFlockButton::onClickAddMemberFlock()
 {
     bool isOk = false;
     QString memberID = QInputDialog::getText(NULL, "add 群成员",
-                                           "请输入对方帐号",
+                                           " please  input 对方帐 number ",
                                            QLineEdit::Normal,
                                            "",
                                            &isOk);
@@ -291,16 +291,16 @@ void IMFlockButton::onClickAddMemberFlock()
     {
         if (0 == memberID.compare(m_flockMembersVec[i].m_userID))
         {
-            QMessageBox::critical(NULL, tr("add 失败"), tr("该user 已经是该群成员"));
+            QMessageBox::critical(NULL, tr("add 失败"), tr("该user  already 经是该群成员"));
             return;
         }
     }
 
     bool isOkMes = false;
     QString checkMes = QInputDialog::getText(NULL, "add 群成员",
-                       "请输入验证信息",
+                       " please  input verify 信息",
                        QLineEdit::Normal,
-                       QString(tr("您好,我是群%1(%2)的群主，request 您加入我们的群")).
+                       QString(tr("hello,我是群%1(%2),s 群 main ，request 您加入我们,s 群")).
                                              arg(m_flockInfo.m_flockID,
                                                  m_flockInfo.m_flockName),
                        &isOkMes);
@@ -344,7 +344,7 @@ void IMFlockButton::chatRoomQuit()
 
 /*************************************************
 Function Name: setFlockMemeberList()
-Description: 设置群成员列表
+Description: 设置群成员列 table 
 *************************************************/
 void IMFlockButton::setFlockMemberList(const QVector<FlockMember> & memberList)
 {
@@ -352,8 +352,8 @@ void IMFlockButton::setFlockMemberList(const QVector<FlockMember> & memberList)
     if (len <= 0) return;
 
 
-    // 别的flockrequest server 获取群成员的时候，
-    // 会影响到别的flock， 可以 判断一下flockID.
+    //  other ,s flockrequest server  get 群成员,s 时候，
+    // 会影响到 other ,s flock， 可以 判断一下flockID.
     if (0 != memberList[0].m_flockID.compare(m_flockInfo.m_flockID))
         return;
 
@@ -372,7 +372,7 @@ void IMFlockButton::setFlockMemberList(const QVector<FlockMember> & memberList)
 
 /*************************************************
 Function Name: mousePressEvent
-Description: 鼠标单击事件
+Description:  mouse 单击 event 
 *************************************************/
 void IMFlockButton::mousePressEvent(QMouseEvent *event)
 {
@@ -386,7 +386,7 @@ void IMFlockButton::mousePressEvent(QMouseEvent *event)
 
 /*************************************************
 Function Name: mouseDoubleClickEvent
-Description: 鼠标双击事件
+Description:  mouse 双击 event 
 *************************************************/
 void IMFlockButton::mouseDoubleClickEvent(QMouseEvent *event)
 {
@@ -403,7 +403,7 @@ void IMFlockButton::mouseDoubleClickEvent(QMouseEvent *event)
 //remark:private:----------------------------------------
 /*************************************************
 Function Name: getStatusFromInt()
-Description: create 右键菜单
+Description: create  right button  menu 
 *************************************************/
 void IMFlockButton::creatMenu(/*const QList<QString> *groutList*/)
 {

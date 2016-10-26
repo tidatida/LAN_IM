@@ -32,7 +32,7 @@ IMLinkButton::IMLinkButton(QWidget *parent) :
 
 /*************************************************
 Function Name: setLatestMessage()
-Description:  设置最新消息
+Description:  设置最 new 消息
 *************************************************/
 void IMLinkButton::setLatestMessage(const TalkMessage & mes)
 {
@@ -42,13 +42,13 @@ void IMLinkButton::setLatestMessage(const TalkMessage & mes)
 
 /*************************************************
 Function Name: onClickRightButton()
-Description: 右键 单击
+Description:  right button  单击
 *************************************************/
 void IMLinkButton::onClickRightButton(/*const QPoint &*/)
 {
     if (m_menu == NULL)
     {
-        //create 右键菜单
+        //create  right button  menu 
         creatMenu();
     }
     m_menu->exec(QCursor::pos());
@@ -59,7 +59,7 @@ void IMLinkButton::onClickRightButton(/*const QPoint &*/)
 
 /*************************************************
 Function Name: mousePressEvent
-Description: 鼠标单击事件
+Description:  mouse 单击 event 
 *************************************************/
 void IMLinkButton::mousePressEvent(QMouseEvent *event)
 {
@@ -73,7 +73,7 @@ void IMLinkButton::mousePressEvent(QMouseEvent *event)
 
 /*************************************************
 Function Name: mouseDoubleClickEvent
-Description: 鼠标双击事件
+Description:  mouse 双击 event 
 *************************************************/
 void IMLinkButton::mouseDoubleClickEvent(QMouseEvent *event)
 {
@@ -92,7 +92,7 @@ void IMLinkButton::mouseDoubleClickEvent(QMouseEvent *event)
 
 /*************************************************
 Function Name: getStatusFromInt()
-Description: create 右键菜单
+Description: create  right button  menu 
 *************************************************/
 void IMLinkButton::creatMenu(/*const QList<QString> *groutList*/)
 {

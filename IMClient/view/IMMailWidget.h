@@ -38,16 +38,16 @@ private slots:
     // 设置发件箱
     void setOutMailsWidget(const QVector<MailInformation> &);
 
-    // add 收件箱按钮
+    // add 收件箱 button 
     bool addInMailButton(const MailInformation &);
-    // add 发件箱按钮
+    // add 发件箱 button 
     bool addOutMailButton(const MailInformation &);
-    // delete  邮件按钮
+    // delete  邮件 button 
     void deleteMail(const int &);
 
-    // add 新邮件到发件箱
+    // add  new 邮件到发件箱
     bool addNewOutMailButton(const MailInformation &);
-    // add 新邮件到收件箱
+    // add  new 邮件到收件箱
     bool addNewInMailButton(const MailInformation &);
 
 private:
@@ -58,7 +58,7 @@ private:
 private:
 //    QPushButton *m_btnWrite;        // 写信
 //    QPushButton *m_btnIn;           // 收件箱
-//    QPushButton *m_btnOut;          // 已发送
+//    QPushButton *m_btnOut;          //  already 发送
 //    QPushButton *m_btnDrafts;       // 草稿箱
 //    QPushButton *m_btnTrash;        // 垃圾箱
 

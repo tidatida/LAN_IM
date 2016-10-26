@@ -20,7 +20,7 @@ class CustomLineEdit;
 
 /*************************************************
 Class Name: IMRegisterWidget
-Description: clientRegister 帐号界面 class
+Description: clientRegister 帐 number 界面 class
 *************************************************/
 class IMRegisterWidget : public QWidget
 {
@@ -32,26 +32,26 @@ public:
 signals:
     
 public slots:
-    void resetBtnRegister(bool );    // 重置Register 按钮
+    void resetBtnRegister(bool );    // 重置Register  button 
 
 protected:
-    void moveEvent(QMoveEvent *);    // 窗口移动事件
+    void moveEvent(QMoveEvent *);    // 窗口 move  event 
 
 private slots:
-    void onClickBtnRegister();  // 单击“Register ”按钮
-    void conClickBtnCancel();   // 单击“取消”按钮
+    void onClickBtnRegister();  // 单击“Register ” button 
+    void conClickBtnCancel();   // 单击“取消” button 
 
 private:
     // init Register 界面
     void initIMRegisterWidget();
-    // connection 信号与槽
+    // connection 信 number  and 槽
     void linkSignalWithSlot();
 
 
 private:
     QLabel *m_labelHead;
 
-//    QLabel *m_labelUserID;    // user 帐号
+//    QLabel *m_labelUserID;    // user 帐 number 
 //    QLineEdit *m_leUserID;
 //    QLabel *m_labelDesUserID;
     QLabel *m_labelNickname;   // user 昵称
@@ -63,7 +63,7 @@ private:
     QLabel *m_labelConfirmPwd;  // 确认 passwd
     QLineEdit *m_leConfirmPwd;
     QLabel *m_labelDesConfirmPwd;
-    QLabel *m_labelSex;        // 性别
+    QLabel *m_labelSex;        // 性 other 
     QComboBox *m_cbxSex;
     QLabel *m_labelDesSex;
     QLabel *m_labelBirthday;   // 生日
@@ -75,7 +75,7 @@ private:
     QLabel *m_labelAnswer;     // 问题answer 
     QLineEdit *m_leAnswer;
     QLabel *m_labelDesAnswer;
-    QLabel *m_labelName;       // 真实姓名
+    QLabel *m_labelName;       // 真实姓 name 
     QLineEdit *m_leName;
     QLabel *m_labelDesName;
     QLabel *m_labelPhone;      // 电话
@@ -85,8 +85,8 @@ private:
     QLineEdit *m_leAddress;
     QLabel *m_labelDesAddress;
 
-    QPushButton *m_btnRegister;// "Register " 按钮
-    QPushButton *m_btnCancel;  // "取消" 按钮
+    QPushButton *m_btnRegister;// "Register "  button 
+    QPushButton *m_btnCancel;  // "取消"  button 
 
     IMRegisterCtrl * m_regCtrl;
 

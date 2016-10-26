@@ -60,7 +60,7 @@ void IMToolItem::setTile(const QString & title)
 
 /*************************************************
 Function Name: getSize()
-Description:  获取成员数量
+Description:   get 成员数量
 *************************************************/
 int IMToolItem::getSize()
 {
@@ -70,7 +70,7 @@ int IMToolItem::getSize()
 // mark protected:------------------------------------------------------
 /*************************************************
 Function Name: mousePressEvent
-Description: 鼠标点击事件
+Description:  mouse  click  event 
 *************************************************/
 void IMToolItem:: mousePressEvent(QMouseEvent *event)
 {
@@ -96,7 +96,7 @@ void IMToolItem:: mousePressEvent(QMouseEvent *event)
 // mark private slots:--------------------------------------------------
 /*************************************************
 Function Name: renameBox()
-Description:  重命名
+Description:  重命 name 
 *************************************************/
 void IMToolItem::renameBox()
 {
@@ -117,13 +117,13 @@ void IMToolItem::removeBox()
 
 /*************************************************
 Function Name: onClickRightButton()
-Description: 右键点击按键
+Description:  right button  click  button 
 *************************************************/
 void IMToolItem::onClickRightButton()
 {
     if (m_menu == NULL)
     {
-        //create 右键菜单
+        //create  right button  menu 
         creatMenu();
     }
     m_menu->exec(QCursor::pos());
@@ -131,12 +131,12 @@ void IMToolItem::onClickRightButton()
 
 /*************************************************
 Function Name: creatMenu
-Description: create 右键菜单
+Description: create  right button  menu 
 *************************************************/
 void IMToolItem:: creatMenu()
 {
     m_menu = new QMenu(this);
-    QAction *rename = new QAction(tr("重命名"), m_menu);
+    QAction *rename = new QAction(tr("重命 name "), m_menu);
     QAction *remove = new QAction(tr("delete  "), m_menu);
 
     connect(rename, SIGNAL(triggered()),

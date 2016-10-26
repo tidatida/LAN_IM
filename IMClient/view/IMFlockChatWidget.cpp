@@ -50,7 +50,7 @@ IMFlockChatWidget::~IMFlockChatWidget()
 
 /*************************************************
 Function Name: appendMessageShow()
-Description:  add 群成员发来的信息
+Description:  add 群成员发来,s 信息
 *************************************************/
 void IMFlockChatWidget::appendMessageShow(const TalkMessage &mes)
 
@@ -75,7 +75,7 @@ void IMFlockChatWidget::appendMessageShow(const TalkMessage &mes)
     else
         name = member.m_remark;
 
-    //将（收到的）信息显示在输出栏
+    //将（收到,s ）信息显示在输出栏
     QString dateTime = IMTcpSocket::getCurrentDateTime();
     QString temp = QString("<font size=\"FONT_SIEZE\" color=blue>%1    %2: </font>%3")
         .arg(name).arg(dateTime).arg(mes.m_text);
@@ -114,7 +114,7 @@ void IMFlockChatWidget::setChatInformation(const FlockInformation & flock)
 
 /*************************************************
 Function Name: setFlockMemberRemark()
-Description:  设置群成员名片
+Description:  设置群成员 name 片
 *************************************************/
 void IMFlockChatWidget::setFlockMemberRemark(const TempStrings & tmpStr)
 {
@@ -126,7 +126,7 @@ void IMFlockChatWidget::setFlockMemberRemark(const TempStrings & tmpStr)
 
 /*************************************************
 Function Name: addFlockMemberButton()
-Description:  add 群成员按钮
+Description:  add 群成员 button 
 *************************************************/
 bool IMFlockChatWidget::addFlockMemberButton(const FlockMember & memInfo)
 {
@@ -148,7 +148,7 @@ bool IMFlockChatWidget::addFlockMemberButton(const FlockMember & memInfo)
 
 /*************************************************
 Function Name: removeFlockMemberButton()
-Description:  delete  成员按钮
+Description:  delete  成员 button 
 *************************************************/
 bool IMFlockChatWidget::removeFlockMemberButton(const QString & memberID)
 {
@@ -163,7 +163,7 @@ bool IMFlockChatWidget::removeFlockMemberButton(const QString & memberID)
 
 /*************************************************
 Function Name: setFlockMemberList()
-Description:  设置群成员列表
+Description:  设置群成员列 table 
 *************************************************/
 void IMFlockChatWidget::setFlockMemberList(const QVector<FlockMember> & memberList)
 {
@@ -191,13 +191,13 @@ void IMFlockChatWidget::setFlockMemberList(const QVector<FlockMember> & memberLi
 
 /*************************************************
 Function Name: closeEvent()
-Description:  重载close 事件
+Description:  重载close  event 
 *************************************************/
 void IMFlockChatWidget::closeEvent(QCloseEvent *event)
 {
     qDebug() << "flock close:" << m_flockInfor.m_flockID;
 
-    //向mainframe发送退出信号
+    //向mainframe发送退出信 number 
     emit roomQuitSignal();
 
     saveHistoryMessage();
@@ -275,7 +275,7 @@ void IMFlockChatWidget::onClickBtnColor()
         m_textInput->setTextColor(color);
         m_textInput->setFocus();
 
-        //    //设置字体的颜色，并将其写入文件
+        //    //设置字体,s 颜色，并将其写入文件
         //		saveFile.color = colorDialog->currentColor();
         //		saveFontColor();
     }
@@ -305,7 +305,7 @@ void IMFlockChatWidget::onClickBtnHistory(bool checked)
         readHistoryMessage();
     }
     else
-        m_labelDockWidget->setText(tr("群成员列表"));
+        m_labelDockWidget->setText(tr("群成员列 table "));
     m_memberListWidget->setHidden(checked);
     m_tbHistoryShow->setHidden(!checked);
 }
@@ -315,10 +315,10 @@ Function Name: currentFormatChanged()
 Description:  部件状态
 *************************************************/
 void IMFlockChatWidget::currentFormatChanged(const QTextCharFormat &format)
-{//当编辑器的字体格式改变时，我们让部件状态也随之改变
+{//当编辑器,s 字体格式改变时，我们让部件状态也随之改变
     m_cbFont->setCurrentFont(format.font());
 
-    if(format.fontPointSize()<9)  //如果字体大小出错，因为我们最小的字体为9
+    if(format.fontPointSize()<9)  //如果字体大小出错，因为我们最小,s 字体为9
         m_cbSize->setCurrentIndex(3); //即显示12
     else m_cbSize->setCurrentIndex(
             m_cbSize->findText(QString::number(format.fontPointSize())));
@@ -331,7 +331,7 @@ void IMFlockChatWidget::currentFormatChanged(const QTextCharFormat &format)
 
 /*************************************************
 Function Name: onClickBtnClocse()
-Description:  点击“close ”按钮
+Description:   click “close ” button 
 *************************************************/
 void IMFlockChatWidget::onClickBtnClose()
 {
@@ -341,13 +341,13 @@ void IMFlockChatWidget::onClickBtnClose()
 
 /*************************************************
 Function Name: onClickBtnSend()
-Description:  点击“发送”按钮
+Description:   click “发送” button 
 *************************************************/
 void IMFlockChatWidget::onClickBtnSend()
 {
     if (m_textInput->toPlainText().isEmpty())
         return;
-    // 获取信息输入框的信息，并且更新信息输入框
+    //  get 信息 input 框,s 信息，并and  更 new 信息 input 框
     QString sendString = m_textInput->toHtml();
     m_textInput->clear();
     QString dateTime = IMTcpSocket::getCurrentDateTime();
@@ -386,7 +386,7 @@ void IMFlockChatWidget::initIMFlockChatWidget()
     hLayoutInformation->addWidget(m_labelInformation);
     hLayoutInformation->addStretch();
 
-    /*********输入编辑框工具栏**************/
+    /********* input 编辑框工具栏**************/
     QHBoxLayout *hLayoutInputTool = new QHBoxLayout;
 
     hLayoutInputTool->addWidget(m_cbFont);
@@ -401,7 +401,7 @@ void IMFlockChatWidget::initIMFlockChatWidget()
     hLayoutInputTool->addWidget(m_toolBtnHistory);
 
 
-    /*********底部按钮**************/
+    /*********底部 button **************/
     QHBoxLayout *hLayoutBtm = new QHBoxLayout;
     m_btnClose = new QPushButton(tr("close "));
     m_btnSend = new QPushButton(tr("发送"));
@@ -430,7 +430,7 @@ void IMFlockChatWidget::initIMFlockChatWidget()
 
     m_tbHistoryShow = new QTextBrowser(m_dockWidget);
     m_labelDockWidget = new QLabel(m_dockWidget);
-    m_labelDockWidget->setText(tr("群成员列表"));
+    m_labelDockWidget->setText(tr("群成员列 table "));
     m_memberListWidget = new IMFlockMemberListWidget(m_dockWidget);
     QVBoxLayout *vLayoutHistory = new QVBoxLayout;
     vLayoutHistory->addWidget(m_labelDockWidget);
@@ -458,7 +458,7 @@ void IMFlockChatWidget::initIMFlockChatWidget()
 
 /*************************************************
 Function Name: linkSignalWithSlot()
-Description:  connection 信号与槽
+Description:  connection 信 number  and 槽
 *************************************************/
 void IMFlockChatWidget::linkSignalWithSlot()
 {
