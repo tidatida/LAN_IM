@@ -159,12 +159,12 @@ void IMMessageWidget::initIMMessageWidget()
     m_toolBtnGetMessage->setAutoRaise(true);
     m_toolBtnGetMessage->setFocus();
     m_toolBtnGetMessage->setToolTip(tr(" get 消息"));
-    m_toolBtnGetMessage->setStatusTip(tr(" get  and 当前好友当前日期,s 消息记录"));
+    m_toolBtnGetMessage->setStatusTip(tr(" get  and 当前好友当前 date ,s 消息记录"));
 
     m_leBirthday = new CustomLineEdit(this);
     m_leBirthday->setFixedWidth(100);
-    m_leBirthday->setToolTip(tr("选择查看日期"));
-    m_leBirthday->setStatusTip(tr("选择需要查看,s 日期"));
+    m_leBirthday->setToolTip(tr("选择查看 date "));
+    m_leBirthday->setStatusTip(tr("选择需要查看,s  date "));
 
     m_tooBtnImport = new QToolButton(this);
     m_tooBtnImport->setIcon(QIcon(":/images/importAll.png"));

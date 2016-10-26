@@ -96,7 +96,7 @@ QString IMTcpSocket::getIP()
 
 /*************************************************
 Function Name: getCurrentDateTime()
-Description:  get 当前,s 日期和时间
+Description:  get 当前,s  date 和时间
 *************************************************/
 QString IMTcpSocket::getCurrentDateTime()
 {
@@ -124,9 +124,9 @@ void IMTcpSocket::connectionClosed()
 
     if (m_flag == 0)
     {
-//        //程序如果和server 断开connection ,s 话，弹出警告，直接退出
+//        //程序如果和server 断开connection ,s 话，弹出警告，直接 quit from  
 //        QMessageBox::critical(NULL, tr("系统错误"),
-//                              tr("您,s client already 经 and server 断开connection ， please 重 new 登录。"));
+//                              tr(" your ,s client already 经 and server 断开connection ， please 重 new 登录。"));
 //        qApp->quit();
     }
 }

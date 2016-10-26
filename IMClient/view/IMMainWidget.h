@@ -112,10 +112,10 @@ public:
     // 解散讨论 box （发送至server ）
     void dropDiscussion(const QString &);
 
-    // 退出群（发送至server ）
+    //  quit from  群（发送至server ）
     void leaveFlock(const QString & memberID, const QString &flockID);
 
-    // 退出讨论 box  （发送至server ）
+    //  quit from  讨论 box  （发送至server ）
     void leaveDiscussion(const QString & memberID, const QString &discussionID);
 
     // add 好友（发送至server ）
@@ -234,9 +234,9 @@ public slots:
     //  already delete  讨论 box 
     void dropedDiscussion(const QString & discussionID);
 
-    //  already 退出群
+    //  already  quit from  群
     void leavedFlock(const QString &, const QString &, const QString &);
-    //  already 退出讨论 box 
+    //  already  quit from  讨论 box 
     void leavedDiscussion(const QString &, const QString &);
 
     // create 群成功
@@ -342,7 +342,7 @@ private:
     void clearContainers();
     void creatMenu();
     void refreshFriendButtonMenu();
-    //询问user 是否真,s 要退出
+    //询问user 是否真,s 要 quit from  
     bool continueToClose();
 private:
     IMMainCtrl *m_mainCtrl;

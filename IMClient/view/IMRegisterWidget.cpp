@@ -237,16 +237,16 @@ void IMRegisterWidget::initIMRegisterWidget()
     m_btnCancel = new QPushButton;
 
     // 中间区域 右边 信息描述
-    m_labelDesNickname = new QLabel(tr("* 您独一无二,s 称谓"));
+    m_labelDesNickname = new QLabel(tr("*  your 独一无二,s 称谓"));
     m_labelDesPwd = new QLabel(tr("* 6～14个字符，不能包含空格"));
     m_labelDesConfirmPwd = new QLabel(tr("*  please  then 次 input  passwd"));
-    m_labelDesSex = new QLabel(tr("* 您,s 性 other "));
-    m_labelDesBirthday = new QLabel(tr("* 您,s 出生日"));
+    m_labelDesSex = new QLabel(tr("*  your ,s 性 other "));
+    m_labelDesBirthday = new QLabel(tr("*  your ,s 出生日"));
     m_labelDesQuestion = new QLabel(tr("* used to   找回 passwd"));
     m_labelDesAnswer = new QLabel(tr("* 一定记住！！"));
-    m_labelDesName = new QLabel(tr("  您,s 真实姓 name "));
-    m_labelDesPhone = new QLabel(tr("  您,s 手机 number 码"));
-    m_labelDesAddress = new QLabel(tr("  您,s 地址"));
+    m_labelDesName = new QLabel(tr("   your ,s 真实姓 name "));
+    m_labelDesPhone = new QLabel(tr("   your ,s 手机 number 码"));
+    m_labelDesAddress = new QLabel(tr("   your ,s 地址"));
 
     // 整体区域 下面  button 
     m_btnRegister = new QPushButton(tr("Register "));

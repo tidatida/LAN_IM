@@ -247,14 +247,14 @@ void IMFlockButton::onClickDropFlock()
 
 /*************************************************
 Function Name: onClickLeaveFlock()
-Description: 退出群
+Description:  quit from  群
 *************************************************/
 void IMFlockButton::onClickLeaveFlock()
 {
     QMessageBox::StandardButton returnBtn;
 
-    returnBtn = QMessageBox::question(NULL, tr("退出群"),
-        QString(tr("你确定要退出群(%1)吗？")).arg(m_flockInfo.m_flockName),
+    returnBtn = QMessageBox::question(NULL, tr(" quit from  群"),
+        QString(tr("你确定要 quit from  群(%1)吗？")).arg(m_flockInfo.m_flockName),
         QMessageBox::Yes | QMessageBox::No,  QMessageBox::No);
 
     if (m_mainWidget == NULL)
@@ -300,7 +300,7 @@ void IMFlockButton::onClickAddMemberFlock()
     QString checkMes = QInputDialog::getText(NULL, "add 群成员",
                        " please  input verify 信息",
                        QLineEdit::Normal,
-                       QString(tr("hello,我是群%1(%2),s 群 main ，request 您加入我们,s 群")).
+                       QString(tr("hello,我是群%1(%2),s 群 main ，request  your 加入我们,s 群")).
                                              arg(m_flockInfo.m_flockID,
                                                  m_flockInfo.m_flockName),
                        &isOkMes);
@@ -449,7 +449,7 @@ void IMFlockButton::creatMenu(/*const QList<QString> *groutList*/)
     }
     else
     {
-        QAction *leaveFlock = new QAction(tr("退出该群"), m_menu);
+        QAction *leaveFlock = new QAction(tr(" quit from  该群"), m_menu);
         connect(leaveFlock, SIGNAL(triggered()),
             this, SLOT(onClickLeaveFlock()));
         m_menu->addAction(leaveFlock);

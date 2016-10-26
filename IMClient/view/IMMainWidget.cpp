@@ -902,25 +902,6 @@ Description: set
 *************************************************/
 void IMMainWidget::setFriendListWidget(const QVector<FriendInformation> &friendsVec)
 {
-    //    return;
-    //    #if 0
-    //    clearContainers();
-
-    //    if (!m_friendsGroupList.contains(GROUP_NAME_DEFAULT))
-    //    {
-    //        // store   new ,s  box  number 
-    //        m_friendsGroupList.append(GROUP_NAME_DEFAULT);
-
-    //        //  create and store  box 
-    //        IMToolBox *toolBox = new IMToolBox;
-    //        IMToolItem *toolItem = new IMToolItem(GROUP_NAME_DEFAULT);
-    //        m_toolItemsFriendsVec.push_back(toolItem);
-    //        toolBox->addItem(toolItem);
-    //        m_friendListWidget->addItem(toolBox);
-
-    //        // store  map  relation 
-    //        m_indexFriendsGroupMap.insert(GROUP_NAME_DEFAULT, m_toolItemsFriendsVec.size()-1);
-    //    }
 
     int num = 0;
     int len = friendsVec.size();
@@ -1066,10 +1047,6 @@ void IMMainWidget::receiveFriendTalkMessage(const TalkMessage &mes)
         IMFlockChatWidget *flockRoom = NULL;
         if (m_flockRoomMap.contains(mes.m_receiverID))
         {
-            //            qDebug() << "flock room contains";
-            //            m_flockRoomMap[mes.m_receiverID]->raise();
-            //            m_flockRoomMap[mes.m_receiverID]->activateWindow();
-            //            m_flockRoomMap[mes.m_receiverID]->show();
             flockRoom = m_flockRoomMap[mes.m_receiverID];
         }
         else
@@ -1108,10 +1085,6 @@ void IMMainWidget::receiveFriendTalkMessage(const TalkMessage &mes)
         IMDiscussionChatWidget *discussionRoom = NULL;
         if (m_discussionRoomMap.contains(mes.m_receiverID))
         {
-            //            qDebug() << "discussion room contains";
-            //            m_discussionRoomMap[mes.m_receiverID]->raise();
-            //            m_discussionRoomMap[mes.m_receiverID]->activateWindow();
-            //            m_discussionRoomMap[mes.m_receiverID]->show();
             discussionRoom = m_discussionRoomMap[mes.m_receiverID];
         }
         else
@@ -1158,21 +1131,6 @@ void IMMainWidget::receiveFriendTalkMessage(const TalkMessage &mes)
     }
     else
     {
-        //        ChatInformation chatInf;
-        //        chatInf.m_friendID = mes.m_senderID;
-
-        //        chatInf.m_headPortrait = m_info.m_headPortrait;
-        //    //    chatInf.m_friendMark = m_info.m_mark;
-        //        chatInf.m_friendNickname = m_info.m_nickname;
-        //        chatInf.m_friendRemark = m_info.m_remarkName;
-
-        //        chatRoom = new IMChatWidget(chatInf);
-        //        m_chatRoomMap.insert(chatInf.m_friendID, chatRoom);
-        //        connect(chatRoom, SIGNAL(sendMessagesFromChat(TalkMessage &)),
-        //                this, SLOT(receiveMessagesFromChat(TalkMessage &)));
-        //    //    connect(room, SIGNAL(roomQuitSignal()),  this, SLOT(chatRoomQuit()));
-
-        //        chatRoom->show();
         m_friendMap[mes.m_senderID]->openChatRoom();
         chatRoom = m_friendMap[mes.m_senderID]->getRoomPoint();
     }
@@ -1227,11 +1185,6 @@ void IMMainWidget::receiveFriendTalkMessage(const TalkMessage &mes)
     }
     }
 
-    //	//open Chat Window  ，and show from peer msg
-    //	iter.value()->openChatRoom();
-    //	iter.value()->getRoomPoint()->setOutputLine(mes);
-
-    //appendMessageShow();
 }
 
 /*************************************************
@@ -1366,10 +1319,7 @@ void IMMainWidget::showDiscussionInformation(const DiscussionInformation & discu
 
     IMDiscussionInformationWidget *infWidget = new IMDiscussionInformationWidget(this);
     m_discussionInformationMap.insert(discussion.m_discussionID, infWidget);
-    //    if (discussion.m_creatorID.compare(m_myself.m_userID) == 0)
     infWidget->setReadOnly(true, true);
-    //    else
-    //        infWidget->setReadOnly(true, false);
 
     infWidget->setDiscussionInformation(discussion);
     infWidget->show();
@@ -1382,14 +1332,6 @@ Description: set Groupmsg
 *************************************************/
 void IMMainWidget::setFlockInformation(const FlockInformation & flock)
 {
-    //    if (m_flockInformationMap.contains(flock.m_flockID))
-    //    {
-    //        m_flockInformationMap[flock.m_flockID]->setFlockInformation(flock);
-    //        m_flockInformationMap[flock.m_flockID]->raise();
-    //        m_flockInformationMap[flock.m_flockID]->activateWindow();
-    //        m_flockInformationMap[flock.m_flockID]->show();
-    //        return;
-    //    }
     if (m_flockMap.contains(flock.m_flockID))
     {
         m_flockMap[flock.m_flockID]->setChangedInformation(flock);
@@ -1422,7 +1364,7 @@ void IMMainWidget::setDiscussionInformation(const DiscussionInformation & discus
 
 /*************************************************
 Function Name:setFlockMemberRemark
-Description: set Group成员 name 片
+Description: group name
 *************************************************/
 void IMMainWidget::setFlockMemberRemark(const TempStrings & tmpStr)
 {
@@ -1435,7 +1377,7 @@ void IMMainWidget::setFlockMemberRemark(const TempStrings & tmpStr)
 
 /*************************************************
 Function Name:setFriendRemark
-Description: set friend备注
+Description: set friend remark
 *************************************************/
 void IMMainWidget::setFriendRemark(const TempStrings& tempStr)
 {
@@ -1443,7 +1385,7 @@ void IMMainWidget::setFriendRemark(const TempStrings& tempStr)
         return;
     QMap<QString, IMFriendButton*>::iterator iter;
     iter = m_friendMap.find(tempStr.m_two);
-    //如果friend列 table 中不存在这self ，就直接返回
+
     if(m_friendMap.end() == iter)
         return;
 
@@ -1481,14 +1423,6 @@ void IMMainWidget::deletedFriend(const QString & myID, const QString & friendID,
         m_chatRoomMap[friendID]->deleteLater();
         m_chatRoomMap.remove(friendID);
     }
-    //    m_indexFriendsGroupMap.erase(friendID);
-
-    //    QMap<QString, IMFriendButton*>::iterator iter;
-    //    iter = m_indexFriendsGroupMap.find(friendID);
-    //    //如果friend列 table 中不存在这self ，就直接返回
-    //    if(m_indexFriendsGroupMap.end() == iter)
-    //        return;
-    //    iter.value()
     qDebug() << "friend deleted";
     setOnlineCounter(m_onlineCounter - 1);
 }
@@ -1503,7 +1437,7 @@ void IMMainWidget::dropedFlock(const QString & flockID)
         return;
 
     QMessageBox::information(NULL, tr("Groupmsg "),
-                             QString(tr("Group%1 already 经被Group main 解散")).arg(flockID));
+                             QString(tr("Group %1 already destroied by owner")).arg(flockID));
 
     if (m_flockRoomMap.contains(flockID))
     {
@@ -1536,7 +1470,7 @@ void IMMainWidget::dropedDiscussion(const QString & discussionID)
         return;
 
     QMessageBox::information(NULL, tr("discuss groupmsg "),
-                             QString(tr("discuss group%1 already 经被 box 长解散")).arg(discussionID));
+                             QString(tr("discuss group%1 already been destroyed by ower.")).arg(discussionID));
 
     if (m_discussionRoomMap.contains(discussionID))
     {
@@ -1559,7 +1493,7 @@ void IMMainWidget::dropedDiscussion(const QString & discussionID)
 
 /*************************************************
 Function Name:leavedFlock
-Description:  already 退出Group
+Description:  already  quit from  Group
 *************************************************/
 void IMMainWidget::leavedFlock(const QString & memberID,
                                const QString & flockID,
@@ -1568,12 +1502,9 @@ void IMMainWidget::leavedFlock(const QString & memberID,
     if (creatorID == m_myself.m_userID)
     {
         QMessageBox::information(NULL, tr("Groupmsg "),
-                                 QString(tr("user%1 already 经退出Group%2")).
+                                 QString(tr("user%1 already 经 quit from  Group%2")).
                                  arg(memberID, flockID));
 
-        // 如果Group是open,s ，好及时刷 new ，将成员在Group中delete
-        // 不然要等到下次openGroup,s 时候，才能看到成员 already 被delete
-        //  relation 也不大
         if (m_flockRoomMap.contains(flockID))
         {
             m_flockRoomMap[flockID]->removeFlockMemberButton(memberID);
@@ -1586,7 +1517,7 @@ void IMMainWidget::leavedFlock(const QString & memberID,
     else if (memberID == m_myself.m_userID)
     {
         QMessageBox::information(NULL, tr("Groupmsg "),
-                                 QString(tr("hello,%1,您 already 经退出Group%2")).
+                                 QString(tr("hello,%1, your  already 经 quit from  Group%2")).
                                  arg(memberID, flockID));
 
         if (m_flockRoomMap.contains(flockID))
@@ -1622,7 +1553,7 @@ void IMMainWidget::leavedFlock(const QString & memberID,
 
 /*************************************************
 Function Name:leavedDiscussion
-Description:  already 退出discuss group
+Description:  already  quit from  discuss group
 *************************************************/
 void IMMainWidget::leavedDiscussion(const QString & memberID,
                                     const QString & discussionID)
@@ -1630,7 +1561,7 @@ void IMMainWidget::leavedDiscussion(const QString & memberID,
     if (memberID == m_myself.m_userID)
     {
         //        QMessageBox::information(NULL, tr("discuss groupmsg "),
-        //                                 QString(tr("hello,%1,您 already 经退出discuss group%2")).
+        //                                 QString(tr("hello,%1, your  already 经 quit from  discuss group%2")).
         //                                 arg(memberID, discussionID));
 
         if (m_discussionRoomMap.contains(discussionID))
@@ -1648,17 +1579,8 @@ void IMMainWidget::leavedDiscussion(const QString & memberID,
         }
         qDebug() << "leaved discussion";
     }
-
-    //         if (creatorID == m_myself.m_userID)
     else
     {
-        //             QMessageBox::information(NULL, tr("Groupmsg "),
-        //                                      QString(tr("user%1 already 经退出discuss group%2")).
-        //                                      arg(memberID, discussionID));
-
-        //             // 如果discuss group是open,s ，好及时刷 new ，将成员在discuss group中delete
-        //             // 不然要等到下次openGroup,s 时候，才能看到成员 already 被delete
-        //             //  relation 也不大
         if (m_discussionRoomMap.contains(discussionID))
         {
             m_discussionRoomMap[discussionID]->removeDiscussionMemberButton(memberID);
@@ -1686,7 +1608,7 @@ void IMMainWidget::createFlockSuccess(const FlockInformation & flock)
         return;
     if (!addFlockButton(flock))
         return;
-    QString temp =  QString(tr("hello,%1(%2).\n您 already 经successcreateGroup%3(%4).\ncreate日期: %5.")).
+    QString temp =  QString(tr("hello,%1(%2).\n your  already 经successcreateGroup%3(%4).\ncreate date : %5.")).
             arg(m_myself.m_userID, m_myself.m_nickname,
                 flock.m_flockID, flock.m_flockName,
                 flock.m_createDate.toString("yyyy-MM-dd"));
@@ -1709,7 +1631,7 @@ void IMMainWidget::createDiscussionSuccess(const DiscussionInformation & discuss
         return;
     if (!addDiscussionButton(discussion))
         return;
-    QString temp =  QString(tr("hello,%1(%2).\n您 already 经successcreatediscuss group%3(%4).\ncreate日期: %5.")).
+    QString temp =  QString(tr("hello,%1(%2).\n your  already 经successcreatediscuss group%3(%4).\ncreate: %5.")).
             arg(m_myself.m_userID, m_myself.m_nickname,
                 discussion.m_discussionID, discussion.m_discussionName,
                 discussion.m_createDate.toString("yyyy-MM-dd"));
@@ -1790,7 +1712,6 @@ void IMMainWidget::onClickAddFriend()
         return;
 
     // mark
-    // 检验 是否全是 数字 或者 一开始就限制 或者 重写一个messagebox
 
     addFriend(friendID);
 }
@@ -1811,11 +1732,10 @@ void IMMainWidget::onClickAddFlock()
         return;
 
     // mark
-    // 检验 是否全是 数字 或者 一开始就限制 或者 重写一个messagebox
 
     if (m_flockMap.contains(flockID))
     {
-        QMessageBox::critical(NULL, tr("   add failed"), tr("你 already 经add 该Group"));
+        QMessageBox::critical(NULL, tr("add failed"), tr("you already add in this Group"));
         return;
     }
 
@@ -1823,7 +1743,7 @@ void IMMainWidget::onClickAddFlock()
     QString checkMes = QInputDialog::getText(NULL, "Add Group",
                                              " please  input verify msg",
                                              QLineEdit::Normal,
-                                             QString(tr("你好,我是: %1")).
+                                             QString(tr("hello, I am  %1")).
                                              arg(m_myself.m_nickname),
                                              &isOkMes);
     if (!isOkMes)
@@ -1854,7 +1774,7 @@ void IMMainWidget::onClickChangePwd()
 {
     bool isOkMes = false;
     QString oldPwd = QInputDialog::getText(NULL, "modify password",
-                                           " please  input 原password:",
+                                           " please  input origin password:",
                                            QLineEdit::Password,
                                            NULL,
                                            &isOkMes);
@@ -1873,13 +1793,13 @@ void IMMainWidget::onClickChangePwd()
         if (newPwdOne.length() < 6)
         {
             QMessageBox::critical(NULL, tr("modify password"),
-                                  tr(" new password长度不能少于6个字符！"));
+                                  tr(" new password should be at least 6 charators"));
             continue;
         }
         if (newPwdOne.length() > 14)
         {
             QMessageBox::critical(NULL, tr("modify password"),
-                                  tr(" new password长度不能超过14个字符！"));
+                                  tr(" new password can't more than 14 charactors"));
             continue;
         }
 
@@ -1892,7 +1812,7 @@ void IMMainWidget::onClickChangePwd()
             return;
         if (newPwdTwo != newPwdOne)
         {
-            QMessageBox::critical(NULL, tr("modify password"), tr("两次 new password不一致！"));
+            QMessageBox::critical(NULL, tr("modify password"), tr("twice new password is different"));
             continue;
         }
         else
@@ -2510,7 +2430,7 @@ void IMMainWidget::receiveFriendRequest(const TalkMessage & mes,
     }
     case REFUSE_FRIEND:
     {
-        QString temp = QString(tr("user%1(%2)\nrefuse  您,s friendAdd request.")).
+        QString temp = QString(tr("user%1(%2)\nrefuse   your ,s friendAdd request.")).
                 arg(friendInf.m_userID, friendInf.m_nickname);
         QMessageBox::information(NULL, tr("msg "), temp);
         break;
@@ -2594,7 +2514,7 @@ void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
     }
     case FLOCK_REFUSE:
     {
-        QString temp = QString(tr("hello,%1,Group%2\n,s Group main refuse  您,s add request.")).
+        QString temp = QString(tr("hello,%1,Group%2\n,s Group main refuse   your ,s add request.")).
                 arg(m_myself.m_userID, mes.m_senderID);
         QMessageBox::information(NULL, tr("Groupmsg "), temp);
         break;

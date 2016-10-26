@@ -76,7 +76,7 @@ public slots:
     void onClickShowInformation();
     // 解散群
     void onClickDropFlock();
-    // 退出群
+    //  quit from  群
     void onClickLeaveFlock();
     // add 群成员
     void onClickAddMemberFlock();

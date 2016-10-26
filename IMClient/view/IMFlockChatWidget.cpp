@@ -197,7 +197,7 @@ void IMFlockChatWidget::closeEvent(QCloseEvent *event)
 {
     qDebug() << "flock close:" << m_flockInfor.m_flockID;
 
-    //向mainframe发送退出信 number 
+    //向mainframe发送 quit from  信 number 
     emit roomQuitSignal();
 
     saveHistoryMessage();

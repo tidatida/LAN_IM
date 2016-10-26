@@ -148,7 +148,7 @@ void IMFileSenderWidget::onClickBtnCancel()
 
 /*************************************************
 Function Name: onClickBtnClose()
-Description:  click 退出
+Description:  click  quit from  
 *************************************************/
 void IMFileSenderWidget::onClickBtnClose()
 {

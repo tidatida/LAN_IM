@@ -55,7 +55,7 @@ public:
 
 signals:
     void sendMessagesFromChat(TalkMessage &);
-    //退出信 number 
+    // quit from  信 number 
     void roomQuitSignal();
 
 public slots:
