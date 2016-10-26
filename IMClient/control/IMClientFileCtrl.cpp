@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMClientFileCtrl.cpp
-Author： jet.F.R
-Date： 2014.3.23
-Description： 
-Changes：
+File Name: IMClientFileCtrl.cpp
+Author: jet.F.R
+Date: 2014.3.23
+Description: 
+Changes:
 ********************************************/
 
 #include "IMClientFileCtrl.h"
@@ -24,9 +24,9 @@ IMClientFileCtrl::IMClientFileCtrl(QObject *parent) :
 
 
 /*************************************************
-Function Name： writeAutoLogin()
+Function Name: writeAutoLogin()
 Description: 
-Input：filepath, account,passwd,autologin or not
+Input:filepath, account,passwd,autologin or not
 *************************************************/
 bool IMClientFileCtrl::writeAutoLogin(const QString &fileName, const QString &id,
                     const QString &pwd, const bool isAuto)
@@ -46,11 +46,11 @@ bool IMClientFileCtrl::writeAutoLogin(const QString &fileName, const QString &id
 }
 
 /*************************************************
-Function Name： readAutoLogin()
+Function Name: readAutoLogin()
 Description:
-Input： filepath , account, passwd
-Output： bool
-Changes： NULL
+Input: filepath , account, passwd
+Output: bool
+Changes: NULL
 *************************************************/
 bool IMClientFileCtrl::readAutoLogin(const QString &fileName,QString &id,
                      QString &pwd, bool &isAuto)
@@ -70,11 +70,11 @@ bool IMClientFileCtrl::readAutoLogin(const QString &fileName,QString &id,
 }
 
 /*************************************************
-Function Name： remove()
+Function Name: remove()
 Description: 
-Input： file path
-Output： bool
-Changes： NULL
+Input: file path
+Output: bool
+Changes: NULL
 *************************************************/
 bool IMClientFileCtrl::remove(const QString &filename)
 {
@@ -90,7 +90,7 @@ bool IMClientFileCtrl::remove(const QString &filename)
 
 
 /*************************************************
-Function Name： simplifyRichText()
+Function Name: simplifyRichText()
 Description:  html-format to qstring
 *************************************************/
 QString IMClientFileCtrl::simplifyRichText( QString richText )
@@ -159,7 +159,7 @@ QString IMClientFileCtrl::simplifyRichText( QString richText )
 //}
 
 /*************************************************
-Function Name： saveTalkHistory()
+Function Name: saveTalkHistory()
 Description: 
 *************************************************/
 void IMClientFileCtrl::saveTalkHistory(const QString filePath,
@@ -190,7 +190,7 @@ void IMClientFileCtrl::saveTalkHistory(const QString filePath,
 }
 
 /*************************************************
-Function Name： readTalkHistory()
+Function Name: readTalkHistory()
 Description: 
 *************************************************/
 void IMClientFileCtrl::readTalkHistory(const QString filePath,

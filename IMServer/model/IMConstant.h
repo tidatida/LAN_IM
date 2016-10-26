@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMConstant.h
-Author： jet.F.R
-Date： 2014.3.10
-Description：define a structure and constant parameter.
-Changes：
+File Name: IMConstant.h
+Author: jet.F.R
+Date: 2014.3.10
+Description:define a structure and constant parameter.
+Changes:
 ********************************************/
 
 #ifndef IMCONSTANT_H

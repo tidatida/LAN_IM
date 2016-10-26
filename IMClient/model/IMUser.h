@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMUser.h
-Author： jet.F.R
-Date： 2014.3.17
-Description： 
-Changes：
+File Name: IMUser.h
+Author: jet.F.R
+Date: 2014.3.17
+Description: 
+Changes:
 ********************************************/
 #ifndef IMUSER_H
 #define IMUSER_H

@@ -27,7 +27,7 @@ IMMailInformationWidget::IMMailInformationWidget(IMMailWidget * mailWidget,
 }
 
 /*************************************************
-Function Name： setMailInformation()
+Function Name: setMailInformation()
 Description:  设置邮件信息
 *************************************************/
 void IMMailInformationWidget::setMailInformation(const MailInformation & mail)
@@ -48,7 +48,7 @@ void IMMailInformationWidget::setMailInformation(const MailInformation & mail)
 
 // private slots:-----------------------------------------------------
 /*************************************************
-Function Name： onClickBtnDelete()
+Function Name: onClickBtnDelete()
 Description:  delete  
 *************************************************/
 void IMMailInformationWidget::onClickBtnDelete()
@@ -58,7 +58,7 @@ void IMMailInformationWidget::onClickBtnDelete()
 }
 
 /*************************************************
-Function Name： onClickBtnClose()
+Function Name: onClickBtnClose()
 Description:  close 
 *************************************************/
 void IMMailInformationWidget::onClickBtnClose()
@@ -68,7 +68,7 @@ void IMMailInformationWidget::onClickBtnClose()
 
 // private:-------------------------------------------------
 /*************************************************
-Function Name： initIMMailInformationWidget()
+Function Name: initIMMailInformationWidget()
 Description:  init 
 *************************************************/
 void IMMailInformationWidget::initIMMailInformationWidget()
@@ -131,7 +131,7 @@ void IMMailInformationWidget::initIMMailInformationWidget()
 }
 
 /*************************************************
-Function Name： linkSignalWithSlot()
+Function Name: linkSignalWithSlot()
 Description:  connection 信号与槽
 *************************************************/
 void IMMailInformationWidget::linkSignalWithSlot()

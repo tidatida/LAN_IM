@@ -55,7 +55,7 @@ IMFriendButton::~IMFriendButton()
 }
 
 /*************************************************
-Function Name： openChatRoom()
+Function Name: openChatRoom()
 Description: open 聊天窗口
 *************************************************/
 void IMFriendButton::openChatRoom()
@@ -101,7 +101,7 @@ void IMFriendButton::openChatRoom()
 
 
 /*************************************************
-Function Name： showChatRoom()
+Function Name: showChatRoom()
 Description: 显示聊天窗口
 *************************************************/
 void IMFriendButton::showChatRoom()
@@ -113,7 +113,7 @@ void IMFriendButton::showChatRoom()
 }
 
 /*************************************************
-Function Name： closeChatRoom()
+Function Name: closeChatRoom()
 Description: close 聊天窗口
 *************************************************/
 void IMFriendButton::closeChatRoom()
@@ -127,7 +127,7 @@ void IMFriendButton::closeChatRoom()
 }
 
 /*************************************************
-Function Name： setButtonStatus()
+Function Name: setButtonStatus()
 Description:  设置button显示信息
 *************************************************/
 void IMFriendButton::setButtonStatus()
@@ -164,7 +164,7 @@ void IMFriendButton::setButtonStatus()
 
 
 /*************************************************
-Function Name： refreshMoveMenu()
+Function Name: refreshMoveMenu()
 Description: 刷新菜单中分组信息
 *************************************************/
 void IMFriendButton::refreshMoveMenu()
@@ -196,7 +196,7 @@ void IMFriendButton::refreshMoveMenu()
 //remark:public slots:---------------------------
 
 /*************************************************
-Function Name： onDoubleClickFriendButton()
+Function Name: onDoubleClickFriendButton()
 Description: 左键 双击
 *************************************************/
 void IMFriendButton::onDoubleClickFriendButton()
@@ -208,7 +208,7 @@ void IMFriendButton::onDoubleClickFriendButton()
 
 
 /*************************************************
-Function Name： onClickRightButton()
+Function Name: onClickRightButton()
 Description: 右键 单击
 *************************************************/
 void IMFriendButton::onClickRightButton(/*const QPoint &*/)
@@ -222,7 +222,7 @@ void IMFriendButton::onClickRightButton(/*const QPoint &*/)
 }
 
 /*************************************************
-Function Name： onClickSendMessage()
+Function Name: onClickSendMessage()
 Description: 发送即时消息
 *************************************************/
 void IMFriendButton::onClickSendMessage()
@@ -231,7 +231,7 @@ void IMFriendButton::onClickSendMessage()
 }
 
 /*************************************************
-Function Name： onClickShowRecord()
+Function Name: onClickShowRecord()
 Description: 查看消息记录
 *************************************************/
 void IMFriendButton::onClickShowRecord()
@@ -240,7 +240,7 @@ void IMFriendButton::onClickShowRecord()
 }
 
 /*************************************************
-Function Name： onClickSendMail()
+Function Name: onClickSendMail()
 Description: 发送电子邮件
 *************************************************/
 void IMFriendButton::onClickSendMail()
@@ -249,7 +249,7 @@ void IMFriendButton::onClickSendMail()
 }
 
 /*************************************************
-Function Name： onClickShowInformation()
+Function Name: onClickShowInformation()
 Description: 显示好友详细信息
 *************************************************/
 void IMFriendButton::onClickShowInformation()
@@ -258,7 +258,7 @@ void IMFriendButton::onClickShowInformation()
 }
 
 /*************************************************
-Function Name： onClickChangeRemark()
+Function Name: onClickChangeRemark()
 Description: modify好友备注
 *************************************************/
 void IMFriendButton::onClickChangeRemark()
@@ -279,7 +279,7 @@ void IMFriendButton::onClickChangeRemark()
 }
 
 /*************************************************
-Function Name： onClickMove()
+Function Name: onClickMove()
 Description: 移动好友至其他分组
 *************************************************/
 void IMFriendButton::onClickMove()
@@ -290,7 +290,7 @@ void IMFriendButton::onClickMove()
 }
 
 /*************************************************
-Function Name： onClickRemoveFriend()
+Function Name: onClickRemoveFriend()
 Description: delete  好友
 *************************************************/
 void IMFriendButton::onClickRemoveFriend()
@@ -306,7 +306,7 @@ void IMFriendButton::onClickRemoveFriend()
 }
 
 /*************************************************
-Function Name： chatRoomQuit()
+Function Name: chatRoomQuit()
 Description: 进入空间
 *************************************************/
 void IMFriendButton::onClickEnterSpace()
@@ -314,7 +314,7 @@ void IMFriendButton::onClickEnterSpace()
 }
 
 /*************************************************
-Function Name： chatRoomQuit()
+Function Name: chatRoomQuit()
 Description: 聊天室被close 
 *************************************************/
 void IMFriendButton::chatRoomQuit()
@@ -328,7 +328,7 @@ void IMFriendButton::chatRoomQuit()
 //remark:protected:----------------------------------------
 
 /*************************************************
-Function Name： mousePressEvent
+Function Name: mousePressEvent
 Description: 鼠标单击事件
 *************************************************/
 void IMFriendButton::mousePressEvent(QMouseEvent *event)
@@ -342,7 +342,7 @@ void IMFriendButton::mousePressEvent(QMouseEvent *event)
 }
 
 /*************************************************
-Function Name： mouseDoubleClickEvent
+Function Name: mouseDoubleClickEvent
 Description: 鼠标双击事件
 *************************************************/
 void IMFriendButton::mouseDoubleClickEvent(QMouseEvent *event)
@@ -361,7 +361,7 @@ void IMFriendButton::mouseDoubleClickEvent(QMouseEvent *event)
 //remark:private:----------------------------------------
 
 /*************************************************
-Function Name： getStatusFromInt()
+Function Name: getStatusFromInt()
 Description: 将好友状态从数字形式转换为字符串形式
 *************************************************/
 QString IMFriendButton::getStatusFromInt(const int n) const
@@ -397,7 +397,7 @@ QString IMFriendButton::getStatusFromInt(const int n) const
 
 
 /*************************************************
-Function Name： getStatusFromInt()
+Function Name: getStatusFromInt()
 Description: create 右键菜单
 *************************************************/
 void IMFriendButton::creatMenu(/*const QList<QString> *groutList*/)

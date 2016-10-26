@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMTcpServer.cpp
-Author： jet.F.R
-Date： 2014.3.10
-Description： server class
-Changes：
+File Name: IMTcpServer.cpp
+Author: jet.F.R
+Date: 2014.3.10
+Description: server class
+Changes:
 ********************************************/
 
 #include "IMTcpServer.h"
@@ -21,7 +21,7 @@ IMTcpServer::~IMTcpServer()
 
 // mark: public slots:------------------------------------------
 /*************************************************
-Function Name： clientDisconnected()
+Function Name: clientDisconnected()
 Description: 
 *************************************************/
 void IMTcpServer::clientDisconnected(const QString &id)
@@ -55,7 +55,7 @@ void IMTcpServer::clientDisconnected(const QString &id)
 }
 
 /*************************************************
-Function Name： sendMessage()
+Function Name: sendMessage()
 Description: 
 *************************************************/
 void IMTcpServer::sendMessage(const SaveTmpInformation &save)
@@ -666,11 +666,11 @@ void IMTcpServer::sendMessage(const SaveTmpInformation &save)
 
 // mark: private---------------------------------------------------
 /*************************************************
-Function Name： incomingConnection()
+Function Name: incomingConnection()
 Description: 
-Input： int socketDescriptor：socket
-Output：NULL
-Changes： NULL
+Input: int socketDescriptor:socket
+Output:NULL
+Changes: NULL
 *************************************************/
 void IMTcpServer::incomingConnection(int socketDescriptor)
 {
@@ -712,7 +712,7 @@ void IMTcpServer::incomingConnection(int socketDescriptor)
 }
 
 /*************************************************
-Function Name： friendRequest()
+Function Name: friendRequest()
 Description:
 *************************************************/
 void IMTcpServer::friendRequest(const SaveTmpInformation &save)
@@ -782,7 +782,7 @@ void IMTcpServer::friendRequest(const SaveTmpInformation &save)
 
 
 /*************************************************
-Function Name： flockRequest()
+Function Name: flockRequest()
 Description: 
 *************************************************/
 void IMTcpServer::flockRequest(const SaveTmpInformation & save)
@@ -912,7 +912,7 @@ void IMTcpServer::flockRequest(const SaveTmpInformation & save)
 
 
 /*************************************************
-Function Name： flockRequest()
+Function Name: flockRequest()
 Description: 
 *************************************************/
 void IMTcpServer::discussionRequest(const SaveTmpInformation & save)
@@ -970,7 +970,7 @@ void IMTcpServer::discussionRequest(const SaveTmpInformation & save)
 }
 
 /*************************************************
-Function Name： talkRequest()
+Function Name: talkRequest()
 Description:
 *************************************************/
 void IMTcpServer::talkRequest(const SaveTmpInformation & save)
@@ -1061,7 +1061,7 @@ void IMTcpServer::talkRequest(const SaveTmpInformation & save)
 }
 
 /*************************************************
-Function Name： changeStatu()
+Function Name: changeStatu()
 Description:
 *************************************************/
 void IMTcpServer::tellFriendsStatusChanged(const QString &id, int status)
@@ -1083,7 +1083,7 @@ void IMTcpServer::tellFriendsStatusChanged(const QString &id, int status)
 }
 
 /*************************************************
-Function Name： tellFriendsInformationChanged()
+Function Name: tellFriendsInformationChanged()
 Description:
 *************************************************/
 void IMTcpServer::tellFriendsInformationChanged(const QString & id)
@@ -1113,7 +1113,7 @@ void IMTcpServer::tellFriendsInformationChanged(const QString & id)
 
 
 /*************************************************
-Function Name： tellMembersFlockDroped()
+Function Name: tellMembersFlockDroped()
 Description:
 *************************************************/
 void IMTcpServer::tellMembersFlockDroped(const QString & flockID)
@@ -1147,7 +1147,7 @@ void IMTcpServer::tellMembersFlockDroped(const QString & flockID)
 
 
 /*************************************************
-Function Name： tellMembersDiscussionDroped()
+Function Name: tellMembersDiscussionDroped()
 Description:
 *************************************************/
 void IMTcpServer::tellMembersDiscussionDroped(const QString & discussionID)
@@ -1177,7 +1177,7 @@ void IMTcpServer::tellMembersDiscussionDroped(const QString & discussionID)
 }
 
 /*************************************************
-Function Name： tellMembersFlockChanged()
+Function Name: tellMembersFlockChanged()
 Description:
 *************************************************/
 void IMTcpServer::tellMembersFlockChanged(const FlockInformation & flock)
@@ -1201,7 +1201,7 @@ void IMTcpServer::tellMembersFlockChanged(const FlockInformation & flock)
 
 
 /*************************************************
-Function Name： tellMembersDiscussionChanged()
+Function Name: tellMembersDiscussionChanged()
 Description:  
 *************************************************/
 void IMTcpServer::tellMembersDiscussionChanged(const DiscussionInformation & discussion)
@@ -1224,7 +1224,7 @@ void IMTcpServer::tellMembersDiscussionChanged(const DiscussionInformation & dis
 
 
 /*************************************************
-Function Name： tellFlockMemberHaveNewMember()
+Function Name: tellFlockMemberHaveNewMember()
 Description:  
 *************************************************/
 void IMTcpServer::tellFlockMemberHaveNewMember(const QString & flockID)
@@ -1259,7 +1259,7 @@ void IMTcpServer::tellFlockMemberHaveNewMember(const QString & flockID)
 
 
 /*************************************************
-Function Name： tellFlockMemberHaveLeavedMember()
+Function Name: tellFlockMemberHaveLeavedMember()
 Description:  
 *************************************************/
 void IMTcpServer::tellFlockMemberHaveLeavedMember(const QString & flockID)
@@ -1288,7 +1288,7 @@ void IMTcpServer::tellFlockMemberHaveLeavedMember(const QString & flockID)
 
 
 /*************************************************
-Function Name： tellDiscussionMemberHaveNewMember()
+Function Name: tellDiscussionMemberHaveNewMember()
 Description:  
 *************************************************/
 void IMTcpServer::tellDiscussionMemberHaveNewMember(const QString & discussionID)
@@ -1297,7 +1297,7 @@ void IMTcpServer::tellDiscussionMemberHaveNewMember(const QString & discussionID
 
 
 /*************************************************
-Function Name： tellDiscussionMemberHaveLeavedMember()
+Function Name: tellDiscussionMemberHaveLeavedMember()
 Description:  
 *************************************************/
 void IMTcpServer::tellDiscussionMemberHaveLeavedMember(const QString & discussionID)

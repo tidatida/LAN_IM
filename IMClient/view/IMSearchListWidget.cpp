@@ -35,7 +35,7 @@ IMSearchListWidget::IMSearchListWidget(QWidget *parent) :
 
 
 /*************************************************
-Function Name： addItem()
+Function Name: addItem()
 Description:  add 
 *************************************************/
 void IMSearchListWidget::addItem(QWidget *item)
@@ -61,7 +61,7 @@ void IMSearchListWidget::addItem(QWidget *item)
 }
 
 /*************************************************
-Function Name： removeItem()
+Function Name: removeItem()
 Description:  delete  
 *************************************************/
 void IMSearchListWidget::removeItem(QWidget *item)
@@ -76,7 +76,7 @@ void IMSearchListWidget::removeItem(QWidget *item)
 }
 
 /*************************************************
-Function Name： clearAll()
+Function Name: clearAll()
 Description:  delete  所有
 *************************************************/
 void IMSearchListWidget::clearAll()
@@ -96,7 +96,7 @@ void IMSearchListWidget::clearAll()
 }
 
 /*************************************************
-Function Name： size()
+Function Name: size()
 Description:  size
 *************************************************/
 int IMSearchListWidget::size()

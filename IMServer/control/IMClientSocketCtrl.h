@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMClientSocketCtrl.h
-Author： jet.F.R
-Date： 2014.3.10
-Description： used to   control  clientsocket的 class
-Changes：
+File Name: IMClientSocketCtrl.h
+Author: jet.F.R
+Date: 2014.3.10
+Description: used to   control  clientsocket的 class
+Changes:
 ********************************************/
 
 #ifndef IMCLIENTSOCKETCTRL_H
@@ -18,7 +18,7 @@ class IMUser;
 
 
 /*************************************************
-Class Name： IMClientSocketCtrl
+Class Name: IMClientSocketCtrl
 Description: from clientsocket，used to   process   requests 
 *************************************************/
 class IMClientSocketCtrl : public QTcpSocket

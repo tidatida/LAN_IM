@@ -66,7 +66,7 @@ IMDatabaseCtrl::~IMDatabaseCtrl()
 }
 
 /*************************************************
-Function Name： createConnection()
+Function Name: createConnection()
 Description: 
 *************************************************/
 bool IMDatabaseCtrl::createConnection()
@@ -100,7 +100,7 @@ bool IMDatabaseCtrl::createConnection()
 
 
 /*************************************************
-Function Name： close()
+Function Name: close()
 Description: 
 *************************************************/
 void IMDatabaseCtrl::close()
@@ -111,7 +111,7 @@ void IMDatabaseCtrl::close()
 
 
 /*************************************************
-Function Name： isOpen()
+Function Name: isOpen()
 Description:
 *************************************************/
 bool IMDatabaseCtrl::isOpen()
@@ -121,7 +121,7 @@ bool IMDatabaseCtrl::isOpen()
 }
 
 /*************************************************
-Function Name： addHistoryMessage()
+Function Name: addHistoryMessage()
 Description:
 *************************************************/
 bool IMDatabaseCtrl::addHistoryMessage(const TalkMessage & mes)
@@ -171,7 +171,7 @@ bool IMDatabaseCtrl::addHistoryMessage(const TalkMessage & mes)
 }
 
 /*************************************************
-Function Name： searchHistoryMessage()
+Function Name: searchHistoryMessage()
 Description: 
 *************************************************/
 bool IMDatabaseCtrl::searchHistoryMessage(const QString & myID, const QString & friendID,
@@ -225,7 +225,7 @@ bool IMDatabaseCtrl::searchHistoryMessage(const QString & myID, const QString & 
 
 
 /*************************************************
-Function Name： searchHistoryMessage()
+Function Name: searchHistoryMessage()
 Description: 
 *************************************************/
 int IMDatabaseCtrl::exportHistoryMessageOneFriend(const QString &myID ,
@@ -283,7 +283,7 @@ int IMDatabaseCtrl::exportHistoryMessageOneFriend(const QString &myID ,
 }
 
 /*************************************************
-Function Name： exportHistoryMessageAll()
+Function Name: exportHistoryMessageAll()
 Description: 
 *************************************************/
 int IMDatabaseCtrl::exportHistoryMessageAll(const QString &myID,
@@ -327,7 +327,7 @@ int IMDatabaseCtrl::exportHistoryMessageAll(const QString &myID,
 }
 
 /*************************************************
-Function Name： deleteHistoryMessageOneFriend()
+Function Name: deleteHistoryMessageOneFriend()
 Description: 
 *************************************************/
 int IMDatabaseCtrl::deleteHistoryMessageOneFriend(const QString myID,
@@ -375,7 +375,7 @@ int IMDatabaseCtrl::deleteHistoryMessageOneFriend(const QString myID,
 }
 
 /*************************************************
-Function Name： deleteHistoryMessageAll()
+Function Name: deleteHistoryMessageAll()
 Description: 
 *************************************************/
 int IMDatabaseCtrl::deleteHistoryMessageAll(const QString myID)
@@ -421,7 +421,7 @@ int IMDatabaseCtrl::deleteHistoryMessageAll(const QString myID)
 // mark: private----------------------------------------------------
 
 /*************************************************
-Function Name： errorSQLOrder()
+Function Name: errorSQLOrder()
 Description: 
 *************************************************/
 void IMDatabaseCtrl::errorSQLOrder(QSqlQuery query, QString mark)
@@ -436,7 +436,7 @@ void IMDatabaseCtrl::errorSQLOrder(QSqlQuery query, QString mark)
 }
 
 /*************************************************
-Function Name： createTable()
+Function Name: createTable()
 Description: 
 *************************************************/
 void IMDatabaseCtrl::createTable()

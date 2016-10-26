@@ -19,7 +19,7 @@ void IMMainCtrl::closeConnect()
 }
 
 /*************************************************
-Function Name： getFriendsInformation
+Function Name: getFriendsInformation
 Description: 
 *************************************************/
 void IMMainCtrl::getFriendsInformation(const QString &id, const int status)
@@ -41,7 +41,7 @@ void IMMainCtrl::getFriendsInformation(const QString &id, const int status)
 
 
 /*************************************************
-Function Name： getFlocksInformation
+Function Name: getFlocksInformation
 Description: 
 *************************************************/
 void IMMainCtrl::getFlocksInformation(const QString & id)
@@ -53,7 +53,7 @@ void IMMainCtrl::getFlocksInformation(const QString & id)
 }
 
 /*************************************************
-Function Name： getDiscussionsInformation
+Function Name: getDiscussionsInformation
 Description: 
 *************************************************/
 void IMMainCtrl::getDiscussionsInformation(const QString & id)
@@ -65,7 +65,7 @@ void IMMainCtrl::getDiscussionsInformation(const QString & id)
 }
 
 /*************************************************
-Function Name： getLatestMessage
+Function Name: getLatestMessage
 Description: 
 *************************************************/
 void IMMainCtrl::getLatestMessage(const QString & id)
@@ -73,7 +73,7 @@ void IMMainCtrl::getLatestMessage(const QString & id)
 }
 
 /*************************************************
-Function Name： getFlockMembers
+Function Name: getFlockMembers
 Description: 
 *************************************************/
 void IMMainCtrl::getFlockMembers(const QString & id)
@@ -85,7 +85,7 @@ void IMMainCtrl::getFlockMembers(const QString & id)
 }
 
 /*************************************************
-Function Name： getDiscussionMembers
+Function Name: getDiscussionMembers
 Description: 
 *************************************************/
 void IMMainCtrl::getDiscussionMembers(const QString & id)
@@ -97,7 +97,7 @@ void IMMainCtrl::getDiscussionMembers(const QString & id)
 }
 
 /*************************************************
-Function Name： sendTalkMessage
+Function Name: sendTalkMessage
 Description: 
 *************************************************/
 void IMMainCtrl::sendTalkMessage(TalkMessage &mes)
@@ -143,7 +143,7 @@ void IMMainCtrl::sendTalkMessage(TalkMessage &mes)
 //}
 
 /*************************************************
-Function Name： getFriendInformation
+Function Name: getFriendInformation
 Description: 
 *************************************************/
 void IMMainCtrl::getFriendInformation(const QString &id)
@@ -164,7 +164,7 @@ void IMMainCtrl::getFriendInformation(const QString &id)
 
 
 /*************************************************
-Function Name： getMynformation
+Function Name: getMynformation
 Description: 
 *************************************************/
 void IMMainCtrl::getMynformation(const QString &id)
@@ -184,7 +184,7 @@ void IMMainCtrl::getMynformation(const QString &id)
 }
 
 /*************************************************
-Function Name： changeMyInformation
+Function Name: changeMyInformation
 Description: 
 *************************************************/
 void IMMainCtrl::changeMyInformation(const UserInformation &me)
@@ -204,7 +204,7 @@ void IMMainCtrl::changeMyInformation(const UserInformation &me)
 
 
 /*************************************************
-Function Name： changeMyStatus
+Function Name: changeMyStatus
 Description: 
 *************************************************/
 void IMMainCtrl::changeMyStatus(const QString id, const int status)
@@ -216,7 +216,7 @@ void IMMainCtrl::changeMyStatus(const QString id, const int status)
 }
 
 /*************************************************
-Function Name： changeFriendRemark
+Function Name: changeFriendRemark
 Description: 
 *************************************************/
 void IMMainCtrl::changeFriendRemark(const QString & myID,
@@ -230,7 +230,7 @@ void IMMainCtrl::changeFriendRemark(const QString & myID,
 }
 
 /*************************************************
-Function Name： deleteFriend
+Function Name: deleteFriend
 Description: 
 *************************************************/
 void IMMainCtrl::deleteFriend(const QString & myID, const QString & friendID)
@@ -242,7 +242,7 @@ void IMMainCtrl::deleteFriend(const QString & myID, const QString & friendID)
 }
 
 /*************************************************
-Function Name： addFriend
+Function Name: addFriend
 Description: 
 *************************************************/
 void IMMainCtrl::addFriend(const TalkMessage & mes)//const TempStrings & temp)
@@ -254,7 +254,7 @@ void IMMainCtrl::addFriend(const TalkMessage & mes)//const TempStrings & temp)
 }
 
 /*************************************************
-Function Name： addFlock
+Function Name: addFlock
 Description: 
 *************************************************/
 void IMMainCtrl::addFlock(const TalkMessage & mes)//const TempStrings & temp)
@@ -267,7 +267,7 @@ void IMMainCtrl::addFlock(const TalkMessage & mes)//const TempStrings & temp)
 
 
 /*************************************************
-Function Name： addDiscussion
+Function Name: addDiscussion
 Description: 
 *************************************************/
 void IMMainCtrl::addDiscussion(const TalkMessage & mes)
@@ -280,7 +280,7 @@ void IMMainCtrl::addDiscussion(const TalkMessage & mes)
 
 
 /*************************************************
-Function Name： dropFlock
+Function Name: dropFlock
 Description: 
 *************************************************/
 void IMMainCtrl::dropFlock(const QString & userID, const QString & flockID)
@@ -292,7 +292,7 @@ void IMMainCtrl::dropFlock(const QString & userID, const QString & flockID)
 }
 
 /*************************************************
-Function Name： dropFlock
+Function Name: dropFlock
 Description: 
 *************************************************/
 void IMMainCtrl::dropDiscussion(const QString & userID, const QString & discussionID)
@@ -304,7 +304,7 @@ void IMMainCtrl::dropDiscussion(const QString & userID, const QString & discussi
 }
 
 /*************************************************
-Function Name： leaveFlock
+Function Name: leaveFlock
 Description: 
 *************************************************/
 void IMMainCtrl::leaveFlock(const QString & userID, const QString & flockID)
@@ -316,7 +316,7 @@ void IMMainCtrl::leaveFlock(const QString & userID, const QString & flockID)
 }
 
 /*************************************************
-Function Name： leaveDiscussion
+Function Name: leaveDiscussion
 Description: 
 *************************************************/
 void IMMainCtrl::leaveDiscussion(const QString & userID, const QString & discussionID)
@@ -328,7 +328,7 @@ void IMMainCtrl::leaveDiscussion(const QString & userID, const QString & discuss
 }
 
 /*************************************************
-Function Name： createFlock
+Function Name: createFlock
 Description: 
 *************************************************/
 void IMMainCtrl::createFlock(const TempStrings & tmpStr)
@@ -341,7 +341,7 @@ void IMMainCtrl::createFlock(const TempStrings & tmpStr)
 
 
 /*************************************************
-Function Name： createDiscussion
+Function Name: createDiscussion
 Description: 
 *************************************************/
 void IMMainCtrl::createDiscussion(const TempStrings & tmpStr)
@@ -353,7 +353,7 @@ void IMMainCtrl::createDiscussion(const TempStrings & tmpStr)
 }
 
 /*************************************************
-Function Name： changeFlockInformation
+Function Name: changeFlockInformation
 Description: 
 *************************************************/
 void IMMainCtrl::changeFlockInformation(const FlockInformation & flock)
@@ -365,7 +365,7 @@ void IMMainCtrl::changeFlockInformation(const FlockInformation & flock)
 }
 
 /*************************************************
-Function Name： changeFlockMemberRemark
+Function Name: changeFlockMemberRemark
 Description: 
 *************************************************/
 void IMMainCtrl::changeFlockMemberRemark(const TempStrings & tmpStr)
@@ -379,7 +379,7 @@ void IMMainCtrl::changeFlockMemberRemark(const TempStrings & tmpStr)
 
 
 /*************************************************
-Function Name： changeDiscussionInformation
+Function Name: changeDiscussionInformation
 Description: 
 *************************************************/
 void IMMainCtrl::changeDiscussionInformation(const DiscussionInformation & discussion)
@@ -392,7 +392,7 @@ void IMMainCtrl::changeDiscussionInformation(const DiscussionInformation & discu
 
 
 /*************************************************
-Function Name： resultOfFriendRequest
+Function Name: resultOfFriendRequest
 Description: 
 *************************************************/
 void IMMainCtrl::resultOfFriendRequest(const TalkMessage & mes)
@@ -405,7 +405,7 @@ void IMMainCtrl::resultOfFriendRequest(const TalkMessage & mes)
 
 
 /*************************************************
-Function Name： resultOfFlockRequest
+Function Name: resultOfFlockRequest
 Description: 
 *************************************************/
 void IMMainCtrl::resultOfFlockRequest(const TalkMessage & mes)
@@ -418,7 +418,7 @@ void IMMainCtrl::resultOfFlockRequest(const TalkMessage & mes)
 
 
 /*************************************************
-Function Name： removeBox
+Function Name: removeBox
 Description: 
 *************************************************/
 void IMMainCtrl::removeBox(const QString & title)
@@ -431,7 +431,7 @@ void IMMainCtrl::removeBox(const QString & title)
 
 
 /*************************************************
-Function Name： renameBox
+Function Name: renameBox
 Description: 
 *************************************************/
 void IMMainCtrl::renameBox(const QString & oldTitle, const QString & newTitle)
@@ -443,7 +443,7 @@ void IMMainCtrl::renameBox(const QString & oldTitle, const QString & newTitle)
 }
 
 /*************************************************
-Function Name： moveFriendToBox
+Function Name: moveFriendToBox
 Description:  
 *************************************************/
 void IMMainCtrl::moveFriendToBox(const QString &friendID, const QString &oldTitle,
@@ -459,7 +459,7 @@ void IMMainCtrl::moveFriendToBox(const QString &friendID, const QString &oldTitl
 
 // mark: public slots:---------------------------------------------------
 /*************************************************
-Function Name： requestGetFriendsInformation()
+Function Name: requestGetFriendsInformation()
 Description: 
 *************************************************/
 void IMMainCtrl::requestGetFriendsInformation()
@@ -479,7 +479,7 @@ void IMMainCtrl::requestGetFriendsInformation()
 
 
 /*************************************************
-Function Name： requestGetFlocksInformation()
+Function Name: requestGetFlocksInformation()
 Description: 
 *************************************************/
 void IMMainCtrl::requestGetFlocksInformation(const QString & id)
@@ -498,7 +498,7 @@ void IMMainCtrl::requestGetFlocksInformation(const QString & id)
 }
 
 /*************************************************
-Function Name： requestGetDiscussionsInformation()
+Function Name: requestGetDiscussionsInformation()
 Description: 
 *************************************************/
 void IMMainCtrl::requestGetDiscussionsInformation(const QString & id)
@@ -518,7 +518,7 @@ void IMMainCtrl::requestGetDiscussionsInformation(const QString & id)
 
 
 /*************************************************
-Function Name： requestGetFlockMembers()
+Function Name: requestGetFlockMembers()
 Description: 
 *************************************************/
 void IMMainCtrl::requestGetFlockMembers(const QString & id)
@@ -538,7 +538,7 @@ void IMMainCtrl::requestGetFlockMembers(const QString & id)
 
 
 /*************************************************
-Function Name： requestGetDiscussionMembers()
+Function Name: requestGetDiscussionMembers()
 Description: 
 *************************************************/
 void IMMainCtrl::requestGetDiscussionMembers(const QString & id)
@@ -557,7 +557,7 @@ void IMMainCtrl::requestGetDiscussionMembers(const QString & id)
 }
 
 /*************************************************
-Function Name： requestGetFriendInformation()
+Function Name: requestGetFriendInformation()
 Description: 
 *************************************************/
 void IMMainCtrl::requestGetFriendInformation(const QString &id)
@@ -575,7 +575,7 @@ void IMMainCtrl::requestGetFriendInformation(const QString &id)
 }
 
 /*************************************************
-Function Name： requestGetMyInformation()
+Function Name: requestGetMyInformation()
 Description: 
 *************************************************/
 void IMMainCtrl::requestGetMyInformation()
@@ -593,7 +593,7 @@ void IMMainCtrl::requestGetMyInformation()
 }
 
 /*************************************************
-Function Name： requestChangeMyInformation()
+Function Name: requestChangeMyInformation()
 Description: 
 *************************************************/
 void IMMainCtrl::requestChangeMyInformation(const UserInformation &me)
@@ -612,7 +612,7 @@ void IMMainCtrl::requestChangeMyInformation(const UserInformation &me)
 }
 
 /*************************************************
-Function Name： requestChangeMyStatus()
+Function Name: requestChangeMyStatus()
 Description: 
 *************************************************/
 void IMMainCtrl::requestChangeMyStatus(const QString id, const int status)
@@ -631,7 +631,7 @@ void IMMainCtrl::requestChangeMyStatus(const QString id, const int status)
 }
 
 /*************************************************
-Function Name： requestChangeFriendRemark()
+Function Name: requestChangeFriendRemark()
 Description: 
 *************************************************/
 void IMMainCtrl::requestChangeFriendRemark(const QString & myID,
@@ -658,7 +658,7 @@ void IMMainCtrl::requestChangeFriendRemark(const QString & myID,
 
 
 /*************************************************
-Function Name： requestDeleteFriend()
+Function Name: requestDeleteFriend()
 Description: 
 *************************************************/
 void IMMainCtrl::requestDeleteFriend(const QString & myID,
@@ -677,7 +677,7 @@ void IMMainCtrl::requestDeleteFriend(const QString & myID,
 }
 
 /*************************************************
-Function Name： requestAddFriend()
+Function Name: requestAddFriend()
 Description: 
 *************************************************/
 void IMMainCtrl::requestAddFriend(const TalkMessage & mes)
@@ -695,7 +695,7 @@ void IMMainCtrl::requestAddFriend(const TalkMessage & mes)
 }
 
 /*************************************************
-Function Name： requestAddFlock()
+Function Name: requestAddFlock()
 Description: 
 *************************************************/
 void IMMainCtrl::requestAddFlock(const TalkMessage & mes)
@@ -714,7 +714,7 @@ void IMMainCtrl::requestAddFlock(const TalkMessage & mes)
 
 
 /*************************************************
-Function Name： requestAddDiscussion()
+Function Name: requestAddDiscussion()
 Description: 
 *************************************************/
 void IMMainCtrl::requestAddDiscussion(const TalkMessage & mes)
@@ -732,7 +732,7 @@ void IMMainCtrl::requestAddDiscussion(const TalkMessage & mes)
 }
 
 /*************************************************
-Function Name： requestDropFlock()
+Function Name: requestDropFlock()
 Description: 
 *************************************************/
 void IMMainCtrl::requestDropFlock(const QString & userID, const QString & flockID)
@@ -751,7 +751,7 @@ void IMMainCtrl::requestDropFlock(const QString & userID, const QString & flockI
 
 
 /*************************************************
-Function Name： requestDropDiscussion()
+Function Name: requestDropDiscussion()
 Description: 
 *************************************************/
 void IMMainCtrl::requestDropDiscussion(const QString & userID, const QString & discussionID)
@@ -769,7 +769,7 @@ void IMMainCtrl::requestDropDiscussion(const QString & userID, const QString & d
 }
 
 /*************************************************
-Function Name： requestLeaveFlock()
+Function Name: requestLeaveFlock()
 Description: 
 *************************************************/
 void IMMainCtrl::requestLeaveFlock(const QString & userID, const QString & flockID)
@@ -788,7 +788,7 @@ void IMMainCtrl::requestLeaveFlock(const QString & userID, const QString & flock
 
 
 /*************************************************
-Function Name： requestLeaveDiscussion()
+Function Name: requestLeaveDiscussion()
 Description: 
 *************************************************/
 void IMMainCtrl::requestLeaveDiscussion(const QString & userID,
@@ -807,7 +807,7 @@ void IMMainCtrl::requestLeaveDiscussion(const QString & userID,
 }
 
 /*************************************************
-Function Name： requestCreateFlock()
+Function Name: requestCreateFlock()
 Description: 
 *************************************************/
 void IMMainCtrl::requestCreateFlock(const TempStrings & tmpStr)
@@ -826,7 +826,7 @@ void IMMainCtrl::requestCreateFlock(const TempStrings & tmpStr)
 
 
 /*************************************************
-Function Name： requestCreateDiscussion()
+Function Name: requestCreateDiscussion()
 Description: 
 *************************************************/
 void IMMainCtrl::requestCreateDiscussion(const TempStrings & tmpStr)
@@ -845,7 +845,7 @@ void IMMainCtrl::requestCreateDiscussion(const TempStrings & tmpStr)
 
 
 /*************************************************
-Function Name： requestSendResultOfFriendRequest
+Function Name: requestSendResultOfFriendRequest
 Description: 
 *************************************************/
 void IMMainCtrl::requestSendResultOfFriendRequest(const TalkMessage & mes)
@@ -864,7 +864,7 @@ void IMMainCtrl::requestSendResultOfFriendRequest(const TalkMessage & mes)
 
 
 /*************************************************
-Function Name： requestSendResultOfFriendRequest
+Function Name: requestSendResultOfFriendRequest
 Description: 
 *************************************************/
 void IMMainCtrl::requestSendResultOfFlockRequest(const TalkMessage & mes)
@@ -884,7 +884,7 @@ void IMMainCtrl::requestSendResultOfFlockRequest(const TalkMessage & mes)
 
 
 /*************************************************
-Function Name： requestChangeFlockInformation
+Function Name: requestChangeFlockInformation
 Description: 
 *************************************************/
 void IMMainCtrl::requestChangeFlockInformation(const FlockInformation &flock)
@@ -903,7 +903,7 @@ void IMMainCtrl::requestChangeFlockInformation(const FlockInformation &flock)
 
 
 /*************************************************
-Function Name： requestChangeFlockMemberRemark
+Function Name: requestChangeFlockMemberRemark
 Description: 
 *************************************************/
 void IMMainCtrl::requestChangeFlockMemberRemark(const TempStrings & tmpStr)
@@ -923,7 +923,7 @@ void IMMainCtrl::requestChangeFlockMemberRemark(const TempStrings & tmpStr)
 
 
 /*************************************************
-Function Name： requestChangeDiscussionInformation
+Function Name: requestChangeDiscussionInformation
 Description: 
 *************************************************/
 void IMMainCtrl::requestChangeDiscussionInformation(
@@ -942,7 +942,7 @@ void IMMainCtrl::requestChangeDiscussionInformation(
 }
 
 /*************************************************
-Function Name： requestSendTalkMessage
+Function Name: requestSendTalkMessage
 Description: 
 *************************************************/
 void IMMainCtrl::requestSendTalkMessage()
@@ -968,7 +968,7 @@ void IMMainCtrl::requestSendTalkMessage()
 
 
 /*************************************************
-Function Name： requestRemoveBox
+Function Name: requestRemoveBox
 Description: 
 *************************************************/
 void IMMainCtrl::requestRemoveBox(const QString & title)
@@ -986,7 +986,7 @@ void IMMainCtrl::requestRemoveBox(const QString & title)
 }
 
 /*************************************************
-Function Name： requestRenameBox
+Function Name: requestRenameBox
 Description: 
 *************************************************/
 void IMMainCtrl::requestRenameBox(const QString & oldTitle, const QString & newTitle)
@@ -1005,7 +1005,7 @@ void IMMainCtrl::requestRenameBox(const QString & oldTitle, const QString & newT
 
 
 /*************************************************
-Function Name： requestMoveFriendToBox
+Function Name: requestMoveFriendToBox
 Description:  
 *************************************************/
 void IMMainCtrl::requestMoveFriendToBox(const QString & friendID,
@@ -1026,7 +1026,7 @@ void IMMainCtrl::requestMoveFriendToBox(const QString & friendID,
 
 
 /*************************************************
-Function Name： requestGetNetWorkHistoryMessageOneFriendOneDate
+Function Name: requestGetNetWorkHistoryMessageOneFriendOneDate
 Description:  
 *************************************************/
 void IMMainCtrl::requestGetNetWorkHistoryMessageOneFriendOneDate(
@@ -1046,7 +1046,7 @@ void IMMainCtrl::requestGetNetWorkHistoryMessageOneFriendOneDate(
 
 
 /*************************************************
-Function Name： requestChangePwd
+Function Name: requestChangePwd
 Description:  
 *************************************************/
 void IMMainCtrl::requestChangePwd(const QString & oldPwd, const QString & newPwd)
@@ -1070,7 +1070,7 @@ void IMMainCtrl::requestChangePwd(const QString & oldPwd, const QString & newPwd
 }
 
 /*************************************************
-Function Name： readMessage
+Function Name: readMessage
 Description: 
 *************************************************/
 void IMMainCtrl::readMessage()
@@ -1424,7 +1424,7 @@ void IMMainCtrl::readMessage()
 
 
 /*************************************************
-Function Name： closeWindow
+Function Name: closeWindow
 Description: close 主程序
 *************************************************/
 void IMMainCtrl::closeWindow()

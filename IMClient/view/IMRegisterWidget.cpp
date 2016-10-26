@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMRegisterWidget.cpp
-Author： jet.F.R
-Date： 2014.3.14
-Description： clientRegister 界面
-Changes：
+File Name: IMRegisterWidget.cpp
+Author: jet.F.R
+Date: 2014.3.14
+Description: clientRegister 界面
+Changes:
 ********************************************/
 #include "IMRegisterWidget.h"
 #include "model/IMUser.h"
@@ -40,11 +40,11 @@ IMRegisterWidget::~IMRegisterWidget()
 
 // mark: public slots:--------------------------------------------------
 /*************************************************
-Function Name： resetBtnRegister()
+Function Name: resetBtnRegister()
 Description: 重置Register 按钮
-Input： NULL
-Output： NULL
-Changes： NULL
+Input: NULL
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMRegisterWidget::resetBtnRegister(bool enable)
 {
@@ -60,11 +60,11 @@ void IMRegisterWidget::moveEvent(QMoveEvent *)
 
 // mark: private slots:---------------------------------------------------
 /*************************************************
-Function Name： onClickBtnRegister()
+Function Name: onClickBtnRegister()
 Description: 单击“Register ”按钮
-Input： NULL
-Output： NULL
-Changes： NULL
+Input: NULL
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMRegisterWidget::onClickBtnRegister()
 {
@@ -169,11 +169,11 @@ void IMRegisterWidget::onClickBtnRegister()
 }
 
 /*************************************************
-Function Name： conClickBtnCancel()
+Function Name: conClickBtnCancel()
 Description: 单击“取消”按钮
-Input： NULL
-Output： NULL
-Changes： NULL
+Input: NULL
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMRegisterWidget::conClickBtnCancel()
 {
@@ -183,11 +183,11 @@ void IMRegisterWidget::conClickBtnCancel()
 
 // mark: private:-------------------------------------------------------
 /*************************************************
-Function Name： initIMRegisterWidget()
+Function Name: initIMRegisterWidget()
 Description: init Register 界面
-Input： NULL
-Output： NULL
-Changes： NULL
+Input: NULL
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMRegisterWidget::initIMRegisterWidget()
 {
@@ -227,9 +227,9 @@ void IMRegisterWidget::initIMRegisterWidget()
     m_cbxSex->addItem(tr("女"));
     m_leBirthday = new CustomLineEdit;
     m_leQuestion = new QLineEdit;
-    m_leQuestion->setPlaceholderText(tr("比如：我初中老师的姓名"));
+    m_leQuestion->setPlaceholderText(tr("比如:我初中老师的姓名"));
     m_leAnswer = new QLineEdit;
-    m_leAnswer->setPlaceholderText(tr("比如：张三"));
+    m_leAnswer->setPlaceholderText(tr("比如:张三"));
     m_leName = new QLineEdit;
     m_lePhone = new QLineEdit;
     m_leAddress = new QLineEdit;
@@ -325,11 +325,11 @@ void IMRegisterWidget::initIMRegisterWidget()
 }
 
 /*************************************************
-Function Name： linkSignalWithSlot()
+Function Name: linkSignalWithSlot()
 Description: connection 信号与槽
-Input： NULL
-Output： NULL
-Changes： NULL
+Input: NULL
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMRegisterWidget::linkSignalWithSlot()
 {

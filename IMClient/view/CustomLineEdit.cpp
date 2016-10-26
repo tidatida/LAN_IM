@@ -6,7 +6,7 @@
 
 //mark public:
 /*************************************************
-Function Name： CustomLineEdit
+Function Name: CustomLineEdit
 Description: constructor
 *************************************************/
 CustomLineEdit::CustomLineEdit(QWidget *parent) :
@@ -28,7 +28,7 @@ CustomLineEdit::CustomLineEdit(QWidget *parent) :
 
 
 /*************************************************
-Function Name： ~CustomLineEdit
+Function Name: ~CustomLineEdit
 Description: release resource
 *************************************************/
 CustomLineEdit::~CustomLineEdit()
@@ -42,7 +42,7 @@ CustomLineEdit::~CustomLineEdit()
 
 
 /*************************************************
-Function Name： setGridVisible
+Function Name: setGridVisible
 Description: set grid visible
 *************************************************/
 void CustomLineEdit::setCalendarPos(int x , int y , PosType type)
@@ -54,7 +54,7 @@ void CustomLineEdit::setCalendarPos(int x , int y , PosType type)
 
 
 /*************************************************
-Function Name： setGridVisible
+Function Name: setGridVisible
 Description: set grid visible
 *************************************************/
 void CustomLineEdit::setCalendarGridVisible(bool show)
@@ -64,7 +64,7 @@ void CustomLineEdit::setCalendarGridVisible(bool show)
 
 
 /*************************************************
-Function Name： setDateFormat
+Function Name: setDateFormat
 Description: set format of date showed on lineEdit
 *************************************************/
 void CustomLineEdit::setDateFormat(const QString & formatStr)
@@ -74,7 +74,7 @@ void CustomLineEdit::setDateFormat(const QString & formatStr)
 }
 
 /*************************************************
-Function Name： setHorizontalHeaderFormat
+Function Name: setHorizontalHeaderFormat
 Description: set the format of the horizontal header
              The default value is QCalendarWidget::ShortDayNames.
 *************************************************/
@@ -85,7 +85,7 @@ void CustomLineEdit::setHorizontalHeaderFormat(
 }
 
 /*************************************************
-Function Name： setVerticalHeaderFormat
+Function Name: setVerticalHeaderFormat
 Description: set the format of the vertical header
              The default value is QCalendarWidget::NoVerticalHeader
 *************************************************/
@@ -96,7 +96,7 @@ void CustomLineEdit::setVerticalHeaderFormat(
 }
 
 /*************************************************
-Function Name： onClickedDataEdit
+Function Name: onClickedDataEdit
 Description: set the day displayed in the first column
              By default, the day displayed in the first column is Sunday
 *************************************************/
@@ -106,7 +106,7 @@ void CustomLineEdit::setFirstDayOfWeek (Qt::DayOfWeek dayOfWeek)
 }
 
 /*************************************************
-Function Name： setCurrentDateRedBorderVisible
+Function Name: setCurrentDateRedBorderVisible
 Description: set whether the table grid is displayed or not
              The default value is true.
 *************************************************/
@@ -116,7 +116,7 @@ void CustomLineEdit::setCurrentDateRedBorderVisible(bool show)
 }
 
 /*************************************************
-Function Name： setColorOfDate
+Function Name: setColorOfDate
 Description: sets the date's foreground and background color
 *************************************************/
 void CustomLineEdit::setColorOfDate(QDate date, QColor foregroundColor,
@@ -126,7 +126,7 @@ void CustomLineEdit::setColorOfDate(QDate date, QColor foregroundColor,
 }
 
 /*************************************************
-Function Name： markHasVideoDate
+Function Name: markHasVideoDate
 Description: mark data which has video
 *************************************************/
 void CustomLineEdit::addHasVideoDate(QDate &date)
@@ -136,7 +136,7 @@ void CustomLineEdit::addHasVideoDate(QDate &date)
 
 
 /*************************************************
-Function Name： setLocale
+Function Name: setLocale
 Description: set the widget's locale
 *************************************************/
 void CustomLineEdit::setLocale(const QLocale &locale)
@@ -145,7 +145,7 @@ void CustomLineEdit::setLocale(const QLocale &locale)
 }
 
 /*************************************************
-Function Name： setWeekdayTextFormat
+Function Name: setWeekdayTextFormat
 Description: set the text char format for rendering of day in the week dayOfWeek to format
 *************************************************/
 void CustomLineEdit::setWeekdayTextFormat(Qt::DayOfWeek dayOfWeek,
@@ -155,7 +155,7 @@ void CustomLineEdit::setWeekdayTextFormat(Qt::DayOfWeek dayOfWeek,
 }
 
 /*************************************************
-Function Name： setWeekdayColor
+Function Name: setWeekdayColor
 Description: set the text color for rendering of day in the week dayOfWeek
 *************************************************/
 void CustomLineEdit::setWeekdayColor(Qt::DayOfWeek dayOfWeek,
@@ -166,7 +166,7 @@ void CustomLineEdit::setWeekdayColor(Qt::DayOfWeek dayOfWeek,
 }
 
 /*************************************************
-Function Name： setPreMonthBtnIcon
+Function Name: setPreMonthBtnIcon
 Description: set the icon of button[m_preMonth]
 *************************************************/
 void CustomLineEdit::setPreMonthBtnIcon(const QIcon & icon)
@@ -175,7 +175,7 @@ void CustomLineEdit::setPreMonthBtnIcon(const QIcon & icon)
 }
 
 /*************************************************
-Function Name： setNextMonthBtnIcon
+Function Name: setNextMonthBtnIcon
 Description: set the icon of button[m_nextMonth]
 *************************************************/
 void CustomLineEdit::setNextMonthBtnIcon(const QIcon & icon)
@@ -184,7 +184,7 @@ void CustomLineEdit::setNextMonthBtnIcon(const QIcon & icon)
 }
 
 /*************************************************
-Function Name： setPreYearBtnIcon
+Function Name: setPreYearBtnIcon
 Description: set the icon of button[m_preYear]
 *************************************************/
 void CustomLineEdit::setPreYearBtnIcon(const QIcon & icon)
@@ -193,7 +193,7 @@ void CustomLineEdit::setPreYearBtnIcon(const QIcon & icon)
 }
 
 /*************************************************
-Function Name： setNextYearBtnIcon
+Function Name: setNextYearBtnIcon
 Description: set the icon of button[m_nextYear]
 *************************************************/
 void CustomLineEdit::setNextYearBtnIcon(const QIcon & icon)
@@ -202,7 +202,7 @@ void CustomLineEdit::setNextYearBtnIcon(const QIcon & icon)
 }
 
 /*************************************************
-Function Name： setHeaderTextFormat
+Function Name: setHeaderTextFormat
 Description: set the QTextFormat of header text
 *************************************************/
 void CustomLineEdit::setHeaderTextFormat(const QTextCharFormat &format)
@@ -211,7 +211,7 @@ void CustomLineEdit::setHeaderTextFormat(const QTextCharFormat &format)
 }
 
 /*************************************************
-Function Name： setCurrentDateFormat
+Function Name: setCurrentDateFormat
 Description: set the QTextCharFormat of current date
 *************************************************/
 void CustomLineEdit::setCurrentDateFormat(const QTextCharFormat &format)
@@ -220,7 +220,7 @@ void CustomLineEdit::setCurrentDateFormat(const QTextCharFormat &format)
 }
 
 /*************************************************
-Function Name： setSelectedDateFormat
+Function Name: setSelectedDateFormat
 Description: set the QTextCharFormat of selected date
 *************************************************/
 void CustomLineEdit::setSelectedDateFormat(const QTextCharFormat &format)
@@ -229,7 +229,7 @@ void CustomLineEdit::setSelectedDateFormat(const QTextCharFormat &format)
 }
 
 /*************************************************
-Function Name： setValidDateFormat
+Function Name: setValidDateFormat
 Description: set the QTextCharFormat of valid date
 *************************************************/
 void CustomLineEdit::setValidDateFormat(const QTextCharFormat &format)
@@ -238,7 +238,7 @@ void CustomLineEdit::setValidDateFormat(const QTextCharFormat &format)
 }
 
 /*************************************************
-Function Name： setInvalidDateFormat
+Function Name: setInvalidDateFormat
 Description: set the QTextCharFormat of invalid date
 *************************************************/
 void CustomLineEdit::setInvalidDateFormat(const QTextCharFormat &format)
@@ -247,7 +247,7 @@ void CustomLineEdit::setInvalidDateFormat(const QTextCharFormat &format)
 }
 
 /*************************************************
-Function Name： getDate
+Function Name: getDate
 Description: get the date
 *************************************************/
 QDate CustomLineEdit::getDate()
@@ -257,7 +257,7 @@ QDate CustomLineEdit::getDate()
 
 //mark protected:
 /*************************************************
-Function Name： focusInEvent
+Function Name: focusInEvent
 Description: receive focus events (focus received) for the widget
 *************************************************/
 void CustomLineEdit::focusInEvent(QFocusEvent *event)
@@ -269,7 +269,7 @@ void CustomLineEdit::focusInEvent(QFocusEvent *event)
 }
 
 /*************************************************
-Function Name： focusOutEvent
+Function Name: focusOutEvent
 Description: receive focus events (focus lost) for the widget
 *************************************************/
 void CustomLineEdit::focusOutEvent(QFocusEvent *event)
@@ -278,7 +278,7 @@ void CustomLineEdit::focusOutEvent(QFocusEvent *event)
 }
 
 /*************************************************
-Function Name： showDateOnLineEdit
+Function Name: showDateOnLineEdit
 Description: show date on lineEdit
 *************************************************/
 void CustomLineEdit::showDateOnLineEdit()
@@ -289,7 +289,7 @@ void CustomLineEdit::showDateOnLineEdit()
 
 
 /*************************************************
-Function Name： linkSignalWithSlot
+Function Name: linkSignalWithSlot
 Description: link the signals with slots
 *************************************************/
 void CustomLineEdit::linkSignalWithSlot()
@@ -299,7 +299,7 @@ void CustomLineEdit::linkSignalWithSlot()
 }
 
 /*************************************************
-Function Name： setCalendarState
+Function Name: setCalendarState
 Description: set state calendar
 *************************************************/
 void CustomLineEdit::setCalendarState()
@@ -312,7 +312,7 @@ void CustomLineEdit::setCalendarState()
 //public slots:
 
 /*************************************************
-Function Name： moveCalendarPos
+Function Name: moveCalendarPos
 Description: move calendar
 *************************************************/
 void CustomLineEdit::moveCalendarPos()

@@ -36,7 +36,7 @@ IMDiscussionListWidget::IMDiscussionListWidget(IMMainWidget *mainWidget, QWidget
 
 
 /*************************************************
-Function Name： addItem()
+Function Name: addItem()
 Description:  add 
 *************************************************/
 void IMDiscussionListWidget::addItem(QWidget *item)
@@ -56,7 +56,7 @@ void IMDiscussionListWidget::addItem(QWidget *item)
 
 
 /*************************************************
-Function Name： removeItem()
+Function Name: removeItem()
 Description:  delete  
 *************************************************/
 void IMDiscussionListWidget::removeItem(QWidget *item)
@@ -71,7 +71,7 @@ void IMDiscussionListWidget::removeItem(QWidget *item)
 
 
 /*************************************************
-Function Name： creatMenu()
+Function Name: creatMenu()
 Description:  create 右键菜单
 *************************************************/
 void IMDiscussionListWidget::creatMenu()
@@ -95,7 +95,7 @@ void IMDiscussionListWidget::creatMenu()
 
 
 /*************************************************
-Function Name： showMenu()
+Function Name: showMenu()
 Description:  显示右键菜单
 *************************************************/
 void IMDiscussionListWidget::showMenu()
@@ -110,7 +110,7 @@ void IMDiscussionListWidget::showMenu()
 
 
 /*************************************************
-Function Name： mousePressEvent
+Function Name: mousePressEvent
 Description: 鼠标单击事件
 *************************************************/
 void IMDiscussionListWidget::mousePressEvent(QMouseEvent *event)

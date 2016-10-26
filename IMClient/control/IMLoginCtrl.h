@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMLoginCtrl.h
-Author： jet.F.R
-Date： 2014.3.10
-Description： 
-Changes：
+File Name: IMLoginCtrl.h
+Author: jet.F.R
+Date: 2014.3.10
+Description: 
+Changes:
 ********************************************/
 
 #ifndef IMLOGINCTRL_H
@@ -15,7 +15,7 @@ Changes：
 class IMTcpSocket;
 
 /*************************************************
-Class Name： IMLoginCtrl
+Class Name: IMLoginCtrl
 Description: 
 *************************************************/
 class IMLoginCtrl : public QObject

@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMThread.h
-Author： jet.F.R
-Date： 2014.3.10
-Description： server used to   process   socketIO thread class
-Changes：
+File Name: IMThread.h
+Author: jet.F.R
+Date: 2014.3.10
+Description: server used to   process   socketIO thread class
+Changes:
 ********************************************/
 #ifndef IMTHREAD_H
 #define IMTHREAD_H
@@ -15,7 +15,7 @@ class IMClientSocketCtrl;
 
 
 /*************************************************
-Class Name： IMThread
+Class Name: IMThread
 Description: process   socketIO thread class
 *************************************************/
 class IMThread : public QThread

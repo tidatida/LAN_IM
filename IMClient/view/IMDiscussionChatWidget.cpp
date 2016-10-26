@@ -47,7 +47,7 @@ IMDiscussionChatWidget::~IMDiscussionChatWidget()
 }
 
 /*************************************************
-Function Name： appendMessageShow()
+Function Name: appendMessageShow()
 Description:  
 *************************************************/
 void IMDiscussionChatWidget::appendMessageShow(const TalkMessage &mes)
@@ -77,7 +77,7 @@ void IMDiscussionChatWidget::appendMessageShow(const TalkMessage &mes)
 }
 
 /*************************************************
-Function Name： setLabelStatus()
+Function Name: setLabelStatus()
 Description:  
 *************************************************/
 void IMDiscussionChatWidget::setLabelStatus()
@@ -94,7 +94,7 @@ void IMDiscussionChatWidget::setLabelStatus()
 }
 
 /*************************************************
-Function Name： setChatInformation()
+Function Name: setChatInformation()
 Description:  
 *************************************************/
 void IMDiscussionChatWidget::setChatInformation(const DiscussionInformation & discussion)
@@ -105,7 +105,7 @@ void IMDiscussionChatWidget::setChatInformation(const DiscussionInformation & di
 }
 
 /*************************************************
-Function Name： addDiscussionMemberButton()
+Function Name: addDiscussionMemberButton()
 Description:  
 *************************************************/
 bool IMDiscussionChatWidget::addDiscussionMemberButton(const DiscussionMember & memInfo)
@@ -126,7 +126,7 @@ bool IMDiscussionChatWidget::addDiscussionMemberButton(const DiscussionMember & 
 }
 
 /*************************************************
-Function Name： removeDiscussionMemberButton()
+Function Name: removeDiscussionMemberButton()
 Description:  
 *************************************************/
 bool IMDiscussionChatWidget::removeDiscussionMemberButton(const QString & memberID)
@@ -143,7 +143,7 @@ bool IMDiscussionChatWidget::removeDiscussionMemberButton(const QString & member
 // public slots:--------------------------------------------------------------
 
 /*************************************************
-Function Name： setDiscussionMemberList()
+Function Name: setDiscussionMemberList()
 Description:  
 *************************************************/
 void IMDiscussionChatWidget::setDiscussionMemberList(
@@ -172,7 +172,7 @@ void IMDiscussionChatWidget::setDiscussionMemberList(
 // protected:--------------------------------------------------------------
 
 /*************************************************
-Function Name： closeEvent()
+Function Name: closeEvent()
 Description:  
 *************************************************/
 void IMDiscussionChatWidget::closeEvent(QCloseEvent *event)
@@ -191,7 +191,7 @@ void IMDiscussionChatWidget::closeEvent(QCloseEvent *event)
 
 // private slots:-----------------------------------------------------
 /*************************************************
-Function Name： setInputTextFont()
+Function Name: setInputTextFont()
 Description:  
 *************************************************/
 void IMDiscussionChatWidget::setInputTextFont(const QFont &font)
@@ -201,7 +201,7 @@ void IMDiscussionChatWidget::setInputTextFont(const QFont &font)
 }
 
 /*************************************************
-Function Name： setInputTextSize()
+Function Name: setInputTextSize()
 Description:  
 *************************************************/
 void IMDiscussionChatWidget::setInputTextSize(const QString &size)
@@ -212,7 +212,7 @@ void IMDiscussionChatWidget::setInputTextSize(const QString &size)
 
 
 /*************************************************
-Function Name： onClickBtnBold()
+Function Name: onClickBtnBold()
 Description:  
 *************************************************/
 void IMDiscussionChatWidget::onClickBtnBold(bool checked)
@@ -225,7 +225,7 @@ void IMDiscussionChatWidget::onClickBtnBold(bool checked)
 }
 
 /*************************************************
-Function Name： onClickBtnItalic()
+Function Name: onClickBtnItalic()
 Description:  
 *************************************************/
 void IMDiscussionChatWidget::onClickBtnItalic(bool checked)
@@ -236,7 +236,7 @@ void IMDiscussionChatWidget::onClickBtnItalic(bool checked)
 
 
 /*************************************************
-Function Name： onClickBtnUnderline()
+Function Name: onClickBtnUnderline()
 Description:  
 *************************************************/
 void IMDiscussionChatWidget::onClickBtnUnderline(bool checked)
@@ -246,7 +246,7 @@ void IMDiscussionChatWidget::onClickBtnUnderline(bool checked)
 }
 
 /*************************************************
-Function Name： onClickBtnColor()
+Function Name: onClickBtnColor()
 Description:  
 *************************************************/
 void IMDiscussionChatWidget::onClickBtnColor()
@@ -264,7 +264,7 @@ void IMDiscussionChatWidget::onClickBtnColor()
 }
 
 /*************************************************
-Function Name： onClickBtnClear()
+Function Name: onClickBtnClear()
 Description:  
 *************************************************/
 void IMDiscussionChatWidget::onClickBtnClear()
@@ -275,7 +275,7 @@ void IMDiscussionChatWidget::onClickBtnClear()
 
 
 /*************************************************
-Function Name： onClickBtnHistory()
+Function Name: onClickBtnHistory()
 Description:  
 *************************************************/
 void IMDiscussionChatWidget::onClickBtnHistory(bool checked)
@@ -292,7 +292,7 @@ void IMDiscussionChatWidget::onClickBtnHistory(bool checked)
 }
 
 /*************************************************
-Function Name： currentFormatChanged()
+Function Name: currentFormatChanged()
 Description:   
 *************************************************/
 void IMDiscussionChatWidget::currentFormatChanged(const QTextCharFormat &format)
@@ -311,7 +311,7 @@ void IMDiscussionChatWidget::currentFormatChanged(const QTextCharFormat &format)
 }
 
 /*************************************************
-Function Name： onClickBtnClocse()
+Function Name: onClickBtnClocse()
 Description:  
 *************************************************/
 void IMDiscussionChatWidget::onClickBtnClose()
@@ -321,7 +321,7 @@ void IMDiscussionChatWidget::onClickBtnClose()
 
 
 /*************************************************
-Function Name： onClickBtnSend()
+Function Name: onClickBtnSend()
 Description:  
 *************************************************/
 void IMDiscussionChatWidget::onClickBtnSend()
@@ -349,7 +349,7 @@ void IMDiscussionChatWidget::onClickBtnSend()
 
 
 /*************************************************
-Function Name： initIMDiscussionChatWidget()
+Function Name: initIMDiscussionChatWidget()
 Description:  
 *************************************************/
 void IMDiscussionChatWidget::initIMDiscussionChatWidget()
@@ -437,7 +437,7 @@ void IMDiscussionChatWidget::initIMDiscussionChatWidget()
 
 
 /*************************************************
-Function Name： linkSignalWithSlot()
+Function Name: linkSignalWithSlot()
 Description:  connection 信号与槽
 *************************************************/
 void IMDiscussionChatWidget::linkSignalWithSlot()
@@ -478,7 +478,7 @@ void IMDiscussionChatWidget::linkSignalWithSlot()
 }
 
 /*************************************************
-Function Name： setWidgetToolBtn()
+Function Name: setWidgetToolBtn()
 Description:  设置面板图标
 *************************************************/
 void IMDiscussionChatWidget::setWidgetToolBtn()
@@ -546,7 +546,7 @@ void IMDiscussionChatWidget::setWidgetToolBtn()
 }
 
 /*************************************************
-Function Name： saveHistoryMessage()
+Function Name: saveHistoryMessage()
 Description:  保存历史记录
 *************************************************/
 void IMDiscussionChatWidget::saveHistoryMessage()
@@ -561,7 +561,7 @@ void IMDiscussionChatWidget::saveHistoryMessage()
 }
 
 /*************************************************
-Function Name： readHistoryMessage()
+Function Name: readHistoryMessage()
 Description:  读取历史记录
 *************************************************/
 void IMDiscussionChatWidget::readHistoryMessage()

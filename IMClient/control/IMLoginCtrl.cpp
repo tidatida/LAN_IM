@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMLoginCtrl.cpp
-Author： jet.F.R
-Date： 2014.3.10
-Description：
-Changes：
+File Name: IMLoginCtrl.cpp
+Author: jet.F.R
+Date: 2014.3.10
+Description:
+Changes:
 ********************************************/
 
 #include "IMLoginCtrl.h"
@@ -43,9 +43,9 @@ IMLoginCtrl::~IMLoginCtrl()
 
 
 /*************************************************
-Function Name： login()
+Function Name: login()
 Description: 
-Input： const QString &id： , const QString &pwd：
+Input: const QString &id: , const QString &pwd:
 *************************************************/
 void IMLoginCtrl::login(const QString &id, const QString &pwd, const int status)
 {
@@ -66,7 +66,7 @@ void IMLoginCtrl::login(const QString &id, const QString &pwd, const int status)
 }
 
 /*************************************************
-Function Name： getQuestionAndAnswer()
+Function Name: getQuestionAndAnswer()
 Description: 
 *************************************************/
 void IMLoginCtrl::getQuestionAndAnswer(const QString & id)
@@ -86,11 +86,11 @@ void IMLoginCtrl::getQuestionAndAnswer(const QString & id)
 
 // mark: public slots:--------------------------------------------------------
 /*************************************************
-Function Name： changeLoginMessage()
+Function Name: changeLoginMessage()
 Description: 
-Input： const QString &mes： , bool isLogin：
-Output： NULL
-Changes： NULL
+Input: const QString &mes: , bool isLogin:
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMLoginCtrl::changeLoginMessage(const QString &mes, bool isLogin)
 {
@@ -100,11 +100,11 @@ void IMLoginCtrl::changeLoginMessage(const QString &mes, bool isLogin)
 // mark: private slots:--------------------------------------------------
 
 /*************************************************
-Function Name： requestLogin()
+Function Name: requestLogin()
 Description: 
-Input： NULL
-Output： NULL
-Changes： NULL
+Input: NULL
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMLoginCtrl::requestLogin()
 {
@@ -123,7 +123,7 @@ void IMLoginCtrl::requestLogin()
 
 
 /*************************************************
-Function Name： sendRequest()
+Function Name: sendRequest()
 Description: 
 *************************************************/
 void IMLoginCtrl::sendRequest()
@@ -148,7 +148,7 @@ void IMLoginCtrl::sendRequest()
 // private slots:---------------------------------------------
 
 /*************************************************
-Function Name： requestGetQuestionAndAnswer()
+Function Name: requestGetQuestionAndAnswer()
 Description: 
 *************************************************/
 void IMLoginCtrl::requestGetQuestionAndAnswer()
@@ -166,11 +166,11 @@ void IMLoginCtrl::requestGetQuestionAndAnswer()
 }
 
 /*************************************************
-Function Name： readMessage()
+Function Name: readMessage()
 Description: 
-Input： NULL
-Output： NULL
-Changes： NULL
+Input: NULL
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMLoginCtrl::readMessage()
 {

@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMEncryption.h
-Author： jet.F.R
-Date： 2014.3.17
-Description： 
-Changes：
+File Name: IMEncryption.h
+Author: jet.F.R
+Date: 2014.3.17
+Description: 
+Changes:
 ********************************************/
 
 #ifndef IMENCRYPTION_H

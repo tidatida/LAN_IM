@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMRegisterWidget.h
-Author： jet.F.R
-Date： 2014.3.14
-Description： clientRegister 界面
-Changes：
+File Name: IMRegisterWidget.h
+Author: jet.F.R
+Date: 2014.3.14
+Description: clientRegister 界面
+Changes:
 ********************************************/
 #ifndef IMREGISTERWIDGET_H
 #define IMREGISTERWIDGET_H
@@ -19,7 +19,7 @@ class IMRegisterCtrl;
 class CustomLineEdit;
 
 /*************************************************
-Class Name： IMRegisterWidget
+Class Name: IMRegisterWidget
 Description: clientRegister 帐号界面 class
 *************************************************/
 class IMRegisterWidget : public QWidget

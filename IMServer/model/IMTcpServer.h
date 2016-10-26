@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMTcpServer.h
-Author： jet.F.R
-Date： 2014.3.10
-Description：
-Changes：
+File Name: IMTcpServer.h
+Author: jet.F.R
+Date: 2014.3.10
+Description:
+Changes:
 ********************************************/
 
 #ifndef IMTCPSERVER_H
@@ -15,7 +15,7 @@ Changes：
 #include "control/IMDatabaseCtrl.h"
 
 /*************************************************
-Class Name： IMTcpServer
+Class Name: IMTcpServer
 Description: 
 *************************************************/
 class IMTcpServer : public QTcpServer

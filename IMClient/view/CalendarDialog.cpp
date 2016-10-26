@@ -25,7 +25,7 @@
 
 //mark public:
 /*************************************************
-Function Name： CalendarDialog
+Function Name: CalendarDialog
 Description: constructor
 *************************************************/
 CalendarDialog::CalendarDialog(QWidget *parent) :
@@ -52,7 +52,7 @@ CalendarDialog::CalendarDialog(QWidget *parent) :
 }
 
 /*************************************************
-Function Name： ~CalendarDialog
+Function Name: ~CalendarDialog
 Description: release resource/image
 *************************************************/
 CalendarDialog:: ~CalendarDialog()
@@ -118,7 +118,7 @@ CalendarDialog:: ~CalendarDialog()
 }
 
 /*************************************************
-Function Name： getCalendar
+Function Name: getCalendar
 Description: get calendar [m_customCalendar]
 *************************************************/
 CustomCalendar * CalendarDialog::getCalendar()
@@ -127,7 +127,7 @@ CustomCalendar * CalendarDialog::getCalendar()
 }
 
 /*************************************************
-Function Name： getDialogRect
+Function Name: getDialogRect
 Description: get Dialog's Rect
 *************************************************/
 QRect CalendarDialog::getDialogRect()
@@ -136,7 +136,7 @@ QRect CalendarDialog::getDialogRect()
 }
 
 /*************************************************
-Function Name： getMaxDate
+Function Name: getMaxDate
 Description:
 *************************************************/
 QDate CalendarDialog::getMaxDate()
@@ -145,7 +145,7 @@ QDate CalendarDialog::getMaxDate()
 }
 
 /*************************************************
-Function Name： getMinDate
+Function Name: getMinDate
 Description:
 *************************************************/
 QDate CalendarDialog::getMinDate()
@@ -156,7 +156,7 @@ QDate CalendarDialog::getMinDate()
 //mark protected:
 
 /*************************************************
-Function Name： keyPressEvent
+Function Name: keyPressEvent
 Description: receive key press events for the widget
 *************************************************/
 void CalendarDialog::keyPressEvent(QKeyEvent *event)
@@ -181,7 +181,7 @@ void CalendarDialog::keyPressEvent(QKeyEvent *event)
 //mark private:
 
 /*************************************************
-Function Name： initDialog
+Function Name: initDialog
 Description: initialize dialog
 *************************************************/
 void CalendarDialog::initDialog()
@@ -287,7 +287,7 @@ void CalendarDialog::initDialog()
 }
 
 /*************************************************
-Function Name： setDialogLayout
+Function Name: setDialogLayout
 Description: set dialog's layout
 *************************************************/
 void CalendarDialog::setDialogLayout()
@@ -317,7 +317,7 @@ void CalendarDialog::setDialogLayout()
 }
 
 /*************************************************
-Function Name： linkSignalWithSlot
+Function Name: linkSignalWithSlot
 Description: link the signals with slots
 *************************************************/
 void CalendarDialog::linkSignalWithSlot()
@@ -349,7 +349,7 @@ void CalendarDialog::linkSignalWithSlot()
 }
 
 /*************************************************
-Function Name： setCalendarPos
+Function Name: setCalendarPos
 Description: set the position of calendar
 *************************************************/
 void CalendarDialog::setCalendarPos(int posX, int posY, QSize &lineEdit, PosType type)
@@ -382,7 +382,7 @@ void CalendarDialog::setCalendarPos(int posX, int posY, QSize &lineEdit, PosType
 
 
 /*************************************************
-Function Name： setCalendarGridVisible
+Function Name: setCalendarGridVisible
 Description:  set grid visible
 *************************************************/
 void CalendarDialog::setCalendarGridVisible(bool show)
@@ -392,7 +392,7 @@ void CalendarDialog::setCalendarGridVisible(bool show)
 
 
 /*************************************************
-Function Name： setCalendarHorizontalHeaderFormat
+Function Name: setCalendarHorizontalHeaderFormat
 Description: set the format of the horizontal header
              The default value is QCalendarWidget::ShortDayNames.
 *************************************************/
@@ -403,7 +403,7 @@ void CalendarDialog::setCalendarHorizontalHeaderFormat(
 }
 
 /*************************************************
-Function Name： setCalendarVerticalHeaderFormat
+Function Name: setCalendarVerticalHeaderFormat
 Description: set the format of the vertical header
              The default value is QCalendarWidget::NoVerticalHeader
 *************************************************/
@@ -414,7 +414,7 @@ void CalendarDialog::setCalendarVerticalHeaderFormat(
 }
 
 /*************************************************
-Function Name： setCalendarFirstDayOfWeek
+Function Name: setCalendarFirstDayOfWeek
 Description: set the day displayed in the first column
              By default, the day displayed in the first column is Sunday
 *************************************************/
@@ -424,7 +424,7 @@ void CalendarDialog::setCalendarFirstDayOfWeek (Qt::DayOfWeek dayOfWeek)
 }
 
 /*************************************************
-Function Name： setCalendarCurrentDateRedBorderVisible
+Function Name: setCalendarCurrentDateRedBorderVisible
 Description: set whether the red border of current date is displayed or not
              The default value is true.
 *************************************************/
@@ -434,7 +434,7 @@ void CalendarDialog::setCalendarCurrentDateRedBorderVisible(bool show)
 }
 
 /*************************************************
-Function Name： setCalendarColorOfDate
+Function Name: setCalendarColorOfDate
 Description: sets the date's foreground and background color
 *************************************************/
 void CalendarDialog::setCalendarColorOfDate(QDate date,
@@ -449,7 +449,7 @@ void CalendarDialog::setCalendarColorOfDate(QDate date,
 
 
 /*************************************************
-Function Name： insertHasVideoDate
+Function Name: insertHasVideoDate
 Description: insert data which has video
 *************************************************/
 void CalendarDialog::insertHasVideoDate(QDate &date)
@@ -458,7 +458,7 @@ void CalendarDialog::insertHasVideoDate(QDate &date)
 }
 
 /*************************************************
-Function Name： setCalendarLocale
+Function Name: setCalendarLocale
 Description: set the widget's locale
 *************************************************/
 void CalendarDialog::setCalendarLocale(const QLocale &locale)
@@ -467,7 +467,7 @@ void CalendarDialog::setCalendarLocale(const QLocale &locale)
 }
 
 /*************************************************
-Function Name： setCalendarLocale
+Function Name: setCalendarLocale
 Description: set the text char format for rendering of day in the week dayOfWeek to format
 *************************************************/
 void CalendarDialog::setCalendarWeekdayTextFormat(Qt::DayOfWeek dayOfWeek,
@@ -477,7 +477,7 @@ void CalendarDialog::setCalendarWeekdayTextFormat(Qt::DayOfWeek dayOfWeek,
 }
 
 /*************************************************
-Function Name： setCalendarLocale
+Function Name: setCalendarLocale
 Description: set the text color for rendering of day in the week dayOfWeek
 *************************************************/
 void CalendarDialog::setCalendarWeekdayColor(Qt::DayOfWeek dayOfWeek,
@@ -494,7 +494,7 @@ void CalendarDialog::setCalendarWeekdayColor(Qt::DayOfWeek dayOfWeek,
 //public slots:
 
 /*************************************************
-Function Name： hideCalendar
+Function Name: hideCalendar
 Description: hide calendar
 *************************************************/
 void CalendarDialog::hideCalender()
@@ -504,7 +504,7 @@ void CalendarDialog::hideCalender()
 }
 
 /*************************************************
-Function Name： showCalendar
+Function Name: showCalendar
 Description: show calendar
 *************************************************/
 void CalendarDialog::showCalendar()
@@ -528,7 +528,7 @@ void CalendarDialog::showCalendar()
 
 
 /*************************************************
-Function Name： setCalendarState
+Function Name: setCalendarState
 Description: set state of calendar
 *************************************************/
 void CalendarDialog::setCalendarState()
@@ -547,7 +547,7 @@ void CalendarDialog::setCalendarState()
 }
 
 /*************************************************
-Function Name： setCalendarPreMonthBtnIcon
+Function Name: setCalendarPreMonthBtnIcon
 Description: set the icon of button[m_preMonth]
 *************************************************/
 void CalendarDialog::setCalendarPreMonthBtnIcon(const QIcon & icon)
@@ -556,7 +556,7 @@ void CalendarDialog::setCalendarPreMonthBtnIcon(const QIcon & icon)
 }
 
 /*************************************************
-Function Name： setCalendarPNextMonthBtnIcon
+Function Name: setCalendarPNextMonthBtnIcon
 Description: set the icon of button[m_nextMonth]
 *************************************************/
 void CalendarDialog::setCalendarNextMonthBtnIcon(const QIcon & icon)
@@ -565,7 +565,7 @@ void CalendarDialog::setCalendarNextMonthBtnIcon(const QIcon & icon)
 }
 
 /*************************************************
-Function Name： setCalendarPreYearBtnIcon
+Function Name: setCalendarPreYearBtnIcon
 Description: set the icon of button[m_preYear]
 *************************************************/
 void CalendarDialog::setCalendarPreYearBtnIcon(const QIcon & icon)
@@ -574,7 +574,7 @@ void CalendarDialog::setCalendarPreYearBtnIcon(const QIcon & icon)
 }
 
 /*************************************************
-Function Name： setCalendarPNextYearBtnIcon
+Function Name: setCalendarPNextYearBtnIcon
 Description: set the icon of button[m_nextYear]
 *************************************************/
 void CalendarDialog::setCalendarNextYearBtnIcon(const QIcon & icon)
@@ -583,7 +583,7 @@ void CalendarDialog::setCalendarNextYearBtnIcon(const QIcon & icon)
 }
 
 /*************************************************
-Function Name： getDate
+Function Name: getDate
 Description: get date
 *************************************************/
 QDate CalendarDialog::getDate()
@@ -592,7 +592,7 @@ QDate CalendarDialog::getDate()
 }
 
 /*************************************************
-Function Name： setCalendarHeaderTextFormat
+Function Name: setCalendarHeaderTextFormat
 Description: set the QTextFormat of header text
 *************************************************/
 void CalendarDialog::setCalendarHeaderTextFormat(const QTextCharFormat &format)
@@ -604,7 +604,7 @@ void CalendarDialog::setCalendarHeaderTextFormat(const QTextCharFormat &format)
 }
 
 /*************************************************
-Function Name： setCalendarCurrentDateFormat
+Function Name: setCalendarCurrentDateFormat
 Description: set the QTextCharFormat of current date
 *************************************************/
 void CalendarDialog::setCalendarCurrentDateFormat(const QTextCharFormat &format)
@@ -613,7 +613,7 @@ void CalendarDialog::setCalendarCurrentDateFormat(const QTextCharFormat &format)
 }
 
 /*************************************************
-Function Name： setCalendarSelectedDateFormat
+Function Name: setCalendarSelectedDateFormat
 Description: set the QTextCharFormat of selected date
 *************************************************/
 void CalendarDialog::setCalendarSelectedDateFormat(const QTextCharFormat &format)
@@ -622,7 +622,7 @@ void CalendarDialog::setCalendarSelectedDateFormat(const QTextCharFormat &format
 }
 
 /*************************************************
-Function Name： setCalendarValidDateFormat
+Function Name: setCalendarValidDateFormat
 Description: set the QTextCharFormat of valid date
 *************************************************/
 void CalendarDialog::setCalendarValidDateFormat(const QTextCharFormat &format)
@@ -631,7 +631,7 @@ void CalendarDialog::setCalendarValidDateFormat(const QTextCharFormat &format)
 }
 
 /*************************************************
-Function Name： setCalendarInvalidDateFormat
+Function Name: setCalendarInvalidDateFormat
 Description: set the QTextCharFormat of invalid date
 *************************************************/
 void CalendarDialog::setCalendarInvalidDateFormat(const QTextCharFormat &format)
@@ -641,7 +641,7 @@ void CalendarDialog::setCalendarInvalidDateFormat(const QTextCharFormat &format)
 
 //public slots:
 /*************************************************
-Function Name： setCalendarCurrenPage
+Function Name: setCalendarCurrenPage
 Description: show the given month
 *************************************************/
 void CalendarDialog::setCalendarCurrenPageByMonth(int month)
@@ -652,7 +652,7 @@ void CalendarDialog::setCalendarCurrenPageByMonth(int month)
 }
 
 /*************************************************
-Function Name： setCalendarCurrenPage
+Function Name: setCalendarCurrenPage
 Description: show the given year
 *************************************************/
 void CalendarDialog::setCalendarCurrenPageByYear(QString year)
@@ -661,7 +661,7 @@ void CalendarDialog::setCalendarCurrenPageByYear(QString year)
 }
 
 /*************************************************
-Function Name： setCalendarCurrenPage
+Function Name: setCalendarCurrenPage
 Description: show the given month of the given year
 *************************************************/
 void CalendarDialog::setCalendarCurrenPage(int year, int month)
@@ -671,7 +671,7 @@ void CalendarDialog::setCalendarCurrenPage(int year, int month)
 }
 
 /*************************************************
-Function Name： showCalendarPreviousMonthInYear
+Function Name: showCalendarPreviousMonthInYear
 Description: show the previous month in a year
 *************************************************/
 void CalendarDialog::showCalendarPreviousMonthInYear()
@@ -686,7 +686,7 @@ void CalendarDialog::showCalendarPreviousMonthInYear()
 }
 
 /*************************************************
-Function Name： showCalendarNextMonthInYear
+Function Name: showCalendarNextMonthInYear
 Description: show the next month in a year
 *************************************************/
 void CalendarDialog::showCalendarNextMonthInYear()
@@ -701,7 +701,7 @@ void CalendarDialog::showCalendarNextMonthInYear()
 }
 
 /*************************************************
-Function Name： showCalendarPreviousYear
+Function Name: showCalendarPreviousYear
 Description: show the previous year
 *************************************************/
 void CalendarDialog::showCalendarPreviousYear()
@@ -710,7 +710,7 @@ void CalendarDialog::showCalendarPreviousYear()
 }
 
 /*************************************************
-Function Name： showCalendarNextYear
+Function Name: showCalendarNextYear
 Description: show the next year
 *************************************************/
 void CalendarDialog::showCalendarNextYear()
@@ -720,7 +720,7 @@ void CalendarDialog::showCalendarNextYear()
 }
 
 /*************************************************
-Function Name： showCalendarPreviousMonth
+Function Name: showCalendarPreviousMonth
 Description: show the previous month
 *************************************************/
 void CalendarDialog::showCalendarPreviousMonth()
@@ -737,7 +737,7 @@ void CalendarDialog::showCalendarPreviousMonth()
 }
 
 /*************************************************
-Function Name： showCalendarNextMonth
+Function Name: showCalendarNextMonth
 Description: show the next month
 *************************************************/
 void CalendarDialog::showCalendarNextMonth()
@@ -754,7 +754,7 @@ void CalendarDialog::showCalendarNextMonth()
 }
 
 /*************************************************
-Function Name： getSlectedDate
+Function Name: getSlectedDate
 Description: get slected date
 *************************************************/
 void CalendarDialog::getSelectedDate()

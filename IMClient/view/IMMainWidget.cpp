@@ -1,13 +1,13 @@
 /*********************************************
-File Name： IMMainWidget.cpp
-Author： jet.F.R
-Date： 2014.3.10
+File Name:IMMainWidget.cpp
+Author:jet.F.R
+Date:2014.3.10
 <<<<<<< HEAD
-Description： clientmainframe
+Description:clientmainframe
 =======
-Description： main frame of client
+Description:main frame of client
 >>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
-Changes：
+Changes:
 ********************************************/
 
 #include "IMMainWidget.h"
@@ -65,7 +65,7 @@ static const QString TMP_LOCAL_HISTORY_PARH = "/tmp/local_history_message";
 // mark public:--------------------------------------------------------------
 
 
-// file copy：
+// file copy:
 bool copyFileToPath(QString sourceDir ,QString toDir, bool coverFileIfExist)
 {
     toDir.replace("\\","/");
@@ -152,7 +152,7 @@ IMMainWidget::~IMMainWidget()
 }
 
 /*************************************************
-Function Name： getLocalMyInformation()
+Function Name:getLocalMyInformation()
 Description:
 *************************************************/
 UserInformation IMMainWidget::getLocalMyInformation() const
@@ -161,7 +161,7 @@ UserInformation IMMainWidget::getLocalMyInformation() const
 }
 
 /*************************************************
-Function Name： isMyFriend()
+Function Name:isMyFriend()
 Description:
 *************************************************/
 bool IMMainWidget::isMyFriend(const QString & id) const
@@ -173,11 +173,11 @@ bool IMMainWidget::isMyFriend(const QString & id) const
 
 
 /*************************************************
-Function Name： setNickname()
+Function Name:setNickname()
 Description:
-Input： const QString &nickname:
-Output： NULL
-Changes： NULL
+Input:const QString &nickname:
+Output:NULL
+Changes:NULL
 *************************************************/
 //void IMMainWidget::setNickname(const QString &nickname)
 //{
@@ -185,7 +185,7 @@ Changes： NULL
 //}
 
 /*************************************************
-Function Name： setUserID()
+Function Name:setUserID()
 Description: set id
 *************************************************/
 //void IMMainWidget::setUserID(const QString &id)
@@ -196,11 +196,11 @@ Description: set id
 //}
 
 /*************************************************
-Function Name： setLoginStatus()
+Function Name:setLoginStatus()
 Description: set
-Input： const QString &nickname:    nickname
-Output： NULL
-Changes： NULL
+Input:const QString &nickname:    nickname
+Output:NULL
+Changes:NULL
 *************************************************/
 //void IMMainWidget::setLoginStatus(const LoginStatus status)
 //{
@@ -210,7 +210,7 @@ Changes： NULL
 
 
 /*************************************************
-Function Name： insertChatRoomMap()
+Function Name:insertChatRoomMap()
 Description:
 *************************************************/
 void IMMainWidget::insertChatRoomMap(const QString &id, IMChatWidget *chatRoom)
@@ -219,7 +219,7 @@ void IMMainWidget::insertChatRoomMap(const QString &id, IMChatWidget *chatRoom)
 }
 
 /*************************************************
-Function Name： insertFlockRoomMap()
+Function Name:insertFlockRoomMap()
 Description:
 *************************************************/
 void IMMainWidget::insertFlockRoomMap(const QString & id,
@@ -230,7 +230,7 @@ void IMMainWidget::insertFlockRoomMap(const QString & id,
 
 
 /*************************************************
-Function Name： insertDiscussionRoomMap()
+Function Name:insertDiscussionRoomMap()
 Description:
 *************************************************/
 void IMMainWidget::insertDiscussionRoomMap(const QString & id,
@@ -241,12 +241,8 @@ void IMMainWidget::insertDiscussionRoomMap(const QString & id,
 
 
 /*************************************************
-Function Name： getFriendInformation
-<<<<<<< HEAD
-Description: 获取好友信息（发送至server ）
-=======
+Function Name:getFriendInformation
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::getFriendInformation(const QString &id)
 {
@@ -255,12 +251,8 @@ void IMMainWidget::getFriendInformation(const QString &id)
 }
 
 /*************************************************
-Function Name： changeMyInformation
-<<<<<<< HEAD
-Description: 改变自己信息（发送至server ）
-=======
+Function Name:changeMyInformation
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::changeMyInformation(const UserInformation &me)
 {
@@ -270,12 +262,8 @@ void IMMainWidget::changeMyInformation(const UserInformation &me)
 
 
 /*************************************************
-Function Name： changeFriendRemark
-<<<<<<< HEAD
-Description: 改变好友备注（发送至server ）
-=======
+Function Name:changeFriendRemark
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::changeFriendRemark(const QString & friendID,
                                       const QString & remark)
@@ -285,12 +273,8 @@ void IMMainWidget::changeFriendRemark(const QString & friendID,
 }
 
 /*************************************************
-Function Name： deleteFriend
-<<<<<<< HEAD
-Description: delete  好友（发送至server 
-=======
+Function Name:deleteFriend
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::deleteFriend(const QString & friendID)
 {
@@ -299,12 +283,8 @@ void IMMainWidget::deleteFriend(const QString & friendID)
 }
 
 /*************************************************
-Function Name： removeInformationWidget
-<<<<<<< HEAD
-Description: delete  存储于m_informationMap中的信息窗口
-=======
+Function Name:removeInformationWidget
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::removeInformationWidget(const QString & userID)
 {
@@ -314,12 +294,8 @@ void IMMainWidget::removeInformationWidget(const QString & userID)
 }
 
 /*************************************************
-Function Name： removeFlockInformationWidget
-<<<<<<< HEAD
-Description: delete  存储与m_flockInformationMap中的信息窗口
-=======
+Function Name:removeFlockInformationWidget
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::removeFlockInformationWidget(const QString & flockID)
 {
@@ -329,12 +305,8 @@ void IMMainWidget::removeFlockInformationWidget(const QString & flockID)
 }
 
 /*************************************************
-Function Name： removeDiscussionInformationWidget
-<<<<<<< HEAD
-Description: delete  存储与m_discussionInformationMap中的信息窗口
-=======
+Function Name:removeDiscussionInformationWidget
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::removeDiscussionInformationWidget(const QString & discussionID)
 {
@@ -344,12 +316,8 @@ void IMMainWidget::removeDiscussionInformationWidget(const QString & discussionI
 }
 
 /*************************************************
-Function Name： changeFlockInformation
-<<<<<<< HEAD
-Description: modify群信息（发送至server ）
-=======
+Function Name:changeFlockInformation
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::changeFlockInformation(const FlockInformation & flock)
 {
@@ -359,12 +327,8 @@ void IMMainWidget::changeFlockInformation(const FlockInformation & flock)
 
 
 /*************************************************
-Function Name： changeDiscussionInformation
-<<<<<<< HEAD
-Description: modify讨论组信息 （发送至server 
-=======
+Function Name:changeDiscussionInformation
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::changeDiscussionInformation(const DiscussionInformation & discussion)
 {
@@ -373,12 +337,8 @@ void IMMainWidget::changeDiscussionInformation(const DiscussionInformation & dis
 }
 
 /*************************************************
-Function Name： removeChatWidget
-<<<<<<< HEAD
-Description: delete  存储于m_chatRoomMap中的聊天窗口
-=======
+Function Name:removeChatWidget
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::removeChatWidget(const QString &friendID)
 {
@@ -388,12 +348,8 @@ void IMMainWidget::removeChatWidget(const QString &friendID)
 }
 
 /*************************************************
-Function Name： removeFlockChatWidget
-<<<<<<< HEAD
-Description: delete  存储于m_flockRoomMap中的群聊窗口
-=======
+Function Name:removeFlockChatWidget
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::removeFlockChatWidget(const QString & flockID)
 {
@@ -403,13 +359,10 @@ void IMMainWidget::removeFlockChatWidget(const QString & flockID)
     m_flockRoomMap.remove(flockID);
     qDebug() << "size-behind:" << m_flockRoomMap.size();
 }
+
 /*************************************************
-Function Name： removeDiscussionChatWidget
-<<<<<<< HEAD
-Description: delete  存储于m_discussionRoomMap中的讨论组窗口
-=======
+Function Name:removeDiscussionChatWidget
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::removeDiscussionChatWidget(const QString & discussionID)
 {
@@ -419,12 +372,8 @@ void IMMainWidget::removeDiscussionChatWidget(const QString & discussionID)
 }
 
 /*************************************************
-Function Name： dropFlock
-<<<<<<< HEAD
-Description: 解散群(发送至server )
-=======
+Function Name:dropFlock
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::dropFlock(const QString & flockID)
 {
@@ -433,12 +382,8 @@ void IMMainWidget::dropFlock(const QString & flockID)
 }
 
 /*************************************************
-Function Name： dropDiscussion
-<<<<<<< HEAD
-Description: 解散讨论组（发送至server ）
-=======
+Function Name:dropDiscussion
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::dropDiscussion(const QString & discussionID)
 {
@@ -447,12 +392,8 @@ void IMMainWidget::dropDiscussion(const QString & discussionID)
 }
 
 /*************************************************
-Function Name： leaveFlock
-<<<<<<< HEAD
-Description: 退出群（发送至server ）
-=======
+Function Name:leaveFlock
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::leaveFlock(const QString &memberID, const QString & flockID)
 {
@@ -461,12 +402,8 @@ void IMMainWidget::leaveFlock(const QString &memberID, const QString & flockID)
 }
 
 /*************************************************
-Function Name： leaveFlock
-<<<<<<< HEAD
-Description: 退出讨论组（发送至server ）
-=======
+Function Name:leaveFlock
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::leaveDiscussion(const QString & memberID, const QString & discussionID)
 {
@@ -474,7 +411,7 @@ void IMMainWidget::leaveDiscussion(const QString & memberID, const QString & dis
         m_mainCtrl->leaveDiscussion(memberID, discussionID);
 }
 /*************************************************
-Function Name： leaveFlock
+Function Name:leaveFlock
 <<<<<<< HEAD
 Description: add 好友（发送至server ）
 =======
@@ -521,7 +458,7 @@ void IMMainWidget::addFriend(const QString friendID)
 
 
 /*************************************************
-Function Name： changeFlockMemberRemark
+Function Name:changeFlockMemberRemark
 <<<<<<< HEAD
 Description: modify群成员名片（发送至server ）
 =======
@@ -543,7 +480,7 @@ void IMMainWidget::moveFriendToBox(const QString & friendID,
 }
 
 /*************************************************
-Function Name： setOnlineCounter
+Function Name:setOnlineCounter
 Description:
 *************************************************/
 void IMMainWidget::setOnlineCounter(int num)
@@ -588,7 +525,7 @@ QStringList IMMainWidget::getGroupFriendList(const QString & groupName)
 
 
 /*************************************************
-Function Name： getLocalHistoryMessage()
+Function Name:getLocalHistoryMessage()
 Description:
 *************************************************/
 void IMMainWidget::getLocalHistoryMessage(const int index, const QDate & date)
@@ -606,7 +543,7 @@ void IMMainWidget::getLocalHistoryMessage(const int index, const QDate & date)
 
 
 /*************************************************
-Function Name： exportLocalMessage()
+Function Name:exportLocalMessage()
 Description:
 *************************************************/
 void IMMainWidget::exportLocalMessage(const int index)
@@ -691,7 +628,7 @@ void IMMainWidget::exportLocalMessage(const int index)
 
 
 /*************************************************
-Function Name： exportLocalMessageAll()
+Function Name:exportLocalMessageAll()
 Description:  export
 *************************************************/
 void IMMainWidget::exportLocalMessageAll()
@@ -772,7 +709,7 @@ void IMMainWidget::exportLocalMessageAll()
 }
 
 /*************************************************
-Function Name： deleteLocalMessage()
+Function Name:deleteLocalMessage()
 <<<<<<< HEAD
 Description: delete  单个好友消息记录
 =======
@@ -802,7 +739,7 @@ void IMMainWidget::deleteLocalMessage(const int index)
 }
 
 /*************************************************
-Function Name： deleteLocalMessageAll()
+Function Name:deleteLocalMessageAll()
 <<<<<<< HEAD
 Description: delete  所有消息记录
 =======
@@ -906,7 +843,7 @@ void IMMainWidget::deleteLocalMessageAll()
 #endif
 
 /*************************************************
-Function Name： getNetWorkHistoryMessage()
+Function Name:getNetWorkHistoryMessage()
 Description:
 *************************************************/
 void IMMainWidget::getNetWorkHistoryMessage(const int index, const QDate &date)
@@ -922,7 +859,7 @@ void IMMainWidget::getNetWorkHistoryMessage(const int index, const QDate &date)
 // mark: public slots:-------------------------------------------
 
 /*************************************************
-Function Name： getFriendsInformation()
+Function Name:getFriendsInformation()
 <<<<<<< HEAD
 Description: 获取好友信息列表（发送至server ）
 =======
@@ -936,7 +873,7 @@ void IMMainWidget::getFriendsInformation()
 }
 
 /*************************************************
-Function Name： getFlocksInformation()
+Function Name:getFlocksInformation()
 <<<<<<< HEAD
 Description: 获取群信息列表（发送至server ）
 =======
@@ -950,7 +887,7 @@ void IMMainWidget::getFlocksInformation()
 }
 
 /*************************************************
-Function Name： getDiscussionsInformation()
+Function Name:getDiscussionsInformation()
 <<<<<<< HEAD
 Description: 获取讨论组信息列表（发送至server ）
 =======
@@ -964,7 +901,7 @@ void IMMainWidget::getDiscussionsInformation()
 }
 
 /*************************************************
-Function Name： getLatestMessage()
+Function Name:getLatestMessage()
 <<<<<<< HEAD
 Description: 获取本地最近消息（访问本地database ）
 =======
@@ -979,7 +916,7 @@ void IMMainWidget::getLatestMessage()
 
 
 /*************************************************
-Function Name： setNetworkMessageWidget()
+Function Name:setNetworkMessageWidget()
 Description: set
 *************************************************/
 void IMMainWidget::setNetworkMessageWidget(const QString & friendID, const QDate & date,
@@ -992,7 +929,7 @@ void IMMainWidget::setNetworkMessageWidget(const QString & friendID, const QDate
 
 
 /*************************************************
-Function Name： setFriendListWidget
+Function Name:setFriendListWidget
 Description: set
 *************************************************/
 void IMMainWidget::setFriendListWidget(const QVector<FriendInformation> &friendsVec)
@@ -1033,7 +970,7 @@ void IMMainWidget::setFriendListWidget(const QVector<FriendInformation> &friends
 }
 
 /*************************************************
-Function Name： setFlockListWidget
+Function Name:setFlockListWidget
 Description: set
 *************************************************/
 void IMMainWidget::setFlockListWidget(const QVector<FlockInformation> & flocksVec)
@@ -1051,7 +988,7 @@ void IMMainWidget::setFlockListWidget(const QVector<FlockInformation> & flocksVe
 }
 
 /*************************************************
-Function Name： setDiscussionListWidget
+Function Name:setDiscussionListWidget
 Description:
 *************************************************/
 void IMMainWidget::setDiscussionListWidget(const QVector<DiscussionInformation> & disVec)
@@ -1068,7 +1005,7 @@ void IMMainWidget::setDiscussionListWidget(const QVector<DiscussionInformation> 
 
 
 /*************************************************
-Function Name： addFriendButton
+Function Name:addFriendButton
 <<<<<<< HEAD
 Description: add 好友按钮
 =======
@@ -1110,7 +1047,7 @@ bool IMMainWidget::addFriendButton(const FriendInformation & friInfo)
 
 
 /*************************************************
-Function Name： addFlockButton
+Function Name:addFlockButton
 <<<<<<< HEAD
 Description: add 群按钮
 =======
@@ -1132,7 +1069,7 @@ bool IMMainWidget::addFlockButton(const FlockInformation & flcokInfo)
 }
 
 /*************************************************
-Function Name： addDiscussionButton
+Function Name:addDiscussionButton
 <<<<<<< HEAD
 Description: add 讨论组按钮
 =======
@@ -1158,7 +1095,7 @@ bool IMMainWidget::addDiscussionButton(const DiscussionInformation & disInfo)
 
 
 /*************************************************
-Function Name： receiveFriendTalkMessage
+Function Name:receiveFriendTalkMessage
 Description:
 *************************************************/
 void IMMainWidget::receiveFriendTalkMessage(const TalkMessage &mes)
@@ -1342,7 +1279,7 @@ void IMMainWidget::receiveFriendTalkMessage(const TalkMessage &mes)
 }
 
 /*************************************************
-Function Name： setFriendStatus
+Function Name:setFriendStatus
 Description: set friend
 *************************************************/
 void IMMainWidget::setFriendStatus(const QString & id,int status)
@@ -1358,7 +1295,7 @@ void IMMainWidget::setFriendStatus(const QString & id,int status)
 
 
 /*************************************************
-Function Name： setFriendInformation
+Function Name:setFriendInformation
 Description: set friendmsg
 *************************************************/
 void IMMainWidget::setFriendInformation(const FriendInformation &fri)
@@ -1373,7 +1310,7 @@ void IMMainWidget::setFriendInformation(const FriendInformation &fri)
 }
 
 /*************************************************
-Function Name： showFriendInformation
+Function Name:showFriendInformation
 Description: show friendmsg
 *************************************************/
 void IMMainWidget::showFriendInformation(const UserInformation &user)
@@ -1395,7 +1332,7 @@ void IMMainWidget::showFriendInformation(const UserInformation &user)
 }
 
 /*************************************************
-Function Name： showMyInformation
+Function Name:showMyInformation
 Description: show self msg
 *************************************************/
 void IMMainWidget::showMyInformation(const UserInformation &user)
@@ -1417,7 +1354,7 @@ void IMMainWidget::showMyInformation(const UserInformation &user)
 }
 
 /*************************************************
-Function Name： setMyInformation
+Function Name:setMyInformation
 Description: set self msg
 *************************************************/
 void IMMainWidget::setMyInformation(const UserInformation &user)
@@ -1432,7 +1369,7 @@ void IMMainWidget::setMyInformation(const UserInformation &user)
 }
 
 /*************************************************
-Function Name： showFlockInformation
+Function Name:showFlockInformation
 Description: show Groupmsg
 *************************************************/
 void IMMainWidget::showFlockInformation(const FlockInformation & flock)
@@ -1458,7 +1395,7 @@ void IMMainWidget::showFlockInformation(const FlockInformation & flock)
 
 
 /*************************************************
-Function Name： showDiscussionInformation
+Function Name:showDiscussionInformation
 Description: show discuss groupmsg
 *************************************************/
 void IMMainWidget::showDiscussionInformation(const DiscussionInformation & discussion)
@@ -1484,7 +1421,7 @@ void IMMainWidget::showDiscussionInformation(const DiscussionInformation & discu
 
 
 /*************************************************
-Function Name： setFlockInformation
+Function Name:setFlockInformation
 Description: set Groupmsg
 *************************************************/
 void IMMainWidget::setFlockInformation(const FlockInformation & flock)
@@ -1511,7 +1448,7 @@ void IMMainWidget::setFlockInformation(const FlockInformation & flock)
 
 
 /*************************************************
-Function Name： setDiscussionInformation
+Function Name:setDiscussionInformation
 Description: set discuss groupmsg
 *************************************************/
 void IMMainWidget::setDiscussionInformation(const DiscussionInformation & discussion)
@@ -1528,7 +1465,7 @@ void IMMainWidget::setDiscussionInformation(const DiscussionInformation & discus
 
 
 /*************************************************
-Function Name： setFlockMemberRemark
+Function Name:setFlockMemberRemark
 Description: set Group成员名片
 *************************************************/
 void IMMainWidget::setFlockMemberRemark(const TempStrings & tmpStr)
@@ -1541,7 +1478,7 @@ void IMMainWidget::setFlockMemberRemark(const TempStrings & tmpStr)
 }
 
 /*************************************************
-Function Name： setFriendRemark
+Function Name:setFriendRemark
 Description: set friend备注
 *************************************************/
 void IMMainWidget::setFriendRemark(const TempStrings& tempStr)
@@ -1560,7 +1497,7 @@ void IMMainWidget::setFriendRemark(const TempStrings& tempStr)
 
 
 /*************************************************
-Function Name： deleteFriend
+Function Name:deleteFriend
 <<<<<<< HEAD
 Description: 已delete  好友
 =======
@@ -1606,7 +1543,7 @@ void IMMainWidget::deletedFriend(const QString & myID, const QString & friendID,
 
 
 /*************************************************
-Function Name： dropedFlock
+Function Name:dropedFlock
 <<<<<<< HEAD
 Description: 已delete  群
 =======
@@ -1642,7 +1579,7 @@ void IMMainWidget::dropedFlock(const QString & flockID)
 
 
 /*************************************************
-Function Name： dropedDiscussion
+Function Name:dropedDiscussion
 <<<<<<< HEAD
 Description: 已delete  讨论组
 =======
@@ -1678,7 +1615,7 @@ void IMMainWidget::dropedDiscussion(const QString & discussionID)
 }
 
 /*************************************************
-Function Name： leavedFlock
+Function Name:leavedFlock
 Description: 已退出Group
 *************************************************/
 void IMMainWidget::leavedFlock(const QString & memberID,
@@ -1741,7 +1678,7 @@ void IMMainWidget::leavedFlock(const QString & memberID,
 
 
 /*************************************************
-Function Name： leavedDiscussion
+Function Name:leavedDiscussion
 Description: 已退出discuss group
 *************************************************/
 void IMMainWidget::leavedDiscussion(const QString & memberID,
@@ -1794,7 +1731,7 @@ void IMMainWidget::leavedDiscussion(const QString & memberID,
 
 
 /*************************************************
-Function Name： createFlockSuccess
+Function Name:createFlockSuccess
 <<<<<<< HEAD
 Description: create 群成功
 =======
@@ -1820,7 +1757,7 @@ void IMMainWidget::createFlockSuccess(const FlockInformation & flock)
 
 
 /*************************************************
-Function Name： createDiscussionSuccess
+Function Name:createDiscussionSuccess
 <<<<<<< HEAD
 Description: create 讨论组成功
 =======
@@ -1847,7 +1784,7 @@ void IMMainWidget::createDiscussionSuccess(const DiscussionInformation & discuss
 
 
 /*************************************************
-Function Name： searchFriend
+Function Name:searchFriend
 Description: search 友好
 *************************************************/
 void IMMainWidget::searchFriend(const QString & text)
@@ -1889,7 +1826,7 @@ void IMMainWidget::searchFriend(const QString & text)
 }
 
 /*************************************************
-Function Name： onClickSearchFriend
+Function Name:onClickSearchFriend
 Description: 点击“search ”按钮
 *************************************************/
 void IMMainWidget::onClickSearchFriend()
@@ -1903,7 +1840,7 @@ void IMMainWidget::onClickSearchFriend()
 }
 
 /*************************************************
-Function Name： onClickAddFriend
+Function Name:onClickAddFriend
 <<<<<<< HEAD
 Description: add 好友
 =======
@@ -1928,7 +1865,7 @@ void IMMainWidget::onClickAddFriend()
 }
 
 /*************************************************
-Function Name： addFlock
+Function Name:addFlock
 <<<<<<< HEAD
 Description: add 群
 =======
@@ -1983,7 +1920,7 @@ void IMMainWidget::onClickAddFlock()
 
 
 /*************************************************
-Function Name： onClickChangePwd
+Function Name:onClickChangePwd
 <<<<<<< HEAD
 Description: modify passwd
 =======
@@ -2052,7 +1989,7 @@ void IMMainWidget::onClickChangePwd()
 }
 
 /*************************************************
-Function Name： createFlock
+Function Name:createFlock
 <<<<<<< HEAD
 Description: create 群
 =======
@@ -2091,7 +2028,7 @@ void IMMainWidget::createFlock()
 
 
 /*************************************************
-Function Name： createDiscussion
+Function Name:createDiscussion
 <<<<<<< HEAD
 Description: create 讨论组
 =======
@@ -2129,7 +2066,7 @@ void IMMainWidget::createDiscussion()
 }
 
 /*************************************************
-Function Name： showMessageWidget
+Function Name:showMessageWidget
 Description: show msg manage Window
 *************************************************/
 void IMMainWidget::showMessageWidget()
@@ -2146,7 +2083,7 @@ void IMMainWidget::showMessageWidget()
 }
 
 /*************************************************
-Function Name： showMailWidget
+Function Name:showMailWidget
 Description: show mailbox
 *************************************************/
 void IMMainWidget::showMailWidget()
@@ -2161,7 +2098,7 @@ void IMMainWidget::showMailWidget()
 }
 
 /*************************************************
-Function Name： showMailWriteWidget
+Function Name:showMailWriteWidget
 Description: show mailbox 中写信Window
 *************************************************/
 void IMMainWidget::showMailWriteWidget(const QString & address)
@@ -2171,7 +2108,7 @@ void IMMainWidget::showMailWriteWidget(const QString & address)
 }
 
 /*************************************************
-Function Name： showLatestMessageWidget
+Function Name:showLatestMessageWidget
 Description: show new msgWindow
 *************************************************/
 void IMMainWidget::showLatestMessageWidget()
@@ -2184,7 +2121,7 @@ void IMMainWidget::showLatestMessageWidget()
 }
 
 /*************************************************
-Function Name： setTimerStatus
+Function Name:setTimerStatus
 Description: set show 有new msg的定时
 *************************************************/
 void IMMainWidget::setTimerStatus(bool isOpen)
@@ -2213,12 +2150,12 @@ void IMMainWidget::setTimerStatus(bool isOpen)
 }
 
 /*************************************************
-Function Name： renameBoxSuccess
+Function Name:renameBoxSuccess
 Description: 重命名分组success
 *************************************************/
 void IMMainWidget::renameBoxSuccess(const QString & title, const QString & newTitle)
 {
-    // 先modify ： 组名 与 下标 映射表
+    // 先modify :组名 与 下标 映射表
     int index = m_indexFriendsGroupMap.value(title);
     //    if (index == 0)
     //    {
@@ -2240,7 +2177,7 @@ void IMMainWidget::renameBoxSuccess(const QString & title, const QString & newTi
 
 
 /*************************************************
-Function Name： moveFriendToBoxSuccess
+Function Name:moveFriendToBoxSuccess
 Description: 移动friendto其他分组
 *************************************************/
 void IMMainWidget::moveFriendToBoxSuccess(const QString & friendID, const QString & title,
@@ -2257,7 +2194,7 @@ void IMMainWidget::moveFriendToBoxSuccess(const QString & friendID, const QStrin
 
 
 /*************************************************
-Function Name： onClickRightButton()
+Function Name:onClickRightButton()
 Description: 右键点击按键
 *************************************************/
 void IMMainWidget::onClickRightButton()
@@ -2271,7 +2208,7 @@ void IMMainWidget::onClickRightButton()
 }
 
 /*************************************************
-Function Name： createBox
+Function Name:createBox
 Description: 新建组
 *************************************************/
 void IMMainWidget::createBox()
@@ -2318,7 +2255,7 @@ void IMMainWidget::createBox()
 
 
 /*************************************************
-Function Name： removeLinkButton
+Function Name:removeLinkButton
 <<<<<<< HEAD
 Description: delete  新消息connection 按钮
 =======
@@ -2342,7 +2279,7 @@ void IMMainWidget::removeLinkButton(const QString & id)
 }
 
 /*************************************************
-Function Name： deleteAllLinkButton
+Function Name:deleteAllLinkButton
 <<<<<<< HEAD
 Description: delete  所有消息connection 按钮
 =======
@@ -2363,7 +2300,7 @@ void IMMainWidget::removeAllLinkButton()
 }
 
 /*************************************************
-Function Name： showAllChatRoom
+Function Name:showAllChatRoom
 Description: show 所有 Chat Window
 *************************************************/
 void IMMainWidget::showAllChatRoom()
@@ -2379,7 +2316,7 @@ void IMMainWidget::showAllChatRoom()
 
 // mark protected:------------------------------------------------------
 /*************************************************
-Function Name： closeEvent
+Function Name:closeEvent
 Description: close 事件
 *************************************************/
 void IMMainWidget::closeEvent(QCloseEvent *event)
@@ -2395,7 +2332,7 @@ void IMMainWidget::closeEvent(QCloseEvent *event)
 }
 
 /*************************************************
-Function Name： mousePressEvent
+Function Name:mousePressEvent
 Description: 鼠标点击事件
 *************************************************/
 void IMMainWidget::mousePressEvent(QMouseEvent *event)
@@ -2409,7 +2346,7 @@ void IMMainWidget::mousePressEvent(QMouseEvent *event)
 }
 
 /*************************************************
-Function Name： timerEvent
+Function Name:timerEvent
 Description: 定时事件
 *************************************************/
 void IMMainWidget::timerEvent(QTimerEvent *event)
@@ -2428,7 +2365,7 @@ void IMMainWidget::timerEvent(QTimerEvent *event)
 // mark: private slots:-------------------------------------------
 
 /*************************************************
-Function Name： closeWindow
+Function Name:closeWindow
 <<<<<<< HEAD
 Description: close 主窗口
 =======
@@ -2444,7 +2381,7 @@ void IMMainWidget::closeWindow()
 }
 
 /*************************************************
-Function Name： closeAllWindows
+Function Name:closeAllWindows
 <<<<<<< HEAD
 Description: close 所有别的窗口
 =======
@@ -2529,7 +2466,7 @@ void IMMainWidget::closeAllWindows()
 }
 
 /*************************************************
-Function Name： createChatRoom
+Function Name:createChatRoom
 <<<<<<< HEAD
 Description: create 聊天室
 =======
@@ -2559,7 +2496,7 @@ void IMMainWidget::getMyInformation()
 //}
 
 /*************************************************
-Function Name： receiveMessagesFromChat
+Function Name:receiveMessagesFromChat
 Description: 获取friend Chat 室发出的msg
 *************************************************/
 void IMMainWidget::receiveMessagesFromChat(TalkMessage &mes)
@@ -2573,7 +2510,7 @@ void IMMainWidget::receiveMessagesFromChat(TalkMessage &mes)
 
 
 /*************************************************
-Function Name： receiveMessagesFromFlockChat
+Function Name:receiveMessagesFromFlockChat
 Description:
 *************************************************/
 //void IMMainWidget::receiveMessagesFromFlockChat(TalkMessage &)
@@ -2583,7 +2520,7 @@ Description:
 //}
 
 /*************************************************
-Function Name： receiveMessagesFromDiscussionChat
+Function Name:receiveMessagesFromDiscussionChat
 Description:
 *************************************************/
 //void IMMainWidget::receiveMessagesFromDiscussionChat(TalkMessage &)
@@ -2593,7 +2530,7 @@ Description:
 //}
 
 /*************************************************
-Function Name： changeStatus
+Function Name:changeStatus
 <<<<<<< HEAD
 Description: 改变个人状态（发送至server ）
 =======
@@ -2632,7 +2569,7 @@ void IMMainWidget::changeMyStatus(const int index)
 
 
 /*************************************************
-Function Name： receiveFriendRequest
+Function Name:receiveFriendRequest
 <<<<<<< HEAD
 Description: 接收并且process   好友的request 
 =======
@@ -2699,7 +2636,7 @@ void IMMainWidget::receiveFriendRequest(const TalkMessage & mes,
 }
 
 /*************************************************
-Function Name： receiveFlockRequest
+Function Name:receiveFlockRequest
 <<<<<<< HEAD
 Description: 接收并且process   群的request 
 =======
@@ -2821,7 +2758,7 @@ void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
 
 
 /*************************************************
-Function Name： receiveDiscussionRequest
+Function Name:receiveDiscussionRequest
 <<<<<<< HEAD
 Description: 接收并process   讨论组request 
 =======
@@ -2871,7 +2808,7 @@ void IMMainWidget::receiveDiscussionRequest(const TalkMessage & mes,
 
 // delete组
 /*************************************************
-Function Name： removeBox
+Function Name:removeBox
 Description: delete组
 *************************************************/
 void IMMainWidget::removeBox(const QString & title)
@@ -2907,7 +2844,7 @@ void IMMainWidget::removeBox(const QString & title)
 }
 
 /*************************************************
-Function Name： renameBox
+Function Name:renameBox
 Description: 重命名组
 *************************************************/
 void IMMainWidget::renameBox(const QString & title)
@@ -2945,7 +2882,7 @@ void IMMainWidget::renameBox(const QString & title)
 
 // mark: private:--------------------------------------------------
 /*************************************************
-Function Name： initIMMainWidget
+Function Name:initIMMainWidget
 <<<<<<< HEAD
 Description: init 
 =======
@@ -3165,7 +3102,7 @@ background: white;");
 }
 
 /*************************************************
-Function Name： linkSignalWithSlot
+Function Name:linkSignalWithSlot
 <<<<<<< HEAD
 Description:  connection 信号与槽
 =======
@@ -3277,7 +3214,7 @@ void IMMainWidget::linkSignalWithSlot()
 
 
 /*************************************************
-Function Name： clearContainers
+Function Name:clearContainers
 Description:
 *************************************************/
 void IMMainWidget::clearContainers()
@@ -3305,7 +3242,7 @@ void IMMainWidget::clearContainers()
 }
 
 /*************************************************
-Function Name： creatMenu
+Function Name:creatMenu
 <<<<<<< HEAD
 Description: create 右键菜单
 =======
@@ -3346,7 +3283,7 @@ void IMMainWidget:: creatMenu()
 
 
 /*************************************************
-Function Name： refreshFriendButtonMenu
+Function Name:refreshFriendButtonMenu
 Description:
 *************************************************/
 void IMMainWidget::refreshFriendButtonMenu()
@@ -3360,7 +3297,7 @@ void IMMainWidget::refreshFriendButtonMenu()
 
 
 /*************************************************
-Function Name： refreshFriendButtonMenu
+Function Name:refreshFriendButtonMenu
 Description:
 *************************************************/
 bool IMMainWidget::continueToClose()

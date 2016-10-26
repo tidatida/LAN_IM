@@ -20,7 +20,7 @@ enum PosType
 
 
 /*************************************************
-Class Name： CustomLineEdit
+Class Name: CustomLineEdit
 Description: a custom lineEdit
 *************************************************/
 class CustomLineEdit : public QLineEdit

@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMThread.cpp
-Author： jet.F.R
-Date： 2014.3.10
-Description：
-Changes：
+File Name: IMThread.cpp
+Author: jet.F.R
+Date: 2014.3.10
+Description:
+Changes:
 ********************************************/
 
 #include "IMThread.h"
@@ -41,11 +41,11 @@ IMThread::~IMThread()
 
 // mark: private------------------------------------------
 /*************************************************
-Function Name： run()
+Function Name: run()
 Description: 
-Input： NULL
-Output：NULL
-Changes： NULL
+Input: NULL
+Output:NULL
+Changes: NULL
 *************************************************/
 void IMThread::run()
 {

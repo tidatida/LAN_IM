@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMMainWidget.h
-Author： jet.F.R
-Date： 2014.3.14
-Description： clientmainframe
-Changes：
+File Name: IMMainWidget.h
+Author: jet.F.R
+Date: 2014.3.14
+Description: clientmainframe
+Changes:
 ********************************************/
 
 #ifndef IMMAINWIDGET_H
@@ -52,7 +52,7 @@ class IMSearchListWidget;
 //class QList;
 
 /*************************************************
-Class Name： IMMainWidget
+Class Name: IMMainWidget
 Description: clientmainframe
 *************************************************/
 class IMMainWidget : public QWidget

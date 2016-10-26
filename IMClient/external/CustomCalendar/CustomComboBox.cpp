@@ -3,7 +3,7 @@
 
 
 /*************************************************
-Function Name： CustomComboBox
+Function Name: CustomComboBox
 Description: constructor
 *************************************************/
 MonthLineEdit::MonthLineEdit(QWidget *parent):
@@ -12,7 +12,7 @@ MonthLineEdit::MonthLineEdit(QWidget *parent):
 }
 
 /*************************************************
-Function Name： mousePressEvent
+Function Name: mousePressEvent
 Description: receive mouse press events for the widget
 *************************************************/
 void MonthLineEdit::mousePressEvent(QMouseEvent* event)
@@ -23,7 +23,7 @@ void MonthLineEdit::mousePressEvent(QMouseEvent* event)
 
 //mark public:
 /*************************************************
-Function Name： CustomComboBox
+Function Name: CustomComboBox
 Description: constructor
 *************************************************/
 CustomComboBox::CustomComboBox(QWidget *parent):
@@ -42,7 +42,7 @@ CustomComboBox::CustomComboBox(QWidget *parent):
 
 
 /*************************************************
-Function Name： ~CustomComboBox
+Function Name: ~CustomComboBox
 Description: release resource
 *************************************************/
 CustomComboBox::~CustomComboBox()
@@ -51,7 +51,7 @@ CustomComboBox::~CustomComboBox()
 
 //mark protected:
 /*************************************************
-Function Name： keyPressEvent
+Function Name: keyPressEvent
 Description: receive key press events for the widget
 *************************************************/
 void CustomComboBox::keyPressEvent(QKeyEvent *event)
@@ -69,7 +69,7 @@ void CustomComboBox::keyPressEvent(QKeyEvent *event)
 }
 
 /*************************************************
-Function Name： focusInEvent
+Function Name: focusInEvent
 Description: receive focus events (focus received) for the widget
 *************************************************/
 void CustomComboBox::focusInEvent(QFocusEvent *event)
@@ -81,7 +81,7 @@ void CustomComboBox::focusInEvent(QFocusEvent *event)
 
 
 /*************************************************
-Function Name： hidePopup
+Function Name: hidePopup
 Description: hide the list of items in the combobox
 *************************************************/
 void CustomComboBox::hidePopup()
@@ -99,7 +99,7 @@ void CustomComboBox::hidePopup()
 
 
 /*************************************************
-Function Name： focusOutEvent
+Function Name: focusOutEvent
 Description: receive focus events (focus lost) for the widget
 *************************************************/
 void CustomComboBox::focusOutEvent(QFocusEvent * event)
@@ -109,7 +109,7 @@ void CustomComboBox::focusOutEvent(QFocusEvent * event)
 
 
 /*************************************************
-Function Name： mousePressEvent
+Function Name: mousePressEvent
 Description: receive mouse press events for the widget
 *************************************************/
 void CustomComboBox::mousePressEvent(QMouseEvent* event)
@@ -119,7 +119,7 @@ void CustomComboBox::mousePressEvent(QMouseEvent* event)
 }
 
 /*************************************************
-Function Name： mouseReleaseEvent
+Function Name: mouseReleaseEvent
 Description: receive mouse release events for the widget
 *************************************************/
 void CustomComboBox::mouseReleaseEvent(QMouseEvent* event)

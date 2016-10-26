@@ -29,7 +29,7 @@ IMMailCtrl::~IMMailCtrl()
 
 // private slots:------------------------------------------------------------
 /*************************************************
-Function Name： requestSendMail
+Function Name: requestSendMail
 Description: 
 *************************************************/
 void IMMailCtrl::requestSendMail(const MailInformation &mail)
@@ -50,7 +50,7 @@ void IMMailCtrl::requestSendMail(const MailInformation &mail)
 }
 
 /*************************************************
-Function Name： requestGetInMails
+Function Name: requestGetInMails
 Description: 
 *************************************************/
 void IMMailCtrl::requestGetInMails()
@@ -69,7 +69,7 @@ void IMMailCtrl::requestGetInMails()
 }
 
 /*************************************************
-Function Name： requestGetOutMails
+Function Name: requestGetOutMails
 Description: 
 *************************************************/
 void IMMailCtrl::requestGetOutMails()
@@ -89,7 +89,7 @@ void IMMailCtrl::requestGetOutMails()
 
 
 /*************************************************
-Function Name： requestDeleteMail
+Function Name: requestDeleteMail
 Description: 
 *************************************************/
 void IMMailCtrl::requestDeleteMail(const MailInformation & mail)
@@ -119,7 +119,7 @@ void IMMailCtrl::requestDeleteMail(const MailInformation & mail)
 
 
 /*************************************************
-Function Name： requestSetMailRead
+Function Name: requestSetMailRead
 Description: 
 *************************************************/
 void IMMailCtrl::requestSetMailRead(const MailInformation & mail)
@@ -141,7 +141,7 @@ void IMMailCtrl::requestSetMailRead(const MailInformation & mail)
 }
 
 /*************************************************
-Function Name： readMessage
+Function Name: readMessage
 Description: 
 *************************************************/
 void IMMailCtrl::readMessage()

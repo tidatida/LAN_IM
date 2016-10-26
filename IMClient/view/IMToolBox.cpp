@@ -22,7 +22,7 @@ IMToolItem::IMToolItem(const QString &title, QWidget *parent) :
 }
 
 /*************************************************
-Function Name： addItem()
+Function Name: addItem()
 Description:  add 
 *************************************************/
 void IMToolItem::addItem(QWidget *item)
@@ -39,7 +39,7 @@ void IMToolItem::addItem(QWidget *item)
 }
 
 /*************************************************
-Function Name： removeItem()
+Function Name: removeItem()
 Description:  delete  
 *************************************************/
 void IMToolItem::removeItem(QWidget *item)
@@ -50,7 +50,7 @@ void IMToolItem::removeItem(QWidget *item)
 
 
 /*************************************************
-Function Name： setTile()
+Function Name: setTile()
 Description:  设置标题
 *************************************************/
 void IMToolItem::setTile(const QString & title)
@@ -59,7 +59,7 @@ void IMToolItem::setTile(const QString & title)
 }
 
 /*************************************************
-Function Name： getSize()
+Function Name: getSize()
 Description:  获取成员数量
 *************************************************/
 int IMToolItem::getSize()
@@ -69,7 +69,7 @@ int IMToolItem::getSize()
 
 // mark protected:------------------------------------------------------
 /*************************************************
-Function Name： mousePressEvent
+Function Name: mousePressEvent
 Description: 鼠标点击事件
 *************************************************/
 void IMToolItem:: mousePressEvent(QMouseEvent *event)
@@ -95,7 +95,7 @@ void IMToolItem:: mousePressEvent(QMouseEvent *event)
 
 // mark private slots:--------------------------------------------------
 /*************************************************
-Function Name： renameBox()
+Function Name: renameBox()
 Description:  重命名
 *************************************************/
 void IMToolItem::renameBox()
@@ -105,7 +105,7 @@ void IMToolItem::renameBox()
 }
 
 /*************************************************
-Function Name： removeBox()
+Function Name: removeBox()
 Description:  delete  整个
 *************************************************/
 void IMToolItem::removeBox()
@@ -116,7 +116,7 @@ void IMToolItem::removeBox()
 
 
 /*************************************************
-Function Name： onClickRightButton()
+Function Name: onClickRightButton()
 Description: 右键点击按键
 *************************************************/
 void IMToolItem::onClickRightButton()
@@ -130,7 +130,7 @@ void IMToolItem::onClickRightButton()
 }
 
 /*************************************************
-Function Name： creatMenu
+Function Name: creatMenu
 Description: create 右键菜单
 *************************************************/
 void IMToolItem:: creatMenu()
@@ -158,7 +158,7 @@ IMToolBox::IMToolBox(QWidget *parent) :
 }
 
 /*************************************************
-Function Name： addItem()
+Function Name: addItem()
 Description:  add 
 *************************************************/
 void IMToolBox::addItem(IMToolItem *item)

@@ -26,7 +26,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
  // public slots:------------------------------------
 
  /*************************************************
- Function Name： onClickDeleteDate()
+ Function Name: onClickDeleteDate()
  Description:  delete  某日的信息记录
  *************************************************/
  void IMLocalMessageWidget::onClickDeleteDate()
@@ -34,7 +34,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
  }
 
  /*************************************************
- Function Name： onClickDeleteOne()
+ Function Name: onClickDeleteOne()
  Description:  delete  某好友信息记录
  *************************************************/
  void IMLocalMessageWidget::onClickDeleteOne()
@@ -52,7 +52,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
  }
 
  /*************************************************
- Function Name： onClickDeleteAll()
+ Function Name: onClickDeleteAll()
  Description:  delete  全部消息记录
  *************************************************/
  void IMLocalMessageWidget::onClickDeleteAll()
@@ -63,7 +63,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
  }
 
  /*************************************************
- Function Name： onClickImport()
+ Function Name: onClickImport()
  Description:  导人消息记录
  *************************************************/
  void IMLocalMessageWidget::onClickImport()
@@ -71,7 +71,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
  }
 
  /*************************************************
- Function Name： onClickExportOne()
+ Function Name: onClickExportOne()
  Description:  导出当前好友消息记录
  *************************************************/
  void IMLocalMessageWidget::onClickExportOne()
@@ -89,7 +89,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
  }
 
  /*************************************************
- Function Name： onClickExportAll()
+ Function Name: onClickExportAll()
  Description:  导出所有消息记录
  *************************************************/
  void IMLocalMessageWidget::onClickExportAll()
@@ -101,7 +101,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
 
 
  /*************************************************
- Function Name： onClickGetMessage()
+ Function Name: onClickGetMessage()
  Description:  获取消息记录
  *************************************************/
  void IMLocalMessageWidget::onClickGetMessage()
@@ -121,7 +121,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
 
 
 // /*************************************************
-// Function Name： friendItemClicked()
+// Function Name: friendItemClicked()
 // Description:  单击好友列表项
 // *************************************************/
 // void IMLocalMessageWidget::friendItemClicked(const QModelIndex & index)

@@ -1,9 +1,9 @@
 ///*********************************************
-//File Name： IMClientMessageCtrl.h
-//Author： jet.F.R
-//Date： 2014.3.10
-//Description： 
-//Changes：
+//File Name: IMClientMessageCtrl.h
+//Author: jet.F.R
+//Date: 2014.3.10
+//Description: 
+//Changes:
 //********************************************/
 
 //#ifndef IMCLIENTMESSAGECTRL_H
@@ -33,7 +33,7 @@
 //};
 
 ///*************************************************
-//Class Name： IMClientMessageCtrl
+//Class Name: IMClientMessageCtrl
 //Description: 
 //*************************************************/
 //class IMClientMessageCtrl : public QObject

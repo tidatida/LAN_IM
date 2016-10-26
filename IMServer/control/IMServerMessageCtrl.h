@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMServerMessageCtrl.h
-Author： jet.F.R
-Date： 2014.3.10
-Description： control  server  class
-Changes：
+File Name: IMServerMessageCtrl.h
+Author: jet.F.R
+Date: 2014.3.10
+Description: control  server  class
+Changes:
 ********************************************/
 
 #ifndef IMSERVERMESSAGECTRL_H
@@ -19,7 +19,7 @@ class QStringListModel;
 class QListView;
 
 /*************************************************
-Class Name： IMServerMessageCtrl
+Class Name: IMServerMessageCtrl
 Description: control  server 
 *************************************************/
 class IMServerMessageCtrl : public QObject
@@ -37,8 +37,8 @@ signals:
 public slots:
 
 private slots:
-    void showConnectedMedssage();  //暂时没用，本来是used to   显示链接信息 mark： Not used
-    void readMessage(IMClientSocketCtrl *); //暂时没用，本来是used to   读取信息 mark： Not used
+    void showConnectedMedssage();  //暂时没用，本来是used to   显示链接信息 mark: Not used
+    void readMessage(IMClientSocketCtrl *); //暂时没用，本来是used to   读取信息 mark: Not used
 
     void insertIDData(const QString &id);
     void deleteIDData(const QString &id);

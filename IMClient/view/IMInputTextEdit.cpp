@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMInputTextEdit.cpp
-Author： jet.F.R
-Date： 2014.3.26
-Description： 输入编辑框
-Changes：
+File Name: IMInputTextEdit.cpp
+Author: jet.F.R
+Date: 2014.3.26
+Description: 输入编辑框
+Changes:
 ********************************************/
 
 #include "IMInputTextEdit.h"

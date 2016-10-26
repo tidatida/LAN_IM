@@ -48,7 +48,7 @@ IMFlockButton:: ~IMFlockButton()
 }
 
 /*************************************************
-Function Name： openChatRoom()
+Function Name: openChatRoom()
 Description: open 聊天窗口
 *************************************************/
 void IMFlockButton::openChatRoom()
@@ -93,7 +93,7 @@ void IMFlockButton::openChatRoom()
 }
 
 /*************************************************
-Function Name： showChatRoom()
+Function Name: showChatRoom()
 Description: 显示聊天窗口
 *************************************************/
 void IMFlockButton::showChatRoom()
@@ -105,7 +105,7 @@ void IMFlockButton::showChatRoom()
 }
 
 /*************************************************
-Function Name： closeChatRoom()
+Function Name: closeChatRoom()
 Description: close 聊天窗口
 *************************************************/
 void IMFlockButton::closeChatRoom()
@@ -119,7 +119,7 @@ void IMFlockButton::closeChatRoom()
 }
 
 /*************************************************
-Function Name： setButtonStatus()
+Function Name: setButtonStatus()
 Description: 设置button显示信息
 *************************************************/
 void IMFlockButton::setButtonStatus()
@@ -141,7 +141,7 @@ void IMFlockButton::setButtonStatus()
 
 
 /*************************************************
-Function Name： deleteFlockMember()
+Function Name: deleteFlockMember()
 Description: delete  群成员
 *************************************************/
 void IMFlockButton::deleteFlockMember(const QString & memberID)
@@ -156,7 +156,7 @@ void IMFlockButton::deleteFlockMember(const QString & memberID)
 }
 
 /*************************************************
-Function Name： addFlockMember()
+Function Name: addFlockMember()
 Description: add 群成员
 *************************************************/
 void IMFlockButton::addFlockMember(const QString & memberID)
@@ -171,7 +171,7 @@ void IMFlockButton::addFlockMember(const QString & memberID)
 //public slots:----------------------------------------------
 
 /*************************************************
-Function Name： onDoubleClickFlockButton()
+Function Name: onDoubleClickFlockButton()
 Description: 左键 双击
 *************************************************/
 void IMFlockButton::onDoubleClickFlockButton()
@@ -182,7 +182,7 @@ void IMFlockButton::onDoubleClickFlockButton()
 }
 
 /*************************************************
-Function Name： onClickRightButton()
+Function Name: onClickRightButton()
 Description: 右键点击按键
 *************************************************/
 void IMFlockButton::onClickRightButton()
@@ -196,7 +196,7 @@ void IMFlockButton::onClickRightButton()
 }
 
 /*************************************************
-Function Name： onClickSendMessage()
+Function Name: onClickSendMessage()
 Description: 发送群消息
 *************************************************/
 void IMFlockButton::onClickSendMessage()
@@ -205,7 +205,7 @@ void IMFlockButton::onClickSendMessage()
 }
 
 /*************************************************
-Function Name： onClickShowRecord()
+Function Name: onClickShowRecord()
 Description: 查看消息记录
 *************************************************/
 void IMFlockButton::onClickShowRecord()
@@ -214,7 +214,7 @@ void IMFlockButton::onClickShowRecord()
 
 
 /*************************************************
-Function Name： onClickShowInformation()
+Function Name: onClickShowInformation()
 Description: 显示群详细信息
 *************************************************/
 void IMFlockButton::onClickShowInformation()
@@ -226,7 +226,7 @@ void IMFlockButton::onClickShowInformation()
 
 
 /*************************************************
-Function Name： onClickDropFlock()
+Function Name: onClickDropFlock()
 Description: 解散群
 *************************************************/
 void IMFlockButton::onClickDropFlock()
@@ -246,7 +246,7 @@ void IMFlockButton::onClickDropFlock()
 }
 
 /*************************************************
-Function Name： onClickLeaveFlock()
+Function Name: onClickLeaveFlock()
 Description: 退出群
 *************************************************/
 void IMFlockButton::onClickLeaveFlock()
@@ -265,7 +265,7 @@ void IMFlockButton::onClickLeaveFlock()
 }
 
 /*************************************************
-Function Name： onClickAddMemberFlock()
+Function Name: onClickAddMemberFlock()
 Description: add 群成员
 *************************************************/
 void IMFlockButton::onClickAddMemberFlock()
@@ -323,7 +323,7 @@ void IMFlockButton::onClickAddMemberFlock()
 }
 
 /*************************************************
-Function Name： onClickEnterSpace()
+Function Name: onClickEnterSpace()
 Description: 进入空间
 *************************************************/
 void IMFlockButton::onClickEnterSpace()
@@ -331,7 +331,7 @@ void IMFlockButton::onClickEnterSpace()
 }
 
 /*************************************************
-Function Name： chatRoomQuit()
+Function Name: chatRoomQuit()
 Description: 聊天窗口close 了
 *************************************************/
 void IMFlockButton::chatRoomQuit()
@@ -343,7 +343,7 @@ void IMFlockButton::chatRoomQuit()
 }
 
 /*************************************************
-Function Name： setFlockMemeberList()
+Function Name: setFlockMemeberList()
 Description: 设置群成员列表
 *************************************************/
 void IMFlockButton::setFlockMemberList(const QVector<FlockMember> & memberList)
@@ -371,7 +371,7 @@ void IMFlockButton::setFlockMemberList(const QVector<FlockMember> & memberList)
 //remark:protected:----------------------------------------
 
 /*************************************************
-Function Name： mousePressEvent
+Function Name: mousePressEvent
 Description: 鼠标单击事件
 *************************************************/
 void IMFlockButton::mousePressEvent(QMouseEvent *event)
@@ -385,7 +385,7 @@ void IMFlockButton::mousePressEvent(QMouseEvent *event)
 }
 
 /*************************************************
-Function Name： mouseDoubleClickEvent
+Function Name: mouseDoubleClickEvent
 Description: 鼠标双击事件
 *************************************************/
 void IMFlockButton::mouseDoubleClickEvent(QMouseEvent *event)
@@ -402,7 +402,7 @@ void IMFlockButton::mouseDoubleClickEvent(QMouseEvent *event)
 
 //remark:private:----------------------------------------
 /*************************************************
-Function Name： getStatusFromInt()
+Function Name: getStatusFromInt()
 Description: create 右键菜单
 *************************************************/
 void IMFlockButton::creatMenu(/*const QList<QString> *groutList*/)

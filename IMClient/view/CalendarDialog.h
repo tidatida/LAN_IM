@@ -17,7 +17,7 @@ class QLabel;
 
 
 /*************************************************
-Class Name： CalendarDialog
+Class Name: CalendarDialog
 Description: a custom Dialog contains a calendar
 *************************************************/
 class CalendarDialog : public QDialog

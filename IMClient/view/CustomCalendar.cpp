@@ -10,7 +10,7 @@
 
 
 /*************************************************
-Function Name： CustomCalendar
+Function Name: CustomCalendar
 Description: constructor
 *************************************************/
 CustomCalendar::CustomCalendar(QWidget *parent) :
@@ -61,7 +61,7 @@ CustomCalendar::CustomCalendar(QWidget *parent) :
 }
 
 /*************************************************
-Function Name： ~CustomCalendar
+Function Name: ~CustomCalendar
 Description: release resource
 *************************************************/
 CustomCalendar::~CustomCalendar()
@@ -81,7 +81,7 @@ CustomCalendar::~CustomCalendar()
 }
 
 /*************************************************
-Function Name： paintCell
+Function Name: paintCell
 Description: paint the cell  by the given date,
              using the given painter and rect
 *************************************************/
@@ -135,7 +135,7 @@ void CustomCalendar::paintCell (QPainter * painter,
 }
 
 /*************************************************
-Function Name： setCurrentDateRedBorderVisible
+Function Name: setCurrentDateRedBorderVisible
 Description: set whether the table grid is displayed or not
 *************************************************/
 void CustomCalendar::setCurrentDateRedBorderVisible(bool show)
@@ -145,7 +145,7 @@ void CustomCalendar::setCurrentDateRedBorderVisible(bool show)
 
 
 /*************************************************
-Function Name： setCurrentDateFormat
+Function Name: setCurrentDateFormat
 Description: set the QTextCharFormat of current date
 *************************************************/
 void CustomCalendar::setCurrentDateFormat(const QTextCharFormat &format)
@@ -154,7 +154,7 @@ void CustomCalendar::setCurrentDateFormat(const QTextCharFormat &format)
 }
 
 /*************************************************
-Function Name： setSelectedDateFormat
+Function Name: setSelectedDateFormat
 Description: set the QTextCharFormat of selected date
 *************************************************/
 void CustomCalendar::setSelectedDateFormat(const QTextCharFormat &format)
@@ -163,7 +163,7 @@ void CustomCalendar::setSelectedDateFormat(const QTextCharFormat &format)
 }
 
 /*************************************************
-Function Name： setValidDateFormat
+Function Name: setValidDateFormat
 Description: set the QTextCharFormat of valid date
 *************************************************/
 void CustomCalendar::setValidDateFormat(const QTextCharFormat &format)
@@ -172,7 +172,7 @@ void CustomCalendar::setValidDateFormat(const QTextCharFormat &format)
 }
 
 /*************************************************
-Function Name： setInvalidDateFormat
+Function Name: setInvalidDateFormat
 Description: set the QTextCharFormat of invalid date
 *************************************************/
 void CustomCalendar::setInvalidDateFormat(const QTextCharFormat &format)
@@ -182,7 +182,7 @@ void CustomCalendar::setInvalidDateFormat(const QTextCharFormat &format)
 
 
 /*************************************************
-Function Name： insertHasVideoDataList
+Function Name: insertHasVideoDataList
 Description: insert data to hasVideoDateList
 *************************************************/
 void CustomCalendar::insertHasVideoDataList(const QDate &date)
@@ -191,7 +191,7 @@ void CustomCalendar::insertHasVideoDataList(const QDate &date)
 }
 
 /*************************************************
-Function Name： setSelectedMonth
+Function Name: setSelectedMonth
 Description: set m_selectedMonth
 *************************************************/
 void CustomCalendar::setSelectedMonth(int month)
@@ -202,7 +202,7 @@ void CustomCalendar::setSelectedMonth(int month)
 //mark protected:
 
 /*************************************************
-Function Name： focusOutEvent
+Function Name: focusOutEvent
 Description: receive key press events for the widget
 *************************************************/
 void CustomCalendar::keyPressEvent(QKeyEvent *event)
@@ -249,7 +249,7 @@ void CustomCalendar::keyPressEvent(QKeyEvent *event)
 //mark private:
 
 /*************************************************
-Function Name： drawRedBorder
+Function Name: drawRedBorder
 Description: draw red border
 *************************************************/
 void CustomCalendar::drawRedBorder(QPainter * painter,
@@ -269,7 +269,7 @@ void CustomCalendar::drawRedBorder(QPainter * painter,
 }
 
 /*************************************************
-Function Name： linkSignalWithSlot
+Function Name: linkSignalWithSlot
 Description: link the signals with slots
 *************************************************/
 void CustomCalendar::linkSignalWithSlot()
@@ -281,7 +281,7 @@ void CustomCalendar::linkSignalWithSlot()
 //public slots:
 
 /*************************************************
-Function Name： setCurrentSelecetdDate
+Function Name: setCurrentSelecetdDate
 Description: set selected date
 *************************************************/
 void CustomCalendar::setCurrentSelecetdDate(int year, int month)

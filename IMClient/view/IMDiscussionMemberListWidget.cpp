@@ -29,7 +29,7 @@ IMDiscussionMemberListWidget::IMDiscussionMemberListWidget(QWidget *parent) :
 
 
 /*************************************************
-Function Name： addItem()
+Function Name: addItem()
 Description:  add 
 *************************************************/
 void IMDiscussionMemberListWidget::addItem(QWidget *item)

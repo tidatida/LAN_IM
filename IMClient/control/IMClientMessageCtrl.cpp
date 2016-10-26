@@ -1,9 +1,9 @@
 ///*********************************************
-//File Name： IMClientMessageCtrl.cpp
-//Author： jet.F.R
-//Date： 2014.3.10
-//Description： 
-//Changes：
+//File Name: IMClientMessageCtrl.cpp
+//Author: jet.F.R
+//Date: 2014.3.10
+//Description: 
+//Changes:
 //********************************************/
 
 //#include "IMClientMessageCtrl.h"
@@ -38,11 +38,11 @@
 //}
 
 ///*************************************************
-//Function Name： sendMessage()
+//Function Name: sendMessage()
 //Description:
-//Input： MessageType type：, QString mes1：, QString mes2：
-//Output： NULL
-//Changes： NULL
+//Input: MessageType type:, QString mes1:, QString mes2:
+//Output: NULL
+//Changes: NULL
 //*************************************************/
 //void IMClientMessageCtrl::sendMessage(MessageType type, const QString &mes1,
 //                                      const QString &mes2, LoginStatus status,
@@ -72,11 +72,11 @@
 
 //// mark: private slots---------------------------------------------------------
 ///*************************************************
-//Function Name： connectionClosedByServer()
+//Function Name: connectionClosedByServer()
 //Description: 
-//Input： NULL
-//Output： NULL
-//Changes： NULL
+//Input: NULL
+//Output: NULL
+//Changes: NULL
 //*************************************************/
 //void IMClientMessageCtrl::connectionClosed()
 //{
@@ -85,11 +85,11 @@
 //}
 
 ///*************************************************
-//Function Name： readMessage()
+//Function Name: readMessage()
 //Description: 
-//Input： NULL
-//Output： NULL
-//Changes： NULL
+//Input: NULL
+//Output: NULL
+//Changes: NULL
 //*************************************************/
 //void IMClientMessageCtrl::readMessage()
 //{
@@ -131,11 +131,11 @@
 //}
 
 ///*************************************************
-//Function Name： dispalyError()
+//Function Name: dispalyError()
 //Description: 
-//Input： QAbstractSocket::SocketError socketError：
-//Output： NULL
-//Changes： NULL
+//Input: QAbstractSocket::SocketError socketError:
+//Output: NULL
+//Changes: NULL
 //*************************************************/
 //void IMClientMessageCtrl::dispalyError(QAbstractSocket::SocketError socketError)
 //{
@@ -167,11 +167,11 @@
 //}
 
 ///*************************************************
-//Function Name： requestLogin()
+//Function Name: requestLogin()
 //Description: 
-//Input： NULL
-//Output： NULL
-//Changes： NULL
+//Input: NULL
+//Output: NULL
+//Changes: NULL
 //*************************************************/
 //void IMClientMessageCtrl::requestLogin()
 //{
@@ -187,11 +187,11 @@
 //}
 
 ///*************************************************
-//Function Name： requestLogin()
+//Function Name: requestLogin()
 //Description: 
-//Input： NULL
-//Output： NULL
-//Changes： NULL
+//Input: NULL
+//Output: NULL
+//Changes: NULL
 //*************************************************/
 //void IMClientMessageCtrl::requsetRegister(const IMUser *)
 //{
@@ -200,11 +200,11 @@
 
 //// mark: private-------------------------------------------------------------
 ///*************************************************
-//Function Name： initIMClientMessageCtrl()
+//Function Name: initIMClientMessageCtrl()
 //Description: 
-//Input： NULL
-//Output： NULL
-//Changes： NULL
+//Input: NULL
+//Output: NULL
+//Changes: NULL
 //*************************************************/
 //void IMClientMessageCtrl::initIMClientMessageCtrl()
 //{
@@ -216,11 +216,11 @@
 //}
 
 ///*************************************************
-//Function Name： linkSignalWithSlot()
+//Function Name: linkSignalWithSlot()
 //Description: 
-//Input： NULL
-//Output： NULL
-//Changes： NULL
+//Input: NULL
+//Output: NULL
+//Changes: NULL
 //*************************************************/
 //void IMClientMessageCtrl::linkSignalWithSlot()
 //{
@@ -232,11 +232,11 @@
 //}
 
 ///*************************************************
-//Function Name： requestConnect()
+//Function Name: requestConnect()
 //Description: 
-//Input： const QString &id：, const QString &pwd：
-//Output： NULL
-//Changes： NULL
+//Input: const QString &id:, const QString &pwd:
+//Output: NULL
+//Changes: NULL
 //*************************************************/
 //void IMClientMessageCtrl::requestConnect()
 //{
@@ -246,11 +246,11 @@
 //}
 
 ///*************************************************
-//Function Name： getIP()
+//Function Name: getIP()
 //Description: 
-//Input： NULL
-//Output： QString
-//Changes： NULL
+//Input: NULL
+//Output: QString
+//Changes: NULL
 //*************************************************/
 //QString IMClientMessageCtrl::getIP()
 //{

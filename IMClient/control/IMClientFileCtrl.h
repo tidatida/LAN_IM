@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMClientFileCtrl.h
-Author： jet.F.R
-Date： 2014.3.23
-Description：
-Changes：
+File Name: IMClientFileCtrl.h
+Author: jet.F.R
+Date: 2014.3.23
+Description:
+Changes:
 ********************************************/
 #ifndef IMCLIENTFILECTRL_H
 #define IMCLIENTFILECTRL_H

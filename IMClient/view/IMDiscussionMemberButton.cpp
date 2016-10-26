@@ -49,7 +49,7 @@ IMDiscussionMemberButton::~IMDiscussionMemberButton()
 
 
 /*************************************************
-Function Name： openChatRoom()
+Function Name: openChatRoom()
 Description: open 聊天窗口
 *************************************************/
 void IMDiscussionMemberButton::openChatRoom()
@@ -82,7 +82,7 @@ void IMDiscussionMemberButton::openChatRoom()
 
 
 /*************************************************
-Function Name： closeChatRoom()
+Function Name: closeChatRoom()
 Description: close 聊天窗口
 *************************************************/
 void IMDiscussionMemberButton::closeChatRoom()
@@ -96,7 +96,7 @@ void IMDiscussionMemberButton::closeChatRoom()
 
 
 /*************************************************
-Function Name： setButtonStatus()
+Function Name: setButtonStatus()
 Description:  设置button显示信息
 *************************************************/
 void IMDiscussionMemberButton::setButtonStatus()
@@ -157,7 +157,7 @@ void IMDiscussionMemberButton::onClickRightButton(/*const QPoint &*/)
 }
 
 /*************************************************
-Function Name： onClickSendMessage()
+Function Name: onClickSendMessage()
 Description: 发送即时消息
 *************************************************/
 void IMDiscussionMemberButton::onClickSendMessage()
@@ -166,7 +166,7 @@ void IMDiscussionMemberButton::onClickSendMessage()
 }
 
 /*************************************************
-Function Name： onClickSendMail()
+Function Name: onClickSendMail()
 Description: 发送电子邮件
 *************************************************/
 void IMDiscussionMemberButton::onClickSendMail()
@@ -174,7 +174,7 @@ void IMDiscussionMemberButton::onClickSendMail()
 }
 
 /*************************************************
-Function Name： onClickShowInformation()
+Function Name: onClickShowInformation()
 Description: 显示成员详细信息
 *************************************************/
 void IMDiscussionMemberButton::onClickShowInformation()
@@ -183,7 +183,7 @@ void IMDiscussionMemberButton::onClickShowInformation()
 }
 
 /*************************************************
-Function Name： onClickChangeRemark()
+Function Name: onClickChangeRemark()
 Description: modify群名片
 *************************************************/
 //void IMDiscussionMemberButton::onClickChangeRemark()
@@ -208,7 +208,7 @@ Description: modify群名片
 //}
 
 /*************************************************
-Function Name： onClickEnterSpace
+Function Name: onClickEnterSpace
 Description: 进入空间
 *************************************************/
 void IMDiscussionMemberButton::onClickEnterSpace()
@@ -216,7 +216,7 @@ void IMDiscussionMemberButton::onClickEnterSpace()
 }
 
 /*************************************************
-Function Name： onClickRemoveMember
+Function Name: onClickRemoveMember
 Description: 移除该成员
 *************************************************/
 void IMDiscussionMemberButton::onClickRemoveMember()
@@ -237,7 +237,7 @@ void IMDiscussionMemberButton::onClickRemoveMember()
 
 
 /*************************************************
-Function Name： onClickAddFriend
+Function Name: onClickAddFriend
 Description: 加好友
 *************************************************/
 void IMDiscussionMemberButton::onClickAddFriend()
@@ -247,7 +247,7 @@ void IMDiscussionMemberButton::onClickAddFriend()
 
 
 /*************************************************
-Function Name： onDoubleClickMemberButton
+Function Name: onDoubleClickMemberButton
 Description: 左键 双击
 *************************************************/
 void IMDiscussionMemberButton::onDoubleClickMemberButton()
@@ -256,7 +256,7 @@ void IMDiscussionMemberButton::onDoubleClickMemberButton()
 }
 
 /*************************************************
-Function Name： chatRoomQuit
+Function Name: chatRoomQuit
 Description: 聊天窗口close 了
 *************************************************/
 void IMDiscussionMemberButton::chatRoomQuit()
@@ -270,7 +270,7 @@ void IMDiscussionMemberButton::chatRoomQuit()
 //remark:protected:----------------------------------------
 
 /*************************************************
-Function Name： mousePressEvent
+Function Name: mousePressEvent
 Description: 鼠标单击事件
 *************************************************/
 void IMDiscussionMemberButton::mousePressEvent(QMouseEvent *event)
@@ -284,7 +284,7 @@ void IMDiscussionMemberButton::mousePressEvent(QMouseEvent *event)
 }
 
 /*************************************************
-Function Name： mouseDoubleClickEvent
+Function Name: mouseDoubleClickEvent
 Description: 鼠标双击事件
 *************************************************/
 void IMDiscussionMemberButton::mouseDoubleClickEvent(QMouseEvent *event)
@@ -303,7 +303,7 @@ void IMDiscussionMemberButton::mouseDoubleClickEvent(QMouseEvent *event)
 //remark:private:----------------------------------------
 
 /*************************************************
-Function Name： getDiscussionStatusFromInt()
+Function Name: getDiscussionStatusFromInt()
 Description: 将群成员身份从数字形式转换为字符串形式
 *************************************************/
 QString IMDiscussionMemberButton::getDiscussionStatusFromInt(const int n) const
@@ -324,7 +324,7 @@ QString IMDiscussionMemberButton::getDiscussionStatusFromInt(const int n) const
 
 
 /*************************************************
-Function Name： getLoginStatusFromInt()
+Function Name: getLoginStatusFromInt()
 Description: 将好友在线状态从数字形式转换为字符串形式
 *************************************************/
 QString IMDiscussionMemberButton::getLoginStatusFromInt(const int n) const
@@ -355,7 +355,7 @@ QString IMDiscussionMemberButton::getLoginStatusFromInt(const int n) const
 
 
 /*************************************************
-Function Name： getStatusFromInt()
+Function Name: getStatusFromInt()
 Description: create 右键菜单
 *************************************************/
 void IMDiscussionMemberButton::creatMenu(/*const QList<QString> *groutList*/)

@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMInputTextEdit.h
-Author： jet.F.R
-Date： 2014.3.26
-Description： 输入编辑框
-Changes：
+File Name: IMInputTextEdit.h
+Author: jet.F.R
+Date: 2014.3.26
+Description: 输入编辑框
+Changes:
 ********************************************/
 
 #ifndef IMINPUTTEXTEDIT_H

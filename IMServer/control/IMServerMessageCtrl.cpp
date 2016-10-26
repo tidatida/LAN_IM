@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMServerMessageCtrl.cpp
-Author： jet.F.R
-Date： 2014.3.10
-Description： control  server  class
-Changes：
+File Name: IMServerMessageCtrl.cpp
+Author: jet.F.R
+Date: 2014.3.10
+Description: control  server  class
+Changes:
 ********************************************/
 
 #include "IMServerMessageCtrl.h"
@@ -64,11 +64,11 @@ IMServerMessageCtrl::~IMServerMessageCtrl()
 }
 
 /*************************************************
-Function Name： runServer()
+Function Name: runServer()
 Description: used to   启动server 
-Input： NULL
-Output：NULL
-Changes： NULL
+Input: NULL
+Output:NULL
+Changes: NULL
 *************************************************/
 void IMServerMessageCtrl::runServer()
 {
@@ -110,7 +110,7 @@ void IMServerMessageCtrl::runServer()
 
 
 /*************************************************
-Function Name： getIDListView()
+Function Name: getIDListView()
 Description: 获取listiew
 *************************************************/
 QListView * IMServerMessageCtrl::getIDListView()
@@ -119,7 +119,7 @@ QListView * IMServerMessageCtrl::getIDListView()
 }
 
 /*************************************************
-Function Name： getAddressListView()
+Function Name: getAddressListView()
 Description: 获取listiew
 *************************************************/
 QListView * IMServerMessageCtrl::getAddressListView()
@@ -130,11 +130,11 @@ QListView * IMServerMessageCtrl::getAddressListView()
 // mark: private slots---------------------------------------------------
 
 /*************************************************
-Function Name： showConnectedMedssage()
+Function Name: showConnectedMedssage()
 Description: Not used
-Input： NULL
-Output：NULL
-Changes： NULL
+Input: NULL
+Output:NULL
+Changes: NULL
 *************************************************/
 void IMServerMessageCtrl::showConnectedMedssage()
 {
@@ -145,11 +145,11 @@ void IMServerMessageCtrl::showConnectedMedssage()
 }
 
 /*************************************************
-Function Name： readMessage()
+Function Name: readMessage()
 Description: Not used
-Input： IMClientSocketCtrl* socket：
-Output：NULL
-Changes： NULL
+Input: IMClientSocketCtrl* socket:
+Output:NULL
+Changes: NULL
 *************************************************/
 void IMServerMessageCtrl::readMessage(IMClientSocketCtrl* socket)
 {
@@ -197,7 +197,7 @@ void IMServerMessageCtrl::readMessage(IMClientSocketCtrl* socket)
 
 
 /*************************************************
-Function Name： insertIDData()
+Function Name: insertIDData()
 Description: 插入数据
 *************************************************/
 void IMServerMessageCtrl::insertIDData(const QString & id)
@@ -212,7 +212,7 @@ void IMServerMessageCtrl::insertIDData(const QString & id)
 }
 
 /*************************************************
-Function Name： deleteIDData()
+Function Name: deleteIDData()
 Description: delete  数据
 *************************************************/
 void IMServerMessageCtrl::deleteIDData(const QString &id)
@@ -227,7 +227,7 @@ void IMServerMessageCtrl::deleteIDData(const QString &id)
 }
 
 /*************************************************
-Function Name： insertIDData()
+Function Name: insertIDData()
 Description: 插入数据
 *************************************************/
 void IMServerMessageCtrl::insertAddressData(const QString &address)
@@ -244,7 +244,7 @@ void IMServerMessageCtrl::insertAddressData(const QString &address)
 }
 
 /*************************************************
-Function Name： deleteIDData()
+Function Name: deleteIDData()
 Description: delete  数据
 *************************************************/
 void IMServerMessageCtrl::deleteAddressData(const QString & address)

@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMRegisterCtrl.h
-Author： jet.F.R
-Date： 2014.3.17
-Description： 
-Changes：
+File Name: IMRegisterCtrl.h
+Author: jet.F.R
+Date: 2014.3.17
+Description: 
+Changes:
 ********************************************/
 
 #ifndef IMREGISTERCTRL_H
@@ -16,7 +16,7 @@ class IMUser;
 class IMTcpSocket;
 
 /*************************************************
-Class Name： IMRegisterCtrl
+Class Name: IMRegisterCtrl
 Description: 
 *************************************************/
 class IMRegisterCtrl : public QObject

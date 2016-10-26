@@ -49,7 +49,7 @@ IMFlockChatWidget::~IMFlockChatWidget()
 }
 
 /*************************************************
-Function Name： appendMessageShow()
+Function Name: appendMessageShow()
 Description:  add 群成员发来的信息
 *************************************************/
 void IMFlockChatWidget::appendMessageShow(const TalkMessage &mes)
@@ -84,7 +84,7 @@ void IMFlockChatWidget::appendMessageShow(const TalkMessage &mes)
 
 
 /*************************************************
-Function Name： setLabelStatus()
+Function Name: setLabelStatus()
 Description:  设置聊天窗口显示信息
 *************************************************/
 void IMFlockChatWidget::setLabelStatus()
@@ -102,7 +102,7 @@ void IMFlockChatWidget::setLabelStatus()
 
 
 /*************************************************
-Function Name： setChatInformation()
+Function Name: setChatInformation()
 Description:  设置群信息
 *************************************************/
 void IMFlockChatWidget::setChatInformation(const FlockInformation & flock)
@@ -113,7 +113,7 @@ void IMFlockChatWidget::setChatInformation(const FlockInformation & flock)
 }
 
 /*************************************************
-Function Name： setFlockMemberRemark()
+Function Name: setFlockMemberRemark()
 Description:  设置群成员名片
 *************************************************/
 void IMFlockChatWidget::setFlockMemberRemark(const TempStrings & tmpStr)
@@ -125,7 +125,7 @@ void IMFlockChatWidget::setFlockMemberRemark(const TempStrings & tmpStr)
 }
 
 /*************************************************
-Function Name： addFlockMemberButton()
+Function Name: addFlockMemberButton()
 Description:  add 群成员按钮
 *************************************************/
 bool IMFlockChatWidget::addFlockMemberButton(const FlockMember & memInfo)
@@ -147,7 +147,7 @@ bool IMFlockChatWidget::addFlockMemberButton(const FlockMember & memInfo)
 }
 
 /*************************************************
-Function Name： removeFlockMemberButton()
+Function Name: removeFlockMemberButton()
 Description:  delete  成员按钮
 *************************************************/
 bool IMFlockChatWidget::removeFlockMemberButton(const QString & memberID)
@@ -162,7 +162,7 @@ bool IMFlockChatWidget::removeFlockMemberButton(const QString & memberID)
 // public slots:--------------------------------------------------------------
 
 /*************************************************
-Function Name： setFlockMemberList()
+Function Name: setFlockMemberList()
 Description:  设置群成员列表
 *************************************************/
 void IMFlockChatWidget::setFlockMemberList(const QVector<FlockMember> & memberList)
@@ -190,7 +190,7 @@ void IMFlockChatWidget::setFlockMemberList(const QVector<FlockMember> & memberLi
 // protected:--------------------------------------------------------------
 
 /*************************************************
-Function Name： closeEvent()
+Function Name: closeEvent()
 Description:  重载close 事件
 *************************************************/
 void IMFlockChatWidget::closeEvent(QCloseEvent *event)
@@ -209,7 +209,7 @@ void IMFlockChatWidget::closeEvent(QCloseEvent *event)
 
 // private slots:-----------------------------------------------------
 /*************************************************
-Function Name： setInputTextFont()
+Function Name: setInputTextFont()
 Description:  字体样式
 *************************************************/
 void IMFlockChatWidget::setInputTextFont(const QFont &font)
@@ -219,7 +219,7 @@ void IMFlockChatWidget::setInputTextFont(const QFont &font)
 }
 
 /*************************************************
-Function Name： setInputTextSize()
+Function Name: setInputTextSize()
 Description:  字体大小
 *************************************************/
 void IMFlockChatWidget::setInputTextSize(const QString &size)
@@ -230,7 +230,7 @@ void IMFlockChatWidget::setInputTextSize(const QString &size)
 
 
 /*************************************************
-Function Name： onClickBtnBold()
+Function Name: onClickBtnBold()
 Description:  加粗
 *************************************************/
 void IMFlockChatWidget::onClickBtnBold(bool checked)
@@ -243,7 +243,7 @@ void IMFlockChatWidget::onClickBtnBold(bool checked)
 }
 
 /*************************************************
-Function Name： onClickBtnItalic()
+Function Name: onClickBtnItalic()
 Description:  斜体
 *************************************************/
 void IMFlockChatWidget::onClickBtnItalic(bool checked)
@@ -254,7 +254,7 @@ void IMFlockChatWidget::onClickBtnItalic(bool checked)
 
 
 /*************************************************
-Function Name： onClickBtnUnderline()
+Function Name: onClickBtnUnderline()
 Description:  下划线
 *************************************************/
 void IMFlockChatWidget::onClickBtnUnderline(bool checked)
@@ -264,7 +264,7 @@ void IMFlockChatWidget::onClickBtnUnderline(bool checked)
 }
 
 /*************************************************
-Function Name： onClickBtnColor()
+Function Name: onClickBtnColor()
 Description:  颜色
 *************************************************/
 void IMFlockChatWidget::onClickBtnColor()
@@ -283,7 +283,7 @@ void IMFlockChatWidget::onClickBtnColor()
 }
 
 /*************************************************
-Function Name： onClickBtnClear()
+Function Name: onClickBtnClear()
 Description:  清空
 *************************************************/
 void IMFlockChatWidget::onClickBtnClear()
@@ -294,7 +294,7 @@ void IMFlockChatWidget::onClickBtnClear()
 
 
 /*************************************************
-Function Name： onClickBtnHistory()
+Function Name: onClickBtnHistory()
 Description:  聊天历史记录
 *************************************************/
 void IMFlockChatWidget::onClickBtnHistory(bool checked)
@@ -311,7 +311,7 @@ void IMFlockChatWidget::onClickBtnHistory(bool checked)
 }
 
 /*************************************************
-Function Name： currentFormatChanged()
+Function Name: currentFormatChanged()
 Description:  部件状态
 *************************************************/
 void IMFlockChatWidget::currentFormatChanged(const QTextCharFormat &format)
@@ -330,7 +330,7 @@ void IMFlockChatWidget::currentFormatChanged(const QTextCharFormat &format)
 }
 
 /*************************************************
-Function Name： onClickBtnClocse()
+Function Name: onClickBtnClocse()
 Description:  点击“close ”按钮
 *************************************************/
 void IMFlockChatWidget::onClickBtnClose()
@@ -340,7 +340,7 @@ void IMFlockChatWidget::onClickBtnClose()
 
 
 /*************************************************
-Function Name： onClickBtnSend()
+Function Name: onClickBtnSend()
 Description:  点击“发送”按钮
 *************************************************/
 void IMFlockChatWidget::onClickBtnSend()
@@ -369,7 +369,7 @@ void IMFlockChatWidget::onClickBtnSend()
 
 
 /*************************************************
-Function Name： initIMFlockChatWidget()
+Function Name: initIMFlockChatWidget()
 Description:  init mainframe
 *************************************************/
 void IMFlockChatWidget::initIMFlockChatWidget()
@@ -457,7 +457,7 @@ void IMFlockChatWidget::initIMFlockChatWidget()
 
 
 /*************************************************
-Function Name： linkSignalWithSlot()
+Function Name: linkSignalWithSlot()
 Description:  connection 信号与槽
 *************************************************/
 void IMFlockChatWidget::linkSignalWithSlot()
@@ -498,7 +498,7 @@ void IMFlockChatWidget::linkSignalWithSlot()
 }
 
 /*************************************************
-Function Name： setWidgetToolBtn()
+Function Name: setWidgetToolBtn()
 Description:  设置面板图标
 *************************************************/
 void IMFlockChatWidget::setWidgetToolBtn()
@@ -566,7 +566,7 @@ void IMFlockChatWidget::setWidgetToolBtn()
 }
 
 /*************************************************
-Function Name： saveHistoryMessage()
+Function Name: saveHistoryMessage()
 Description:  保存历史记录
 *************************************************/
 void IMFlockChatWidget::saveHistoryMessage()
@@ -581,7 +581,7 @@ void IMFlockChatWidget::saveHistoryMessage()
 }
 
 /*************************************************
-Function Name： readHistoryMessage()
+Function Name: readHistoryMessage()
 Description:  读取历史记录
 *************************************************/
 void IMFlockChatWidget::readHistoryMessage()

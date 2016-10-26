@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMTcpSocket.h
-Author： jet.F.R
-Date： 2014.3.10
-Description： clienttcpsocket class
-Changes：
+File Name: IMTcpSocket.h
+Author: jet.F.R
+Date: 2014.3.10
+Description: clienttcpsocket class
+Changes:
 ********************************************/
 
 #include "IMTcpSocket.h"
@@ -25,11 +25,11 @@ IMTcpSocket::IMTcpSocket(QObject *parent):
 
 
 /*************************************************
-Function Name： requestConnect()
+Function Name: requestConnect()
 Description: request connection 
-Input： NULL
-Output： NULL
-Changes： NULL
+Input: NULL
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMTcpSocket::requestConnect()
 {
@@ -46,11 +46,11 @@ void IMTcpSocket::requestConnect()
 }
 
 /*************************************************
-Function Name： isConnected()
+Function Name: isConnected()
 Description: 是否connection 
-Input： NULL
-Output： NULL
-Changes： NULL
+Input: NULL
+Output: NULL
+Changes: NULL
 *************************************************/
 bool IMTcpSocket::isConnected()
 {
@@ -59,7 +59,7 @@ bool IMTcpSocket::isConnected()
 
 
 /*************************************************
-Function Name： setFlag()
+Function Name: setFlag()
 Description: 是否标识
 *************************************************/
 void IMTcpSocket::setFlag(int flag)
@@ -68,7 +68,7 @@ void IMTcpSocket::setFlag(int flag)
 }
 
 /*************************************************
-Function Name： flag()
+Function Name: flag()
 Description: 获取标识
 *************************************************/
 int IMTcpSocket::flag()
@@ -77,7 +77,7 @@ int IMTcpSocket::flag()
 }
 
 /*************************************************
-Function Name： getIP()
+Function Name: getIP()
 Description: 获取ip地址
 *************************************************/
 QString IMTcpSocket::getIP()
@@ -95,7 +95,7 @@ QString IMTcpSocket::getIP()
 }
 
 /*************************************************
-Function Name： getCurrentDateTime()
+Function Name: getCurrentDateTime()
 Description: 获取当前的日期和时间
 *************************************************/
 QString IMTcpSocket::getCurrentDateTime()
@@ -110,11 +110,11 @@ QString IMTcpSocket::getCurrentDateTime()
 
 // mark: private slots---------------------------------------------------------
 /*************************************************
-Function Name： connectionClosedByServer()
+Function Name: connectionClosedByServer()
 Description: connection 被clientclose 
-Input： NULL
-Output： NULL
-Changes： NULL
+Input: NULL
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMTcpSocket::connectionClosed()
 {
@@ -132,11 +132,11 @@ void IMTcpSocket::connectionClosed()
 }
 
 /*************************************************
-Function Name： connectionCreate()
+Function Name: connectionCreate()
 Description: connection create 
-Input： NULL
-Output： NULL
-Changes： NULL
+Input: NULL
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMTcpSocket::connectionCreate()
 {
@@ -144,11 +144,11 @@ void IMTcpSocket::connectionCreate()
 }
 
 /*************************************************
-Function Name： dispalyError()
+Function Name: dispalyError()
 Description: 显示错误
-Input： 错误信息
-Output： NULL
-Changes： NULL
+Input: 错误信息
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMTcpSocket::dispalyError(QAbstractSocket::SocketError socketError)
 {
@@ -184,11 +184,11 @@ void IMTcpSocket::dispalyError(QAbstractSocket::SocketError socketError)
 // mark: private---------------------------------------------------------
 
 /*************************************************
-Function Name： linkSignalWithSlot()
+Function Name: linkSignalWithSlot()
 Description: 链接信号与槽
-Input： NULL
-Output： NULL
-Changes： NULL
+Input: NULL
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMTcpSocket::linkSignalWithSlot()
 {

@@ -39,7 +39,7 @@ IMLatestMessageListWidget::IMLatestMessageListWidget(
 }
 
 /*************************************************
-Function Name： addItem()
+Function Name: addItem()
 Description:  add 
 *************************************************/
 void IMLatestMessageListWidget::addItem(QWidget *item)
@@ -67,7 +67,7 @@ void IMLatestMessageListWidget::addItem(QWidget *item)
 }
 
 /*************************************************
-Function Name： removeItem()
+Function Name: removeItem()
 Description:  delete  
 *************************************************/
 void IMLatestMessageListWidget::removeItem(QWidget *item)
@@ -82,7 +82,7 @@ void IMLatestMessageListWidget::removeItem(QWidget *item)
 }
 
 /*************************************************
-Function Name： size()
+Function Name: size()
 Description:  size
 *************************************************/
 int IMLatestMessageListWidget::size()
@@ -95,7 +95,7 @@ int IMLatestMessageListWidget::size()
 }
 
 /*************************************************
-Function Name： creatMenu()
+Function Name: creatMenu()
 Description:  create 右键菜单
 *************************************************/
 void IMLatestMessageListWidget::creatMenu()
@@ -115,7 +115,7 @@ void IMLatestMessageListWidget::creatMenu()
 
 
 /*************************************************
-Function Name： showMenu()
+Function Name: showMenu()
 Description:  显示右键菜单
 *************************************************/
 void IMLatestMessageListWidget::showMenu()
@@ -130,7 +130,7 @@ void IMLatestMessageListWidget::showMenu()
 
 
 /*************************************************
-Function Name： mousePressEvent
+Function Name: mousePressEvent
 Description: 鼠标单击事件
 *************************************************/
 void IMLatestMessageListWidget::mousePressEvent(QMouseEvent *event)

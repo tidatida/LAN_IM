@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMServerWindow.cpp
-Author： jet.F.R
-Date： 2014.3.10
-Description： server mainframe class
-Changes：
+File Name: IMServerWindow.cpp
+Author: jet.F.R
+Date: 2014.3.10
+Description: server mainframe class
+Changes:
 ********************************************/
 
 #include "IMServerWindow.h"

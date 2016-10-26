@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMClientSocketCtrl.cpp
-Author： jet.F.R
-Date： 2014.3.10
-Description： used to   control  clientsocket的 class
-Changes：
+File Name: IMClientSocketCtrl.cpp
+Author: jet.F.R
+Date: 2014.3.10
+Description: used to   control  clientsocket的 class
+Changes:
 ********************************************/
 
 #include "IMClientSocketCtrl.h"
@@ -30,7 +30,7 @@ IMClientSocketCtrl::~IMClientSocketCtrl()
 // mark: public slots-----------------------------------------
 
 /*************************************************
-Function Name： receiveMessage()
+Function Name: receiveMessage()
 Description: 接收user 发送的信息
 *************************************************/
 void IMClientSocketCtrl::receiveMessage()
@@ -273,7 +273,7 @@ void IMClientSocketCtrl::receiveMessage()
     emit sendSignal(m_save);
 }
 /*************************************************
-Function Name： sendMessage()
+Function Name: sendMessage()
 Description: 发送信息
 *************************************************/
 void IMClientSocketCtrl::sendMessage(const SaveTmpInformation &temp)
@@ -526,7 +526,7 @@ void IMClientSocketCtrl::sendMessage(const SaveTmpInformation &temp)
 }
 
 /*************************************************
-Function Name： deleteScoket()
+Function Name: deleteScoket()
 Description: delete  socket
 *************************************************/
 void IMClientSocketCtrl::deleteScoket()
@@ -541,7 +541,7 @@ void IMClientSocketCtrl::deleteScoket()
 
 
 /*************************************************
-Function Name： readMessage()
+Function Name: readMessage()
 Description: 发送user 的信息至另一个user 
 *************************************************/
 //void IMClientSocketCtrl::sendTalkMessage(TalkMessage mes)
@@ -559,11 +559,11 @@ Description: 发送user 的信息至另一个user
 
 // mark: private slots--------------------------------------------------
 /*************************************************
-Function Name： readMessage()
+Function Name: readMessage()
 Description: 读取user 发送的信息
-Input： NULL
-Output：NULL
-Changes： NULL
+Input: NULL
+Output:NULL
+Changes: NULL
 *************************************************/
 //void IMClientSocketCtrl::readMessage()
 //{
@@ -623,11 +623,11 @@ Changes： NULL
 
 // mark: private-------------------------------------------------------------
 /*************************************************
-Function Name： checkLogin()
+Function Name: checkLogin()
 Description: 检测user 登录信息
-Input： QString id：user 帐号id ，QString pwd：user  passwd
-Output： bool : 检测信息
-Changes： NULL
+Input: QString id:user 帐号id ，QString pwd:user  passwd
+Output: bool : 检测信息
+Changes: NULL
 *************************************************/
 //bool IMClientSocketCtrl::checkUser(const QString & id, const QString & pwd,
 //                                   const QDateTime & )
@@ -653,11 +653,11 @@ Changes： NULL
 
 
 /*************************************************
-Function Name： addUser()
+Function Name: addUser()
 Description: add user 
-Input： IMUser
-Output： bool
-Changes： NULL
+Input: IMUser
+Output: bool
+Changes: NULL
 *************************************************/
 //bool IMClientSocketCtrl::addUser(IMUser &user)
 //{
@@ -694,7 +694,7 @@ Changes： NULL
 
 
 /*************************************************
-Function Name： getFriends()
+Function Name: getFriends()
 Description: 获取所有
 *************************************************/
 //bool IMClientSocketCtrl::getFriends(const QString &id)
@@ -727,12 +727,12 @@ Description: 获取所有
 //}
 
 /*************************************************
-Function Name： sendMessage()
+Function Name: sendMessage()
 Description: 发送信息
-Input： MessageTyep type:信息 class型, bool is: bool信息,
-       int mes1: 信息1, QString mes2：信息2
-Output：NULL
-Changes： NULL
+Input: MessageTyep type:信息 class型, bool is: bool信息,
+       int mes1: 信息1, QString mes2:信息2
+Output:NULL
+Changes: NULL
 *************************************************/
 //void IMClientSocketCtrl::sendMessage(MessageType type, bool isSuccess, const IMUser *user,
 //                                     const QString &mes1, const QString &mes2)
@@ -752,11 +752,11 @@ Changes： NULL
 //}
 
 /*************************************************
-Function Name： sendCheckResult()
+Function Name: sendCheckResult()
 Description: 发送检测结果
-Input：  bool: 是否成功, QString mes1: 信息1, QString mes2：信息2
-Output：NULL
-Changes： NULL
+Input:  bool: 是否成功, QString mes1: 信息1, QString mes2:信息2
+Output:NULL
+Changes: NULL
 *************************************************/
 //void IMClientSocketCtrl::sendCheckResult(bool isSuccess, const QString &id,
 //                                         const QString &nick)
@@ -777,11 +777,11 @@ Changes： NULL
 
 
 /*************************************************
-Function Name： sendRegisterResult()
+Function Name: sendRegisterResult()
 Description: 发送Register 结果
-Input： bool isSuccess: 是否成功,  const IMUser *： user 信息
-Output：NULL
-Changes： NULL
+Input: bool isSuccess: 是否成功,  const IMUser *: user 信息
+Output:NULL
+Changes: NULL
 *************************************************/
 //void IMClientSocketCtrl::sendRegisterResult(bool isSuccess, const IMUser * user)
 //{
@@ -803,11 +803,11 @@ Changes： NULL
 
 
 /*************************************************
-Function Name： sendFriends()
+Function Name: sendFriends()
 Description: 发送所有好友信息
-Input： bool isSuccess: 是否成功,  map 好友信息
-Output：NULL
-Changes： NULL
+Input: bool isSuccess: 是否成功,  map 好友信息
+Output:NULL
+Changes: NULL
 *************************************************/
 //void IMClientSocketCtrl::sendFriends(bool isSuccess, const QMultiMap<QString, FriendsInfo> *map)
 //{

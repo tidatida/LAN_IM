@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMServerWindow.h
-Author： jet.F.R
-Date： 2014.3.10
-Description： server mainframe class
-Changes：
+File Name: IMServerWindow.h
+Author: jet.F.R
+Date: 2014.3.10
+Description: server mainframe class
+Changes:
 ********************************************/
 
 #ifndef IMSERVERWINDOW_H
@@ -14,7 +14,7 @@ Changes：
 class IMServerMessageCtrl;
 
 /*************************************************
-Class Name： IMServerWindow
+Class Name: IMServerWindow
 Description: server mainframe class
 *************************************************/
 class IMServerWindow : public QWidget

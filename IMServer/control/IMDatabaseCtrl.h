@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMDatabaseCtrl.h
-Author： jet.F.R
-Date： 2014.3.12
-Description： access database
-Changes：
+File Name: IMDatabaseCtrl.h
+Author: jet.F.R
+Date: 2014.3.12
+Description: access database
+Changes:
 ********************************************/
 #ifndef IMDATABASECTRL_H
 #define IMDATABASECTRL_H
@@ -19,7 +19,7 @@ class QDateTime;
 
 
 /*************************************************
-Class Name： IMDatabaseCtrl
+Class Name: IMDatabaseCtrl
 Description: database operation class
 *************************************************/
 class IMDatabaseCtrl : public QObject

@@ -6,7 +6,7 @@
 
 
 /*************************************************
-Class Name： MonthLineEdit
+Class Name: MonthLineEdit
 Description: a custom QLineEdit
 *************************************************/
 class MonthLineEdit : public QLineEdit
@@ -25,7 +25,7 @@ signals:
 };
 
 /*************************************************
-Class Name： CustomComboBox
+Class Name: CustomComboBox
 Description: a custom QComboBox
 *************************************************/
 class CustomComboBox : public QComboBox

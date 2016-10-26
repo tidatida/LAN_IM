@@ -36,7 +36,7 @@ void IMMailWriteWidget::setReceiverAddress(const QString & address)
 
 // private slots:-----------------------------------------------------
 /*************************************************
-Function Name： setInputTextFont()
+Function Name: setInputTextFont()
 Description:  字体样式
 *************************************************/
 void IMMailWriteWidget::setInputTextFont(const QFont &font)
@@ -46,7 +46,7 @@ void IMMailWriteWidget::setInputTextFont(const QFont &font)
 }
 
 /*************************************************
-Function Name： setInputTextSize()
+Function Name: setInputTextSize()
 Description:  字体大小
 *************************************************/
 void IMMailWriteWidget::setInputTextSize(const QString &size)
@@ -57,7 +57,7 @@ void IMMailWriteWidget::setInputTextSize(const QString &size)
 
 
 /*************************************************
-Function Name： onClickBtnBold()
+Function Name: onClickBtnBold()
 Description:  加粗
 *************************************************/
 void IMMailWriteWidget::onClickBtnBold(bool checked)
@@ -70,7 +70,7 @@ void IMMailWriteWidget::onClickBtnBold(bool checked)
 }
 
 /*************************************************
-Function Name： onClickBtnItalic()
+Function Name: onClickBtnItalic()
 Description:  斜体
 *************************************************/
 void IMMailWriteWidget::onClickBtnItalic(bool checked)
@@ -81,7 +81,7 @@ void IMMailWriteWidget::onClickBtnItalic(bool checked)
 
 
 /*************************************************
-Function Name： onClickBtnUnderline()
+Function Name: onClickBtnUnderline()
 Description:  下划线
 *************************************************/
 void IMMailWriteWidget::onClickBtnUnderline(bool checked)
@@ -91,7 +91,7 @@ void IMMailWriteWidget::onClickBtnUnderline(bool checked)
 }
 
 /*************************************************
-Function Name： onClickBtnColor()
+Function Name: onClickBtnColor()
 Description:  颜色
 *************************************************/
 void IMMailWriteWidget::onClickBtnColor()
@@ -110,7 +110,7 @@ void IMMailWriteWidget::onClickBtnColor()
 }
 
 /*************************************************
-Function Name： onClickBtnSend()
+Function Name: onClickBtnSend()
 Description:  点击“发送”按钮
 *************************************************/
 void IMMailWriteWidget::onClickBtnSend()
@@ -147,7 +147,7 @@ void IMMailWriteWidget::onClickBtnSend()
 
 // private:-------------------------------------------------
 /*************************************************
-Function Name： initIMMailWriteWidget()
+Function Name: initIMMailWriteWidget()
 Description:  init 
 *************************************************/
 void IMMailWriteWidget::initIMMailWriteWidget()
@@ -223,7 +223,7 @@ void IMMailWriteWidget::initIMMailWriteWidget()
 }
 
 /*************************************************
-Function Name： linkSignalWithSlot()
+Function Name: linkSignalWithSlot()
 Description:  connection 信号与槽
 *************************************************/
 void IMMailWriteWidget::linkSignalWithSlot()
@@ -246,7 +246,7 @@ void IMMailWriteWidget::linkSignalWithSlot()
 
 
 /*************************************************
-Function Name： setWidgetToolBtn()
+Function Name: setWidgetToolBtn()
 Description:  设置面板图标
 *************************************************/
 void IMMailWriteWidget::setWidgetToolBtn()
@@ -300,7 +300,7 @@ void IMMailWriteWidget::setWidgetToolBtn()
 
 // 获取信息输入框的信息
 /*************************************************
-Function Name： setWidgetToolBtn()
+Function Name: setWidgetToolBtn()
 Description:  设置面板图标
 *************************************************/
 void IMMailWriteWidget::getMailInformation()

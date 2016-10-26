@@ -51,7 +51,7 @@ IMDiscussionButton::~IMDiscussionButton()
 }
 
 /*************************************************
-Function Name： openChatRoom()
+Function Name: openChatRoom()
 Description: 
 *************************************************/
 void IMDiscussionButton::openChatRoom()
@@ -90,7 +90,7 @@ void IMDiscussionButton::openChatRoom()
 }
 
 /*************************************************
-Function Name： showChatRoom()
+Function Name: showChatRoom()
 Description: 
 *************************************************/
 void IMDiscussionButton::showChatRoom()
@@ -102,7 +102,7 @@ void IMDiscussionButton::showChatRoom()
 }
 
 /*************************************************
-Function Name： closeChatRoom()
+Function Name: closeChatRoom()
 Description: 
 *************************************************/
 void IMDiscussionButton::closeChatRoom()
@@ -116,7 +116,7 @@ void IMDiscussionButton::closeChatRoom()
 }
 
 /*************************************************
-Function Name： setButtonStatus()
+Function Name: setButtonStatus()
 Description: 
 *************************************************/
 void IMDiscussionButton::setButtonStatus()
@@ -138,7 +138,7 @@ void IMDiscussionButton::setButtonStatus()
 
 
 /*************************************************
-Function Name： deleteDiscussionMember()
+Function Name: deleteDiscussionMember()
 Description: 
 *************************************************/
 void IMDiscussionButton::deleteDiscussionMember(const QString & memberID)
@@ -153,7 +153,7 @@ void IMDiscussionButton::deleteDiscussionMember(const QString & memberID)
 }
 
 /*************************************************
-Function Name： addDiscussionMember()
+Function Name: addDiscussionMember()
 Description: 
 *************************************************/
 void IMDiscussionButton::addDiscussionMember(const QString & memberID)
@@ -167,7 +167,7 @@ void IMDiscussionButton::addDiscussionMember(const QString & memberID)
 //public slots:----------------------------------------------
 
 /*************************************************
-Function Name： onDoubleClickDiscussionButton()
+Function Name: onDoubleClickDiscussionButton()
 Description: 
 *************************************************/
 void IMDiscussionButton::onDoubleClickDiscussionButton()
@@ -178,7 +178,7 @@ void IMDiscussionButton::onDoubleClickDiscussionButton()
 }
 
 /*************************************************
-Function Name： onClickRightButton()
+Function Name: onClickRightButton()
 Description: 
 *************************************************/
 void IMDiscussionButton::onClickRightButton()
@@ -191,7 +191,7 @@ void IMDiscussionButton::onClickRightButton()
 }
 
 /*************************************************
-Function Name： onClickSendMessage()
+Function Name: onClickSendMessage()
 Description: 
 *************************************************/
 void IMDiscussionButton::onClickSendMessage()
@@ -200,7 +200,7 @@ void IMDiscussionButton::onClickSendMessage()
 }
 
 /*************************************************
-Function Name： onClickShowRecord()
+Function Name: onClickShowRecord()
 Description: 
 *************************************************/
 void IMDiscussionButton::onClickShowRecord()
@@ -208,7 +208,7 @@ void IMDiscussionButton::onClickShowRecord()
 }
 
 /*************************************************
-Function Name： onClickDropDiscussion()
+Function Name: onClickDropDiscussion()
 Description: 
 *************************************************/
 void IMDiscussionButton::onClickDropDiscussion()
@@ -227,7 +227,7 @@ void IMDiscussionButton::onClickDropDiscussion()
 }
 
 /*************************************************
-Function Name： onClickLeaveDiscussion()
+Function Name: onClickLeaveDiscussion()
 Description: 
 *************************************************/
 void IMDiscussionButton::onClickLeaveDiscussion()
@@ -248,7 +248,7 @@ void IMDiscussionButton::onClickLeaveDiscussion()
 }
 
 /*************************************************
-Function Name： onClickAddMemberDiscussion()
+Function Name: onClickAddMemberDiscussion()
 Description: 
 *************************************************/
 void IMDiscussionButton::onClickAddMember()
@@ -294,7 +294,7 @@ void IMDiscussionButton::onClickAddMember()
 }
 
 /*************************************************
-Function Name： onClickShowInformation()
+Function Name: onClickShowInformation()
 Description: 
 *************************************************/
 void IMDiscussionButton::onClickShowInformation()
@@ -305,7 +305,7 @@ void IMDiscussionButton::onClickShowInformation()
 }
 
 /*************************************************
-Function Name： chatRoomQuit()
+Function Name: chatRoomQuit()
 Description: 
 *************************************************/
 void IMDiscussionButton::chatRoomQuit()
@@ -317,7 +317,7 @@ void IMDiscussionButton::chatRoomQuit()
 }
 
 /*************************************************
-Function Name： setDiscussionMemberList()
+Function Name: setDiscussionMemberList()
 Description: 
 *************************************************/
 void IMDiscussionButton::setDiscussionMemberList(const QVector<DiscussionMember> & memberList)
@@ -344,7 +344,7 @@ void IMDiscussionButton::setDiscussionMemberList(const QVector<DiscussionMember>
 //remark:protected:----------------------------------------
 
 /*************************************************
-Function Name： mousePressEvent
+Function Name: mousePressEvent
 Description: 
 *************************************************/
 void IMDiscussionButton::mousePressEvent(QMouseEvent *event)
@@ -358,7 +358,7 @@ void IMDiscussionButton::mousePressEvent(QMouseEvent *event)
 }
 
 /*************************************************
-Function Name： mouseDoubleClickEvent
+Function Name: mouseDoubleClickEvent
 Description: 
 *************************************************/
 void IMDiscussionButton::mouseDoubleClickEvent(QMouseEvent *event)
@@ -375,7 +375,7 @@ void IMDiscussionButton::mouseDoubleClickEvent(QMouseEvent *event)
 
 //remark:private:----------------------------------------
 /*************************************************
-Function Name： getStatusFromInt()
+Function Name: getStatusFromInt()
 Description: 
 *************************************************/
 void IMDiscussionButton::creatMenu(/*const QList<QString> *groutList*/)

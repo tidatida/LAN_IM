@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMChatWidget.h
-Author： jet.F.R
-Date： 2014.3.26
-Description： 
-Changes：
+File Name: IMChatWidget.h
+Author: jet.F.R
+Date: 2014.3.26
+Description: 
+Changes:
 ********************************************/
 
 #ifndef IMCHATWIDGET_H

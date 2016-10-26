@@ -40,7 +40,7 @@ IMFriendListWidget::IMFriendListWidget(IMMainWidget *mainWidget, QWidget *parent
 }
 
 /*************************************************
-Function Name： addItem()
+Function Name: addItem()
 Description:  add 
 *************************************************/
 void IMFriendListWidget::addItem(QWidget *item)
@@ -58,7 +58,7 @@ void IMFriendListWidget::addItem(QWidget *item)
 }
 
 /*************************************************
-Function Name： creatMenu
+Function Name: creatMenu
 Description: create 右键菜单
 *************************************************/
 void IMFriendListWidget:: creatMenu()
@@ -82,7 +82,7 @@ void IMFriendListWidget:: creatMenu()
 
 
 /*************************************************
-Function Name： showMenu()
+Function Name: showMenu()
 Description:  显示右键菜单
 *************************************************/
 void IMFriendListWidget::showMenu()
@@ -98,7 +98,7 @@ void IMFriendListWidget::showMenu()
 
 // mark protected:------------------------------------------------------
 /*************************************************
-Function Name： mousePressEvent
+Function Name: mousePressEvent
 Description: 鼠标点击事件
 *************************************************/
 void IMFriendListWidget:: mousePressEvent(QMouseEvent *event)

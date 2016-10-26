@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMClickLabel.cpp
-Author： jet.F.R
-Date： 2014.3.10
-Description： 
-Changes：
+File Name: IMClickLabel.cpp
+Author: jet.F.R
+Date: 2014.3.10
+Description: 
+Changes:
 ********************************************/
 
 

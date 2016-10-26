@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMLoginWidget.h
-Author： jet.F.R
-Date： 2014.3.10
-Description： client login interface
-Changes：
+File Name: IMLoginWidget.h
+Author: jet.F.R
+Date: 2014.3.10
+Description: client login interface
+Changes:
 ********************************************/
 
 #ifndef IMLOGINWIDGET_H
@@ -21,7 +21,7 @@ class IMLoginCtrl;
 struct UserInformation;
 
 /*************************************************
-Class Name： IMLoginWidget
+Class Name: IMLoginWidget
 Description: client login interface class
 *************************************************/
 class IMLoginWidget : public QWidget

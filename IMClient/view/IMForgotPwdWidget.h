@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMForgotPwdWidget.h
-Author： jet.F.R
-Date： 2014.3.14
-Description： client，Forget passwd?找回 passwd的界面
-Changes：
+File Name: IMForgotPwdWidget.h
+Author: jet.F.R
+Date: 2014.3.14
+Description: client，Forget passwd?找回 passwd的界面
+Changes:
 ********************************************/
 #ifndef IMFORGOTPWDWIDGET_H
 #define IMFORGOTPWDWIDGET_H
@@ -11,7 +11,7 @@ Changes：
 #include <QWidget>
 
 /*************************************************
-Class Name： IMForgotPwdWidget
+Class Name: IMForgotPwdWidget
 Description: clientForget passwd?界面 class
 *************************************************/
 class IMForgotPwdWidget : public QWidget

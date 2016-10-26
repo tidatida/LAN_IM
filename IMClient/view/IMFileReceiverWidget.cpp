@@ -24,7 +24,7 @@ IMFileReceiverWidget::~IMFileReceiverWidget()
 }
 
 /*************************************************
-Function Name： setFileName()
+Function Name: setFileName()
 Description: 设置文件名
 *************************************************/
 void IMFileReceiverWidget::setFileName(const QString & fileName)
@@ -36,7 +36,7 @@ void IMFileReceiverWidget::setFileName(const QString & fileName)
 }
 
 /*************************************************
-Function Name： connectToHost()
+Function Name: connectToHost()
 Description: 设置server 地址并connection server 
 *************************************************/
 void IMFileReceiverWidget::connectToHost(const QHostAddress & address)
@@ -51,7 +51,7 @@ void IMFileReceiverWidget::connectToHost(const QHostAddress & address)
 // private: ---------------------------------------------
 
 /*************************************************
-Function Name： initIMFileReceiverWidget()
+Function Name: initIMFileReceiverWidget()
 Description: init 
 *************************************************/
 void IMFileReceiverWidget::initIMFileReceiverWidget()
@@ -97,7 +97,7 @@ void IMFileReceiverWidget::initIMFileReceiverWidget()
 // private slot: ---------------------------------------------
 
 /*************************************************
-Function Name： onClickBtnClose()
+Function Name: onClickBtnClose()
 Description: 点击“close ”按钮
 *************************************************/
 void IMFileReceiverWidget::onClickBtnClose()
@@ -107,7 +107,7 @@ void IMFileReceiverWidget::onClickBtnClose()
 }
 
 /*************************************************
-Function Name： onClickBtnCancel()
+Function Name: onClickBtnCancel()
 Description: 点击“取消”按钮 中途取消的操作
 *************************************************/
 void IMFileReceiverWidget::onClickBtnCancel()
@@ -116,7 +116,7 @@ void IMFileReceiverWidget::onClickBtnCancel()
 }
 
 /*************************************************
-Function Name： readMessage()
+Function Name: readMessage()
 Description: 槽 读取收到的文件
 *************************************************/
 void IMFileReceiverWidget::readMessage()
@@ -160,7 +160,7 @@ void IMFileReceiverWidget::readMessage()
     qDebug() << m_bytesReceived << "received:" << m_totalBytes;
 
     double speed = m_bytesReceived / useTime;
-    m_labelFileStatus->setText(tr("已接收 %1MB (%2MB/s) \n共%3MB 已用时:%4秒\n估计剩余时间：%5秒")
+    m_labelFileStatus->setText(tr("已接收 %1MB (%2MB/s) \n共%3MB 已用时:%4秒\n估计剩余时间:%5秒")
                                          .arg(m_bytesReceived / (1024*1024))   // 已接收
                                          .arg(speed*1000/(1024*1024),0,'f',2)  // 速度
                                          .arg(m_totalBytes / (1024 * 1024))    // 总大小
@@ -176,7 +176,7 @@ void IMFileReceiverWidget::readMessage()
 }
 
 /*************************************************
-Function Name： displayError()
+Function Name: displayError()
 Description:  错误process   
 *************************************************/
 void IMFileReceiverWidget::displayError(QAbstractSocket::SocketError socketError)
@@ -192,7 +192,7 @@ void IMFileReceiverWidget::displayError(QAbstractSocket::SocketError socketError
 
 
 /*************************************************
-Function Name： showClosedConnect()
+Function Name: showClosedConnect()
 Description:  链接断开
 *************************************************/
 void IMFileReceiverWidget::showClosedConnect()

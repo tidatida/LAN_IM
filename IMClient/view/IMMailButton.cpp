@@ -47,7 +47,7 @@ IMMailButton::IMMailButton(const MailInformation & mail,
 //remark:protected:----------------------------------------
 
 /*************************************************
-Function Name： mousePressEvent
+Function Name: mousePressEvent
 Description: 鼠标单击事件
 *************************************************/
 void IMMailButton::mousePressEvent(QMouseEvent *event)
@@ -61,7 +61,7 @@ void IMMailButton::mousePressEvent(QMouseEvent *event)
 }
 
 /*************************************************
-Function Name： mouseDoubleClickEvent
+Function Name: mouseDoubleClickEvent
 Description: 鼠标双击事件
 *************************************************/
 void IMMailButton::mouseDoubleClickEvent(QMouseEvent *event)
@@ -80,7 +80,7 @@ void IMMailButton::mouseDoubleClickEvent(QMouseEvent *event)
 
 // private slots:----------------------------------------------------------
 /*************************************************
-Function Name： onClickDeleteMail()
+Function Name: onClickDeleteMail()
 Description: delete  邮件
 *************************************************/
 void IMMailButton::onClickDeleteMail()
@@ -90,7 +90,7 @@ void IMMailButton::onClickDeleteMail()
 }
 
 /*************************************************
-Function Name： onDoubleClickDiscussionButton()
+Function Name: onDoubleClickDiscussionButton()
 Description: 左键 双击
 *************************************************/
 void IMMailButton::onDoubleClickDiscussionButton()
@@ -104,7 +104,7 @@ void IMMailButton::onDoubleClickDiscussionButton()
 }
 
 /*************************************************
-Function Name： onClickRightButton()
+Function Name: onClickRightButton()
 Description: 右键点击按键
 *************************************************/
 void IMMailButton::onClickRightButton()
@@ -119,7 +119,7 @@ void IMMailButton::onClickRightButton()
 
 // private:----------------------------------------------------------
 /*************************************************
-Function Name： setButtonStatus()
+Function Name: setButtonStatus()
 Description: 设置button显示信息
 *************************************************/
 void IMMailButton::setButtonStatus()
@@ -146,7 +146,7 @@ void IMMailButton::setButtonStatus()
 }
 
 /*************************************************
-Function Name： getStatusFromInt()
+Function Name: getStatusFromInt()
 Description: create 右键菜单
 *************************************************/
 void IMMailButton::creatMenu()

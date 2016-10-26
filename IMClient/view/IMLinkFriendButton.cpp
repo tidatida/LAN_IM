@@ -21,7 +21,7 @@ IMLinkFriendButton::~IMLinkFriendButton()
 
 
 /*************************************************
-Function Name： setButtonStatus()
+Function Name: setButtonStatus()
 Description:  设置button显示信息
 *************************************************/
 void IMLinkFriendButton::setButtonStatus()
@@ -49,7 +49,7 @@ void IMLinkFriendButton::setButtonStatus()
 //remark:public slots:---------------------------
 
 /*************************************************
-Function Name： onDoubleClickFriendButton()
+Function Name: onDoubleClickFriendButton()
 Description: 左键 双击
 *************************************************/
 void IMLinkFriendButton::onDoubleClickButton()
@@ -62,7 +62,7 @@ void IMLinkFriendButton::onDoubleClickButton()
 
 
 /*************************************************
-Function Name： ignoreMessage()
+Function Name: ignoreMessage()
 Description: 忽略消息
 *************************************************/
 void IMLinkFriendButton::ignoreMessage()

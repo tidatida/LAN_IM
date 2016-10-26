@@ -26,7 +26,7 @@ IMNetWorkMessageWidget::~IMNetWorkMessageWidget()
 // public slots:------------------------------------
 
 /*************************************************
-Function Name： onClickDeleteDate()
+Function Name: onClickDeleteDate()
 Description:  delete  某日的信息记录
 *************************************************/
 void IMNetWorkMessageWidget::onClickDeleteDate()
@@ -35,7 +35,7 @@ void IMNetWorkMessageWidget::onClickDeleteDate()
 
 
 /*************************************************
-Function Name： onClickDeleteDate()
+Function Name: onClickDeleteDate()
 Description:  delete  某好友信息记录
 *************************************************/
 void IMNetWorkMessageWidget::onClickDeleteOne()
@@ -43,7 +43,7 @@ void IMNetWorkMessageWidget::onClickDeleteOne()
 }
 
 /*************************************************
-Function Name： onClickDeleteAll()
+Function Name: onClickDeleteAll()
 Description:  delete  全部消息记录
 *************************************************/
 void IMNetWorkMessageWidget::onClickDeleteAll()
@@ -52,7 +52,7 @@ void IMNetWorkMessageWidget::onClickDeleteAll()
 
 
 /*************************************************
-Function Name： onClickExportOne()
+Function Name: onClickExportOne()
 Description:  导出当前好友消息记录
 *************************************************/
 void IMNetWorkMessageWidget::onClickExportOne()
@@ -107,7 +107,7 @@ void IMNetWorkMessageWidget::onClickExportOne()
 }
 
 /*************************************************
-Function Name： onClickExportAll()
+Function Name: onClickExportAll()
 Description:  导出所有消息记录
 *************************************************/
 void IMNetWorkMessageWidget::onClickExportAll()
@@ -119,7 +119,7 @@ void IMNetWorkMessageWidget::onClickExportAll()
 }
 
 /*************************************************
-Function Name： onClickGetMessage()
+Function Name: onClickGetMessage()
 Description:  获取消息记录
 *************************************************/
 void IMNetWorkMessageWidget::onClickGetMessage()
@@ -138,7 +138,7 @@ void IMNetWorkMessageWidget::onClickGetMessage()
 }
 
 ///*************************************************
-//Function Name： friendItemClicked()
+//Function Name: friendItemClicked()
 //Description:  单击好友列表项
 //*************************************************/
 //void IMNetWorkMessageWidget::friendItemClicked(const QModelIndex & index)

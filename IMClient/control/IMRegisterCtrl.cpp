@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMRegisterCtrl.cpp
-Author： jet.F.R
-Date： 2014.3.17
-Description： 
-Changes：
+File Name: IMRegisterCtrl.cpp
+Author: jet.F.R
+Date: 2014.3.17
+Description: 
+Changes:
 ********************************************/
 #include "IMRegisterCtrl.h"
 #include "model/IMTcpSocket.h"
@@ -31,11 +31,11 @@ IMRegisterCtrl::~IMRegisterCtrl()
 
 
 /*************************************************
-Function Name： registerAccount()
+Function Name: registerAccount()
 Description: 
-Input： IMUser 
-Output： NULL
-Changes： NULL
+Input: IMUser 
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMRegisterCtrl::registerAccount(const UserInformation &user)
 {
@@ -52,11 +52,11 @@ void IMRegisterCtrl::registerAccount(const UserInformation &user)
 }
 
 /*************************************************
-Function Name： requestRegister()
+Function Name: requestRegister()
 Description: 
-Input： NULL
-Output： NULL
-Changes： NULL
+Input: NULL
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMRegisterCtrl::requestRegister()
 {
@@ -73,11 +73,11 @@ void IMRegisterCtrl::requestRegister()
 }
 
 /*************************************************
-Function Name： readMessage()
+Function Name: readMessage()
 Description: 
-Input： NULL
-Output： NULL
-Changes： NULL
+Input: NULL
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMRegisterCtrl::readMessage()
 {
@@ -102,7 +102,7 @@ void IMRegisterCtrl::readMessage()
         in >> m_user.m_userID >> m_user.m_regDateTime;
         QMessageBox::about(NULL, tr("register result"),
                            tr("%1, hello！ congritulation, register successfully.. "
-                              "your ID is %2, please rememeber. \n register time：%3")
+                              "your ID is %2, please rememeber. \n register time:%3")
                            .arg(m_user.m_nickname,
                                 m_user.m_userID,
                                 m_user.m_regDateTime.
@@ -119,11 +119,11 @@ void IMRegisterCtrl::readMessage()
 
 
 /*************************************************
-Function Name： resetBtnRegister()
+Function Name: resetBtnRegister()
 Description: 
-Input： NULL
-Output： NULL
-Changes： NULL
+Input: NULL
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMRegisterCtrl::resetBtnRegister()
 {

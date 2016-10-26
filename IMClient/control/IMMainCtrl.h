@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMMainCtrl.h
-Author： jet.F.R
-Date： 2014.3.26
-Description： 
-Changes：
+File Name: IMMainCtrl.h
+Author: jet.F.R
+Date: 2014.3.26
+Description: 
+Changes:
 ********************************************/
 #ifndef IMMAINCTRL_H
 #define IMMAINCTRL_H

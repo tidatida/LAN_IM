@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMLoginWidget.cpp
-Author： jet.F.R
-Date： 2014.3.10
-Description： client login interface
-Changes：
+File Name: IMLoginWidget.cpp
+Author: jet.F.R
+Date: 2014.3.10
+Description: client login interface
+Changes:
 ********************************************/
 
 #include "IMLoginWidget.h"
@@ -58,18 +58,18 @@ IMLoginWidget::~IMLoginWidget()
 
 // mark: public slots:-----------------------------------------------------
 /*************************************************
-Function Name： showMainWidget()
+Function Name: showMainWidget()
 Description: 显示mainframe
-Input： NULL
-Output： NULL
-Changes： NULL
+Input: NULL
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMLoginWidget::showMainWidget()
 {
 }
 
 /*************************************************
-Function Name： setLabelStatus()
+Function Name: setLabelStatus()
 Description: 设置状态标签
 *************************************************/
 void IMLoginWidget::setLabelStatus(const QString &mes, bool isLogin,
@@ -131,11 +131,11 @@ void IMLoginWidget::setLabelStatus(const QString &mes, bool isLogin,
 
 
 /*************************************************
-Function Name： getIsAutoLogin()
+Function Name: getIsAutoLogin()
 Description: 获取m_isAutoLogin
-Input： QTimerEvent *event：定时器事件
-Output： bool
-Changes： NULL
+Input: QTimerEvent *event:定时器事件
+Output: bool
+Changes: NULL
 *************************************************/
 bool IMLoginWidget::getIsAutoLogin()
 {
@@ -144,11 +144,11 @@ bool IMLoginWidget::getIsAutoLogin()
 
 
 /*************************************************
-Function Name： onClickbtnLogin()
+Function Name: onClickbtnLogin()
 Description: 单击“登录”按钮
-Input： NULL
-Output： NULL
-Changes： NULL
+Input: NULL
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMLoginWidget::onClickBtnLogin()
 {
@@ -225,11 +225,11 @@ void IMLoginWidget::onClickBtnLogin()
 
 // mark: protected:---------------------------------------------------------
 /*************************************************
-Function Name： timerEvent()
+Function Name: timerEvent()
 Description: process   定时器事件
-Input： QTimerEvent *event：定时器事件
-Output： NULL
-Changes： NULL
+Input: QTimerEvent *event:定时器事件
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMLoginWidget::timerEvent(QTimerEvent *event)
 {
@@ -258,11 +258,11 @@ void IMLoginWidget::timerEvent(QTimerEvent *event)
 // mark: private slots:-----------------------------------------------------
 
 /*************************************************
-Function Name： onClickLabelRegister()
+Function Name: onClickLabelRegister()
 Description: 单击"Register 帐号"标签
-Input： NULL
-Output： NULL
-Changes： NULL
+Input: NULL
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMLoginWidget::onClickLabelRegister()
 {
@@ -273,11 +273,11 @@ void IMLoginWidget::onClickLabelRegister()
 }
 
 /*************************************************
-Function Name： onClickLabelForgotPwd()
+Function Name: onClickLabelForgotPwd()
 Description: 单击“Forget passwd?"标签
-Input： NULL
-Output： NULL
-Changes： NULL
+Input: NULL
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMLoginWidget::onClickLabelForgotPwd()
 {
@@ -299,11 +299,11 @@ void IMLoginWidget::onClickLabelForgotPwd()
 
 
 /*************************************************
-Function Name： onClickCbAutoLogin
+Function Name: onClickCbAutoLogin
 Description: 自动登录选择框改变
-Input： state
-Output： NULL
-Changes： NULL
+Input: state
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMLoginWidget::onClickCbAutoLogin(int state)
 {
@@ -317,11 +317,11 @@ void IMLoginWidget::onClickCbAutoLogin(int state)
 
 // mark private:------------------------------------------------------------
 /*************************************************
-Function Name： initIMLoginWidget()
+Function Name: initIMLoginWidget()
 Description: init 登录界面
-Input： NULL
-Output： NULL
-Changes： NULL
+Input: NULL
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMLoginWidget::initIMLoginWidget()
 {
@@ -441,11 +441,11 @@ void IMLoginWidget::initIMLoginWidget()
 }
 
 /*************************************************
-Function Name： linkSignalWithSlot()
+Function Name: linkSignalWithSlot()
 Description: connection 信号与槽
-Input： NULL
-Output： NULL
-Changes： NULL
+Input: NULL
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMLoginWidget::linkSignalWithSlot()
 {
@@ -471,11 +471,11 @@ void IMLoginWidget::linkSignalWithSlot()
 }
 
 /*************************************************
-Function Name： closeTimer()
+Function Name: closeTimer()
 Description: close 定时器
-Input： NULL
-Output： NULL
-Changes： NULL
+Input: NULL
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMLoginWidget::closeTimer()
 {
@@ -490,11 +490,11 @@ void IMLoginWidget::closeTimer()
 
 
 /*************************************************
-Function Name： setServer()
+Function Name: setServer()
 Description: 设置server 
-Input：  ip地址，端口号
-Output： NULL
-Changes： NULL
+Input:  ip地址，端口号
+Output: NULL
+Changes: NULL
 *************************************************/
 void IMLoginWidget::setServer(const QString & ip, const int port)
 {
@@ -525,11 +525,11 @@ void IMLoginWidget::setServer(const QString & ip, const int port)
 
 
 /*************************************************
-Function Name： 读取自动登录配置文件()
+Function Name: 读取自动登录配置文件()
 Description: 设置server 
-Input：  ip地址，端口号
-Output： NULL
-Changes： NULL
+Input:  ip地址，端口号
+Output: NULL
+Changes: NULL
 *************************************************/
 bool  IMLoginWidget::readAutoLoginFile(const QString & filename)
 {

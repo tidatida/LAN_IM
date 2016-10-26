@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMChatWidget.h
-Author： jet.F.R
-Date： 2014.3.26
-Description： 
-Changes：
+File Name: IMChatWidget.h
+Author: jet.F.R
+Date: 2014.3.26
+Description: 
+Changes:
 ********************************************/
 
 #include "IMChatWidget.h"
@@ -66,7 +66,7 @@ IMChatWidget::~IMChatWidget()
 }
 
 /*************************************************
-Function Name： appendMessageShow()
+Function Name: appendMessageShow()
 Description:  
 *************************************************/
 void IMChatWidget::appendMessageShow(const TalkMessage &mes)
@@ -85,7 +85,7 @@ void IMChatWidget::appendMessageShow(const TalkMessage &mes)
 
 
 /*************************************************
-Function Name： pendingFile()
+Function Name: pendingFile()
 Description:  
 *************************************************/
 void IMChatWidget::pendingFile(const TalkMessage &mes)
@@ -120,7 +120,7 @@ void IMChatWidget::pendingFile(const TalkMessage &mes)
 
 
 /*************************************************
-Function Name： refusedSendFile()
+Function Name: refusedSendFile()
 Description:  
 *************************************************/
 void IMChatWidget::refusedSendFile()
@@ -130,7 +130,7 @@ void IMChatWidget::refusedSendFile()
 }
 
 /*************************************************
-Function Name： pendingVideo()
+Function Name: pendingVideo()
 Description:  
 *************************************************/
 void IMChatWidget::pendingVideo(const TalkMessage &mes)
@@ -181,7 +181,7 @@ void IMChatWidget::pendingVideo(const TalkMessage &mes)
 }
 
 /*************************************************
-Function Name： initIMMainWidget()
+Function Name: initIMMainWidget()
 Description:  
 *************************************************/
 void IMChatWidget::showVideoWidget(const TalkMessage &mes)
@@ -191,7 +191,7 @@ void IMChatWidget::showVideoWidget(const TalkMessage &mes)
 
 
 /*************************************************
-Function Name： showCamera()
+Function Name: showCamera()
 Description:  
 *************************************************/
 void IMChatWidget::showCamera(const TalkMessage &mes)
@@ -207,7 +207,7 @@ void IMChatWidget::showCamera(const TalkMessage &mes)
 
 
 /*************************************************
-Function Name： closeVideoWidget()
+Function Name: closeVideoWidget()
 Description:  
 *************************************************/
 void IMChatWidget::closeVideoWidget()
@@ -215,7 +215,7 @@ void IMChatWidget::closeVideoWidget()
 }
 
 /*************************************************
-Function Name： setChatWidgetStatus()
+Function Name: setChatWidgetStatus()
 Description:  
 *************************************************/
 void IMChatWidget::setLabelStatus()
@@ -239,7 +239,7 @@ void IMChatWidget::setLabelStatus()
 }
 
 /*************************************************
-Function Name： setChatInformation()
+Function Name: setChatInformation()
 Description:  
 *************************************************/
 void IMChatWidget::setChatInformation(const ChatInformation & chatInfo)
@@ -255,7 +255,7 @@ void IMChatWidget::setChatInformation(const ChatInformation & chatInfo)
 }
 
 /*************************************************
-Function Name： setFriendIP()
+Function Name: setFriendIP()
 Description:  
 *************************************************/
 void IMChatWidget::setFriendIP(const QString & ip)
@@ -266,7 +266,7 @@ void IMChatWidget::setFriendIP(const QString & ip)
 }
 
 /*************************************************
-Function Name： closeEvent()
+Function Name: closeEvent()
 Description:  
 *************************************************/
 void IMChatWidget::closeEvent(QCloseEvent *event)
@@ -297,7 +297,7 @@ void IMChatWidget::closeEvent(QCloseEvent *event)
 
 
 /*************************************************
-Function Name： initIMChatWidget()
+Function Name: initIMChatWidget()
 Description:  
 *************************************************/
 void IMChatWidget::initIMChatWidget()
@@ -438,7 +438,7 @@ void IMChatWidget::initIMChatWidget()
 
 
 /*************************************************
-Function Name： linkSignalWithSlot()
+Function Name: linkSignalWithSlot()
 Description:  connect signal with slot
 *************************************************/
 void IMChatWidget::linkSignalWithSlot()
@@ -487,7 +487,7 @@ void IMChatWidget::linkSignalWithSlot()
 }
 
 /*************************************************
-Function Name： setWidgetToolBtn()
+Function Name: setWidgetToolBtn()
 Description:  set panel picture
 *************************************************/
 void IMChatWidget::setWidgetToolBtn()
@@ -596,7 +596,7 @@ void IMChatWidget::setWidgetToolBtn()
 }
 
 /*************************************************
-Function Name： saveHistoryMessage()
+Function Name: saveHistoryMessage()
 Description:  保存历史记录
 *************************************************/
 void IMChatWidget::saveHistoryMessage()
@@ -610,7 +610,7 @@ void IMChatWidget::saveHistoryMessage()
 }
 
 /*************************************************
-Function Name： readHistoryMessage()
+Function Name: readHistoryMessage()
 Description:  
 *************************************************/
 void IMChatWidget::readHistoryMessage()
@@ -628,7 +628,7 @@ void IMChatWidget::readHistoryMessage()
 
 // private slots:-----------------------------------------------------
 /*************************************************
-Function Name： onClickBtnVideo()
+Function Name: onClickBtnVideo()
 Description:  
 *************************************************/
 void IMChatWidget::onClickBtnVideo()
@@ -654,7 +654,7 @@ void IMChatWidget::onClickBtnVideo()
 
 
 /*************************************************
-Function Name： onClickBtnVoice()
+Function Name: onClickBtnVoice()
 Description:  voice
 *************************************************/
 void IMChatWidget::onClickBtnVoice()
@@ -663,7 +663,7 @@ void IMChatWidget::onClickBtnVoice()
 
 
 /*************************************************
-Function Name： onClickBtnFile()
+Function Name: onClickBtnFile()
 Description:  send file
 *************************************************/
 void IMChatWidget::onClickBtnFile()
@@ -700,7 +700,7 @@ void IMChatWidget::onClickBtnFile()
 
 
 /*************************************************
-Function Name： onClickBtnSpace()
+Function Name: onClickBtnSpace()
 Description:   
 *************************************************/
 void IMChatWidget::onClickBtnSpace()
@@ -709,7 +709,7 @@ void IMChatWidget::onClickBtnSpace()
 
 
 /*************************************************
-Function Name： setInputTextFont()
+Function Name: setInputTextFont()
 Description:   
 *************************************************/
 void IMChatWidget::setInputTextFont(const QFont &font)
@@ -719,7 +719,7 @@ void IMChatWidget::setInputTextFont(const QFont &font)
 }
 
 /*************************************************
-Function Name： setInputTextSize()
+Function Name: setInputTextSize()
 Description:   
 *************************************************/
 void IMChatWidget::setInputTextSize(const QString &size)
@@ -730,7 +730,7 @@ void IMChatWidget::setInputTextSize(const QString &size)
 
 
 /*************************************************
-Function Name： onClickBtnBold()
+Function Name: onClickBtnBold()
 Description:   
 *************************************************/
 void IMChatWidget::onClickBtnBold(bool checked)
@@ -743,7 +743,7 @@ void IMChatWidget::onClickBtnBold(bool checked)
 }
 
 /*************************************************
-Function Name： onClickBtnItalic()
+Function Name: onClickBtnItalic()
 Description:    
 *************************************************/
 void IMChatWidget::onClickBtnItalic(bool checked)
@@ -754,7 +754,7 @@ void IMChatWidget::onClickBtnItalic(bool checked)
 
 
 /*************************************************
-Function Name： onClickBtnUnderline()
+Function Name: onClickBtnUnderline()
 Description:   
 *************************************************/
 void IMChatWidget::onClickBtnUnderline(bool checked)
@@ -764,7 +764,7 @@ void IMChatWidget::onClickBtnUnderline(bool checked)
 }
 
 /*************************************************
-Function Name： onClickBtnColor()
+Function Name: onClickBtnColor()
 Description:   
 *************************************************/
 void IMChatWidget::onClickBtnColor()
@@ -782,7 +782,7 @@ void IMChatWidget::onClickBtnColor()
 }
 
 /*************************************************
-Function Name： onClickBtnClear()
+Function Name: onClickBtnClear()
 Description:  
 *************************************************/
 void IMChatWidget::onClickBtnClear()
@@ -793,7 +793,7 @@ void IMChatWidget::onClickBtnClear()
 
 
 /*************************************************
-Function Name： onClickBtnHistory()
+Function Name: onClickBtnHistory()
 Description:  
 *************************************************/
 void IMChatWidget::onClickBtnHistory(bool checked)
@@ -806,7 +806,7 @@ void IMChatWidget::onClickBtnHistory(bool checked)
 }
 
 /*************************************************
-Function Name： currentFormatChanged()
+Function Name: currentFormatChanged()
 Description:  
 *************************************************/
 void IMChatWidget::currentFormatChanged(const QTextCharFormat &format)
@@ -825,7 +825,7 @@ void IMChatWidget::currentFormatChanged(const QTextCharFormat &format)
 }
 
 /*************************************************
-Function Name： onClickBtnClocse()
+Function Name: onClickBtnClocse()
 Description:  
 *************************************************/
 void IMChatWidget::onClickBtnClose()
@@ -835,7 +835,7 @@ void IMChatWidget::onClickBtnClose()
 
 
 /*************************************************
-Function Name： onClickBtnSend()
+Function Name: onClickBtnSend()
 Description:  
 *************************************************/
 void IMChatWidget::onClickBtnSend()

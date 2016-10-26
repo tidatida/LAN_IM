@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMTcpSocket.h
-Author： jet.F.R
-Date： 2014.3.10
-Description： 
-Changes：
+File Name: IMTcpSocket.h
+Author: jet.F.R
+Date: 2014.3.10
+Description: 
+Changes:
 ********************************************/
 
 #ifndef IMTCPSOCKET_H
@@ -13,7 +13,7 @@ Changes：
 #include "IMConstant.h"
 
 /*************************************************
-Class Name： IMTcpSocket
+Class Name: IMTcpSocket
 Description: 
 *************************************************/
 class IMTcpSocket : public QTcpSocket

@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMUser.cpp
-Author： jet.F.R
-Date： 2014.3.17
-Description： 
-Changes：
+File Name: IMUser.cpp
+Author: jet.F.R
+Date: 2014.3.17
+Description: 
+Changes:
 ********************************************/
 
 #include "IMUser.h"
@@ -37,11 +37,11 @@ IMUser::IMUser(QString id, const QString &nick, const QString &pwd, const QStrin
 
 
 /*************************************************
-Function Name： getXX()
+Function Name: getXX()
 Description: 
-Input： NULL
-Output：**(QString / int / QDateTime)
-Changes： NULL
+Input: NULL
+Output:**(QString / int / QDateTime)
+Changes: NULL
 *************************************************/
 
 /********************* bgein getXX()****************************/

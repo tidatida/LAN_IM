@@ -32,7 +32,7 @@ IMMessageWidget::~IMMessageWidget()
 }
 
 /*************************************************
-Function Name： setListModelGroup()
+Function Name: setListModelGroup()
 Description: 设置 分组 的model
 *************************************************/
 void IMMessageWidget::setListModelGroup(const QStringList & groupList)
@@ -42,7 +42,7 @@ void IMMessageWidget::setListModelGroup(const QStringList & groupList)
 
 
 /*************************************************
-Function Name： setListModelGroup()
+Function Name: setListModelGroup()
 Description: 设置 分组 的model
 *************************************************/
 void IMMessageWidget::setListModelGroup()
@@ -52,7 +52,7 @@ void IMMessageWidget::setListModelGroup()
 }
 
 /*************************************************
-Function Name： setListModelFriend()
+Function Name: setListModelFriend()
 Description: 设置 好友 的model
 *************************************************/
 void IMMessageWidget::setListModelFriend(const QStringList & friendList)
@@ -61,7 +61,7 @@ void IMMessageWidget::setListModelFriend(const QStringList & friendList)
 }
 
 /*************************************************
-Function Name： setListModelFriend()
+Function Name: setListModelFriend()
 Description: 设置 好友 的model
 *************************************************/
 void IMMessageWidget::setListModelFriend(const QString & groupName)
@@ -72,7 +72,7 @@ void IMMessageWidget::setListModelFriend(const QString & groupName)
 
 
 /*************************************************
-Function Name： setShowMode()
+Function Name: setShowMode()
 Description: 设置显示的模式
 *************************************************/
 void IMMessageWidget::setShowMode(Mode mode)
@@ -97,7 +97,7 @@ void IMMessageWidget::setShowMode(Mode mode)
 }
 
 /*************************************************
-Function Name： setMessageShow()
+Function Name: setMessageShow()
 Description: 设置显示的消息
 *************************************************/
 void IMMessageWidget::setMessageShow(const QVector<TalkMessage> & mesVec)
@@ -121,7 +121,7 @@ void IMMessageWidget::setMessageShow(const QVector<TalkMessage> & mesVec)
 }
 
 /*************************************************
-Function Name： setShowMode()
+Function Name: setShowMode()
 Description: 组列表
 *************************************************/
 void IMMessageWidget::groupItemClicked(const QModelIndex & index)
@@ -131,7 +131,7 @@ void IMMessageWidget::groupItemClicked(const QModelIndex & index)
 
 
 /*************************************************
-Function Name： friendItemClicked()
+Function Name: friendItemClicked()
 Description:  单击好友列表项
 *************************************************/
 void IMMessageWidget::friendItemClicked(const QModelIndex & index)
@@ -146,7 +146,7 @@ void IMMessageWidget::friendItemClicked(const QModelIndex & index)
 // private:-------------------------------------------------
 
 /*************************************************
-Function Name： initIMMessageWidget()
+Function Name: initIMMessageWidget()
 Description: init 
 *************************************************/
 void IMMessageWidget::initIMMessageWidget()
@@ -254,7 +254,7 @@ void IMMessageWidget::initIMMessageWidget()
 
 
 /*************************************************
-Function Name： linkSignalWithSlot
+Function Name: linkSignalWithSlot
 Description:  connection 信号与槽
 *************************************************/
 void IMMessageWidget::linkSignalWithSlot()

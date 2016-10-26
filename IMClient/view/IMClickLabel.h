@@ -1,9 +1,9 @@
 /*********************************************
-File Name： IMClickLabel.h
-Author： jet.F.R
-Date： 2014.3.10
-Description： 
-Changes：
+File Name: IMClickLabel.h
+Author: jet.F.R
+Date: 2014.3.10
+Description: 
+Changes:
 ********************************************/
 
 #ifndef IMCLICKLABEL_H
@@ -13,7 +13,7 @@ Changes：
 
 
 /*************************************************
-Class Name： IMClickLabel
+Class Name: IMClickLabel
 Description: 
 *************************************************/
 class IMClickLabel : public QLabel

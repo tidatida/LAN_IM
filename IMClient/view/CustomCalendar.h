@@ -5,7 +5,7 @@
 #include <QTextCharFormat>
 
 /*************************************************
-Class Name： CustomCalendar
+Class Name: CustomCalendar
 Description: a custom calendar
 *************************************************/
 class CustomCalendar : public QCalendarWidget

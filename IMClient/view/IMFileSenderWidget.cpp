@@ -26,7 +26,7 @@ IMFileSenderWidget::~IMFileSenderWidget()
 }
 
 /*************************************************
-Function Name： initSender()
+Function Name: initSender()
 Description: init 
 *************************************************/
 void IMFileSenderWidget::initSender()
@@ -41,7 +41,7 @@ void IMFileSenderWidget::initSender()
 }
 
 /*************************************************
-Function Name： showRefused()
+Function Name: showRefused()
 Description: 被拒绝时触发  聊天窗体调用
 *************************************************/
 void IMFileSenderWidget::showRefused()
@@ -53,7 +53,7 @@ void IMFileSenderWidget::showRefused()
 
 
 /*************************************************
-Function Name： startSending()
+Function Name: startSending()
 Description: init 文件server ，监听对方
 *************************************************/
 bool IMFileSenderWidget::startSending(const QString & file)
@@ -80,7 +80,7 @@ bool IMFileSenderWidget::startSending(const QString & file)
 
 
 /*************************************************
-Function Name： isStopped()
+Function Name: isStopped()
 Description: 是否停止
 *************************************************/
 bool IMFileSenderWidget::isStopped()
@@ -91,7 +91,7 @@ bool IMFileSenderWidget::isStopped()
 // private:-----------------------------------------------------------------
 
 /*************************************************
-Function Name： initIMFileSenderWidget()
+Function Name: initIMFileSenderWidget()
 Description: init 文件发送界面
 *************************************************/
 void IMFileSenderWidget::initIMFileSenderWidget()
@@ -131,7 +131,7 @@ void IMFileSenderWidget::initIMFileSenderWidget()
 // private slots:-------------------------------------------------------
 
 /*************************************************
-Function Name： onClickBtnCancel()
+Function Name: onClickBtnCancel()
 Description: 取消发送
 *************************************************/
 void IMFileSenderWidget::onClickBtnCancel()
@@ -147,7 +147,7 @@ void IMFileSenderWidget::onClickBtnCancel()
 }
 
 /*************************************************
-Function Name： onClickBtnClose()
+Function Name: onClickBtnClose()
 Description: 点击退出
 *************************************************/
 void IMFileSenderWidget::onClickBtnClose()
@@ -158,7 +158,7 @@ void IMFileSenderWidget::onClickBtnClose()
 
 
 /*************************************************
-Function Name： sendMessage()
+Function Name: sendMessage()
 Description: 当有新connection 时触发 发送文件
 *************************************************/
 void IMFileSenderWidget::sendMessage()
@@ -195,7 +195,7 @@ void IMFileSenderWidget::sendMessage()
 
 
 /*************************************************
-Function Name： updateClientProgress()
+Function Name: updateClientProgress()
 Description: 根据发送情况实时更新进度条
 *************************************************/
 void IMFileSenderWidget::updateClientProgress(qint64 numBytes)
@@ -214,7 +214,7 @@ void IMFileSenderWidget::updateClientProgress(qint64 numBytes)
 
    float useTime = m_time.elapsed();
    double speed = m_bytesWritten / useTime;
-   m_labelFileStatus->setText(tr("已发送 %1MB (%2MB/s) \n共%3MB 已用时:%4秒\n估计剩余时间：%5秒")
+   m_labelFileStatus->setText(tr("已发送 %1MB (%2MB/s) \n共%3MB 已用时:%4秒\n估计剩余时间:%5秒")
                                   .arg(m_bytesWritten / (1024*1024))      // 已发送
                                   .arg(speed*1000/(1024*1024),0,'f',2)  // 速度
                                   .arg(m_totalBytes / (1024 * 1024))      // 总大小
@@ -229,7 +229,7 @@ void IMFileSenderWidget::updateClientProgress(qint64 numBytes)
 
 
 /*************************************************
-Function Name： showClosedConnect()
+Function Name: showClosedConnect()
 Description:  链接断开
 *************************************************/
 void IMFileSenderWidget::showClosedConnect()
