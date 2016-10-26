@@ -412,11 +412,7 @@ void IMMainWidget::leaveDiscussion(const QString & memberID, const QString & dis
 }
 /*************************************************
 Function Name:leaveFlock
-<<<<<<< HEAD
-Description: add 好友（发送至server ）
-=======
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::addFriend(const QString friendID)
 {
@@ -459,11 +455,7 @@ void IMMainWidget::addFriend(const QString friendID)
 
 /*************************************************
 Function Name:changeFlockMemberRemark
-<<<<<<< HEAD
-Description: modify群成员名片（发送至server ）
-=======
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::changeFlockMemberRemark(const TempStrings & tmpStr)
 {
@@ -710,11 +702,7 @@ void IMMainWidget::exportLocalMessageAll()
 
 /*************************************************
 Function Name:deleteLocalMessage()
-<<<<<<< HEAD
-Description: delete  单个好友消息记录
-=======
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::deleteLocalMessage(const int index)
 {
@@ -740,11 +728,7 @@ void IMMainWidget::deleteLocalMessage(const int index)
 
 /*************************************************
 Function Name:deleteLocalMessageAll()
-<<<<<<< HEAD
-Description: delete  所有消息记录
-=======
 Description: delete
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::deleteLocalMessageAll()
 {
@@ -860,11 +844,7 @@ void IMMainWidget::getNetWorkHistoryMessage(const int index, const QDate &date)
 
 /*************************************************
 Function Name:getFriendsInformation()
-<<<<<<< HEAD
-Description: 获取好友信息列表（发送至server ）
-=======
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::getFriendsInformation()
 {
@@ -874,11 +854,7 @@ void IMMainWidget::getFriendsInformation()
 
 /*************************************************
 Function Name:getFlocksInformation()
-<<<<<<< HEAD
-Description: 获取群信息列表（发送至server ）
-=======
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::getFlocksInformation()
 {
@@ -888,11 +864,7 @@ void IMMainWidget::getFlocksInformation()
 
 /*************************************************
 Function Name:getDiscussionsInformation()
-<<<<<<< HEAD
-Description: 获取讨论组信息列表（发送至server ）
-=======
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::getDiscussionsInformation()
 {
@@ -902,11 +874,7 @@ void IMMainWidget::getDiscussionsInformation()
 
 /*************************************************
 Function Name:getLatestMessage()
-<<<<<<< HEAD
-Description: 获取本地最近消息（访问本地database ）
-=======
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::getLatestMessage()
 {
@@ -1006,11 +974,7 @@ void IMMainWidget::setDiscussionListWidget(const QVector<DiscussionInformation> 
 
 /*************************************************
 Function Name:addFriendButton
-<<<<<<< HEAD
-Description: add 好友按钮
-=======
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 bool IMMainWidget::addFriendButton(const FriendInformation & friInfo)
 {
@@ -1048,11 +1012,7 @@ bool IMMainWidget::addFriendButton(const FriendInformation & friInfo)
 
 /*************************************************
 Function Name:addFlockButton
-<<<<<<< HEAD
-Description: add 群按钮
-=======
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 bool IMMainWidget::addFlockButton(const FlockInformation & flcokInfo)
 {
@@ -1070,11 +1030,7 @@ bool IMMainWidget::addFlockButton(const FlockInformation & flcokInfo)
 
 /*************************************************
 Function Name:addDiscussionButton
-<<<<<<< HEAD
-Description: add 讨论组按钮
-=======
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 
 bool IMMainWidget::addDiscussionButton(const DiscussionInformation & disInfo)
@@ -1498,11 +1454,7 @@ void IMMainWidget::setFriendRemark(const TempStrings& tempStr)
 
 /*************************************************
 Function Name:deleteFriend
-<<<<<<< HEAD
-Description: 已delete  好友
-=======
 Description: 已deletefriend
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::deletedFriend(const QString & myID, const QString & friendID,
                                  const QString & groupName)
@@ -1544,11 +1496,7 @@ void IMMainWidget::deletedFriend(const QString & myID, const QString & friendID,
 
 /*************************************************
 Function Name:dropedFlock
-<<<<<<< HEAD
-Description: 已delete  群
-=======
 Description: 已deleteGroup
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::dropedFlock(const QString & flockID)
 {
@@ -1580,11 +1528,7 @@ void IMMainWidget::dropedFlock(const QString & flockID)
 
 /*************************************************
 Function Name:dropedDiscussion
-<<<<<<< HEAD
-Description: 已delete  讨论组
-=======
 Description: 已deletediscuss group
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::dropedDiscussion(const QString & discussionID)
 
@@ -1732,11 +1676,7 @@ void IMMainWidget::leavedDiscussion(const QString & memberID,
 
 /*************************************************
 Function Name:createFlockSuccess
-<<<<<<< HEAD
-Description: create 群成功
-=======
 Description: createGroupsuccess
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::createFlockSuccess(const FlockInformation & flock)
 {
@@ -1758,11 +1698,7 @@ void IMMainWidget::createFlockSuccess(const FlockInformation & flock)
 
 /*************************************************
 Function Name:createDiscussionSuccess
-<<<<<<< HEAD
-Description: create 讨论组成功
-=======
 Description: creatediscuss groupsuccess
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::createDiscussionSuccess(const DiscussionInformation & discussion)
 {
@@ -1841,11 +1777,7 @@ void IMMainWidget::onClickSearchFriend()
 
 /*************************************************
 Function Name:onClickAddFriend
-<<<<<<< HEAD
-Description: add 好友
-=======
 Description: Add friend
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::onClickAddFriend()
 {
@@ -1866,11 +1798,7 @@ void IMMainWidget::onClickAddFriend()
 
 /*************************************************
 Function Name:addFlock
-<<<<<<< HEAD
-Description: add 群
-=======
 Description: Add Group
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::onClickAddFlock()
 {
@@ -1921,11 +1849,7 @@ void IMMainWidget::onClickAddFlock()
 
 /*************************************************
 Function Name:onClickChangePwd
-<<<<<<< HEAD
-Description: modify passwd
-=======
 Description: modify password
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::onClickChangePwd()
 {
@@ -1990,11 +1914,7 @@ void IMMainWidget::onClickChangePwd()
 
 /*************************************************
 Function Name:createFlock
-<<<<<<< HEAD
-Description: create 群
-=======
 Description: createGroup
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::createFlock()
 {
@@ -2029,11 +1949,7 @@ void IMMainWidget::createFlock()
 
 /*************************************************
 Function Name:createDiscussion
-<<<<<<< HEAD
-Description: create 讨论组
-=======
 Description: creatediscuss group
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::createDiscussion()
 {
@@ -2256,11 +2172,7 @@ void IMMainWidget::createBox()
 
 /*************************************************
 Function Name:removeLinkButton
-<<<<<<< HEAD
-Description: delete  新消息connection 按钮
-=======
 Description: deletenew msg连接按钮
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::removeLinkButton(const QString & id)
 {
@@ -2280,11 +2192,7 @@ void IMMainWidget::removeLinkButton(const QString & id)
 
 /*************************************************
 Function Name:deleteAllLinkButton
-<<<<<<< HEAD
-Description: delete  所有消息connection 按钮
-=======
 Description: delete所有msg 连接按钮
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::removeAllLinkButton()
 {
@@ -2366,11 +2274,7 @@ void IMMainWidget::timerEvent(QTimerEvent *event)
 
 /*************************************************
 Function Name:closeWindow
-<<<<<<< HEAD
-Description: close 主窗口
-=======
 Description: 关闭主Window
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::closeWindow()
 {
@@ -2382,11 +2286,7 @@ void IMMainWidget::closeWindow()
 
 /*************************************************
 Function Name:closeAllWindows
-<<<<<<< HEAD
-Description: close 所有别的窗口
-=======
 Description: 关闭所有别的Window
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::closeAllWindows()
 {
@@ -2467,11 +2367,7 @@ void IMMainWidget::closeAllWindows()
 
 /*************************************************
 Function Name:createChatRoom
-<<<<<<< HEAD
-Description: create 聊天室
-=======
 Description: create Chat 室
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::getMyInformation()
 {
@@ -2531,11 +2427,7 @@ Description:
 
 /*************************************************
 Function Name:changeStatus
-<<<<<<< HEAD
-Description: 改变个人状态（发送至server ）
-=======
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::changeMyStatus(const int index)
 {
@@ -2570,11 +2462,7 @@ void IMMainWidget::changeMyStatus(const int index)
 
 /*************************************************
 Function Name:receiveFriendRequest
-<<<<<<< HEAD
-Description: 接收并且process   好友的request 
-=======
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::receiveFriendRequest(const TalkMessage & mes,
                                         const UserInformation & friendInf)
@@ -2637,11 +2525,7 @@ void IMMainWidget::receiveFriendRequest(const TalkMessage & mes,
 
 /*************************************************
 Function Name:receiveFlockRequest
-<<<<<<< HEAD
-Description: 接收并且process   群的request 
-=======
 Description: Receive and 且处理Group的请求
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
                                        const FlockMember & member,
@@ -2759,11 +2643,7 @@ void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
 
 /*************************************************
 Function Name:receiveDiscussionRequest
-<<<<<<< HEAD
-Description: 接收并process   讨论组request 
-=======
 Description: Receive and 处理discuss group请求
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::receiveDiscussionRequest(const TalkMessage & mes,
                                             const DiscussionMember & member,
@@ -2883,11 +2763,7 @@ void IMMainWidget::renameBox(const QString & title)
 // mark: private:--------------------------------------------------
 /*************************************************
 Function Name:initIMMainWidget
-<<<<<<< HEAD
-Description: init 
-=======
 Description: init
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::initIMMainWidget()
 {
@@ -3103,11 +2979,7 @@ background: white;");
 
 /*************************************************
 Function Name:linkSignalWithSlot
-<<<<<<< HEAD
-Description:  connection 信号与槽
-=======
 Description:
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget::linkSignalWithSlot()
 {
@@ -3243,11 +3115,7 @@ void IMMainWidget::clearContainers()
 
 /*************************************************
 Function Name:creatMenu
-<<<<<<< HEAD
-Description: create 右键菜单
-=======
 Description: create
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 *************************************************/
 void IMMainWidget:: creatMenu()
 {
