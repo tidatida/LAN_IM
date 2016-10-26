@@ -52,7 +52,7 @@ public:
     // close 聊天窗口
     void closeChatRoom();
 
-    // 设置button显示信息
+    //  set button显示信息
     void setButtonStatus();
 
     // delete  群成员
@@ -85,7 +85,7 @@ public slots:
     //聊天窗口close 了
     void chatRoomQuit();
 
-    // 设置成员列 table 
+    //  set 成员列 table 
     void setFlockMemberList(const QVector<FlockMember> &);
 
 protected:

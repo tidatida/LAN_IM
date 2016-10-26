@@ -60,7 +60,7 @@ public:
     void openChatRoom();
     // close 聊天窗口
     void closeChatRoom();
-    // 设置button显示信息
+    //  set button显示信息
     void setButtonStatus();
 
 signals:
@@ -70,7 +70,7 @@ public slots:
     //  right button  click  button 
     void onClickRightButton(/*const QPoint &*/);
 
-    // 发送即时消息
+    // 发送 Instant 消息
     void onClickSendMessage();
     //  发送电子邮件
     void onClickSendMail();
@@ -99,7 +99,7 @@ private:
     // 将好友状态从数字形式转换为字符串形式
     QString getDiscussionStatusFromInt(const int n) const;
 
-    // 将好友在线状态从数字形式转换为字符串形式
+    // 将好友 online 状态从数字形式转换为字符串形式
     QString getLoginStatusFromInt(const int n) const;
     // create  right button  menu 
     void creatMenu(/*const QList<QString> *groutList*/);
@@ -108,7 +108,7 @@ private:
 private:
     DiscussionMember m_info;
     QString m_strDiscussionStatus; // 身份
-    QString m_strLoginStatus; // 在线状态
+    QString m_strLoginStatus; //  online 状态
     // 聊天窗口是否open 了
     bool m_isOpen;
 

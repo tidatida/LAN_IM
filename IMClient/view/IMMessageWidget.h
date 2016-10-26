@@ -23,16 +23,16 @@ public:
 
     virtual ~IMMessageWidget();
 
-    // 设置  box  ,s model
+    //  set   box  ,s model
     void setListModelGroup(const QStringList & groupList);
     void setListModelGroup();
 
-    // 设置 好友 ,s model
+    //  set  好友 ,s model
     void setListModelFriend(const QStringList & friendList);
     void setListModelFriend(const QString & groupName);
 
     enum Mode{ LOCAL, NETWORK};
-    // 设置模式
+    //  set 模式
     void setShowMode(Mode mode);
 
     void setMessageShow(const QVector<TalkMessage> & mesVec);

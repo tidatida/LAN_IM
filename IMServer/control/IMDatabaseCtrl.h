@@ -104,12 +104,12 @@ public:
                                DiscussionMember & discussionMember);
 
 
-    //  get 群 main 帐 number 
+    //  get 群 main  account  
     bool searchFlockHost(const QString & flockID, QString & hostID);
     // add 群成员
     bool addFlockMember(const QString & flockID, const QString & memberID,
                         const int status = FLOCK_MEMBER);
-    //  get  box 长帐 number 
+    //  get  box 长 account  
     bool searchDiscussionHost(const QString & discussionID, QString & hostID);
     // add 讨论 box 成员
     bool addDiscussionMember(const QString & discussionID, const QString & memberID,
@@ -189,7 +189,7 @@ public:
     /************消息管理*********************/
     // 存储历史记录
     bool addHistoryMessage(const TalkMessage &);
-    // 存储离线记录
+    // 存储 offline 记录
     bool addOfflineMessage(const TalkMessage &);
     //  get user ,s 某日 and 某位好友,s 聊天记录
     int searchHistoryMessageOneFriendOneDate(const QString & myID,

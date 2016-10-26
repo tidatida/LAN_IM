@@ -51,7 +51,7 @@ void IMToolItem::removeItem(QWidget *item)
 
 /*************************************************
 Function Name: setTile()
-Description:  设置标题
+Description:   set 标题
 *************************************************/
 void IMToolItem::setTile(const QString & title)
 {

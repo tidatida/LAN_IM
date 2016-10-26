@@ -22,9 +22,9 @@ public:
     IMFileReceiverWidget(QWidget *parent = 0);
     ~IMFileReceiverWidget();
 
-    // 设置文件 name 
+    //  set 文件 name 
     void setFileName(const QString & fileName);
-    // 设置server 地址并connection server 
+    //  set server 地址并connection server 
     void connectToHost(const QHostAddress & address);
     
 signals:

@@ -479,16 +479,16 @@ void IMDiscussionChatWidget::linkSignalWithSlot()
 
 /*************************************************
 Function Name: setWidgetToolBtn()
-Description:  设置面板图标
+Description:   set 面板图标
 *************************************************/
 void IMDiscussionChatWidget::setWidgetToolBtn()
 {
     m_cbFont = new QFontComboBox;
     m_cbFont->setToolTip(tr("字体"));
-    m_cbFont->setStatusTip(tr("设置字体"));
+    m_cbFont->setStatusTip(tr(" set 字体"));
     m_cbSize = new QComboBox;
     m_cbSize->setToolTip(tr("大小"));
-    m_cbSize->setStatusTip(tr("设置字体大小"));
+    m_cbSize->setStatusTip(tr(" set 字体大小"));
     for (int i=9;  i<=22; ++i)
     {
         m_cbSize->addItem(QString::number(i));
@@ -527,7 +527,7 @@ void IMDiscussionChatWidget::setWidgetToolBtn()
     m_toolBtnColor->setAutoRaise(true);
     m_toolBtnColor->setIconSize(QSize(CHAT_WIDGET_TOOL_SMALL_SIZE,CHAT_WIDGET_TOOL_SMALL_SIZE));
     m_toolBtnColor->setToolTip(tr("颜色"));
-    m_toolBtnColor->setStatusTip(tr("设置颜色"));
+    m_toolBtnColor->setStatusTip(tr(" set 颜色"));
 
     m_toolBtnClear = new QToolButton;
     m_toolBtnClear->setIcon(QIcon(":/images/clear.png"));

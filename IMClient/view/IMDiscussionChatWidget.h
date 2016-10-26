@@ -33,12 +33,12 @@ public:
 
     // add 讨论 box 成员发来,s 信息
     void appendMessageShow(const TalkMessage &mes);
-    // 设置聊天窗口显示信息
+    //  set 聊天窗口显示信息
     void setLabelStatus();
-    // 设置讨论 box 信息
+    //  set 讨论 box 信息
     void setChatInformation(const DiscussionInformation & discussion);
 
-    // 设置成员 name 片
+    //  set 成员 name 片
     //void setMemberRemark(const TempStrings &);
 
     //  get 群信息
@@ -60,7 +60,7 @@ signals:
 
 public slots:
 
-    // 设置群成员列 table 
+    //  set 群成员列 table 
     void setDiscussionMemberList(const QVector<DiscussionMember> & memberList);
 
 protected:

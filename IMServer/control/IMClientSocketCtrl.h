@@ -32,7 +32,7 @@ signals:
 //    void havaNewClientSocket(IMClientSocket *);
     // request serverprocess   
     void sendSignal(const SaveTmpInformation &temp);
-    // user 登录
+    // user  Login 
     void userLoginSignal(const UserInformation &user);
     //user 断开connection 了
     void deleteSignal(const QString &acc);
@@ -59,7 +59,7 @@ private:
 //    void readMessage();
 
 private:
-//    // 检测登录信息
+//    // 检测 Login 信息
 //    bool checkUser(const QString & id,const QString & pwd,
 //                   const QDateTime &);
 

@@ -624,8 +624,8 @@ Changes: NULL
 // mark: private-------------------------------------------------------------
 /*************************************************
 Function Name: checkLogin()
-Description: 检测user 登录信息
-Input: QString id:user 帐 number id ，QString pwd:user  passwd
+Description: 检测user  Login 信息
+Input: QString id:user  account  id ，QString pwd:user  passwd
 Output: bool : 检测信息
 Changes: NULL
 *************************************************/

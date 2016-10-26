@@ -25,7 +25,7 @@ IMFileReceiverWidget::~IMFileReceiverWidget()
 
 /*************************************************
 Function Name: setFileName()
-Description: 设置文件 name 
+Description:  set 文件 name 
 *************************************************/
 void IMFileReceiverWidget::setFileName(const QString & fileName)
 {
@@ -37,7 +37,7 @@ void IMFileReceiverWidget::setFileName(const QString & fileName)
 
 /*************************************************
 Function Name: connectToHost()
-Description: 设置server 地址并connection server 
+Description:  set server 地址并connection server 
 *************************************************/
 void IMFileReceiverWidget::connectToHost(const QHostAddress & address)
 {

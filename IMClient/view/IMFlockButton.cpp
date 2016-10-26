@@ -120,7 +120,7 @@ void IMFlockButton::closeChatRoom()
 
 /*************************************************
 Function Name: setButtonStatus()
-Description: 设置button显示信息
+Description:  set button显示信息
 *************************************************/
 void IMFlockButton::setButtonStatus()
 {
@@ -272,7 +272,7 @@ void IMFlockButton::onClickAddMemberFlock()
 {
     bool isOk = false;
     QString memberID = QInputDialog::getText(NULL, "add 群成员",
-                                           " please  input 对方帐 number ",
+                                           " please  input 对方 account  ",
                                            QLineEdit::Normal,
                                            "",
                                            &isOk);
@@ -344,7 +344,7 @@ void IMFlockButton::chatRoomQuit()
 
 /*************************************************
 Function Name: setFlockMemeberList()
-Description: 设置群成员列 table 
+Description:  set 群成员列 table 
 *************************************************/
 void IMFlockButton::setFlockMemberList(const QVector<FlockMember> & memberList)
 {

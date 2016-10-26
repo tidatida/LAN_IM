@@ -26,7 +26,7 @@ IMRegisterWidget::IMRegisterWidget(QWidget *parent) :
 {
     initIMRegisterWidget();
     linkSignalWithSlot();
-    setWindowTitle(tr("Register IM帐 number "));
+    setWindowTitle(tr("Register IM account  "));
 }
 
 IMRegisterWidget::~IMRegisterWidget()
@@ -243,7 +243,7 @@ void IMRegisterWidget::initIMRegisterWidget()
     m_labelDesSex = new QLabel(tr("*  your ,s 性 other "));
     m_labelDesBirthday = new QLabel(tr("*  your ,s 出生日"));
     m_labelDesQuestion = new QLabel(tr("* used to   找回 passwd"));
-    m_labelDesAnswer = new QLabel(tr("* 一定记住！！"));
+    m_labelDesAnswer = new QLabel(tr("* 一定 remember ！！"));
     m_labelDesName = new QLabel(tr("   your ,s 真实姓 name "));
     m_labelDesPhone = new QLabel(tr("   your ,s 手机 number 码"));
     m_labelDesAddress = new QLabel(tr("   your ,s 地址"));

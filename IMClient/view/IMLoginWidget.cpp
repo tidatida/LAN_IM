@@ -36,7 +36,7 @@ IMLoginWidget::IMLoginWidget(QWidget *parent)
 {
     initIMLoginWidget();
     linkSignalWithSlot();
-    setWindowTitle(tr("登录IM"));
+    setWindowTitle(tr(" Login IM"));
 }
 
 IMLoginWidget::~IMLoginWidget()
@@ -70,7 +70,7 @@ void IMLoginWidget::showMainWidget()
 
 /*************************************************
 Function Name: setLabelStatus()
-Description: 设置状态标签
+Description:  set 状态标签
 *************************************************/
 void IMLoginWidget::setLabelStatus(const QString &mes, bool isLogin,
                                    const UserInformation *me)
@@ -122,7 +122,7 @@ void IMLoginWidget::setLabelStatus(const QString &mes, bool isLogin,
     else
     {
         m_isLogin = true;
-        m_btnLogin->setText(tr("登录"));
+        m_btnLogin->setText(tr(" Login "));
         m_labelStatus->setText(mes);
         m_leUserID->setReadOnly(false);
         m_leUserPwd->setReadOnly(false);
@@ -145,7 +145,7 @@ bool IMLoginWidget::getIsAutoLogin()
 
 /*************************************************
 Function Name: onClickbtnLogin()
-Description: 单击“登录” button 
+Description: 单击“ Login ” button 
 Input: NULL
 Output: NULL
 Changes: NULL
@@ -169,7 +169,7 @@ void IMLoginWidget::onClickBtnLogin()
 //        IMClientMessageCtrl::sm_hostAddress = address;
 //        IMClientMessageCtrl::sm_hostPort = port;
 
-        m_labelStatus->setText(tr("登录中"));
+        m_labelStatus->setText(tr(" Login 中"));
 
         if (m_loginCtrl == NULL)
         {
@@ -206,8 +206,8 @@ void IMLoginWidget::onClickBtnLogin()
     else
     {
         m_isLogin = true;
-        m_btnLogin->setText(tr("登录"));
-        m_labelStatus->setText(tr("你好, please 登录系统."));
+        m_btnLogin->setText(tr(" Login "));
+        m_labelStatus->setText(tr("你好, please  Login 系统."));
 
         if (m_loginCtrl != NULL)
         {
@@ -239,16 +239,16 @@ void IMLoginWidget::timerEvent(QTimerEvent *event)
         switch (m_counter%4)
         {
         case 0:
-            m_labelStatus->setText(tr("登录中"));
+            m_labelStatus->setText(tr(" Login 中"));
             break;
         case 1:
-            m_labelStatus->setText(tr("登录中.."));
+            m_labelStatus->setText(tr(" Login 中.."));
             break;
         case 2:
-            m_labelStatus->setText(tr("登录中....."));
+            m_labelStatus->setText(tr(" Login 中....."));
             break;
         case 3:
-            m_labelStatus->setText(tr("登录中......."));
+            m_labelStatus->setText(tr(" Login 中......."));
             break;
         }
     }
@@ -259,7 +259,7 @@ void IMLoginWidget::timerEvent(QTimerEvent *event)
 
 /*************************************************
 Function Name: onClickLabelRegister()
-Description: 单击"Register 帐 number "标签
+Description: 单击"Register  account  "标签
 Input: NULL
 Output: NULL
 Changes: NULL
@@ -287,7 +287,7 @@ void IMLoginWidget::onClickLabelForgotPwd()
     //delete this;
     bool isOkMes = false;
     QString userID = QInputDialog::getText(NULL, "找回 passwd",
-                                           " please  input 帐 number ID",
+                                           " please  input  account  ID",
                                            QLineEdit::Normal,
                                            NULL,
                                            &isOkMes);
@@ -300,7 +300,7 @@ void IMLoginWidget::onClickLabelForgotPwd()
 
 /*************************************************
 Function Name: onClickCbAutoLogin
-Description: 自动登录选择框改变
+Description:  auto  Login 选择框改变
 Input: state
 Output: NULL
 Changes: NULL
@@ -318,7 +318,7 @@ void IMLoginWidget::onClickCbAutoLogin(int state)
 // mark private:------------------------------------------------------------
 /*************************************************
 Function Name: initIMLoginWidget()
-Description: init 登录界面
+Description: init  Login 界面
 Input: NULL
 Output: NULL
 Changes: NULL
@@ -342,7 +342,7 @@ void IMLoginWidget::initIMLoginWidget()
     QHBoxLayout *hLayoutBtm  = new QHBoxLayout;
     QVBoxLayout *vLayoutMain = new QVBoxLayout;
 
-    QLabel *labelHeadLine = new QLabel(tr("登录即时通信系统"));
+    QLabel *labelHeadLine = new QLabel(tr(" Login  Instant  msg 系统"));
     labelHeadLine->setAlignment(Qt::AlignCenter);
     QPalette pa;
     pa.setColor(QPalette::WindowText, Qt::black);
@@ -357,7 +357,7 @@ void IMLoginWidget::initIMLoginWidget()
 //    vLayoutLeftTop->addWidget(labelPwd);
 
     m_leUserID = new QLineEdit;
-    m_leUserID->setPlaceholderText(tr("帐 number "));
+    m_leUserID->setPlaceholderText(tr(" account  "));
     m_leUserPwd = new QLineEdit;
     m_leUserPwd->setPlaceholderText(tr(" passwd"));
     m_leUserPwd->setEchoMode(QLineEdit::Password);
@@ -365,7 +365,7 @@ void IMLoginWidget::initIMLoginWidget()
     vLayoutMidTop->addWidget(m_leUserPwd);
 
     m_labelRegister = new IMClickLabel;
-    m_labelRegister->setText(tr("Register 帐 number "));
+    m_labelRegister->setText(tr("Register  account  "));
     m_labelForgotPwd = new IMClickLabel;
     m_labelForgotPwd->setText(tr("Forget passwd?"));
     vLayoutRightTop->addWidget(m_labelRegister);
@@ -378,23 +378,23 @@ void IMLoginWidget::initIMLoginWidget()
     //end top
 
     //mid
-    m_cbKeepPwd = new QCheckBox(tr("记住 passwd"));
-    m_cbAutoLogin = new QCheckBox(tr("自动登录"));
+    m_cbKeepPwd = new QCheckBox(tr(" remember  passwd"));
+    m_cbAutoLogin = new QCheckBox(tr(" auto  Login "));
     hLayoutMid->addWidget(m_cbKeepPwd);
     hLayoutMid->addWidget(m_cbAutoLogin);
     //end mid
 
     //bottom
-    m_moreButton = new QPushButton(tr("设置"));
+    m_moreButton = new QPushButton(tr(" set "));
     m_moreButton->setCheckable(true);
     m_moreButton->setAutoDefault(false);
     m_cbxStatus = new QComboBox();
-    m_cbxStatus->addItem(tr("在线"));
-    m_cbxStatus->addItem(tr("隐身"));
-    m_cbxStatus->addItem(tr("忙碌"));
+    m_cbxStatus->addItem(tr(" online "));
+    m_cbxStatus->addItem(tr(" Invisible "));
+    m_cbxStatus->addItem(tr(" busy "));
     m_cbxStatus->addItem(tr("离开"));
     m_cbxStatus->addItem(" please 勿打扰");
-    m_btnLogin = new QPushButton(tr("登录"));
+    m_btnLogin = new QPushButton(tr(" Login "));
     m_btnLogin->setDefault(true);
 
     hLayoutBtm->addWidget(m_moreButton);
@@ -417,7 +417,7 @@ void IMLoginWidget::initIMLoginWidget()
     //end hide
 
     m_labelStatus = new QLabel;
-    m_labelStatus->setText(tr("你好, please 登录系统."));
+    m_labelStatus->setText(tr("你好, please  Login 系统."));
     QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
     m_labelStatus->setSizePolicy(sizePolicy);
 
@@ -436,7 +436,7 @@ void IMLoginWidget::initIMLoginWidget()
 
     m_extendedWidget->hide();
 
-    // 读取自动登录配置文件
+    // 读取 auto  Login 配置文件
     readAutoLoginFile(AUTO_LOGIN_FILE_NAME);
 }
 
@@ -491,7 +491,7 @@ void IMLoginWidget::closeTimer()
 
 /*************************************************
 Function Name: setServer()
-Description: 设置server 
+Description:  set server 
 Input:  ip地址，端口 number 
 Output: NULL
 Changes: NULL
@@ -525,8 +525,8 @@ void IMLoginWidget::setServer(const QString & ip, const int port)
 
 
 /*************************************************
-Function Name: 读取自动登录配置文件()
-Description: 设置server 
+Function Name: 读取 auto  Login 配置文件()
+Description:  set server 
 Input:  ip地址，端口 number 
 Output: NULL
 Changes: NULL

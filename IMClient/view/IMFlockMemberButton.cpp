@@ -93,7 +93,7 @@ void IMFlockMemberButton::closeChatRoom()
 
 /*************************************************
 Function Name: setButtonStatus()
-Description:  设置button显示信息
+Description:   set button显示信息
 *************************************************/
 void IMFlockMemberButton::setButtonStatus()
 {
@@ -154,7 +154,7 @@ void IMFlockMemberButton::onClickRightButton(/*const QPoint &*/)
 
 /*************************************************
 Function Name: onClickSendMessage()
-Description: 发送即时消息
+Description: 发送 Instant 消息
 *************************************************/
 void IMFlockMemberButton::onClickSendMessage()
 {
@@ -324,26 +324,26 @@ QString IMFlockMemberButton::getFlockStatusFromInt(const int n) const
 
 /*************************************************
 Function Name: getLoginStatusFromInt()
-Description: 将好友在线状态从数字形式转换为字符串形式
+Description: 将好友 online 状态从数字形式转换为字符串形式
 *************************************************/
 QString IMFlockMemberButton::getLoginStatusFromInt(const int n) const
 {
-//    ONLINE = 0,    // 在线
-//    INVISIBLE = 1, // 隐身
-//    BUSY = 2,      // 忙碌
+//    ONLINE = 0,    //  online 
+//    INVISIBLE = 1, //  Invisible 
+//    BUSY = 2,      //  busy 
 //    LEAVE = 3,     // 离开
 //    NOTDISTURB = 4 //  please 勿打扰
     switch (n)
     {
     case ONLINE:
-        return tr("在线");
+        return tr(" online ");
         break;
     case OFFLINE:
     case INVISIBLE:
-        return tr("离线");
+        return tr(" offline ");
         break;
     case BUSY:
-        return tr("忙碌");
+        return tr(" busy ");
         break;
     case LEAVE:
         return tr("离开");
@@ -365,7 +365,7 @@ Description: create  right button  menu
 void IMFlockMemberButton::creatMenu(/*const QList<QString> *groutList*/)
 {
     m_menu = new QMenu(this);
-    QAction *sendMessage = new QAction(tr("发送即时消息"), m_menu);
+    QAction *sendMessage = new QAction(tr("发送 Instant 消息"), m_menu);
     QAction *sendMail = new QAction(tr("发送电子邮件"), m_menu);
     QAction *showInfo = new QAction(tr("查看资料"), m_menu);
     QAction *enterSpace = new QAction(tr("进入空间"), m_menu);

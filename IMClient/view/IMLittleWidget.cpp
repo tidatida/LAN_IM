@@ -67,7 +67,7 @@ void IMLittleWidget::onClickedBtnClose()
 Function Name: onClickedBtnClose()
 Description:  click  close /取消  button 
 *************************************************/
-// 设置各编辑框,s 标题栏
+//  set 各编辑框,s 标题栏
 void IMLittleWidget::setLabelsText(const QString & first,
                   const QString & second,
                   const QString & third)
@@ -115,7 +115,7 @@ void IMLittleWidget::setPasswordStyle()
 
 /*************************************************
 Function Name: setAllEnabled()
-Description: set all  input 框设置可用属性
+Description: set all  input 框 set 可用属性
 *************************************************/
 void IMLittleWidget::setAllEnabled(bool enable)
 {

@@ -16,7 +16,7 @@ public:
     ~IMLinkFriendButton();
 
 
-    // 设置button显示信息
+    //  set button显示信息
     void setButtonStatus();
 
 public slots:

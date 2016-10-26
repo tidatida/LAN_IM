@@ -33,9 +33,9 @@ signals:
 public slots:
 
 private slots:
-    // 设置收件箱
+    //  set 收件箱
     void setInMailsWidget(const QVector<MailInformation> &);
-    // 设置发件箱
+    //  set 发件箱
     void setOutMailsWidget(const QVector<MailInformation> &);
 
     // add 收件箱 button 

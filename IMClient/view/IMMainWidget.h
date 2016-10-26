@@ -126,7 +126,7 @@ public:
     //  move 好友至 other  box 
     void moveFriendToBox(const QString & friendID, const QString & groupName, const QString &title);
 
-    // 设置在线人数
+    //  set  online 人数
     void setOnlineCounter(int num);
 
 
@@ -180,15 +180,15 @@ public slots:
     //  get 本地最近消息（访问本地database ）
     void getLatestMessage();
 
-    // 设置消息界面
+    //  set 消息界面
     void setNetworkMessageWidget(const QString & friendID, const QDate & date,
                                  const QVector<TalkMessage> & mesVec);
 
-    // 设置好友列 table 
+    //  set 好友列 table 
     void setFriendListWidget(const QVector<FriendInformation> &);
-    // 设置群列 table 
+    //  set 群列 table 
     void setFlockListWidget(const QVector<FlockInformation> &);
-    // 设置讨论 box 列 table 
+    //  set 讨论 box 列 table 
     void setDiscussionListWidget(const QVector<DiscussionInformation> &);
 
     // add 好友 button 
@@ -200,15 +200,15 @@ public slots:
 
     //  get 好友发来,s 消息
     void receiveFriendTalkMessage(const TalkMessage &);
-    // 设置好友状态
+    //  set 好友状态
     void setFriendStatus(const QString &, int);
-    // 设置好友信息
+    //  set 好友信息
     void setFriendInformation(const FriendInformation &);
     // 显示好友信息
     void showFriendInformation(const UserInformation &);
     // 显示自己,s 信息
     void showMyInformation(const UserInformation &);
-    // 设置个人信息
+    //  set 个人信息
     void setMyInformation(const UserInformation &);
 
     // 显示群信息
@@ -216,15 +216,15 @@ public slots:
     // 显示讨论 box 信息
     void showDiscussionInformation(const DiscussionInformation &);
 
-    // 设置群信息
+    //  set 群信息
     void setFlockInformation(const FlockInformation &);
-    // 设置讨论 box 信息
+    //  set 讨论 box 信息
     void setDiscussionInformation(const DiscussionInformation &);
 
-    // 设置群成员 name 片
+    //  set 群成员 name 片
     void setFlockMemberRemark(const TempStrings &);
 
-    // 设置好友备注
+    //  set 好友备注
     void setFriendRemark(const TempStrings&);
     //  already delete  好友
     void deletedFriend(const QString &, const QString &, const QString &);
@@ -270,7 +270,7 @@ public slots:
     void showMailWriteWidget(const QString & address);
     // 显示最 new 消息窗口
     void showLatestMessageWidget();
-    // 设置显示 Got  new 消息,s  timer 器
+    //  set 显示 Got  new 消息,s  timer 器
     void setTimerStatus(bool isOpen);
 
     // rename group成功
@@ -369,7 +369,7 @@ private:
 
     QMap<QString, int> m_indexFriendsGroupMap; //  box  name   and   subscribe index   map  table 
 
-    QMap<QString, IMFriendButton *> m_friendMap; // 好友帐 number   and  好友 button   map  table 
+    QMap<QString, IMFriendButton *> m_friendMap; // 好友 account    and  好友 button   map  table 
 
     QMap<QString, IMFlockButton *> m_flockMap; // 群ID  and  群 button   map  table 
 

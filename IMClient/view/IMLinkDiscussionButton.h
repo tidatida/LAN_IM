@@ -14,7 +14,7 @@ public:
     IMLinkDiscussionButton(IMDiscussionButton * btn, QWidget *parent = 0);
     ~IMLinkDiscussionButton();
 
-    // 设置button显示信息
+    //  set button显示信息
     void setButtonStatus();
 
 signals:

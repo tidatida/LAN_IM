@@ -1704,7 +1704,7 @@ void IMMainWidget::onClickAddFriend()
 {
     bool isOk = false;
     QString friendID = QInputDialog::getText(NULL, "Add friend",
-                                             " please  input 对方帐 number ",
+                                             " please  input 对方 account  ",
                                              QLineEdit::Normal,
                                              "",
                                              &isOk);
@@ -1724,7 +1724,7 @@ void IMMainWidget::onClickAddFlock()
 {
     bool isOk = false;
     QString flockID = QInputDialog::getText(NULL, "Add Group",
-                                            " please  input Group帐 number ",
+                                            " please  input Group account  ",
                                             QLineEdit::Normal,
                                             "",
                                             &isOk);

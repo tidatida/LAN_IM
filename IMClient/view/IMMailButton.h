@@ -32,7 +32,7 @@ private slots:
     void onClickRightButton();
 
 private:
-    // 设置button显示信息
+    //  set button显示信息
     void setButtonStatus();
     // create  right button  menu 
     void creatMenu();

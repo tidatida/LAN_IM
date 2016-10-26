@@ -1479,7 +1479,7 @@ bool IMDatabaseCtrl::searchDiscussionMember(const QString & discussionID,
 
 /*************************************************
 Function Name: searchFlockHost()
-Description:  get 群 main 帐 number 
+Description:  get 群 main  account  
 *************************************************/
 bool IMDatabaseCtrl::searchFlockHost(const QString & flockID, QString & hostID)
 {
@@ -1521,7 +1521,7 @@ bool IMDatabaseCtrl::searchFlockHost(const QString & flockID, QString & hostID)
 
 /*************************************************
 Function Name: searchDiscussionHost()
-Description:  get  box 长帐 number 
+Description:  get  box 长 account  
 *************************************************/
 bool IMDatabaseCtrl::searchDiscussionHost(const QString & discussionID,
                                           QString & hostID)
@@ -2805,7 +2805,7 @@ bool IMDatabaseCtrl::addHistoryMessage(const TalkMessage & mes)
 
 /*************************************************
 Function Name: addOfflineMessage()
-Description: 存储离线记录
+Description: 存储 offline 记录
 *************************************************/
 bool IMDatabaseCtrl::addOfflineMessage(const TalkMessage & mes)
 {

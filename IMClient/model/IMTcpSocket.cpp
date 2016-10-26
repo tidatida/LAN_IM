@@ -126,7 +126,7 @@ void IMTcpSocket::connectionClosed()
     {
 //        //程序如果和server 断开connection ,s 话，弹出警告，直接 quit from  
 //        QMessageBox::critical(NULL, tr("系统错误"),
-//                              tr(" your ,s client already 经 and server 断开connection ， please 重 new 登录。"));
+//                              tr(" your ,s client already 经 and server 断开connection ， please 重 new  Login 。"));
 //        qApp->quit();
     }
 }

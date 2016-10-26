@@ -14,7 +14,7 @@ public:
 
     void setLatestMessage(const TalkMessage & mes);
 
-    // 设置button显示信息
+    //  set button显示信息
     virtual void setButtonStatus() = 0;
     
 signals:

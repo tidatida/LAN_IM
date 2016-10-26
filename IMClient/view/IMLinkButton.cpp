@@ -32,7 +32,7 @@ IMLinkButton::IMLinkButton(QWidget *parent) :
 
 /*************************************************
 Function Name: setLatestMessage()
-Description:  设置最 new 消息
+Description:   set 最 new 消息
 *************************************************/
 void IMLinkButton::setLatestMessage(const TalkMessage & mes)
 {

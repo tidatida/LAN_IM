@@ -88,7 +88,7 @@ void IMMailWidget::showMailWriteWidget(const QString & address)
 //private slots:--------------------------------------------------------
 /*************************************************
 Function Name: setInMailsWidget
-Description: 设置收件箱
+Description:  set 收件箱
 *************************************************/
 void IMMailWidget::setInMailsWidget(const QVector<MailInformation> & inMailsVec)
 {
@@ -103,7 +103,7 @@ void IMMailWidget::setInMailsWidget(const QVector<MailInformation> & inMailsVec)
 
 /*************************************************
 Function Name: setOutMailsWidget
-Description: 设置发件箱
+Description:  set 发件箱
 *************************************************/
 void IMMailWidget::setOutMailsWidget(const QVector<MailInformation> & outMailVec)
 {

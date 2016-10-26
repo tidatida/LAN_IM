@@ -14,7 +14,7 @@ public:
     IMLinkFlockButton(IMFlockButton * btn, QWidget *parent = 0);
     ~IMLinkFlockButton();
 
-    // 设置button显示信息
+    //  set button显示信息
     void setButtonStatus();
 
 signals:

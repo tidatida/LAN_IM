@@ -15,7 +15,7 @@ public:
     IMLittleWidget(int num, QWidget *parent = 0);
     virtual ~IMLittleWidget() = 0;
 
-    // 设置各编辑框,s 标题栏
+    //  set 各编辑框,s 标题栏
     void setLabelsText(const QString & first = "",
                       const QString & second = "",
                       const QString & third = "");
@@ -23,7 +23,7 @@ public:
     TempStrings getInputInformation() const;
     // 将user  input ,s 信息set to  passwd风格
     void setPasswordStyle();
-    // set all  input 框设置可用属性
+    // set all  input 框 set 可用属性
     void setAllEnabled(bool enable);
 signals:
     

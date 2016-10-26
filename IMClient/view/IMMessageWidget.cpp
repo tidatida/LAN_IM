@@ -33,7 +33,7 @@ IMMessageWidget::~IMMessageWidget()
 
 /*************************************************
 Function Name: setListModelGroup()
-Description: 设置  box  ,s model
+Description:  set   box  ,s model
 *************************************************/
 void IMMessageWidget::setListModelGroup(const QStringList & groupList)
 {
@@ -43,7 +43,7 @@ void IMMessageWidget::setListModelGroup(const QStringList & groupList)
 
 /*************************************************
 Function Name: setListModelGroup()
-Description: 设置  box  ,s model
+Description:  set   box  ,s model
 *************************************************/
 void IMMessageWidget::setListModelGroup()
 {
@@ -53,7 +53,7 @@ void IMMessageWidget::setListModelGroup()
 
 /*************************************************
 Function Name: setListModelFriend()
-Description: 设置 好友 ,s model
+Description:  set  好友 ,s model
 *************************************************/
 void IMMessageWidget::setListModelFriend(const QStringList & friendList)
 {
@@ -62,7 +62,7 @@ void IMMessageWidget::setListModelFriend(const QStringList & friendList)
 
 /*************************************************
 Function Name: setListModelFriend()
-Description: 设置 好友 ,s model
+Description:  set  好友 ,s model
 *************************************************/
 void IMMessageWidget::setListModelFriend(const QString & groupName)
 {
@@ -73,7 +73,7 @@ void IMMessageWidget::setListModelFriend(const QString & groupName)
 
 /*************************************************
 Function Name: setShowMode()
-Description: 设置显示,s 模式
+Description:  set 显示,s 模式
 *************************************************/
 void IMMessageWidget::setShowMode(Mode mode)
 {
@@ -98,7 +98,7 @@ void IMMessageWidget::setShowMode(Mode mode)
 
 /*************************************************
 Function Name: setMessageShow()
-Description: 设置显示,s 消息
+Description:  set 显示,s 消息
 *************************************************/
 void IMMessageWidget::setMessageShow(const QVector<TalkMessage> & mesVec)
 {

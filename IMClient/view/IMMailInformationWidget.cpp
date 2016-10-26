@@ -28,7 +28,7 @@ IMMailInformationWidget::IMMailInformationWidget(IMMailWidget * mailWidget,
 
 /*************************************************
 Function Name: setMailInformation()
-Description:  设置邮件信息
+Description:   set 邮件信息
 *************************************************/
 void IMMailInformationWidget::setMailInformation(const MailInformation & mail)
 {

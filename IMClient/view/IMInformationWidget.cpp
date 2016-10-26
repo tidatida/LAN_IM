@@ -180,7 +180,7 @@ void IMInformationWidget::initIMLoginWidget()
     m_isEdit = false;
 
     // 左边标签
-    m_labelUserID = new QLabel(tr("帐 number :"));
+    m_labelUserID = new QLabel(tr(" account  :"));
     m_labelNickname = new QLabel(tr("昵称:"));
     m_labelSex = new QLabel(tr("性 other :"));
     m_labelBirthday = new QLabel(tr("生日:"));
@@ -259,7 +259,7 @@ void IMInformationWidget::initIMLoginWidget()
 
     setFixedSize(400, 250);
 
-    // 设置背景图片
+    //  set 背景图片
 //    QPalette pal;
 //    QPixmap pixmap(":/iamge/information.jpg" );
 //    pal.setBrush(QPalette::Window,QBrush(pixmap));

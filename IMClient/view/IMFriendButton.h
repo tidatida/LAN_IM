@@ -48,7 +48,7 @@ public:
     // close 聊天窗口
     void closeChatRoom();
 
-    // 设置button显示信息
+    //  set button显示信息
     void setButtonStatus();
     // 刷 new  menu 中 box 信息
     void refreshMoveMenu();
@@ -63,7 +63,7 @@ public slots:
     //  right button  click  button 
     void onClickRightButton(/*const QPoint &*/);
 
-    // 发送即时消息
+    // 发送 Instant 消息
     void onClickSendMessage();
     // 查看消息记录
     void onClickShowRecord();

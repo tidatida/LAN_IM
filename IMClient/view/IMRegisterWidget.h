@@ -20,7 +20,7 @@ class CustomLineEdit;
 
 /*************************************************
 Class Name: IMRegisterWidget
-Description: clientRegister 帐 number 界面 class
+Description: clientRegister  account  界面 class
 *************************************************/
 class IMRegisterWidget : public QWidget
 {
@@ -51,7 +51,7 @@ private:
 private:
     QLabel *m_labelHead;
 
-//    QLabel *m_labelUserID;    // user 帐 number 
+//    QLabel *m_labelUserID;    // user  account  
 //    QLineEdit *m_leUserID;
 //    QLabel *m_labelDesUserID;
     QLabel *m_labelNickname;   // user 昵称

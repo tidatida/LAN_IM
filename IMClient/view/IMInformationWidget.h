@@ -40,7 +40,7 @@ private:
     void initIMLoginWidget();
 
 protected:
-    QLabel *m_labelUserID;    // user 帐 number 
+    QLabel *m_labelUserID;    // user  account  
     QLineEdit *m_leUserID;
 //     QLabel *m_labelDesUserID;
     QLabel *m_labelNickname;   // user 昵称

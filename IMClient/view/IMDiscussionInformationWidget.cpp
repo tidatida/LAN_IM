@@ -127,9 +127,9 @@ void IMDiscussionInformationWidget::initIMLoginWidget()
 
 //    m_labelDiscussionHead->setPixmap(QPixmap(":/images/discussion.png"));
     m_labelDiscussionName = new QLabel(tr("讨论 box  name 称:"), this);
-    m_labelDiscussionID = new QLabel(tr("讨论 box 帐 number :"), this);
+    m_labelDiscussionID = new QLabel(tr("讨论 box  account  :"), this);
     m_labelTheme = new QLabel(tr("讨论 box   theme :"), this);
-    m_labelCreatorID = new QLabel(tr("create 者帐 number :"), this);
+    m_labelCreatorID = new QLabel(tr("create 者 account  :"), this);
     m_labelCreateDate = new QLabel(tr("create 时间:"), this);
 
     m_leDiscussionName = new QLineEdit(this);

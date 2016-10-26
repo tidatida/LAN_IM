@@ -85,7 +85,7 @@ void IMFlockChatWidget::appendMessageShow(const TalkMessage &mes)
 
 /*************************************************
 Function Name: setLabelStatus()
-Description:  设置聊天窗口显示信息
+Description:   set 聊天窗口显示信息
 *************************************************/
 void IMFlockChatWidget::setLabelStatus()
 {
@@ -103,7 +103,7 @@ void IMFlockChatWidget::setLabelStatus()
 
 /*************************************************
 Function Name: setChatInformation()
-Description:  设置群信息
+Description:   set 群信息
 *************************************************/
 void IMFlockChatWidget::setChatInformation(const FlockInformation & flock)
 {
@@ -114,7 +114,7 @@ void IMFlockChatWidget::setChatInformation(const FlockInformation & flock)
 
 /*************************************************
 Function Name: setFlockMemberRemark()
-Description:  设置群成员 name 片
+Description:   set 群成员 name 片
 *************************************************/
 void IMFlockChatWidget::setFlockMemberRemark(const TempStrings & tmpStr)
 {
@@ -163,7 +163,7 @@ bool IMFlockChatWidget::removeFlockMemberButton(const QString & memberID)
 
 /*************************************************
 Function Name: setFlockMemberList()
-Description:  设置群成员列 table 
+Description:   set 群成员列 table 
 *************************************************/
 void IMFlockChatWidget::setFlockMemberList(const QVector<FlockMember> & memberList)
 {
@@ -275,7 +275,7 @@ void IMFlockChatWidget::onClickBtnColor()
         m_textInput->setTextColor(color);
         m_textInput->setFocus();
 
-        //    //设置字体,s 颜色，并将其写入文件
+        //    // set 字体,s 颜色，并将其写入文件
         //		saveFile.color = colorDialog->currentColor();
         //		saveFontColor();
     }
@@ -499,16 +499,16 @@ void IMFlockChatWidget::linkSignalWithSlot()
 
 /*************************************************
 Function Name: setWidgetToolBtn()
-Description:  设置面板图标
+Description:   set 面板图标
 *************************************************/
 void IMFlockChatWidget::setWidgetToolBtn()
 {
     m_cbFont = new QFontComboBox;
     m_cbFont->setToolTip(tr("字体"));
-    m_cbFont->setStatusTip(tr("设置字体"));
+    m_cbFont->setStatusTip(tr(" set 字体"));
     m_cbSize = new QComboBox;
     m_cbSize->setToolTip(tr("大小"));
-    m_cbSize->setStatusTip(tr("设置字体大小"));
+    m_cbSize->setStatusTip(tr(" set 字体大小"));
     for (int i=9;  i<=22; ++i)
     {
         m_cbSize->addItem(QString::number(i));
@@ -547,7 +547,7 @@ void IMFlockChatWidget::setWidgetToolBtn()
     m_toolBtnColor->setAutoRaise(true);
     m_toolBtnColor->setIconSize(QSize(CHAT_WIDGET_TOOL_SMALL_SIZE,CHAT_WIDGET_TOOL_SMALL_SIZE));
     m_toolBtnColor->setToolTip(tr("颜色"));
-    m_toolBtnColor->setStatusTip(tr("设置颜色"));
+    m_toolBtnColor->setStatusTip(tr(" set 颜色"));
 
     m_toolBtnClear = new QToolButton;
     m_toolBtnClear->setIcon(QIcon(":/images/clear.png"));

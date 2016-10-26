@@ -19,7 +19,7 @@ IMLinkDiscussionButton::~IMLinkDiscussionButton()
 
 /*************************************************
 Function Name: setButtonStatus()
-Description:  设置button显示信息
+Description:   set button显示信息
 *************************************************/
 void IMLinkDiscussionButton::setButtonStatus()
 {
