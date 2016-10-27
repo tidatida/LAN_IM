@@ -84,7 +84,7 @@ void IMServerMessageCtrl::runServer()
            this, SLOT(deleteAddressData(QString)));
 
 
-   if (!m_tcpServer->listen(QHostAddress::Any, 1234))
+   if (!m_tcpServer->listen(QHostAddress::AnyIPv4, 1234))
    {
        qDebug("run fail");
        QMessageBox::critical(NULL, tr("IM Server"),

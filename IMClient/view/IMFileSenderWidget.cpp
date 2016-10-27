@@ -63,7 +63,7 @@ bool IMFileSenderWidget::startSending(const QString & file)
     m_fileName = m_filePath.right(m_filePath.size() - m_filePath.lastIndexOf('/')-1);
     m_labelFileName->setText(QString(tr("文件 name : %1")).arg(m_fileName));
     // 开始监听
-    if (!m_fileSender->listen(QHostAddress::Any, m_tcpPort))
+    if (!m_fileSender->listen(QHostAddress::AnyIPv4, m_tcpPort))
     {
         qDebug() << "file server error: "<< m_fileSender->errorString();
         QMessageBox::critical(NULL, tr("IM FileSender"),

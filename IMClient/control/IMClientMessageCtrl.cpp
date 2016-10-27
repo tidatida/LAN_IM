@@ -15,7 +15,7 @@
 //#include <QDateTime>
 //#include <QtNetwork>
 
-//QHostAddress IMClientMessageCtrl::sm_hostAddress = QHostAddress::Any;
+//QHostAddress IMClientMessageCtrl::sm_hostAddress = QHostAddress::AnyIPv4;
 //qint16 IMClientMessageCtrl::sm_hostPort = 0;
 
 
