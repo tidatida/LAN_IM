@@ -53,12 +53,16 @@ void IMLoginCtrl::login(const QString &id, const QString &pwd, const int status)
     m_loginInfo.m_userID = id;
     m_loginInfo.m_password = pwd;
     m_loginInfo. m_status = status;
+
+    qDebug() <<"function:"<<__FUNCTION__ <<" line:"<<__LINE__;
     if (m_tcpSocket->isConnected())
     {
+        qDebug() <<"function:"<<__FUNCTION__ <<" line:"<<__LINE__;
         requestLogin();
     }
     else
     {
+        qDebug() <<"function:"<<__FUNCTION__ <<" line:"<<__LINE__;
         m_blockSize = 0;
         m_tcpSocket->requestConnect();
     }
@@ -108,8 +112,12 @@ Changes: NULL
 *************************************************/
 void IMLoginCtrl::requestLogin()
 {
-    if (NULL == m_tcpSocket)
+    qDebug() <<"function:"<<__FUNCTION__ <<" line:"<<__LINE__;
+    if (NULL == m_tcpSocket){
+        qDebug() <<"function:"<<__FUNCTION__ <<" line:"<<__LINE__;
         return;
+    }
+
     m_blockSize = 0;
     QByteArray block;
     QDataStream out(&block, QIODevice::WriteOnly);
@@ -118,6 +126,8 @@ void IMLoginCtrl::requestLogin()
     out.device()->seek(0);
     out << quint16(block.size() - sizeof(quint16));
     m_tcpSocket->write(block);
+    qDebug() <<"function:"<<__FUNCTION__ <<" line:"<<__LINE__;
+
 }
 
 
@@ -132,15 +142,18 @@ void IMLoginCtrl::sendRequest()
     {
     case LOGIN:
     {
+        qDebug() <<"function:"<<__FUNCTION__ <<" line:"<<__LINE__;
         requestLogin();
         break;
     }
     case GET_QUESTION_ANSWER:
     {
+        qDebug() <<"function:"<<__FUNCTION__ <<" line:"<<__LINE__;
         requestGetQuestionAndAnswer();
         break;
     }
     default:
+        qDebug() <<"function:"<<__FUNCTION__ <<" line:"<<__LINE__;
         break;
     }
 }
@@ -153,8 +166,11 @@ Description:
 *************************************************/
 void IMLoginCtrl::requestGetQuestionAndAnswer()
 {
-    if (NULL == m_tcpSocket)
+    if (NULL == m_tcpSocket){
+        qDebug() <<"function:"<<__FUNCTION__ <<" line:"<<__LINE__;
         return;
+    }
+
     m_blockSize = 0;
     QByteArray block;
     QDataStream out(&block, QIODevice::WriteOnly);

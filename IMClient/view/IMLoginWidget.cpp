@@ -34,6 +34,8 @@ static const QString AUTO_LOGIN_FILE_NAME = "resource/config/auto_login.im";
 IMLoginWidget::IMLoginWidget(QWidget *parent)
     : QWidget(parent)
 {
+
+
     initIMLoginWidget();
     linkSignalWithSlot();
     setWindowTitle(tr(" Login IM"));
@@ -59,7 +61,7 @@ IMLoginWidget::~IMLoginWidget()
 // mark: public slots:-----------------------------------------------------
 /*************************************************
 Function Name: showMainWidget()
-Description: 显示mainframe
+Description: display mainframe
 Input: NULL
 Output: NULL
 Changes: NULL
@@ -70,7 +72,7 @@ void IMLoginWidget::showMainWidget()
 
 /*************************************************
 Function Name: setLabelStatus()
-Description:  set 状态标签
+Description:  set status label
 *************************************************/
 void IMLoginWidget::setLabelStatus(const QString &mes, bool isLogin,
                                    const UserInformation *me)
@@ -80,7 +82,7 @@ void IMLoginWidget::setLabelStatus(const QString &mes, bool isLogin,
     if (isLogin == true)
     {
         m_btnLogin->setEnabled(false);
-        m_btnLogin->setText(tr("取消"));
+        m_btnLogin->setText(tr("cancel"));
         m_labelStatus->setText(tr("%1").arg(mes));
         if (true == m_cbKeepPwd->isChecked())
         {
@@ -133,7 +135,7 @@ void IMLoginWidget::setLabelStatus(const QString &mes, bool isLogin,
 /*************************************************
 Function Name: getIsAutoLogin()
 Description:  get m_isAutoLogin
-Input: QTimerEvent *event: timer 器 event 
+Input: QTimerEvent *event: timer event
 Output: bool
 Changes: NULL
 *************************************************/
@@ -145,13 +147,14 @@ bool IMLoginWidget::getIsAutoLogin()
 
 /*************************************************
 Function Name: onClickbtnLogin()
-Description: 单击“ Login ” button 
+Description: click “ Login ” button
 Input: NULL
 Output: NULL
 Changes: NULL
 *************************************************/
 void IMLoginWidget::onClickBtnLogin()
 {
+    qDebug() <<"before setServer";
     setServer();
 
     m_leUserID->setReadOnly(true);
@@ -161,15 +164,16 @@ void IMLoginWidget::onClickBtnLogin()
     if (true == m_isLogin)
     {
         m_isLogin = false;
-        m_btnLogin->setText(tr("取消"));
+        m_btnLogin->setText(tr("cancel"));
 
         m_closeTimer = false;
         m_timerID=startTimer(1000);//interval is 100ms
 
-//        IMClientMessageCtrl::sm_hostAddress = address;
-//        IMClientMessageCtrl::sm_hostPort = port;
-
-        m_labelStatus->setText(tr(" Login 中"));
+#if 0
+        IMClientMessageCtrl::sm_hostAddress = address;
+        IMClientMessageCtrl::sm_hostPort = port;
+#endif
+        m_labelStatus->setText(tr("Logining  "));
 
         if (m_loginCtrl == NULL)
         {
@@ -177,6 +181,7 @@ void IMLoginWidget::onClickBtnLogin()
             connect(m_loginCtrl, SIGNAL(getLoginMessgae(QString,bool,const UserInformation*)),
                     this, SLOT(setLabelStatus(QString,bool,const UserInformation*)));
         }
+
         switch (m_cbxStatus->currentIndex())
         {
         case 0:
@@ -198,13 +203,18 @@ void IMLoginWidget::onClickBtnLogin()
             m_status = ONLINE;
             break;
         }
+
         qDebug() << "status: " << m_status;
         QString pwd = IMEncryption::getInstace()
                 .getXorEncryptDecrypt(m_leUserPwd->text(), 10);
+
+        qDebug()<<"userID: "<<m_leUserID->text()<<"pwd:"<<pwd;
         m_loginCtrl->login(m_leUserID->text(), pwd, m_status);
+
     }
     else
     {
+        qDebug() <<"function:"<<__FUNCTION__<<" line:"<<__LINE__;
         m_isLogin = true;
         m_btnLogin->setText(tr(" Login "));
         m_labelStatus->setText(tr(" Hello , please  Login  System ."));
@@ -226,8 +236,8 @@ void IMLoginWidget::onClickBtnLogin()
 // mark: protected:---------------------------------------------------------
 /*************************************************
 Function Name: timerEvent()
-Description: process    timer 器 event 
-Input: QTimerEvent *event: timer 器 event 
+Description: process    timer event
+Input: QTimerEvent *event: timer event
 Output: NULL
 Changes: NULL
 *************************************************/
@@ -239,16 +249,16 @@ void IMLoginWidget::timerEvent(QTimerEvent *event)
         switch (m_counter%4)
         {
         case 0:
-            m_labelStatus->setText(tr(" Login 中"));
+            m_labelStatus->setText(tr("Logining  "));
             break;
         case 1:
-            m_labelStatus->setText(tr(" Login 中.."));
+            m_labelStatus->setText(tr("Logining  .."));
             break;
         case 2:
-            m_labelStatus->setText(tr(" Login 中....."));
+            m_labelStatus->setText(tr("Logining  ....."));
             break;
         case 3:
-            m_labelStatus->setText(tr(" Login 中......."));
+            m_labelStatus->setText(tr("Logining  ......."));
             break;
         }
     }
@@ -259,13 +269,14 @@ void IMLoginWidget::timerEvent(QTimerEvent *event)
 
 /*************************************************
 Function Name: onClickLabelRegister()
-Description: 单击"Register  account  "标签
+Description: click "Register  account  "label
 Input: NULL
 Output: NULL
 Changes: NULL
 *************************************************/
 void IMLoginWidget::onClickLabelRegister()
 {
+
     setServer();
     IMRegisterWidget *registerWidget = new IMRegisterWidget;
     registerWidget->show();
@@ -274,7 +285,7 @@ void IMLoginWidget::onClickLabelRegister()
 
 /*************************************************
 Function Name: onClickLabelForgotPwd()
-Description: 单击“Forget passwd?"标签
+Description: click “Forget passwd?"label
 Input: NULL
 Output: NULL
 Changes: NULL
@@ -318,7 +329,7 @@ void IMLoginWidget::onClickCbAutoLogin(int state)
 // mark private:------------------------------------------------------------
 /*************************************************
 Function Name: initIMLoginWidget()
-Description: init  Login 界面
+Description: init  Login interface
 Input: NULL
 Output: NULL
 Changes: NULL
@@ -327,8 +338,10 @@ void IMLoginWidget::initIMLoginWidget()
 {
     m_isLogin = true;
     m_loginCtrl = new IMLoginCtrl(this);
+
     connect(m_loginCtrl, SIGNAL(getLoginMessgae(QString,bool,const UserInformation*)),
             this, SLOT(setLabelStatus(QString,bool,const UserInformation*)));
+
     m_counter = 0;
     m_closeTimer = true;
     m_timerID = 0;
@@ -344,9 +357,11 @@ void IMLoginWidget::initIMLoginWidget()
 
     QLabel *labelHeadLine = new QLabel(tr(" Login  Instant  msg  System "));
     labelHeadLine->setAlignment(Qt::AlignCenter);
+
     QPalette pa;
     pa.setColor(QPalette::WindowText, Qt::black);
     labelHeadLine->setPalette(pa);
+
     QFont ft;
     ft.setPointSize(15);
     labelHeadLine->setFont(ft);
@@ -361,6 +376,7 @@ void IMLoginWidget::initIMLoginWidget()
     m_leUserPwd = new QLineEdit;
     m_leUserPwd->setPlaceholderText(tr(" passwd"));
     m_leUserPwd->setEchoMode(QLineEdit::Password);
+
     vLayoutMidTop->addWidget(m_leUserID);
     vLayoutMidTop->addWidget(m_leUserPwd);
 
@@ -368,6 +384,7 @@ void IMLoginWidget::initIMLoginWidget()
     m_labelRegister->setText(tr("Register  account  "));
     m_labelForgotPwd = new IMClickLabel;
     m_labelForgotPwd->setText(tr("Forget passwd?"));
+
     vLayoutRightTop->addWidget(m_labelRegister);
     vLayoutRightTop->addWidget(m_labelForgotPwd);
 
@@ -472,7 +489,7 @@ void IMLoginWidget::linkSignalWithSlot()
 
 /*************************************************
 Function Name: closeTimer()
-Description: close  timer 器
+Description: close  timer
 Input: NULL
 Output: NULL
 Changes: NULL

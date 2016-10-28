@@ -119,15 +119,15 @@ Changes: NULL
 void IMTcpSocket::connectionClosed()
 {
     m_isConnected = false;
-    qDebug("connection 断开");
+    qDebug()<<"connection closed ";
     deleteLater();
 
     if (m_flag == 0)
     {
-//        //程序如果和server 断开connection ,s 话，弹出警告，直接 quit from  
-//        QMessageBox::critical(NULL, tr(" System 错误"),
-//                              tr(" your ,s client already 经 and server 断开connection ， please 重 new  Login 。"));
-//        qApp->quit();
+        //程序如果和server closed connection ,s 话，弹出警告，直接 quit from
+        QMessageBox::critical(NULL, tr(" System error"),
+                              tr(" your ,s client already  and server closed connection ， please recreate   Login 。"));
+        qApp->quit();
     }
 }
 
@@ -145,8 +145,8 @@ void IMTcpSocket::connectionCreate()
 
 /*************************************************
 Function Name: dispalyError()
-Description: 显示错误
-Input: 错误信息
+Description: 显示error
+Input: error信息
 Output: NULL
 Changes: NULL
 *************************************************/
