@@ -41,7 +41,7 @@ void IMMailCtrl::requestSendMail(const MailInformation &mail)
     m_blockSize = 0;
     QByteArray block;
     QDataStream out(&block, QIODevice::WriteOnly);
-    out.setVersion(QDataStream::Qt_4_8);
+    // 
     out << quint16(0) << int(SEND_MAIL) << mail;
     out.device()->seek(0);
     out << quint16(block.size() - sizeof(quint16));
@@ -61,7 +61,7 @@ void IMMailCtrl::requestGetInMails()
     m_blockSize = 0;
     QByteArray block;
     QDataStream out(&block, QIODevice::WriteOnly);
-    out.setVersion(QDataStream::Qt_4_8);
+    // 
     out << quint16(0) << int(GET_IN_MAILS) << m_myID;
     out.device()->seek(0);
     out << quint16(block.size() - sizeof(quint16));
@@ -80,7 +80,7 @@ void IMMailCtrl::requestGetOutMails()
     m_blockSize = 0;
     QByteArray block;
     QDataStream out(&block, QIODevice::WriteOnly);
-    out.setVersion(QDataStream::Qt_4_8);
+    // 
     out << quint16(0) << int(GET_OUT_MAILS) << m_myID;
     out.device()->seek(0);
     out << quint16(block.size() - sizeof(quint16));
@@ -100,7 +100,7 @@ void IMMailCtrl::requestDeleteMail(const MailInformation & mail)
     m_blockSize = 0;
     QByteArray block;
     QDataStream out(&block, QIODevice::WriteOnly);
-    out.setVersion(QDataStream::Qt_4_8);
+    // 
     out << quint16(0);
 
     if (mail.m_receiverAddress == m_myID)
@@ -132,7 +132,7 @@ void IMMailCtrl::requestSetMailRead(const MailInformation & mail)
     m_blockSize = 0;
     QByteArray block;
     QDataStream out(&block, QIODevice::WriteOnly);
-    out.setVersion(QDataStream::Qt_4_8);
+    // 
     out << quint16(0) << int(SET_MAIL_READ) << m_myID << mail.m_mailID;
 
     out.device()->seek(0);
@@ -149,7 +149,7 @@ void IMMailCtrl::readMessage()
     if (NULL == m_tcpSocket)
         return;
     QDataStream in(m_tcpSocket);
-    in.setVersion(QDataStream::Qt_4_8);
+    // 
     if (m_blockSize == 0)
     {
         if (m_tcpSocket->bytesAvailable() < (int)sizeof(quint16))

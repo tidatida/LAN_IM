@@ -37,7 +37,7 @@ void IMClientSocketCtrl::receiveMessage()
 
 {
     QDataStream in(this);
-    in.setVersion(QDataStream::Qt_4_8);
+    // 
     if (m_blockSize == 0)
     {
         if (bytesAvailable() < (int)sizeof(quint16))
@@ -280,7 +280,7 @@ void IMClientSocketCtrl::sendMessage(const SaveTmpInformation &temp)
 {
     QByteArray block;
     QDataStream out(&block, QIODevice::WriteOnly);
-    out.setVersion(QDataStream::Qt_4_8);
+    // 
     out << quint16(0) << (int)temp.m_replyKind;
 
     switch (temp.m_replyKind)
@@ -549,7 +549,7 @@ Description: 发送user ,s 信息至另一个user
 //    qDebug() << "sendCheckResult";
 //    QByteArray block;
 //    QDataStream out(&block, QIODevice::WriteOnly);
-//    out.setVersion(QDataStream::Qt_4_8);
+//    // 
 //    out << quint16(0) << int(TALK_MESSAGE) <<  mes;
 //    out.device()->seek(0);
 //    out << quint16(block.size() - sizeof(quint16));
@@ -568,7 +568,7 @@ Changes: NULL
 //void IMClientSocketCtrl::readMessage()
 //{
 //    QDataStream in(this);
-//    in.setVersion(QDataStream::Qt_4_8);
+//    // 
 //    if (m_blockSize == 0)
 //    {
 //        qDebug()<<"size"<<bytesAvailable();
@@ -764,7 +764,7 @@ Changes: NULL
 //    qDebug() << "sendCheckResult";
 //    QByteArray block;
 //    QDataStream out(&block, QIODevice::WriteOnly);
-//    out.setVersion(QDataStream::Qt_4_8);
+//    // 
 //    out << quint16(0) << int(LOGIN) <<  isSuccess;
 //    if (isSuccess == true)
 //    {
@@ -790,7 +790,7 @@ Changes: NULL
 //    qDebug() << "sendRegisterResult: " << isSuccess;
 //    QByteArray block;
 //    QDataStream out(&block, QIODevice::WriteOnly);
-//    out.setVersion(QDataStream::Qt_4_8);
+//    // 
 //    out << quint16(0) << int(REGISTER) <<  isSuccess;
 //    if (isSuccess == true)
 //    {
@@ -818,7 +818,7 @@ Changes: NULL
 //    qDebug() << "sendGetFriendsResult: " << isSuccess;
 //    QByteArray block;
 //    QDataStream out(&block, QIODevice::WriteOnly);
-//    out.setVersion(QDataStream::Qt_4_8);
+//    // 
 //    out << quint16(0) << int(GET_ALL_FRIENDS) <<  isSuccess;
 //    if (isSuccess == true)
 //    {

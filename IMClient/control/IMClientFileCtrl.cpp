@@ -39,7 +39,7 @@ bool IMClientFileCtrl::writeAutoLogin(const QString &fileName, const QString &id
         return false;
     }
     QDataStream out(&file);
-    out.setVersion(QDataStream::Qt_4_8);
+    // 
     out << id << pwd << isAuto;
     file.close();
     return true;
@@ -63,7 +63,7 @@ bool IMClientFileCtrl::readAutoLogin(const QString &fileName,QString &id,
         return false;
     }
     QDataStream in(&file);
-    in.setVersion(QDataStream::Qt_4_8);
+    // 
     in >>id >> pwd >> isAuto;
     file.close();
     return true;
@@ -179,7 +179,7 @@ void IMClientFileCtrl::saveTalkHistory(const QString filePath,
         return;
 
     QDataStream out(&file);
-    out.setVersion(QDataStream::Qt_4_8);
+    // 
 
     if(messagaShow->toPlainText().isEmpty())
         return;
@@ -211,7 +211,7 @@ void IMClientFileCtrl::readTalkHistory(const QString filePath,
 
     QString allRecord;
     QDataStream in(&file);
-    in.setVersion(QDataStream::Qt_4_8);
+    // 
 
     QString tempString;
     while( !file.atEnd() )

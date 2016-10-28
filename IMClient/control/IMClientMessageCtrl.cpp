@@ -95,7 +95,7 @@
 //{
 //    qDebug() << "readMessage";
 //    QDataStream in(m_tcpSocket);
-//    in.setVersion(QDataStream::Qt_4_8);
+//    // 
 //    if (m_blockSize == 0)
 //    {
 //        if (m_tcpSocket->bytesAvailable() < (int)sizeof(quint16))
@@ -178,7 +178,7 @@
 //    m_isConnected = true;
 //    QByteArray block;
 //    QDataStream out(&block, QIODevice::WriteOnly);
-//    out.setVersion(QDataStream::Qt_4_8);
+//    // 
 //    out << quint16(0) << quint8(LOGIN) << m_id << m_pwd
 //        << quint8(m_status) << QDateTime::currentDateTime();
 //    out.device()->seek(0);

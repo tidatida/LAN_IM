@@ -121,7 +121,7 @@ void IMLoginCtrl::requestLogin()
     m_blockSize = 0;
     QByteArray block;
     QDataStream out(&block, QIODevice::WriteOnly);
-    out.setVersion(QDataStream::Qt_4_8);
+    // 
     out << quint16(0) << int(LOGIN) << m_loginInfo;
     out.device()->seek(0);
     out << quint16(block.size() - sizeof(quint16));
@@ -174,7 +174,7 @@ void IMLoginCtrl::requestGetQuestionAndAnswer()
     m_blockSize = 0;
     QByteArray block;
     QDataStream out(&block, QIODevice::WriteOnly);
-    out.setVersion(QDataStream::Qt_4_8);
+    // 
     out << quint16(0) << int(GET_QUESTION_ANSWER) << m_id;
     out.device()->seek(0);
     out << quint16(block.size() - sizeof(quint16));
@@ -191,7 +191,7 @@ Changes: NULL
 void IMLoginCtrl::readMessage()
 {
     QDataStream in(m_tcpSocket);
-    in.setVersion(QDataStream::Qt_4_8);
+    // 
     if (m_blockSize == 0)
     {
         if (m_tcpSocket->bytesAvailable() < (int)sizeof(quint16))

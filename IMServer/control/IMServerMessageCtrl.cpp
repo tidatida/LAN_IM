@@ -163,7 +163,7 @@ void IMServerMessageCtrl::readMessage(IMClientSocketCtrl* socket)
 
 
 //     QDataStream in(newClientSocket);
-//     in.setVersion(QDataStream::Qt_4_8);
+//     // 
 //     if (m_blockSize == 0)
 //     {
 //         qDebug()<<"size"<<newClientSocket->bytesAvailable();
