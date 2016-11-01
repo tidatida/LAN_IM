@@ -672,7 +672,7 @@ Input: int socketDescriptor:socket
 Output:NULL
 Changes: NULL
 *************************************************/
-void IMTcpServer::incomingConnection(int socketDescriptor)
+void IMTcpServer::incomingConnection(qintptr socketDescriptor)
 {
 //    IMClientSocket *socket = new IMClientSocket(this);
 //    socket->setSocketDescriptor(socketDescriptor);

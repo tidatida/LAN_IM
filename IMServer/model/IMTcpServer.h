@@ -36,7 +36,7 @@ signals:
     void haveLeftAddress(const QString & address);
 
 private:
-    void incomingConnection(int socketDescriptor);
+    void incomingConnection(qintptr socketDescriptor);
 
     void friendRequest(const SaveTmpInformation & save);
     void flockRequest(const SaveTmpInformation & save);
