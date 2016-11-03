@@ -93,6 +93,7 @@ IMMainWidget::IMMainWidget(const UserInformation me, QWidget *parent) :
     m_onlineCounter = 0;
     m_mailWidget = NULL;
     m_messageManWidget = NULL;
+	
     initIMMainWidget();
     linkSignalWithSlot();
     creatMenu();
@@ -112,12 +113,14 @@ IMMainWidget::~IMMainWidget()
     {
         m_database.close();
     }
+	
     if (m_mailWidget != NULL)
     {
         m_mailWidget->close();
         delete m_mailWidget;
         m_mailWidget = 0;
     }
+	
     if (m_messageManWidget != NULL)
     {
         m_messageManWidget->close();
@@ -3151,19 +3154,12 @@ void IMMainWidget:: creatMenu()
     QAction *manMes = new QAction(tr("msg manage "), m_menu);
     QAction *mail = new QAction(tr("email manage "), m_menu);
 
-    connect(addFriend, SIGNAL(triggered()),
-            this, SLOT(onClickAddFriend()));
-    connect(addFlock, SIGNAL(triggered()),
-            this, SLOT(onClickAddFlock()));
-    connect(changePwd, SIGNAL(triggered()),
-            this, SLOT(onClickChangePwd()));
-    connect(information, SIGNAL(triggered()),
-            this, SLOT(getMyInformation()));
-    connect(manMes, SIGNAL(triggered()),
-            this, SLOT(showMessageWidget()));
-    connect(mail, SIGNAL(triggered()),
-            this, SLOT(showMailWidget()));
-
+    connect(addFriend, SIGNAL(triggered()),this, SLOT(onClickAddFriend()));
+    connect(addFlock, SIGNAL(triggered()),this, SLOT(onClickAddFlock()));
+    connect(changePwd, SIGNAL(triggered()),this, SLOT(onClickChangePwd()));
+    connect(information, SIGNAL(triggered()),this, SLOT(getMyInformation()));
+    connect(manMes, SIGNAL(triggered()),this, SLOT(showMessageWidget()));
+    connect(mail, SIGNAL(triggered()),this, SLOT(showMailWidget()));
 
     m_menu->addAction(addFlock);
     m_menu->addAction(addFriend);
@@ -3171,6 +3167,7 @@ void IMMainWidget:: creatMenu()
     m_menu->addAction(information);
     m_menu->addAction(manMes);
     m_menu->addAction(mail);
+	
 }
 
 
@@ -3198,6 +3195,7 @@ bool IMMainWidget::continueToClose()
     {
         return true;
     }
+	
     if (m_chatRoomMap.size() != 0
             || m_flockRoomMap.size() != 0
             || m_discussionRoomMap.size() != 0)
