@@ -2,11 +2,7 @@
 File Name:IMMainWidget.cpp
 Author:jet.F.R
 Date:2014.3.10
-<<<<<<< HEAD
-Description:clientmainframe
-=======
 Description:main frame of client
->>>>>>> 20a9555c1984893a09c6f694bdca5c9b4687c5b8
 Changes:
 ********************************************/
 
@@ -58,8 +54,6 @@ Changes:
 #include "view/IMLinkDiscussionButton.h"
 #include "view/IMSearchListWidget.h"
 #include "model/IMEncryption.h"
-//#include <iostream>
-//using namespace std;
 
 static const QString TMP_LOCAL_HISTORY_PARH = "/tmp/local_history_message";
 // mark public:--------------------------------------------------------------
@@ -102,7 +96,7 @@ IMMainWidget::IMMainWidget(const UserInformation me, QWidget *parent) :
     initIMMainWidget();
     linkSignalWithSlot();
     creatMenu();
-    setWindowTitle(tr("IM"));
+    setWindowTitle(tr("IM main window"));
 }
 
 IMMainWidget::~IMMainWidget()
@@ -130,6 +124,7 @@ IMMainWidget::~IMMainWidget()
         delete m_messageManWidget;
         m_messageManWidget = 0;
     }
+	
     // clear containers
     clearContainers();
     qDeleteAll(m_chatRoomMap.begin(), m_chatRoomMap.end());
@@ -149,6 +144,7 @@ IMMainWidget::~IMMainWidget()
 
     qDeleteAll(m_discussionInformationMap.begin(), m_discussionInformationMap.end());
     m_discussionInformationMap.clear();
+	
 }
 
 /*************************************************
@@ -166,12 +162,15 @@ Description:
 *************************************************/
 bool IMMainWidget::isMyFriend(const QString & id) const
 {
-    if (m_friendMap.contains(id))
+    if (m_friendMap.contains(id)){
         return true;
+    }
+	
     return false;
 }
 
 
+#if 0
 /*************************************************
 Function Name:setNickname()
 Description:
@@ -206,7 +205,7 @@ Changes:NULL
 //{
 //    m_myself->setStatus(status);
 //}
-
+#endif
 
 
 /*************************************************
@@ -246,8 +245,9 @@ Description:
 *************************************************/
 void IMMainWidget::getFriendInformation(const QString &id)
 {
-    if (NULL != m_mainCtrl)
+    if (NULL != m_mainCtrl){
         m_mainCtrl->getFriendInformation(id);
+    }
 }
 
 /*************************************************
@@ -256,8 +256,9 @@ Description:
 *************************************************/
 void IMMainWidget::changeMyInformation(const UserInformation &me)
 {
-    if (NULL != m_mainCtrl)
+    if (NULL != m_mainCtrl){
         m_mainCtrl->changeMyInformation(me);
+    }
 }
 
 
@@ -268,8 +269,9 @@ Description:
 void IMMainWidget::changeFriendRemark(const QString & friendID,
                                       const QString & remark)
 {
-    if (NULL != m_mainCtrl)
+    if (NULL != m_mainCtrl){
         m_mainCtrl->changeFriendRemark(m_myself.m_userID, friendID, remark);
+    }
 }
 
 /*************************************************
@@ -278,8 +280,9 @@ Description:
 *************************************************/
 void IMMainWidget::deleteFriend(const QString & friendID)
 {
-    if (NULL != m_mainCtrl)
+    if (NULL != m_mainCtrl){
         m_mainCtrl->deleteFriend(m_myself.m_userID, friendID);
+    }
 }
 
 /*************************************************
@@ -321,8 +324,9 @@ Description:
 *************************************************/
 void IMMainWidget::changeFlockInformation(const FlockInformation & flock)
 {
-    if (NULL != m_mainCtrl)
+    if (NULL != m_mainCtrl){
         m_mainCtrl->changeFlockInformation(flock);
+    }
 }
 
 
@@ -332,8 +336,9 @@ Description:
 *************************************************/
 void IMMainWidget::changeDiscussionInformation(const DiscussionInformation & discussion)
 {
-    if (NULL != m_mainCtrl)
+    if (NULL != m_mainCtrl){
         m_mainCtrl->changeDiscussionInformation(discussion);
+    }
 }
 
 /*************************************************
@@ -377,8 +382,9 @@ Description:
 *************************************************/
 void IMMainWidget::dropFlock(const QString & flockID)
 {
-    if (NULL != m_mainCtrl)
+    if (NULL != m_mainCtrl){
         m_mainCtrl->dropFlock(m_myself.m_userID, flockID);
+    }
 }
 
 /*************************************************
@@ -387,8 +393,9 @@ Description:
 *************************************************/
 void IMMainWidget::dropDiscussion(const QString & discussionID)
 {
-    if (NULL != m_mainCtrl)
+    if (NULL != m_mainCtrl){
         m_mainCtrl->dropDiscussion(m_myself.m_userID, discussionID);
+    }
 }
 
 /*************************************************
@@ -397,8 +404,9 @@ Description:
 *************************************************/
 void IMMainWidget::leaveFlock(const QString &memberID, const QString & flockID)
 {
-    if (NULL != m_mainCtrl)
+    if (NULL != m_mainCtrl){
         m_mainCtrl->leaveFlock(memberID, flockID);
+    }
 }
 
 /*************************************************
@@ -407,8 +415,9 @@ Description:
 *************************************************/
 void IMMainWidget::leaveDiscussion(const QString & memberID, const QString & discussionID)
 {
-    if (NULL != m_mainCtrl)
+    if (NULL != m_mainCtrl){
         m_mainCtrl->leaveDiscussion(memberID, discussionID);
+    }
 }
 /*************************************************
 Function Name:leaveFlock
@@ -421,6 +430,7 @@ void IMMainWidget::addFriend(const QString friendID)
         QMessageBox::critical(NULL, tr("add failed"), tr("can not add self"));
         return;
     }
+	
     if (m_friendMap.contains(friendID))
     {
         QMessageBox::critical(NULL, tr("add failed"), tr("this is already friend"));
@@ -434,13 +444,9 @@ void IMMainWidget::addFriend(const QString friendID)
                                              QString(tr("hello,I am: %1")).
                                              arg(m_myself.m_nickname),
                                              &isOkMes);
-    if (!isOkMes)
+    if (!isOkMes){
         return;
-
-    //    TempStrings temp;
-    //    temp.m_one = m_myself.m_userID;
-    //    temp.m_two = friendID;
-    //    temp.m_three = checkMes;
+    }
 
     TalkMessage mes;
     mes.m_senderID = m_myself.m_userID;
@@ -448,8 +454,10 @@ void IMMainWidget::addFriend(const QString friendID)
     mes.m_text = checkMes;
     mes.m_type = REQUEST_FRIEND;
 
-    if (NULL != m_mainCtrl)
+    if (NULL != m_mainCtrl){
         m_mainCtrl->addFriend(mes);
+    }
+	
 }
 
 
@@ -459,16 +467,19 @@ Description:
 *************************************************/
 void IMMainWidget::changeFlockMemberRemark(const TempStrings & tmpStr)
 {
-    if (NULL != m_mainCtrl)
+    if (NULL != m_mainCtrl){
         m_mainCtrl->changeFlockMemberRemark(tmpStr);
+    }
 }
 
 void IMMainWidget::moveFriendToBox(const QString & friendID,
                                    const QString & groupName,
                                    const QString & title)
 {
-    if (NULL != m_mainCtrl)
+    if (NULL != m_mainCtrl){
         m_mainCtrl->moveFriendToBox(friendID, groupName, title);
+    }
+	
 }
 
 /*************************************************
@@ -505,13 +516,16 @@ QStringList IMMainWidget::getGroupFriendList(const QString & groupName)
         IMFriendButton *friendBtn = (IMFriendButton *)friendList->value(i);
         friendInfor = friendBtn->getInformation();
 
-        if(friendInfor.m_remarkName.isEmpty())
+        if(friendInfor.m_remarkName.isEmpty()){
             mark = friendInfor.m_nickname;
-        else
+        }else{
             mark = friendInfor.m_remarkName;
+        }
+		
         m_friendsMarkList.append(mark);
         m_friendsIDList.append(friendInfor.m_userID);
     }
+	
     return m_friendsMarkList;
 }
 
@@ -523,13 +537,16 @@ Description:
 void IMMainWidget::getLocalHistoryMessage(const int index, const QDate & date)
 {
     m_localHistoryMessageVec.clear();
-    if (index < 0 || index >= m_friendsIDList.size())
+    if (index < 0 || index >= m_friendsIDList.size()){
         return;
+    }
+	
     bool isOk = m_database.searchHistoryMessage(m_myself.m_userID,
                                                 m_friendsIDList[index],
                                                 date,
                                                 m_localHistoryMessageVec);
-    qDebug() << "m_localHistoryMessageVec:" << isOk << m_localHistoryMessageVec.size();
+
+	qDebug() << "m_localHistoryMessageVec:" << isOk << m_localHistoryMessageVec.size();
     m_messageManWidget->setLocalMessageWidget(m_localHistoryMessageVec);
 }
 
@@ -548,8 +565,10 @@ void IMMainWidget::exportLocalMessage(const int index)
     QString id = m_friendsIDList[index];
     QString selFilter="All files (*.*)";
     QDir dir = QDir::current();
-    if (!dir.exists(history))
+    if (!dir.exists(history)){
         dir.mkpath(history);
+    }
+	
     QString path = QString("%1/%2_%3").arg(history, m_myself.m_userID, id);
     QString filter = QString(tr("%1;;%2;;%3").arg(csv, excel, txt));
     QString name = QFileDialog::getSaveFileName(this,tr("  save  file "), path,
@@ -558,26 +577,32 @@ void IMMainWidget::exportLocalMessage(const int index)
     {
         return;
     }
+	
     qDebug() << "export-path" << name << selFilter;
-    if (selFilter == csv)
+
+	if (selFilter == csv)
     {
-        if (!name.endsWith(".csv", Qt::CaseInsensitive))
+        if (!name.endsWith(".csv", Qt::CaseInsensitive)){
             name.append(".csv");
+        }
     }
     else if (selFilter == excel)
     {
-        if (!name.endsWith(".xls", Qt::CaseInsensitive))
+        if (!name.endsWith(".xls", Qt::CaseInsensitive)){
             name.append(".xls");
+        }
     }
     else if (selFilter == txt)
     {
-        if (!name.endsWith(".txt", Qt::CaseInsensitive))
+        if (!name.endsWith(".txt", Qt::CaseInsensitive)){
             name.append(".txt");
+        }
     }
 
     QString tmpPath = TMP_LOCAL_HISTORY_PARH;
     QString newPath = tmpPath;
     static int i = 0;
+	
     while(1)
     {
 
@@ -586,9 +611,9 @@ void IMMainWidget::exportLocalMessage(const int index)
         {
             newPath = tmpPath.append("_").append(QString::number(++i));
             tmpPath = TMP_LOCAL_HISTORY_PARH;
-        }
-        else
+        }else{
             break;
+        }
     }
 
     qDebug() << "newpath:" << newPath;
@@ -598,12 +623,11 @@ void IMMainWidget::exportLocalMessage(const int index)
     QString temp;
     if (type < 0)
     {
-        temp = QString(tr("  chat record export failed.！"));
-
+        temp = QString(tr("  chat record export failed."));
     }
     else if (type == 0)
     {
-        temp = QString(tr("  chat recordis empty！"));
+        temp = QString(tr("  chat record is empty."));
     }
     else
     {
@@ -614,8 +638,6 @@ void IMMainWidget::exportLocalMessage(const int index)
 
     QMessageBox::information(NULL, tr(" export   chat record"), temp);
     m_messageManWidget->raise();
-    //    m_messageManWidget->activateWindow();
-    //    m_messageManWidget->show();
 }
 
 
@@ -631,8 +653,11 @@ void IMMainWidget::exportLocalMessageAll()
     QString history = "resource/history";
     QString selFilter="All files (*.*)";
     QDir dir = QDir::current();
-    if (!dir.exists(history))
+
+	if (!dir.exists(history)){
         dir.mkpath(history);
+    }
+	
     QString path = QString("%1/%2").arg(history, m_myself.m_userID);
     QString filter = QString(tr("%1;;%2;;%3").arg(csv, excel, txt));
     QString name = QFileDialog::getSaveFileName(this,tr("  save  file "), path,
@@ -641,27 +666,32 @@ void IMMainWidget::exportLocalMessageAll()
     {
         return;
     }
+	
     qDebug() << "export-path" << name << selFilter;
     if (selFilter == csv)
     {
-        if (!name.endsWith(".csv", Qt::CaseInsensitive))
+        if (!name.endsWith(".csv", Qt::CaseInsensitive)){
             name.append(".csv");
+        }
     }
     else if (selFilter == excel)
     {
-        if (!name.endsWith(".xls", Qt::CaseInsensitive))
+        if (!name.endsWith(".xls", Qt::CaseInsensitive)){
             name.append(".xls");
+        }
     }
     else if (selFilter == txt)
     {
-        if (!name.endsWith(".txt", Qt::CaseInsensitive))
+        if (!name.endsWith(".txt", Qt::CaseInsensitive)){
             name.append(".txt");
+        }
     }
 
     //    TMP_LOCAL_HISTORY_PARH.append(QTime::currentTime().toString("hh-mm-ss"));
     QString tmpPath = TMP_LOCAL_HISTORY_PARH;
     QString newPath = tmpPath;
     static int i = 0;
+
     while(1)
     {
 
@@ -671,8 +701,9 @@ void IMMainWidget::exportLocalMessageAll()
             newPath = tmpPath.append("_").append(QString::number(++i));
             tmpPath = TMP_LOCAL_HISTORY_PARH;
         }
-        else
+        else{
             break;
+        }
     }
 
     qDebug() << "newpath:" << newPath;
@@ -698,6 +729,7 @@ void IMMainWidget::exportLocalMessageAll()
 
     QMessageBox::information(NULL, tr(" export   chat record"), temp);
     m_messageManWidget->raise();
+	
 }
 
 /*************************************************
@@ -709,7 +741,8 @@ void IMMainWidget::deleteLocalMessage(const int index)
     QString id = m_friendsIDList[index];
     int type =  m_database.deleteHistoryMessageOneFriend(m_myself.m_userID, id);
     QString temp;
-    if (type < 0)
+
+	if (type < 0)
     {
         temp = QString(tr("delete  chat recordfailed.！"));
     }
@@ -721,8 +754,10 @@ void IMMainWidget::deleteLocalMessage(const int index)
     {
         temp = QString(tr("delete  chat recordsuccess！"));
     }
+
     QMessageBox::information(NULL, tr("delete  chat record"), temp);
     m_messageManWidget->raise();
+	
     return;
 }
 
@@ -734,6 +769,7 @@ void IMMainWidget::deleteLocalMessageAll()
 {
     int type =  m_database.deleteHistoryMessageAll(m_myself.m_userID);
     QString temp;
+	
     if (type < 0)
     {
         temp = QString(tr("delete  chat recordfailed.！"));
@@ -746,9 +782,11 @@ void IMMainWidget::deleteLocalMessageAll()
     {
         temp = QString(tr("delete  chat recordsuccess！"));
     }
+
     QMessageBox::information(NULL, tr("delete  chat record"), temp);
     m_messageManWidget->raise();
-    return;
+
+	return;
 }
 
 
@@ -833,11 +871,14 @@ Description:
 void IMMainWidget::getNetWorkHistoryMessage(const int index, const QDate &date)
 {
     //    m_localHistoryMessageVec.clear();
-    if (index < 0 || index >= m_friendsIDList.size())
+    if (index < 0 || index >= m_friendsIDList.size()){
         return;
-    if (NULL != m_mainCtrl)
+    }
+	
+    if (NULL != m_mainCtrl){
         m_mainCtrl->requestGetNetWorkHistoryMessageOneFriendOneDate(
                     m_friendsIDList[index], date);
+    }
 }
 
 // mark: public slots:-------------------------------------------
@@ -848,8 +889,9 @@ Description:
 *************************************************/
 void IMMainWidget::getFriendsInformation()
 {
-    if (NULL != m_mainCtrl)
+    if (NULL != m_mainCtrl){
         m_mainCtrl->getFriendsInformation(m_myself.m_userID, m_myself.m_status);
+    }
 }
 
 /*************************************************
@@ -858,8 +900,9 @@ Description:
 *************************************************/
 void IMMainWidget::getFlocksInformation()
 {
-    if (NULL != m_mainCtrl)
+    if (NULL != m_mainCtrl){
         m_mainCtrl->getFlocksInformation(m_myself.m_userID);
+    }
 }
 
 /*************************************************
@@ -868,8 +911,9 @@ Description:
 *************************************************/
 void IMMainWidget::getDiscussionsInformation()
 {
-    if (NULL != m_mainCtrl)
+    if (NULL != m_mainCtrl){
         m_mainCtrl->getDiscussionsInformation(m_myself.m_userID);
+    }
 }
 
 /*************************************************
@@ -878,8 +922,9 @@ Description:
 *************************************************/
 void IMMainWidget::getLatestMessage()
 {
-    if (NULL != m_mainCtrl)
+    if (NULL != m_mainCtrl){
         m_mainCtrl->getLatestMessage(m_myself.m_userID);
+    }
 }
 
 
@@ -908,13 +953,12 @@ void IMMainWidget::setFriendListWidget(const QVector<FriendInformation> &friends
     for(int i=0; i<len; i++)
     {
         addFriendButton(friendsVec[i]);
-        if (OFFLINE != friendsVec[i].m_status && INVISIBLE != friendsVec[i].m_status)
+        if (OFFLINE != friendsVec[i].m_status && INVISIBLE != friendsVec[i].m_status){
             num++;
+        }
     }
 
     setOnlineCounter(num);
-    //    #endif
-
     getFlocksInformation();
 }
 
@@ -924,15 +968,15 @@ Description: set
 *************************************************/
 void IMMainWidget::setFlockListWidget(const QVector<FlockInformation> & flocksVec)
 {
-    //    return;
-
     qDebug() << "flock-size:" << flocksVec.size();
 
     int len = flocksVec.size();
+	
     for(int i=0; i<len; i++)
     {
         addFlockButton(flocksVec[i]);
     }
+	
     getDiscussionsInformation();
 }
 
@@ -942,10 +986,10 @@ Description:
 *************************************************/
 void IMMainWidget::setDiscussionListWidget(const QVector<DiscussionInformation> & disVec)
 {
-    //    return;
     qDebug() << "dis-seize:" << disVec.size();
 
     int len = disVec.size();
+	
     for(int i=0; i<len; i++)
     {
         addDiscussionButton(disVec[i]);
@@ -959,8 +1003,10 @@ Description:
 *************************************************/
 bool IMMainWidget::addFriendButton(const FriendInformation & friInfo)
 {
-    if (m_friendMap.contains(friInfo.m_userID))
+    if (m_friendMap.contains(friInfo.m_userID)){
         return false;
+    }
+	
     QString groupName = friInfo.m_groupName;
     if (!m_friendsGroupList.contains(groupName))
     {
@@ -997,8 +1043,9 @@ Description:
 *************************************************/
 bool IMMainWidget::addFlockButton(const FlockInformation & flcokInfo)
 {
-    if (m_flockMap.contains(flcokInfo.m_flockID))
+    if (m_flockMap.contains(flcokInfo.m_flockID)){
         return false;
+    }
 
     IMFlockButton *button = new IMFlockButton(flcokInfo, this, this);
     //    button->setAutoRaise(true);
@@ -1016,8 +1063,9 @@ Description:
 
 bool IMMainWidget::addDiscussionButton(const DiscussionInformation & disInfo)
 {
-    if (m_discussionMap.contains(disInfo.m_discussionID))
+    if (m_discussionMap.contains(disInfo.m_discussionID)){
         return false;
+    }
 
     IMDiscussionButton *button = new IMDiscussionButton(disInfo, this, this);
     //    button->setAutoRaise(true);
@@ -1039,10 +1087,13 @@ void IMMainWidget::receiveFriendTalkMessage(const TalkMessage &mes)
 {
     if (TALK_FLOCK == mes.m_type)
     {
-        if (!m_flockMap.contains(mes.m_receiverID))
+        if (!m_flockMap.contains(mes.m_receiverID)){
             return;
-        if (0 == mes.m_senderID.compare(m_myself.m_userID))
+        }
+		
+        if (0 == mes.m_senderID.compare(m_myself.m_userID)){
             return;
+        }
 
         IMFlockChatWidget *flockRoom = NULL;
         if (m_flockRoomMap.contains(mes.m_receiverID))
@@ -1073,14 +1124,21 @@ void IMMainWidget::receiveFriendTalkMessage(const TalkMessage &mes)
 
             m_linkMap[mes.m_receiverID]->setLatestMessage(mes);
         }
+		
         return;
+		
     }
+
+	
     if (TALK_DISCUSSION == mes.m_type)
     {
-        if (!m_discussionMap.contains(mes.m_receiverID))
+        if (!m_discussionMap.contains(mes.m_receiverID)){
             return;
-        if (0 == mes.m_senderID.compare(m_myself.m_userID))
+        }
+		
+        if (0 == mes.m_senderID.compare(m_myself.m_userID)){
             return;
+        }
 
         IMDiscussionChatWidget *discussionRoom = NULL;
         if (m_discussionRoomMap.contains(mes.m_receiverID))
@@ -1111,6 +1169,7 @@ void IMMainWidget::receiveFriendTalkMessage(const TalkMessage &mes)
             m_linkMap[mes.m_receiverID]->setLatestMessage(mes);
         }
         return;
+		
     }
 
 
@@ -1123,10 +1182,6 @@ void IMMainWidget::receiveFriendTalkMessage(const TalkMessage &mes)
 
     if (m_chatRoomMap.contains(mes.m_senderID))
     {
-        //        qDebug("chat room contains");
-        //        m_chatRoomMap[mes.m_senderID]->raise();
-        //        m_chatRoomMap[mes.m_senderID]->activateWindow();
-        //        m_chatRoomMap[mes.m_senderID]->show();
         chatRoom =  m_chatRoomMap[mes.m_senderID];
     }
     else
@@ -1137,53 +1192,56 @@ void IMMainWidget::receiveFriendTalkMessage(const TalkMessage &mes)
 
     switch (mes.m_type)
     {
-    case TALK_MESSAGE:
-        chatRoom->appendMessageShow(mes);
-        // store msg record  to database
-        m_database.addHistoryMessage(mes);
-        if (!m_friendMap[mes.m_senderID]->isRoomShow())
-        {
-            // create IMLinkFriendButton
-            if (!m_linkMap.contains(mes.m_senderID))
-            {
-                IMLinkFriendButton * btn = new IMLinkFriendButton(
-                            m_friendMap[mes.m_senderID], this);
-                connect(btn, SIGNAL(deleteLinkButton(QString)),
-                        this, SLOT(removeLinkButton(QString)));
-                m_linkMap.insert(mes.m_senderID, btn);
-                m_messageListWidget->addItem(btn);
-                m_tabWidget->setTabText(3, QString(tr("new msg%1"))
-                                        .arg(m_messageListWidget->size()));
-            }
-            m_linkMap[mes.m_senderID]->setLatestMessage(mes);
-        }
+	    case TALK_MESSAGE:
+	        chatRoom->appendMessageShow(mes);
+	        // store msg record  to database
+	        m_database.addHistoryMessage(mes);
+	        if (!m_friendMap[mes.m_senderID]->isRoomShow())
+	        {
+	            // create IMLinkFriendButton
+	            if (!m_linkMap.contains(mes.m_senderID))
+	            {
+	                IMLinkFriendButton * btn = new IMLinkFriendButton(
+	                            m_friendMap[mes.m_senderID], this);
+	                connect(btn, SIGNAL(deleteLinkButton(QString)),
+	                        this, SLOT(removeLinkButton(QString)));
+	                m_linkMap.insert(mes.m_senderID, btn);
+	                m_messageListWidget->addItem(btn);
+	                m_tabWidget->setTabText(3, QString(tr("new msg%1"))
+	                                        .arg(m_messageListWidget->size()));
+	            }
+	            m_linkMap[mes.m_senderID]->setLatestMessage(mes);
+	        }
 
-        break;
-    case REQUEST_VIDEO:
-        chatRoom->pendingVideo(mes);
-    case AGREE_VOICE:
-        //        chatRoom->showCamera(mes);
-        // createVideo Window
-        // Send  Receive
-    case REFUSE_VOICE:
-        chatRoom->closeVideoWidget();
-        break;
+	        break;
+			
+	    case REQUEST_VIDEO:
+	        chatRoom->pendingVideo(mes);
+			
+	    case AGREE_VOICE:
+	        //        chatRoom->showCamera(mes);
+	        // createVideo Window
+	        // Send  Receive
+	    case REFUSE_VOICE:
+	        chatRoom->closeVideoWidget();
+	        break;
 
-    case REQUEST_FILE:
-    {
-        chatRoom->pendingFile(mes);
-        break;
-    }
-    case AGREE_FILE:
-    {
-        break;
-    }
-    case REFUSE_FILE:
-    {
-        chatRoom->refusedSendFile();
-        break;
-    }
-    }
+	    case REQUEST_FILE:
+	    {
+	        chatRoom->pendingFile(mes);
+	        break;
+	    }
+	    case AGREE_FILE:
+	    {
+	        break;
+	    }
+	    case REFUSE_FILE:
+	    {
+	        chatRoom->refusedSendFile();
+	        break;
+	    }
+		
+	}
 
 }
 
@@ -1195,8 +1253,9 @@ void IMMainWidget::setFriendStatus(const QString & id,int status)
 {
     QMap<QString, IMFriendButton*>::iterator iter;
     iter = m_friendMap.find(id);
-    if(m_friendMap.end() == iter)
+    if(m_friendMap.end() == iter){
         return;
+    }
 
     iter.value()->getInformation().m_status = status;
     iter.value()->setButtonStatus();
@@ -1211,8 +1270,9 @@ void IMMainWidget::setFriendInformation(const FriendInformation &fri)
 {
     QMap<QString, IMFriendButton*>::iterator iter;
     iter = m_friendMap.find(fri.m_userID);
-    if(m_friendMap.end() == iter)
+    if(m_friendMap.end() == iter){
         return;
+    }
 
     iter.value()->setChangedInformation(fri);
     iter.value()->setButtonStatus();
@@ -1271,10 +1331,8 @@ void IMMainWidget::setMyInformation(const UserInformation &user)
     QString str = QString("resource/image/head/%1.bmp").
             arg(QString::number(user.m_headPortrait));
     m_labelHead->setPixmap(QPixmap(str));
-    //    m_cbStatus->setCurrentIndex(user.m_status);
     m_labelNickname->setText(QString("%1\n%2").
                              arg(user.m_nickname, user.m_userID));
-    //    m_labelMark->setText(user.m_mark); //  sign
 }
 
 /*************************************************
@@ -1293,10 +1351,12 @@ void IMMainWidget::showFlockInformation(const FlockInformation & flock)
 
     IMFlockInformationWidget *infWidget = new IMFlockInformationWidget(this);
     m_flockInformationMap.insert(flock.m_flockID, infWidget);
-    if (flock.m_creatorID.compare(m_myself.m_userID) == 0)
+	
+    if (flock.m_creatorID.compare(m_myself.m_userID) == 0){
         infWidget->setReadOnly(true, true);
-    else
+    }else{
         infWidget->setReadOnly(true, false);
+    }
 
     infWidget->setFlockInformation(flock);
     infWidget->show();
@@ -1336,6 +1396,7 @@ void IMMainWidget::setFlockInformation(const FlockInformation & flock)
     {
         m_flockMap[flock.m_flockID]->setChangedInformation(flock);
     }
+	
     if (m_flockRoomMap.contains(flock.m_flockID))
     {
         m_flockRoomMap[flock.m_flockID]->setChatInformation(flock);
@@ -1355,6 +1416,7 @@ void IMMainWidget::setDiscussionInformation(const DiscussionInformation & discus
     {
         m_discussionMap[discussion.m_discussionID]->setChangedInformation(discussion);
     }
+	
     if (m_discussionRoomMap.contains(discussion.m_discussionID))
     {
         m_discussionRoomMap[discussion.m_discussionID]->setChatInformation(discussion);
@@ -1381,13 +1443,16 @@ Description: set friend remark
 *************************************************/
 void IMMainWidget::setFriendRemark(const TempStrings& tempStr)
 {
-    if (tempStr.m_one != m_myself.m_userID)
+    if (tempStr.m_one != m_myself.m_userID){
         return;
+    }
+
     QMap<QString, IMFriendButton*>::iterator iter;
     iter = m_friendMap.find(tempStr.m_two);
 
-    if(m_friendMap.end() == iter)
+    if(m_friendMap.end() == iter){
         return;
+    }
 
     iter.value()->getInformation().m_remarkName = tempStr.m_three;
     iter.value()->setButtonStatus();
@@ -1401,19 +1466,16 @@ Description:  already deletefriend
 void IMMainWidget::deletedFriend(const QString & myID, const QString & friendID,
                                  const QString & groupName)
 {
-    if (myID != m_myself.m_userID)
+    if (myID != m_myself.m_userID){
         return;
+    }
 
 
-    if (!m_friendMap.contains(friendID))
+    if (!m_friendMap.contains(friendID)){
         return;
+    }
 
     m_toolItemsFriendsVec[m_indexFriendsGroupMap.value(groupName)]->removeItem(m_friendMap[friendID]);
-    //    removeItem(m_indexFriendsGroupMap[friendID]);
-    //    m_indexFriendsGroupMap[friendID]->setVisible(false);
-    //    m_indexFriendsGroupMap[friendID]->setEnabled(false);
-    //    delete m_indexFriendsGroupMap[friendID];
-    //    IMFriendButton *button = m_indexFriendsGroupMap.find();
     m_friendMap[friendID]->deleteLater();
     m_friendMap.remove(friendID);
 
@@ -1423,6 +1485,7 @@ void IMMainWidget::deletedFriend(const QString & myID, const QString & friendID,
         m_chatRoomMap[friendID]->deleteLater();
         m_chatRoomMap.remove(friendID);
     }
+
     qDebug() << "friend deleted";
     setOnlineCounter(m_onlineCounter - 1);
 }
@@ -1433,8 +1496,9 @@ Function NameQInputDialogption:  already deleteGroup
 *************************************************/
 void IMMainWidget::dropedFlock(const QString & flockID)
 {
-    if (!m_flockMap.contains(flockID))
+    if (!m_flockMap.contains(flockID)){
         return;
+    }
 
     QMessageBox::information(NULL, tr("Groupmsg "),
                              QString(tr("Group %1 already destroied by owner")).arg(flockID));
@@ -1451,9 +1515,6 @@ void IMMainWidget::dropedFlock(const QString & flockID)
     m_flockMap[flockID]->deleteLater();
     m_flockMap.remove(flockID);
 
-
-
-
     qDebug() << "flock drop";
 }
 
@@ -1466,8 +1527,9 @@ Description:  already deletediscuss group
 void IMMainWidget::dropedDiscussion(const QString & discussionID)
 
 {
-    if (!m_discussionMap.contains(discussionID))
+    if (!m_discussionMap.contains(discussionID)){
         return;
+    }
 
     QMessageBox::information(NULL, tr("discuss groupmsg "),
                              QString(tr("discuss group%1 already been destroyed by ower.")).arg(discussionID));
@@ -1485,9 +1547,6 @@ void IMMainWidget::dropedDiscussion(const QString & discussionID)
     m_discussionMap[discussionID]->deleteLater();
     m_discussionMap.remove(discussionID);
 
-
-
-
     qDebug() << "discussion drop";
 }
 
@@ -1502,22 +1561,24 @@ void IMMainWidget::leavedFlock(const QString & memberID,
     if (creatorID == m_myself.m_userID)
     {
         QMessageBox::information(NULL, tr("Groupmsg "),
-                                 QString(tr("user%1 already 经 quit from  Group%2")).
+                                 QString(tr("user%1 already quit from  Group%2")).
                                  arg(memberID, flockID));
 
         if (m_flockRoomMap.contains(flockID))
         {
             m_flockRoomMap[flockID]->removeFlockMemberButton(memberID);
         }
+
         if (m_flockMap.contains(flockID))
         {
             m_flockMap[flockID]->deleteFlockMember(memberID);
         }
+
     }
     else if (memberID == m_myself.m_userID)
     {
         QMessageBox::information(NULL, tr("Groupmsg "),
-                                 QString(tr("hello,%1, your  already 经 quit from  Group%2")).
+                                 QString(tr("hello,%1, your  already quit from  Group%2")).
                                  arg(memberID, flockID));
 
         if (m_flockRoomMap.contains(flockID))
@@ -1561,7 +1622,7 @@ void IMMainWidget::leavedDiscussion(const QString & memberID,
     if (memberID == m_myself.m_userID)
     {
         //        QMessageBox::information(NULL, tr("discuss groupmsg "),
-        //                                 QString(tr("hello,%1, your  already 经 quit from  discuss group%2")).
+        //                                 QString(tr("hello,%1, your  already quit from  discuss group%2")).
         //                                 arg(memberID, discussionID));
 
         if (m_discussionRoomMap.contains(discussionID))
@@ -1577,7 +1638,9 @@ void IMMainWidget::leavedDiscussion(const QString & memberID,
             m_discussionMap[discussionID]->deleteLater();
             m_discussionMap.remove(discussionID);
         }
+
         qDebug() << "leaved discussion";
+
     }
     else
     {
@@ -1589,6 +1652,7 @@ void IMMainWidget::leavedDiscussion(const QString & memberID,
         {
             m_discussionMap[discussionID]->deleteDiscussionMember(memberID);
         }
+
     }
 
 
@@ -1601,17 +1665,22 @@ Description: createGroupsuccess
 *************************************************/
 void IMMainWidget::createFlockSuccess(const FlockInformation & flock)
 {
-    if (flock.m_creatorID.compare(m_myself.m_userID) != 0)
+    if (flock.m_creatorID.compare(m_myself.m_userID) != 0){
         return;
+    }
 
-    if (m_flockMap.contains(flock.m_flockID))
+    if (m_flockMap.contains(flock.m_flockID)){
         return;
-    if (!addFlockButton(flock))
+    }
+
+    if (!addFlockButton(flock)){
         return;
-    QString temp =  QString(tr("hello,%1(%2).\n your  already 经successcreateGroup%3(%4).\ncreate date : %5.")).
-            arg(m_myself.m_userID, m_myself.m_nickname,
-                flock.m_flockID, flock.m_flockName,
-                flock.m_createDate.toString("yyyy-MM-dd"));
+    }
+
+    QString temp =  QString(tr("hello,%1(%2).\n your  alreadysuccesscreateGroup%3(%4).\ncreate date : %5.")).
+                    arg(m_myself.m_userID, m_myself.m_nickname,
+                    flock.m_flockID, flock.m_flockName,
+                    flock.m_createDate.toString("yyyy-MM-dd"));
 
     QMessageBox::information(NULL, tr("Groupmsg "), temp);
 }
@@ -1623,18 +1692,22 @@ Description: creatediscuss groupsuccess
 *************************************************/
 void IMMainWidget::createDiscussionSuccess(const DiscussionInformation & discussion)
 {
-    if (discussion.m_creatorID.compare(m_myself.m_userID) != 0)
+    if (discussion.m_creatorID.compare(m_myself.m_userID) != 0){
         return;
+    }
 
-    if (m_discussionMap.contains(discussion.m_discussionID))
+    if (m_discussionMap.contains(discussion.m_discussionID)){
+        return;
+    }
 
+    if (!addDiscussionButton(discussion)){
         return;
-    if (!addDiscussionButton(discussion))
-        return;
-    QString temp =  QString(tr("hello,%1(%2).\n your  already 经successcreatediscuss group%3(%4).\ncreate: %5.")).
-            arg(m_myself.m_userID, m_myself.m_nickname,
-                discussion.m_discussionID, discussion.m_discussionName,
-                discussion.m_createDate.toString("yyyy-MM-dd"));
+    }
+
+    QString temp =  QString(tr("hello,%1(%2).\n your  already success creatediscuss group%3(%4).\ncreate: %5.")).
+                    arg(m_myself.m_userID, m_myself.m_nickname,
+                    discussion.m_discussionID, discussion.m_discussionName,
+                    discussion.m_createDate.toString("yyyy-MM-dd"));
 
     QMessageBox::information(NULL, tr("discuss groupmsg "), temp);
 }
@@ -1642,7 +1715,7 @@ void IMMainWidget::createDiscussionSuccess(const DiscussionInformation & discuss
 
 /*************************************************
 Function Name:searchFriend
-Description: search 友好
+Description:
 *************************************************/
 void IMMainWidget::searchFriend(const QString & text)
 {
@@ -1654,12 +1727,14 @@ void IMMainWidget::searchFriend(const QString & text)
         onClickSearchFriend();
         return;
     }
+
     m_toolBtnSearch->setIcon(QIcon(":/images/cancel.png"));
     m_toolBtnSearch->setEnabled(true);
 
     m_searchListWidget->clearAll();
-    //search 匹配,s friend
+    //search friend
     QMapIterator<QString, IMFriendButton *> i(m_friendMap);
+	
     while (i.hasNext()) {
         i.next();
         if(i.key().contains(text)
@@ -1674,12 +1749,7 @@ void IMMainWidget::searchFriend(const QString & text)
         }
     }
 
-    //     IMLinkFriendButton * btn = new IMLinkFriendButton(
-    //                 m_friendMap[mes.m_senderID], this);
-    //     connect(btn, SIGNAL(deleteLinkButton(QString)),
-    //             this, SLOT(removeLinkButton(QString)));
-    //     m_linkMap.insert(mes.m_senderID, btn);
-    //     m_messageListWidget->addItem(btn);
+
 }
 
 /*************************************************
@@ -1708,10 +1778,9 @@ void IMMainWidget::onClickAddFriend()
                                              QLineEdit::Normal,
                                              "",
                                              &isOk);
-    if (!isOk)
+    if (!isOk){
         return;
-
-    // mark
+    }
 
     addFriend(friendID);
 }
@@ -1728,8 +1797,9 @@ void IMMainWidget::onClickAddFlock()
                                             QLineEdit::Normal,
                                             "",
                                             &isOk);
-    if (!isOk)
+    if (!isOk){
         return;
+    }
 
     // mark
 
@@ -1746,13 +1816,10 @@ void IMMainWidget::onClickAddFlock()
                                              QString(tr("hello, I am  %1")).
                                              arg(m_myself.m_nickname),
                                              &isOkMes);
-    if (!isOkMes)
+    if (!isOkMes){
         return;
+    }
 
-    //    TempStrings temp;
-    //    temp.m_one = m_myself.m_userID;
-    //    temp.m_two = friendID;
-    //    temp.m_three = checkMes;
 
     TalkMessage mes;
     mes.m_senderID = m_myself.m_userID;
@@ -1760,8 +1827,9 @@ void IMMainWidget::onClickAddFlock()
     mes.m_text = checkMes;
     mes.m_type = REQUEST_FLOCK;
 
-    if (NULL != m_mainCtrl)
+    if (NULL != m_mainCtrl){
         m_mainCtrl->addFlock(mes);
+    }
 
 }
 
@@ -1778,8 +1846,9 @@ void IMMainWidget::onClickChangePwd()
                                            QLineEdit::Password,
                                            NULL,
                                            &isOkMes);
-    if (!isOkMes)
+    if (!isOkMes){
         return;
+    }
 
     while(1)
     {
@@ -1788,14 +1857,17 @@ void IMMainWidget::onClickChangePwd()
                                                   QLineEdit::Password,
                                                   NULL,
                                                   &isOkMes);
-        if (!isOkMes)
+        if (!isOkMes){
             return;
+        }
+
         if (newPwdOne.length() < 6)
         {
             QMessageBox::critical(NULL, tr("modify password"),
                                   tr(" new password should be at least 6 charators"));
             continue;
         }
+
         if (newPwdOne.length() > 14)
         {
             QMessageBox::critical(NULL, tr("modify password"),
@@ -1808,8 +1880,10 @@ void IMMainWidget::onClickChangePwd()
                                                   QLineEdit::Password,
                                                   NULL,
                                                   &isOkMes);
-        if (!isOkMes)
+        if (!isOkMes){
             return;
+        }
+
         if (newPwdTwo != newPwdOne)
         {
             QMessageBox::critical(NULL, tr("modify password"), tr("twice new password is different"));
@@ -1844,8 +1918,9 @@ void IMMainWidget::createFlock()
                                               QString("%1,s IMGroup").
                                               arg(m_myself.m_nickname),
                                               &isOk);
-    if (!isOk)
+    if (!isOk){
         return;
+    }
 
     isOk = false;
     QString flockTheme = QInputDialog::getText(NULL, "createGroup",
@@ -1853,16 +1928,18 @@ void IMMainWidget::createFlock()
                                                QLineEdit::Normal,
                                                tr(" no    theme "),
                                                &isOk);
-    if (!isOk)
+    if (!isOk){
         return;
+    }
 
     TempStrings tmpStr;
     tmpStr.m_one = m_myself.m_userID;
     tmpStr.m_two = flockName;
     tmpStr.m_three = flockTheme;
 
-    if (NULL != m_mainCtrl)
+    if (NULL != m_mainCtrl){
         m_mainCtrl->createFlock(tmpStr);
+    }
 }
 
 
@@ -1879,8 +1956,9 @@ void IMMainWidget::createDiscussion()
                                          QString("%1,s IMdiscuss group").
                                          arg(m_myself.m_nickname),
                                          &isOk);
-    if (!isOk)
+    if (!isOk){
         return;
+    }
 
     isOk = false;
     QString theme = QInputDialog::getText(NULL, "creatediscuss group",
@@ -1888,16 +1966,19 @@ void IMMainWidget::createDiscussion()
                                           QLineEdit::Normal,
                                           tr(" no    theme "),
                                           &isOk);
-    if (!isOk)
+    if (!isOk){
         return;
+    }
 
     TempStrings tmpStr;
     tmpStr.m_one = m_myself.m_userID;
     tmpStr.m_two = name;
     tmpStr.m_three = theme;
 
-    if (NULL != m_mainCtrl)
+    if (NULL != m_mainCtrl){
         m_mainCtrl->createDiscussion(tmpStr);
+    }
+
 }
 
 /*************************************************
@@ -1910,8 +1991,8 @@ void IMMainWidget::showMessageWidget()
     {
         m_messageManWidget = new IMMessageManageWidget(this);
     }
-    m_messageManWidget->setListModelGroup();
 
+    m_messageManWidget->setListModelGroup();
     m_messageManWidget->raise();
     m_messageManWidget->activateWindow();
     m_messageManWidget->show();
@@ -1927,9 +2008,11 @@ void IMMainWidget::showMailWidget()
     {
         m_mailWidget = new IMMailWidget(m_myself.m_userID);
     }
+
     m_mailWidget->raise();
     m_mailWidget->activateWindow();
     m_mailWidget->show();
+
 }
 
 /*************************************************
@@ -1952,6 +2035,7 @@ void IMMainWidget::showLatestMessageWidget()
     {
         return;
     }
+
     m_tabWidget->setCurrentWidget(m_messageListWidget);
 }
 
@@ -1969,10 +2053,9 @@ void IMMainWidget::setTimerStatus(bool isOpen)
             m_timerId=startTimer(400);//400ms
             m_toolBtnNewMes->setStatusTip(tr(" read new msg"));
             m_toolBtnNewMes->setToolTip(QString(tr(" Got new msg")));
-            //                                        .arg(m_messageListWidget->size()));
         }
-    }
 
+    }
     else if (!isOpen && m_timerId != 0)
     {
         killTimer(m_timerId);//kill timer
@@ -1992,21 +2075,17 @@ void IMMainWidget::renameBoxSuccess(const QString & title, const QString & newTi
 {
     //  first modify : box  name   and   subscribe index   map  table 
     int index = m_indexFriendsGroupMap.value(title);
-    //    if (index == 0)
-    //    {
-    //        qDebug("cannot find this group");
-    //        return;
-    //    }
     m_indexFriendsGroupMap.remove(title);
     m_indexFriendsGroupMap.insert(newTitle, index);
 
     //  through  store  each  box ,s  array   get  box  item ， then modify  box  name 
     m_toolItemsFriendsVec[index]->setTile(newTitle);
-
     m_friendsGroupList[m_friendsGroupList.indexOf(title)] = newTitle;
 
-    if (m_messageManWidget != NULL)
+    if (m_messageManWidget != NULL){
         m_messageManWidget->setListModelGroup();
+    }
+
     refreshFriendButtonMenu();
 }
 
@@ -2018,13 +2097,15 @@ Description:  move friendto other  box
 void IMMainWidget::moveFriendToBoxSuccess(const QString & friendID, const QString & title,
                                           const QString & newTitle)
 {
-    if (!m_friendMap.contains(friendID))
+    if (!m_friendMap.contains(friendID)){
         return;
-    m_toolItemsFriendsVec[m_indexFriendsGroupMap.value(title)]->removeItem(m_friendMap[friendID]);
+    }
 
+    m_toolItemsFriendsVec[m_indexFriendsGroupMap.value(title)]->removeItem(m_friendMap[friendID]);
     m_friendMap[friendID]->getInformation().m_groupName = newTitle;
     m_friendMap[friendID]->refreshMoveMenu();
     m_toolItemsFriendsVec[m_indexFriendsGroupMap.value(newTitle)]->addItem(m_friendMap[friendID]);
+
 }
 
 
@@ -2040,6 +2121,7 @@ void IMMainWidget::onClickRightButton()
         creatMenu();
     }
     m_menu->exec(QCursor::pos() - QPoint(105, 125));
+
 }
 
 /*************************************************
@@ -2081,8 +2163,10 @@ void IMMainWidget::createBox()
         // store  map  relation 
         m_indexFriendsGroupMap.insert(groupName, m_toolItemsFriendsVec.size()-1);
 
-        if (m_messageManWidget != NULL)
+        if (m_messageManWidget != NULL){
             m_messageManWidget->setListModelGroup();
+        }
+
         refreshFriendButtonMenu();
     }
 
@@ -2116,6 +2200,7 @@ Description: delete all msg  connect  button
 void IMMainWidget::removeAllLinkButton()
 {
     QMapIterator<QString, IMLinkButton*> i(m_linkMap);
+    
     while (i.hasNext())
     {
         i.next();
@@ -2123,6 +2208,7 @@ void IMMainWidget::removeAllLinkButton()
         m_linkMap[i.key()]->deleteLater();
         m_linkMap.remove(i.key());
     }
+
     m_tabWidget->setTabText(3, QString(tr("new msg(%1)")).arg(0));
 }
 
@@ -2133,12 +2219,12 @@ Description: show  all  Chat Window
 void IMMainWidget::showAllChatRoom()
 {
     QMapIterator<QString, IMLinkButton*> i(m_linkMap);
+
     while (i.hasNext())
     {
         i.next();
         i.value()->onDoubleClickButton();
     }
-    //    removeAllLinkButton();
 }
 
 // mark protected:------------------------------------------------------
@@ -2154,8 +2240,9 @@ void IMMainWidget::closeEvent(QCloseEvent *event)
         closeAllWindows();
         event->accept();
     }
-    else
+    else{
         event->ignore();
+    }
 }
 
 /*************************************************
@@ -2181,10 +2268,12 @@ void IMMainWidget::timerEvent(QTimerEvent *event)
     static bool show = true;
     if (event->timerId() == m_timerId)
     {
-        if (show)
+        if (show){
             m_toolBtnNewMes->setIcon(QIcon(":/images/newMessage.png"));
-        else
+        }else{
             m_toolBtnNewMes->setIcon(QIcon(""));//":/images/noMessage.png"));
+        }
+
         show = !show;
     }
 }
@@ -2277,6 +2366,7 @@ void IMMainWidget::closeAllWindows()
     {
         m_mailWidget->deleteLater();
     }
+
     if (m_messageManWidget != NULL)
     {
         m_messageManWidget->deleteLater();
@@ -2290,10 +2380,12 @@ Description: create Chat  room
 *************************************************/
 void IMMainWidget::getMyInformation()
 {
-    if (NULL != m_mainCtrl)
+    if (NULL != m_mainCtrl){
         m_mainCtrl->getMynformation(m_myself.m_userID);
+    }
 }
 
+#if 0
 //void IMMainWidget::createChatRoom(QListWidgetItem *item)
 //{
 
@@ -2309,6 +2401,7 @@ void IMMainWidget::getMyInformation()
 ////    connect(room, SIGNAL(roomQuitSignal()),  this, SLOT(chatRoomQuit()));
 //    chatRoom->show();
 //}
+#endif
 
 /*************************************************
 Function Name:receiveMessagesFromChat
@@ -2317,13 +2410,17 @@ Description:  get friend Chat  room  send ,s msg
 void IMMainWidget::receiveMessagesFromChat(TalkMessage &mes)
 {
     mes.m_senderID = m_myself.m_userID;
-    if (TALK_MESSAGE == mes.m_type)
+    if (TALK_MESSAGE == mes.m_type){
         m_database.addHistoryMessage(mes);
-    if (NULL != m_mainCtrl)
+    }
+	
+    if (NULL != m_mainCtrl){
         m_mainCtrl->sendTalkMessage(mes);
+    }
 }
 
 
+#if 0
 /*************************************************
 Function Name:receiveMessagesFromFlockChat
 Description:
@@ -2343,6 +2440,7 @@ Description:
 //    if (NULL != m_mainCtrl)
 //        m_mainCtrl->sendTalkMessage(mes);
 //}
+#endif
 
 /*************************************************
 Function Name:changeStatus
@@ -2356,25 +2454,33 @@ void IMMainWidget::changeMyStatus(const int index)
     case 0:
         status = ONLINE;
         break;
+		
     case 1:
         status = INVISIBLE;
         break;
+		
     case 2:
         status = BUSY;
         break;
+		
     case 3:
         status = LEAVE;
         break;
+		
     case 4:
         status = NOTDISTURB;
         break;
+		
     default:
         status = ONLINE;
         break;
+		
     }
 
-    if (NULL != m_mainCtrl)
+    if (NULL != m_mainCtrl){
         m_mainCtrl->changeMyStatus(m_myself.m_userID,status);
+    }
+	
 }
 
 
@@ -2386,59 +2492,70 @@ Description:
 void IMMainWidget::receiveFriendRequest(const TalkMessage & mes,
                                         const UserInformation & friendInf)
 {
-    if (0 != mes.m_receiverID.compare(m_myself.m_userID))
+    if (0 != mes.m_receiverID.compare(m_myself.m_userID)){
         return;
+    }
+	
     TalkMessage returnMes;
 
     switch (mes.m_type)
     {
-    case REQUEST_FRIEND:
-    {
-        QMessageBox::StandardButton rb = QMessageBox::question(
-                    NULL, tr("friendrequest"),
-                    QString(tr("Agree user%1(%2)Add 你为friend?\nverify msg :\n%3")).
-                    arg(mes.m_senderID, friendInf.m_nickname, mes.m_text),
-                    QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
-        if(rb == QMessageBox::Yes)
-        {
-            returnMes.m_type = AGREE_FRIEND;
-        }
-        else
-        {
-            returnMes.m_type = REFUSE_FRIEND;
-        }
-        returnMes.m_senderID = mes.m_receiverID;
-        returnMes.m_receiverID = mes.m_senderID;
-        if (NULL != m_mainCtrl)
-            m_mainCtrl->resultOfFriendRequest(returnMes);
-        break;
-    }
-    case AGREE_FRIEND:
-    {
-        FriendInformation fri;
-        fri.m_headPortrait = friendInf.m_headPortrait;
-        fri.m_userID = friendInf.m_userID;
-        fri.m_nickname = friendInf.m_nickname;
-        //        fri.m_groupName = tr("New Friends");
-        fri.m_status = friendInf.m_status;
-        if (!addFriendButton(fri))
-            return;
-        QString temp = QString(tr("successAdd friend%1(%2).")).
-                arg(friendInf.m_userID, friendInf.m_nickname);
-        QMessageBox::information(NULL, tr("msg "), temp);
-        break;
-    }
-    case REFUSE_FRIEND:
-    {
-        QString temp = QString(tr("user%1(%2)\nrefuse   your ,s friendAdd request.")).
-                arg(friendInf.m_userID, friendInf.m_nickname);
-        QMessageBox::information(NULL, tr("msg "), temp);
-        break;
-    }
-    case DELETE_FRIEND:
-    {
-        break;
-    }
+	    case REQUEST_FRIEND:
+	    {
+	        QMessageBox::StandardButton rb = QMessageBox::question(
+	                    NULL, tr("friendrequest"),
+	                    QString(tr("Agree user%1(%2)Add 你为friend?\nverify msg :\n%3")).
+	                    arg(mes.m_senderID, friendInf.m_nickname, mes.m_text),
+	                    QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
+	        if(rb == QMessageBox::Yes)
+	        {
+	            returnMes.m_type = AGREE_FRIEND;
+	        }
+	        else
+	        {
+	            returnMes.m_type = REFUSE_FRIEND;
+	        }
+			
+	        returnMes.m_senderID = mes.m_receiverID;
+	        returnMes.m_receiverID = mes.m_senderID;
+
+			if (NULL != m_mainCtrl){
+	            m_mainCtrl->resultOfFriendRequest(returnMes);
+			}
+			
+	        break;
+	    }
+	    case AGREE_FRIEND:
+	    {
+	        FriendInformation fri;
+	        fri.m_headPortrait = friendInf.m_headPortrait;
+	        fri.m_userID = friendInf.m_userID;
+	        fri.m_nickname = friendInf.m_nickname;
+	        //        fri.m_groupName = tr("New Friends");
+	        fri.m_status = friendInf.m_status;
+			
+	        if (!addFriendButton(fri)){
+	            return;
+	        }
+			
+	        QString temp = QString(tr("successAdd friend%1(%2).")).
+	                arg(friendInf.m_userID, friendInf.m_nickname);
+	        QMessageBox::information(NULL, tr("msg "), temp);
+			
+	        break;
+	    }
+	    case REFUSE_FRIEND:
+	    {
+	        QString temp = QString(tr("user%1(%2)\nrefuse   your ,s friendAdd request.")).
+	                arg(friendInf.m_userID, friendInf.m_nickname);
+	        QMessageBox::information(NULL, tr("msg "), temp);
+	        break;
+	    }
+	    case DELETE_FRIEND:
+	    {
+	        break;
+	    }
+		
     }
 }
 
@@ -2452,111 +2569,130 @@ void IMMainWidget::receiveFlockRequest(const TalkMessage & mes,
 {
     TalkMessage returnMes;
     switch (mes.m_type)
-    {
-    case REQUEST_FLOCK:
-    {
-        QMessageBox::StandardButton rb = QMessageBox::question(
-                    NULL, tr("userrequest"),
-                    QString(tr("Agree user%1add Group%2?\nverify msg :\n%3")).
-                    arg(mes.m_senderID, mes.m_receiverID, mes.m_text),
-                    QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
+	{
+		case REQUEST_FLOCK:
+		{
+		    QMessageBox::StandardButton rb = QMessageBox::question(
+		                NULL, tr("userrequest"),
+		                QString(tr("Agree user%1add Group%2?\nverify msg :\n%3")).
+		                arg(mes.m_senderID, mes.m_receiverID, mes.m_text),
+		                QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
 
-        if(rb == QMessageBox::Yes)
-        {
-            returnMes.m_type = FLOCK_AGREE;
-        }
-        else
-        {
-            returnMes.m_type = FLOCK_REFUSE;
-        }
-        returnMes.m_senderID = mes.m_receiverID; // Group
-        returnMes.m_receiverID = mes.m_senderID; // user
-        if (NULL != m_mainCtrl)
-            m_mainCtrl->resultOfFlockRequest(returnMes);
-        break;
-    }
+		    if(rb == QMessageBox::Yes)
+		    {
+		        returnMes.m_type = FLOCK_AGREE;
+		    }
+		    else
+		    {
+		        returnMes.m_type = FLOCK_REFUSE;
+		    }
+		    returnMes.m_senderID = mes.m_receiverID; // Group
+		    returnMes.m_receiverID = mes.m_senderID; // user
+		    if (NULL != m_mainCtrl){
+		        m_mainCtrl->resultOfFlockRequest(returnMes);
+		    }
+			
+		    break;
+		}
 
-    case AGREE_FLOCK:
-    {
-        if (!m_flockMap.contains(mes.m_receiverID))
-            return;
-        if (!m_flockRoomMap.contains(mes.m_receiverID))
-            return;
-        if (!m_flockRoomMap[mes.m_receiverID]->addFlockMemberButton(member))
-            return;
+		case AGREE_FLOCK:
+		{
+		    if (!m_flockMap.contains(mes.m_receiverID)){
+		        return;
+		    }
+			
+		    if (!m_flockRoomMap.contains(mes.m_receiverID)){
+		        return;
+		    }
+			
+		    if (!m_flockRoomMap[mes.m_receiverID]->addFlockMemberButton(member)){
+				return;
+		    }
+			
 
-        m_flockMap[mes.m_receiverID]->addFlockMember(member.m_userID);
+		    m_flockMap[mes.m_receiverID]->addFlockMember(member.m_userID);
 
-        QString temp = QString(tr("user%1,successadd Group%2(%3).")).
-                arg(mes.m_senderID, flock.m_flockID, flock.m_flockName);
-        QMessageBox::information(NULL, tr("Groupmsg "), temp);
-        //        out << temp.m_message << m_save.m_flockMember;
-        break;
-    }
-    case REFUSE_FLOCK:
-    {
-        QString temp = QString(tr("hello,%1,user%2,refuse  add Group%3\n,s Group.")).
-                arg(m_myself.m_userID, mes.m_senderID, mes.m_receiverID);
-        QMessageBox::information(NULL, tr("Groupmsg "), temp);
-        break;
-    }
-    case FLOCK_AGREE:
-    {
-        if (m_flockMap.contains(flock.m_flockID))
-            return;
-        if (!addFlockButton(flock))
-            return;
-        QString temp = QString(tr("successadd Group%1(%2).")).
-                arg(flock.m_flockID, flock.m_flockName);
-        QMessageBox::information(NULL, tr("Groupmsg "), temp);
+		    QString temp = QString(tr("user%1,successadd Group%2(%3).")).
+		            arg(mes.m_senderID, flock.m_flockID, flock.m_flockName);
+		    QMessageBox::information(NULL, tr("Groupmsg "), temp);
+		    break;
+		}
+		case REFUSE_FLOCK:
+		{
+		    QString temp = QString(tr("hello,%1,user%2,refuse  add Group%3\n,s Group.")).
+		            arg(m_myself.m_userID, mes.m_senderID, mes.m_receiverID);
+		    QMessageBox::information(NULL, tr("Groupmsg "), temp);
+		    break;
+		}
+		case FLOCK_AGREE:
+		{
+		    if (m_flockMap.contains(flock.m_flockID)){
+		        return;
+		    }
+			
+		    if (!addFlockButton(flock)){
+		        return;
+		    }
+			
+		    QString temp = QString(tr("successadd Group%1(%2).")).
+		            arg(flock.m_flockID, flock.m_flockName);
+		    QMessageBox::information(NULL, tr("Groupmsg "), temp);
 
-        break;
-    }
-    case FLOCK_REFUSE:
-    {
-        QString temp = QString(tr("hello,%1,Group%2\n,s Group main refuse   your ,s add request.")).
-                arg(m_myself.m_userID, mes.m_senderID);
-        QMessageBox::information(NULL, tr("Groupmsg "), temp);
-        break;
-    }
-    case FLOCK_REQUEST:
-    {
-        QMessageBox::StandardButton rb = QMessageBox::question(
-                    NULL, tr("Grouprequest"),
-                    QString(tr("Agree add Group%1?\nverify msg :\n%2")).
-                    arg(mes.m_senderID, mes.m_text),
-                    QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
+		    break;
+		}
+		case FLOCK_REFUSE:
+		{
+		    QString temp = QString(tr("hello,%1,Group%2\n,s Group main refuse   your ,s add request.")).
+		            arg(m_myself.m_userID, mes.m_senderID);
+		    QMessageBox::information(NULL, tr("Groupmsg "), temp);
+		    break;
+		}
+		case FLOCK_REQUEST:
+		{
+		    QMessageBox::StandardButton rb = QMessageBox::question(
+		                NULL, tr("Grouprequest"),
+		                QString(tr("Agree add Group%1?\nverify msg :\n%2")).
+		                arg(mes.m_senderID, mes.m_text),
+		                QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes);
 
-        if(rb == QMessageBox::Yes)
-        {
-            returnMes.m_type = AGREE_FLOCK;
-        }
-        else
-        {
-            returnMes.m_type = REFUSE_FLOCK;
-        }
-        returnMes.m_senderID = mes.m_receiverID; // user
-        returnMes.m_receiverID = mes.m_senderID; // Group
-        
-	if (NULL != m_mainCtrl)
-            m_mainCtrl->resultOfFlockRequest(returnMes);
-        break;
-    }
-    case NEW_FLOCK_MEMBER:
-    {
-        if (!m_flockMap.contains(flock.m_flockID))
-            return;
-        if (!m_flockRoomMap.contains(flock.m_flockID))
-            return;
-        if (!m_flockRoomMap[flock.m_flockID]->addFlockMemberButton(member))
-            return;
+		    if(rb == QMessageBox::Yes)
+		    {
+		        returnMes.m_type = AGREE_FLOCK;
+		    }
+		    else
+		    {
+		        returnMes.m_type = REFUSE_FLOCK;
+		    }
+		    returnMes.m_senderID = mes.m_receiverID; // user
+		    returnMes.m_receiverID = mes.m_senderID; // Group
+		    
+			if (NULL != m_mainCtrl){
+			        m_mainCtrl->resultOfFlockRequest(returnMes);
+			}
+			break;
+		}
+		case NEW_FLOCK_MEMBER:
+		{
+		    if (!m_flockMap.contains(flock.m_flockID)){
+		        return;
+		    }
+			
+		    if (!m_flockRoomMap.contains(flock.m_flockID)){
+		        return;
+		    }
+			
+		    if (!m_flockRoomMap[flock.m_flockID]->addFlockMemberButton(member)){
+		        return;
+		    }
 
-        m_flockMap[flock.m_flockID]->addFlockMember(member.m_userID);
-        break;
-    }
-    default:
-        break;
-    }
+		    m_flockMap[flock.m_flockID]->addFlockMember(member.m_userID);
+		    break;
+		}
+		
+		default:
+		    break;
+			
+	}
 }
 
 
@@ -2569,39 +2705,50 @@ void IMMainWidget::receiveDiscussionRequest(const TalkMessage & mes,
                                             const DiscussionInformation & discussion)
 {
     switch (mes.m_type)
-    {
-    case ADD_DISCUSSION_FAIL:
-    {
-        QString temp = QString(tr("hello,%1,user %2 add discuss group %3 failed..")).
-                arg(m_myself.m_userID, mes.m_receiverID, mes.m_senderID);
-        QMessageBox::information(NULL, tr("discuss groupmsg "), temp);
-        break;
-    }
+	{
+		case ADD_DISCUSSION_FAIL:
+		{
+		    QString temp = QString(tr("hello,%1,user %2 add discuss group %3 failed..")).
+		            arg(m_myself.m_userID, mes.m_receiverID, mes.m_senderID);
+		    QMessageBox::information(NULL, tr("discuss groupmsg "), temp);
+		    break;
+		}
 
-    case NEW_DISCUSSION_MEMBER:
-    {
-        if (!m_discussionMap.contains(mes.m_senderID))
-            return;
-        if (!m_discussionRoomMap.contains(mes.m_senderID))
-            return;
-        if (!m_discussionRoomMap[mes.m_senderID]->addDiscussionMemberButton(member))
-            return;
+		case NEW_DISCUSSION_MEMBER:
+		{
+		    if (!m_discussionMap.contains(mes.m_senderID)){
+		        return;
+		    }
+			
+		    if (!m_discussionRoomMap.contains(mes.m_senderID)){
+		        return;
+		    }
+			
+		    if (!m_discussionRoomMap[mes.m_senderID]->addDiscussionMemberButton(member)){
+		        return;
+		    }
 
-        m_discussionMap[mes.m_senderID]->addDiscussionMember(member.m_userID);
+		    m_discussionMap[mes.m_senderID]->addDiscussionMember(member.m_userID);
 
-        break;
-    }
-    case ADD_DISCUSSION_SUCCESS:
-    {
-        if (m_discussionMap.contains(mes.m_senderID))
-            return;
-        if (!addDiscussionButton(discussion))
-            return;
-        break;
-    }
-    default:
-        break;
-    }
+		    break;
+		}
+		case ADD_DISCUSSION_SUCCESS:
+		{
+		    if (m_discussionMap.contains(mes.m_senderID)){
+		        return;
+		    }
+			
+		    if (!addDiscussionButton(discussion)){
+		        return;
+		    }
+			
+		    break;
+		}
+
+		default:
+		    break;
+
+	}
 }
 
 
@@ -2618,8 +2765,9 @@ void IMMainWidget::removeBox(const QString & title)
                                       QString(tr(" Are you sure to delete folder(%1)？")).arg(title),
                                       QMessageBox::Yes | QMessageBox::No,  QMessageBox::No);
 
-    if(QMessageBox::No == returnBtn)
+    if(QMessageBox::No == returnBtn){
         return;
+    }
 
     int index = m_indexFriendsGroupMap[title];
 
@@ -2633,12 +2781,10 @@ void IMMainWidget::removeBox(const QString & title)
     m_toolItemsFriendsVec[index] = NULL;
     m_friendsGroupList.removeAt(m_friendsGroupList.indexOf(title));
     m_indexFriendsGroupMap.remove(title);
-    if (m_messageManWidget != NULL)
+    if (m_messageManWidget != NULL){
         m_messageManWidget->setListModelGroup();
-    //    if (m_mainWidget == NULL)
-    //        return;
-    //    m_mainWidget->dropFlock(m_flockInfo.m_flockID);
-    //    m_mainCtrl->removeBox(title);
+    }
+
     refreshFriendButtonMenu();
 }
 
@@ -2656,8 +2802,9 @@ void IMMainWidget::renameBox(const QString & title)
                                              &isOk);
 
 
-    if (!isOk)
+    if (!isOk){
         return;
+    }
 
     if (m_indexFriendsGroupMap.contains(newTitle))
     {
@@ -2678,6 +2825,7 @@ void IMMainWidget::renameBox(const QString & title)
     {
         m_mainCtrl->renameBox(title, newTitle);
     }
+
 }
 
 
@@ -2691,25 +2839,17 @@ void IMMainWidget::initIMMainWidget()
     m_mainCtrl = new IMMainCtrl(m_myself.m_userID);
 
     m_labelHead = new IMClickLabel(this);
-    /*
-border: 2px solid green;
-     border-radius: 4px;
-     padding: 2px;
-     background-image: url(images/welcome.png);
-     */
+
+    
     qDebug() << "m_headPortrait: " << m_myself.m_headPortrait;
     m_labelHead->setFixedSize(HEAD_BIG_SIZE,HEAD_BIG_SIZE);
-    //    m_frameHead->setObjectName("headFrame");
-    //    QString str = QString("QFrame#headFrame{border-image:url(resource/image/head/%1.bmp);}")
-    //            .arg(QString::number(m_myself.m_headPortrait));
-    //    m_frameHead->setStyleSheet(str);
+    
+    
     QString str = QString("resource/image/head/%1.bmp").
             arg(QString::number(m_myself.m_headPortrait));
     m_labelHead->setPixmap(QPixmap(str));
     m_cbStatus = new QComboBox(this);
-    //    m_cbStatus->setSizeAdjustPolicy(QComboBox::AdjustToContents);
-    //    m_cbStatus->setStyleSheet("QComboBox{border: 0;font-size: 16px;}");
-    //                              "QComboBox::drop-down{border-style:none;border:0px;width:40px}");
+    
 
     /*
     ONLINE = 0,    //  online
@@ -2718,7 +2858,7 @@ border: 2px solid green;
     LEAVE = 3,     // away
     NOTDISTURB = 4,// No Disturb
     */
-    m_cbStatus->addItem(" online ");
+    m_cbStatus->addItem("online");
     m_cbStatus->addItem("invisible ");
     m_cbStatus->addItem("busy");
     m_cbStatus->addItem("away");
@@ -2750,7 +2890,7 @@ border: 2px solid green;
     m_toolBtnMesBox->setStatusTip(tr("openmsg manage "));
 
     m_toolBtnNewMes = new QToolButton(this);
-    m_toolBtnNewMes->setIcon(QIcon(""));//:/images/noMessage.png"));
+    m_toolBtnNewMes->setIcon(QIcon("")); //:/images/noMessage.png"));
     m_toolBtnNewMes->setAutoRaise(true);
     m_toolBtnNewMes->setToolTip(tr("no new msg"));
     m_toolBtnNewMes->setStatusTip(tr("no new msg"));
@@ -2758,10 +2898,11 @@ border: 2px solid green;
 
     QLabel *searchLabel = new QLabel(this);
     searchLabel->setStyleSheet("border: 1px;\
-                               border-radius:3px;\
-            border-style: solid;\
-    border-color: gray;\
-background: white;");
+                                border-radius:3px;\
+                                border-style: solid;\
+                                border-color: gray;\
+                                background: white;");
+
     searchLabel->setFixedHeight(25);
 
     m_leSearch = new QLineEdit();
@@ -2772,38 +2913,18 @@ background: white;");
     m_toolBtnSearch->setIcon(QIcon(":/images/search.png"));
     m_toolBtnSearch->setStyleSheet("border: 0px;");
     m_toolBtnSearch->setEnabled(false);
-    //    m_labelSearch = new QLabel(this);
-    //    m_labelSearch->setStyleSheet("border: 0px;");
-
-    //    QPixmap pixmap;
-    //    QIcon icon(QString(":/images/search.png"));
-    //    pixmap = icon.pixmap(QSize(CHAT_WIDGET_TOOL_SMALL_SIZE,
-    //                               CHAT_WIDGET_TOOL_SMALL_SIZE));
-    //    m_labelSearch->setPixmap(pixmap);
 
     QHBoxLayout *layoutTopSearch = new QHBoxLayout;
     layoutTopSearch->setContentsMargins(0, 0, 0, 0);
     layoutTopSearch->addWidget(m_leSearch);
     layoutTopSearch->addWidget(m_toolBtnSearch);
-    //    layoutTopSearch->addWidget(m_labelSearch);
-    //    layoutTopSearch->addSpacing(2);
     searchLabel->setLayout(layoutTopSearch);
 
-    //    m_toolBtnSearch = new QToolButton();
-    //    m_toolBtnSearch->setIcon(QIcon(":/images/search.png"));
-    //    m_toolBtnSearch->setAutoRaise(true);
-    //    m_toolBtnSearch->setToolTip(tr("search friend"));
-    //    m_toolBtnSearch->setStatusTip(tr("search friend"));
-
-    //    m_toolBtnSearch->adjustSize();
-    //    m_toolBtnSearch->setCursor(Qt::ArrowCursor);
-    //    m_toolBtnSearch ->setStyleSheet("background:transparent;");
 
     m_searchListWidget = new IMSearchListWidget;
     m_searchListWidget->setVisible(false);
 
     m_tabWidget= new QTabWidget;
-    //    m_tabWidget->setTabShape(QTabWidget::Triangular);
     m_friendListWidget = new IMFriendListWidget(this, this);
     m_flockListWidget = new IMFlockListWidget(this, this);
     m_discussionListWidget = new IMDiscussionListWidget(this, this);
@@ -2822,17 +2943,6 @@ background: white;");
     m_toolBtnAddFlock->setToolTip(tr("Add Group"));
     m_toolBtnAddFlock->setStatusTip(tr("Add Group"));
 
-    //    m_toolBtnAddDiscussion = new QToolButton;
-    //    m_toolBtnAddDiscussion->setIcon(QIcon(":/images/addDiscussion.png"));
-    //    m_toolBtnAddDiscussion->setAutoRaise(true);
-    //    m_toolBtnAddDiscussion->setToolTip(tr(""));
-    //    m_toolBtnAddDiscussion->setStatusTip(tr(""));
-
-    //    m_toolBtnSearchAdd = new QToolButton;
-    //    m_toolBtnSearchAdd->setIcon(QIcon(":/images/searchAdd.png"));
-    //    m_toolBtnSearchAdd->setAutoRaise(true);
-    //    m_toolBtnSearchAdd->setToolTip(tr(""));
-    //    m_toolBtnSearchAdd->setStatusTip(tr(""));
 
     m_toolBtnConfig = new QToolButton;
     m_toolBtnConfig->setIcon(QIcon(":/images/config.png"));
@@ -2864,25 +2974,18 @@ background: white;");
     layoutTopTool->addWidget(m_toolBtnNewMes);
     layoutTopTool->addStretch();
 
-    //    QHBoxLayout *layoutTopSearch = new QHBoxLayout;
-    //    layoutTopSearch->addWidget(m_leSearch);
-    ////    layoutTopSearch->addWidget(m_toolBtnSearch);
 
     QVBoxLayout *layoutHead = new QVBoxLayout;
     layoutHead->addLayout(layoutTop);
     layoutHead->addLayout(layoutTopTool);
     layoutHead->addWidget(searchLabel);
-    //    layoutHead->addLayout(layoutTopSearch);
-    //    layoutTop->addStretch();
     /***********ennd header************/
 
     QHBoxLayout *layoutBtm = new QHBoxLayout;
     layoutBtm->addWidget(m_labelOnlineNum);
     layoutBtm->addStretch();
     layoutBtm->addWidget(m_toolBtnAddFlock);
-    //    layoutBtm->addWidget(m_toolBtnAddDiscussion);
     layoutBtm->addWidget(m_toolBtnAddFriend);
-    //    layoutBtm->addWidget(m_toolBtnSearchAdd);
     layoutBtm->addWidget(m_toolBtnConfig);
 
     QVBoxLayout *layout = new QVBoxLayout;
@@ -3099,14 +3202,23 @@ bool IMMainWidget::continueToClose()
             || m_flockRoomMap.size() != 0
             || m_discussionRoomMap.size() != 0)
     {
-        QString temp = tr("There is Chat Window not closed，r u sure to exit？");
+        QString temp = tr("There is Chat Window not closed? r u sure to exit?");
         QMessageBox::StandardButton rb;
         rb = QMessageBox::question(this, tr("exit"), temp,
                                    QMessageBox::Yes | QMessageBox::No, QMessageBox::No);
-        if(rb == QMessageBox::Yes)
+		
+        if(rb == QMessageBox::Yes){
             return true;
-        else
+        }else{
             return false;
+        }
+		
     }
+	
     return true;
+	
 }
+
+
+
+

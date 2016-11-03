@@ -23,9 +23,7 @@ class IMLoginCtrl : public QObject
     Q_OBJECT
 public:
     explicit IMLoginCtrl(QObject *parent = 0);
-
     ~IMLoginCtrl();
-
     void login(const QString &id ,const QString & pwd = "",
                      const int status = ONLINE);
     void getQuestionAndAnswer(const QString &id);
@@ -38,16 +36,11 @@ signals:
 public slots:
     void changeLoginMessage(const QString &mes, bool isLogin);
 
-
 private slots:
     void requestGetQuestionAndAnswer();
     void requestLogin();
-
     void sendRequest();
-
     void readMessage();
-
-private:
 
 private:
     int m_kind;
@@ -57,6 +50,7 @@ private:
     UserInformation m_myself;
     TempStrings m_tempStr;
     QString m_id;
+	
 };
 
 #endif // IMLOGINCTRL_H

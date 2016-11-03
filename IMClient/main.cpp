@@ -23,9 +23,6 @@ int main(int argc, char *argv[])
         w.onClickBtnLogin();
     }
 
-//    IMInformationWidget w;
-//    w.setReadOnly(true, true);
-//    w.show();
 
     qDebug() << "hello, ... ";
 

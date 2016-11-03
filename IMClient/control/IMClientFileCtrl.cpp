@@ -39,7 +39,7 @@ bool IMClientFileCtrl::writeAutoLogin(const QString &fileName, const QString &id
         return false;
     }
     QDataStream out(&file);
-    // 
+
     out << id << pwd << isAuto;
     file.close();
     return true;
@@ -63,7 +63,7 @@ bool IMClientFileCtrl::readAutoLogin(const QString &fileName,QString &id,
         return false;
     }
     QDataStream in(&file);
-    // 
+
     in >>id >> pwd >> isAuto;
     file.close();
     return true;

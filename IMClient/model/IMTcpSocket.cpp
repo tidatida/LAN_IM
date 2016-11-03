@@ -37,12 +37,7 @@ void IMTcpSocket::requestConnect()
     {
         abort();
         connectToHost(IMTcpSocket::s_hostAddress, IMTcpSocket::s_hostPort);
-//    connectToHost(IMClientMessageCtrl::sm_hostAddress,
     }
-//                               IMClientMessageCtrl::sm_hostPort);
-//    qDebug()<<"begin to connect:"
-//           <<IMClientMessageCtrl::sm_hostAddress.toString()
-//           <<IMClientMessageCtrl::sm_hostPort;
 }
 
 /*************************************************
@@ -158,12 +153,14 @@ void IMTcpSocket::dispalyError(QAbstractSocket::SocketError socketError)
     case QAbstractSocket::RemoteHostClosedError:
         emit showConnectionStatus(tr("链接失败.可能是因为server close ."));
         break;
+		
     case QAbstractSocket::HostNotFoundError:
         emit showConnectionStatus(tr("链接失败.可能是因为找不到server "));
         QMessageBox::information(NULL, tr("IM Client"),
                                  tr("This host was not found.Please check the"
                                     "host name and port settings."));
         break;
+		
     case QAbstractSocket::ConnectionRefusedError:
         emit showConnectionStatus(tr("链接失败.可能是因为connection 被refuse  "));
         QMessageBox::information(NULL, tr("IM Client"),
@@ -172,12 +169,15 @@ void IMTcpSocket::dispalyError(QAbstractSocket::SocketError socketError)
                                     "and check that the host name and port"
                                     "settings are correct."));
         break;
+		
     default:
         emit showConnectionStatus(tr("链接失败: %1.").arg(errorString()));
         QMessageBox::information(NULL, tr("IM Client"),
                                  tr("The following errot occurred: %1.")
                                  .arg(errorString()));
+		
     }
+	
 }
 
 

@@ -38,7 +38,7 @@ IMLoginWidget::IMLoginWidget(QWidget *parent)
 
     initIMLoginWidget();
     linkSignalWithSlot();
-    setWindowTitle(tr(" Login IM"));
+    setWindowTitle(tr("Login LAN_IM"));
 }
 
 IMLoginWidget::~IMLoginWidget()

@@ -8,13 +8,17 @@ Changes:
 
 #include "IMLoginCtrl.h"
 #include "model/IMConstant.h"
+#include "model/IMEncryption.h"
+
 #include <QMessageBox>
 #include <QHostAddress>
 #include <QDataStream>
 #include <QDateTime>
 #include <QtNetwork>
 #include <QInputDialog>
-#include "model/IMEncryption.h"
+#include <QDebug>
+
+#define dbg qDebug()<<"FILE.("<<__FILE__<<") FUNCTION.("<<__FUNCTION__<<") LINE.("<<__LINE__<<")."
 
 // public:-----------------------------------------------------------------
 IMLoginCtrl::IMLoginCtrl(QObject *parent) :
@@ -52,17 +56,17 @@ void IMLoginCtrl::login(const QString &id, const QString &pwd, const int status)
     m_kind = LOGIN;
     m_loginInfo.m_userID = id;
     m_loginInfo.m_password = pwd;
-    m_loginInfo. m_status = status;
+    m_loginInfo.m_status = status;
 
-    qDebug() <<"function:"<<__FUNCTION__ <<" line:"<<__LINE__;
+    dbg;
     if (m_tcpSocket->isConnected())
     {
-        qDebug() <<"function:"<<__FUNCTION__ <<" line:"<<__LINE__;
+        dbg;
         requestLogin();
     }
     else
     {
-        qDebug() <<"function:"<<__FUNCTION__ <<" line:"<<__LINE__;
+        dbg;
         m_blockSize = 0;
         m_tcpSocket->requestConnect();
     }
@@ -112,9 +116,9 @@ Changes: NULL
 *************************************************/
 void IMLoginCtrl::requestLogin()
 {
-    qDebug() <<"function:"<<__FUNCTION__ <<" line:"<<__LINE__;
+    dbg;
     if (NULL == m_tcpSocket){
-        qDebug() <<"function:"<<__FUNCTION__ <<" line:"<<__LINE__;
+        dbg;
         return;
     }
 
@@ -126,7 +130,7 @@ void IMLoginCtrl::requestLogin()
     out.device()->seek(0);
     out << quint16(block.size() - sizeof(quint16));
     m_tcpSocket->write(block);
-    qDebug() <<"function:"<<__FUNCTION__ <<" line:"<<__LINE__;
+    dbg;
 
 }
 
@@ -142,18 +146,18 @@ void IMLoginCtrl::sendRequest()
     {
     case LOGIN:
     {
-        qDebug() <<"function:"<<__FUNCTION__ <<" line:"<<__LINE__;
+        dbg;
         requestLogin();
         break;
     }
     case GET_QUESTION_ANSWER:
     {
-        qDebug() <<"function:"<<__FUNCTION__ <<" line:"<<__LINE__;
+        dbg;
         requestGetQuestionAndAnswer();
         break;
     }
     default:
-        qDebug() <<"function:"<<__FUNCTION__ <<" line:"<<__LINE__;
+        dbg;
         break;
     }
 }
@@ -167,7 +171,7 @@ Description:
 void IMLoginCtrl::requestGetQuestionAndAnswer()
 {
     if (NULL == m_tcpSocket){
-        qDebug() <<"function:"<<__FUNCTION__ <<" line:"<<__LINE__;
+        dbg;
         return;
     }
 
