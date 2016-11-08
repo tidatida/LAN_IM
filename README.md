@@ -1,3 +1,17 @@
+2016.11.08
+
+     1. Compile it  with QT5.X
+     2. Install mysql , root/123456
+     3. create database clientIMDB;  create database serverIMDB;
+     4. mysql <sql.script/client.sql; mysql < sqlscript/server.sql;
+     5. the default server/port is 127.0.0.1/1234
+     6. you can set ip/port by "set" button at left buttom of client window. 
+
+
+
+------------------------------------------------------------------------------------
+************************************************************************************
+------------------------------------------------------------------------------------
 2016.11.01:
 
      It seemed I have do sth wrong with git. I recovered it back. And it works now.
