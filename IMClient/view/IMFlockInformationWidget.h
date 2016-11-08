@@ -41,7 +41,7 @@ private:
      QLineEdit *m_leCreateDate;
 
      QPushButton *m_btnOk;// "Register "  button 
-     QPushButton *m_btnCancel;  // "取消"  button 
+     QPushButton *m_btnCancel;  // "cancel"  button 
 
      bool m_isReadOnly;
      bool m_isEdit;

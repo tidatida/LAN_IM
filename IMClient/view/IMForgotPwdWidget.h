@@ -2,7 +2,7 @@
 File Name: IMForgotPwdWidget.h
 Author: jet.F.R
 Date: 2014.3.14
-Description: client，Forget passwd?找回 passwd,s 界面
+Description:
 Changes:
 ********************************************/
 #ifndef IMFORGOTPWDWIDGET_H
@@ -12,7 +12,7 @@ Changes:
 
 /*************************************************
 Class Name: IMForgotPwdWidget
-Description: clientForget passwd?界面 class
+Description: clientForget passwd help class
 *************************************************/
 class IMForgotPwdWidget : public QWidget
 {

@@ -126,8 +126,7 @@ public:
     void getNetWorkHistoryMessage(const int index, const QDate &date);
 
 signals:
-    void exportHistoryMessageOneFriendSuccess(const QString &, const QString &,
-                                              const QString &);
+    void exportHistoryMessageOneFriendSuccess(const QString &, const QString &,const QString &);
     void exportHistoryMessageAllSuccess(const QString &, const QString &);
 public slots:
 
@@ -205,13 +204,9 @@ protected:
     void timerEvent(QTimerEvent *);
 
 private slots:
-
     void closeWindow();
     void closeAllWindows();
-
     void getMyInformation();
-
-    //void createChatRoom(QListWidgetItem *);
 
     void receiveMessagesFromChat(TalkMessage &);
     void changeMyStatus(const int index);
@@ -273,13 +268,10 @@ private:
 
     QLineEdit *m_leSearch;
     QToolButton *m_toolBtnSearch;
-//    QLabel *m_labelSearch;
 
     QLabel *m_labelOnlineNum;
     QToolButton *m_toolBtnAddFlock;
-//    QToolButton *m_toolBtnAddDiscussion;
     QToolButton *m_toolBtnAddFriend;
-//    QToolButton *m_toolBtnSearchAdd;
     QToolButton *m_toolBtnConfig;
 
     QTabWidget *m_tabWidget;
@@ -297,7 +289,6 @@ private:
 
     int m_flag;
 
-    // access database
     IMDatabaseCtrl m_database;
     QVector<TalkMessage> m_localHistoryMessageVec;
     QVector<TalkMessage> m_networkHistoryMessageVec;

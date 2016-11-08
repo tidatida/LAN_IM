@@ -13,7 +13,7 @@ class QFrame;
 class CustomLineEdit;
 class IMMainWidget;
 
-static const int MAX_NUM = 133;			//总头像数
+static const int MAX_NUM = 133;
 
 class IMInformationWidget : public QWidget
 {
@@ -42,53 +42,39 @@ private:
 protected:
     QLabel *m_labelUserID;    // user  account  
     QLineEdit *m_leUserID;
-//     QLabel *m_labelDesUserID;
-    QLabel *m_labelNickname;   // user 昵称
+
+    QLabel *m_labelNickname;
     QLineEdit *m_leNickname;
 
     QFrame *m_frameHead;
     QLabel *m_labelHead;
-//    QLabel *m_labelHeadMes;
+
     QPushButton *m_btnNext;
     QPushButton *m_btnPre;
-//        QLabel *m_labelDesNickname;// 昵称描述
-//        QLabel *m_labelPwd;        // user  passwd
-//        QLineEdit *m_lePwd;
-//        QLabel *m_labelDesPwd;
-        QLabel *m_labelConfirmPwd;  // 确认 passwd
-        QLineEdit *m_leConfirmPwd;
-//        QLabel *m_labelDesConfirmPwd;
-        QLabel *m_labelSex;        // 性 other 
-        QComboBox *m_cbxSex;
-//        QLabel *m_labelDesSex;
-        QLabel *m_labelBirthday;   // 生日
-        CustomLineEdit *m_leBirthday;
-//        QLabel *m_labelDesBirthday;
-//        QLabel *m_labelQuestion;   // passwd-protect question
-//        QLineEdit *m_leQuestion;
-//        QLabel *m_labelDesQuestion;
-//        QLabel *m_labelAnswer;     // 问题answer 
-//        QLineEdit *m_leAnswer;
-//        QLabel *m_labelDesAnswer;
-        QLabel *m_labelName;       // 真实姓 name 
-        QLineEdit *m_leName;
-//        QLabel *m_labelDesName;
-        QLabel *m_labelPhone;      // 电话
-        QLineEdit *m_lePhone;
-//        QLabel *m_labelDesPhone;
-        QLabel *m_labelAddress;    //  address 
-        QLineEdit *m_leAddress;
-//        QLabel *m_labelDesAddress;
 
-        QPushButton *m_btnOk;// "Register "  button 
-        QPushButton *m_btnCancel;  // "取消"  button 
+    QLabel *m_labelConfirmPwd;
+    QLineEdit *m_leConfirmPwd;
+    QLabel *m_labelSex;
+    QComboBox *m_cbxSex;
 
-        int m_headNum;
-        bool m_isReadOnly;
-        bool m_isEdit;
+    QLabel *m_labelBirthday;
+    CustomLineEdit *m_leBirthday;
+    QLabel *m_labelName;
+    QLineEdit *m_leName;
+    QLabel *m_labelPhone;
+    QLineEdit *m_lePhone;
+    QLabel *m_labelAddress; 
+    QLineEdit *m_leAddress;
 
-        UserInformation m_userInf;
-        IMMainWidget *m_mainWidget;
+    QPushButton *m_btnOk;
+    QPushButton *m_btnCancel;
+
+    int m_headNum;
+    bool m_isReadOnly;
+    bool m_isEdit;
+
+    UserInformation m_userInf;
+    IMMainWidget *m_mainWidget;
 };
 
 #endif // IMINFORMATIONWIDGET_H

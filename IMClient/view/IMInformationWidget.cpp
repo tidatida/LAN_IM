@@ -16,20 +16,18 @@ IMInformationWidget::IMInformationWidget(IMMainWidget *mainWidget, QWidget *pare
     m_mainWidget = mainWidget;
     initIMLoginWidget();
 
-    connect(m_btnCancel, SIGNAL(clicked()),
-        this, SLOT(onClickCancelButton()));
-    connect(m_btnOk, SIGNAL(clicked()),
-        this, SLOT(onClickOKButton()));
-    connect(m_btnNext, SIGNAL(clicked()),
-        this, SLOT(onClickNextButton()));
-    connect(m_btnPre, SIGNAL(clicked()),
-        this, SLOT(onClickPretButton()));
+    connect(m_btnCancel, SIGNAL(clicked()),this, SLOT(onClickCancelButton()));
+    connect(m_btnOk, SIGNAL(clicked()),this, SLOT(onClickOKButton()));
+    connect(m_btnNext, SIGNAL(clicked()),this, SLOT(onClickNextButton()));
+    connect(m_btnPre, SIGNAL(clicked()),this, SLOT(onClickPretButton()));
 
-    setWindowTitle(tr("个人信息"));
+    setWindowTitle(tr("persional information"));
 }
 
 IMInformationWidget::~IMInformationWidget()
-{}
+{
+
+}
 
 void IMInformationWidget::setReadOnly(bool isReadOnly, bool isEdit)
 {
@@ -38,7 +36,7 @@ void IMInformationWidget::setReadOnly(bool isReadOnly, bool isEdit)
     m_leUserID->setReadOnly(true);
     m_leNickname->setReadOnly(isReadOnly);
     m_cbxSex->setEnabled(!isReadOnly);
-//    m_leBirthday->setReadOnly(isReadOnly);
+
     m_leBirthday->setEnabled(!isReadOnly);
     m_leName->setReadOnly(isReadOnly);
     m_lePhone->setReadOnly(isReadOnly);
@@ -53,12 +51,12 @@ void IMInformationWidget::setReadOnly(bool isReadOnly, bool isEdit)
         if (isReadOnly)
         {
             m_btnCancel->setText(tr("close "));
-            m_btnOk->setText(tr("编辑"));
+            m_btnOk->setText(tr("edit"));
         }
         else
         {
-            m_btnCancel->setText(tr("取消"));
-            m_btnOk->setText(tr("保存"));
+            m_btnCancel->setText(tr("cancel"));
+            m_btnOk->setText(tr("save"));
         }
     }
     else
@@ -75,7 +73,7 @@ void IMInformationWidget::setUserInformation(const UserInformation &user)
     m_userInf = user;
     m_leUserID->setText(m_userInf.m_userID);
     m_leNickname->setText(m_userInf.m_nickname);
-    if (0 == m_userInf.m_sex.compare("男"))
+    if (0 == m_userInf.m_sex.compare("male"))
         m_cbxSex->setCurrentIndex(0);
     else
         m_cbxSex->setCurrentIndex(1);
@@ -85,16 +83,22 @@ void IMInformationWidget::setUserInformation(const UserInformation &user)
     m_leAddress->setText(m_userInf.m_address);
 
     m_headNum = m_userInf.m_headPortrait;
-    QString labelStr = QString("头像: %1 / %2").arg(QString::number(m_headNum)).
+    QString labelStr = QString("avatar: %1 / %2").arg(QString::number(m_headNum)).
         arg(QString::number(MAX_NUM));
+
     QString str = QString("QFrame#avatar{border-image:url(resource/image/head/%1.bmp)}")
         .arg(QString::number(m_headNum));
+
     m_frameHead->setStyleSheet(str);
-    if (m_isEdit)
+
+    if (m_isEdit){
         m_labelHead->setText(labelStr);
-    else
-        m_labelHead->setText(tr("头像"));
+    }else{
+        m_labelHead->setText(tr("avator"));
+    }
+
 }
+
 
 UserInformation IMInformationWidget::getInformation()
 {
@@ -113,13 +117,12 @@ UserInformation IMInformationWidget::getInformation()
 
 // protected:----------------------------------------
 
-//聊天窗口close 槽函数  发送信 number  让 main 窗体delete   map  table 项
-void IMInformationWidget::closeEvent(QCloseEvent *)// away 时触发,s   应该检查窗口是否都close 了！！
+void IMInformationWidget::closeEvent(QCloseEvent *)
 {
-//    emit closeChat(secretAddress);
-    if (NULL != m_mainWidget)
+    if (NULL != m_mainWidget){
         m_mainWidget->removeInformationWidget(m_userInf.m_userID);
-    //    this->destroyed(0);
+    }
+
 }
 
 
@@ -131,9 +134,10 @@ void IMInformationWidget::onClickCancelButton()
     {
         setUserInformation(m_userInf);
         setReadOnly(!m_isReadOnly, m_isEdit);
-    }
-    else
+    }else{
         close();
+    }
+
 }
 
 void IMInformationWidget::onClickOKButton()
@@ -141,36 +145,48 @@ void IMInformationWidget::onClickOKButton()
     if (!m_isReadOnly)
     {
         getInformation();
-//        emit sendInformation(m_userInf);
         m_mainWidget->changeMyInformation(m_userInf);
     }
+
     setReadOnly(!m_isReadOnly, true);
 }
 
 void IMInformationWidget::onClickPretButton()
 {
     --m_headNum;
-    if(m_headNum < 1)
+    
+    if(m_headNum < 1){
         m_headNum = MAX_NUM;
-    QString labelStr = QString("头像: %1 / %2").arg(QString::number(m_headNum)).
+    }
+    
+    QString labelStr = QString("avatar: %1 / %2").arg(QString::number(m_headNum)).
         arg(QString::number(MAX_NUM));
+    
     QString str = QString("QFrame#avatar{border-image:url(resource/image/head/%1.bmp)}")
         .arg(QString::number(m_headNum));
+    
     m_frameHead->setStyleSheet(str);
     m_labelHead->setText(labelStr);
+
 }
 
 void IMInformationWidget::onClickNextButton()
 {
     ++m_headNum;
-    if(m_headNum > MAX_NUM)
+
+    if(m_headNum > MAX_NUM){
         m_headNum = 1;
-    QString labelStr = QString("头像: %1 / %2").arg(QString::number(m_headNum)).
+    }
+
+    QString labelStr = QString("avatar: %1 / %2").arg(QString::number(m_headNum)).
         arg(QString::number(MAX_NUM));
+    
     QString str = QString("QFrame#avatar{border-image:url(resource/image/head/%1.bmp)}")
         .arg(QString::number(m_headNum));
+    
     m_frameHead->setStyleSheet(str);
     m_labelHead->setText(labelStr);
+
 }
 
 // private:----------------------------------------
@@ -179,15 +195,17 @@ void IMInformationWidget::initIMLoginWidget()
     m_isReadOnly = true;
     m_isEdit = false;
 
-    // 左边标签
+    // left label
     m_labelUserID = new QLabel(tr(" account  :"));
-    m_labelNickname = new QLabel(tr("昵称:"));
-    m_labelSex = new QLabel(tr("性 other :"));
-    m_labelBirthday = new QLabel(tr("生日:"));
-    m_labelName = new QLabel(tr("姓 name :"));
-    m_labelPhone = new QLabel(tr("电话"));
-    m_labelAddress = new QLabel(tr(" address "));
+    m_labelNickname = new QLabel(tr("nickname:"));
+    m_labelSex = new QLabel(tr("sex:"));
+    m_labelBirthday = new QLabel(tr("birthday:"));
+    m_labelName = new QLabel(tr("name:"));
+    m_labelPhone = new QLabel(tr("mobile"));
+    m_labelAddress = new QLabel(tr("address"));
+
     QVBoxLayout *vLayoutLabelLeft= new QVBoxLayout;
+    
     vLayoutLabelLeft->addWidget(m_labelUserID);
     vLayoutLabelLeft->addWidget(m_labelNickname);
     vLayoutLabelLeft->addWidget(m_labelSex);
@@ -196,61 +214,70 @@ void IMInformationWidget::initIMLoginWidget()
     vLayoutLabelLeft->addWidget(m_labelPhone);
     vLayoutLabelLeft->addWidget(m_labelAddress);
 
-    // 中间区域 信息编辑
+    // middle, msg display area
     m_leUserID = new QLineEdit;
     m_leNickname = new QLineEdit;
     m_cbxSex = new QComboBox;
-    m_cbxSex->addItem(tr("男"));
-    m_cbxSex->addItem(tr("女"));
+    m_cbxSex->addItem(tr("male"));
+    m_cbxSex->addItem(tr("female"));
     m_leBirthday = new CustomLineEdit;
     m_leName = new QLineEdit;
+
     QVBoxLayout *vLayoutEditMid = new QVBoxLayout;
+    
     vLayoutEditMid->addWidget(m_leUserID);
     vLayoutEditMid->addWidget(m_leNickname);
     vLayoutEditMid->addWidget(m_cbxSex);
     vLayoutEditMid->addWidget(m_leBirthday);
     vLayoutEditMid->addWidget(m_leName);
 
-    // 右边  button  and  头像
-    m_btnNext = new QPushButton(tr("下一张"));
-    m_btnPre = new QPushButton(tr("上一张"));
+    
+    // right:  button  and  avatar
+    m_btnNext = new QPushButton(tr("next"));
+    m_btnPre = new QPushButton(tr("pre"));
+
     QHBoxLayout *hLayoutBtnEdit = new QHBoxLayout;
+    
     hLayoutBtnEdit->addWidget(m_btnPre);
     hLayoutBtnEdit->addWidget(m_btnNext);
-    m_btnOk = new QPushButton(tr("编辑"));
-    m_btnCancel = new QPushButton(tr("取消"));
+    
+    m_btnOk = new QPushButton(tr("edit"));
+    m_btnCancel = new QPushButton(tr("cancel"));
     QHBoxLayout *hLayoutBtnHead = new QHBoxLayout;
     hLayoutBtnHead->addWidget(m_btnOk);
     hLayoutBtnHead->addWidget(m_btnCancel);
-    m_labelHead = new QLabel(tr("头像"));
+    m_labelHead = new QLabel(tr("avatar"));
     m_frameHead = new QFrame;
-//    m_frameHead->setFixedSize(50,50);
+
     QVBoxLayout *vLayoutRight = new QVBoxLayout;
-//    vLayoutRight->addStretch();
+
     vLayoutRight->addLayout(hLayoutBtnHead);
     vLayoutRight->addWidget(m_labelHead);
     vLayoutRight->addWidget(m_frameHead);
     vLayoutRight->addLayout(hLayoutBtnEdit);
     vLayoutRight->addStretch();
-    // 上面整体
+
+
+    // top whole part
     QHBoxLayout *hLayoutTop = new QHBoxLayout;
     hLayoutTop->addLayout(vLayoutEditMid);
     hLayoutTop->addLayout(vLayoutRight);
     hLayoutTop->addStretch();
 
-    // 下面 编辑框
+    // bottom edit area
     m_lePhone = new QLineEdit;
     m_leAddress = new QLineEdit;
     QVBoxLayout *vLayoutEditBtm = new QVBoxLayout;
+
     vLayoutEditBtm->addWidget(m_lePhone);
     vLayoutEditBtm->addWidget(m_leAddress);
 
-    // 右边整体
+    // whole of right area
     QVBoxLayout *vLayoutMainRight = new QVBoxLayout;
     vLayoutMainRight->addLayout(hLayoutTop);
     vLayoutMainRight->addLayout(vLayoutEditBtm);
 
-    // 整体
+    // the whole frame
     QHBoxLayout *hLayoutMain = new QHBoxLayout;
     hLayoutMain->addLayout(vLayoutLabelLeft);
     hLayoutMain->addLayout(vLayoutMainRight);
@@ -259,21 +286,12 @@ void IMInformationWidget::initIMLoginWidget()
 
     setFixedSize(400, 250);
 
-    //  set 背景图片
-//    QPalette pal;
-//    QPixmap pixmap(":/iamge/information.jpg" );
-//    pal.setBrush(QPalette::Window,QBrush(pixmap));
-//    setPalette(pal);
-
     m_frameHead->setFixedSize(40,40);
-//    m_frameHead->setObjectName("headFrame");
-//    QString str = QString("QFrame#headFrame{border-image:url(resource/image/head/%1.bmp);}")
-//            .arg(QString::number(m_myself.m_headPortrait));
-//    m_frameHead->setStyleSheet(str);
 
     m_headNum = 1;
     m_frameHead->setObjectName("avatar");
     QString str = QString("QFrame#avatar{border-image:url(resource/image/head/1.bmp);}");
     m_frameHead->setStyleSheet(str);
-    m_labelHead->setText("头像: 1 / 133");
+    m_labelHead->setText("avatar: 1 / 133");
+    
 }

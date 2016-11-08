@@ -9,8 +9,10 @@
 IMFlockListWidget::IMFlockListWidget(IMMainWidget *mainWidget, QWidget *parent) :
     QWidget(parent),  m_layout(new QVBoxLayout), m_mainWidget(mainWidget)
 {
-    if (NULL == m_mainWidget)
+    if (NULL == m_mainWidget){
         return;
+    }
+
     QVBoxLayout *mainLayout=new QVBoxLayout();
     mainLayout->setContentsMargins(0,0,0,0);
     mainLayout->setSpacing(0);
@@ -32,11 +34,7 @@ IMFlockListWidget::IMFlockListWidget(IMMainWidget *mainWidget, QWidget *parent) 
 
     setStyleSheet("QWidget{border: 0;}");
 
-    //create  right button  menu 
     creatMenu();
-
-//    connect(this, SIGNAL(customContextMenuRequested()),
-//            this, SLOT(showMenu()));
 }
 
 
@@ -46,16 +44,8 @@ Description:  add
 *************************************************/
 void IMFlockListWidget::addItem(QWidget *item)
 {
-    // Remove last spacer item if present.
     int count = m_layout->count();
-//    if (count == 0)
-//    {
-//        delete m_layout;
-//        m_layout = new QVBoxLayout();
-//        m_layout->setContentsMargins(0,0,0,0);
-//        m_layout->setSpacing(0);
-//        m_contentsWidget->setLayout(m_layout);
-//    }
+
     if (count > 1)
     {
         m_layout->removeItem(m_layout->itemAt(count - 1));
@@ -73,6 +63,7 @@ Description:  delete
 void IMFlockListWidget::removeItem(QWidget *item)
 {
     m_layout->removeWidget(item);
+
     if (m_layout->count() == 1)
     {
         m_layout->removeItem(m_layout->itemAt(0));
@@ -87,16 +78,13 @@ Description:  create  right button  menu
 void IMFlockListWidget::creatMenu()
 {
     m_menu = new QMenu(this);
-    QAction *actCreateFlock = new QAction(tr(" create 群"), this);
-    QAction *actAddFlock = new QAction(tr("add 群"), this);
-    QAction *actRefresh = new QAction(tr("刷 new 群 table  "), this);
+    QAction *actCreateFlock = new QAction(tr(" create group"), this);
+    QAction *actAddFlock = new QAction(tr("add group"), this);
+    QAction *actRefresh = new QAction(tr("refresh group table"), this);
 
-    connect(actCreateFlock, SIGNAL(triggered()),
-        m_mainWidget, SLOT(createFlock()));
-    connect(actAddFlock, SIGNAL(triggered()),
-        m_mainWidget, SLOT(onClickAddFlock()));
-    connect(actRefresh, SIGNAL(triggered()),
-        m_mainWidget, SLOT(getFlocksInformation()));
+    connect(actCreateFlock, SIGNAL(triggered()),m_mainWidget, SLOT(createFlock()));
+    connect(actAddFlock, SIGNAL(triggered()),m_mainWidget, SLOT(onClickAddFlock()));
+    connect(actRefresh, SIGNAL(triggered()),m_mainWidget, SLOT(getFlocksInformation()));
 
     m_menu->addAction(actCreateFlock);
     m_menu->addAction(actAddFlock);
@@ -106,22 +94,22 @@ void IMFlockListWidget::creatMenu()
 
 /*************************************************
 Function Name: showMenu()
-Description:  显示 right button  menu 
+Description:  display right button  menu 
 *************************************************/
 void IMFlockListWidget::showMenu()
  {
     if (m_menu == NULL)
     {
-        //create  right button  menu 
         creatMenu();
     }
+
     m_menu->exec(QCursor::pos());
  }
 
 
 /*************************************************
 Function Name: mousePressEvent
-Description:  mouse 单击 event 
+Description:  mouse click event 
 *************************************************/
 void IMFlockListWidget::mousePressEvent(QMouseEvent *event)
 {
@@ -130,5 +118,6 @@ void IMFlockListWidget::mousePressEvent(QMouseEvent *event)
         showMenu();
         return;
     }
+
     QWidget::mousePressEvent(event);
 }

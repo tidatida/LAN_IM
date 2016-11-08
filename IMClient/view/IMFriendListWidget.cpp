@@ -83,7 +83,7 @@ void IMFriendListWidget:: creatMenu()
 
 /*************************************************
 Function Name: showMenu()
-Description:  显示 right button  menu 
+Description:  display right button  menu 
 *************************************************/
 void IMFriendListWidget::showMenu()
  {
@@ -92,6 +92,7 @@ void IMFriendListWidget::showMenu()
         //create  right button  menu 
         creatMenu();
     }
+
     m_menu->exec(QCursor::pos());
  }
 
@@ -108,5 +109,6 @@ void IMFriendListWidget:: mousePressEvent(QMouseEvent *event)
         showMenu();
         return;
     }
+    
     QWidget::mousePressEvent(event);
 }

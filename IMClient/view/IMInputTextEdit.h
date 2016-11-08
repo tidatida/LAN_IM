@@ -2,7 +2,7 @@
 File Name: IMInputTextEdit.h
 Author: jet.F.R
 Date: 2014.3.26
-Description:  input 编辑框
+Description:
 Changes:
 ********************************************/
 
@@ -19,7 +19,7 @@ public:
     ~IMInputTextEdit();
 
 protected:
-    // 重载了keyPressEvent
+    // reload keyPressEvent
     void keyPressEvent(QKeyEvent *event);
 
 signals:

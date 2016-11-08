@@ -32,6 +32,7 @@ IMFlockMemberButton::IMFlockMemberButton(const FlockMember &flockMember,
     layout->addWidget(m_labelMes);
     layout->addStretch();
     layout->setContentsMargins(0,0,0,0);
+
     setLayout(layout);
     setMinimumHeight(25);
 
@@ -47,11 +48,12 @@ IMFlockMemberButton::~IMFlockMemberButton()
 
 /*************************************************
 Function Name: openChatRoom()
-Description: open 聊天窗口
+Description:
 *************************************************/
 void IMFlockMemberButton::openChatRoom()
 {
     qDebug() << "chat room with flock member is open";
+
     if(m_isOpen)
     {
         m_flockWidget->raise();
@@ -60,26 +62,11 @@ void IMFlockMemberButton::openChatRoom()
         return;
     }
     qDebug() << "create chat room with flock member";
-//    ChatInformation chatInf;
-//    chatInf.m_headPortrait = m_info.m_headPortrait;
-//    chatInf.m_friendID = m_info.m_userID;
-////    chatInf.m_friendMark = m_info.m_mark;
-//    chatInf.m_friendNickname = m_info.m_nickname;
-//    chatInf.m_friendRemark = m_info.m_remarkName;
-
-//    m_isOpen = true;
-//    IMChatWidget *chatRoom = new IMChatWidget(chatInf);
-//    m_flockWidget = chatRoom;
-//    m_mainWidget->insertChatRoomMap(chatInf.m_friendID, chatRoom);
-//    connect(chatRoom, SIGNAL(sendMessagesFromChat(TalkMessage &)),
-//            m_mainWidget, SLOT(receiveMessagesFromChat(TalkMessage &)));
-//    connect(chatRoom, SIGNAL(roomQuitSignal()),  this, SLOT(chatRoomQuit()));
-//    chatRoom->show();
 }
 
 /*************************************************
 Function Name: closeChatRoom()
-Description: close 聊天窗口
+Description:
 *************************************************/
 void IMFlockMemberButton::closeChatRoom()
 {
@@ -93,7 +80,7 @@ void IMFlockMemberButton::closeChatRoom()
 
 /*************************************************
 Function Name: setButtonStatus()
-Description:   set button显示信息
+Description: 
 *************************************************/
 void IMFlockMemberButton::setButtonStatus()
 {
@@ -103,12 +90,15 @@ void IMFlockMemberButton::setButtonStatus()
     QString text, mark;
     m_strFlockStatus = getFlockStatusFromInt(m_info.m_flockStatus);
     m_strLoginStatus = getLoginStatusFromInt(m_info.m_loginStatus);
-    if(m_info.m_remark.isEmpty())
+
+
+    if(m_info.m_remark.isEmpty()){
         mark = m_info.m_nickname;
-    else
+    }else{
         mark = m_info.m_remark;
-    if(OFFLINE == m_info.m_loginStatus || INVISIBLE == m_info.m_loginStatus)
-    {
+    }
+
+    if(OFFLINE == m_info.m_loginStatus || INVISIBLE == m_info.m_loginStatus){
         QPixmap pixmap;
         QIcon icon(str);
         pixmap = icon.pixmap(QSize(HEAD_MINI_SIZE, HEAD_MINI_SIZE),
@@ -117,9 +107,8 @@ void IMFlockMemberButton::setButtonStatus()
 
         text = QString("<font size=\"FONT_SIEZE\" color=gray>[%1]%2(%3)[%4]</font>").
                 arg(m_strFlockStatus, mark, m_info.m_userID, m_strLoginStatus);
-    }
-    else
-    {
+    
+    }else{
         QPixmap pixmap;
         QIcon icon(str);
         pixmap = icon.pixmap(QSize(HEAD_MINI_SIZE, HEAD_MINI_SIZE));
@@ -131,15 +120,11 @@ void IMFlockMemberButton::setButtonStatus()
                        "<font size=\"FONT_SIEZE\" color=black>[%4]</font>").
                 arg(m_strFlockStatus, mark, m_info.m_userID, m_strLoginStatus);
     }
-    //    text = QString("[%1]%2(%3)").arg(m_strStatus, mark, m_info.m_userID);
-
-        //<font size=\"FONT_SIEZE\" color=green>%1    %2: </font>
 
     m_labelMes->setText(text);
 
 }
 
-//remark:public slots:-----------------------------------------------
 
 //  right button  click  button 
 void IMFlockMemberButton::onClickRightButton(/*const QPoint &*/)
@@ -149,12 +134,13 @@ void IMFlockMemberButton::onClickRightButton(/*const QPoint &*/)
         //create  right button  menu 
         creatMenu();
     }
+
     m_menu->exec(QCursor::pos());
 }
 
 /*************************************************
 Function Name: onClickSendMessage()
-Description: 发送 Instant 消息
+Description: 
 *************************************************/
 void IMFlockMemberButton::onClickSendMessage()
 {
@@ -163,7 +149,7 @@ void IMFlockMemberButton::onClickSendMessage()
 
 /*************************************************
 Function Name: onClickSendMail()
-Description: 发送电子邮件
+Description: 
 *************************************************/
 void IMFlockMemberButton::onClickSendMail()
 {
@@ -171,7 +157,7 @@ void IMFlockMemberButton::onClickSendMail()
 
 /*************************************************
 Function Name: onClickShowInformation()
-Description: 显示成员详细信息
+Description: 
 *************************************************/
 void IMFlockMemberButton::onClickShowInformation()
 {
@@ -180,13 +166,13 @@ void IMFlockMemberButton::onClickShowInformation()
 
 /*************************************************
 Function Name: onClickChangeRemark()
-Description: modify群 name 片
+Description: 
 *************************************************/
 void IMFlockMemberButton::onClickChangeRemark()
 {
     bool isOk = false;
-    QString remark = QInputDialog::getText(NULL, "modify群 name 片",
-                                           " please  input  new ,s 群 name 片",
+    QString remark = QInputDialog::getText(NULL, "modify group name",
+                                           " please input new group name",
                                            QLineEdit::Normal,
                                            m_info.m_remark,
                                            &isOk);
@@ -205,7 +191,7 @@ void IMFlockMemberButton::onClickChangeRemark()
 
 /*************************************************
 Function Name: onClickEnterSpace
-Description: 进入空间
+Description: 
 *************************************************/
 void IMFlockMemberButton::onClickEnterSpace()
 {
@@ -213,28 +199,32 @@ void IMFlockMemberButton::onClickEnterSpace()
 
 /*************************************************
 Function Name: onClickRemoveMember
-Description: 移除该成员
+Description: 
 *************************************************/
 void IMFlockMemberButton::onClickRemoveMember()
 {
     QMessageBox::StandardButton returnBtn;
 
-    returnBtn = QMessageBox::question(NULL, tr("移除群成员"),
-        QString(tr("你确定要将成员%1,从群%2中移除吗？")).
-            arg(m_info.m_userID,m_flockWidget->getFlockInformation().m_flockID),
-        QMessageBox::Yes | QMessageBox::No,  QMessageBox::No);
+    returnBtn = QMessageBox::question(NULL, tr("remove group member"),
+                    QString(tr("Are you sure remove %1 from group %2 ？")).
+                    arg(m_info.m_userID,m_flockWidget->getFlockInformation().m_flockID),
+                    QMessageBox::Yes | QMessageBox::No,  QMessageBox::No);
 
-    if (m_mainWidget == NULL)
+    if (m_mainWidget == NULL){
         return;
-    if(QMessageBox::Yes == returnBtn)
+    }
+
+    if(QMessageBox::Yes == returnBtn){
         m_mainWidget->leaveFlock(m_info.m_userID,
                                  m_flockWidget->getFlockInformation().m_flockID);
+    }
+
 }
 
 
 /*************************************************
 Function Name: onClickAddFriend
-Description: 加好友
+Description:
 *************************************************/
 void IMFlockMemberButton::onClickAddFriend()
 {
@@ -244,7 +234,7 @@ void IMFlockMemberButton::onClickAddFriend()
 
 /*************************************************
 Function Name: onDoubleClickMemberButton
-Description: 左键 双击
+Description:
 *************************************************/
 void IMFlockMemberButton::onDoubleClickMemberButton()
 {
@@ -253,13 +243,11 @@ void IMFlockMemberButton::onDoubleClickMemberButton()
 
 /*************************************************
 Function Name: chatRoomQuit
-Description: 聊天窗口close 了
+Description:
 *************************************************/
 void IMFlockMemberButton::chatRoomQuit()
 {
     m_isOpen = false;
-//    if (NULL != m_flockWidget)
-//        m_flockWidget->removeChatWidget(m_info.m_userID);
 }
 
 
@@ -267,7 +255,7 @@ void IMFlockMemberButton::chatRoomQuit()
 
 /*************************************************
 Function Name: mousePressEvent
-Description:  mouse 单击 event 
+Description:  mouse click event 
 *************************************************/
 void IMFlockMemberButton::mousePressEvent(QMouseEvent *event)
 {
@@ -276,21 +264,23 @@ void IMFlockMemberButton::mousePressEvent(QMouseEvent *event)
         onClickRightButton();
         return;
     }
+
     QPushButton::mousePressEvent(event);
+
 }
 
 /*************************************************
 Function Name: mouseDoubleClickEvent
-Description:  mouse 双击 event 
+Description:  mouse double click event 
 *************************************************/
 void IMFlockMemberButton::mouseDoubleClickEvent(QMouseEvent *event)
 {
     if (event->button() == Qt::LeftButton)
     {
-//        emit leftDoubleClickSignal();
         onDoubleClickMemberButton();
         return;
     }
+
     QPushButton::mouseDoubleClickEvent(event);
 }
 
@@ -300,31 +290,35 @@ void IMFlockMemberButton::mouseDoubleClickEvent(QMouseEvent *event)
 
 /*************************************************
 Function Name: getFlockStatusFromInt()
-Description: 将群成员身份从数字形式转换为字符串形式
+Description:
 *************************************************/
 QString IMFlockMemberButton::getFlockStatusFromInt(const int n) const
 {
     switch (n)
     {
     case FLOCK_HOST:
-        return tr("群 main ");
+        return tr("group owner");
         break;
     case FLOCK_ADMAIN:
-//        return tr("管理员");
-//        break;
-    case FLOCK_MEMBER:
-        return tr("成员");
+        return tr("group admin");
         break;
+
+    case FLOCK_MEMBER:
+        return tr("group member");
+        break;
+
     default:
         break;
+
     }
+
     return NULL;
 }
 
 
 /*************************************************
 Function Name: getLoginStatusFromInt()
-Description: 将好友 online 状态从数字形式转换为字符串形式
+Description: 
 *************************************************/
 QString IMFlockMemberButton::getLoginStatusFromInt(const int n) const
 {
@@ -335,25 +329,32 @@ QString IMFlockMemberButton::getLoginStatusFromInt(const int n) const
 //    NOTDISTURB = 4 //  please  dont disturb 
     switch (n)
     {
-    case ONLINE:
-        return tr(" online ");
-        break;
-    case OFFLINE:
-    case INVISIBLE:
-        return tr(" offline ");
-        break;
-    case BUSY:
-        return tr(" busy ");
-        break;
-    case LEAVE:
-        return tr(" away ");
-        break;
-    case NOTDISTURB:
-        return tr(" please  dont disturb ");
-        break;
-    default:
-        break;
+        case ONLINE:
+            return tr(" online ");
+            break;
+
+        case OFFLINE:
+        case INVISIBLE:
+            return tr(" offline ");
+            break;
+
+        case BUSY:
+            return tr(" busy ");
+            break;
+
+        case LEAVE:
+            return tr(" away ");
+            break;
+
+        case NOTDISTURB:
+            return tr(" please  dont disturb ");
+            break;
+
+        default:
+            break;
+
     }
+
     return NULL;
 }
 
@@ -365,43 +366,33 @@ Description: create  right button  menu
 void IMFlockMemberButton::creatMenu(/*const QList<QString> *groutList*/)
 {
     m_menu = new QMenu(this);
-    QAction *sendMessage = new QAction(tr("发送 Instant 消息"), m_menu);
-    QAction *sendMail = new QAction(tr("发送电子邮件"), m_menu);
-    QAction *showInfo = new QAction(tr("查看资料"), m_menu);
-    QAction *enterSpace = new QAction(tr("进入空间"), m_menu);
-    QAction *removeMember= new QAction(tr("移除该成员"), m_menu);
-    QAction *changeRemark = new QAction(tr("modify群 name 片"), m_menu);
-    QAction *addRriend= new QAction(tr("加为好友"), m_menu);
+    QAction *sendMessage = new QAction(tr("send Instant msg"), m_menu);
+    QAction *sendMail = new QAction(tr("send email"), m_menu);
+    QAction *showInfo = new QAction(tr("view profile"), m_menu);
+    QAction *enterSpace = new QAction(tr("enter space"), m_menu);
+    QAction *removeMember= new QAction(tr("remove"), m_menu);
+    QAction *changeRemark = new QAction(tr("modify group name"), m_menu);
+    QAction *addRriend= new QAction(tr("add friend"), m_menu);
 
-    connect(sendMessage, SIGNAL(triggered()),
-        this, SLOT(onClickSendMessage()));
-    connect(sendMail, SIGNAL(triggered()),
-        this, SLOT(onClickSendMail()));
-    connect(showInfo, SIGNAL(triggered()),
-        this, SLOT(onClickShowInformation()));
-    connect(enterSpace, SIGNAL(triggered()),
-        this, SLOT(onClickEnterSpace()));
-    connect(removeMember, SIGNAL(triggered()),
-        this, SLOT(onClickRemoveMember()));
-    connect(changeRemark, SIGNAL(triggered()),
-        this, SLOT(onClickChangeRemark()));
-    connect(addRriend, SIGNAL(triggered()),
-        this, SLOT(onClickAddFriend()));
+    connect(sendMessage, SIGNAL(triggered()),this, SLOT(onClickSendMessage()));
+    connect(sendMail, SIGNAL(triggered()),this, SLOT(onClickSendMail()));
+    connect(showInfo, SIGNAL(triggered()),this, SLOT(onClickShowInformation()));
+    connect(enterSpace, SIGNAL(triggered()),this, SLOT(onClickEnterSpace()));
+    connect(removeMember, SIGNAL(triggered()),this, SLOT(onClickRemoveMember()));
+    connect(changeRemark, SIGNAL(triggered()),this, SLOT(onClickChangeRemark()));
+    connect(addRriend, SIGNAL(triggered()),this, SLOT(onClickAddFriend()));
 
 
-    // 自己
+    // self
     if (m_mainWidget->getLocalMyInformation().m_userID == m_info.m_userID)
     {
-//        m_menu->addAction(showInfo);
         m_menu->addAction(enterSpace);
         m_menu->addAction(changeRemark);
 
-    }
+    }else if (m_mainWidget->getLocalMyInformation().m_userID ==
+             m_flockWidget->getFlockInformation().m_creatorID){
+            // group owner 
 
-    // 不是自己 - 是群 main 
-    else if (m_mainWidget->getLocalMyInformation().m_userID ==
-             m_flockWidget->getFlockInformation().m_creatorID)
-    {
         m_menu->addAction(sendMessage);
         m_menu->addAction(sendMail);
         m_menu->addAction(showInfo);
@@ -410,23 +401,19 @@ void IMFlockMemberButton::creatMenu(/*const QList<QString> *groutList*/)
         m_menu->addAction(changeRemark);
         m_menu->addAction(removeMember);
 
-        // 不是好友
+        // not friend
         if (!m_mainWidget->isMyFriend(m_info.m_userID))
         {
-
             m_menu->addAction(addRriend);
         }
-    }
-    // 不是自己 - 不是群 main 
-    else
-    {
+
+    }else{
         m_menu->addAction(sendMessage);
         m_menu->addAction(sendMail);
         m_menu->addAction(showInfo);
         m_menu->addAction(enterSpace);
         m_menu->addSeparator();
 
-        // 不是好友
         if (!m_mainWidget->isMyFriend(m_info.m_userID))
         {
             m_menu->addAction(addRriend);

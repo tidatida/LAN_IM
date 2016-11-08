@@ -32,7 +32,7 @@ IMLinkButton::IMLinkButton(QWidget *parent) :
 
 /*************************************************
 Function Name: setLatestMessage()
-Description:   set 最 new 消息
+Description:   
 *************************************************/
 void IMLinkButton::setLatestMessage(const TalkMessage & mes)
 {
@@ -42,7 +42,7 @@ void IMLinkButton::setLatestMessage(const TalkMessage & mes)
 
 /*************************************************
 Function Name: onClickRightButton()
-Description:  right button  单击
+Description:  
 *************************************************/
 void IMLinkButton::onClickRightButton(/*const QPoint &*/)
 {
@@ -59,7 +59,7 @@ void IMLinkButton::onClickRightButton(/*const QPoint &*/)
 
 /*************************************************
 Function Name: mousePressEvent
-Description:  mouse 单击 event 
+Description:   
 *************************************************/
 void IMLinkButton::mousePressEvent(QMouseEvent *event)
 {
@@ -73,7 +73,7 @@ void IMLinkButton::mousePressEvent(QMouseEvent *event)
 
 /*************************************************
 Function Name: mouseDoubleClickEvent
-Description:  mouse 双击 event 
+Description:   
 *************************************************/
 void IMLinkButton::mouseDoubleClickEvent(QMouseEvent *event)
 {
@@ -97,8 +97,8 @@ Description: create  right button  menu
 void IMLinkButton::creatMenu(/*const QList<QString> *groutList*/)
 {
     m_menu = new QMenu(this);
-    QAction *showMessage = new QAction(tr("查看消息"), m_menu);
-    QAction *ignoreMessage = new QAction(tr("忽略消息"), m_menu);
+    QAction *showMessage = new QAction(tr("view message"), m_menu);
+    QAction *ignoreMessage = new QAction(tr("ignore message"), m_menu);
     connect(showMessage, SIGNAL(triggered()),
             this, SLOT(onDoubleClickButton()));
     connect(ignoreMessage, SIGNAL(triggered()),

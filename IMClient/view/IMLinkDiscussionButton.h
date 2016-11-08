@@ -14,15 +14,12 @@ public:
     IMLinkDiscussionButton(IMDiscussionButton * btn, QWidget *parent = 0);
     ~IMLinkDiscussionButton();
 
-    //  set button显示信息
     void setButtonStatus();
 
 signals:
     
 public slots:
-    // 左键 双击
     void onDoubleClickButton();
-    // 忽略消息
     void ignoreMessage();
 
 private:

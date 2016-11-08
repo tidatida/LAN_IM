@@ -27,7 +27,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
 
  /*************************************************
  Function Name: onClickDeleteDate()
- Description:  delete  某日,s 信息记录
+ Description:  
  *************************************************/
  void IMLocalMessageWidget::onClickDeleteDate()
  {
@@ -35,7 +35,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
 
  /*************************************************
  Function Name: onClickDeleteOne()
- Description:  delete  某好友信息记录
+ Description:  
  *************************************************/
  void IMLocalMessageWidget::onClickDeleteOne()
  {
@@ -53,7 +53,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
 
  /*************************************************
  Function Name: onClickDeleteAll()
- Description:  delete  全部消息记录
+ Description:  
  *************************************************/
  void IMLocalMessageWidget::onClickDeleteAll()
  {
@@ -64,7 +64,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
 
  /*************************************************
  Function Name: onClickImport()
- Description:  导人消息记录
+ Description:  
  *************************************************/
  void IMLocalMessageWidget::onClickImport()
  {
@@ -72,15 +72,15 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
 
  /*************************************************
  Function Name: onClickExportOne()
- Description:  导出当前好友消息记录
+ Description:  
  *************************************************/
  void IMLocalMessageWidget::onClickExportOne()
  {
      int row = m_listViewFriend->currentIndex().row();
      if (row < 0)
      {
-         QString temp = QString(tr(" please  first 选择好友！"));
-         QMessageBox::information(NULL, tr("导出聊天记录"), temp);
+         QString temp = QString(tr(" please  select friend first ~"));
+         QMessageBox::information(NULL, tr("export chatting log"), temp);
          return;
      }
      if (NULL == m_mainWidget)
@@ -90,7 +90,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
 
  /*************************************************
  Function Name: onClickExportAll()
- Description:  导出 all 消息记录
+ Description:  
  *************************************************/
  void IMLocalMessageWidget::onClickExportAll()
  {
@@ -102,7 +102,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
 
  /*************************************************
  Function Name: onClickGetMessage()
- Description:   get 消息记录
+ Description:   
  *************************************************/
  void IMLocalMessageWidget::onClickGetMessage()
  {
@@ -110,8 +110,8 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
      int row = m_listViewFriend->currentIndex().row();
      if (row < 0)
      {
-         QString temp = QString(tr(" please  first 选择好友！"));
-         QMessageBox::information(NULL, tr("显示聊天记录"), temp);
+         QString temp = QString(tr(" please select a friend firstly ~ "));
+         QMessageBox::information(NULL, tr("display chatting logs "), temp);
          return;
      }
      m_date = m_leBirthday->getDate();
@@ -122,7 +122,7 @@ IMLocalMessageWidget::IMLocalMessageWidget(IMMainWidget *mainWidget, QWidget *pa
 
 // /*************************************************
 // Function Name: friendItemClicked()
-// Description:  单击好友 table  项
+// Description:  
 // *************************************************/
 // void IMLocalMessageWidget::friendItemClicked(const QModelIndex & index)
 // {

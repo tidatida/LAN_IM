@@ -14,7 +14,6 @@ public:
 
     void setLatestMessage(const TalkMessage & mes);
 
-    //  set button显示信息
     virtual void setButtonStatus() = 0;
     
 signals:
@@ -22,11 +21,9 @@ signals:
 
     
 public slots:
-    // 左键 双击
     virtual void onDoubleClickButton() = 0;
     //  right button  click  button 
     virtual void onClickRightButton(/*const QPoint &*/);
-    // 忽略消息
     virtual void ignoreMessage() = 0;
 
 protected:

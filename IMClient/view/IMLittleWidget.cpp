@@ -13,7 +13,7 @@ IMLittleWidget::IMLittleWidget(int num, QWidget *parent) :
         | Qt::WindowMinimizeButtonHint;
     setWindowFlags(flag);
 
-    // mainframe 布局
+    // mainframe layout
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
     m_labelFirst = new QLabel(this);
@@ -35,8 +35,8 @@ IMLittleWidget::IMLittleWidget(int num, QWidget *parent) :
         mainLayout->addWidget(m_leThird);
     }
 
-    m_btnOk = new QPushButton(tr("确定"));
-    m_btnClose = new QPushButton(tr("取消"));
+    m_btnOk = new QPushButton(tr("Yes"));
+    m_btnClose = new QPushButton(tr("Cancel"));
     QHBoxLayout *btnLayout = new QHBoxLayout(this);
     btnLayout->addStretch();
     btnLayout->addWidget(m_btnOk);
@@ -46,17 +46,15 @@ IMLittleWidget::IMLittleWidget(int num, QWidget *parent) :
     mainLayout->addLayout(btnLayout);
     setLayout(mainLayout);
 
-    connect(m_btnOk, SIGNAL(clicked()),
-        this, SLOT(onClickedBtnOk()));
-    connect(m_btnClose, SIGNAL(clicked()),
-        this, SLOT(onClickedBtnClose()));
+    connect(m_btnOk, SIGNAL(clicked()),this, SLOT(onClickedBtnOk()));
+    connect(m_btnClose, SIGNAL(clicked()),this, SLOT(onClickedBtnClose()));
 }
 
 
 // public slots:-------------------------------------
 /*************************************************
 Function Name: onClickedBtnClose()
-Description:  click  close /取消  button 
+Description:  click  close /cancel  button 
 *************************************************/
 void IMLittleWidget::onClickedBtnClose()
 {
@@ -65,9 +63,8 @@ void IMLittleWidget::onClickedBtnClose()
 
 /*************************************************
 Function Name: onClickedBtnClose()
-Description:  click  close /取消  button 
+Description:  click  close /cancel  button 
 *************************************************/
-//  set 各编辑框,s 标题栏
 void IMLittleWidget::setLabelsText(const QString & first,
                   const QString & second,
                   const QString & third)
@@ -84,38 +81,44 @@ void IMLittleWidget::setLabelsText(const QString & first,
 
 /*************************************************
 Function Name: getInputInformation()
-Description:  get user  input ,s 信息
+Description:  
 *************************************************/
 TempStrings IMLittleWidget::getInputInformation() const
 {
     TempStrings temp;
     temp.m_one = m_leFirst->text();
 
-    if(m_numOfLineEdit >= 2)
+    if(m_numOfLineEdit >= 2){
         temp.m_two = m_leSecond->text();
-    if(m_numOfLineEdit >= 3)
+    }
+
+    if(m_numOfLineEdit >= 3){
         temp.m_three = m_leThird->text();
+    }
 
     return temp;
 }
 
 /*************************************************
 Function Name: setPasswordStyle()
-Description: 将user  input ,s 信息set to  passwd风格
+Description: 
 *************************************************/
 void IMLittleWidget::setPasswordStyle()
 {
     m_leFirst->setEchoMode(QLineEdit::Password);
 
-    if(m_numOfLineEdit >= 2)
+    if(m_numOfLineEdit >= 2){
         m_leSecond->setEchoMode(QLineEdit::Password);
-    if(m_numOfLineEdit >= 3)
+    }
+
+    if(m_numOfLineEdit >= 3){
         m_leThird->setEchoMode(QLineEdit::Password);
+    }
 }
 
 /*************************************************
 Function Name: setAllEnabled()
-Description: set all  input 框 set 可用属性
+Description: 
 *************************************************/
 void IMLittleWidget::setAllEnabled(bool enable)
 {

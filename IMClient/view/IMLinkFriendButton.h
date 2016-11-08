@@ -16,13 +16,10 @@ public:
     ~IMLinkFriendButton();
 
 
-    //  set button显示信息
     void setButtonStatus();
 
 public slots:
-    // 左键 双击
     void onDoubleClickButton();
-    // 忽略消息
     void ignoreMessage();
 
 

@@ -14,7 +14,7 @@ IMFlockInformationWidget::IMFlockInformationWidget(IMMainWidget *mainWidget,
 {
     m_mainWidget = mainWidget;
     initIMLoginWidget();
-    setWindowTitle(tr("群信息"));
+    setWindowTitle(tr("group msg"));
 
     setReadOnly(true, false);
 
@@ -48,12 +48,12 @@ void IMFlockInformationWidget::setReadOnly(bool isReadOnly, bool isEdit)
         if (isReadOnly)
         {
             m_btnCancel->setText(tr("close "));
-            m_btnOk->setText(tr("编辑"));
+            m_btnOk->setText(tr("edit"));
         }
         else
         {
-            m_btnCancel->setText(tr("取消"));
-            m_btnOk->setText(tr("保存"));
+            m_btnCancel->setText(tr("cancel"));
+            m_btnOk->setText(tr("save"));
         }
     }
     else
@@ -84,21 +84,22 @@ FlockInformation IMFlockInformationWidget::getInformation()
 // protected:----------------------------------------
 void IMFlockInformationWidget::closeEvent(QCloseEvent *)
 {
-    if (NULL != m_mainWidget)
+    if (NULL != m_mainWidget){
         m_mainWidget->removeFlockInformationWidget(m_flockInf.m_flockID);
+    }
+
 }
 
 
 // public slots:-------------------------------------------
 void IMFlockInformationWidget::onClickCancelButton()
 {
-    if (!m_isReadOnly)
-    {
+    if (!m_isReadOnly){
         setFlockInformation(m_flockInf);
         setReadOnly(!m_isReadOnly, m_isEdit);
-    }
-    else
+    }else{
         close();
+    }
 }
 
 void IMFlockInformationWidget::onClickOKButton()
@@ -108,6 +109,7 @@ void IMFlockInformationWidget::onClickOKButton()
         getInformation();
         m_mainWidget->changeFlockInformation(m_flockInf);
     }
+
     setReadOnly(!m_isReadOnly, true);
 }
 
@@ -127,11 +129,11 @@ void IMFlockInformationWidget::initIMLoginWidget()
     m_labelFlockHead->setPixmap(pixmap);
 
 //    m_labelFlockHead->setPixmap(QPixmap(":/images/flock.png"));
-    m_labelFlockName = new QLabel(tr("群 name 称:"), this);
-    m_labelFlockID = new QLabel(tr("群 account  :"), this);
-    m_labelTheme = new QLabel(tr("群  theme :"), this);
-    m_labelCreatorID = new QLabel(tr("create 者 account  :"), this);
-    m_labelCreateDate = new QLabel(tr("create 时间:"), this);
+    m_labelFlockName = new QLabel(tr("group name:"), this);
+    m_labelFlockID = new QLabel(tr("group account:"), this);
+    m_labelTheme = new QLabel(tr("group theme:"), this);
+    m_labelCreatorID = new QLabel(tr("creator account:"), this);
+    m_labelCreateDate = new QLabel(tr("create time:"), this);
 
     m_leFlockName = new QLineEdit(this);
     m_leFlockID = new QLineEdit(this);
@@ -139,10 +141,10 @@ void IMFlockInformationWidget::initIMLoginWidget()
     m_leTheme = new QLineEdit(this);
     m_leCreateDate = new QLineEdit(this);
 
-    m_btnOk = new QPushButton(tr("确定"), this);
+    m_btnOk = new QPushButton(tr("Yes"), this);
     m_btnOk->setFixedWidth(100);
     m_btnOk->setVisible(false);
-    m_btnCancel = new QPushButton(tr("close "), this);
+    m_btnCancel = new QPushButton(tr("close"), this);
     m_btnCancel->setFixedWidth(100);
 
     QGridLayout *gridLayout = new QGridLayout(this);

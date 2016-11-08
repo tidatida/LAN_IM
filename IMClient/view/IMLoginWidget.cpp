@@ -311,7 +311,7 @@ void IMLoginWidget::onClickLabelForgotPwd()
 
 /*************************************************
 Function Name: onClickCbAutoLogin
-Description:  auto  Login 选择框改变
+Description: 
 Input: state
 Output: NULL
 Changes: NULL
@@ -366,11 +366,6 @@ void IMLoginWidget::initIMLoginWidget()
     ft.setPointSize(15);
     labelHeadLine->setFont(ft);
 
-//    QLabel *labelID = new QLabel(tr("ID"));
-//    QLabel *labelPwd = new QLabel(tr("Password"));
-//    vLayoutLeftTop->addWidget(labelID);
-//    vLayoutLeftTop->addWidget(labelPwd);
-
     m_leUserID = new QLineEdit;
     m_leUserID->setPlaceholderText(tr(" account  "));
     m_leUserPwd = new QLineEdit;
@@ -388,7 +383,6 @@ void IMLoginWidget::initIMLoginWidget()
     vLayoutRightTop->addWidget(m_labelRegister);
     vLayoutRightTop->addWidget(m_labelForgotPwd);
 
-//    hLayoutTop->addLayout(vLayoutLeftTop);
     hLayoutTop->addLayout(vLayoutMidTop);
     hLayoutTop->addLayout(vLayoutRightTop);
     hLayoutTop->setMargin(10);
@@ -453,38 +447,28 @@ void IMLoginWidget::initIMLoginWidget()
 
     m_extendedWidget->hide();
 
-    // 读取 auto  Login 配置文件
     readAutoLoginFile(AUTO_LOGIN_FILE_NAME);
 }
 
 /*************************************************
 Function Name: linkSignalWithSlot()
-Description: connection 信 number  and 槽
+Description: 
 Input: NULL
 Output: NULL
 Changes: NULL
 *************************************************/
 void IMLoginWidget::linkSignalWithSlot()
 {
-    connect(m_btnLogin, SIGNAL(clicked()),
-            this, SLOT(onClickBtnLogin()));
+    connect(m_btnLogin, SIGNAL(clicked()),this, SLOT(onClickBtnLogin()));
 
-    connect(m_moreButton, SIGNAL(toggled(bool)),
-            m_extendedWidget, SLOT(setVisible(bool)));
+    connect(m_moreButton, SIGNAL(toggled(bool)),m_extendedWidget, SLOT(setVisible(bool)));
 
-    connect(m_labelRegister, SIGNAL(clicked()),
-            this, SLOT(onClickLabelRegister()));
+    connect(m_labelRegister, SIGNAL(clicked()),this, SLOT(onClickLabelRegister()));
 
-    connect(m_labelForgotPwd, SIGNAL(clicked()),
-            this, SLOT(onClickLabelForgotPwd()));
+    connect(m_labelForgotPwd, SIGNAL(clicked()),this, SLOT(onClickLabelForgotPwd()));
 
-    connect(m_cbAutoLogin, SIGNAL(stateChanged(int)),
-            this, SLOT(onClickCbAutoLogin(int)));
+    connect(m_cbAutoLogin, SIGNAL(stateChanged(int)),this, SLOT(onClickCbAutoLogin(int)));
 
-//    connect(m_loginCtrl, SIGNAL(getQuestionAndAnswerSuccess(TempStrings)),
-//            this, SLOT());
-
-//    connect(m_moreButton, SIGNAL(toggled(bool)), this, SLOT(setSettingMessage(bool)));
 }
 
 /*************************************************
@@ -542,7 +526,7 @@ void IMLoginWidget::setServer(const QString & ip, const int port)
 
 
 /*************************************************
-Function Name: 读取 auto  Login 配置文件()
+Function Name: readAutoLoginFile
 Description:  set server 
 Input:  ip address ， port  number 
 Output: NULL

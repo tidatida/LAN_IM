@@ -19,7 +19,7 @@ IMLinkDiscussionButton::~IMLinkDiscussionButton()
 
 /*************************************************
 Function Name: setButtonStatus()
-Description:   set button显示信息
+Description: 
 *************************************************/
 void IMLinkDiscussionButton::setButtonStatus()
 {
@@ -39,7 +39,7 @@ void IMLinkDiscussionButton::setButtonStatus()
 
 /*************************************************
 Function Name: onDoubleClickFriendButton()
-Description: 左键 双击
+Description: 
 *************************************************/
 void IMLinkDiscussionButton::onDoubleClickButton()
 {
@@ -52,7 +52,7 @@ void IMLinkDiscussionButton::onDoubleClickButton()
 
 /*************************************************
 Function Name: ignoreMessage()
-Description: 忽略消息
+Description: 
 *************************************************/
 void IMLinkDiscussionButton::ignoreMessage()
 {

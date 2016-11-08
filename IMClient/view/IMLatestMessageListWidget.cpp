@@ -101,8 +101,8 @@ Description:  create  right button  menu
 void IMLatestMessageListWidget::creatMenu()
 {
     m_menu = new QMenu(this);
-    QAction *showAll = new QAction(tr("查看 all 消息"), this);
-    QAction *ignoreAll = new QAction(tr("忽略 all 消息"), this);
+    QAction *showAll = new QAction(tr("display all message"), this);
+    QAction *ignoreAll = new QAction(tr("ignore all message"), this);
 
     connect(showAll, SIGNAL(triggered()),
         m_mainWidget, SLOT(showAllChatRoom()));
@@ -116,7 +116,7 @@ void IMLatestMessageListWidget::creatMenu()
 
 /*************************************************
 Function Name: showMenu()
-Description:  显示 right button  menu 
+Description:  dispaly right button  menu 
 *************************************************/
 void IMLatestMessageListWidget::showMenu()
  {
@@ -131,7 +131,7 @@ void IMLatestMessageListWidget::showMenu()
 
 /*************************************************
 Function Name: mousePressEvent
-Description:  mouse 单击 event 
+Description:  mouse click event 
 *************************************************/
 void IMLatestMessageListWidget::mousePressEvent(QMouseEvent *event)
 {

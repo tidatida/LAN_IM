@@ -16,7 +16,7 @@ IMLinkFlockButton::~IMLinkFlockButton()
 
 /*************************************************
 Function Name: setButtonStatus()
-Description:   set button显示信息
+Description:   
 *************************************************/
 void IMLinkFlockButton::setButtonStatus()
 {
@@ -35,7 +35,7 @@ void IMLinkFlockButton::setButtonStatus()
 
 /*************************************************
 Function Name: onDoubleClickFriendButton()
-Description: 左键 双击
+Description: 
 *************************************************/
 void IMLinkFlockButton::onDoubleClickButton()
 {
@@ -48,7 +48,7 @@ void IMLinkFlockButton::onDoubleClickButton()
 
 /*************************************************
 Function Name: ignoreMessage()
-Description: 忽略消息
+Description: 
 *************************************************/
 void IMLinkFlockButton::ignoreMessage()
 {
