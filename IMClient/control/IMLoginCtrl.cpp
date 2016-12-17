@@ -23,7 +23,7 @@ Changes:
 // public:-----------------------------------------------------------------
 IMLoginCtrl::IMLoginCtrl(QObject *parent) :
     QObject(parent)
-{
+{ dbg;
     m_tcpSocket = new IMTcpSocket(this);
     m_tcpSocket->setFlag(1);
     connect(m_tcpSocket, SIGNAL(showConnectionStatus(QString, bool)),
@@ -34,9 +34,9 @@ IMLoginCtrl::IMLoginCtrl(QObject *parent) :
 }
 
 IMLoginCtrl::~IMLoginCtrl()
-{
+{ dbg;
 //    if (m_tcpSocket != NULL)
-//    {
+//    { dbg;
 //        if (m_tcpSocket->isConnected())
 //            m_tcpSocket->abort();
 //            m_tcpSocket->close();
@@ -52,7 +52,7 @@ Description:
 Input: const QString &id: , const QString &pwd:
 *************************************************/
 void IMLoginCtrl::login(const QString &id, const QString &pwd, const int status)
-{
+{ dbg;
     m_kind = LOGIN;
     m_loginInfo.m_userID = id;
     m_loginInfo.m_password = pwd;
@@ -60,12 +60,12 @@ void IMLoginCtrl::login(const QString &id, const QString &pwd, const int status)
 
     dbg;
     if (m_tcpSocket->isConnected())
-    {
+    { dbg;
         dbg;
         requestLogin();
     }
     else
-    {
+    { dbg;
         dbg;
         m_blockSize = 0;
         m_tcpSocket->requestConnect();
@@ -78,15 +78,15 @@ Function Name: getQuestionAndAnswer()
 Description: 
 *************************************************/
 void IMLoginCtrl::getQuestionAndAnswer(const QString & id)
-{
+{ dbg;
     m_kind = GET_QUESTION_ANSWER;
     m_id = id;
     if (m_tcpSocket->isConnected())
-    {
+    { dbg;
         requestGetQuestionAndAnswer();
     }
     else
-    {
+    { dbg;
         m_blockSize = 0;
         m_tcpSocket->requestConnect();
     }
@@ -101,7 +101,7 @@ Output: NULL
 Changes: NULL
 *************************************************/
 void IMLoginCtrl::changeLoginMessage(const QString &mes, bool isLogin)
-{
+{ dbg;
     emit getLoginMessgae(mes, isLogin);
 }
 
@@ -115,9 +115,9 @@ Output: NULL
 Changes: NULL
 *************************************************/
 void IMLoginCtrl::requestLogin()
-{
+{ dbg;
     dbg;
-    if (NULL == m_tcpSocket){
+    if (NULL == m_tcpSocket){ dbg;
         dbg;
         return;
     }
@@ -141,17 +141,17 @@ Function Name: sendRequest()
 Description: 
 *************************************************/
 void IMLoginCtrl::sendRequest()
-{
+{ dbg;
     switch (m_kind)
-    {
+    { dbg;
     case LOGIN:
-    {
+    { dbg;
         dbg;
         requestLogin();
         break;
     }
     case GET_QUESTION_ANSWER:
-    {
+    { dbg;
         dbg;
         requestGetQuestionAndAnswer();
         break;
@@ -169,8 +169,8 @@ Function Name: requestGetQuestionAndAnswer()
 Description: 
 *************************************************/
 void IMLoginCtrl::requestGetQuestionAndAnswer()
-{
-    if (NULL == m_tcpSocket){
+{ dbg;
+    if (NULL == m_tcpSocket){ dbg;
         dbg;
         return;
     }
@@ -193,11 +193,11 @@ Output: NULL
 Changes: NULL
 *************************************************/
 void IMLoginCtrl::readMessage()
-{
+{ dbg;
     QDataStream in(m_tcpSocket);
     // 
     if (m_blockSize == 0)
-    {
+    { dbg;
         if (m_tcpSocket->bytesAvailable() < (int)sizeof(quint16))
             return;
         in >> m_blockSize;
@@ -213,7 +213,7 @@ void IMLoginCtrl::readMessage()
 //    bool is;
 //    QString nickName;
     switch (type)
-    {
+    { dbg;
     case LOGIN_SUCCESS:
         in >> m_myself;
         emit getLoginMessgae(tr("login successfully"), true, &m_myself);
@@ -225,17 +225,17 @@ void IMLoginCtrl::readMessage()
         emit getLoginMessgae(tr("login failed.account already exists.."),false);
         break;
     case GET_QUESTION_ANSWER_FAIL:
-    {
+    { dbg;
         QMessageBox::critical(NULL, tr("reset passwd"), tr("failed, passwd doesn't exists.！"));
         break;
     }
     case GET_QUESTION_ANSWER_SUCCESS:
-    {
+    { dbg;
         in >> m_tempStr;
         emit getQuestionAndAnswerSuccess(m_tempStr);
 
         while (1)
-        {
+        { dbg;
             bool isOkMes = false;
             QString str = QString(tr("reset passwd:%1\nplease intput answer:"))
                     .arg(m_tempStr.m_two);
@@ -247,13 +247,13 @@ void IMLoginCtrl::readMessage()
             if (!isOkMes)
                 break;
             if (answer != m_tempStr.m_three)
-            {
+            { dbg;
                 str = QString(tr("bad answer!"));
                 QMessageBox::critical(NULL, tr("reset passwd"), str);
                 continue;
             }
             else
-            {
+            { dbg;
                 str = QString(tr("good answer!\nyour accout is:%1\nyour passwd is:%2"))
                         .arg(m_id)
                         .arg(IMEncryption::getInstace()
